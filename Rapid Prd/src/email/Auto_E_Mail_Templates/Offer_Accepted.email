@@ -1,0 +1,3 @@
+An Offer for  {!Opportunity.Name} (Opportunity ID: {!Opportunity.Id}) been accepted.
+
+Opportunity Number: {!Opportunity.Opportunity_Number__c}

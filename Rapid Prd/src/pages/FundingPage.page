@@ -1,0 +1,183 @@
+<apex:page standardController="Opportunity" showHeader="false" sideBar="false" tabStyle="opportunity" extensions="OppCustom_Ctrl">     
+    <c:Opportunity_Related_CSS imgName="Funding.png"/>
+    <apex:pageMessages id="pageMessageMain"/>
+    <apex:form id="opportunityForm" styleClass="opportunityForm"><br/>
+        <div class="bgImg"></div>
+        <apex:variable value="{!objOpportunity}" var="opp"/>
+        <div align="center" Style = "padding-top: 10px;">                
+            <apex:commandButton value="Save" action="{!save}" reRender="pageMessageMain" status="ajaxStatus" oncomplete="setfocus('{!$Component.pageMessageMain}');"/>&nbsp;&nbsp;        
+            <!--<apex:commandButton value="Cancel" action="{!cancel}" status="ajaxStatus"/>-->    
+        </div>
+        <table class="detailList">
+             <tr>
+                <td colspan="4">
+                     <!--<div id="panelGrid">Funding</div> -->
+                      <c:Extjs_Panel title="Funding"/>
+                </td>
+            </tr>    
+            <tr>
+                 <td>
+                    <label>Account Database Entry</label>               
+                </td>
+                <td>
+                    <apex:inputField value="{!opp.Account_Database_Entry__c}"/>
+                </td> 
+                <td>
+                    <label>Funds Wired</label>
+                </td>
+                <td>
+                    <apex:inputField value="{!opp.Funded_by_WC__c}" />
+                </td> 
+            </tr>
+            <tr>
+                <td>
+                    <label>Account Database Entry Due Date</label>
+                </td>
+                <td>
+                    <apex:inputField value="{!opp.Account_Database_Entry_Due_Date__c}" />
+                </td>               
+                <td>
+                              
+                </td>
+                <td>
+                    
+                </td>                 
+            </tr>
+            <tr>
+                <td>
+                    <label>Packet Preparation Sent</label>
+                </td>
+                <td>
+                    <apex:inputField value="{!opp.Packet_Preparation_Sent__c}"/>
+                </td>
+                <td>
+                    
+                </td>
+                <td>
+                    
+                </td>          
+            </tr>
+            
+            <tr>
+                <td>
+                    <label>Submitted For Funding Approval:</label>
+                </td>
+                <td>
+                    <apex:inputField value="{!opp.Submitted_For_Funding_Approval__c}" />
+                </td>                
+                <td>
+                                  
+                </td>
+                <td>
+                    
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Wire Amount</label>
+                </td>
+                <td>
+                    <apex:inputField value="{!opp.Wire_Amount__c}" />
+                </td>                 
+                <td>
+                    <label>Funding Status</label>               
+                </td>
+                <td>
+                    <apex:inputField value="{!opp.Funding_Status__c}"/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Close Date</label>
+                </td>
+                <td>
+                    <apex:inputField value="{!opp.CloseDate}" />
+                </td>                
+                <td>
+                                
+                </td>
+                <td>
+                    
+                </td>
+            </tr>
+           <!--
+            <tr>
+                <td>
+                    <!--label>Wire Bank Routing Number</label>&nbsp;
+                </td>
+                <td>
+                    <!--apex:inputField value="{!opp.Routing_Number__c}" />&nbsp;
+                </td>                
+                <td>
+                    <!--label>Wire Bank Account Number</label>&nbsp;               
+                </td>
+                <td>
+                    <!--apex:inputField value="{!opp.Account_Number_For_Funding__c}"/>&nbsp;
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <!--label>Any New UCC Found?</label>&nbsp;
+                </td>
+                <td>
+                    <!--apex:inputField value="{!opp.Any_New_UCC_Found__c}" />&nbsp;
+                </td>                
+                <td>
+                    <!--label>BAM Match?</label>&nbsp;               
+                </td>
+                <td>
+                    <!--apex:inputField value="{!opp.BAM_Match_Selection__c}" required="true"/>&nbsp;
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <!--label>Any New Competitor Tag?</label>&nbsp;
+                </td>
+                <td>
+                    <!--apex:inputField value="{!opp.Any_New_Competitor_Tag__c}" />&nbsp;
+                </td>                
+                <td>
+                    <!--label> Completed NAMAA Tag:</label>&nbsp;               
+                </td>
+                <td>
+                    <!--apex:inputField value="{!opp.Completed_NAMAA_Tag__c}"/>&nbsp;
+                </td>
+            </tr>-->
+            <tr>
+                <td>
+                    <label>Closed Reason</label>
+                </td>
+                <td>
+                    <apex:inputField value="{!opp.Closed_Reason__c}"/>
+                </td>                
+                <td>
+                                   
+                </td>
+                <td>
+                    
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Business Term</label>               
+                </td>
+                <td>
+                    <apex:inputField value="{!opp.PSOE_Business_Term__c}"/>
+                </td>
+                <td>
+                    
+                </td>
+                <td>
+                    
+                </td>               
+                
+            </tr>
+                                                          
+        </table>
+        <div align="center">                
+            <apex:commandButton value="Save" action="{!save}" reRender="pageMessageMain" status="ajaxStatus" oncomplete="setfocus('{!$Component.pageMessageMain}');"/>&nbsp;&nbsp;        
+            <!--<apex:commandButton value="Cancel" action="{!cancel}" status="ajaxStatus"/>-->
+        </div> 
+    </apex:form>
+    <apex:actionstatus startStyleClass="requiredLoaderBG" id="ajaxStatus" />
+</apex:page>

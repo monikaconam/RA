@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>ProMED_Basic</letterhead>
+    <name>ProMED - Partner App Response</name>
+    <style>freeForm</style>
+    <subject>Your ProMED Quick Application Has Been Received</subject>
+    <textOnly>Dear {!Lead.FirstName},
+
+Thank you for your inquiry!
+
+We value your interest and look forward to sharing our healthcare expertise with you to create a lasting and lucrative relationship.
+
+Someone from the ProMED team will reach out to you in the next 24 hours.
+
+
+Sincerely,
+
+Business Development
+ProMED Healthcare Financing
+
+
+
+Contact
+
+ProMED Healthcare Financing
+150 Motor Parkway, Suite 104
+Hauppauge, NY 11788
+
+Phone: 631-901-1050
+Fax: 631-683-0010
+request@promedhcf.com</textOnly>
+    <type>html</type>
+</EmailTemplate>

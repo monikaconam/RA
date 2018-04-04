@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>EmailLetterhead</letterhead>
+    <name>!!Alert!! Overdue QC Decision</name>
+    <style>freeForm</style>
+    <subject>ALERT  {!Opportunity.Name} - Overdue QC Decision</subject>
+    <textOnly>****ALERT - Overdue QC Decision *****
+
+
+
+Opportunity Info:
+
+Opportunity - {!Opportunity.Name}
+Opportunity Owner - {!Opportunity.OwnerFullName}
+Campaign - {!Opportunity.Campaign}
+
+QC Person - {!Opportunity.QC_Person__c}
+Amount - {!Opportunity.Amount}
+Renewal? - {!Opportunity.Renewal__c}
+
+Submitted to UW &amp; Processing - {!Opportunity.Submit_to_UW_Processing__c}</textOnly>
+    <type>html</type>
+</EmailTemplate>

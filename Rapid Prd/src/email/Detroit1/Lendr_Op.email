@@ -1,0 +1,12 @@
+Hey Broker Out Squad,
+I heard you were looking for marbles and I think I just found a Lendr Marble with your name on it.
+
+{!Opportunity.Name}
+
+Check out the New Marbles
+
+
+
+
+Calc Link:
+{!Opportunity.CALC_Link__c}

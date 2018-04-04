@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Referral Lead Creation Alert</name>
+    <style>none</style>
+    <subject>Your client submitted a referral from their client survey</subject>
+    <type>text</type>
+</EmailTemplate>

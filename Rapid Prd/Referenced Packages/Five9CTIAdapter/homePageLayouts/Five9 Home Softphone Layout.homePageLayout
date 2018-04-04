@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<HomePageLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <narrowComponents>Five9 Voicemails</narrowComponents>
+    <wideComponents>Voicemail and Callback</wideComponents>
+    <wideComponents>standard-Calendar</wideComponents>
+    <wideComponents>standard-Tasks</wideComponents>
+    <wideComponents>standard-Dashboard</wideComponents>
+    <wideComponents>Five9 ACD Status</wideComponents>
+</HomePageLayout>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>CUST_NAME</field>
+    </columns>
+    <columns>
+        <field>FK_LEAD_ID</field>
+    </columns>
+    <columns>
+        <field>FK_NAME</field>
+    </columns>
+    <columns>
+        <field>FK_LEAD_COMPANY</field>
+    </columns>
+    <columns>
+        <field>Ownership_Change__c.Old_OwnerId__c</field>
+    </columns>
+    <columns>
+        <field>Ownership_Change__c.New_OwnerId__c</field>
+    </columns>
+    <columns>
+        <field>Ownership_Change__c.Assigned_Date_Time__c</field>
+    </columns>
+    <format>Tabular</format>
+    <name>Ownership History Change</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntity$Ownership_Change__c@Ownership_Change__c.LeadId__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>Ownership_Change__c.Assigned_Date_Time__c</dateColumn>
+        <interval>INTERVAL_TODAY</interval>
+    </timeFrameFilter>
+</Report>

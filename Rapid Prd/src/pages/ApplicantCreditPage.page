@@ -1,0 +1,427 @@
+<apex:page controller="ApplicantCredit_Ctrl" showHeader="false" sidebar="false" >
+    <c:Opportunity_Related_CSS imgName="credit.png"/>
+    <apex:pageMessages id="pageMessageMain"/>
+    <apex:form id="MBForm" styleClass="MBForm"><br/>
+     <apex:outputPanel id="panelid1">
+       <div class="bgImg"></div>
+       <div align="center">              
+           <apex:commandButton value="Save" action="{!doSave}" reRender="pageMessageMain,panelid,panelid1" status="ajaxStatus" oncomplete="setfocus('{!$Component.pageMessageMain}');" />&nbsp;&nbsp;         
+       </div>
+       <apex:outputPanel id="panelid">
+       <table id="MBTable">
+            <tr>
+               <td colspan="4">
+                    <c:Extjs_Panel title="Applicant & Credit Information" RefreshButton="Refresh" id="refreshid"/>
+               </td>
+           </tr>
+           <tr>
+               <td>
+                   <apex:outputLabel value="{!$ObjectType.Opportunity.fields.CRR__c.label}"/> 
+               </td>
+               <td>
+                   <!-- apex:inputField value="{!oppRecord.CRR__c}" /-->
+                   <apex:outputField value="{!oppRecord.CRR__c}" />
+               </td>                    
+                <td colspan="2" width="120px">
+                   &nbsp;
+                   <!-- <iframe frameborder="no" height="220px" src="/apex/CBR_Integration?Id={!$CurrentPage.parameters.Id}" marginheight="0" marginwidth="0" scrolling="no" title="CBR_Integration" width="100%"></iframe> -->
+               </td>    
+           </tr>           
+           <tr>
+                <td>
+                    <label>{!$ObjectType.Opportunity.fields.Individual_Bankruptcies__c.label}</label>
+                </td>
+                <td>
+                    <apex:inputField value="{!oppRecord.Individual_Bankruptcies__c}"/>
+                </td>
+                <td>
+                    
+                </td>
+                <td>
+                    
+                </td>
+            </tr>            
+
+            <tr>
+                <td>
+                    <label>Applicant #1 FICO</label>
+                </td>
+                <td style="padding-left:0.25em;">
+                    <apex:outputText value="{!applicant1FICO}"/>
+                </td>
+                <td>
+                    <label>{!$ObjectType.Opportunity.fields.Does_the_Merchant__c.label}</label>
+                </td>
+                <td>
+                    <apex:inputField value="{!oppRecord.Does_the_Merchant__c}" rendered="{!IF($Profile.Name =='System Administrator' ,true,false)}"/>
+                    <apex:outputLabel value="{!oppRecord.Does_the_Merchant__c}" rendered="{!IF($Profile.Name !='System Administrator' ,true,false)}"/>
+                </td>
+            </tr>
+            <tr>
+                <!--<td>
+                    <label>Applicant #1 Prior FICO</label>
+                </td>
+                <td style="padding-left:0.25em;">
+                    <apex:outputText value="{!applicant1PrevFICO}"/>
+                </td>-->
+                <td>
+                    <label>{!$ObjectType.Opportunity.fields.Previous_FICO__c.label}</label>
+                </td>
+                <td>
+                    <apex:inputField value="{!oppRecord.Previous_FICO__c}"/>
+                </td>
+                <td>
+                   
+                </td>
+                <td>
+                    
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>{!$ObjectType.Opportunity.fields.Applicant_2_FICO__c.label}</label>
+                </td>
+                <td>
+                    <apex:inputField value="{!oppRecord.Applicant_2_FICO__c}"/>
+                </td>
+                <td>
+                    
+                </td>
+                <td>
+                   
+                </td>               
+            </tr>
+            
+            <tr>
+                <td>
+                    <apex:outputLabel value="{!$ObjectType.Opportunity.fields.Manual_Applicant_1_FICO_Score__c.label}"/> 
+                </td>
+                <td>
+                   <apex:inputField value="{!oppRecord.Manual_Applicant_1_FICO_Score__c}" rendered="{!IF($Profile.Name =='System Administrator' ,true,false)}" />
+                   <apex:outputLabel value="{!oppRecord.Manual_Applicant_1_FICO_Score__c}" rendered="{!IF($Profile.Name !='System Administrator' ,true,false)}" />
+                </td>
+                <td style="vertical-align: top;">
+                   
+                </td>
+                <td style="vertical-align: top;padding-left:0.25em;">
+                    
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <apex:outputLabel value="{!$ObjectType.Opportunity.fields.Manual_Applicant_2_FICO_Score__c.label}"/> 
+                </td>
+                <td>
+                   <apex:inputField value="{!oppRecord.Manual_Applicant_2_FICO_Score__c}" rendered="{!IF($Profile.Name =='System Administrator' ,true,false)}"/>
+                   <apex:outputLabel value="{!oppRecord.Manual_Applicant_2_FICO_Score__c}" rendered="{!IF($Profile.Name !='System Administrator' ,true,false)}"/>
+                </td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>   
+                <td style="vertical-align: top;">
+                    <label>Credit Bureau Summary</label>
+                </td>
+                <td style="vertical-align: top; padding-left:0.25em;">
+                    <apex:outputText value="{!creditBureauSummary}" escape="false"/>
+                </td>             
+                <td>
+                    <label>{!$ObjectType.Opportunity.fields.Tax_Liens_Open__c.label}</label>
+                </td>
+                <td>
+                    <apex:inputField value="{!oppRecord.Tax_Liens_Open__c}"/>
+                </td>                
+            </tr>
+            <tr>
+                <td>
+                    <label>{!$ObjectType.Opportunity.fields.Mortgage_Delinquent__c.label}</label>
+                </td>
+                <td>
+                    <apex:inputField value="{!oppRecord.Mortgage_Delinquent__c}" rendered="{!IF($Profile.Name =='System Administrator' ,true,false)}"/>
+                    <apex:outputLabel value="{!oppRecord.Mortgage_Delinquent__c}" rendered="{!IF($Profile.Name !='System Administrator' ,true,false)}"/>
+                </td>
+                <td>
+                    <label>{!$ObjectType.Opportunity.fields.Judgements_Open__c.label}</label>
+                </td>
+                <td>
+                    <apex:inputField value="{!oppRecord.Judgements_Open__c}"/>
+                </td>               
+            </tr>
+            
+            
+            <!-- <tr>
+                
+                <td>
+                    <label>{!$ObjectType.Opportunity.fields.Are_there_any_Odd_Large_Deposits__c.label}</label>
+                </td>
+                <td>
+                    <apex:inputField value="{!oppRecord.Are_there_any_Odd_Large_Deposits__c}"/>
+                </td>
+            </tr>            
+            <tr>
+                <td>
+                    <label>{!$ObjectType.Opportunity.fields.Are_there_any_Competitor_Debits__c.label}</label>
+                </td>
+                <td>
+                    <apex:inputField value="{!oppRecord.Are_there_any_Competitor_Debits__c}"/>
+                </td>
+                <td>
+                    
+                </td>
+                <td>
+                   
+                </td>
+            </tr>            
+                   
+            <tr>
+                <td>
+                    <label>{!$ObjectType.Opportunity.fields.Account_Number_For_Funding__c.label}</label>
+                </td>
+                <td>
+                    <apex:inputField value="{!oppRecord.Account_Number_For_Funding__c}"/>
+                </td>
+                <td>
+                    <label>{!$ObjectType.Opportunity.fields.Routing_Number__c.label}</label>
+                </td>
+                <td>
+                    <apex:inputField value="{!oppRecord.Routing_Number__c}"/>
+                </td>
+            </tr>-->
+            
+             <!-- <tr>
+                <td>
+                    <label>{!$ObjectType.Opportunity.fields.Confirmed_Contact_Mobile_Number__c.label}</label>
+                </td>
+                <td>
+                    <apex:inputField value="{!oppRecord.Confirmed_Contact_Mobile_Number__c}"/>
+                </td>
+                
+            </tr>-->
+            <!-- 
+            
+            <tr>
+                <td>
+                    <label>{!$ObjectType.Opportunity.fields.Address_on_Check_Match_Bank_Statement__c.label}</label>
+                </td>
+                <td>
+                    <apex:inputField value="{!oppRecord.Address_on_Check_Match_Bank_Statement__c}"/>
+                </td>
+                <td>
+                    
+                </td>
+                <td>
+                    
+                </td>
+            </tr>
+
+            
+            
+            <tr>
+               <td colspan="4">
+                    <c:Extjs_Panel title="Contact Information"/>
+               </td>
+           </tr>
+           <tr>
+                <td class="conClass">
+                     <apex:outputLabel styleClass="contactLabel" value="Principal 1  Name" rendered="{!IF(pricipal1Record != null, true, false)}" />
+                </td>
+                <td class="conClass">    
+                    <apex:outputText value="{!pricipal1Record.Name}" rendered="{!IF(pricipal1Record != null, true, false)}"/>
+                    
+                </td>
+                <td class="conClass">
+                     <apex:outputLabel styleClass="contactLabel" value="Principal 2  Name" rendered="{!IF(pricipal2Record != null, true, false)}" />
+                </td>
+                <td class="conClass">    
+                    <apex:outputText value="{!pricipal2Record.Name}" rendered="{!IF(pricipal2Record != null, true, false)}"/>
+                    
+                </td>
+            </tr>
+           <tr>
+                 <td class="conClass">
+                    <apex:outputLabel styleClass="contactLabel" value="Principal 1 ContactID" rendered="{!IF(pricipal1Record != null, true, false)}" />
+                  
+                </td >
+                <td class="conClass">
+                    <apex:outputField value="{!pricipal1Record.ContactID__c}" rendered="{!IF(pricipal1Record != null, true, false)}" />
+                </td>
+                 <td class="conClass">
+                    <apex:outputLabel styleClass="contactLabel" value="Principal 2 ContactID" rendered="{!IF(pricipal2Record != null, true, false)}" />
+                  
+                </td>
+                <td class="conClass">
+                    <apex:outputField value="{!pricipal2Record.ContactID__c}" rendered="{!IF(pricipal2Record != null, true, false)}" />
+                </td>
+            </tr>
+            
+            <tr>
+                <td class="conClass">
+                    <apex:outputLabel styleClass="contactLabel" value="Principal 1 Ownership Percentage" rendered="{!IF(pricipal1Record != null, true, false)}" />
+                </td>
+                <td class="conClass">
+                    <apex:outputField value="{!pricipal1Record.OwnershipPercentage__c}" rendered="{!IF(pricipal1Record != null, true, false)}"/>
+                </td>
+                <td class="conClass">
+                   <apex:outputLabel styleClass="contactLabel" value="Principal 2 Ownership Percentage" rendered="{!IF(pricipal2Record != null, true, false)}" />
+                </td>
+                <td class="conClass">
+                    <apex:outputField value="{!pricipal2Record.OwnershipPercentage__c}" rendered="{!IF(pricipal2Record != null, true, false)}"/>
+                </td>
+            </tr>
+            <tr>
+                <td class="conClass">
+                    <apex:outputLabel styleClass="contactLabel" value="Principal 1 Mailing Street" rendered="{!IF(pricipal1Record != null, true, false)}" />
+                </td>
+                <td class="conClass">
+                    <apex:outputField value="{!pricipal1Record.MailingStreet}" rendered="{!IF(pricipal1Record != null, true, false)}"/>
+                </td>
+                <td class="conClass">
+                    <apex:outputLabel styleClass="contactLabel" value="Principal 2 Mailing Street" rendered="{!IF(pricipal2Record != null, true, false)}" />
+                </td>
+                <td class="conClass">
+                    <apex:outputField value="{!pricipal2Record.MailingStreet}" rendered="{!IF(pricipal2Record != null, true, false)}"/>
+                </td>
+                
+            </tr>
+            
+            
+            
+            <tr>
+                <td class="conClass">
+                    <apex:outputLabel styleClass="contactLabel" value="Principal 1 Mailing City" rendered="{!IF(pricipal1Record != null, true, false)}" />
+                </td>
+                <td class="conClass">
+                    <apex:outputField value="{!pricipal1Record.MailingCity}" rendered="{!IF(pricipal1Record != null, true, false)}"/>
+                </td>
+                <td class="conClass">
+                    <apex:outputLabel styleClass="contactLabel" value="Principal 2 Mailing City" rendered="{!IF(pricipal2Record != null, true, false)}" />
+                </td>
+                <td class="conClass">
+                     <apex:outputField value="{!pricipal2Record.MailingCity}" rendered="{!IF(pricipal2Record != null, true, false)}"/>
+                </td>
+            </tr>
+            <tr>
+                <td class="conClass">
+                    <apex:outputLabel styleClass="contactLabel" value="Principal 1 Mailing State/Province" rendered="{!IF(pricipal1Record != null, true, false)}" />
+                </td>
+                <td class="conClass">
+                    <apex:outputField value="{!pricipal1Record.MailingState}" rendered="{!IF(pricipal1Record != null, true, false)}"/>
+                </td>
+                <td class="conClass">
+                    <apex:outputLabel styleClass="contactLabel" value="Principal 2 Mailing State/Province" rendered="{!IF(pricipal2Record != null, true, false)}" />
+                </td>
+                <td class="conClass">
+                    <apex:outputField value="{!pricipal2Record.MailingState}" rendered="{!IF(pricipal2Record != null, true, false)}"/>
+                </td>
+            </tr>
+            <tr>
+                <td class="conClass">
+                    <apex:outputLabel styleClass="contactLabel" value="Principal 1 Mailing Zip/Postal Code" rendered="{!IF(pricipal1Record != null, true, false)}" />
+                </td>
+                <td class="conClass">
+                    <apex:outputField value="{!pricipal1Record.MailingPostalCode}" rendered="{!IF(pricipal1Record != null, true, false)}" />
+                </td>
+                <td class="conClass">
+                    <apex:outputLabel styleClass="contactLabel" value="Principal 2 Mailing Zip/Postal Code" rendered="{!IF(pricipal2Record != null, true, false)}" />
+                </td>
+                <td class="conClass">
+                    <apex:outputField value="{!pricipal2Record.MailingPostalCode}" rendered="{!IF(pricipal2Record != null, true, false)}" />
+                </td>
+            </tr>
+            <tr>
+                <td class="conClass">
+                    <apex:outputLabel styleClass="contactLabel" value="Principal 1 Home_Phone" rendered="{!IF(pricipal1Record != null, true, false)}" />
+                   
+                </td>
+                <td class="conClass">
+                    <apex:outputField value="{!pricipal1Record.Principal_Home_Phone__c}" rendered="{!IF(pricipal1Record != null, true, false)}" />
+                </td >
+                <td class="conClass">
+                    <apex:outputLabel styleClass="contactLabel" value="Principal 2 Home Phone" rendered="{!IF(pricipal2Record != null, true, false)}" />
+                </td>
+                <td  class="conClass">
+                    <apex:outputField value="{!pricipal2Record.Principal_Home_Phone__c}" rendered="{!IF(pricipal2Record != null, true, false)}" />
+                </td>
+            </tr>
+            
+            
+            <tr>
+                <td class="conClass">
+                    <apex:outputLabel styleClass="contactLabel" value="Principal 1 Mobile Phone" rendered="{!IF(pricipal1Record != null, true, false)}" />
+                    
+                </td>
+                <td class="conClass">
+                    <apex:outputField value="{!pricipal1Record.MobilePhone}" rendered="{!IF(pricipal1Record != null, true, false)}" />
+                </td>
+               <td class="conClass">
+                    <apex:outputLabel styleClass="contactLabel" value="Principal 2 Mobile Phone" rendered="{!IF(pricipal2Record != null, true, false)}" />
+                    
+                </td>
+                <td class="conClass">
+                    <apex:outputField value="{!pricipal2Record.MobilePhone}" rendered="{!IF(pricipal2Record != null, true, false)}" />
+                </td>
+            </tr>
+            <tr>
+                <td class="conClass">
+                    <apex:outputLabel styleClass="contactLabel" value="Principal 1 Business Fax" rendered="{!IF(pricipal1Record != null, true, false)}" />
+                   
+                </td>
+                <td class="conClass">
+                    <apex:outputField value="{!pricipal1Record.Fax}" rendered="{!IF(pricipal1Record != null, true, false)}" />
+                </td>
+               <td class="conClass">
+                    <apex:outputLabel styleClass="contactLabel" value="Principal 2 Business Fax" rendered="{!IF(pricipal2Record != null, true, false)}" />
+                   
+                </td>
+                <td class="conClass">
+                    <apex:outputField value="{!pricipal2Record.Fax}"/>
+                </td>
+            </tr>
+            <tr>
+                <td class="conClass">
+                    <apex:outputLabel styleClass="contactLabel" value="Principal 1 Email" rendered="{!IF(pricipal1Record != null, true, false)}" />
+                   
+                </td>
+                <td class="conClass">
+                    <apex:outputField value="{!pricipal1Record.Email}" rendered="{!IF(pricipal1Record != null, true, false)}"/>
+                </td>
+               <td class="conClass">
+                    <apex:outputLabel styleClass="contactLabel" value="Principal 2 Email" rendered="{!IF(pricipal2Record != null, true, false)}" />
+                   
+                </td>
+                <td class="conClass">
+                    <apex:outputField value="{!pricipal2Record.Email}" rendered="{!IF(pricipal2Record != null, true, false)}"/>
+                </td>
+            </tr> -->
+            
+                     
+       </table><br/>
+       </apex:outputPanel>
+               
+       <div align="center">              
+            <apex:commandButton value="Save" action="{!doSave}" reRender="pageMessageMain,panelid,panelid1" status="ajaxStatus" oncomplete="setfocus('{!$Component.pageMessageMain}');"/>&nbsp;&nbsp;         
+       </div>    
+        </apex:outputPanel>       
+    </apex:form>
+    
+    <apex:stylesheet value="{!$Resource.ExtJS4}/extjs-4.1.0/resources/css/ext-all.css" />
+    <apex:includeScript value="{!$Resource.ExtJS4}/extjs-4.1.0/ext-all.js"/>    
+    <apex:stylesheet value="{!$Resource.ExtJS4}/extjs-4.1.0/resources/css/xtheme-gray-extend.css" id="theme11"/>    
+    
+    <apex:stylesheet value="{!$Resource.ExtJS4}/extjs-4.1.0/resources/ext-theme-gray/ext-theme-gray-all.css" id="theme"/>
+    <!--  
+    <apex:stylesheet value="{!$Resource.ExtJS4}/extjs-4.1.0/resources/ext-theme-gray/ext-theme-gray-all-debug.css" id="theme1"/>
+    -->
+    <apex:stylesheet value="{!$Resource.ExtJS4}/extjs-4.1.0/resources/ext-theme-gray/ext-theme-gray-all-rtl.css" id="theme2"/>
+    <!--  
+    <apex:stylesheet value="{!$Resource.ExtJS4}/extjs-4.1.0/resources/ext-theme-gray/ext-theme-gray-all-rtl-debug.css" id="theme3"/>
+    -->       
+    <script type="text/javascript">
+        Ext.BLANK_IMAGE_URL="{!$Resource.ExtJS4}/extjs-4.1.0/resources/themes/images/default/tree/s.gif"
+    </script>
+   <!-- <c:Extjs_Bank_Statement id="extPanel1" parentField="Opportunity__c" title="" height="430" object="Bank_Statement__c" fields="Bank_Name__c,Account_Number__c,Wire_Bank_Routing_Number__c,Total_Deposits__c,Average_Daily_Balance__c,NSF__c,Year__c,Month__c,Average_Balance__c,MEB__c,Monthly_Gross_Deposit__c,Monthly_Gross_Debits__c,Monthly_Cashflow__c,Number_of_NSF__c,Monthly_Average_Balance__c,Comments__c" rows="10" minimized="false" parentRecordId="{!$CurrentPage.parameters.Id}"/> -->
+   <!-- c:Extjs_Applicant_Credit id="extPanel" parentField="Id" title="" height="226" object="Contact" fields="Name,OwnershipPercentage__c,MailingStreet,MailingCity,MailingState,MailingPostalCode,Principal_Home_Phone__c,MobilePhone,Fax,Email" rows="4" minimized="false" parentRecordId="{!$CurrentPage.parameters.Id}"/-->
+   <c:Extjs_Applicant_Credit id="extPanel" parentField="Id" title="" height="226" object="Contact" 
+   fields="Name,OwnershipPercentage__c,Principal_1_Street_Address__c,Principal_1_City__c,Principal_1_State__c,Principal_1_Zip__c,Principal_Home_Phone__c,SS__c,Date_of_Birth__c,Months_at_Current_Address__c,Months_at_Previous_Address__c" rows="4" minimized="false" parentRecordId="{!$CurrentPage.parameters.Id}"/>
+    <apex:actionstatus startStyleClass="requiredLoaderBG" id="ajaxStatus" />
+</apex:page>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>StandardLetterheadSample</letterhead>
+    <name>Site Visit ALERT</name>
+    <style>freeForm</style>
+    <subject>Site Visit ALERT!!!</subject>
+    <textOnly>THERE IS AN ALERT ON THE SITE VISIT.
+ 
+Date:  {!Opportunity.LastModifiedDate}
+ 
+Opportunity Name:  {!Opportunity.Name}
+ 
+Site Visit Order Date:  {!Opportunity.00N70000001ghqN}
+  
+ALERT Received:  {!Opportunity.00N70000001gj6C}
+ 
+Underwriting Status:  {!Opportunity.00N50000001PqO4}</textOnly>
+    <type>html</type>
+</EmailTemplate>

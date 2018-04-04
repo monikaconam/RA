@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customSettingsType>List</customSettingsType>
+    <description>List of default values to be used for Apex code</description>
+    <enableFeeds>false</enableFeeds>
+    <fields>
+        <fullName>Description__c</fullName>
+        <description>General description for the use of this User Default</description>
+        <externalId>false</externalId>
+        <label>Description</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>UserID__c</fullName>
+        <description>18 character ID value for the requested User</description>
+        <externalId>false</externalId>
+        <label>User Id</label>
+        <length>18</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>User Defaults</label>
+    <visibility>Public</visibility>
+</CustomObject>

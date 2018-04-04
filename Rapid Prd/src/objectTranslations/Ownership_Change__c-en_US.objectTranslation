@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Ownership Change</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Ownership Changes</value>
+    </caseValues>
+    <fields>
+        <label><!-- Assigned Date/Time --></label>
+        <name>Assigned_Date_Time__c</name>
+    </fields>
+    <fields>
+        <label><!-- Lead --></label>
+        <name>LeadId__c</name>
+        <relationshipLabel><!-- Ownership Changes --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- New Owner --></label>
+        <name>New_OwnerId__c</name>
+        <relationshipLabel><!-- Ownership Changes (New Owner) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Old Owner --></label>
+        <name>Old_OwnerId__c</name>
+        <relationshipLabel><!-- Ownership Changes (Old Owner) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Opportunity --></label>
+        <name>OppId__c</name>
+        <relationshipLabel><!-- Ownership Changes --></relationshipLabel>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

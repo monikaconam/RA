@@ -1,0 +1,22 @@
+<table border="0" cellpadding="5" width="550" cellspacing="5" height="400" >
+<tr valign="top" height="400" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; color:#000000; bEditID:r3st1; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[<p>Date:&nbsp; {!Opportunity.LastModifiedDate}</p>
+<p>&nbsp;</p>
+<p>Sales Rep: {!Opportunity.OwnerFullName}</p>
+<p>&nbsp;</p>
+<p>Deal Name:&nbsp; {!Opportunity.Name}</p>
+<p>&nbsp;</p>
+<p>Amount: {!Opportunity.Advance_Amount__c}</p>
+<p>Percent Payback: {!Opportunity.Percent_Payback__c}</p>
+<p>Payback Amount:&nbsp; {!Opportunity.Pay_Back_Amount__c}</p>
+<p>&nbsp;</p>
+<p>Deal sent to Sales Assistant? (no if blank): {!Opportunity.Submit_to_Sales_Assistant__c}</p>
+<p>&nbsp;</p>
+<p>Renewal?:&nbsp;<span style="font-size: 12pt; background-color: rgb(255, 255, 255);">{!If((Opportunity.Renewal__c),"Yes","No")}</span><span style="font-size: 12pt; background-color: rgb(255, 255, 255);">&nbsp;</span></p>
+<p>&nbsp;</p>
+<p>Lead Source: {!Opportunity.LeadSource}</p>
+<p>&nbsp;</p>
+<p>Campaign: {!Opportunity.Campaign}</p>]]></td>
+</tr>
+</table>

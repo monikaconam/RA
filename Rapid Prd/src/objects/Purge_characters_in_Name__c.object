@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customSettingsType>List</customSettingsType>
+    <description>This list will contain all the characters or the strings that are to be eliminated from the account name and lead company name</description>
+    <enableFeeds>false</enableFeeds>
+    <fields>
+        <fullName>Character__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <externalId>false</externalId>
+        <label>Character</label>
+        <length>50</length>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>Replace_With__c</fullName>
+        <externalId>false</externalId>
+        <label>Replace With</label>
+        <length>50</length>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>Purge characters in Name</label>
+    <visibility>Public</visibility>
+</CustomObject>

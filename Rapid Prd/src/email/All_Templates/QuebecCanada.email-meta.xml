@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>StandardLetterheadSample</letterhead>
+    <name>Quebec Canada</name>
+    <style>freeForm</style>
+    <subject>Service Area</subject>
+    <textOnly>{!Lead.CreatedDate}
+ 
+Cher(e) {!Lead.FirstName} {!Lead.LastName},
+ 
+Nous vous remercions de l’intérêt que vous portez envers RapidAdvance, votre commerce est très important pour nous. Malheureusement, en ce moment nous ne pouvons pas fournir nos services au Québec. Nous vous prions de bien vouloir consulter régulièrement votre éligibilité à nos services.
+ 
+Cordialement,
+ 
+Toute L’équipe de RapidAdvance
+ 
+________________________________________________________ 
+ 
+Dear {!Lead.FirstName} {!Lead.LastName},
+ 
+Thank you for your interest in RapidAdvance. Your business is very important to us.  Unfortunately, at this time, we are unable to service businesses in Quebec.  Please check back with us periodically. 
+ 
+Sincerely,
+ 
+RapidAdvance Team</textOnly>
+    <type>html</type>
+</EmailTemplate>

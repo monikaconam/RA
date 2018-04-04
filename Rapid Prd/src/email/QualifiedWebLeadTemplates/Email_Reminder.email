@@ -1,0 +1,24 @@
+<table height="400" width="550" cellpadding="5" border="0" cellspacing="5" >
+<tr height="400" valign="top" >
+<td style=" color:#000000; font-size:12pt; background-color:#FFFFFF; font-family:arial; bLabel:main; bEditID:r3st1;" tEditID="c1r1" locked="0" aEditID="c1r1" >
+<![CDATA[<P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT face="Times New Roman,Times,Serif" size=4>Dear {!Lead.FirstName},</FONT></P>
+<P><FONT face="Times New Roman,Times,Serif" size=4></FONT>&nbsp;</P><SPAN style="FONT-FAMILY: 'Arial','sans-serif'; mso-bidi-font-family: 'Times New Roman'"><FONT face="Times New Roman,Times,Serif"><FONT size=4>
+<P class=MsoNormal style="MARGIN: 0in 0in 0pt"><SPAN style="FONT-SIZE: 13.5pt; COLOR: black">I am following up on your inquiry submitted on&nbsp;<STRONG><U>{!Lead.CreatedDate}</U></STRONG> for Business Cash Advance. </SPAN><SPAN style="COLOR: black"><?xml:namespace prefix = o ns = "urn:schemas-microsoft-com:office:office" /><o:p></o:p></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0in 0in 0pt"><SPAN style="COLOR: black"><FONT size=3>&nbsp;</FONT></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0in 0in 0pt"><SPAN style="COLOR: black"></SPAN><SPAN style="FONT-SIZE: 13.5pt; COLOR: black">Please fax </SPAN><U><SPAN style="FONT-SIZE: 13.5pt; BACKGROUND: white; COLOR: red">your last four months of Visa/MC processing&nbsp;statements</SPAN></U><SPAN style="FONT-SIZE: 13.5pt; COLOR: black"> to <STRONG><FONT size=4>{!Lead.OwnerTitle}</FONT>&nbsp;</STRONG>or call me at <STRONG><SPAN style="FONT-FAMILY: 'Arial','sans-serif'; mso-bidi-font-family: 'Times New Roman'"><FONT face="Times New Roman,Times,Serif"><FONT size=4><STRONG>{!Lead.OwnerPhone}</STRONG></FONT></FONT></SPAN></STRONG>. </SPAN><SPAN style="COLOR: black"><o:p></o:p></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0in 0in 0pt"><SPAN style="COLOR: black"><FONT size=3>&nbsp;<o:p></o:p></FONT></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0in 0in 0pt"><SPAN style="FONT-SIZE: 13.5pt; COLOR: black">I look forward to speaking with you.</SPAN><SPAN style="COLOR: black"><o:p></o:p></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0in 0in 0pt"></FONT></FONT></SPAN>&nbsp;</P>
+<P class=MsoNormal style="MARGIN: 0in 0in 0pt">
+<P class=MsoNormal style="MARGIN: 0in 0in 0pt"><SPAN style="FONT-FAMILY: 'Arial','sans-serif'; mso-bidi-font-family: 'Times New Roman'"><FONT face="Times New Roman,Times,Serif"><FONT size=4></FONT></FONT></SPAN></P><SPAN style="FONT-FAMILY: 'Arial','sans-serif'; mso-bidi-font-family: 'Times New Roman'"><FONT face="Times New Roman,Times,Serif"><FONT size=4></FONT></FONT></SPAN>
+<P></P>
+<P class=MsoNormal style="MARGIN: 0in 0in 0pt; mso-list: l0 level1 lfo1; tab-stops: list .5in"><SPAN style="FONT-FAMILY: 'Arial','sans-serif'; mso-bidi-font-family: 'Times New Roman'"><o:p><FONT face="Times New Roman,Times,Serif" size=4></FONT></o:p></SPAN>&nbsp;</P>
+<P class=MsoNormal style="MARGIN: 0in 0in 0pt"><SPAN style="FONT-FAMILY: 'Arial','sans-serif'; mso-bidi-font-family: 'Times New Roman'"><FONT face="Times New Roman,Times,Serif"><FONT size=4>Sincerely,</FONT></FONT></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0in 0in 0pt"><SPAN style="FONT-FAMILY: 'Arial','sans-serif'; mso-bidi-font-family: 'Times New Roman'"><o:p><FONT face="Times New Roman,Times,Serif" size=4>&nbsp;</FONT></o:p></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0in 0in 0pt"><SPAN style="FONT-FAMILY: 'Arial','sans-serif'; mso-bidi-font-family: 'Times New Roman'"><FONT face="Times New Roman,Times,Serif"><FONT size=4><SPAN style="FONT-FAMILY: 'Arial','sans-serif'; mso-bidi-font-family: 'Times New Roman'"><FONT face="Times New Roman,Times,Serif"><FONT size=4><SPAN style="FONT-FAMILY: 'Arial','sans-serif'; mso-bidi-font-family: 'Times New Roman'"><FONT face="Times New Roman,Times,Serif"><FONT size=4>{!Lead.OwnerFullName}<o:p></o:p></FONT></FONT></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0in 0in 0pt">Phone: {!Lead.OwnerPhone} </P>
+<P class=MsoNormal style="MARGIN: 0in 0in 0pt">Fax:&nbsp;&nbsp;&nbsp;&nbsp; {!Lead.OwnerTitle} </P>
+<P class=MsoNormal style="MARGIN: 0in 0in 0pt"><SPAN style="FONT-FAMILY: 'Arial','sans-serif'; mso-bidi-font-family: 'Times New Roman'"><FONT face="Times New Roman,Times,Serif"><FONT size=4>Email:&nbsp; {!Lead.OwnerEmail}</FONT></FONT></SPAN></FONT></FONT></SPAN></P><o:p></o:p></FONT></FONT></SPAN>
+<P class=MsoNormal style="MARGIN: 0in 0in 0pt"><SPAN style="FONT-FAMILY: 'Arial','sans-serif'; mso-bidi-font-family: 'Times New Roman'"><FONT face="Times New Roman,Times,Serif"><FONT size=4></FONT></FONT></SPAN>&nbsp;</P>]]></td>
+</tr>
+</table>

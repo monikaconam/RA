@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>CLOSE_DATE</field>
+    </columns>
+    <columns>
+        <field>OPPORTUNITY_NAME</field>
+    </columns>
+    <columns>
+        <field>AMOUNT</field>
+    </columns>
+    <columns>
+        <field>Opportunity.Renewal_Eligibility__c</field>
+    </columns>
+    <columns>
+        <field>Opportunity.Percent_Paid_Off__c</field>
+    </columns>
+    <columns>
+        <field>FULL_NAME</field>
+    </columns>
+    <columns>
+        <field>ACCOUNT_NAME</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>CAMPAIGN_SOURCE</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Worldwide Capital Management Inc</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>STAGE_NAME</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Closed Won</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>Worldwide Capital Management Inc</name>
+    <params>
+        <name>open</name>
+        <value>all</value>
+    </params>
+    <params>
+        <name>probability</name>
+        <value>&gt;0</value>
+    </params>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Opportunity</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <sortColumn>CLOSE_DATE</sortColumn>
+    <sortOrder>Desc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>CLOSE_DATE</dateColumn>
+        <endDate>2016-06-30</endDate>
+        <interval>INTERVAL_CUSTOM</interval>
+        <startDate>2015-10-01</startDate>
+    </timeFrameFilter>
+</Report>

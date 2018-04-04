@@ -1,0 +1,17 @@
+Hi Maria,
+
+ {!IF(ISPICKVAL(GetFeedback_Survey__c.Secured_funding_from_another_lender__c,"Yes, at comparable or better terms than RapidAdvance initially offered."), "Q6. This client implicate that he/she is able to secure the funding at comparable or better terms than RapidAdvance initially offered.","")}
+
+{!IF(ISPICKVAL(GetFeedback_Survey__c.Secured_funding_from_another_lender__c,"Yes, at comparable or better terms than RapidAdvance initially offered."),
+"Answer:  Yes, at comparable or better terms than RapidAdvance initially offered."," ")} 
+
+{!IF(ISPICKVAL(GetFeedback_Survey__c.Secured_funding_from_another_lender__c,"Yes, but at less advantageous terms than RapidAdvance initially offered."),"Q6. This client implicate that he/she is able to secure the funding at less advantageous terms than RapidAdvance initially offered.","")}
+
+{!IF(ISPICKVAL(GetFeedback_Survey__c.Secured_funding_from_another_lender__c,"Yes, but at less advantageous terms than RapidAdvance initially offered."),
+"Answer:  Yes, but at less advantageous terms than RapidAdvance initially offered."," ")} 
+
+For reference click the following link.
+
+{!GetFeedback_Survey__c.Link} 
+
+Thanks

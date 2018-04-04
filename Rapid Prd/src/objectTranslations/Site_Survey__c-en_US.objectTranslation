@@ -1,0 +1,610 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Site Survey</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Site Surveys</value>
+    </caseValues>
+    <fields>
+        <label><!-- Approx. Sq. Ft. Interior Space --></label>
+        <name>Approx_Sq_Ft__c</name>
+        <picklistValues>
+            <masterLabel>0-500</masterLabel>
+            <translation><!-- 0-500 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>1,001 - 5,000</masterLabel>
+            <translation><!-- 1,001 - 5,000 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>501 - 1,000</masterLabel>
+            <translation><!-- 501 - 1,000 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Over 5,000</masterLabel>
+            <translation><!-- Over 5,000 --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- City --></label>
+        <name>City__c</name>
+    </fields>
+    <fields>
+        <label><!-- Comments --></label>
+        <name>Comments__c</name>
+    </fields>
+    <fields>
+        <label><!-- Comments for NVMS --></label>
+        <name>Comments_for_NVMS__c</name>
+    </fields>
+    <fields>
+        <label><!-- Declined Survey Reason --></label>
+        <name>Declined_Survey_Reason__c</name>
+    </fields>
+    <fields>
+        <label><!-- Does the Business Appear to be Legimate? --></label>
+        <name>Does_the_Business_Appear_to_be_Legimate__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Exterior Photos of Building Taken? --></label>
+        <name>Exterior_Photos_of_Builiding_Taken__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- How Long Business at Current Location? --></label>
+        <name>How_Long_Business_at_Current_Location__c</name>
+    </fields>
+    <fields>
+        <label><!-- If Going Out of Business, Explain --></label>
+        <name>If_Going_out_of_Business_Explain__c</name>
+    </fields>
+    <fields>
+        <label><!-- If No Matching Signs, Explain --></label>
+        <name>If_No_Matching_Signs_Explain__c</name>
+    </fields>
+    <fields>
+        <label><!-- If Not Legimate, Explain --></label>
+        <name>If_Not_Legimate_Explain__c</name>
+    </fields>
+    <fields>
+        <label><!-- If Not Open, Explain --></label>
+        <name>If_Not_Open_Explain__c</name>
+    </fields>
+    <fields>
+        <label><!-- If Not at Address, Explain --></label>
+        <name>If_Not_at_Address_Explain__c</name>
+    </fields>
+    <fields>
+        <label><!-- If Yes for Sale, Explain --></label>
+        <name>If_Yes_for_Sale_Explain__c</name>
+    </fields>
+    <fields>
+        <label><!-- Indications Business Could be for Sale? --></label>
+        <name>Indications_Business_Could_be_for_Sale__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Indications of Going Out of Business? --></label>
+        <name>Indications_of_Going_Out_of_Business__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Inspection Adress Type --></label>
+        <name>Inspection_Adress_Type__c</name>
+        <picklistValues>
+            <masterLabel>Commercial</masterLabel>
+            <translation><!-- Commercial --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Residence</masterLabel>
+            <translation><!-- Residence --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Inspection Date --></label>
+        <name>Inspection_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Inspection Time --></label>
+        <name>Inspection_Time__c</name>
+    </fields>
+    <fields>
+        <label><!-- Interior Photos Taken? --></label>
+        <name>Interior_Photos_Taken__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Is Merchant Currently Open for Business? --></label>
+        <name>Is_Merchant_Currently_Open_for_Business__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Located at the Address on the Order? --></label>
+        <name>Is_the_Business_Located_at_the_Address__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- NVMS Job ID --></label>
+        <name>NVMS_Job_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- NVMS Message --></label>
+        <name>NVMS_Message__c</name>
+    </fields>
+    <fields>
+        <label><!-- NVMS Report --></label>
+        <name>NVMS_Report__c</name>
+    </fields>
+    <fields>
+        <label><!-- NVMS Status --></label>
+        <name>NVMS_Status__c</name>
+    </fields>
+    <fields>
+        <label><!-- Name of Business Owner --></label>
+        <name>Name_of_Business_Owner__c</name>
+    </fields>
+    <fields>
+        <label><!-- No Exterior Photos, Why? --></label>
+        <name>No_Exterior_Photos_Why__c</name>
+    </fields>
+    <fields>
+        <label><!-- No Interior Photos, Why? --></label>
+        <name>No_Interior_Photos_Why__c</name>
+    </fields>
+    <fields>
+        <label><!-- No Photos of CC Machines, Why? --></label>
+        <name>No_Photos_of_CC_Machines_Why__c</name>
+    </fields>
+    <fields>
+        <label><!-- Opportunity --></label>
+        <name>Opportunity__c</name>
+        <relationshipLabel><!-- Site Surveys --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Order Category --></label>
+        <name>Order_Category__c</name>
+        <picklistValues>
+            <masterLabel>Automatic</masterLabel>
+            <translation><!-- Automatic --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Risk Department</masterLabel>
+            <translation><!-- Risk Department --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Perm. Signs Match Name on Order? --></label>
+        <name>Perm_Signs_Match_Name_on_Order__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Person Interviewed --></label>
+        <name>Person_Interviewed__c</name>
+    </fields>
+    <fields>
+        <label><!-- Photo of Merchant&apos;s CC Machine? --></label>
+        <name>Photo_of_Merchant_s_CC_Machine__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Property Contact (Override) --></label>
+        <name>Property_Contact_Override__c</name>
+        <relationshipLabel><!-- Site Surveys --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Review Completed --></label>
+        <name>Review_Completed__c</name>
+    </fields>
+    <fields>
+        <label><!-- Review Status --></label>
+        <name>Review_Status__c</name>
+        <picklistValues>
+            <masterLabel>In Process</masterLabel>
+            <translation><!-- In Process --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Reviewed - Fail</masterLabel>
+            <translation><!-- Reviewed - Fail --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Reviewed - Fail (New Site Requested)</masterLabel>
+            <translation><!-- Reviewed - Fail (New Site Requested) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Reviewed - Pass</masterLabel>
+            <translation><!-- Reviewed - Pass --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Site Survey Type --></label>
+        <name>Site_Survey_Type__c</name>
+        <picklistValues>
+            <masterLabel>Merchant Site 24</masterLabel>
+            <translation><!-- Merchant Site 24 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Merchant Site 48</masterLabel>
+            <translation><!-- Merchant Site 48 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Merchant Site 72</masterLabel>
+            <translation><!-- Merchant Site 72 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Merchant Term 24</masterLabel>
+            <translation><!-- Merchant Term 24 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Merchant Term 48</masterLabel>
+            <translation><!-- Merchant Term 48 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Merchant Term 72</masterLabel>
+            <translation><!-- Merchant Term 72 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mystery Shopper 24</masterLabel>
+            <translation><!-- Mystery Shopper 24 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mystery Shopper 48</masterLabel>
+            <translation><!-- Mystery Shopper 48 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mystery Shopper 72</masterLabel>
+            <translation><!-- Mystery Shopper 72 --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- State --></label>
+        <name>State__c</name>
+        <picklistValues>
+            <masterLabel>AB</masterLabel>
+            <translation><!-- AB --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AK</masterLabel>
+            <translation><!-- AK --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AL</masterLabel>
+            <translation><!-- AL --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AR</masterLabel>
+            <translation><!-- AR --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AS</masterLabel>
+            <translation><!-- AS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AZ</masterLabel>
+            <translation><!-- AZ --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CA</masterLabel>
+            <translation><!-- CA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CO</masterLabel>
+            <translation><!-- CO --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CT</masterLabel>
+            <translation><!-- CT --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DC</masterLabel>
+            <translation><!-- DC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DE</masterLabel>
+            <translation><!-- DE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FL</masterLabel>
+            <translation><!-- FL --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GA</masterLabel>
+            <translation><!-- GA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HI</masterLabel>
+            <translation><!-- HI --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IA</masterLabel>
+            <translation><!-- IA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ID</masterLabel>
+            <translation><!-- ID --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IL</masterLabel>
+            <translation><!-- IL --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IN</masterLabel>
+            <translation><!-- IN --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>KS</masterLabel>
+            <translation><!-- KS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>KY</masterLabel>
+            <translation><!-- KY --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>LA</masterLabel>
+            <translation><!-- LA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MA</masterLabel>
+            <translation><!-- MA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MD</masterLabel>
+            <translation><!-- MD --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ME</masterLabel>
+            <translation><!-- ME --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MH</masterLabel>
+            <translation><!-- MH --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MI</masterLabel>
+            <translation><!-- MI --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MN</masterLabel>
+            <translation><!-- MN --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MO</masterLabel>
+            <translation><!-- MO --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MS</masterLabel>
+            <translation><!-- MS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MT</masterLabel>
+            <translation><!-- MT --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NC</masterLabel>
+            <translation><!-- NC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ND</masterLabel>
+            <translation><!-- ND --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NE</masterLabel>
+            <translation><!-- NE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NH</masterLabel>
+            <translation><!-- NH --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NJ</masterLabel>
+            <translation><!-- NJ --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NM</masterLabel>
+            <translation><!-- NM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NS</masterLabel>
+            <translation><!-- NS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NV</masterLabel>
+            <translation><!-- NV --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NY</masterLabel>
+            <translation><!-- NY --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>OH</masterLabel>
+            <translation><!-- OH --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>OK</masterLabel>
+            <translation><!-- OK --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ONT</masterLabel>
+            <translation><!-- ONT --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>OR</masterLabel>
+            <translation><!-- OR --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PA</masterLabel>
+            <translation><!-- PA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>RI</masterLabel>
+            <translation><!-- RI --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SC</masterLabel>
+            <translation><!-- SC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SD</masterLabel>
+            <translation><!-- SD --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TN</masterLabel>
+            <translation><!-- TN --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TX</masterLabel>
+            <translation><!-- TX --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UT</masterLabel>
+            <translation><!-- UT --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>VA</masterLabel>
+            <translation><!-- VA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>VT</masterLabel>
+            <translation><!-- VT --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>WA</masterLabel>
+            <translation><!-- WA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>WI</masterLabel>
+            <translation><!-- WI --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>WV</masterLabel>
+            <translation><!-- WV --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>WY</masterLabel>
+            <translation><!-- WY --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Street --></label>
+        <name>Street__c</name>
+    </fields>
+    <fields>
+        <label><!-- Survey Cancel Request --></label>
+        <name>Survey_Cancel_Request__c</name>
+    </fields>
+    <fields>
+        <label><!-- Type of Business --></label>
+        <name>Type_of_Business__c</name>
+    </fields>
+    <fields>
+        <label><!-- Underwrinter Assigned --></label>
+        <name>Underwrinter_Assigned__c</name>
+    </fields>
+    <fields>
+        <label><!-- Viewed all images --></label>
+        <name>Viewed_all_images__c</name>
+    </fields>
+    <fields>
+        <label><!-- Viewing Status --></label>
+        <name>Viewing_Status__c</name>
+    </fields>
+    <fields>
+        <label><!-- ZIP --></label>
+        <name>ZIP__c</name>
+    </fields>
+    <fields>
+        <label><!-- # of CC Machines at Location --></label>
+        <name>of_CC_Terminals_at_Locations__c</name>
+    </fields>
+    <fields>
+        <label><!-- # of Employees --></label>
+        <name>of_Employees__c</name>
+    </fields>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- If Review Status = &quot;Reviewed - Fail&quot;, you must enter a reason. --></errorMessage>
+        <name>Failed_Review_Status_Must_Have_Reason</name>
+    </validationRules>
+    <webLinks>
+        <label><!-- New_FromOpportunity --></label>
+        <name>New_FromOpportunity</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- View_All_Attachment --></label>
+        <name>View_All_Attachment</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- View_Site_Survey --></label>
+        <name>View_Site_Survey</name>
+    </webLinks>
+</CustomObjectTranslation>

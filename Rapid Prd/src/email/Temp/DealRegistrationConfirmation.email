@@ -1,0 +1,12 @@
+<table cellpadding="5" width="550" height="400" cellspacing="5" border="0" >
+<tr height="400" valign="top" >
+<td locked="1" style=" font-family:arial; bLabel:main; color:#000000; font-size:12pt; bEditID:r3st1; background-color:#FFFFFF;" aEditID="c1r1" tEditID="c1r1" >
+<![CDATA[Dear {!Lead.CreatedBy},
+<p>&nbsp;</p>
+<p>The lead dated {!Lead.CreatedDate} for {!Lead.FirstName} {!Lead.LastName} owner of {!Lead.Company} has been submitted to our Sales Department for review. If we require any additional information, we will notify you immediately. <br></p>
+<p>&nbsp;</p>
+<p>If you have any questions, please call our Sales Assistant department at 240-514-2000.</p>
+<p>&nbsp;</p>
+<p>Thank you for your business!</p><p><br></p><p>RapidAdvance Staff<br></p>]]></td>
+</tr>
+</table>

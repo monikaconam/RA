@@ -1,0 +1,12 @@
+Hello {!Contact.FirstName}, 
+
+My name is (BA). I’m a Business Advisor with our Client Loyalty team here at RapidAdvance. I work side by side with  your current Business Advisor, (BA). We were monitoring your account with us and it looks like you're quickly approaching your renewal date!
+
+Unlike most business loans out there, you don’t have to wait until your loan is fully paid off to get more working capital. Due to your payment history and performance on your loan with us here at RapidAdvance, I would like to speak with you when you have time so we can talk about the great benefits of a renewal to help you in your business.
+
+When will be a good time for us to discuss this further?
+	
+Cheers,
+
+{!User.Name} | 
+RapidAdvance®

@@ -1,0 +1,33 @@
+<apex:page standardController="Marble__c" extensions="MarbleController" action="{!isNewAllowed}">
+    <apex:form >
+    <script>
+        console.log('{!var}');
+        var returnVal='{!var}';
+        if(returnVal==='failure')
+        {
+            alert('Marbles can only be created by clicking the "Add a Marble" button on Opportunity')
+            window.location.href ="https://na33.salesforce.com/a2m/o";
+        }
+        if(returnVal==='marble found')
+        {
+            console.log('{!var}');
+            var oppid='';
+            alert('Can not create duplicate Marble'); 
+            //window.location.href ="https://na33.salesforce.com/a2m/o";
+            var params = {};
+            var search = window.location.href.slice( window.location.href.indexOf( '?' ) + 1 );
+            var definitions = search.split( '&' );
+        
+            definitions.forEach( function( val, key ) {
+                var parts = val.split( '=', 2 );
+                params[ parts[ 0 ] ] = parts[ 1 ];
+                if(parts[ 0 ]==='retURL')
+                  oppid  = parts[ 1 ]
+            } );
+            console.log(params);
+            window.location.href ="https://na33.salesforce.com"+decodeURIComponent(oppid) ;
+        }
+        
+    </script>
+    </apex:form>
+</apex:page>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>EmailLetterhead</letterhead>
+    <name>New Partner Lead Response</name>
+    <style>freeForm</style>
+    <subject>Thank you for your interest!</subject>
+    <textOnly>Dear {!Lead.Name}
+
+
+Thank you for your interest in becoming our partner!
+
+
+I will be contacting you within the next 48 hours to finalize your application and answer any questions you may have.  I look forward to speaking with you.
+
+
+Sincerely,
+
+
+{!Lead.OwnerFullName}
+{!Lead.OwnerPhone}
+{!Lead.OwnerEmail}</textOnly>
+    <type>html</type>
+</EmailTemplate>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>OPPORTUNITY_NAME</field>
+    </columns>
+    <columns>
+        <field>Opportunity.Opportunity_Number__c</field>
+    </columns>
+    <columns>
+        <field>Opportunity.Renewal__c</field>
+    </columns>
+    <columns>
+        <field>AMOUNT</field>
+    </columns>
+    <columns>
+        <field>STAGE_NAME</field>
+    </columns>
+    <columns>
+        <field>FULL_NAME</field>
+    </columns>
+    <columns>
+        <field>CAMPAIGN_SOURCE</field>
+    </columns>
+    <filter>
+        <booleanFilter>1 AND ((2 AND 3) OR (4 AND 5))</booleanFilter>
+        <criteriaItems>
+            <column>STAGE_NAME</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Closed Won,Approved</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>ROLLUP_DESCRIPTION</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Direct Account Executive</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Opportunity.PrimaryCampaignSource__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>notEqual</operator>
+            <value>Internet,Rapid Advance Internal Campaign</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>ROLLUP_DESCRIPTION</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Account Executive</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Opportunity.PrimaryCampaignSource__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Internet,Rapid Advance Internal Campaign</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>Opportunities for Team Reassignment</name>
+    <params>
+        <name>open</name>
+        <value>all</value>
+    </params>
+    <params>
+        <name>probability</name>
+        <value>&gt;0</value>
+    </params>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Opportunity</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>CLOSE_DATE</dateColumn>
+        <interval>INTERVAL_CURRENT</interval>
+    </timeFrameFilter>
+</Report>

@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Advance Lookup Principal</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Advance Lookup Principals</value>
+    </caseValues>
+    <fields>
+        <label><!-- Advance Lookup --></label>
+        <name>Advance_Lookup__c</name>
+        <relationshipLabel><!-- Advance Lookup Principals --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- CBID --></label>
+        <name>CBID__c</name>
+    </fields>
+    <fields>
+        <label><!-- CBPULLEDDATE --></label>
+        <name>CBPULLEDDATE__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contact --></label>
+        <name>ContactId__c</name>
+        <relationshipLabel><!-- Advance Lookup Principals --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- MONTHLYPAYMENTSUM --></label>
+        <name>MONTHLYPAYMENTSUM__c</name>
+    </fields>
+    <fields>
+        <label><!-- PRINCBACTIVEREVACCTS --></label>
+        <name>PRINCBACTIVEREVACCTS__c</name>
+    </fields>
+    <fields>
+        <label><!-- PRINCBBANKRUPTCY --></label>
+        <name>PRINCBBANKRUPTCY__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- PRINCBILACCTSBAL --></label>
+        <name>PRINCBILACCTSBAL__c</name>
+    </fields>
+    <fields>
+        <label><!-- PRINCBILACCTS --></label>
+        <name>PRINCBILACCTS__c</name>
+    </fields>
+    <fields>
+        <label><!-- PRINCBMAJORDEROGS --></label>
+        <name>PRINCBMAJORDEROGS__c</name>
+    </fields>
+    <fields>
+        <label><!-- PRINCBMINORDEROGS --></label>
+        <name>PRINCBMINORDEROGS__c</name>
+    </fields>
+    <fields>
+        <label><!-- PRINCBREVCREDITAVAIL --></label>
+        <name>PRINCBREVCREDITAVAIL__c</name>
+    </fields>
+    <fields>
+        <label><!-- PRINCBREVCREDITBAL --></label>
+        <name>PRINCBREVCREDITBAL__c</name>
+    </fields>
+    <fields>
+        <label><!-- PRINCBREVPAYMENTS --></label>
+        <name>PRINCBREVPAYMENTS__c</name>
+    </fields>
+    <fields>
+        <label><!-- PRINCBSCORE --></label>
+        <name>PRINCBSCORE__c</name>
+    </fields>
+    <fields>
+        <label><!-- PRINCBTOTALAMTPASTDUE --></label>
+        <name>PRINCBTOTALAMTPASTDUE__c</name>
+    </fields>
+    <fields>
+        <label><!-- PRINCREDITBUREAUSCOREAFFECTER --></label>
+        <name>PRINCREDITBUREAUSCOREAFFECTER__c</name>
+    </fields>
+    <fields>
+        <label><!-- PRINCUSTOMERIDTYPE1 --></label>
+        <name>PRINCUSTOMERIDTYPE1__c</name>
+    </fields>
+    <fields>
+        <label><!-- PRINCUSTOMERIDTYPE2 --></label>
+        <name>PRINCUSTOMERIDTYPE2__c</name>
+    </fields>
+    <fields>
+        <label><!-- PRINEXPERIANSCORE --></label>
+        <name>PRINEXPERIANSCORE__c</name>
+    </fields>
+    <fields>
+        <label><!-- PRINJOINTSTATEMENT --></label>
+        <name>PRINJOINTSTATEMENT__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- PRINSCORINGFACTOR1 --></label>
+        <name>PRINSCORINGFACTOR1__c</name>
+    </fields>
+    <fields>
+        <label><!-- PRINSCORINGFACTOR2 --></label>
+        <name>PRINSCORINGFACTOR2__c</name>
+    </fields>
+    <fields>
+        <label><!-- PRINSCORINGFACTOR3 --></label>
+        <name>PRINSCORINGFACTOR3__c</name>
+    </fields>
+    <fields>
+        <label><!-- PRINSCORINGFACTOR4 --></label>
+        <name>PRINSCORINGFACTOR4__c</name>
+    </fields>
+    <fields>
+        <label><!-- PRINSECURITYFRAUDVICTIMVALUES --></label>
+        <name>PRINSECURITYFRAUDVICTIMVALUES__c</name>
+    </fields>
+    <fields>
+        <label><!-- SCORINGFACTOR1EXP --></label>
+        <name>SCORINGFACTOR1EXP__c</name>
+    </fields>
+    <fields>
+        <label><!-- SCORINGFACTOR2EXP --></label>
+        <name>SCORINGFACTOR2EXP__c</name>
+    </fields>
+    <fields>
+        <label><!-- SCORINGFACTOR3EXP --></label>
+        <name>SCORINGFACTOR3EXP__c</name>
+    </fields>
+    <fields>
+        <label><!-- SCORINGFACTOR4EXP --></label>
+        <name>SCORINGFACTOR4EXP__c</name>
+    </fields>
+    <fields>
+        <label><!-- TOTALMONTHLYDEBT --></label>
+        <name>TOTALMONTHLYDEBT__c</name>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

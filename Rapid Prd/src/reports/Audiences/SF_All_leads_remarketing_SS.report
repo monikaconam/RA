@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>EMAIL</field>
+    </columns>
+    <description>Snapshot of all leads from Oct 15 - May 16.  Excludes unqualified, fraud, converted, bad number and any other reason we can&apos;t move forward.</description>
+    <filter>
+        <criteriaItems>
+            <column>STATUS</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>notEqual</operator>
+            <value>Duplicate - Customer,Duplicate - Lead,Bad Phone Number,Fraud,Not Legitimate,Not Interested - Do Not Contact,Converted,Duplicate Lead,Unqualified</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>EMAIL</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>notEqual</operator>
+            <value></value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>SF | All leads remarketing | SS</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>LeadList</reportType>
+    <scope>org</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>CREATED_DATE</dateColumn>
+        <endDate>2016-05-05</endDate>
+        <interval>INTERVAL_CUSTOM</interval>
+        <startDate>2015-10-01</startDate>
+    </timeFrameFilter>
+</Report>

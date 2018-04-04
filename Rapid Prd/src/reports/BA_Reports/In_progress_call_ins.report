@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>FIRST_NAME</field>
+    </columns>
+    <columns>
+        <field>LAST_NAME</field>
+    </columns>
+    <columns>
+        <field>COMPANY_ACCT</field>
+    </columns>
+    <columns>
+        <field>STATUS</field>
+    </columns>
+    <columns>
+        <field>STAGE_NAME</field>
+    </columns>
+    <columns>
+        <field>Opportunity.CALC_FICO__c</field>
+    </columns>
+    <columns>
+        <field>CREATED_DATE</field>
+    </columns>
+    <filter>
+        <booleanFilter>((((1 AND 2) OR (2 AND 3 AND 4)) AND 5) AND 6) AND 7</booleanFilter>
+        <criteriaItems>
+            <column>LEAD_SOURCE</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>contains</operator>
+            <value>Quicken Loans,Call-In</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Lead.Team__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Members Only</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>LEAD_SOURCE</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Manually Created,Call-In</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Lead.Campaign_Name__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>contains</operator>
+            <value>Quicken Loans</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>STAGE_NAME</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>notEqual</operator>
+            <value>Unqualified,Not Interested,Closed Won,Declined</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>STATUS</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>notEqual</operator>
+            <value>Unqualified,Not Interested,Not Legitimate,Not Interested - Follow Up Later,Second Voice Needed,Not Interested - Do Not Contact</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>LEAD_SOURCE</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Quicken Loans - Hot Transfer,Quicken Loans,Manually Created,Call-In</value>
+        </criteriaItems>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>LEAD_SOURCE</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>LEAD_OWNER</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>In progress call-ins</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>OpportunityLead</reportType>
+    <scope>user</scope>
+    <showDetails>true</showDetails>
+    <sortColumn>CREATED_DATE</sortColumn>
+    <sortOrder>Asc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>CREATED_DATE</dateColumn>
+        <interval>INTERVAL_THISMONTH</interval>
+    </timeFrameFilter>
+</Report>

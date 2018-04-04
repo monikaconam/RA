@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customSettingsType>Hierarchy</customSettingsType>
+    <enableFeeds>false</enableFeeds>
+    <fields>
+        <fullName>AsyncExcecutionThreshold__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Enable async trigger evaluation by setting a record count threshold. If a triggers record count hits this limit, the contests will be evaluated async. Set this to 1 to always process async.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Enable async trigger evaluation by setting a record count threshold. If a triggers record count hits this limit, the contests will be evaluated async. Set this to 1 to always process async.</inlineHelpText>
+        <label>Async Execution Threshold</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>DevToolsKey__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Dev Tools Key</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>DisableAllTriggers__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>If this box is checked, all Compete triggers will be disabled and Contests will cease recording points.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>If this box is checked, all Compete triggers will be disabled and Contests will cease recording points.</inlineHelpText>
+        <label>Disable All Triggers</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>EditionKey__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Edition Key</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>EnableStreaming__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Enable Streaming</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>LeaderTVKey__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>LeaderTV Key</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>LegacyWizards__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Enable the legacy Compete Builder wizards</description>
+        <externalId>false</externalId>
+        <label>Legacy Wizards</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>LocalMode__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Enable local development of contest-builder</description>
+        <externalId>false</externalId>
+        <label>Local Mode</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>ManagerSecurityKey__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Manager Security Key</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>MaxContests__c</fullName>
+        <defaultValue>40</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Max Concurrent Contests</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MaxTriggerExecutions__c</fullName>
+        <defaultValue>4</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Default and recommended value is 4</description>
+        <externalId>false</externalId>
+        <label>Max Trigger Exectuions</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MinQueries__c</fullName>
+        <defaultValue>15</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Default and recommended value is 15</description>
+        <externalId>false</externalId>
+        <label>Minimum Queries</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MinQueryRows__c</fullName>
+        <defaultValue>3000</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Default and recommended value is 3000</description>
+        <externalId>false</externalId>
+        <label>Minimum Query Rows</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MultiCurrency__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Enables multiple currency support</description>
+        <externalId>false</externalId>
+        <label>Multi-Currency</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>PurgeActionsAfter__c</fullName>
+        <deprecated>false</deprecated>
+        <description>After a contest is finalized, purge the actions records after a certain number of days.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>After a contest is finalized, purge the actions records after a certain number of days. If left blank or set to -1, the action records will not be purged.</inlineHelpText>
+        <label>Purge Actions After (Days)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>TemplatesKey__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Templates Key</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>TriggerBatchSize__c</fullName>
+        <defaultValue>10</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Compete Trigger Batch Size</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>TriggerTracingEnabled__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>LevelEleven Support Use Only!</description>
+        <externalId>false</externalId>
+        <label>Trigger Tracing Enabled</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>User_Image_Field__c</fullName>
+        <deprecated>false</deprecated>
+        <description>API name of custom user image field on the User object</description>
+        <externalId>false</externalId>
+        <label>User Image Field</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>displayMessages__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>This signifies if the Messages should be shown on the homepage</description>
+        <externalId>false</externalId>
+        <label>Display Messages</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <label>Contest Engine Settings</label>
+    <visibility>Public</visibility>
+</CustomObject>

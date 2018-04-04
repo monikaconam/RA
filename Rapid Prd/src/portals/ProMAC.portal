@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Portal xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <admin>kkeshishian@rapidadvance.com</admin>
+    <defaultLanguage>en_US</defaultLanguage>
+    <description>ProMAC</description>
+    <emailSenderAddress>services@rapidadvance.com</emailSenderAddress>
+    <emailSenderName>Rapid Financial Services</emailSenderName>
+    <enableSelfCloseCase>false</enableSelfCloseCase>
+    <forgotPassTemplate>Auto_E_Mail_Templates/PromacPassword</forgotPassTemplate>
+    <isSelfRegistrationActivated>false</isSelfRegistrationActivated>
+    <logoutUrl>www.salesforce.com</logoutUrl>
+    <newPassTemplate>Auto_E_Mail_Templates/PromacPassword</newPassTemplate>
+    <newUserTemplate>Auto_E_Mail_Templates/PromacPassword</newUserTemplate>
+    <showActionConfirmation>true</showActionConfirmation>
+    <type>Partner</type>
+</Portal>

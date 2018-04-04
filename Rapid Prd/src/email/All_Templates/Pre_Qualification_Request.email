@@ -1,0 +1,14 @@
+<table height="400" width="600" cellpadding="5" border="0" cellspacing="5" >
+<tr height="50" valign="top" >
+<td style=" color:#000000; font-size:12pt; background-color:#FFFFFF; font-family:arial; bLabel:main; bEditID:r3st1;" tEditID="c1r1" locked="0" aEditID="c1r1" >
+<![CDATA[<p align="center"><font size="4"><strong>Pre-Qualification Status</strong></font></p>]]></td>
+</tr>
+<tr height="300" valign="top" >
+<td style=" color:#000000; font-size:12pt; background-color:#FFFFFF; font-family:arial; bLabel:main; bEditID:r3st1;" tEditID="c1r2" locked="0" aEditID="c1r2" >
+<![CDATA[<font size="2" style="color: rgb(0, 0, 0); font-family: arial; ">Date: {!Opportunity.LastModifiedDate}<br><br>Opportunity # - {!Opportunity.Opportunity_Number__c}<br>Opp Name - {!Opportunity.Name}</font><div style="color: rgb(0, 0, 0); font-family: arial; "><font size="2"><br></font></div><div><font size="2" style="color: rgb(0, 0, 0); font-family: arial; ">Opp Owner -&nbsp;</font><font face="arial" size="2">{!Opportunity.OwnerFullName}</font></div><div><font size="2"><font face="arial">PreQual Person -&nbsp;{!Opportunity.Pre_Qual_Person__c}</font><br><br><font face="arial">Campaign - {!Opportunity.Campaign}</font><br><br><font face="arial">Stage - {!Opportunity.StageName}</font><br><br><font face="arial">Pre-Qual Decision - {!Opportunity.Pre_Qual_Decision__c}</font><br><br><font face="arial">Pre-Qual Fail Reason - {!Opportunity.Pre_Qual_FAIL_Reason__c}</font></font><div style="color: rgb(0, 0, 0); font-family: arial; "><font size="2"><br></font></div><div style="color: rgb(0, 0, 0); font-family: arial; "><font size="2">Pre-Qual Unqualified Reason -&nbsp;{!Opportunity.Pre_Qual_Unqualified_Reasons__c}</font></div><div style="color: rgb(0, 0, 0); font-family: arial; "><font size="2"><br>Last Modified By - {!Opportunity.LastModifiedBy}<br></font><br><br></div></div>]]></td>
+</tr>
+<tr height="50" valign="top" >
+<td style=" color:#000000; font-size:12pt; background-color:#FFFFFF; font-family:arial; bLabel:main; bEditID:r3st1;" tEditID="c1r3" locked="0" aEditID="c1r3" >
+<![CDATA[]]></td>
+</tr>
+</table>

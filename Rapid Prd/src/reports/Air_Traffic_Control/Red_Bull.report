@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>OWNER</field>
+    </columns>
+    <columns>
+        <field>FIRST_NAME</field>
+    </columns>
+    <columns>
+        <field>LAST_NAME</field>
+    </columns>
+    <columns>
+        <field>COMPANY</field>
+    </columns>
+    <columns>
+        <field>Lead.Lead_Created_Date__c</field>
+    </columns>
+    <columns>
+        <field>Lead.Transfer_Member_Name__c</field>
+    </columns>
+    <columns>
+        <field>LEAD_SOURCE</field>
+    </columns>
+    <columns>
+        <field>Lead.Campaign_Name__c</field>
+    </columns>
+    <filter>
+        <booleanFilter>(1 AND 2) AND 3</booleanFilter>
+        <criteriaItems>
+            <column>Lead.Lead_Created_Date__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>greaterOrEqual</operator>
+            <value>7/6/2016 6:00 PM</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Lead.Lead_Created_Date__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>lessOrEqual</operator>
+            <value>7/6/2016 8:00 PM</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Lead.Transfer_Member_Name__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>notEqual</operator>
+            <value></value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>Red Bull</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>LeadList</reportType>
+    <scope>org</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>CREATED_DATE</dateColumn>
+        <interval>INTERVAL_YESTERDAY</interval>
+    </timeFrameFilter>
+</Report>

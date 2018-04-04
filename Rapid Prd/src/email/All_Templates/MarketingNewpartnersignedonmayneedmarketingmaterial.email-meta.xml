@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Marketing - New partner signed on; may need marketing material.</name>
+    <style>none</style>
+    <subject>New Partner Contract Signed - {!Account.Name}</subject>
+    <type>text</type>
+</EmailTemplate>

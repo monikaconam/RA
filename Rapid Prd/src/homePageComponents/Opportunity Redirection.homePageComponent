@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<HomePageComponent xmlns="http://soap.sforce.com/2006/04/metadata">
+    <body>&lt;script&gt;var objectCode = window.top.location.pathname.substring(1,4);   var isedit = window.top.location.pathname.substring(16,18);      var noOverride = window.top.location.search.search(&apos;nooverride=1&apos;);  if(objectCode == &apos;006&apos; &amp;&amp; (isedit == &apos;/e&apos;) &amp;&amp; noOverride == -1){    var pid = window.top.location.pathname.substring(1,16);     window.top.location = &apos;/apex/CheckPermission?id=&apos;+pid;}&lt;/script&gt;</body>
+    <pageComponentType>htmlArea</pageComponentType>
+    <width>narrow</width>
+</HomePageComponent>

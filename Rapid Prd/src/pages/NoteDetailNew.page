@@ -1,0 +1,211 @@
+<apex:page controller="NoteController">    
+    <style>
+        .x-tab-default-top button, .x-tab-default-top .x-tab-inner {
+            height: 13px !important;
+            line-height: 13px !important;
+        } 
+    </style>
+     <apex:stylesheet value="{!$Resource.ExtJS4}/extjs-4.1.0/resources/css/ext-all.css" />
+    <apex:includeScript value="{!$Resource.ExtJS4}/extjs-4.1.0/ext-all.js"/> 
+    <!-- <apex:stylesheet value="{!$Resource.ExtJS4}/extjs-4.1.0/resources/css/ytheme-gray.css" id="theme"/>xtheme-yourtheme.css-->
+    <apex:stylesheet value="{!$Resource.ExtJS4}/extjs-4.1.0/resources/css/xtheme-gray-extend.css" id="theme11"/>
+    <apex:stylesheet value="{!$Resource.ExtJS4}/extjs-4.1.0/resources/ext-theme-gray/ext-theme-gray-all.css" id="theme"/>
+    <!--  
+    <apex:stylesheet value="{!$Resource.ExtJS4}/extjs-4.1.0/resources/ext-theme-gray/ext-theme-gray-all-debug.css" id="theme1"/>
+    -->
+    <apex:stylesheet value="{!$Resource.ExtJS4}/extjs-4.1.0/resources/ext-theme-gray/ext-theme-gray-all-rtl.css" id="theme2"/>
+    <!--  
+    <apex:stylesheet value="{!$Resource.ExtJS4}/extjs-4.1.0/resources/ext-theme-gray/ext-theme-gray-all-rtl-debug.css" id="theme3"/>
+    -->
+    <style>
+        table tr td{
+            white-space:nowrap !important;
+            width:8%;
+            padding:2px;
+        }
+        
+        .imagebtn{
+            cursor:pointer;
+            margin-top:2px;
+        }
+        
+        .imagebtn:hover{
+            height: 20px;
+            width: 20px;
+            
+        }
+        
+        .sizebtn:hover{
+            margin-left:2px;
+        }
+       
+   </style>
+    <style type="text/css">
+    .accDetails div table tr td input{
+        border: none;
+        background: none;
+    }
+    
+    .accDetailsActiveBorder div table tr td input{
+        border: 1px solid #B5B8C8;              
+    }
+    #content-anchor-tip1111 ul {
+        float: left;
+        width: 850px;
+        list-style-type: disc;
+        margin-left: 15px;
+    } 
+    
+    .ext-ie #content-anchor-tip1111 ul {
+        margin: 0;
+        padding-left: 15px;
+    } 
+    
+    #content-anchor-tip1111 .thumb {
+        float: right;
+    } 
+    
+    #content-anchor-tip1111 .status-icon {
+        position: absolute;
+        top: 4px;
+        right: 50px;
+        padding: 0;
+        line-height: 0;
+    } 
+   #content-anchor-tip1111 a:link, #content-anchor-tip1111 a:visited {
+        color: #339;
+    }
+    #content-anchor-tip1111-body{
+        width: 850px !important;
+    }.x-tip {
+        width: auto !important;
+    }
+    .x-tip-body {
+        width: auto !important;
+    }
+    .x-tip-body span {
+        width: auto !important;
+    }
+    #content-anchor-tip1111{
+            /*height: 182px !important;
+            left: 520px !important;
+            top: 59px !important;
+            z-index: 19001 !important;*/
+    }
+    #content-anchor-tip1111_header_hd, 
+    #content-anchor-tip1111_header-body,
+    #content-anchor-tip1111_header-innerCt,
+    #content-anchor-tip1111_header-targetEl{
+        width:850px !important;
+    }
+    #content-anchor-tip1111 .x-tool{
+        width:auto !important;
+        left:830px !important;
+    } 
+    /*#tool-1111,,#tool-1121{
+        width:auto !important;
+        left:784px !important;
+    }*/
+    #content-anchor-tip{
+        width:305px !important;
+    }
+    .x-tab-default-top button, .x-tab-default-top .x-tab-inner {
+        height: 13px !important;
+        line-height: 13px;
+    }
+    #table td {
+        white-space:wrap;
+        padding-top:3px;       
+    }   
+    #table{
+        padding: 0 40px;
+        width: 100%;
+    } 
+    body{
+            background- color : #ddd !important; 
+           color:#232323 !important;
+           font-family: tahoma !important;
+           font-size:12px;letter-spacing:1px !important;
+           white-space:wrap !important;
+       }
+
+    </style>
+    
+    <style type="text/css"> 
+        .buttonT{
+            float: right;
+            background: rgb(187, 186, 186) !important;
+            border: solid 1px rgb(160, 159, 159) !important;
+            width: 94% !important;
+            margin-top: 12px;
+        }
+        .readonly{
+            float: right;
+            width: 94% !important;
+            margin-top: 0px;
+        }
+        .btn1{
+            float: right !important;
+            margin-top: -48px !important;
+            margin-right: 32% !important;
+        }
+        .modified{
+            float: right !important;
+            margin-top: 16px;
+        }
+        .picture{
+            float: left !important;
+            margin-top: -2% !important;
+        }        
+    </style>
+    
+    <script>    
+        Ext.require([
+            '*'
+        ]);
+        
+        Ext.onReady(function() { 
+            Ext.QuickTips.init();
+            var required = '<span style="color:red;font-weight:bold" data-qtip="Required">*</span>';
+              var tab2 =Ext.create('Ext.container.Viewport', {
+                //title: 'Note',
+                xtype: 'panel',
+                name:'noteFormNew',
+                id: 'NoteNewId',
+                //collapsible: true,
+                type:'border',
+                layout:'fit',
+                      
+                items: [{
+                    xtype:'tabpanel',
+                      layout:'fit',   
+                    items:[{
+                        title:'All Notes',
+                        xtype: 'box',
+                        autoEl: {
+                            tag: 'iframe',
+                            style: 'height: 100%; width: 100%',
+                            src: '/apex/AllNote?id={!$CurrentPage.parameters.Id}'                           
+                        },
+                        autoload:true
+                    },              
+                    <apex:repeat value="{!objRecordTypeDetail}" var="rt">
+                    {
+                        title:'{!rt.recordTypeName}',
+                        xtype: 'box',
+                        autoEl: {
+                            tag: 'iframe',
+                            style: 'height: 100%; width: 100%',
+                            src: '/apex/NoteContent?id={!rt.OppId}&rtId={!rt.recordTypeId}',
+                            autoload:true
+                        } 
+                    },
+                    </apex:repeat>
+                    ]
+                }]           
+            });
+        });  
+         
+   </script>   
+  
+</apex:page>

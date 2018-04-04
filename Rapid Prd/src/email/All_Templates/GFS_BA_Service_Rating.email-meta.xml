@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>When BA Service Rating is less than 4, an email notification is sent to Maria Mahon.</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>GFS BA Service Rating</name>
+    <style>none</style>
+    <subject>BA Service Rating is less than 4</subject>
+    <type>text</type>
+</EmailTemplate>

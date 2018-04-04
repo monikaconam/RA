@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <buckets>
+        <bucketType>picklist</bucketType>
+        <developerName>BucketField_55459512</developerName>
+        <masterLabel>Pipeline Stage</masterLabel>
+        <nullTreatment>n</nullTreatment>
+        <sourceColumnName>STAGE_NAME</sourceColumnName>
+        <useOther>false</useOther>
+        <values>
+            <sourceValues>
+                <sourceValue>Statements Rec&apos;d Follow Up</sourceValue>
+            </sourceValues>
+            <value>Preparing Quote</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>B - Quote Submitted</sourceValue>
+            </sourceValues>
+            <value>Quote Submitted</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>C - Offer Accepted - Awaiting Compl Apps</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>C-1 Contract Signed - More Info Needed</sourceValue>
+            </sourceValues>
+            <value>Quote Accepted</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Pending Management Review</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Submitted Deal</sourceValue>
+            </sourceValues>
+            <value>Underwriting</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Approved</sourceValue>
+            </sourceValues>
+            <value>Approved</value>
+        </values>
+    </buckets>
+    <columns>
+        <field>STAGE_NAME</field>
+    </columns>
+    <columns>
+        <field>Opportunity.Signed_Contract_Received__c</field>
+    </columns>
+    <columns>
+        <field>OPPORTUNITY_NAME</field>
+    </columns>
+    <columns>
+        <field>LEAD_SOURCE</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>AMOUNT</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>STAGE_NAME</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Statements Rec&apos;d Follow Up,B - Quote Submitted,C - Offer Accepted - Awaiting Compl Apps,C-1 Contract Signed - More Info Needed,Submitted Deal,Approved,Pending Management Review</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>CAMPAIGN_SOURCE</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>notContain</operator>
+            <value>Promed,Promac</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Opportunity.PrimaryCampaignSource__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Internet,Rapid Advance Internal Campaign</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>FULL_NAME</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>startsWith</operator>
+            <value>Brent,Cayce,Charles,Chanda,Christopher,Janak,Joseph Lafalcia,Juan Yanez,Marlow Santos,Matther Dillingham,Robert Kim</value>
+        </criteriaItems>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>BucketField_55459512</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Sales Pipeline Report</name>
+    <params>
+        <name>open</name>
+        <value>all</value>
+    </params>
+    <params>
+        <name>probability</name>
+        <value>&gt;0</value>
+    </params>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Opportunity</reportType>
+    <scope>organization</scope>
+    <showDetails>false</showDetails>
+    <timeFrameFilter>
+        <dateColumn>CREATED_DATE</dateColumn>
+        <interval>INTERVAL_THISMONTH</interval>
+    </timeFrameFilter>
+</Report>

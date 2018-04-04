@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Template for email confirmation to partner</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>EmailLetterhead</letterhead>
+    <name>Deal Registration Confirmation</name>
+    <style>freeForm</style>
+    <subject>Deal Registered - Thank You!</subject>
+    <textOnly>Dear {!Lead.CreatedBy},
+ 
+The lead dated {!Lead.CreatedDate} for {!Lead.FirstName} {!Lead.LastName} owner of {!Lead.Company} has been submitted to our Sales Department for review. If we require any additional information, we will notify you immediately. 
+ 
+If you have any questions, please call our Sales Assistant department at 240-514-2000.
+ 
+Thank you for your business!
+RapidAdvance Staff</textOnly>
+    <type>html</type>
+</EmailTemplate>

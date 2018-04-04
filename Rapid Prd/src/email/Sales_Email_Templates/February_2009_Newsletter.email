@@ -1,0 +1,724 @@
+<custom name="opencounter" type="tracking"> 
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+  <head>
+    <meta name="googlebot" content="noindex, noarchive, nofollow">
+    <title>RapidResource</title>
+    
+	  <style type="text/css">
+		  body,td,.bodytext {
+		  	font-family: verdana, tahoma, geneva, arial;
+		  	font-size: 8pt;
+		  	line-height: 1.2;
+		  	color: #333333;
+		  	}
+		  	
+		  .sidebar {
+		  	font-family: verdana, tahoma, geneva, arial;
+		  	font-size: 7.5pt;
+		  	line-height: 1.2;
+		  	color: #000000;}
+		  .sidebar A {
+		  	font-size: 7.5pt;
+			text-decoration: none;
+		  	color: #009933;}			
+		  .sidebar A:link {
+		  	text-decoration: none;
+		  	color: #009933;}			
+		  .sidebar A:visited {
+		  	text-decoration: none; color: #009933;}
+		  .sidebar A:active {
+		  	text-decoration: none; color: #009933;}
+	  	  .sidebar A:hover {
+	  	  	text-decoration: underline; color: #009933;}
+		  	
+		  /*.artTitleLink {
+		  	text-decoration: ; color:#333333;}
+		  A:link.artTitleLink {
+		  	text-decoration: ; color:#333333;}
+		  A:visited.artTitleLink {
+		  	text-decoration: ; color:#333333;}
+		  A:active.artTitleLink {
+		  	text-decoration: none; color:#333333;}
+	  	  A:hover.artTitleLink {
+	  	  	text-decoration: none; color:#333333;}*/
+
+		  .headertext {
+		  	font-family: times new roman,georgia, serif;
+		  	font-size: 12pt;
+		  	line-height: 1.2;}
+		  .bodytext2 {
+			font-family: verdana, tahoma, geneva, arial;
+			font-size: 10pt;
+			line-height: 1.2;
+			color: #ffffff;}
+		  .bodytext3 {
+			font-family: verdana, tahoma, geneva, arial;
+			font-size: 10pt;
+			line-height: 1.2;
+			color: #333366;}
+		  .sponsortext {
+		  	font-family: verdana, tahoma, geneva, arial;
+		  	font-size: 7pt;
+			line-height: 1.0;
+			color: #000000;}
+		  .datetext {
+		  	font-family: verdana, tahoma, geneva, arial;
+		  	font-size: 10pt;
+			line-height: 1.0;
+			color: #000000;}
+
+		  A {font-family: verdana, tahoma, geneva, arial;
+		  	font-size: 8.5pt;
+			line-height: 1.2;
+			color: #1C3A60;}
+		  A:link {
+		  	text-decoration: none;
+		  	color: #1C3A60;}
+		  A:visited {
+		  	text-decoration: none;
+		  	color: #1C3A60;}
+		  A:active {
+		  	text-decoration: none;
+		  	color: #1C3A60;}
+		  A:hover {
+		  	text-decoration: underline;
+		  	color: #1C3A60;}
+
+		  .link1 {
+		  	font-family: verdana, tahoma, geneva, arial;
+		  	font-size: 8.5pt;
+			line-height: 1.2;
+			color: #ffffff;}
+		  .link1 A{
+		  	font-family: verdana, tahoma, geneva, arial;
+		  	font-size: 8.5pt;
+			text-decoration: none;
+			color: #ffffff;}
+
+		  .link1 A:link {
+		  	text-decoration: none;
+		  	color: #ffffff;}
+		  .link1 A:visited {
+		  	text-decoration: none; color: #ffffff;}
+		  .link1 A:active {
+		  	text-decoration: none; color: #ffffff;}
+	  	  .link1 A:hover {
+	  	  	text-decoration: underline; color: #ffffff;}
+
+		  .grouphead {
+			width:98%;
+			background-color: #20619d;
+			color: #ffffff;
+			padding:5px;
+			}
+		.noteBox
+		{
+			border: 1px gray solid;
+			padding: 7.5px;
+		}
+			
+   	  .style1 {
+	margin-left: 95px;
+	margin-top: 14px;
+}
+			
+   	  </style>
+  </head>
+  
+<body text="#000000">
+
+    <center>
+	You are receiving this email because you have expressed a direct interest in our services. <br>
+	&nbsp;If you do not wish to receive future issues,
+	<strong><a href="%%unsub_center_url%%" alias="Unsubscribe">Unsubscribe</a>.
+	</strong>To view this email as a web page,<strong><a href="%%view_email_url%%"> go here.</a>&nbsp;
+	<br>
+	<br>
+	<table align="center" border=0 cellspacing=0 cellpadding=2 width="660">
+		<tr align="center" valign="middle">
+			
+			<td id="TDBorderColor" bgcolor="#000000">
+            <table align="left" border=0 cellspacing=0 cellpadding=0 width="660">
+				<tr align="left" valign="top">
+                <td  colspan="2">
+                  <img src="http://image.exct.net/lib/feee1c79716d07/m/1/bannernewsletter.jpg" alt="Banner" width="660" height="150"br>
+                </td>
+				</tr>
+				<tr align="center" valign="top">
+                <td colspan="2" class="link1" style="padding: 5px; color: #fff; height: 9px;" id="TDLinkBar" bgcolor="#479235" >
+                    | <a href="http://www.rapidadvance.com/" style="color: #ffffff;">Home</a> 
+                    | <a href="http://www.rapidadvance.com/funding-program.htm" style="color: #ffffff;">About Us</a> 
+                    | <a href="http://www.rapidadvance.com/" style="color: #ffffff;">Business Finance</a> 
+| <a href="http://www.rapidadvance.com/contact-us.htm" style="color: #ffffff;">Contact Us</a> 
+                    | <b> <a href="%%ftaf_url%%" style="color: #ffffff;">Forward To A Friend</a></b> 
+					|                
+                    <tr align="left" valign="top">
+					<td id="TRcontent" width="480" class="bodytext" style="padding: 10px;" bgcolor="#ffffff">
+
+
+
+
+
+
+
+
+
+<a name="top"></a>
+<div class="grouphead">
+<b>Headlines</b>
+</div>
+
+
+<br /> 
+
+		  
+      
+			  
+		  
+		  
+		  
+
+	 <b>Money Matters</b><hr />
+
+
+
+<a href="#396942">How Merchant Cash Advances Work</a><br />
+
+
+
+<a href="#396915">Small Businesses Cut Costs by Renegotiation</a><br />
+
+
+
+<a href="#397361">How to Get the Best Small Business Insurance</a><br />
+
+
+
+<a href="#397143">Recession Cost-Cutting No-No's</a><br />
+<br /> 
+
+		  
+      
+			  
+		  
+		  
+		  
+
+	 <b>Bright Ideas</b><hr />
+
+
+
+<a href="#397154">10 Ways to Increase Profit</a><br />
+
+
+
+<a href="#397157">The Ultimate Small Business Tune-Up</a><br />
+
+
+
+<a href="#396934">How to Manage Your Small Business in a Recession</a><br />
+<br /> 
+
+		  
+      
+			  
+		  
+		  
+		  
+
+	 <b>Grow</b><hr />
+
+
+
+<a href="#396924">Managing Through a Crisis: The New Rules</a><br />
+
+
+
+<a href="#397163">Get Organized to Get More Out of Your Business</a><br />
+
+
+
+<a href="#392607">Eight Steps to Keep Customers Coming Back</a><br />
+<br /> 
+
+		  
+      
+			  
+		  
+		  
+		  
+
+	 <b>Off Hours</b><hr />
+
+
+
+<a href="#397370">Fishing With Tigers in Bhutan</a><br />
+
+
+
+<a href="#397378">Five Places to Get a Great Winter Workout</a><br />
+<br /> <br /> 
+
+		  
+      
+			  
+		  
+		  
+			  
+			
+		  
+
+	 <div class="grouphead"><b>Money Matters</b></div> <br />
+ 
+
+<a name="396942"></a>
+<strong>How Merchant Cash Advances Work</strong><br><br>
+
+
+
+
+
+	
+  
+		
+	
+  
+
+The growing industry of merchant cash advance providers are ready and willing to help small business owners in need of quick capital.  Today's tight credit market has drastically increased demand for cash advance services.  Cash advance providers generally focus on retail, restaurant, and service companies that have strong credit card sales but do not qualify for loans due to poor credit or little to no collateral, and offer such business a lump sum payment in exchange for a percentage of future sales.   Merchant cash advance companies emphasize that their advances are not loans, but rather a "purchase and sale of future income."  Instead of requiring regular fixed payments, they directly collect a set percentage from a merchant's daily credit card sales until they recover the lump sum and their premium, which usually takes less than 12 months.  Businesses can benefit from merchant cash advances because they automatically pay less when sales are slow, instead of having to pay a fixed amount when repaying a loan.  RapidAdvance President Jeremy Brown says responsible merchant cash advance companies are careful to not retrieve so much money from a customer that the business is unable to survive.  "If you're operating under a very thin margin like a grocery store, for example, you have to be very careful with that retrieval rate," Brown says.  Cash advance providers generally collect between 8 percent to 10 percent of gross sales, Brown says, and in a low-margin business they may only collect 1 percent.  Brown formed the North American Merchant Advance Association last April in an effort to promote best practices for the industry.<br />
+<br>
+
+    From "How Merchant Cash Advances Work"
+<br>
+
+<i> BusinessWeek (01/09/09) Tozzi, John</i><br /> 
+
+<a href="#top">Return to Headlines</a>
+
+
+<br /><br /> <br />
+ 
+
+<a name="396915"></a>
+<strong>Small Businesses Cut Costs by Renegotiation</strong><br><br>
+
+
+
+
+
+	
+  
+		
+	
+  
+
+Small businesses are finding that the economic downturn has made many of their current business agreements open for renegotiation, providing the opportunity to re-examine contracts with suppliers, vendors, or landlords to find new arrangements that could be beneficial to both parties.  Frequently, renegotiating contracts can lead to businesses saving a substantial amount of money.  "Most of us grew up knowing that once you agree to something, you don't back out of it," says consultant Bill Bartmann.  "That rule doesn't apply anymore."  A recent survey of more than 1,000 small business owners and managers found that about 15 percent of respondents recently renegotiated long-term fixed-cost supply contracts, according to the Small Business Research Board.  Consultant Carl Gould says having a history of paying bills on time helps renegotiation efforts, and can convince vendors to give you lower rates, which helps them by ensuring a steady cash flow.  Consultant Tom Long says close to a dozen of his clients have negotiated discounts ranging from 1 percent to 5 percent with at least one vendor for paying with cash or personal check within 10 days of a product or service's delivery.  "Conversely," Gould says, "if you're an extremely slow payer, sometimes you can get your monthly obligation lowered because of the financial position you find yourself in."  1800Diapers was able to use its available capital to secure a better lease agreement that reduces its term to two years and provides flexibility should the company want more space to grow.  Having a long-standing relationship with a vendor will help in the renegotiation process.  Some businesses are even negotiating for employees.  Atlanta Refrigeration Service recently asked Heritage Food Service Equipment to take on four of its employees in turn for becoming the sole supplier for Atlanta Refrigeration, which saved Atlanta Refrigeration more than $250,000 in payroll and benefits and gave Heritage $1 million in business.<br />
+<br>
+
+    From "Small Businesses Cut Costs by Renegotiation"
+<br>
+
+<i> Wall Street Journal (01/20/09) P. B1; Flandez, Raymund</i><br /> 
+
+<a href="#top">Return to Headlines</a>
+
+
+<br /><br /> <br />
+ 
+
+<a name="397361"></a>
+<strong>How to Get the Best Small Business Insurance</strong><br><br>
+
+
+
+
+
+	
+  
+		
+	
+  
+
+Small business owners have a variety of insurance options available, and choosing the right type of insurance for the right price is essential to a company's success.  A few best practices will ensure that your business has the right insurance.  First, involve your insurance agent in the startup process so you have the right policies in place from the first day.  Compare coverage and find out what prices are available for your specific needs.  Consider joining an association, which can offer a variety of discounts.  If multiple types of insurance are needed, use an insurance agent who can provide each type and potentially offer discounts by creating a custom package.  Remember to increase insurance coverage as your business grows, and include commercial umbrella coverage.  Business property insurance should be broad enough to cover every eventuality.  Consider purchasing health insurance, as it is a great tool for recruiting and keeping talented employees, and think about carrying employment practices liability insurance.  There also are a few pitfalls to avoid.  Do not wait to get insurance.  Unexpected accidents can occur at any time and being unprepared can be disastrous.  Do not self-insure any part of your Worker's Compensation Risk.  State Compensation Funds are available in every state and the costs are minimal compared to being self-insured.  Be sure to recognize employees, as the difference between employees and contract workers is clear and penalties for not acknowledging employees is severe.  Do not work with insurance providers without researching their rating, and do not allow insurance policies to lapse.  Be sure to tell your insurance agent everything so they can provide you with full coverage.<br />
+<br>
+
+    From "Tips on Getting the Best Insurance for Your Small Business"
+<br>
+
+<i> SmartBiz.com (01/23/09) Kraus, Dawn</i><br /> 
+
+<a href="#top">Return to Headlines</a>
+
+
+<br /><br /> <br />
+ 
+
+<a name="397143"></a>
+<strong>Recession Cost-Cutting No-No's</strong><br><br>
+
+
+
+
+
+	
+  
+		
+	
+  
+
+While cutbacks are an inevitable part of surviving a recession, there are certain cuts that business managers should avoid at all costs.  Many business owners naturally look to cut from marketing, overhead, or staff, but experts say the right move is to cut a little from all three but to avoid cutting from operations that protect the company.  And cost savings should never come at the expense of the ability to execute long-term objectives.  Consultant Penny Morey says the biggest errors are caused by poor communication from management.  Morey says poor communication causes employees to panic and spend their time looking for jobs or talking to each other about their situations instead of doing their work to help the company.  She suggests regular meeting with employees, and if the work force has been reduced management should talk with remaining employees to acknowledge the changes.  Open communication is the best way to control damage.  "If management is taking a salary cut along with everyone else, communicate it. People just want to know they're being treated fairly," Morey says.  Practices such as performance evaluations, even if they are not linked to monetary rewards, should still be done to make sure people are setting goals and working toward them.  Computing Technology Industry Association CEO Todd Thibodeaux says business owners with Web sites should not cut corners in quality of service.  "Don't downgrade from T1 to DSL," Thibodeaux says.  "Make sure you're maintaining the security of customers' data, and keep your infrastructure in place.  Don't hold off on buying a better piece of equipment."  A good strategy is to explore services that will help clients eliminate the need to invest in their own IT tools.  Thibodeaux says now is a good time for businesses to reposition themselves for the green technology revolution.<br />
+<br>
+
+    From "Recession Cost-Cutting No-No's"
+<br>
+
+<i> Entrepreneur (12/15/08) Wang, Jennifer</i><br /> 
+
+<a href="#top">Return to Headlines</a>
+
+
+<br /><br /> <br /> 
+
+		  
+      
+			  
+		  
+		  
+			  
+			
+		  
+
+	 <div class="grouphead"><b>Bright Ideas</b></div> <br />
+ 
+
+<a name="397154"></a>
+<strong>10 Ways to Increase Profit</strong><br><br>
+
+
+
+
+
+	
+  
+		
+	
+  
+
+Even during difficult times there are ways for small businesses to increase revenue and profit.  First, find marketing partners and cross-market to each other's customers to expand revenues for both partners.  Choose a partner that will support and strengthen your brand name, and secure a confidentiality agreement to protect each partner's intellectual property.  Make sure you understand your customers' needs, and match those needs with the right product, image, price, or lifestyle emphasis.  Listen to both customers and staff to reveal areas where your business excels and areas that need improvement.  Once or twice a year, tour your business to listen to the good and the bad things employees at all levels have to say.  Teach employees about the finances and operations of the business so they understand where they fit in.  Make sure that Internet users see the side of your business that you want them to see.  Counter unflattering blog posts or complaint forums by openly addressing these issues, and build a Wikipedia profile for you company, which usually ranks high in search results.  Build additional sites that target submarkets, and generate positive press through press releases.  Give customers and potential customers online worksheets asking how your product or service could help them, and post the results on a Web page.<br />
+<br>
+
+    From "Ways to Increase Profit"
+<br>
+
+<i> Investor's Business Daily (01/22/09) P. A3; Cooper, Cord</i><br /> 
+
+<a href="#top">Return to Headlines</a>
+
+
+<br /><br /> <br />
+ 
+
+<a name="397157"></a>
+<strong>The Ultimate Small Business Tune-Up</strong><br><br>
+
+
+
+
+
+	
+  
+		
+	
+  
+
+The struggling economy and frozen business credit market means most companies cannot afford major investments, but no business can afford to be inactive.  Intuit's Scott Cook says business managers should expect their most innovative ideas to come from their youngest employees, so seek them out and capitalize on their creativity.  George Naddaff from Boston Chicken and UFood Grill suggests bringing back the fun and getting people to laugh.  Boston Chicken and UFood Grill recently acquired chicken and food suits for employees to wear outside of the stores that have increased activity on the street, gotten people to laugh and cheer, and raised sales by 8 percent.  John Mackey from Whole Foods acknowledges that cuts may be necessary, and if they are to be sure to cut deep enough the first time.  Mackey says employees can forgive one round of layoffs, but multiple rounds causes them to start worrying about when they will lose their jobs instead of focusing on doing them.  Method's Eric Ryan suggests piggybacking on other events.  Great publicity can be generated without spending significant funds.  Look at upcoming events in the community and find ways of involving your business in those events.  For example, last September, 70 cities celebrated Parking Day to raise environmental awareness.  Method set up mini golf courses in San Francisco and Chicago to support the event while generating attention for themselves.  Cisco Systems CEO John Chambers encourages managers to plan for the upturn.  Chambers says even during the middle of a crisis, be prepared for the eventual rebound.  Plan how you will capture your share of the recovering market and separate yourself from your competitors.  In the meantime, use the slowdown to build stronger relationships with your customers.<br />
+<br>
+
+    From "The Ultimate Business Tune-Up for Times Like These"
+<br>
+
+<i> Inc. Magazine (02/09) P. 70; Bluestein, Adam; Buchanan, Leigh</i><br /> 
+
+<a href="#top">Return to Headlines</a>
+
+
+<br /><br /> <br />
+ 
+
+<a name="396934"></a>
+<strong>How to Manage Your Small Business in a Recession</strong><br><br>
+
+
+
+
+
+	
+  
+		
+	
+  
+
+The current economic climate is largely a new experience for small business owners, and surviving the recession will require a new, innovative course of action.  First and foremost, reset priorities by facing and accepting the new reality.  During good times, the top priorities are generally to expand into new markets and grow earnings.  Difficult economic times require a new plan, so business owners should scrap previous strategic plans and create one to weather the recession.  Experts say owners should Invest in the core of their business to make it more competitive when the recession ends.  The most successful companies never stop funding their most critical operations, be it product innovation, customer service, or another area.  Many executives believe that they should keep quiet until they can provide some answers, but the correct path is to open up new lines of communication, not only to reassure employees but to find new opportunities for innovation and new ways of being more efficient.  Executives should reassure employees by making the company's vision clear and let them know that management cares.  Owners also must find new solutions to provide to their customers.  Everyone is hurting right now, so find low-cost alternatives that customers can use.  Finally, focus on how capital is being obtained and used.  During good times it can be easy to overlook the rule of earning a return on capital that is greater than the investment.<br />
+<br>
+
+    From "How to Manage Your Business in a Recession"
+<br>
+
+<i> Fortune (01/19/09) Vol. 159, No. 1, P. 88; Colvin, Geoff</i><br /> 
+
+<a href="#top">Return to Headlines</a>
+
+
+<br /><br /> <br /> 
+
+		  
+      
+			  
+		  
+		  
+			  
+			
+		  
+
+	 <div class="grouphead"><b>Grow</b></div> <br />
+ 
+
+<a name="396924"></a>
+<strong>Managing Through a Crisis: The New Rules</strong><br><br>
+
+
+
+
+
+	
+  
+		
+	
+  
+
+Difficult economic times can be excellent opportunities for small businesses to expand and grow.  Andrew Carnegie founded his first steel mill during the Panic of 1873, the start of a long depression, by taking advantage of low costs to build a business that made him the world's richest man, and Bill Hewlett and Dave Packard took similar risks when they launched Hewlett-Packard from a garage near the end of the Great Depression.  Repeatedly throughout history, crisis has provided opportunity.  Small business owners undoubtedly have to cut costs to survive the current crisis, but the smart ones are also looking for opportunity and are willing to make a bold move that will make their company an industry leader.  First, acknowledge to yourself and those you work with that the world has changed, and ask those around you to question every technique that worked in the past, as the strategies used during boom times could prove disastrous during this drought.  A major issue for many businesses is obtaining the funds they need to help their business grow.  Securing those funds may require selling assets at less-than-desirable prices or issuing stock in a down market.  Do not wait for the competition to crumble, instead attack the market by hiring their best people, ensuring that yours stay with you, and buy assets from struggling rivals.  Work to solicit new customers while others are cutting back on service.  Eliminate strategies that do not fit the core business.  Instead of cutting compensation across the board, focus on rewarding your best employees, and if cuts are necessary cut the most from the top.  Being innovative now can position your business to recover faster and grow larger than your competitors.<br />
+<br>
+
+    From "Managing Through a Crisis: The New Rules"
+<br>
+
+<i> BusinessWeek (01/19/09) No. 4116, P. 30; Thornton, Emily</i><br /> 
+
+<a href="#top">Return to Headlines</a>
+
+
+<br /><br /> <br />
+ 
+
+<a name="397163"></a>
+<strong>Get Organized to Get More Out of Your Business</strong><br><br>
+
+
+
+
+
+	
+  
+		
+	
+  
+
+Difficult economic times demand new and creative small business strategies.  For example, most business owners know about return on investment (ROI), but fewer owners have heard of return on organization (ROO).  Small businesses are constantly plagued by too little time and too little money.  With just a few small changes, small business owners can increase their ROO and significantly improve the bottom lime.  Some experts estimate that increasing ROO can yield up to an extra two hours of productive time a week and an additional 6 percent in revenue.  Increasing organizational efficiency also can help businesses keep current customers.  A few simple changes can generate a significant ROO.  First, organize the company's office and workspace.  Incorporate a filing system that makes sense for the business, and have Post-It notes ready to capture each new idea.  No matter what industry the business is in, all companies are in the service business as the times demand exemplary customer service.  One of the best ways of to approach business like a service industry is to take advantage of mobile computing, using notebook computers and smart phones, so employees can respond to customer needs faster and from any location.  Employees should take the time to learn how to use the software effectively and to its fullest extent.  Always follow up a referral with a thank-you note to the referrer, and consider sending the referrer a coupon for a discount or another reward.  Being more organized can significant improve businesses efficiency and create ways of growing the business without spending money.<br />
+<br>
+
+    From "Ask an Expert: Get Organized to Get More Out of Your Business"
+<br>
+
+<i> USA Today (01/25/09) Strauss, Steve</i><br /> 
+
+<a href="#top">Return to Headlines</a>
+
+
+<br /><br /> <br />
+ 
+
+<a name="392607"></a>
+<strong>Eight Steps to Keep Customers Coming Back</strong><br><br>
+
+
+
+
+
+	
+  
+		
+	
+  
+
+While attracting new customers is important, selling additional products or services to existing customers can be just as important and profitable.  First, determine if your business desires transactions or relationships.  Some businesses are transaction-oriented by nature, such as a non-chain restaurant on a busy road that thrives on people passing by.  However, most companies benefit from customer relationships.  Second, make sure that your entire business, and not just sales, is relationship-oriented.  For example, car dealership owner Carl Sewell focused his entire organization on keeping customers, down to having mechanics put a rose and thank you note on the passenger seat of each car being serviced.  Third, tell staff that they are in a relationship business, and teach them what that means in terms of how customers are to be treated, and give staff the ability to act independently and accordingly.  Fourth, profile each job with customer relationship support duties and hire people that match that profile.  Measure and reward performance according to customer service objectives.  Fifth, establish manual and IT systems that monitor relationships and provide planning and management information for everyone.  Sixth, create financial models that highlight the impact of expanding existing relationships and establishing new relationships that can be expanded.  Use these models for budgeting, planning, and goal-setting.  Seventh, study the customer relationship data and see what is working and what should be improved.  Determine which products are best at bringing in new customers and redesign sales strategies to offer them first.  Eighth, orient your branding and marketing toward establishing relationships.  Aim your messages at the people who are likely to create customer relationships that will be the most valuable.<br />
+<br>
+
+    From "Transactions vs. Relationships: Eight Steps to Keep Customers Coming Back"
+<br>
+
+<i> Washington SmartCEO (12/08) Vol. 3, No. 12, P. 14; Riecks, Paul</i><br /> 
+
+<a href="#top">Return to Headlines</a>
+
+
+<br /><br /> <br /> 
+
+		  
+      
+			  
+		  
+		  
+			  
+			
+		  
+
+	 <div class="grouphead"><b>Off Hours</b></div> <br />
+ 
+
+<a name="397370"></a>
+<strong>Fishing With Tigers in Bhutan</strong><br><br>
+
+
+
+
+
+	
+  
+		
+	
+  
+
+Business owners who like to fish in natural environments should consider visiting Bhutan, a small Buddhist monarchy the size of Switzerland positioned between India and Tibet.  Western central Bhutan offers a luxury hotel located in the Phobjikha Valley.  The valley features mountain streams teeming with Himalayan mountain trout, or coldwater German brown trout, which were introduced by British settlers in the 1930s.  Because the population of Bhutan is Buddhist the fish are not caught for food, allowing them to thrive.  However, many of the fishing spots are also watering spots for the leopards, tigers, and panthers that live in the area.  Fishing is catch and release, but guided trips include a lunch, which usually includes curried Indian lentils, spiced potatoes, Bhutanese red rice, yak meat, and beer.  A fishing trip to Bhutan will provide anglers with an experience in one of the most intact and varied natural environments in the world.<br />
+<br>
+
+    From "Fishing With Tigers"
+<br>
+
+<i> Forbes (01/12/09) Maxwell, Jessica</i><br /> 
+
+<a href="#top">Return to Headlines</a>
+
+
+<br /><br /> <br />
+ 
+
+<a name="397378"></a>
+<strong>Five Places to Get a Great Winter Workout</strong><br><br>
+
+
+
+
+
+	
+  
+		
+	
+  
+
+Just because it is cold outside does not mean that outdoor and exercise enthusiasts have to limit their activities to indoor substitutions.  Winter offers a variety of outdoor activities for those willing to brace the cold.  In addition to skiing and more traditional winter activities, the Northeast has more ice climbing than areas known for their mountain and winter activities such as Colorado and Montana.  New Hampshire is full of ice climbing, primarily because of its severe weather that shifts from heavy snow to a thaw to a cold snap.  In Minnesota, outdoor enthusiasts can try their hand at dog sledding.  Dog-sledding expeditions can be used to teach visitors about the winter sport, survival skills, such as tying knots and starting fires, and provide superb views of winter landscapes.  Snowshoeing may be best for those who enjoy casual walks and hikes.  The Cascade Mountains near Seattle provide some excellent snowshoeing trails, and local outfitters can provide rentals for those new to the sport.  Yellowstone park offers some of the best cross-country skiing in the country, filled with glimpses of otters, bison, coyotes, bighorn sheep, and wolves.  Michigan's Rock River Canyon, a few miles from Lake Superior, has recently become a popular attraction.  A grotto at the bottom of a steep ravine contains a frozen waterfall.  The translucent cavern formed by frozen stalactites, stalagmites, and three-to-four-foot-thick columns of ice is truly mesmerizing and is different every year.<br />
+<br>
+
+    From "Cold Sweat: Five Places to Get a Great Winter Workout"
+<br>
+
+<i> Sierra (12/08) Vol. 29, No. 6, P. 29; Ferris, David</i><br /> 
+
+<a href="#top">Return to Headlines</a>
+
+
+<br /><br /> <br /> Abstract News &copy;	Copyright 2009 <A HREF="http://www.infoinc.com/copyright.html">INFORMATION, INC.</A><BR>
+
+<a href="http://www.infoinc.com/assn_news/requestinfo.cfm?mode=poweredby&sid=0C05CDE7">
+<img src="http://image.exct.net/lib/feee1c79716d07/m/1/poweredBy_small115-newsletter.jpg" border="0" vspace="5" alt="Powered by Information, Inc." /></a><br>
+
+
+
+
+
+<p /><hr /><p />
+<center>
+<a href="http://www.rapidadvance.com/subscribe.htm" target="_blank">Subscribe</a> :: <a href="http://www.infoinc.com/RapidAdvance/mailinglist.cfm?FORMID=2&SERVICEID=1238" target="_blank">Change E-mail</a> :: <a href="mailto:unsubscribe@5pq0wmtho61cphe929b37zo7z.in.salesforce.com?subject=Unsubscribe" target="_blank">Unsubscribe</a>
+</center>
+
+
+
+
+
+						
+                       
+
+						</td>
+						
+						<td width="155" style="padding: 10px;" bgcolor="#D1DEEF" id="TDsidebar">
+						<center><br>
+
+						  <div class="datetext"><b><i>February 2009 </i></b>
+					      <br>
+                          </div>
+                          </center>
+                          <hr>                      
+						<div class="sidebar"><br>
+                        
+<center>
+<a href="http://www.rapidadvance.com/subscribe.htm" target="_blank"><strong><u>Subscribe For Free</u></strong></a><br><br>
+</center>
+                        
+                        
+
+<hr />
+
+
+
+
+
+
+
+
+<center>
+<a href="http://www.rapidadvance.com/" target="_blank">
+<img src="http://image.exct.net/lib/feee1c79716d07/m/1/RPA-Logo-Color-newsletter.gif" alt="Banner" width="150" height="59" border="0" /></a><br>
+</center>
+<br>
+
+<strong>About RapidAdvance</strong> &ndash; RapidAdvance serves the unique financial needs of small to mid-sized businesses by providing a great alternative to a small business loan.  As a leading provider of business cash advance funding services, we provide a key source of business capital to the business community.
+<br><br><hr><br>
+<strong>About <em>RapidResource</em></strong> &ndash; Our editorial staff monitors nearly 11,000 newspapers, business publications, national and international wire services, and other periodicals and summarizes significant articles into and easy-to-read summary.
+<br><br><hr><br>
+
+For more information on RapidAdvance and <i>Rapid Resource</i>, contact:
+<br><br>
+RapidAdvance<br>
+7316 Wisconsin Avenue<br>
+Suite 450<br>
+Bethesda, MD 20814<br>
+877-467-2743<br>
+							<br>
+							<a href="mailto:resources@rapidadvance.com?subject=RapidAdvance Inquiry From Newsletter">
+							Find Out More</a><br /> 
+
+						</div>
+						<!-- ========================= END SIDEBAR =========================== -->
+						<br>
+					</td>
+				</tr>
+            </table>
+			</td>
+		</tr>
+	</table>
+    </center>
+
+&nbsp;&nbsp;
+
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<a href="%%profile_center_url%%" alias="Update Profile">Update Profile</a>
+
+<table cellpadding="2" cellspacing="0" width="600" ID="Table5" Border=0 class="style1"><tr><td><font face="verdana" size="1" color="#444444">This email was sent by: <b>%%Member_Busname%%</b><br>%%Member_Addr%% %%Member_City%%, %%Member_State%%, %%Member_PostalCode%%, %%Member_Country%%<br><br></font></td></tr></table>
+		<tr>
+		<td>&nbsp;</td>
+	</tr>
+</table>
+	</body>
+</html>

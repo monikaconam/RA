@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>marz__Multi_picklist_Frequency_Record__c.marz__Count__c</field>
+    </columns>
+    <columns>
+        <field>CUST_NAME</field>
+    </columns>
+    <columns>
+        <field>marz__Multi_picklist_Frequency_Record__c.marz__Object_Name__c</field>
+    </columns>
+    <columns>
+        <field>marz__Multi_picklist_Frequency_Record__c.marz__Multi_PickList_Name__c</field>
+    </columns>
+    <columns>
+        <field>marz__Multi_picklist_Frequency_Record__c.marz__Group_By_Name__c</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>marz__Multi_picklist_Frequency_Record__c.marz__Object_Name__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>QA Review</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>marz__Multi_picklist_Frequency_Record__c.marz__Multi_PickList_Name__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Reason for not moving forward?</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>marz__Multi_picklist_Frequency_Record__c.marz__Picklist_Value__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>notEqual</operator>
+            <value>*BLANK*</value>
+        </criteriaItems>
+    </filter>
+    <format>Matrix</format>
+    <groupingsAcross>
+        <dateGranularity>Day</dateGranularity>
+        <field>marz__Multi_picklist_Frequency_Record__c.marz__Group_By__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsAcross>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>marz__Multi_picklist_Frequency_Record__c.marz__Picklist_Value__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Not Interested - Reasons</name>
+    <params>
+        <name>co</name>
+        <value>0</value>
+    </params>
+    <reportType>CustomEntity$marz__Multi_picklist_Frequency_Record__c</reportType>
+    <scope>organization</scope>
+    <showDetails>false</showDetails>
+    <timeFrameFilter>
+        <dateColumn>CUST_CREATED_DATE</dateColumn>
+        <endDate>2017-03-09</endDate>
+        <interval>INTERVAL_CUSTOM</interval>
+        <startDate>2017-03-01</startDate>
+    </timeFrameFilter>
+</Report>

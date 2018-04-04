@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Use for survey notification to Sales.</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>EmailLetterhead</letterhead>
+    <name>Customer Sat Survey Rec&apos;d</name>
+    <style>freeForm</style>
+    <subject>{!Opportunity.OwnerFirstName} - {!Opportunity.Name} submitted a survey.</subject>
+    <textOnly>Date Submitted - {!Customer_Survey__c.CreatedDate}
+Rapid&apos;s Rep. - {!Opportunity.OwnerFirstName}
+
+Campaign - {!Opportunity.Campaign}
+
+Opportunity Name - {!Customer_Survey__c.Opportunity__c}
+
+Comments - {!Customer_Survey__c.Comments_or_Suggestions__c}
+
+Overall Rating - {!Customer_Survey__c.Overall_Rating__c}
+
+How did you hear about us? - {!Customer_Survey__c.How_did_you_hear_about_us__c}
+
+Would you recommend us? - {!Customer_Survey__c.Will_you_recommend_us__c}
+
+Was a referral submitted? - (If blank, No.)
+{!Customer_Survey__c.Was_a_referral_submitted__c}
+
+Please click on the link below or copy and paste it into your browser to view the survey results:{!Customer_Survey__c.Survey_URL__c}</textOnly>
+    <type>html</type>
+</EmailTemplate>

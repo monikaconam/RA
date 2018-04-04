@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>OPPORTUNITY_NAME</field>
+    </columns>
+    <filter>
+        <booleanFilter>(((1 or 2)) AND 3) AND 4</booleanFilter>
+        <criteriaItems>
+            <column>CAMPAIGN_OWNER</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Gina Mackenzie</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>CAMPAIGN_OWNER</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Donna Hinrichs</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>ACTIVE</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>1</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>CAMPAIGN_NAME</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>notContain</operator>
+            <value>Eaglewood,Donna Hinrichs,Gina</value>
+        </criteriaItems>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>CAMPAIGN_NAME</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>2015 Active campaign-GM &amp; DH</name>
+    <params>
+        <name>open</name>
+        <value>all</value>
+    </params>
+    <params>
+        <name>probability</name>
+        <value>&gt;0</value>
+    </params>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>OpportunityCampaign</reportType>
+    <scope>organization</scope>
+    <showDetails>false</showDetails>
+    <timeFrameFilter>
+        <dateColumn>CREATED_DATE</dateColumn>
+        <interval>INTERVAL_PREVFY</interval>
+    </timeFrameFilter>
+</Report>

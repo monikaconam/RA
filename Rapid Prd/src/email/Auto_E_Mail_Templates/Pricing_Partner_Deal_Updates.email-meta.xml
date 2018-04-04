@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>StandardLetterheadSample</letterhead>
+    <name>Pricing Partner Deal Updates</name>
+    <style>freeForm</style>
+    <subject>{!Opportunity.Name} - Deal Update</subject>
+    <textOnly>Date - {!Opportunity.LastModifiedDate}
+Representative - {!Opportunity.OwnerFirstName}
+ 
+Opportunity Number - {!Opportunity.Opportunity_Number__c}
+Opportunity Name - {!Opportunity.Name}
+ 
+Stage - {!Opportunity.StageName}
+ 
+Sales Assistant Notes - {!Opportunity.Sales_Check_List_Notes__c}
+ 
+Advance Amount - {!Opportunity.Advance_Amount__c}
+Payback Amount - {!Opportunity.Pay_Back_Amount__c}
+Split -  {!Opportunity.Percent_Payback__c}
+Estimated Days to Repay - {!Opportunity.Estimated_Days_to_Repay__c}
+ 
+Signed Contract Received - {!Opportunity.Signed_Contract_Received__c}
+ 
+ 
+Submitted to Underwriting - {!Opportunity.Submit_to_UW_Processing__c}
+Underwriting Notes - {!Opportunity.Underwriting_Notes__c}
+Decision - {!Opportunity.Underwriting_Approval__c}
+Decline Reason - {!Opportunity.Decline_Reason__c}
+ 
+Processing Representative - {!Opportunity.Processing_Representative__c}
+Processing Notes - {!Opportunity.Processing_Notes__c}
+ 
+Funded Date -  {!Opportunity.Funded_by_WC__c}</textOnly>
+    <type>html</type>
+</EmailTemplate>

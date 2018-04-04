@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>OWNER</field>
+    </columns>
+    <columns>
+        <field>FIRST_NAME</field>
+    </columns>
+    <columns>
+        <field>LAST_NAME</field>
+    </columns>
+    <columns>
+        <field>TITLE</field>
+    </columns>
+    <columns>
+        <field>COMPANY</field>
+    </columns>
+    <columns>
+        <field>LEAD_SOURCE</field>
+    </columns>
+    <columns>
+        <field>RATING</field>
+    </columns>
+    <columns>
+        <field>STREET</field>
+    </columns>
+    <columns>
+        <field>EMAIL</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>OWNER</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>,Brent Elliot,Robert Kim,Cayce Prunesti,Chanda Moorman,Janak Pancholi,Joseph LaFalcia,Juan Yanez,Marlow Santos,Christopher Conway,Matthew Dillingham,Devin Delany,Ryan Dearborn,Brendan McBride,Peter Havenstein,Tim Iuculano,Charles Wagner,Jeff Hageman</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>STATUS</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Initial Call Needed,Calling - No Contact Made,Fraud,In Progress - Follow Up Call Needed,In Progress - Awaiting Statements,In Progress - Pending Approval,In Progress - Pending Quote,Not Interested - Do Not Contact,Not Interested - Follow Up Later,Requested Information Only,Unqualified,Converted</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>STATE</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>NJ</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>LEAD_SOURCE</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Partner,Web-Call-In,Web-To-Lead,TV-Call-In,100% Paid Off,Facebook,Twitter,Google+,LinkedIn,Advertisement,Agent,Cold Call,Email,Email Campaign,Employee Referral,Experian List,External Referral,Newsletter,Other,Partner-Web,Print Ad,Public Relations,Radio,Referral,Renewal Campaign - Existing Merchants,Seminar - Internal,Seminar - Partner,Spanish Web-To-Lead,Telemarketing - Partner,Trade Show,Word of mouth,Yellow Pages,Rock Connections</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>New Jersey Leads</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>LeadList</reportType>
+    <scope>org</scope>
+    <showDetails>true</showDetails>
+    <sortColumn>OWNER</sortColumn>
+    <sortOrder>Asc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>CREATED_DATE</dateColumn>
+        <endDate>2014-03-13</endDate>
+        <interval>INTERVAL_CUSTOM</interval>
+        <startDate>2012-01-01</startDate>
+    </timeFrameFilter>
+</Report>

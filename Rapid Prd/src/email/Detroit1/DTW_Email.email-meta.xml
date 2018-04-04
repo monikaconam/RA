@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>7/22 Email</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>EmailLetterhead</letterhead>
+    <name>7/22 Email</name>
+    <style>freeForm</style>
+    <subject>Hey {!Contact.FirstName}, your Business Advisor information:</subject>
+    <textOnly>Hello {!Contact.OwnerFirstName},
+ 
+You’ve received a few calls from some of the business advisors on our team and I’m sure you’ve been busy.  I just called and wanted to reach out to you because of a specific product we created.
+ 
+Just to give you an idea of what it is we are offering, it&apos;s a loan that is as competitive as a bank loan or SBA loan in terms and rates, with the only difference being we don’t require the crazy documentation that banks and government loans will require from you.  We also don’t have the high cost fees because we will be servicing your loan through the life of the loan. Lastly, we take no collateral on these loans either.
+ 
+You’re company has been chosen for an opportunity because of the length of time you’ve been in business and we see it as a low risk loan.
+ 
+One last thing that I forgot to mention is that you don’t have to have great credit to qualify.
+ 
+Please call me directly when you get this or just reply directly to this email and I&apos;ll respond immediately. We’ll just be having a quick conversation.
+ 
+ 
+Hope All is Well {!Contact.OwnerFirstName},
+
+{!User.Name} | Business Advisor
+Email:  		{!User.Email}
+Phone:		{!User.Phone}
+Cell Phone:  	{!User.MobilePhone}</textOnly>
+    <type>html</type>
+</EmailTemplate>

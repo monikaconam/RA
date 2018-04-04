@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Lead$LeadId18Char__c</field>
+    </columns>
+    <columns>
+        <field>Lead$Name</field>
+    </columns>
+    <columns>
+        <field>Lead$LeadSource</field>
+    </columns>
+    <columns>
+        <field>Lead$Last_Five9_List__c</field>
+    </columns>
+    <columns>
+        <field>Lead$Five9_Call_Counter__c</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>Lead.Five9LSP__Five9_List_Items__r$Name</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value></value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Lead.Five9LSP__Five9_List_Items__r$Five9LSP__Five9_List__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value></value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Lead$LeadSource</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>notContain</operator>
+            <value>Partner</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Lead$Status</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Initial Call Needed,Calling - No Contact Made,In Progress - Follow Up Call Needed,In Progress - Awaiting Statements,In Progress - Pending Approval,In Progress - Pending Quote,In Progress - Contract Sent</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Lead$Owner</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Brian Klenk</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Lead$Five9_Call_Counter__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value></value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Lead$Name</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>notEqual</operator>
+            <value>Bogus,Five9 Generated Lead</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>Leads without Five9 List</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Leads_with_without_Five9_Lists__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <sortColumn>Lead$Last_Five9_List__c</sortColumn>
+    <sortOrder>Asc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>Lead$CreatedDate</dateColumn>
+        <interval>INTERVAL_CURRENT</interval>
+    </timeFrameFilter>
+</Report>

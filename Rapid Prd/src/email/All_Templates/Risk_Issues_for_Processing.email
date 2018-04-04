@@ -1,0 +1,19 @@
+Risk Error Issue occurred on the following Opportunity:
+
+From: {!Opportunity.Risk_Employee__c} <{!Opportunity.Send_Risk_Alert_From__c}>
+
+Opportunity Name: {!Opportunity.Name}
+Opportunity Owner: {!Opportunity.OwnerFullName}
+Primary Campaign Source: {!Opportunity.Campaign}
+Product: {!Opportunity.Product__c}
+Amount: {!Opportunity.Account}
+Amount Sold: {!Opportunity.Pay_Back_Amount__c}
+Daily Percentage: {!Opportunity.Percent_Payback__c}
+Estimated Days to Complete: {!Opportunity.Est_Days_to_Repay__c}
+Business Days to Collect: {!Opportunity.Loan_Term_Days__c}
+Card Types Selected by UW: {!Opportunity.Card_Types_Selected_by_UW__c}
+New Processor: {!Opportunity.Processor_Name__c}
+
+Risk Issues: {!Opportunity.Risk_Issues__c}
+
+Link: https://na33.salesforce.com/{!Opportunity.Id}

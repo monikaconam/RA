@@ -1,0 +1,32 @@
+<table height="400" width="550" cellpadding="5" border="0" cellspacing="5" >
+<tr height="400" valign="top" >
+<td style=" color:#000000; font-size:12pt; background-color:#FFFFFF; font-family:arial; bLabel:main; bEditID:r3st1;" tEditID="c1r1" locked="0" aEditID="c1r1" >
+<![CDATA[<P><FONT face=Verdana,Geneva,Arial,Helvetica,Sans-Serif color=#000066 size=2>Date - {!Opportunity.LastModifiedDate}&nbsp; </FONT></P>
+<P><FONT face=Verdana,Geneva,Arial,Helvetica,Sans-Serif color=#000066 size=2>&nbsp;</FONT></P>
+<P><FONT face=Verdana,Geneva,Arial,Helvetica,Sans-Serif color=#000066 size=2>Opportunity Name - {!Opportunity.Name}</FONT></P>
+<P><FONT face=Verdana,Geneva,Arial,Helvetica,Sans-Serif color=#000066 size=2></FONT>&nbsp;</P>
+<P><FONT face=Verdana color=#000066 size=2>Processing Representative - {!Opportunity.Processing_Representative__c}</FONT></P>
+<P><FONT face=Verdana color=#000066 size=2></FONT>&nbsp;</P>
+<P><FONT face=Verdana,Geneva,Arial,Helvetica,Sans-Serif color=#000066 size=2><STRONG>Current FRSA:</STRONG></FONT></P>
+<P><FONT face=Verdana color=#000066 size=2></FONT>&nbsp;</P>
+<P><FONT face=Verdana,Geneva,Arial,Helvetica,Sans-Serif color=#000066 size=2>Advance&nbsp;Price - {!Opportunity.Amount}</FONT></P>
+<P><FONT color=#000066 size=2>Percent Payback - {!Opportunity.Percent_Payback__c}</FONT></P>
+<P><FONT color=#000066 size=2>Payback&nbsp;Price - {!Opportunity.Pay_Back_Amount__c}</FONT></P>
+<P>
+<P><FONT face=Verdana color=#000066 size=2></FONT></P><FONT face=Verdana size=2></FONT><FONT color=#000066>&nbsp;</FONT> 
+<P></P>
+<P><FONT face=Verdana color=#000066 size=2><STRONG>New FRSA Needed:</STRONG></FONT></P>
+<P><FONT face=Verdana color=#000066 size=2></FONT>&nbsp;</P>
+<P><FONT color=#000066 size=2>New Advance&nbsp;Price - {!Opportunity.00N70000001wnUo}</FONT></P>
+<P><FONT color=#000066 size=2>New Percent Payback - {!Opportunity.00N70000001wnVD}</FONT></P>
+<P><FONT color=#000066 size=2>New Payback Price - {!Opportunity.00N70000001wnVt}</FONT></P>
+<P><FONT color=#000066></FONT>&nbsp;</P>
+<P><FONT face=Verdana,Geneva,Arial,Helvetica,Sans-Serif color=#000066 size=2>Underwriting Notes -&nbsp;{!Opportunity.Underwriting_Notes__c}</FONT></P>
+<P><FONT face=Verdana,Geneva,Arial,Helvetica,Sans-Serif color=#000066 size=2>Date Repriced - {!Opportunity.00N70000001wnTC}&nbsp;</FONT></P>
+<P><FONT face=Verdana,Geneva,Arial,Helvetica,Sans-Serif color=#000099 size=2><FONT color=#000066>&nbsp;</FONT></P>
+<P></FONT><FONT face=Verdana,Geneva,Arial,Helvetica,Sans-Serif color=#000066 size=2></FONT>&nbsp;</P>
+<P><FONT face=Verdana,Geneva,Arial,Helvetica,Sans-Serif color=#000066 size=2></FONT>&nbsp;</P>
+<P><FONT face=Verdana,Geneva,Arial,Helvetica,Sans-Serif color=#000066 size=2>Person who&nbsp;sent&nbsp;update - {!Opportunity.LastModifiedBy}</FONT></P>
+<P><FONT color=#000099></FONT>&nbsp;</P>]]></td>
+</tr>
+</table>

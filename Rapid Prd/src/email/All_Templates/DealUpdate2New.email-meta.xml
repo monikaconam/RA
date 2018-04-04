@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Deal Update Status</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>StandardLetterheadSample</letterhead>
+    <name>Deal Update2 New</name>
+    <style>freeForm</style>
+    <subject>{!Opportunity.Name} Has Been Repriced (or) Approved With Conditions</subject>
+    <textOnly>Date - {!Opportunity.LastModifiedDate}  
+Rep - {!Opportunity.OwnerFirstName}
+ 
+Renewal? - {!Opportunity.Renewal__c}
+Renewal Date - {!Opportunity.RENEWAL_DATE__c}
+ 
+Opportunity Name - {!Opportunity.Name}Opportunity Number - {!Opportunity.Opportunity_Number__c}Opportunity Advance ID - {!Opportunity.Advance_ID__c}
+
+Advance Amount - {!Opportunity.Amount}Split - {!Opportunity.Percent_Payback__c}Pay Back Amount - {!Opportunity.Pay_Back_Amount__c}
+
+Deal Repriced-Need New FRSA: {!Opportunity.00N700000036tmD}New Amount: {!Opportunity.New_Advance_Price__c}New Amount Sold: {!Opportunity.New_Payback_Price__c}New Daily %: {!Opportunity.Est_Days_to_Repay__c}
+
+
+Underwriting Status - {!Opportunity.Underwriting_Approval__c}Approval Conditions - {!Opportunity.Approved_With_Conditions__c}
+
+
+
+ 
+ 
+ </textOnly>
+    <type>html</type>
+</EmailTemplate>

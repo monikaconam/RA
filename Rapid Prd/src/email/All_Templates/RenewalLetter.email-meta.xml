@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>false</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>StandardLetterheadSample</letterhead>
+    <name>Renewal Letter</name>
+    <style>formalLetter</style>
+    <subject>Thank you for your continued business!</subject>
+    <textOnly>Date: {!Opportunity.Welcome_Kit_Sent__c}
+
+{!Account.Name}
+{!Account.BillingAddress}
+{!Account.BillingCity}, {!Account.BillingState} {!Account.BillingPostalCode}
+ 
+Dear {!Contact.FirstName},
+ 
+Thank you for your continued confidence in RapidAdvance.  We want to let you know that your user name and password to access your account information via our website (www.rapidadvance.com) will remain the same.  For your convenience, we&apos;ve enclosed the username and password you were given with your initial advance.
+ 
+Also, RapidAdvance has a &quot;Referral Bonus Program&quot; that we offer to all of our customers.  For each merchant you refer that qualifies for and receives an advance, you will receive a $400 cash bonus!  Easy and fast cash!  Know anyone that could use some working capital?   
+ 
+If you have any questions about your renewal or the referral program, please feel free to contact us at 240-514-2000 or email to sales@rapidadvance.com. 
+ 
+Sincerely,
+ 
+RapidAdvance Staff
+ 
+ 
+7316 Wisconsin Avenue - Suite 450 - Bethesda - MD - 20814
+phone 240-514-2000   fax 240-514-2010</textOnly>
+    <type>html</type>
+</EmailTemplate>

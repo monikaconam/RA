@@ -1,0 +1,29 @@
+Hi, 
+
+{!IF(ISPICKVAL(GetFeedback_Survey__c.Access_To_Information_about_Account__c,"Not at all satisfied") ,"Q5. Access to information about my account.","")} {!IF(ISPICKVAL(GetFeedback_Survey__c.Access_To_Information_about_Account__c,"Slightly Satisfied") ,"Q5. Access to information about my account.","")} 
+
+{!IF(ISPICKVAL(GetFeedback_Survey__c.Access_To_Information_about_Account__c,"Not at all satisfied"), 
+"Answer: Not at all Satisfied"," ")} 
+{!IF(ISPICKVAL(GetFeedback_Survey__c.Access_To_Information_about_Account__c,"Slightly Satisfied"), 
+"Answer: Slightly Satisfied"," ")} 
+
+{!IF(ISPICKVAL(GetFeedback_Survey__c.The_process_of_repaying_funding__c,"Not at all satisfied"), "Q5. The process of repaying my funding.", "")} 
+{!IF(ISPICKVAL(GetFeedback_Survey__c.The_process_of_repaying_funding__c,"Slightly satisfied"), "Q5. The process of repaying my funding.", "")} 
+
+{!IF(ISPICKVAL(GetFeedback_Survey__c.The_process_of_repaying_funding__c,"Not at all satisfied"), 
+"Answer: Not at all Satisfied"," ")} 
+{!IF(ISPICKVAL(GetFeedback_Survey__c.The_process_of_repaying_funding__c,"Slightly Satisfied"), 
+"Answer: Slightly Satisfied"," ")} 
+
+{!IF(ISPICKVAL(GetFeedback_Survey__c.The_RapidAdvance_client_portal__c,"Not at all satisfied"), "Q5. The RapidAdvance client portal.", "")}{!IF(ISPICKVAL(GetFeedback_Survey__c.The_RapidAdvance_client_portal__c,"Slightly Satisfied"), "Q5. The RapidAdvance client portal.","")} 
+
+{!IF(ISPICKVAL(GetFeedback_Survey__c.The_RapidAdvance_client_portal__c,"Not at all satisfied"), 
+"Answer: Not at all Satisfied"," ")} 
+{!IF(ISPICKVAL(GetFeedback_Survey__c.The_RapidAdvance_client_portal__c,"Slightly Satisfied"), 
+"Answer: Slightly Satisfied"," ")} 
+
+For reference click the following link.
+
+{!GetFeedback_Survey__c.Link} 
+
+Thanks

@@ -1,0 +1,41 @@
+<apex:page standardController="Opportunity" showHeader="false" sidebar="false">
+     <script type="text/javascript">
+        window.onload = function(){
+            var inputElem = document.getElementsByTagName("a");
+            for(var i=0; i<inputElem.length; i++)
+            {
+               inputElem[i].setAttribute('target', '_self');
+               var parentClass = inputElem[i].parentNode.className;
+               if(parentClass.indexOf("dataCell") != -1){
+               //    var elehref = '/apex/RADoc_Custom?id='+  atthref[3] + '&oppid={!$CurrentPage.parameters.Id}&retURL=%2Fapex%2FRADocsRelatedList%3FId%3D{!$CurrentPage.parameters.Id}';
+               	   var elehref = '/'+  atthref[3];
+                   inputElem[i].href =  elehref;   
+               } else if(parentClass.indexOf("actionColumn") != -1){
+                   var eletitle = inputElem[i].title;
+                   if(eletitle.indexOf('Edit') != -1 && eletitle.indexOf('Edit') == 0){
+                    	var atthref = inputElem[i].href.split('/');
+                      // inputElem[i].href = '/apex/RADoc_Custom?id='+  atthref[3] + '&oppid={!$CurrentPage.parameters.Id}&retURL=%2Fapex%2FRADocsRelatedList%3FId%3D{!$CurrentPage.parameters.Id}';
+                      inputElem[i].href = '/'+  atthref[3];
+                   }
+               }
+            }
+
+        }
+    </script>
+    <!--<apex:sectionHeader subtitle="RADocs" title="Related List"/>-->
+    <apex:relatedList list="Quotes">
+     <apex:facet name="header">
+        <div class="pbHeader"><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="pbTitle">
+        <img src="/s.gif" alt="" width="12" height="1" class="minWidth" title="" style="margin-right: 0.25em;" />
+        <img src="/s.gif" alt="" class="relatedListIcon" title="" />
+        <h3 id="j_id0:j_id2_title">RADocs</h3></td>
+        <td class="pbButton">
+        <input value="New RADoc" class="btn" name="newRadoc"  onclick="navigateToUrl('/apex/RADoc_Custom?oppid={!$CurrentPage.parameters.Id}&retURL=%2Fapex%2FRADocsRelatedList%3FId%3D{!$CurrentPage.parameters.Id}',null,'newRadoc');" title="New RADoc" type="button" />
+        </td>
+        <td class="pbHelp">
+        &nbsp;</td>
+        </tr>
+        </tbody></table></div>
+    </apex:facet>
+    </apex:relatedList>
+</apex:page>

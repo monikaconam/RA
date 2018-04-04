@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Account.Opportunities$Funded_by_WC__c</field>
+    </columns>
+    <columns>
+        <field>Account.Opportunities$Name</field>
+    </columns>
+    <columns>
+        <field>Account.Opportunities$Campaign</field>
+    </columns>
+    <columns>
+        <field>Account.Opportunities$Renewal__c</field>
+    </columns>
+    <columns>
+        <field>Account.Opportunities$Decision_Date__c</field>
+    </columns>
+    <columns>
+        <field>Account.Opportunities$Current_Processor__c</field>
+    </columns>
+    <columns>
+        <field>Account.Opportunities$Business_Category__c</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Average</aggregateTypes>
+        <field>Account.Opportunities$Advance_Amount__c</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Average</aggregateTypes>
+        <field>Account.Opportunities$Yrs_In_Business__c</field>
+    </columns>
+    <format>Tabular</format>
+    <name>Weekly Funding Summary with Credit</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Sanaa_test_report__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <sortColumn>Account.Opportunities$Renewal__c</sortColumn>
+    <sortOrder>Asc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>Account.Opportunities$Funded_by_WC__c</dateColumn>
+        <interval>INTERVAL_THISWEEK</interval>
+    </timeFrameFilter>
+</Report>

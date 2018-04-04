@@ -1,0 +1,430 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Placeholder for reference objects to Opportunity or Lead to be sorted by workflow-assigned criteria</description>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>All_Approved_With_Conditions_Met__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(Type__c=&quot;Opportunity&quot;,Opportunity__r.All_Approved_With_Conditions_Met__c,NULL)</formula>
+        <label>All Approved With Conditions Met</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Amount__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(Opportunity__c &lt;&gt; NULL, Opportunity__r.Amount, NULL)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Campaign__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(Lead__c != NULL, Lead__r.Campaign_Name_Upload__c,
+IF(Opportunity__c != NULL, Opportunity__r.Campaign_name__c, &quot;&quot;) )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Campaign</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Company_Name__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(Opportunity__c &lt;&gt; NULL, Opportunity__r.Account.Name,
+(IF(Lead__c &lt;&gt; NULL, Lead__r.Company, NULL))
+)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Company Name</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Contact_Name__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(Lead__c &lt;&gt; NULL, Lead__r.FirstName &amp; &quot; &quot; &amp; Lead__r.LastName, NULL)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Contact Name</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Email_Link__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(Email__c != NULL, HYPERLINK(&quot;mailto: &quot; &amp; Email__c, Email__c), &quot;&quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Email</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Email__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(Opportunity__c &lt;&gt; NULL, Opportunity__r.Email_Address__c,
+(IF(Lead__c &lt;&gt; NULL, Lead__r.Email, NULL))
+)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Email</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Last_Activity_Date__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(Opportunity__c &lt;&gt; NULL, Opportunity__r.LastActivityDate,
+(IF(Lead__c &lt;&gt; NULL, Lead__r.LastActivityDate, NULL))
+)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Last Activity Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Last_Modified_Date__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(Opportunity__c &lt;&gt; NULL, Opportunity__r.LastModifiedDate,
+(IF(Lead__c &lt;&gt; NULL, Lead__r.LastModifiedDate, NULL))
+)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Last Modified Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Last_Touched_DT__c</fullName>
+        <description>Last Date/Time this record was &quot;touched&quot; by a Rep (Status updated, closed out, etc).</description>
+        <externalId>false</externalId>
+        <label>Last Touched DT</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Lead_Created_Date__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(Lead__c &lt;&gt; NULL, Lead__r.CreatedDate, NULL)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Lead Created Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Lead__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Lead</label>
+        <referenceTo>Lead</referenceTo>
+        <relationshipLabel>Priority Queue</relationshipLabel>
+        <relationshipName>Priority_Queue</relationshipName>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Local_Time__c</fullName>
+        <description>Formula field for calculating Local Time</description>
+        <externalId>false</externalId>
+        <formula>IF(LEN(State_Province__c)=2,
+IF(CONTAINS(&quot;CT:DC:DE:FL:GA:ME:MD:MA:MI:NH:NJ:NY:NC:OH:PA:RI:SC:VT:VA:WV:ON:QC:NB:NS:NL:PE&quot;,State_Province__c),NOW(),
+IF(CONTAINS(&quot;AL:AR:IL:IA:KS:KY:LA:MN:MS:MO:NE:ND:OK:SD:TN:TX:WI:SK:MB&quot;,State_Province__c),NOW() - 1/24,
+IF(CONTAINS(&quot;AZ:CO:ID:MT:NM:UT:WY:AB&quot;,State_Province__c),NOW() - 2/24,
+IF(CONTAINS(&quot;CA:NV:OR:WA:BC&quot;,State_Province__c),NOW() - 3/24,NULL)))),
+NULL)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Local Time</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Notes_Link__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(Opportunity__c &lt;&gt; NULL, HYPERLINK(&quot;http://notes.rapidadvance.com/notes/salesforceopportunity/RefID__c&quot;,&quot;Notes Link&quot;),
+HYPERLINK(&quot;http://notes.rapidadvance.com/notes/salesforcelead/RefID__c&quot;,&quot;Notes Link&quot;))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Notes Link</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Opportunity__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Opportunity</label>
+        <referenceTo>Opportunity</referenceTo>
+        <relationshipLabel>Priority Queue</relationshipLabel>
+        <relationshipName>Priority_Queue</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Percent_Complete_PO__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(Opportunity__c &lt;&gt; NULL, Opportunity__r.Percent_Complete_PO__c, NULL)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Percent Complete (PO)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Phone_CTI__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(Opportunity__c &lt;&gt; NULL, Opportunity__r.Business_Phone__c,
+(IF(Lead__c &lt;&gt; NULL,
+HYPERLINK(&quot;javascript:sendCTIMessage(%27/CLICK_TO_DIAL?DN=&quot;&amp;Lead__r.Phone&amp;&quot;&amp;ID=&quot;&amp;Lead__r.Id&amp;&quot;&amp;ENTITY_NAME=Lead%27)&quot;,Lead__r.Phone,&quot;_self&quot;), NULL))
+)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Phone-CTI</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Phone__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(Opportunity__c &lt;&gt; NULL, Opportunity__r.Business_Phone__c,
+(IF(Lead__c &lt;&gt; NULL, Lead__r.Phone, NULL))
+)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Phone</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Phone_cti_modified__c</fullName>
+        <externalId>false</externalId>
+        <label>Phone</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Phone</type>
+    </fields>
+    <fields>
+        <fullName>Priority__c</fullName>
+        <externalId>false</externalId>
+        <label>Priority</label>
+        <precision>2</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>RefID__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(Type__c = &quot;Lead&quot;, Lead__r.Id, Opportunity__r.Id)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Reference ID</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>RefOwner__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(Lead__c != NULL, CASESAFEID(Lead__r.OwnerId),
+   IF(Opportunity__c != NULL, CASESAFEID(Opportunity__r.OwnerId), NULL)
+)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>RefOwner</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Ref_LastModifiedById__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(Opportunity__c != NULL,Opportunity__r.LastModifiedBy.FirstName&amp;&quot; &quot;&amp;Opportunity__r.LastModifiedBy.LastName,
+IF(Lead__c != NULL,Lead__r.LastModifiedBy.FirstName&amp;&quot; &quot;&amp;Lead__r.LastModifiedBy.LastName,NULL))</formula>
+        <label>Reference Last Modified By</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Run_Workflow__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Run Workflow</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Stage_Status__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(Opportunity__c &lt;&gt; NULL, TEXT(Opportunity__r.StageName),
+(IF(Lead__c &lt;&gt; NULL, TEXT(Lead__r.Status), NULL))
+)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Stage / Status</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>State_Province__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(Opportunity__c &lt;&gt; NULL, Opportunity__r.State_Of_Location__c,
+(IF(Lead__c &lt;&gt; NULL, Lead__r.State, NULL))
+)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>State/Province</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Time_Zone__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(NOT(ISBLANK(State_Province__c)),
+	IF(CONTAINS(&quot;CT:DC:DE:FL:GA:IN:ME:MD:MA:MI:NH:NJ:NY:NC:OH:PA:RI:SC:VT:VA:WV:ON:QC:NB:NS:NL:PE&quot;,State_Province__c),&quot;EDT&quot;,
+	IF(CONTAINS(&quot;AL:AR:IL:IA:IN:KS:KY:LA:MN:MS:MO:NE:ND:OK:SD:TN:TX:WI:SK:MB&quot;,State_Province__c),&quot;CDT&quot;,
+	IF(CONTAINS(&quot;AZ:CO:ID:MT:NM:UT:WY:AB&quot;,State_Province__c),&quot;MDT&quot;,
+	IF(CONTAINS(&quot;CA:NV:OR:WA:BC&quot;,State_Province__c),&quot;PDT&quot;,null)))),Null)</formula>
+        <label>Time Zone</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Type__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(Opportunity__c &lt;&gt; NULL, &quot;Opportunity&quot;,
+(IF(Lead__c &lt;&gt; NULL, &quot;Lead&quot;, &quot;None&quot;))
+)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Type</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Unread__c</fullName>
+        <defaultValue>true</defaultValue>
+        <externalId>false</externalId>
+        <label>Unread</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <label>Priority Queue</label>
+    <nameField>
+        <label>Deal Name</label>
+        <trackHistory>true</trackHistory>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Priority Queue</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ReadWrite</sharingModel>
+</CustomObject>

@@ -1,0 +1,293 @@
+<apex:page standardcontroller="Lead" tabstyle="Lead"   extensions="LeadPartnerCategoryEditExtn" >
+    <apex:form >
+        <apex:sectionheader title="Lead Edit" subtitle="{!if(Lead.Id==null,'New Lead',Lead.Name)}">
+        </apex:sectionheader>
+        <apex:pageblock mode="edit" id="leadPB" title="Lead Edit" >
+            <apex:pageblockbuttons >
+                <apex:commandbutton action="{!onSave}" value="Save" id="saveButton"></apex:commandbutton>
+                <apex:commandbutton immediate="true" action="{!onCancel}" value="Cancel" id="cancelButton"></apex:commandbutton>
+            </apex:pageblockbuttons>
+            
+            <apex:pagemessages ></apex:pagemessages>
+            
+            <apex:pageblocksection id="LeadInformationPBS" title="Lead Information">
+                <apex:inputField value="{!Lead.Company}" />
+                <apex:inputField value="{!Lead.LeadOwnerID_Full__c}" />
+                
+                <apex:pageblocksectionitem >
+                    <apex:outputlabel value="{!$ObjectType.Lead.Fields.FirstName.label}"></apex:outputlabel>
+                    <apex:outputpanel >
+                        <!--   -->
+                        <apex:inputfield value="{!Lead.Salutation}"></apex:inputfield>
+                        <apex:inputfield value="{!Lead.FirstName}"></apex:inputfield>
+                    </apex:outputpanel>
+                </apex:pageblocksectionitem>
+                
+                <apex:inputfield value="{!Lead.Status}" />
+                
+                <apex:inputfield value="{!Lead.LastName}" ></apex:inputfield> 
+                <apex:inputfield value="{!Lead.Leadsource}" ></apex:inputfield>
+                
+                <apex:inputfield value="{!Lead.Title}" ></apex:inputfield> 
+                <apex:inputfield value="{!Lead.HasOptedOutOfFax}"></apex:inputfield>
+                
+                <apex:inputfield value="{!Lead.Email}" ></apex:inputfield>
+                <apex:inputfield value="{!Lead.HasOptedOutOfEmail}"></apex:inputfield>
+                
+                <apex:inputfield value="{!Lead.Phone}" ></apex:inputfield>
+                <apex:inputfield value="{!Lead.Campaign_Name_Upload__c}"></apex:inputfield>
+               
+                <apex:inputfield value="{!Lead.Phone_Ext__c}"></apex:inputfield>
+                <apex:inputfield value="{!Lead.Website}"></apex:inputfield>
+               
+                
+                <apex:inputfield value="{!Lead.MobilePhone}"></apex:inputfield>
+                <apex:outputtext value=""></apex:outputtext>
+                
+                <!--<apex:inputfield value="{!Lead.Notes__c}"></apex:inputfield>-->
+                <apex:inputfield value="{!Lead.Fax}"></apex:inputfield>
+                <apex:outputtext value=""></apex:outputtext>
+                <apex:inputfield value="{!Lead.Street}"></apex:inputfield>
+                <apex:outputtext value=""></apex:outputtext>
+                <apex:inputfield value="{!Lead.City}"></apex:inputfield>
+                <apex:outputtext value=""></apex:outputtext>
+                <apex:inputfield value="{!Lead.State}"></apex:inputfield>
+                <apex:outputtext value=""></apex:outputtext>
+                <apex:inputfield value="{!Lead.PostalCode}"></apex:inputfield>
+                <apex:outputtext value=""></apex:outputtext>
+                <apex:inputfield value="{!Lead.Country}"></apex:inputfield>
+            </apex:pageblocksection>
+           
+           <apex:pageblocksection id="Description" title="Description">
+               <apex:inputfield value="{!Lead.Description}"></apex:inputfield>
+           </apex:pageblocksection>
+           
+           <apex:pageblocksection id="Optional" title="Channel and Category">
+            
+            <apex:inputfield value="{!Lead.Partner_Channel__c}" required="true"></apex:inputfield>
+                   <apex:outputPanel id="popup">
+                    <apex:outputPanel styleClass="popupBg" layout="block" rendered="true"/>
+                    <apex:outputLabel styleclass="labelCol" > Partner Category</apex:outputLabel>
+                    <apex:outputPanel styleClass="popup requiredBlock" layout="block" rendered="true">
+                        <table class="layout">
+                            <tbody>
+                                <tr>
+                                <td bgcolor="#C00">
+                                
+                                </td>
+                                    <td class="selectCell">
+                                        <apex:outputPanel layout="block" styleClass="selectTitle">
+                                            <apex:outputLabel value="Available Categories" 
+                                    for="Optional:leftList" />
+                                        </apex:outputPanel>
+                                        <select id="{!$Component.Optional}:leftList" 
+                                class="multilist" multiple="multiple" size="6" 
+                                style="width: 150px;">
+                                            <apex:repeat value="{!allLCats}" var="option">
+                                                <option value="{!option.value}">{!option.label}</option>
+                                            </apex:repeat>
+                                        </select>
+                                    </td>
+                                    <td class="buttonCell">
+                                        <apex:outputPanel layout="block" styleClass="text">Add</apex:outputPanel>
+                                        <apex:outputPanel layout="block" styleClass="text">
+                                            <apex:outputLink value="javascript:moveSelectedOptions('{!$Component.Optional}:leftList', 
+                                    '{!$Component.Optional}:rightList', '{!$Component.leftHidden}', 
+                                    '{!$Component.rightHidden}');"
+                                    id="btnRight">
+                                                <apex:image value="/s.gif" alt="Add" styleClass="rightArrowIcon"
+                                        title="Add" />
+                                            </apex:outputLink>
+                                        </apex:outputPanel>
+                                        <apex:outputPanel layout="block" styleClass="text">
+                                            <apex:outputLink value="javascript:moveSelectedOptions('{!$Component.Optional}:rightList', 
+                                    '{!$Component.Optional}:leftList', '{!$Component.rightHidden}', 
+                                    '{!$Component.leftHidden}');"
+                                    id="btnLeft">
+                                                <apex:image value="/s.gif" alt="Remove"
+                                        styleClass="leftArrowIcon" title="Remove" />
+                                            </apex:outputLink>
+                                        </apex:outputPanel>
+                                        <apex:outputPanel layout="block" styleClass="duelingText">Remove</apex:outputPanel>
+                                    </td>
+                                    <td class="selectCell">
+                                        <apex:outputPanel layout="block" styleClass="selectTitle">
+                                            <apex:outputLabel value="Selected Categories" for="Optional:rightList" />
+                                        </apex:outputPanel>
+                                        <select id="{!$Component.Optional}:rightList" 
+                                class="multilist" multiple="multiple" size="6" 
+                                style="width: 150px;" >
+                                            <apex:repeat value="{!selectedLCats}" var="option">
+                                                <option value="{!option.value}">{!option.label}</option>
+                                            </apex:repeat>
+                                        </select>
+                                    </td>
+                                    <td class="buttonCell">
+                                        <apex:outputPanel layout="block"
+                                styleClass="text">Up</apex:outputPanel>
+                                        <apex:outputPanel layout="block" styleClass="text">
+                                            <apex:outputLink value="javascript:slideSelectedOptionsUp('{!$Component.Optional}:rightList', 
+                                    '{!$Component.rightHidden}');"
+                                    id="upBtn">
+                                                <apex:image value="/s.gif" alt="Up" styleClass="upArrowIcon"
+                                        title="Up" />
+                                            </apex:outputLink>
+                                        </apex:outputPanel>
+                                        <apex:outputPanel layout="block" styleClass="text">
+                                            <apex:outputLink value="javascript:slideSelectedOptionsDown('{!$Component.Optional}:rightList', 
+                                    '{!$Component.rightHidden}');"
+                                    id="downBtn">
+                                                <apex:image value="/s.gif" alt="Down" styleClass="downArrowIcon"
+                                        title="Down" />
+                                            </apex:outputLink>
+                                        </apex:outputPanel>
+                                        <apex:outputPanel layout="block" styleClass="text">Down</apex:outputPanel>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                      <apex:inputhidden value="{!leftOptionsHidden}" id="leftHidden" />
+                      <apex:inputhidden value="{!rightOptionsHidden}" id="rightHidden" />
+                    </apex:outputPanel>
+                </apex:outputPanel>
+            </apex:pageblocksection>
+           
+           
+            <apex:pageblocksection id="KnowyourProspectPartner" title="Know your Prospect Partner" columns="1">
+                <apex:inputfield value="{!Lead.How_did_you_hear_about_us__c}"></apex:inputfield>
+                <apex:inputfield value="{!Lead.Competitors_they_work__c}"></apex:inputfield>
+                <apex:inputfield value="{!Lead.Other_services_offered__c}"></apex:inputfield>
+                <apex:inputfield value="{!Lead.Paper_they_concentrate_on__c}"></apex:inputfield>
+                <apex:inputfield value="{!Lead.Units_funded_per_month__c}"></apex:inputfield>
+                <apex:inputfield value="{!Lead.Average_dollar_amount_funded__c}"></apex:inputfield>
+                <apex:inputfield value="{!Lead.NumberOfEmployees}"></apex:inputfield>
+                <apex:inputfield value="{!Lead.Rating}"></apex:inputfield>
+                <apex:inputfield value="{!Lead.Contract_Sent__c}"></apex:inputfield>
+                <apex:inputfield value="{!Lead.Contract_Sent_Date__c}"></apex:inputfield>
+                <apex:inputfield value="{!Lead.Type_of_contract_sent__c}"></apex:inputfield>
+                <apex:inputfield value="{!Lead.Specify_Contract_Type_for_Other__c}"></apex:inputfield>
+                <apex:inputfield value="{!Lead.Are_you_a_direct_lender__c}"></apex:inputfield>
+                <apex:inputfield value="{!Lead.How_do_you_acquire_customers__c}"></apex:inputfield>
+                <apex:inputfield value="{!Lead.CA_Lenders_License__c}"></apex:inputfield>
+                <apex:inputfield value="{!Lead.Have_you_ever_been_convicted_of_a_felony__c}"></apex:inputfield>
+                <apex:inputfield value="{!Lead.Do_you_belong_to_a_chamber_of_commerce__c}"></apex:inputfield>
+                <apex:inputfield value="{!Lead.Your_footprint_local_regional_national__c}"></apex:inputfield>
+                <apex:inputfield value="{!Lead.No_of_reps_to_train__c}"></apex:inputfield>
+                <apex:inputfield value="{!Lead.How_much_MCA_vs_Loans__c}"></apex:inputfield>
+                <apex:inputfield value="{!Lead.What_marketing_support_needed__c}"></apex:inputfield>
+                <apex:inputField value="{!tempMember.CampaignID}" rendered="{!if(lead.Id==null,True,False)}"/>
+            </apex:pageblocksection>
+            
+            
+        </apex:pageblock>
+        <script type="text/javascript">
+        if (!buildOutputString) {
+          // Create a string from the content of a listbox
+          var buildOutputString = function(listBox, hiddenInput) {
+            var str = '';
+            console.log('listBox '+listBox);
+            console.log('listBox '+listBox.options);
+            console.log('listBox '+listBox.options.length);
+            console.log(hiddenInput);
+            for ( var x = 0; x < listBox.options.length; x++) {
+              str += encodeURIComponent(listBox.options[x].value) + '&'
+                  + encodeURIComponent(listBox.options[x].text) + '&';
+            }
+            str.length--;
+        console.log('str '+str);
+            hiddenInput.value = str.slice(0, -1);
+          }
+        }
+        
+        if (!moveSelectedOptions) {
+          // Move the selected options in the idFrom listbox to the idTo
+          // listbox, updating the corresponding strings in idHdnFrom and
+          // idHdnTo
+          var moveSelectedOptions = function(idFrom, idTo, idHdnFrom, idHdnTo) {
+            listFrom = document.getElementById(idFrom);
+            listTo = document.getElementById(idTo);
+        
+            for ( var x = 0; x < listTo.options.length; x++) {
+              listTo.options[x].selected = false;
+            }
+        
+            for ( var x = 0; x < listFrom.options.length; x++) {
+              if (listFrom.options[x].selected == true) {
+                listTo.appendChild(listFrom.options[x]);
+                x--;
+              }
+            }
+        
+            listTo.focus();
+        
+            buildOutputString(listFrom, document.getElementById(idHdnFrom));
+            buildOutputString(listTo, document.getElementById(idHdnTo));
+          }
+        }
+        
+        if (!slideSelectedOptionsUp) {
+          // Slide the selected options in the idList listbox up by one position,
+          // updating the corresponding string in idHidden
+          var slideSelectedOptionsUp = function(idList, idHidden) {
+            listBox = document.getElementById(idList);
+        
+            var len = listBox.options.length;
+        
+            if (len > 0 && listBox.options[0].selected == true) {
+              return;
+            }
+        
+            for ( var x = 1; x < len; x++) {
+              if (listBox.options[x].selected == true) {
+                listBox.insertBefore(listBox.options[x],
+                    listBox.options[x - 1]);
+              }
+            }
+        
+            listBox.focus();
+        
+            buildOutputString(listBox, document.getElementById(idHidden));
+          }
+        }
+        
+        if (!slideSelectedOptionsDown) {
+          // Slide the selected options in the idList listbox down by one position,
+          // updating the corresponding string in idHidden
+          var slideSelectedOptionsDown = function(idList, idHidden) {
+            listBox = document.getElementById(idList);
+        
+            var len = listBox.options.length;
+        
+            if (len > 0 && listBox.options[len - 1].selected == true) {
+              return;
+            }
+        
+            for ( var x = listBox.options.length - 2; x >= 0; x--) {
+              if (listBox.options[x].selected == true) {
+                listBox.insertBefore(listBox.options[x + 1],
+                    listBox.options[x]);
+              }
+            }
+        
+            listBox.focus();
+        
+            buildOutputString(listBox, document.getElementById(idHidden));
+          }
+        }
+        
+        // initialize the string representations);
+        console.log (' document.getElementById(leftList) '+ document.getElementById('{!$Component.Optional}:rightList'));
+        
+        console.log(document.getElementById('{!$Component.Optional}:leftList'));
+        console.log(document.getElementById('{!$Component.Optional}:rightList'));
+        
+        
+        console.log(buildOutputString(document.getElementById("{!$Component.Optional}:leftList"), 
+            document.getElementById("{!$Component.Optional}:leftHidden")));
+       
+        console.log(buildOutputString(document.getElementById("{!$Component.Optional}:rightList"), 
+            document.getElementById("{!$Component.Optional}:rightHidden")));
+    
+        </script>
+    </apex:form>
+</apex:page>

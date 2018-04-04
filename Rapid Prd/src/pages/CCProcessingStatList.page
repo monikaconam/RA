@@ -1,0 +1,186 @@
+<apex:page standardController="Opportunity" extensions="CreateCreditCardProcessingStatement" showHeader="false" sidebar="false" >    
+    <apex:stylesheet value="{!$Resource.ExtJS4}/extjs-4.1.0/resources/css/ext-all.css" />
+    <apex:includeScript value="{!$Resource.ExtJS4}/extjs-4.1.0/ext-all.js"/> 
+   <!-- <apex:stylesheet value="{!$Resource.ExtJS4}/extjs-4.1.0/resources/css/ytheme-gray.css" id="theme"/>xtheme-yourtheme.css-->
+    <apex:stylesheet value="{!$Resource.ExtJS4}/extjs-4.1.0/resources/css/xtheme-gray-extend.css" id="theme11"/>
+    <apex:stylesheet value="{!$Resource.ExtJS4}/extjs-4.1.0/resources/ext-theme-gray/ext-theme-gray-all.css" id="theme"/>
+    <!--  
+    <apex:stylesheet value="{!$Resource.ExtJS4}/extjs-4.1.0/resources/ext-theme-gray/ext-theme-gray-all-debug.css" id="theme1"/>
+    -->
+    <apex:stylesheet value="{!$Resource.ExtJS4}/extjs-4.1.0/resources/ext-theme-gray/ext-theme-gray-all-rtl.css" id="theme2"/>
+    <!--  
+    <apex:stylesheet value="{!$Resource.ExtJS4}/extjs-4.1.0/resources/ext-theme-gray/ext-theme-gray-all-rtl-debug.css" id="theme3"/>
+    -->       
+    <script type="text/javascript">
+        Ext.BLANK_IMAGE_URL="{!$Resource.ExtJS4}/extjs-4.1.0/resources/themes/images/default/tree/s.gif"
+        
+        function focusPanel(node){
+           
+            document.location.href = "#" + node;
+        }
+    </script> 
+  <c:Opportunity_Related_CSS imgName="credit.png"/>     
+  <apex:pageMessages id="pageMessageMain"/>
+  
+  <apex:form >
+  <apex:outputPanel id="panelid1">
+  <apex:variable value="{!objOpportunity}" var="opp"/><br/>
+  <div class="bgImg"></div>
+  <div align="center">                
+    <apex:commandButton value="Save" action="{!save}" reRender="pageMessageMain,panelid,panelid1" status="ajaxStatus" oncomplete="setfocus('{!$Component.pageMessageMain}');"/>&nbsp;&nbsp;        
+    <!--<apex:commandButton value="Cancel" action="{!cancel}" status="ajaxStatus"/>-->      
+  </div>
+  <apex:outputPanel id="panelid">
+  <table class="detailList" border="0" cellpadding="0" cellspacing="0">
+        <tr>
+            <td colspan="4">
+                <c:Extjs_Panel title="Bank Statements"  RefreshButton="Refresh"/>                    
+            </td>
+        </tr>
+          
+          <tr>
+          <td>
+                    <label>{!$ObjectType.Account.fields.Number_of_Terminals_at_Location__c.label}</label>
+                </td>
+                <td>
+                    <apex:inputField value="{!opp.Account.Number_of_Terminals_at_Location__c}"/>
+                </td> 
+             <td>
+                   <apex:outputLabel value="{!$ObjectType.Opportunity.fields.Annual_Gross_sales_Avg_2_Mo_times_12__c.label}"/> 
+               </td>
+               <td>
+                   <apex:inputField value="{!objOpportunity.Annual_Gross_sales_Avg_2_Mo_times_12__c}" rendered="{!IF($Profile.Name =='System Administrator' ,true,false)}" />
+                   <apex:outputLabel value="{!objOpportunity.Annual_Gross_sales_Avg_2_Mo_times_12__c}" rendered="{!IF($Profile.Name !='System Administrator' ,true,false)}" />
+               </td>  
+               </tr>
+            <tr>                  
+             <td>
+                   <apex:outputLabel value="{!$ObjectType.Opportunity.fields.Annual_CC_sales_Avg_4_Mo_times_12__c.label}"/> 
+               </td>
+               <td>
+                   <apex:inputField value="{!objOpportunity.Annual_CC_sales_Avg_4_Mo_times_12__c}" rendered="{!IF($Profile.Name =='System Administrator' ,true,false)}"/>
+                   <apex:outputLabel value="{!objOpportunity.Annual_CC_sales_Avg_4_Mo_times_12__c}" rendered="{!IF($Profile.Name !='System Administrator' ,true,false)}"/>
+               </td>
+               <td>
+                   
+               </td>
+               <td>
+                  
+               </td> 
+          </tr>
+          
+      </table>              
+  <table id="BSTable">            
+         <tr>
+         <td colspan="8">
+             <c:Extjs_Panel title="Create Bank Statement"/>                    
+         </td>
+     </tr>     
+     <tr>
+         <td>
+             <label>Bank Name</label>
+         </td>
+         <td>
+             <apex:inputText value="{!BankName}"/>
+         </td>
+         <td>
+             <label>Account#</label>
+         </td>
+         <td>
+             <apex:inputText value="{!AccountNo}"/>
+         </td>
+         <td>
+             <label>Routing#</label>
+         </td>
+         <td>
+             <apex:inputText value="{!RoutingNo}"/>
+         </td>
+         <td>
+             <label>Primary</label>
+         </td>
+         <td>
+             <apex:inputCheckbox value="{!Primary}"/>
+         </td>                  
+     </tr>            
+   </table>
+   <br/>
+   <center> <apex:commandButton value="Add Bank Statement" style="width: 150px !important;" action="{!doSave}" reRender="extPanel" status="ajaxStatus"  oncomplete="focusPanel('{!$Component.extPanel}');"/> </center>        
+   <br/>    
+   
+    <!--script type="text/javascript">
+        window.onload = function(){
+            var inputElem = document.getElementsByTagName("a");
+            for(var i=0; i<inputElem.length; i++)
+            {
+               inputElem[i].setAttribute('target', '_self');
+               var parentClass = inputElem[i].parentNode.className;
+               if(parentClass.indexOf("dataCell") != -1){
+                   var elehref = inputElem[i].href + '/e?retURL=/apex/{!$CurrentPage.Name}?Id={!$CurrentPage.parameters.Id}&oppId={!$CurrentPage.parameters.oppId}';
+                   inputElem[i].href =  elehref;   
+               }
+            }
+            
+
+        }
+    </script>
+    <apex:relatedList list="Opportunity_Banks__r" /-->
+    <c:Extjs_Bank_Statement id="extPanel" parentField="Opportunity__c" title="" height="226" object="Bank_Statement__c" fields="Bank_Name__c,Account_Number__c,Wire_Bank_Routing_Number__c,Primary__c,Average_Balance__c,NSF__c,MEB__c,Monthly_Gross_Deposit__c,Monthly_Gross_Debits__c,Monthly_Cashflow__c,Comments__c,CreatedDate" rows="4" minimized="false" parentRecordId="{!$CurrentPage.parameters.Id}"/>      
+  
+  
+  <br/><br/> 
+  <table id="CCPSTable">            
+      <tr>
+          <td colspan="6">
+              <c:Extjs_Panel title="Credit Card Processing Statements"/>                    
+          </td>
+      </tr>      
+      <tr>
+          <td align="center">
+              <label>Processor Name</label>
+          </td>
+          <td>
+              <apex:inputText value="{!processorName}"/>
+          </td>
+          <td align="left">
+              <label>MID</label>
+          </td>
+          <td>
+              <apex:inputText value="{!mid}"/>
+          </td> 
+          <td align="center">
+          </td>
+          <td>
+          </td>              
+      </tr>     
+  </table>
+  </apex:outputPanel>
+  <br/>
+  <center> <apex:commandButton value="Add Credit Card Processing Statement" style="width: 260px !important;" action="{!doSave1}" reRender="ccPanel" status="ajaxStatus" oncomplete="focusPanel('{!$Component.ccPanel}');" /> </center>        
+  <br/>
+  
+    <!--script type="text/javascript">
+        window.onload = function(){
+            var inputElem = document.getElementsByTagName("a");
+            for(var i=0; i<inputElem.length; i++)
+            {
+               inputElem[i].setAttribute('target', '_self');
+               var parentClass = inputElem[i].parentNode.className;
+               if(parentClass.indexOf("dataCell") != -1){
+                   var elehref = inputElem[i].href + '/e?retURL=/apex/{!$CurrentPage.Name}?Id={!$CurrentPage.parameters.Id}&oppId={!$CurrentPage.parameters.oppId}';
+                   inputElem[i].href =  elehref;   
+               }
+            }
+            
+
+        }
+    </script>
+    <apex:relatedList list="Opportunity_Banks__r" /-->
+    <c:Extjs_Credit_Card_Processing_Statements id="ccPanel" parentField="Opportunity__c" title="" height="226" object="Credit_Card_Processing_Statements__c" fields="Processor_Name__c,Last_Four_of_MID__c,Month__c,Year__c,Total_Deposit_Amount_used_For_Pricing__c,Discover__c,Debit__c,Average_Ticket_Size__c,Number_of_Deposits__c,CreatedDate" rows="10" minimized="false" parentRecordId="{!$CurrentPage.parameters.Id}"/>      
+     <div align="center">                
+    <apex:commandButton value="Save" action="{!save}" reRender="pageMessageMain,panelid,panelid1" status="ajaxStatus" oncomplete="setfocus('{!$Component.pageMessageMain}');"/>&nbsp;&nbsp;        
+    <!--<apex:commandButton value="Cancel" action="{!cancel}" status="ajaxStatus"/>-->      
+  </div>
+    <apex:actionstatus startStyleClass="requiredLoaderBG" id="ajaxStatus" />
+    </apex:outputPanel>
+    </apex:form>       
+</apex:page>

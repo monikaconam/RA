@@ -1,0 +1,169 @@
+<apex:page controller="PriorityQueue_Controller">
+<apex:includeScript value="/support/console/31.0/integration.js"/>
+
+<script type="text/javascript">
+   var callback = function (result) {   };
+   function sendCTIMessage(msg) { alert(msg); sforce.console.cti.sendCTIMessage(msg, callback); }
+</script>
+
+<apex:form id="ListForm">
+
+<apex:outputText value="{!FlutterShy}"/>
+
+<apex:pageBlock title="Priority Queue" id="mainPanel">
+<apex:actionFunction id="Spin" name="Spin" rerender="mainPanel" action="{!filterQuery}" />
+
+   <apex:commandButton action="{!refreshQuery}" rerender="mainPanel,Details" value="Refresh"/>
+   <br/>
+   <apex:outputText id="lastFetchedDisplay" value=" Results last retrieved at {!lastFetched}  "/> 
+   &nbsp; &nbsp;
+   <apex:selectList id="PriorityCount" value="{!SelectedPriority}" onchange="Spin();" size="1">
+      <apex:selectOptions value="{!PriorityToggle}"/>
+   </apex:selectList>
+   &nbsp; &nbsp;
+   <apex:selectList id="TimezoneFilter" value="{!TimezoneFilter}" onchange="Spin();" size="1">
+      <apex:selectOptions value="{!TZ_Filters}"/>
+   </apex:selectList>
+   &nbsp; &nbsp;
+   <apex:selectList id="ModTimeFilter" value="{!ModTimeFilter}" onchange="Spin();" size="1">
+      <apex:selectOptions value="{!ModTime_Filters}"/>
+   </apex:selectList>
+   &nbsp; &nbsp;
+   <apex:selectList id="ListSize" value="{!ListSize}" onchange="Spin();" size="1">
+      <apex:selectOptions value="{!ListSize_Filters}"/>
+   </apex:selectList>
+   <br/><br/>
+   <apex:pageBlockTable value="{!Q}" var="pq" id="QueueDisplay">
+      <apex:column >
+         <apex:commandbutton action="{!passQID}" value="View" rerender="Details">
+            <apex:param name="column" value="{!pq.Id}" assignTo="{!QID}" />
+         </apex:commandbutton>
+      </apex:column>
+      <apex:column >
+         <apex:facet name="header">
+            <apex:commandLink action="{!fetchData}" value="Deal Name {!IF(sortExpression=='Company_Name__c',IF(sortDir='ASC','?','?'),'')}" id="cmdSort">
+               <apex:param value="Company_Name__c" name="column" assignTo="{!sortExpression}"/>
+            </apex:commandLink>
+         </apex:facet>
+         <apex:outputLink value="/{!pq.RefID__c}" target="_blank">{!pq.Company_Name__c}</apex:outputLink>
+      </apex:column>
+      <apex:column value="{!pq.Priority__c}">
+         <apex:facet name="header">
+            <apex:commandLink action="{!fetchData}" value="Priority {!IF(sortExpression=='Priority__c',IF(sortDir='ASC','?','?'),'')}">
+               <apex:param value="Priority__c" name="column" assignTo="{!sortExpression}"/>
+            </apex:commandLink>
+         </apex:facet>
+      </apex:column>
+      <apex:column value="{!pq.Type__c}"/>
+      <apex:column value="{!pq.Stage_Status__c}">
+         <apex:facet name="header">
+            <apex:commandLink action="{!fetchData}" value="Stage/Status {!IF(sortExpression=='Stage_Status__c',IF(sortDir='ASC','?','?'),'')}">
+               <apex:param value="Stage_Status__c" name="column" assignTo="{!sortExpression}"/>
+            </apex:commandLink>
+         </apex:facet>
+      </apex:column>
+      <apex:column value="{!pq.State_Province__c}"/>
+      <apex:column >
+         <apex:facet name="header">
+            <apex:commandLink action="{!fetchData}" value="Email {!IF(sortExpression=='Email__c',IF(sortDir='ASC','?','?'),'')}">
+               <apex:param value="Email__c" name="column" assignTo="{!sortExpression}"/>
+            </apex:commandLink>
+         </apex:facet>
+         <apex:outputLink value="mailto:{!pq.Email__c}">{!pq.Email__c}</apex:outputLink>
+      </apex:column>
+      <apex:column value="{!pq.Phone_CTI__c}">
+         <apex:facet name="header">
+            <apex:commandLink action="{!fetchData}" value="Phone {!IF(sortExpression=='Phone__c',IF(sortDir='ASC','?','?'),'')}">
+               <apex:param value="Phone__c" name="column" assignTo="{!sortExpression}"/>
+            </apex:commandLink>
+         </apex:facet>
+      </apex:column>
+   </apex:pageBlockTable>
+</apex:pageBlock>
+</apex:form>
+
+<apex:form id="Details">
+
+<apex:pageBlock id="detailPanel" rendered="{!viewDetails}">
+<apex:messages />
+<apex:actionFunction id="showVal" name="showVal" rerender="shortDetails" action="{!needsVal}" />
+   <center>
+   <apex:commandButton id="markButton" value="Mark as Contacted" action="{!markComplete}" rerender="PriorityCount,QueueDisplay,Details" />
+   <apex:commandButton id="closeButton" value="Close" action="{!closeDetails}" rerender="Details" />
+   </center>
+   
+   <apex:pageBlockSection collapsible="true" title="Details" columns="2" id="shortDetails">
+      <apex:pageBlockSectionItem >
+         <apex:outputLabel value="Company Name" for="sf_company_name"/>
+         <apex:outputText value="{!thisPQ.Company_Name__c}" id="sf_company_name"/>
+      </apex:pageBlockSectionItem>
+      <apex:pageBlockSectionItem >
+         <apex:outputLabel value="Campaign" for="sf_campaign"/>
+         <apex:outputText value="{!thisPQ.Campaign__c}" id="sf_campaign"/>
+      </apex:pageBlockSectionItem>
+      <apex:pageBlockSectionItem >
+         <apex:outputLabel value="Contact Name" for="sf_contact_name"/>
+         <apex:outputText value="{!thisPQ.Contact_Name__c}" id="sf_contact_name"/>
+      </apex:pageBlockSectionItem>
+      <apex:pageBlockSectionItem >
+         <apex:outputLabel value="Phone" for="sf_Phone"/>
+         <apex:outputText value="{!thisPQ.Phone__c}" id="sf_Phone" escape="false"/>
+      </apex:pageBlockSectionItem>
+      <apex:pageBlockSectionItem rendered="{!blnOpp}">
+         <apex:outputLabel value="Stage" for="opp_stage"/>
+         <apex:selectList id="opp_stage" value="{!strOppStage}" size="1" onchange="showVal();">
+            <apex:selectOptions value="{!OppStage}"/>
+         </apex:selectList>
+      </apex:pageBlockSectionItem>
+      <apex:pageBlockSectionItem rendered="{!blnLead}">
+         <apex:outputLabel value="Lead Status" for="ld_status"/>
+         <apex:selectList id="ld_status" value="{!strLeadStatus}" size="1" onchange="showVal();">
+            <apex:selectOptions value="{!LeadStatus}"/>
+         </apex:selectList>
+      </apex:pageBlockSectionItem>
+      <apex:pageBlockSectionItem >
+         <apex:outputLabel value="Email" for="sf_email"/>
+         <apex:outputText value="{!dispEmail}" id="sf_email" escape="false"/>
+      </apex:pageBlockSectionItem>
+      <apex:pageBlockSectionItem rendered="{!blnLead}">
+         <apex:outputLabel value="Notes Link" for="notes_link_ld" rendered="{!blnLead}"/>
+         <apex:outputLink id="notes_link_ld" value="http://notes.rapidadvance.com/notes/salesforcelead/{!thisPQ.RefID__c}" target="_blank" rendered="{!blnLead}">Notes Link</apex:outputLink>
+      </apex:pageBlockSectionItem>
+      <apex:pageBlockSectionItem rendered="{!blnOpp}">
+         <apex:outputLabel value="Notes Link" for="notes_link_opp" rendered="{!blnOpp}"/>
+         <apex:outputLink id="notes_link_opp" value="http://notes.rapidadvance.com/notes/salesforceopportunity/{!thisPQ.RefID__c}" target="_blank" rendered="{!blnOpp}">Notes Link</apex:outputLink>
+      </apex:pageBlockSectionItem>
+      <apex:pageBlockSectionItem />
+      <apex:pageBlockSectionItem rendered="{!blnOpp}">
+         <apex:outputLabel value="Probability %" for="opp_prob" rendered="{!blnOpp}"/>
+         <apex:inputText value="{!strOppProb}" id="opp_prob" style="width: 25px" rendered="{!blnOpp}"/>
+      </apex:pageBlockSectionItem>
+      <apex:pageBlockSectionItem id="opp_prob_space" rendered="{!blnOpp}"/>
+      <apex:pageBlockSectionItem id="val_select" rendered="{!blnVal}">
+         <apex:outputLabel value="{!strValLabel}" for="val_sl"/>
+         <apex:selectList id="val_sl" value="{!strValValue}" size="1">
+            <apex:selectOptions value="{!ValOptions}"/>
+         </apex:selectList>
+      </apex:pageBlockSectionItem>
+      <apex:pageBlockSectionItem id="val_space" rendered="{!blnVal}"/>
+   </apex:pageBlockSection>
+   
+   <br/><br/>
+   
+   <apex:pageBlockSection collapsible="true" columns="1" title="Recent Activity" id="activityPanel" rendered="{!viewActivities}">
+      <apex:pageBlockSectionItem >
+      <apex:pageBlockTable value="{!tasks}" var="t" id="taskList" width="64%">
+          <apex:column width="400">
+             <apex:facet name="header">Subject</apex:facet>
+             <apex:outputLink value="/{!t.Id}">{!t.Subject}</apex:outputLink>
+          </apex:column>
+          <apex:column value="{!t.ActivityDate}"/>
+          <apex:column value="{!t.Owner.Name}" width="15%"/>
+          <apex:column value="{!t.LastModifiedDate}"/>
+      </apex:pageBlockTable>
+      </apex:pageBlockSectionItem>
+   </apex:pageBlockSection>
+</apex:pageBlock>
+</apex:form>
+
+</apex:page>

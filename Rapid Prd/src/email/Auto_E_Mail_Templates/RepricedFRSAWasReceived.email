@@ -1,0 +1,27 @@
+<table height="400" width="550" cellpadding="5" border="0" cellspacing="5" >
+<tr height="400" valign="top" >
+<td style=" color:#000000; font-size:12pt; background-color:#FFFFFF; font-family:arial; bLabel:main; bEditID:r3st1;" tEditID="c1r1" locked="0" aEditID="c1r1" >
+<![CDATA[<p style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><font size="2" color="#000066" face="Verdana,Geneva,Arial,Helvetica,Sans-Serif">Date - {!Opportunity.LastModifiedDate}&nbsp; </font></p>
+<p style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><font size="2" color="#000066" face="Verdana,Geneva,Arial,Helvetica,Sans-Serif">&nbsp;</font></p>
+<p style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><font size="2" color="#000066" face="Verdana,Geneva,Arial,Helvetica,Sans-Serif">Opportunity Name - {!Opportunity.Name}</font></p>
+<p style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><font size="2" color="#000066" face="Verdana,Geneva,Arial,Helvetica,Sans-Serif">Renewal? - {!Opportunity.Renewal__c}</font></p>
+<p style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><font size="2" color="#000066" face="Verdana,Geneva,Arial,Helvetica,Sans-Serif">Campaign Name - {!Campaign.Name}</font></p>
+<p style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><font size="2" color="#000066" face="Verdana">ISO Sales Representative - {!Opportunity.User__c}</font></p>
+<p style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;">
+</p><p style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;">&nbsp;<br></p><font color="#000000" face="arial" size="3"></font>
+<p style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"></p>
+<p style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><font size="2" color="#000066" face="Verdana"><strong>New FRSA Received:</strong></font></p>
+<p style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><font size="2" color="#000066" face="Verdana"></font>&nbsp;</p>
+<p><font style="font-family: arial;" size="2" color="#000099">New Advance&nbsp;Price</font><font size="2" color="#000066" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"> -&nbsp;</font><font color="#000066" face="arial" size="2">{!Opportunity.New_Advance_Price__c}</font></p>
+<p style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><font size="2" color="#000066">New Percent Payback - {!Opportunity.New_Percent_Payback__c}<br></font></p>
+<p style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><font size="2" color="#000066">New Payback Price - {!Opportunity.New_Payback_Price__c}<br></font></p><p style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><font size="2" color="#000066">New Est Days to Repay - {!Opportunity.New_Est_Days_to_Repay__c}<br></font></p>
+<p style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><font color="#000066"></font>&nbsp;</p>
+<p style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><font size="2" color="#000066" face="Verdana,Geneva,Arial,Helvetica,Sans-Serif">Underwriting Notes -&nbsp;{!Opportunity.Underwriting_Notes__c}</font></p>
+<p style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><font size="2" color="#000066" face="Verdana,Geneva,Arial,Helvetica,Sans-Serif">Date Repriced - {!Opportunity.00N70000002WOxJ}<br></font></p>
+<p style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><font size="2" color="#000099" face="Verdana,Geneva,Arial,Helvetica,Sans-Serif"><font color="#000066">&nbsp;</font></font></p>
+<p style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><font size="2" color="#000099" face="Verdana,Geneva,Arial,Helvetica,Sans-Serif"></font><font size="2" color="#000066" face="Verdana,Geneva,Arial,Helvetica,Sans-Serif"></font>&nbsp;</p>
+<p style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><font size="2" color="#000066" face="Verdana,Geneva,Arial,Helvetica,Sans-Serif"></font>&nbsp;</p>
+<p style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><font size="2" color="#000066" face="Verdana,Geneva,Arial,Helvetica,Sans-Serif">Person who&nbsp;sent&nbsp;update - {!Opportunity.LastModifiedBy}</font></p>
+<p style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><font color="#000099"></font>&nbsp;</p>]]></td>
+</tr>
+</table>

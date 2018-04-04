@@ -1,0 +1,2 @@
+{!$User.FirstName} has requested your approval for the following item: 
+{!Lead.Link}

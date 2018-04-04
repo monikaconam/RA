@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ReportFolder xmlns="http://soap.sforce.com/2006/04/metadata">
+    <accessType>Shared</accessType>
+    <name>Partner Portal Reports</name>
+    <publicFolderAccess>ReadWrite</publicFolderAccess>
+    <sharedTo>
+        <portalRole>BusinessFundingGroupPartnerUser</portalRole>
+        <portalRole>CFOptionsIncPartnerUser</portalRole>
+        <portalRole>DecimalFactorLimitedPartnerUser</portalRole>
+        <portalRole>ForwardLineFinancialPartnerUser</portalRole>
+        <portalRole>MerchantOneSolutionsLLCPartnerUser</portalRole>
+        <portalRole>MerchantResourcesInternationalIncPartnerUser</portalRole>
+        <portalRole>MerchantSolutionsofConnecticutLLCPartnerUser</portalRole>
+        <portalRole>NPCDirectPartnerUser</portalRole>
+        <portalRole>PerformanceCommercialCapitalPartnerExecutive</portalRole>
+        <portalRole>PerformanceCommercialCapitalPartnerManager</portalRole>
+        <portalRole>PerformanceCommercialCapitalPartnerUser</portalRole>
+        <portalRole>ROMIMerchantServicesdbaUniversalMerchantSolutionsPartnerUser</portalRole>
+        <portalRole>RegencyCapitalGroupPartnerUser</portalRole>
+    </sharedTo>
+</ReportFolder>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>LEAD_OWNER</field>
+    </columns>
+    <columns>
+        <field>OPP_CREATED_DATE</field>
+    </columns>
+    <columns>
+        <field>OPP_OWNER</field>
+    </columns>
+    <columns>
+        <field>OPP_NAME</field>
+    </columns>
+    <columns>
+        <field>STAGE_NAME</field>
+    </columns>
+    <columns>
+        <field>Opportunity.Juice__c</field>
+    </columns>
+    <filter>
+        <booleanFilter>(1 OR 2) AND (3 OR 4)</booleanFilter>
+        <criteriaItems>
+            <column>Lead.Last_Five9_List__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>contains</operator>
+            <value>a0c3900000Bbawe,a0c3900000Bbax3,a0c3900000BbtSL,a0c3900000BbtSC</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Opportunity.Last_Five9_List__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>contains</operator>
+            <value>a0c3900000Bbawe,a0c3900000Bbax3,a0c3900000BbtSL,a0c3900000BbtSC</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>LEAD_OWNER</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Jesse Belt</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>OPP_OWNER</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Jesse Belt</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>AE Personal Dialer</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>OpportunityLead</reportType>
+    <scope>org</scope>
+    <showDetails>true</showDetails>
+    <sortColumn>Opportunity.Juice__c</sortColumn>
+    <sortOrder>Desc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>CREATED_DATE</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

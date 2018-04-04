@@ -1,0 +1,9 @@
+The following lead has been in the status of "Initial Call Needed" for 10 minutes. 
+
+Lead Info: 
+------------- 
+Lead Id: {!Lead.Id} 
+Lead Name: {!Lead.Name} 
+
+Please click the following link to open the Lead in a browser: 
+https://na5.salesforce.com/{!Lead.Id}

@@ -1,0 +1,2368 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>AddCampaign</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>AdvancedSetup</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <fields>
+        <fullName>AE_Instructions__c</fullName>
+        <externalId>false</externalId>
+        <label>AE Instructions</label>
+        <length>5000</length>
+        <trackHistory>false</trackHistory>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Active_Buy_Rate_Agreement__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Active Buy Rate Agreement</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Active_PreferredSelect_Addendum__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Active Preferred/Select Addendum</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Active_Premium_MCA_Agreement__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Active Premium MCA Agreement</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Activity_Updated__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Task 310 - This field will be deleted once the data is validated</description>
+        <externalId>false</externalId>
+        <label>Activity Updated</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Activity__c</fullName>
+        <externalId>false</externalId>
+        <label>Activity</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Inactive</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Dormant</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Submitting</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Funding</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>High Signing Activity</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>ActualCost</fullName>
+        <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
+        <fullName>Additional_Owner__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Additional Owner</label>
+        <lookupFilter>
+            <active>true</active>
+            <errorMessage>User Type must be Standard SalesForce.</errorMessage>
+            <filterItems>
+                <field>User.UserType</field>
+                <operation>equals</operation>
+                <value>Standard</value>
+            </filterItems>
+            <filterItems>
+                <field>User.Id</field>
+                <operation>notEqual</operation>
+                <valueField>$Source.OwnerId</valueField>
+            </filterItems>
+            <isOptional>false</isOptional>
+        </lookupFilter>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Campaigns7</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>AmountAllOpportunities</fullName>
+    </fields>
+    <fields>
+        <fullName>AmountWonOpportunities</fullName>
+    </fields>
+    <fields>
+        <fullName>BA_Notes__c</fullName>
+        <externalId>false</externalId>
+        <label>BA Notes</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>BD_Notification_Override__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(
+ BD_Send_Cmpn_Owner__c=&quot;gmackenzie@rapidadvance.com&quot; ||
+ BD_Send_Cmpn_Owner__c=&quot;rfleischmann@rapidadvance.com&quot; ||
+ BD_Send_Addtl_Owner__c=&quot;gmackenzie@rapidadvance.com&quot; ||
+ BD_Send_Addtl_Owner__c=&quot;rfleischmann@rapidadvance.com&quot;,
+true,false)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Send Notification to BD Override</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>BD_Send_Addtl_Owner__c</fullName>
+        <externalId>false</externalId>
+        <label>Send Notifications Additional Owner</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Email</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>BD_Send_Cmpn_Owner__c</fullName>
+        <externalId>false</externalId>
+        <label>Send Notifications Campaign Owner</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Email</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>BD_Send_Notifications__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Will send notifications to Campaign Owners if this flag is enabled.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Send notifications to Primary Campaign Owner(s) upon Stage change.</inlineHelpText>
+        <label>Send Notifications to BD Owner?</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Bonus_Suppression_Date__c</fullName>
+        <externalId>false</externalId>
+        <formula>ISO_Account__r.Bonus_Suppression_Date__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Bonus Suppression Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Bonus_Suppression_Old__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>This partner is not eligible to receive Rapid bonuses and is exempt from any bonus exceptions.</description>
+        <externalId>false</externalId>
+        <label>Bonus Suppression (Old)</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Bonus_Suppression__c</fullName>
+        <externalId>false</externalId>
+        <formula>ISO_Account__r.Bonus_Suppression__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Bonus Suppression</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Broker_Out_Addendum__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Broker Out Addendum</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Broker_Out_New_Split__c</fullName>
+        <description>New Deal Split for Broker Out</description>
+        <externalId>false</externalId>
+        <label>Broker Out New Split</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Broker_Out_Renewal_Split__c</fullName>
+        <description>Renewal Split for Broker Out</description>
+        <externalId>false</externalId>
+        <label>Broker Out Renewal Split</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>BudgetedCost</fullName>
+        <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
+        <fullName>Buy_Rate_Max_Upsell_Commission__c</fullName>
+        <externalId>false</externalId>
+        <label>Buy Rate Max Upsell Commission</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>1</scale>
+        <trackHistory>false</trackHistory>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>CA_Lenders_License__c</fullName>
+        <externalId>false</externalId>
+        <formula>Text(ISO_Account__r.CA_Lenders_License__c)</formula>
+        <label>CA Lenders License</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CA_Lenders_License_old__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>CA Lenders License_old</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>CampaignImageId</fullName>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>CampaignMemberRecordTypeId</fullName>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Campaign_Contact_Email__c</fullName>
+        <description>contact&apos;s email address</description>
+        <externalId>false</externalId>
+        <label>Campaign Contact Email</label>
+        <length>100</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Campaign_Contact_Number__c</fullName>
+        <description>Contacts phone number</description>
+        <externalId>false</externalId>
+        <label>Campaign Contact Number</label>
+        <length>100</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Campaign_Contact__c</fullName>
+        <description>The partner contact person</description>
+        <externalId>false</externalId>
+        <label>Campaign Contact</label>
+        <length>100</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Campaign_Name_for_reporting__c</fullName>
+        <description>Use this field in place of the Campaign Name when used in reports,workflows,assignment rules...etc.</description>
+        <externalId>false</externalId>
+        <label>Campaign Name (for reporting)</label>
+        <length>80</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Campaign_Notes__c</fullName>
+        <externalId>false</externalId>
+        <label>Campaign Notes</label>
+        <length>32000</length>
+        <trackHistory>false</trackHistory>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Campaign_Source__c</fullName>
+        <externalId>false</externalId>
+        <label>Campaign Source</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Cash Brokers</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Chase Paymentech</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Direct Mail</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>First Data</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Humboldt Merchant Services</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Merrick Bank</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>NOVA</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>NPC</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>RBSLynk</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Telemarketing</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Tier I Acquirers/ISOs</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Tier II Acquirers/ISOs</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Tier III Acquirers/ISOs</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Tier IV Acquirers/ISOs</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>TriSource Solutions</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>TSYS</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>TV</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Web</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Canadian_Contract_Received_and_Signed__c</fullName>
+        <externalId>false</externalId>
+        <label>Canadian Contract Received and Signed</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Case_Sensitive_ID__c</fullName>
+        <externalId>false</externalId>
+        <formula>CASESAFEID(Id)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Case-Sensitive ID</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Claw_back_language__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Claw-back language</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Client_Calls_Allowed__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Client Calls Allowed</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Collections_Account__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Collections Account</label>
+        <lookupFilter>
+            <active>true</active>
+            <filterItems>
+                <field>Account.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>Partners</value>
+            </filterItems>
+            <filterItems>
+                <field>Account.Status__c</field>
+                <operation>equals</operation>
+                <value>Pending, In Progress, Active</value>
+            </filterItems>
+            <isOptional>false</isOptional>
+        </lookupFilter>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Campaigns (Collections Account)</relationshipLabel>
+        <relationshipName>Campaigns1</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Competitive_Pricing_Clause__c</fullName>
+        <externalId>false</externalId>
+        <label>Competitive Pricing Clause</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Yes</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>No</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Contract_Received_Signed2__c</fullName>
+        <externalId>false</externalId>
+        <label>Contract Received &amp; Signed</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Contract_Received_Signed__c</fullName>
+        <externalId>false</externalId>
+        <formula>ISO_Account__r.Contract_Received_Signed__c</formula>
+        <label>Contract Received &amp; Signed_OLD</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Contract_Sent__c</fullName>
+        <externalId>false</externalId>
+        <label>Welcome Packet/Contract Sent</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Cost_per_funded_deal__c</fullName>
+        <externalId>false</externalId>
+        <formula>Total_Lead_Cost__c / NumberOfWonOpportunities</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Cost per funded deal</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Date_CA_License_was_received__c</fullName>
+        <externalId>false</externalId>
+        <formula>ISO_Account__r.Date_CA_License_was_received__c</formula>
+        <label>Date CA License was received</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Date_CA_License_was_received_delete__c</fullName>
+        <externalId>false</externalId>
+        <label>Date CA License was received_delete</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Deal_Pricing__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Who communicates quoted offers to the client</inlineHelpText>
+        <label>Deal Pricing</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>RapidAdvance</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Partner</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Decline_Program_Effective_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Decline Program Effective Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Decline_Program__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Active Decline Program Agreement</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Default_Lead_Owner__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Default Lead Owner</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>CampaignsleadOwner</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Default_Opportunity_Owner__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Default Opportunity Owner</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>CampaignsAssociated</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Description</fullName>
+        <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
+        <fullName>Do_not_offer_Decline_Program__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>With the new partner type ( bank/ credit union etc) that we will not want to market the decline program with we will need a check box on the campaign or account level that is labeled.</description>
+        <externalId>false</externalId>
+        <label>Do not offer Decline Program</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Dormant_Partner_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Dormant Partner Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>E_Signature_Permitted__c</fullName>
+        <externalId>false</externalId>
+        <label>E-Signature Permitted</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>EndDate</fullName>
+        <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
+        <fullName>Executed_Contract_Sent__c</fullName>
+        <externalId>false</externalId>
+        <label>Executed Contract Sent</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>ExpectedResponse</fullName>
+        <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
+        <fullName>ExpectedRevenue</fullName>
+        <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
+        <fullName>Five9LSP__F9PS_List__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Five9 List</label>
+        <referenceTo>Five9LSP__Five9_List__c</referenceTo>
+        <relationshipLabel>Campaigns</relationshipLabel>
+        <relationshipName>Campaigns</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Five9_DNIS__c</fullName>
+        <externalId>false</externalId>
+        <label>Five9 DNIS</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Phone</type>
+    </fields>
+    <fields>
+        <fullName>Five9__Five9CallNow__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Sets Five9 callNowMode to &apos;ANY&apos;</description>
+        <externalId>false</externalId>
+        <inlineHelpText>All new campaign members are added to Five9 list with &apos;call now mode&apos; set to &apos;ANY&apos;</inlineHelpText>
+        <label>Five9 Call Now</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Five9__Five9Endpoint__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Five9 WS Endpoint</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Url</type>
+    </fields>
+    <fields>
+        <fullName>Five9__Five9Password__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Five9 User Password</label>
+        <length>50</length>
+        <maskChar>asterisk</maskChar>
+        <maskType>all</maskType>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>EncryptedText</type>
+    </fields>
+    <fields>
+        <fullName>Five9__Five9ReportEmail__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Five9 Report Email</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Email</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Five9__Five9User__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Five9 User</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Five9__Five9list__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Five9 dialing list name</description>
+        <externalId>false</externalId>
+        <label>Five9list</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Formula_Dormant_Partner_Date__c</fullName>
+        <externalId>false</externalId>
+        <formula>Dormant_Partner_Date__c + 1000</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Formula Dormant Partner Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Full_Contract_Commission_Base__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>This Partner is to be paid on the Full Contract Amount on any and all Renewal deals</description>
+        <externalId>false</externalId>
+        <label>Renewal Commission on Gross</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Funded_Date__c</fullName>
+        <externalId>false</externalId>
+        <formula>Opportunity__r.Funded_by_WC__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Funded Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Funding_Channel__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(  OR(   Name = &quot;*100PercentPaidRenewals*&quot;,  Name = &quot;*Direct100%PaidRenewals*&quot;, 
+Name = &quot;*Partner100%PaidRenewals*&quot;),&quot;Re-Acquisition&quot;,IF( OR(Text(Payment_Type__c) = &quot;Pay-Per-Lead&quot;, Text(Payment_Type__c) = &quot;No Fee&quot;), &quot;Direct Acquisition&quot;, 
+IF(AND (Text(Payment_Type__c) = &quot;Pay-Per-Funding&quot;, (AND(Text( Lead_Ownership__c) = &quot;RapidAdvance&quot;, Text( Deal_Pricing__c) = &quot;RapidAdvance&quot;))), &quot;Strategic Funding&quot;,&quot;Distribution&quot; )))</formula>
+        <label>Funding Channel</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Funding_Partner_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Funding Partner Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Funding_Partner_Flag__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Funding Partner Flag</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Gross_Leads__c</fullName>
+        <externalId>false</externalId>
+        <label>Gross Leads</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>HierarchyActualCost</fullName>
+    </fields>
+    <fields>
+        <fullName>HierarchyAmountAllOpportunities</fullName>
+    </fields>
+    <fields>
+        <fullName>HierarchyAmountWonOpportunities</fullName>
+    </fields>
+    <fields>
+        <fullName>HierarchyBudgetedCost</fullName>
+    </fields>
+    <fields>
+        <fullName>HierarchyExpectedRevenue</fullName>
+    </fields>
+    <fields>
+        <fullName>HierarchyNumberOfContacts</fullName>
+    </fields>
+    <fields>
+        <fullName>HierarchyNumberOfConvertedLeads</fullName>
+    </fields>
+    <fields>
+        <fullName>HierarchyNumberOfLeads</fullName>
+    </fields>
+    <fields>
+        <fullName>HierarchyNumberOfOpportunities</fullName>
+    </fields>
+    <fields>
+        <fullName>HierarchyNumberOfResponses</fullName>
+    </fields>
+    <fields>
+        <fullName>HierarchyNumberOfWonOpportunities</fullName>
+    </fields>
+    <fields>
+        <fullName>HierarchyNumberSent</fullName>
+    </fields>
+    <fields>
+        <fullName>HierarchyTotalEmailsDelivered</fullName>
+    </fields>
+    <fields>
+        <fullName>HierarchyTotalFormSubmissions</fullName>
+    </fields>
+    <fields>
+        <fullName>HierarchyTotalFormViews</fullName>
+    </fields>
+    <fields>
+        <fullName>HierarchyUniqueEmailOpens</fullName>
+    </fields>
+    <fields>
+        <fullName>HierarchyUniqueEmailTrackedLinkClicks</fullName>
+    </fields>
+    <fields>
+        <fullName>HierarchyUniqueMarketingLinkClicks</fullName>
+    </fields>
+    <fields>
+        <fullName>High_Activity_Partner_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>High Activity Partner Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Hours_Worked__c</fullName>
+        <externalId>false</externalId>
+        <label>Hours Worked</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ISO_Account_Categories__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT( ISO_Account__r.Category__c )</formula>
+        <label>ISO Account Categories</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ISO_Account_Channel__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT(ISO_Account__r.Partner_Channel__c)</formula>
+        <label>ISO Account Channel</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ISO_Account__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>ISO Account</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Campaigns</relationshipLabel>
+        <relationshipName>Campaigns</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Inactive_Partner_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Inactive Partner Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Initial_Funding_Survey__c</fullName>
+        <externalId>false</externalId>
+        <formula>ISO_Account__r.Initial_Funding_Survey__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Initial Funding Survey</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Initial_MCA_Commission_Base__c</fullName>
+        <externalId>false</externalId>
+        <label>Initial Commission Base</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Advance Amount</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Payback Amount</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>IsActive</fullName>
+        <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
+        <fullName>Jan_09_CPL__c</fullName>
+        <externalId>false</externalId>
+        <label>Jan 09 CPL</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Last_Opportunity_Created_Date__c</fullName>
+        <externalId>false</externalId>
+        <formula>Max(year(datevalue(Opportunity__r.CreatedDate )))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Last Opportunity Created Date</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Lead_Ownership__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Who is responsible for communicating directly with the client.</inlineHelpText>
+        <label>Lead Ownership</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>RapidAdvance</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Partner</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Leads_Marketing_Cost__c</fullName>
+        <externalId>false</externalId>
+        <label>Leads Marketing Cost</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Leads_per_Hour__c</fullName>
+        <externalId>false</externalId>
+        <label>Leads per Hour</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Marketing_Allowed__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Marketing Allowed</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Most_Recent_Funded_Deal__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Most Recent Funded Deal</label>
+        <referenceTo>Opportunity</referenceTo>
+        <relationshipLabel>Most Recent Funded Deal</relationshipLabel>
+        <relationshipName>Campaigns1</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Name</fullName>
+        <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
+        <fullName>New_Loan__c</fullName>
+        <externalId>false</externalId>
+        <label>New Loan Commission</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>1</scale>
+        <trackHistory>false</trackHistory>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>New_MCA_Initial_Commission__c</fullName>
+        <description>New ISO Initial MCA Commission</description>
+        <externalId>false</externalId>
+        <label>New MCA Initial Commission</label>
+        <precision>11</precision>
+        <required>false</required>
+        <scale>1</scale>
+        <trackHistory>false</trackHistory>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>New_MCA_Residual_Commission__c</fullName>
+        <externalId>false</externalId>
+        <label>New MCA Residual Commission</label>
+        <precision>11</precision>
+        <required>false</required>
+        <scale>1</scale>
+        <trackHistory>false</trackHistory>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>No_Fee__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>No Fee</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>NumberOfContacts</fullName>
+    </fields>
+    <fields>
+        <fullName>NumberOfConvertedLeads</fullName>
+    </fields>
+    <fields>
+        <fullName>NumberOfLeads</fullName>
+    </fields>
+    <fields>
+        <fullName>NumberOfOpportunities</fullName>
+    </fields>
+    <fields>
+        <fullName>NumberOfResponses</fullName>
+    </fields>
+    <fields>
+        <fullName>NumberOfWonOpportunities</fullName>
+    </fields>
+    <fields>
+        <fullName>NumberSent</fullName>
+        <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
+        <fullName>Number_of_Leads__c</fullName>
+        <externalId>false</externalId>
+        <formula>NumberOfLeads</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Number of Leads</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>NumberofFundings__c</fullName>
+        <externalId>false</externalId>
+        <formula>NumberOfWonOpportunities</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>NumberofFundings</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Opportunity__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Opportunity</label>
+        <referenceTo>Opportunity</referenceTo>
+        <relationshipLabel>Campaigns</relationshipLabel>
+        <relationshipName>Campaigns</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>OwnerId</fullName>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>P2_User__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Partner signed through the P2 relationship</description>
+        <externalId>false</externalId>
+        <label>P2 User</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>POS_Portal_User__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Partner signed through our P2/POS relationship</description>
+        <externalId>false</externalId>
+        <label>POS Portal User</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>ParentId</fullName>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Partner_API__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Partner API</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Partner_Bank_Wiring_Instructions__c</fullName>
+        <externalId>false</externalId>
+        <label>Partner Bank Wiring Instructions</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Partner_Campaign_Team__c</fullName>
+        <externalId>false</externalId>
+        <label>Partner Campaign Team</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Partner_Category_BD__c</fullName>
+        <externalId>false</externalId>
+        <formula>Text(ISO_Account__r.Category__c )</formula>
+        <label>Partner Category</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Partner_Category__c</fullName>
+        <externalId>false</externalId>
+        <label>Partner Category</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Agent</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Asset Backed Lender</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Bank</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Credit Card Processor</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Credit Union</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Equipment Leasing Company</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>High Quality Originator</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>High Volume Originator</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>ISO</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Lead Generator</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Partner_Channel__c</fullName>
+        <externalId>false</externalId>
+        <formula>Text( ISO_Account__r.Partner_Channel__c )</formula>
+        <label>Partner Channel</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Partner_Interacation__c</fullName>
+        <externalId>false</externalId>
+        <label>Partner Interacation</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Agency</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Direct to Consumer</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Both</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Partner_Sales_Assistant_Name2__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Partner Sales Assistant Name</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Campaigns8_del</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Partner_Sales_Assistant__c</fullName>
+        <description>Email Addresses of Sales Assistant assigned to this partner</description>
+        <externalId>false</externalId>
+        <label>Partner Sales Assistant Email</label>
+        <length>100</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Partner_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Partner Type</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Pricing Partner</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Referral Partner</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Pricing Partner w/ AE Assigned</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Payment_Type__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>How the partner is compensated for leads or funded deals.</inlineHelpText>
+        <label>Payment Type</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Pay-Per-Funding</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Pay-Per-Lead</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>No Fee</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Pre_Qual_Only__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Pre-Qual Only</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Pre_Qual_Partner__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Pre-Qual Partner</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Preferred_Select_Addendum__c</fullName>
+        <externalId>false</externalId>
+        <label>Preferred / Select Addendum</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Premium_MCA_Effective_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Premium MCA Effective Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Price_Per_Closed_Deal__c</fullName>
+        <externalId>false</externalId>
+        <formula>ActualCost  /  NumberOfWonOpportunities</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Price Per Closed Deal</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Price_Per_Lead__c</fullName>
+        <description>Cost per lead.</description>
+        <externalId>false</externalId>
+        <label>Price Per Lead</label>
+        <precision>7</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>ProMED_Campaigns__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>ProMED Campaigns</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Promotion_Code__c</fullName>
+        <description>Code used to identify promotional marketing material such as postcards.</description>
+        <externalId>false</externalId>
+        <label>Promotion Code</label>
+        <length>10</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Referral_Source__c</fullName>
+        <externalId>false</externalId>
+        <label>Referral Source</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Other</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Referral</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Trade Show</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Web</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Renewal_Loan_Commission__c</fullName>
+        <externalId>false</externalId>
+        <label>Renewal Loan Commission</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>1</scale>
+        <trackHistory>false</trackHistory>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Renewal_MCA_Initial_Commission__c</fullName>
+        <externalId>false</externalId>
+        <label>Renewal MCA Initial Commission</label>
+        <precision>11</precision>
+        <required>false</required>
+        <scale>1</scale>
+        <trackHistory>false</trackHistory>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Renewal_MCA_Residual_Commission__c</fullName>
+        <externalId>false</externalId>
+        <label>Renewal MCA Residual Commission</label>
+        <precision>11</precision>
+        <required>false</required>
+        <scale>1</scale>
+        <trackHistory>false</trackHistory>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Response_Rate__c</fullName>
+        <externalId>false</externalId>
+        <formula>Gross_Leads__c/NumberSent</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Response Rate</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>SWIFT_Campaign__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>SWIFT Campaign</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Sales_Director_Call__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Sales Director Call</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Sales_Team_Member_1__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Sales Team Member #1</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Campaigns1</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Sales_Team_Member_2__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Sales Team Member #2</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Campaigns2</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Sales_Team_Member_3__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Sales Team Member #3</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Campaigns3</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Sales_Team_Member_4__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Sales Team Member #4</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Campaigns4</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Sales_Team_Member_5__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Sales Team Member #5</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Campaigns5</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Sales_Team_Member_6__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Sales Team Member #6</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Campaigns6</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Sales_Team_Member__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Sales Team Member</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Campaigns</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Send_Update_On_Renewals__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Send Update On Renewals</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Send_Update__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>Uncheck to stop updates</inlineHelpText>
+        <label>Send Update</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Split_Fund_Set_Up__c</fullName>
+        <externalId>false</externalId>
+        <label>Split Fund Set Up</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Rapid Advance Chooses</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>GPS - Rocky Mountain</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>EPR</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>StartDate</fullName>
+        <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
+        <fullName>Starter_and_Loan_Amendment_Received__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Starter and Loan Amendment Received</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Status</fullName>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Sub_Campaign_Owner__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Sub-Campaign Owner</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Campaign</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Submitting_Partner_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Submitting Partner Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Suppress_Site_Inspection__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Suppress Site Inspection</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Syndication_Agreement_Received__c</fullName>
+        <externalId>false</externalId>
+        <label>Syndication Agreement Received</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Syndication_Agreement_Sent__c</fullName>
+        <externalId>false</externalId>
+        <label>Syndication Agreement Sent</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Syndication_Campaign_Name__c</fullName>
+        <externalId>false</externalId>
+        <label>Syndication Campaign Name</label>
+        <length>80</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Syndication_Notes__c</fullName>
+        <externalId>false</externalId>
+        <label>Syndication Notes</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Syndication_Partner__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Syndication Partner</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>TCPA_Compliance__c</fullName>
+        <externalId>false</externalId>
+        <label>TCPA Compliance</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Yes</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>No</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Targeted_Product__c</fullName>
+        <externalId>false</externalId>
+        <label>Targeted Product</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>All</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Brand</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Grant</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Loan</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>LOC</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>MCA</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Other</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Telemarketing_Cost__c</fullName>
+        <externalId>false</externalId>
+        <label>Telemarketing Cost</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Temp__c</fullName>
+        <externalId>false</externalId>
+        <label>Temp</label>
+        <length>1</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Terminated_reason__c</fullName>
+        <externalId>false</externalId>
+        <label>Terminated reason</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <controllingField>Status</controllingField>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Adverse vetting</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Defamation</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Excess fee surcharge</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Misrepresentation / Forgery</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Negative reputation</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Poor Performance / High Risk Referrals</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Other</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+            <valueSettings>
+                <controllingFieldValue>Terminated</controllingFieldValue>
+                <valueName>Adverse vetting</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Terminated</controllingFieldValue>
+                <valueName>Defamation</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Terminated</controllingFieldValue>
+                <valueName>Excess fee surcharge</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Terminated</controllingFieldValue>
+                <valueName>Misrepresentation / Forgery</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Terminated</controllingFieldValue>
+                <valueName>Negative reputation</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Terminated</controllingFieldValue>
+                <valueName>Poor Performance / High Risk Referrals</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Terminated</controllingFieldValue>
+                <valueName>Other</valueName>
+            </valueSettings>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>TotalEmailsDelivered</fullName>
+    </fields>
+    <fields>
+        <fullName>TotalFormSubmissions</fullName>
+    </fields>
+    <fields>
+        <fullName>TotalFormViews</fullName>
+    </fields>
+    <fields>
+        <fullName>Total_Emails_Sent__c</fullName>
+        <externalId>false</externalId>
+        <formula>NumberOfContacts +  NumberOfLeads</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Total Emails Sent</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Total_Lead_Cost__c</fullName>
+        <externalId>false</externalId>
+        <formula>NumberOfLeads * Price_Per_Lead__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Total Lead Cost</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Total_Marketing_Cost__c</fullName>
+        <externalId>false</externalId>
+        <formula>ActualCost + Telemarketing_Cost__c + Leads_Marketing_Cost__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Total Marketing Cost</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Total_Signed__c</fullName>
+        <externalId>false</externalId>
+        <formula>1</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Total Signed</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Type</fullName>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>UniqueEmailOpens</fullName>
+    </fields>
+    <fields>
+        <fullName>UniqueEmailTrackedLinkClicks</fullName>
+    </fields>
+    <fields>
+        <fullName>UniqueMarketingLinkClicks</fullName>
+    </fields>
+    <fields>
+        <fullName>Update_Partner_Email_1__c</fullName>
+        <externalId>false</externalId>
+        <label>Update Partner Email 1</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Email</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Update_Partner_Email_2__c</fullName>
+        <externalId>false</externalId>
+        <label>Update Partner Email 2</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Email</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Update_Partner_Email_3__c</fullName>
+        <externalId>false</externalId>
+        <label>Update Partner Email 3</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Email</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Update_Partner_Email_4__c</fullName>
+        <externalId>false</externalId>
+        <label>Update Partner Email 4</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Email</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Update_Partner_Email_5__c</fullName>
+        <externalId>false</externalId>
+        <label>Update Partner Email 5</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Email</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Update_Partner_Email_6__c</fullName>
+        <externalId>false</externalId>
+        <label>Update Partner Email 6</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Email</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>W_9_Form_Received__c</fullName>
+        <externalId>false</externalId>
+        <label>W-9 Form Received</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Welcome_Package_Sent__c</fullName>
+        <externalId>false</externalId>
+        <label>Welcome Package Sent</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>White_Label__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>White Label</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>X4_Month_Amendment_Received__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>4 Month Amendment Received</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>pi__Pardot_Campaign_Id__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <deprecated>false</deprecated>
+        <description>The Pardot identifier for the connected campaign record</description>
+        <externalId>true</externalId>
+        <label>Pardot Campaign Id</label>
+        <length>10</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>pi__Pardot_Has_Dependencies__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Determines if Pardot has marketing assets using this campaign</description>
+        <externalId>false</externalId>
+        <label>Pardot Has Dependencies</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <listViews>
+        <fullName>AllActiveCampaigns</fullName>
+        <columns>CAMPAIGN.NAME</columns>
+        <columns>CAMPAIGN.START_DATE</columns>
+        <columns>CAMPAIGN.END_DATE</columns>
+        <columns>CAMPAIGN.CAMPAIGN_TYPE</columns>
+        <columns>CAMPAIGN.STATUS</columns>
+        <columns>Split_Fund_Set_Up__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CAMPAIGN.ACTIVE</field>
+            <operation>equals</operation>
+            <value>1</value>
+        </filters>
+        <label>All Active Campaigns</label>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Campaign_Source_View</fullName>
+        <columns>CAMPAIGN.NAME</columns>
+        <columns>Campaign_Source__c</columns>
+        <columns>CAMPAIGN.CAMPAIGN_TYPE</columns>
+        <columns>Campaign_Contact__c</columns>
+        <columns>Campaign_Contact_Email__c</columns>
+        <columns>Campaign_Contact_Number__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>Campaign Source View</label>
+        <sharedTo>
+            <group>BusinessDevelopmentandManagement</group>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Email_Campaigns</fullName>
+        <columns>CAMPAIGN.START_DATE</columns>
+        <columns>CAMPAIGN.NAME</columns>
+        <columns>Total_Emails_Sent__c</columns>
+        <columns>CAMPAIGN.NUM_SENT</columns>
+        <columns>CAMPAIGN.NUM_LEADS</columns>
+        <columns>CAMPAIGN.NUM_CONVERTED_LEADS</columns>
+        <columns>CAMPAIGN.NUM_CONTACTS</columns>
+        <columns>CAMPAIGN.NUM_OPPORTUNITIES</columns>
+        <columns>AMOUNT_WON</columns>
+        <columns>Opportunity__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CAMPAIGN.ACTIVE</field>
+            <operation>equals</operation>
+            <value>1</value>
+        </filters>
+        <filters>
+            <field>CAMPAIGN.NAME</field>
+            <operation>contains</operation>
+            <value>Email,newsletter,renewal</value>
+        </filters>
+        <label>Email Campaigns</label>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Purchased_Lists_Telemarketing</fullName>
+        <columns>CAMPAIGN.NAME</columns>
+        <columns>CAMPAIGN.START_DATE</columns>
+        <columns>CAMPAIGN.NUM_SENT</columns>
+        <columns>CAMPAIGN.NUM_LEADS</columns>
+        <columns>CAMPAIGN.NUM_CONVERTED_LEADS</columns>
+        <columns>CAMPAIGN.NUM_OPPORTUNITIES</columns>
+        <columns>AMOUNT_ALL</columns>
+        <columns>CAMPAIGN.NUM_WON_OPPORTUNITIES</columns>
+        <columns>CAMPAIGN.CAMPAIGN_TYPE</columns>
+        <columns>CAMPAIGN.STATUS</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CAMPAIGN.NAME</field>
+            <operation>contains</operation>
+            <value>Campaign</value>
+        </filters>
+        <filters>
+            <field>CAMPAIGN.NAME</field>
+            <operation>notContain</operation>
+            <value>Email,aahoa,alpha,test</value>
+        </filters>
+        <filters>
+            <field>CAMPAIGN.CAMPAIGN_TYPE</field>
+            <operation>notEqual</operation>
+            <value>Partners</value>
+        </filters>
+        <label>Purchased Lists - Telemarketing</label>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Remove_Five9_Lists</fullName>
+        <columns>CAMPAIGN.NAME</columns>
+        <columns>CAMPAIGN.START_DATE</columns>
+        <columns>CAMPAIGN.END_DATE</columns>
+        <columns>CAMPAIGN.NUM_LEADS</columns>
+        <columns>Five9LSP__F9PS_List__c</columns>
+        <columns>CAMPAIGN.BUDGETED_COST</columns>
+        <columns>CAMPAIGN.ACTUAL_COST</columns>
+        <columns>CAMPAIGN.CAMPAIGN_TYPE</columns>
+        <columns>CAMPAIGN.STATUS</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CAMPAIGN.ACTIVE</field>
+            <operation>equals</operation>
+            <value>1</value>
+        </filters>
+        <filters>
+            <field>Five9LSP__F9PS_List__c</field>
+            <operation>notEqual</operation>
+        </filters>
+        <label>Remove Five9 Lists</label>
+    </listViews>
+    <listViews>
+        <fullName>UCC_Campaigns</fullName>
+        <columns>CAMPAIGN.START_DATE</columns>
+        <columns>CAMPAIGN.NAME</columns>
+        <columns>CAMPAIGN.NUM_LEADS</columns>
+        <columns>CAMPAIGN.NUM_CONTACTS</columns>
+        <columns>CAMPAIGN.NUM_SENT</columns>
+        <columns>CAMPAIGN.NUM_CONVERTED_LEADS</columns>
+        <columns>AMOUNT_ALL</columns>
+        <columns>CAMPAIGN.NUM_OPPORTUNITIES</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CAMPAIGN.ACTIVE</field>
+            <operation>equals</operation>
+            <value>1</value>
+        </filters>
+        <filters>
+            <field>CAMPAIGN.NAME</field>
+            <operation>contains</operation>
+            <value>4.6,ucc</value>
+        </filters>
+        <label>UCC Campaigns</label>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <searchLayouts>
+        <customTabListAdditionalFields>CAMPAIGN.NAME</customTabListAdditionalFields>
+        <customTabListAdditionalFields>PARENT_ID</customTabListAdditionalFields>
+        <customTabListAdditionalFields>CAMPAIGN.START_DATE</customTabListAdditionalFields>
+        <customTabListAdditionalFields>CAMPAIGN.NUM_LEADS</customTabListAdditionalFields>
+        <customTabListAdditionalFields>CAMPAIGN.NUM_CONVERTED_LEADS</customTabListAdditionalFields>
+        <customTabListAdditionalFields>CAMPAIGN.NUM_OPPORTUNITIES</customTabListAdditionalFields>
+        <customTabListAdditionalFields>CAMPAIGN.NUM_WON_OPPORTUNITIES</customTabListAdditionalFields>
+        <customTabListAdditionalFields>AMOUNT_WON</customTabListAdditionalFields>
+        <lookupDialogsAdditionalFields>CAMPAIGN.NAME</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>PARENT_ID</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>CAMPAIGN.START_DATE</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>CAMPAIGN.NUM_SENT</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Total_Emails_Sent__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>CAMPAIGN.NUM_LEADS</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>CAMPAIGN.NUM_CONTACTS</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>CAMPAIGN.NUM_CONVERTED_LEADS</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Campaign_Source__c</lookupDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>CAMPAIGN.NAME</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Five9_DNIS__c</lookupPhoneDialogsAdditionalFields>
+        <searchFilterFields>PARENT_ID</searchFilterFields>
+        <searchFilterFields>CAMPAIGN.NAME</searchFilterFields>
+        <searchFilterFields>CAMPAIGN.START_DATE</searchFilterFields>
+        <searchFilterFields>CAMPAIGN.CREATED_DATE</searchFilterFields>
+        <searchFilterFields>Campaign_Source__c</searchFilterFields>
+        <searchFilterFields>Partner_Sales_Assistant__c</searchFilterFields>
+        <searchFilterFields>Split_Fund_Set_Up__c</searchFilterFields>
+        <searchResultsAdditionalFields>CAMPAIGN.NAME</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>CAMPAIGN.START_DATE</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>CAMPAIGN.NUM_SENT</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>CAMPAIGN.NUM_LEADS</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>CAMPAIGN.NUM_CONVERTED_LEADS</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>CAMPAIGN.NUM_OPPORTUNITIES</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>AMOUNT_ALL</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>CAMPAIGN.NUM_WON_OPPORTUNITIES</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>AMOUNT_WON</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Total_Signed__c</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>FullAccess</sharingModel>
+    <validationRules>
+        <fullName>Campaign_Name_Not_allow_to_Change</fullName>
+        <active>true</active>
+        <description>Task 311 :- Revoke Permission to Update Campaign Name from All Roles Except Development and Support</description>
+        <errorConditionFormula>ISCHANGED( Name )  &amp;&amp;  $Profile.Name  &lt;&gt; &apos;System Administrator&apos;</errorConditionFormula>
+        <errorMessage>Campaign name change has been restricted in Salesforce. To update the campaign name please log a ticket with Helpdesk.</errorMessage>
+    </validationRules>
+    <webLinks>
+        <fullName>Mass_Edit</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <height>600</height>
+        <linkType>page</linkType>
+        <masterLabel>Mass Edit</masterLabel>
+        <openType>sidebar</openType>
+        <page>MassEditCampaign</page>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+    </webLinks>
+    <webLinks>
+        <fullName>Mass_Update</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <height>600</height>
+        <linkType>page</linkType>
+        <masterLabel>Mass Update</masterLabel>
+        <openType>sidebar</openType>
+        <page>MassUpdateCampaign</page>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+    </webLinks>
+    <webLinks>
+        <fullName>ViewAllCampaignMembers</fullName>
+        <availability>online</availability>
+        <displayType>link</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <hasMenubar>true</hasMenubar>
+        <hasScrollbars>true</hasScrollbars>
+        <hasToolbar>false</hasToolbar>
+        <height>400</height>
+        <isResizable>true</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>View All Campaign Members</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>false</showsLocation>
+        <showsStatus>false</showsStatus>
+        <url>/camp/rptcmpgncalldown.jsp?scope=1&amp;scopeid={!Campaign_Name}</url>
+        <width>600</width>
+    </webLinks>
+    <webLinks>
+        <fullName>View_eApplication</fullName>
+        <availability>online</availability>
+        <displayType>link</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <hasMenubar>false</hasMenubar>
+        <hasScrollbars>true</hasScrollbars>
+        <hasToolbar>false</hasToolbar>
+        <height>600</height>
+        <isResizable>true</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>View eApplication</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>false</showsLocation>
+        <showsStatus>false</showsStatus>
+        <url>http://calc.rapidadvance.com/Application/PartnerApplication?SFCampaignId={!CASESAFEID(Campaign.Id)}</url>
+    </webLinks>
+</CustomObject>

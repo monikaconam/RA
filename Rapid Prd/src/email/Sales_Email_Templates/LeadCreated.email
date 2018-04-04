@@ -1,0 +1,5 @@
+You have been assigned a new lead
+
+https://na33.salesforce.com/{!Lead.Id}
+
+{!Lead.Name}

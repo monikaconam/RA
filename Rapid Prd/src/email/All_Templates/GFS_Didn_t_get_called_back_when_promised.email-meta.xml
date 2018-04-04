@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>It the customer didn&apos;t get the call back when promised.</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>GFS Didn&apos;t get called back when promised</name>
+    <style>none</style>
+    <subject>Call back didn&apos;t received when promised.</subject>
+    <type>text</type>
+</EmailTemplate>

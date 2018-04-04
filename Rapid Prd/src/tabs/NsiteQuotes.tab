@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomTab xmlns="http://soap.sforce.com/2006/04/metadata">
+    <frameHeight>1400</frameHeight>
+    <hasSidebar>false</hasSidebar>
+    <label>Nsite Quotes</label>
+    <mobileReady>false</mobileReady>
+    <motif>Custom27: Laptop</motif>
+    <url>https://process2.nsite.com/Partners.jsp?id=rapidadvance&amp;un={!User.Username}&amp;ea={!User.Email}&amp;v=Y&amp;appId=7070&amp;pid=1032&amp;ppid=57106&amp;tId=30688&amp;pt=D&amp;op=showLeftPanel=false</url>
+    <urlEncodingKey>UTF-8</urlEncodingKey>
+</CustomTab>

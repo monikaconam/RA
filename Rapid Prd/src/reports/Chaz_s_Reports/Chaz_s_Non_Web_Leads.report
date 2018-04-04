@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>FIRST_NAME</field>
+    </columns>
+    <columns>
+        <field>LAST_NAME</field>
+    </columns>
+    <columns>
+        <field>COMPANY</field>
+    </columns>
+    <columns>
+        <field>LEAD_SOURCE</field>
+    </columns>
+    <columns>
+        <field>UNREAD</field>
+    </columns>
+    <columns>
+        <field>CREATED_DATE</field>
+    </columns>
+    <columns>
+        <field>PHONE</field>
+    </columns>
+    <columns>
+        <field>MOBILE_PHONE</field>
+    </columns>
+    <columns>
+        <field>DESCRIPTION</field>
+    </columns>
+    <columns>
+        <field>CITY</field>
+    </columns>
+    <columns>
+        <field>STATE</field>
+    </columns>
+    <columns>
+        <field>EMAIL</field>
+    </columns>
+    <filter>
+        <booleanFilter>1 AND 2 AND 3 AND 4 AND 5 AND 6</booleanFilter>
+        <criteriaItems>
+            <column>LEAD_SOURCE</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>contains</operator>
+            <value>,UCC1 - List,Quancor,ExpertServ,Auto Dialer,10leadmedia.com,Partner</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>OWNER</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>contains</operator>
+            <value>charles wagner</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>CONVERTED</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>0</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>STATUS</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>notEqual</operator>
+            <value>Duplicate Lead,Not Interested,Requested Information Only,Unqualified - Start Up Business,Unqualified - Other,Unqualified - Less than 1 year,Unqualified - Internet Only Business,Not Legitimate,Unqualified - Business for sale</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>CREATED_DATE</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>notEqual</operator>
+            <value>9/17/2007 12:00 AM</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>LEAD_SOURCE</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>notEqual</operator>
+            <value>Direct Mail</value>
+        </criteriaItems>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>STATUS</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Chaz&apos;s All Leads</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>LeadList</reportType>
+    <scope>org</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>CREATED_DATE</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+        <startDate>2010-01-01</startDate>
+    </timeFrameFilter>
+</Report>

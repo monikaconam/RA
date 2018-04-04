@@ -1,0 +1,653 @@
+<apex:page controller="LandlordInterview_Ctrl" showHeader="false" sidebar="false">
+    <c:Opportunity_Related_CSS imgName="landlord.png"/>
+    <apex:pageMessages id="pageMessageMain"/>
+    <apex:form id="LIForm" styleClass="LIForm"><br/>
+        <apex:outputPanel id="Panelid1">
+        <div class="bgImg"></div>
+        <div align="center">              
+            <apex:commandButton value="Save" action="{!doSave}" reRender="pageMessageMain,Panelid,Panelid1" status="ajaxStatus" oncomplete="setfocus('{!$Component.pageMessageMain}');"/>&nbsp;&nbsp;         
+        </div>
+        <apex:outputPanel id="Panelid">
+        <table id="LITable">
+            <!-- merchant start -->
+
+            <tr>
+                <td colspan="4">
+                    <c:Extjs_Panel title="Merchant Interview" RefreshButton="Refresh"/>                    
+                </td>
+            </tr>
+            
+            <tr>                
+                <td>
+                    <label>{!$ObjectType.Merchant__c.fields.Merchant_Interview_Completed_Date__c.label}</label>
+                </td>
+                <td>
+                    <apex:inputField value="{!objMerchant.Merchant_Interview_Completed_Date__c}"/>
+                </td>
+                <td>
+                    <label>{!$ObjectType.Merchant__c.fields.Merchant_Interview_Phone_Number__c.label}</label>
+                </td>
+                <td>
+                    <apex:inputField value="{!objMerchant.Merchant_Interview_Phone_Number__c}"/>
+                </td>
+            </tr>
+            <tr>                
+                <td>
+                    <label>Contact</label>
+                </td>
+                <td style="padding-left: 0.25em;">
+                    <apex:inputField value="{!oppRecord.Contact__r.Name}"/>
+                </td>
+                <td colspan="2">
+                    &nbsp;
+                </td>
+            </tr>            
+            <tr>
+                <td>
+                    <label>{!$ObjectType.Merchant__c.fields.What_type_of_Business_is_it__c.label}</label>
+                </td>
+                <td>
+                    <apex:inputField value="{!objMerchant.What_type_of_Business_is_it__c}"/>
+                </td>
+                <td>
+                    <label>{!$ObjectType.Merchant__c.fields.What_businesses_are_nearby__c.label}</label>
+                </td>
+                <td>
+                    <apex:inputField value="{!objMerchant.What_businesses_are_nearby__c}"/>
+                </td>
+            </tr>
+            <tr>
+                
+                <td>
+                    <label>{!$ObjectType.Merchant__c.fields.Do_you_have_contracts_with_customers__c.label}</label>
+                </td>
+                <td>
+                    <apex:inputField value="{!objMerchant.Do_you_have_contracts_with_customers__c}"/>
+                </td>
+                <td>
+                    <label></label>
+                </td>
+                <td>
+                    
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>{!$ObjectType.Merchant__c.fields.How_much_of_the_business_do_you_own__c.label}</label>
+                </td>
+                <td>
+                    <apex:inputField value="{!objMerchant.How_much_of_the_business_do_you_own__c}"/>
+                </td>
+                <td>
+                    <label>{!$ObjectType.Merchant__c.fields.If_so_then_what_type__c.label}</label>
+                </td>
+                <td>
+                    <apex:inputField value="{!objMerchant.If_so_then_what_type__c}"/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>{!$ObjectType.Merchant__c.fields.What_type_of_Business_Location__c.label}</label>
+                </td>
+                <td>
+                    <apex:inputField value="{!objMerchant.What_type_of_Business_Location__c}"/>
+                </td>
+                <td>
+                    <label>{!$ObjectType.Merchant__c.fields.What_is_your_busy_season__c.label}</label>
+                </td>
+                <td>
+                    <apex:inputField value="{!objMerchant.What_is_your_busy_season__c}"/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>{!$ObjectType.Merchant__c.fields.How_many_locations_for_this_business__c.label}</label>
+                </td>
+                <td>
+                    <apex:inputField value="{!objMerchant.How_many_locations_for_this_business__c}"/>
+                </td>
+                <td>
+                    <label>{!$ObjectType.Merchant__c.fields.What_is_your_slow_season__c.label}</label>
+                </td>
+                <td>
+                    <apex:inputField value="{!objMerchant.What_is_your_slow_season__c}"/>
+                </td>                
+            </tr>
+            <tr>
+                <td>
+                    <label>{!$ObjectType.Merchant__c.fields.of_cc_card_terminal_at_this_location__c.label}</label>
+                </td>
+                <td>
+                    <apex:inputField value="{!objMerchant.of_cc_card_terminal_at_this_location__c}"/>
+                </td>
+                <td>
+                    <label>{!$ObjectType.Merchant__c.fields.Number_of_Full_Time_Employees__c.label}</label>
+                </td>
+                <td>
+                    <apex:inputField value="{!objMerchant.Number_of_Full_Time_Employees__c}"/>
+                </td>               
+            </tr>
+            <tr>
+                <td>
+                    <label>{!$ObjectType.Merchant__c.fields.if_other_locat_of_terminals_at_each_c__c.label}</label>
+                </td>
+                <td>
+                    <apex:inputField value="{!objMerchant.if_other_locat_of_terminals_at_each_c__c}"/>
+                </td>
+                <td>
+                    <label>{!$ObjectType.Merchant__c.fields.How_many_part_time_employees_do_you_have__c.label}</label>
+                </td>
+                <td>
+                    <apex:inputField value="{!objMerchant.How_many_part_time_employees_do_you_have__c}"/>
+                </td>               
+            </tr>
+            <tr>
+                <td>
+                   <apex:outputLabel value="{!$ObjectType.Opportunity.fields.Merchant_website__c.label}"/>                 
+                </td>
+                <td>  
+                    <apex:inputField value="{!oppRecord.Merchant_website__c}" /> 
+                </td>
+                <td>
+                    <label>{!$ObjectType.Merchant__c.fields.When_does_your_lease_expire__c.label}</label>
+                </td>
+                <td>
+                    <apex:inputField value="{!objMerchant.When_does_your_lease_expire__c}"/>
+                </td>                
+            </tr>
+            <tr>
+                <td>
+                    <label>{!$ObjectType.Merchant__c.fields.What_hours_are_you_open__c.label}</label>
+                </td>
+                <td>
+                    <apex:inputField value="{!objMerchant.What_hours_are_you_open__c}"/>
+                </td>
+                <td>
+                    <label>{!$ObjectType.Merchant__c.fields.How_many_square_feet_is_the_business__c.label}</label>
+                </td>
+                <td>
+                    <apex:inputField value="{!objMerchant.How_many_square_feet_is_the_business__c}"/>
+                </td>               
+            </tr>
+            <tr>
+                <td>
+                    <label>{!$ObjectType.Merchant__c.fields.What_is_your_home_phone_number__c.label}</label>
+                </td>
+                <td>
+                    <apex:inputField value="{!objMerchant.What_is_your_home_phone_number__c}"/>
+                </td>
+                <td>
+                    <label>{!$ObjectType.Merchant__c.fields.How_long_have_you_used_current_processor__c.label}</label>
+                </td>
+                <td>
+                    <apex:inputField value="{!objMerchant.How_long_have_you_used_current_processor__c}"/>
+                </td>
+            </tr>
+            <tr>                
+                <td>
+                    <label>{!$ObjectType.Merchant__c.fields.What_is_your_mobile_phone_number__c.label}</label>
+                </td>
+                <td>
+                    <apex:inputField value="{!objMerchant.What_is_your_mobile_phone_number__c}"/>
+                </td>
+                <td>
+                    <label>{!$ObjectType.Merchant__c.fields.Have_you_had_a_cash_advance_before__c.label}</label>
+                </td>
+                <td>
+                    <apex:inputField value="{!objMerchant.Have_you_had_a_cash_advance_before__c}"/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>{!$ObjectType.Merchant__c.fields.What_is_your_email_address__c.label}</label>
+                </td>
+                <td>
+                    <apex:inputField value="{!objMerchant.What_is_your_email_address__c}"/>
+                </td>
+                <td>
+                    
+                </td>
+                <td>
+                    
+                </td>
+            </tr>
+            <tr>                
+                <td>
+                    <label>{!$ObjectType.Merchant__c.fields.Is_this_business_a_franchise__c.label}</label>
+                </td>
+                <td>
+                    <apex:inputField value="{!objMerchant.Is_this_business_a_franchise__c}"/>
+                </td>
+                <td>
+                    <label>{!$ObjectType.Merchant__c.fields.What_is_your_current_balance__c.label}</label>
+                </td>
+                <td>
+                    <apex:inputField value="{!objMerchant.What_is_your_current_balance__c}"/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>{!$ObjectType.Merchant__c.fields.If_so_are_you_current_on_franchise_dues__c.label}</label>
+                </td>
+                <td>
+                    <apex:inputField value="{!objMerchant.If_so_are_you_current_on_franchise_dues__c}"/>
+                </td>
+                <td>
+                    <label>{!$ObjectType.Merchant__c.fields.What_do_you_plan_to_use_the_money_for__c.label}</label>
+                </td>
+                <td>
+                    <apex:inputField value="{!objMerchant.What_do_you_plan_to_use_the_money_for__c}"/>
+                </td>       
+            </tr>
+            <tr>
+                <td>
+                    <label>{!$ObjectType.Merchant__c.fields.Do_you_plan_to_sell_the_business_soon__c.label}</label>
+                </td>
+                <td>
+                    <apex:inputField value="{!objMerchant.Do_you_plan_to_sell_the_business_soon__c}"/>
+                </td>
+                <td>
+                    <label>{!$ObjectType.Merchant__c.fields.Will_the_business_close_for_any_reason__c.label}</label>
+                </td>
+                <td>
+                    <apex:inputField value="{!objMerchant.Will_the_business_close_for_any_reason__c}"/>
+                </td>         
+            </tr>
+            <tr>
+                <td>
+                    <label>{!$ObjectType.Merchant__c.fields.Comments_on_Business_Sale_Response__c.label}</label>
+                </td>
+                <td>
+                    <apex:inputField value="{!objMerchant.Comments_on_Business_Sale_Response__c}"/>
+                </td>            
+                <td>
+                    <label>{!$ObjectType.Merchant__c.fields.If_closing_in_the_next_year_what_period__c.label}</label>
+                </td>
+                <td>
+                    <apex:inputField value="{!objMerchant.If_closing_in_the_next_year_what_period__c}"/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>{!$ObjectType.Merchant__c.fields.Are_you_late_with_any_of_your_vendors__c.label}</label>
+                </td>
+                <td>
+                    <apex:inputField value="{!objMerchant.Are_you_late_with_any_of_your_vendors__c}"/>
+                </td>
+                <td>
+                    <label>{!$ObjectType.Merchant__c.fields.Do_you_own_any_other_businesses__c.label}</label>
+                </td>
+                <td>
+                    <apex:inputField value="{!objMerchant.Do_you_own_any_other_businesses__c}"/>
+                </td>               
+            </tr>
+            <tr>
+                <td>
+                    <label>{!$ObjectType.Merchant__c.fields.Late_w_Vendors_Details__c.label}</label>
+                </td>
+                <td>
+                    <apex:inputField value="{!objMerchant.Late_w_Vendors_Details__c}"/>
+                </td>
+                <td>
+                    <label>{!$ObjectType.Merchant__c.fields.How_much_is_the_rent_for_the_business__c.label}</label>
+                </td>
+                <td>
+                    <apex:inputField value="{!objMerchant.How_much_is_the_rent_for_the_business__c}"/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>{!$ObjectType.Merchant__c.fields.When_did_you_purchase_start_the_business__c.label}</label>
+                </td>
+                <td>
+                    <apex:inputField value="{!objMerchant.When_did_you_purchase_start_the_business__c}"/>
+                </td>
+                <td>
+                    <label>{!$ObjectType.Merchant__c.fields.Overall_Merchant_Interview_Assessment__c.label}</label>
+                </td>
+                <td>
+                    <apex:inputField value="{!objMerchant.Overall_Merchant_Interview_Assessment__c}"/>
+                </td>
+            </tr>
+            <tr>    
+                <td>
+                    <label>{!$ObjectType.Merchant__c.fields.When_was_business_opened__c.label}</label>
+                </td>
+                <td>
+                    <apex:inputField value="{!objMerchant.When_was_business_opened__c}"/>
+                </td>           
+                <td>
+                    <label>{!$ObjectType.Merchant__c.fields.Additional_References__c.label}</label>
+                </td>
+                <td>
+                    <apex:inputField value="{!objMerchant.Additional_References__c}"/>
+                </td>                
+            </tr>
+
+            <tr>
+                <td colspan="4">
+                 <c:Extjs_Panel title="Contact Information"/>
+                </td>
+            </tr>
+
+             <tr>
+                <td colspan="4"> 
+                    <c:Extjs_Applicant_Credit parentField="Id" title="" height="226" object="Contact" fields="Name,OwnershipPercentage__c,Principal_1_Street_Address__c,Principal_1_City__c,Principal_1_State__c,Principal_1_Zip__c,Principal_Home_Phone__c,MobilePhone,Email,Months_at_Current_Address__c,Months_at_Previous_Address__c" rows="4" minimized="false" parentRecordId="{!$CurrentPage.parameters.Id}"/>
+                </td>
+            </tr>
+            <!-- tr>    
+                <td colspan="2">
+                    <label style="font-weight:bold !important;font-size: 14px;">Primary Contact Info</label>
+                </td>                
+                <td colspan="2">
+                    <label style="font-weight:bold !important;font-size: 14px;">Additional Contact Info</label>
+                </td>                
+            </tr>
+            <tr>    
+                <td>
+                    <label>First Name:</label>
+                </td>
+                <td>
+                    <apex:inputField value="{!objContact.FirstName}"/>
+                </td>           
+                <td>
+                    <label>First Name:</label>
+                </td>
+                <td>
+                     <apex:inputField value="{!objContact.Principal_2_First_Name__c}"/>
+                </td>                
+            </tr>
+            <tr>    
+                <td>
+                    <label>Last Name:</label>
+                </td>
+                <td>
+                    <apex:inputField value="{!objContact.LastName}"/>
+                </td>           
+                <td>
+                    <label>Last Name:</label>
+                </td>
+                <td>
+                     <apex:inputField value="{!objContact.Principal_2_Last_Name__c}"/>
+                </td>                
+            </tr>
+            <tr>    
+                <td>
+                    <label>Ownership:</label>
+                </td>
+                <td>
+                    <apex:inputField value="{!objContact.OwnershipPercentage__c}"/>%
+                    <apex:outputText value="{!IF((objContact.OwnershipPercentage__c == null), 0, objContact.OwnershipPercentage__c *100)}"/>%
+                </td>           
+                <td>
+                    <label>Ownership:</label>
+                </td>
+                <td>
+                    <apex:inputField value="{!objContact.Principal_2_Percent_Ownership__c}"/>%
+                     <apex:outputText value="{!IF((objContact.Principal_2_Percent_Ownership__c == null), 0, objContact.Principal_2_Percent_Ownership__c *100)}"/>%
+                </td>                
+            </tr>
+            <tr>    
+                <td>
+                    <label>Billing Street:</label>
+                </td>
+                <td>
+                    <apex:inputField value="{!objContact.Principal_1_Street_Address__c}"/>
+                </td>           
+                <td>
+                    <label>Billing Street:</label>
+                </td>
+                <td>
+                     <apex:inputField value="{!objContact.Principal_2_Street_Address__c}"/>
+                </td>                
+            </tr>
+            <tr>    
+                <td>
+                    <label>Billing City:</label>
+                </td>
+                <td>
+                    <apex:inputField value="{!objContact.Principal_1_City__c}"/>
+                </td>           
+                <td>
+                    <label>Billing City:</label>
+                </td>
+                <td>
+                     <apex:inputField value="{!objContact.Principal_2_City__c}"/>
+                </td>                
+            </tr>
+            <tr>    
+                <td>
+                    <label>Billing State:</label>
+                </td>
+                <td>
+                    <apex:inputField value="{!objContact.Principal_1_State__c}"/>
+                </td>           
+                <td>
+                    <label>Billing State:</label>
+                </td>
+                <td>
+                     <apex:inputField value="{!objContact.Principal_2_State__c}"/>
+                </td>                
+            </tr>
+            <tr>    
+                <td>
+                    <label>Billing Zip:</label>
+                </td>
+                <td>
+                    <apex:inputField value="{!objContact.Principal_1_Zip__c}"/>
+                </td>           
+                <td>
+                    <label>Billing Zip:</label>
+                </td>
+                <td>
+                     <apex:inputField value="{!objContact.Principal_2_Zip__c}"/>
+                </td>                
+            </tr>
+            <tr>    
+                <td>
+                    <label>Phone:</label>
+                </td>
+                <td>
+                    <apex:inputField value="{!objContact.Principal_Home_Phone__c}"/>
+                </td>           
+                <td>
+                    <label>Phone:</label>
+                </td>
+                <td>
+                     <apex:inputField value="{!objContact.Principal_2_Phone__c}"/>
+                </td>                
+            </tr>
+            <tr>    
+                <td>
+                    <label>Mobile:</label>
+                </td>
+                <td>
+                    <apex:inputField value="{!objContact.MobilePhone}"/>
+                </td>           
+                <td>
+                    <label>Mobile:</label>
+                </td>
+                <td>
+                     <apex:inputField value="{!objContact.Principal_2_Mobile__c}"/>
+                </td>                
+            </tr>
+            <tr>    
+                <td>
+                    <label>Email:</label>
+                </td>
+                <td>
+                    <apex:inputField value="{!objContact.Email}"/>
+                </td>           
+                <td>
+                    <label>Email:</label>
+                </td>
+                <td>
+                     <apex:inputField value="{!objContact.Principal_2_Email__c}"/>
+                </td>                
+            </tr>
+            <tr>    
+                <td>
+                    <label>Fax:</label>
+                </td>
+                <td>
+                    <apex:inputField value="{!objContact.Fax}"/>
+                </td>           
+                <td colspan="2">
+                    &nbsp;
+                </td>                
+            </tr> -->
+
+           
+
+
+            <!-- merchant end -->
+            <tr>
+                <td colspan="4">
+                 <c:Extjs_Panel title="Landlord Interview"/>
+                </td>
+            </tr>
+            
+            <tr>                
+                <td>
+                  
+                </td>
+                <td>
+                 
+                </td>                
+                <td>
+                    <apex:outputLabel value="{!$ObjectType.Opportunity.fields.Landlord_Interview_Complete__c.label}"/>                 
+                </td>
+                <td>  
+                    <apex:inputField value="{!oppRecord.Landlord_Interview_Complete__c}" /> 
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                                   
+                </td>
+                <td>  
+                    
+                </td>
+                <td>
+                   <apex:outputLabel value="{!$ObjectType.Opportunity.fields.Landlord_Phone_Number__c.label}"/>                 
+                </td>
+                <td>  
+                    <apex:inputField value="{!oppRecord.Landlord_Phone_Number__c}" /> 
+                </td>                
+            </tr>
+            <tr>                
+                <td>
+                    
+                </td>
+                <td>
+                    
+                </td>
+                <td>
+                    <apex:outputLabel value="{!$ObjectType.Opportunity.fields.Landlord_Contact_Name__c.label}"/>                 
+                </td>
+                <td>
+                    <apex:inputField value="{!oppRecord.Landlord_Contact_Name__c}" />
+                </td>
+            </tr>            
+            <tr>
+                
+                <td>
+                   <apex:outputLabel value="{!$ObjectType.Opportunity.fields.Type_of_Landlord__c.label}"/>                 
+                </td>
+                <td>  
+                    <apex:inputField value="{!oppRecord.Type_of_Landlord__c}" /> 
+                </td>          
+                <td>
+                                    
+                </td>
+                <td>  
+                   
+                </td>
+            </tr>
+          
+            <tr>
+                <td>
+                   <apex:outputLabel value="{!$ObjectType.Opportunity.fields.Landlord_Address__c.label}"/>                
+                </td>
+                <td>  
+                    <apex:inputField value="{!oppRecord.Landlord_Address__c}" />
+                </td>
+                <td>
+                                     
+                </td>
+                <td>
+                    
+                </td>
+            </tr>
+            <tr>
+                <td>
+                   <apex:outputLabel value="{!$ObjectType.Opportunity.fields.Interview_Additional_Comments__c.label}"/>                 
+                </td>
+                <td>  
+                    <apex:inputField value="{!oppRecord.Interview_Additional_Comments__c}" /> 
+                </td>
+                <td colspan="2">
+                    &nbsp;
+                </td>
+            </tr>
+            
+            <tr>
+               <td colspan="4">
+                    <c:Extjs_Panel title="Additional Locations"/>
+               </td>
+           </tr>           
+           <tr>
+                <td colspan="4">               
+                    <c:Extjs_Bank_Statement height="201" title="Additional Locations" object="Additional_Locations__c" fields="DBA_Name__c,Street__c,City__c,State__c,Postal_Code__c,Phone__c,Fax__c,Landlord__c,Landlord_Phone__c,Time_Remaining_on_Lease__c" rows="3" minimized="false" parentField="Account__c" parentRecordId="{!oppRecord.Account.Id}"/>        
+                </td>
+           </tr> 
+                  <tr>
+                <td colspan="4">
+                     <!--<div id="panelGrid">Funding</div> -->
+                      <c:Extjs_Panel title="Pre-Funding Call"/>
+                </td>
+            </tr>    
+                                  
+            <tr>
+                 <td>
+                    <label>Processing and/or Origination Fees</label>               
+                </td>
+                <td>
+                    <apex:inputField value="{!oppRecord.Processing_and_or_Origination_Fee_s__c}" taborderhint="8"/>
+                </td> 
+                 <td></td>
+                <td></td>       
+            </tr>
+            <tr>
+                <td>
+                    <label>Confirmed wire amount with</label>               
+                </td>
+                <td>
+                    <apex:inputField value="{!oppRecord.Confirmed_wire_amount_with__c}" taborderhint="4"/>
+                </td>
+                <td>
+                    <label>Wire Amount</label>
+                </td>
+                <td>
+                    <apex:inputField value="{!oppRecord.Wire_Amount__c}" taborderhint="9"/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Notes from Prefunding Call</label>
+                </td>
+                <td>
+                    <apex:inputField value="{!oppRecord.Notes_from_Prefunding_Call__c}" taborderhint="5"/>
+                </td>               
+            </tr>
+                 
+        </table><br/>  
+        </apex:outputPanel>            
+        <div align="center">              
+            <apex:commandButton value="Save" action="{!doSave}" reRender="pageMessageMain,Panelid,Panelid1" status="ajaxStatus" oncomplete="setfocus('{!$Component.pageMessageMain}');"/>&nbsp;&nbsp;         
+        </div>
+        </apex:outputPanel>            
+    </apex:form>
+    <apex:actionstatus startStyleClass="requiredLoaderBG" id="ajaxStatus" />
+</apex:page>

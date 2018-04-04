@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>StandardLetterheadSample</letterhead>
+    <name>Email Reminder</name>
+    <style>freeForm</style>
+    <subject>Following up on your inquiry</subject>
+    <textOnly>Dear {!Lead.FirstName},
+ 
+I am following up on your inquiry submitted on {!Lead.CreatedDate} for Business Cash Advance. 
+ 
+Please fax your last four months of Visa/MC processing statements to {!Lead.OwnerTitle} or call me at {!Lead.OwnerPhone}. 
+ 
+I look forward to speaking with you.
+ 
+
+
+ 
+Sincerely,
+ 
+{!Lead.OwnerFullName}
+Phone: {!Lead.OwnerPhone} 
+Fax:     {!Lead.OwnerTitle} 
+Email:  {!Lead.OwnerEmail}</textOnly>
+    <type>html</type>
+</EmailTemplate>

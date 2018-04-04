@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Industry</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Industries</value>
+    </caseValues>
+    <fields>
+        <label><!-- Accountable --></label>
+        <name>Accountable__c</name>
+    </fields>
+    <fields>
+        <label><!-- AgileCap --></label>
+        <name>AgileCap__c</name>
+    </fields>
+    <fields>
+        <label><!-- Aquila --></label>
+        <name>Aquila__c</name>
+    </fields>
+    <fields>
+        <label><!-- Atlantis Mortgage --></label>
+        <name>Atlantis_Mortgage__c</name>
+    </fields>
+    <fields>
+        <label><!-- BFS --></label>
+        <name>BFS__c</name>
+    </fields>
+    <fields>
+        <label><!-- CNH Finance --></label>
+        <name>CNH_Finance__c</name>
+    </fields>
+    <fields>
+        <label><!-- Construction Finance --></label>
+        <name>Construction_Finance__c</name>
+    </fields>
+    <fields>
+        <label><!-- Credibly --></label>
+        <name>Credibly__c</name>
+    </fields>
+    <fields>
+        <label><!-- ECG --></label>
+        <name>ECG__c</name>
+    </fields>
+    <fields>
+        <label><!-- FORA --></label>
+        <name>FORA__c</name>
+    </fields>
+    <fields>
+        <label><!-- FundKite --></label>
+        <name>FundKite__c</name>
+    </fields>
+    <fields>
+        <label><!-- Fund-Amental --></label>
+        <name>Fund_Amental__c</name>
+    </fields>
+    <fields>
+        <label><!-- Fundation --></label>
+        <name>Fundation__c</name>
+    </fields>
+    <fields>
+        <label><!-- Fundbox --></label>
+        <name>Fundbox__c</name>
+    </fields>
+    <fields>
+        <label><!-- Greenwich Capital --></label>
+        <name>Greenwich_Capital__c</name>
+    </fields>
+    <fields>
+        <label><!-- Headway Capital --></label>
+        <name>Headway_Capital__c</name>
+    </fields>
+    <fields>
+        <label><!-- Interface Financial --></label>
+        <name>Interface_Financial__c</name>
+    </fields>
+    <fields>
+        <label><!-- Iron Horse Credit --></label>
+        <name>Iron_Horse_Credit__c</name>
+    </fields>
+    <fields>
+        <label><!-- KatalystFP --></label>
+        <name>KatalystFP__c</name>
+    </fields>
+    <fields>
+        <label><!-- Knight Capital --></label>
+        <name>Knight_Capital__c</name>
+    </fields>
+    <fields>
+        <label><!-- LenCred --></label>
+        <name>LenCred__c</name>
+    </fields>
+    <fields>
+        <label><!-- Lendio --></label>
+        <name>Lendio__c</name>
+    </fields>
+    <fields>
+        <label><!-- Lendistry --></label>
+        <name>Lendistry__c</name>
+    </fields>
+    <fields>
+        <label><!-- Lendr --></label>
+        <name>Lendr__c</name>
+    </fields>
+    <fields>
+        <label><!-- Levy &amp; Associates --></label>
+        <name>Levy_Associates__c</name>
+    </fields>
+    <fields>
+        <label><!-- Libertas --></label>
+        <name>Libertas__c</name>
+    </fields>
+    <fields>
+        <label><!-- National Funding --></label>
+        <name>National_Funding__c</name>
+    </fields>
+    <fields>
+        <label><!-- Platinum Rapid --></label>
+        <name>Platinum_Rapid__c</name>
+    </fields>
+    <fields>
+        <label><!-- Principis Capital --></label>
+        <name>Principis_Capital__c</name>
+    </fields>
+    <fields>
+        <label><!-- RapidAdvance --></label>
+        <name>RapidAdvance__c</name>
+    </fields>
+    <fields>
+        <label><!-- Search --></label>
+        <name>Search__c</name>
+    </fields>
+    <fields>
+        <label><!-- Seek --></label>
+        <name>Seek__c</name>
+    </fields>
+    <fields>
+        <label><!-- SmartBiz --></label>
+        <name>SmartBiz__c</name>
+    </fields>
+    <fields>
+        <label><!-- Snap Advances --></label>
+        <name>Snap_Advances__c</name>
+    </fields>
+    <fields>
+        <label><!-- Strategic --></label>
+        <name>Strategic__c</name>
+    </fields>
+    <fields>
+        <label><!-- Super G --></label>
+        <name>Super_G__c</name>
+    </fields>
+    <fields>
+        <label><!-- The Fundworks --></label>
+        <name>The_Fundworks__c</name>
+    </fields>
+    <fields>
+        <label><!-- Uplyft --></label>
+        <name>Uplyft__c</name>
+    </fields>
+    <fields>
+        <label><!-- World Business Lenders --></label>
+        <name>World_Business_Lenders__c</name>
+    </fields>
+    <fields>
+        <label><!-- 24Capital --></label>
+        <name>X24Capital__c</name>
+    </fields>
+    <startsWith>Vowel</startsWith>
+</CustomObjectTranslation>

@@ -1,0 +1,6 @@
+The submission is incomplete and needs to be updated.  Please update the record and resubmit this Marble.
+
+{!Marble__c.Name}
+{!Marble__c.Marble_Rejection_Reason__c}
+
+https://na33.salesforce.com/{!Marble__c.SFID__c}

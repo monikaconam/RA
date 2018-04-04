@@ -1,0 +1,17 @@
+Lead Source: {!Lead.LeadSource}
+Company Name: {!Lead.Company}
+Contact Name: {!Lead.Name}
+Address:
+{!Lead.Address}
+
+Phone: {!Lead.Phone}
+Fax: {!Lead.Fax}
+Mobile: {!Lead.MobilePhone}
+Email: {!Lead.Email}
+Time in Business: {!Lead.Operating_Since__c}
+Monthly Visa/Mastercard Sales: {!Lead.Monthly_Visa_Mastercard_Volume__c}
+Gross Monthly Sales: {!Lead.Gross_Monthly_Income__c}
+Business Type: {!Lead.Type_Of_Business__c}
+Amount Requested: {!Lead.Amount_Requested__c}
+
+Salesforce Link: https://na5.salesforce.com/{!Lead.Id}

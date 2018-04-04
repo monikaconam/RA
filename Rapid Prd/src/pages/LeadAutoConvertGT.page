@@ -1,0 +1,4 @@
+<apex:page action="{!gtMethod}" extensions="LeadConvertButtonOverride" standardController="Lead">
+    <apex:sectionHeader title="Convert Lead" subtitle="{!Lead.Name}" ></apex:sectionHeader>
+    <apex:pageMessages ></apex:pageMessages>
+</apex:page>

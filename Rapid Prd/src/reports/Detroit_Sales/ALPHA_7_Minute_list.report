@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>COMPANY</field>
+    </columns>
+    <columns>
+        <field>FIRST_NAME</field>
+    </columns>
+    <columns>
+        <field>LAST_NAME</field>
+    </columns>
+    <columns>
+        <field>LEAD_STATUS</field>
+    </columns>
+    <columns>
+        <field>ASSIGNED</field>
+    </columns>
+    <columns>
+        <field>LEAD_LAST_UPDATE</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>LEAD_STATUS</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Initial Call Needed,Calling - No Contact Made</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>CALLDURATION</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>greaterOrEqual</operator>
+            <value>420</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>OWNER_ROLE</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Business Advisor</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>ALPHA 7 Minute list</name>
+    <params>
+        <name>closed</name>
+        <value>all</value>
+    </params>
+    <params>
+        <name>type</name>
+        <value>te</value>
+    </params>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>LeadActivity</reportType>
+    <roleHierarchyFilter>Administrator</roleHierarchyFilter>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <sortColumn>ASSIGNED</sortColumn>
+    <sortOrder>Asc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>DUE_DATE</dateColumn>
+        <endDate>2017-01-31</endDate>
+        <interval>INTERVAL_CUSTOM</interval>
+        <startDate>2017-01-02</startDate>
+    </timeFrameFilter>
+</Report>

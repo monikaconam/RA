@@ -1,0 +1,16 @@
+<table cellpadding="5" width="550" height="400" cellspacing="5" border="0" >
+<tr height="400" valign="top" >
+<td locked="0" style=" font-family:arial; bLabel:main; color:#000000; font-size:12pt; bEditID:r3st1; background-color:#FFFFFF;" aEditID="c1r1" tEditID="c1r1" >
+<![CDATA[<P align=center><U>THERE IS AN ALERT ON THE SITE VISIT.</U></P>
+<P>&nbsp;</P>
+<P>Date:&nbsp; {!Opportunity.LastModifiedDate}</P>
+<P>&nbsp;</P>
+<P>Opportunity Name:&nbsp; {!Opportunity.Name}</P>
+<P>&nbsp;</P>
+<P>Site Visit Order Date:&nbsp; {!Opportunity.00N70000001ghqN}</P>
+<P>&nbsp;&nbsp;</P>
+<P>ALERT Received:&nbsp; {!Opportunity.00N70000001gj6C}</P>
+<P>&nbsp;</P>
+<P>Underwriting Status:&nbsp; {!Opportunity.00N50000001PqO4}</P>]]></td>
+</tr>
+</table>

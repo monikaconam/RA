@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>CAMPAIGN_NAME</field>
+    </columns>
+    <columns>
+        <field>Campaign.Partner_Category__c</field>
+    </columns>
+    <columns>
+        <field>Campaign.Campaign_Contact_Email__c</field>
+    </columns>
+    <filter>
+        <booleanFilter>((1 or 2)) AND 3</booleanFilter>
+        <criteriaItems>
+            <column>CAMPAIGN_OWNER</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Jeff Schubert</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Campaign.Additional_Owner__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Jeff Schubert</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Campaign.Partner_Category__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Equipment Leasing Company</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>Jeff Schubert&apos;s Campaigns</name>
+    <params>
+        <name>scopeid</name>
+        <value></value>
+    </params>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CampaignList</reportType>
+    <scope>orgAll</scope>
+    <showDetails>true</showDetails>
+</Report>

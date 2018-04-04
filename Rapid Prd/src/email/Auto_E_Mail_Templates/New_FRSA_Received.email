@@ -1,0 +1,23 @@
+<table height="400" width="550" cellpadding="5" border="0" cellspacing="5" >
+<tr height="400" valign="top" >
+<td style=" color:#000000; font-size:12pt; background-color:#FFFFFF; font-family:arial; bLabel:main; bEditID:r3st1;" tEditID="c1r1" locked="0" aEditID="c1r1" >
+<![CDATA[<p><font size="2" color="#000066" face="Verdana,Geneva,Arial,Helvetica,Sans-Serif">Date - {!Opportunity.LastModifiedDate}&nbsp; </font></p>
+<p><font size="2" color="#000066" face="Verdana,Geneva,Arial,Helvetica,Sans-Serif">&nbsp;</font></p>
+<p><font size="2" color="#000066" face="Verdana,Geneva,Arial,Helvetica,Sans-Serif">Opportunity Name - {!Opportunity.Name}</font></p>
+<p><font size="2" color="#000066" face="Verdana,Geneva,Arial,Helvetica,Sans-Serif"></font>&nbsp;</p>
+<p><font size="2" color="#000066" face="Verdana"><strong>New FRSA Received:</strong></font></p>
+<p><font size="2" color="#000066" face="Verdana"></font>&nbsp;</p>
+<p><font size="2" color="#000066">New Advance&nbsp;Amount - {!Opportunity.00N70000001wnUo}</font></p>
+<p><font size="2" color="#000066">New Percent Payback - {!Opportunity.00N70000001wnVD}</font></p>
+<p><font size="2" color="#000066">New Payback&nbsp;Amount - {!Opportunity.00N70000001wnVt}</font></p><p><font size="2" color="#000066">Est Days to Repay - {!Opportunity.00N70000002I2Nh}<br></font></p>
+<p><font color="#000066"></font>&nbsp;</p>
+<p><font size="2" color="#000066" face="Verdana,Geneva,Arial,Helvetica,Sans-Serif">Underwriting Notes -&nbsp;{!Opportunity.Underwriting_Notes__c}</font></p>
+<p><font size="2" color="#000066" face="Verdana,Geneva,Arial,Helvetica,Sans-Serif">Date <font color="#330099">Repriced</font> - {!Opportunity.00N70000001wnTC}&nbsp;</font></p>
+<p><font size="2" color="#000099" face="Verdana,Geneva,Arial,Helvetica,Sans-Serif"><font color="#000066">&nbsp;</font></font></p>
+<p><font size="2" color="#000066">Processing Representative - {!Opportunity.Processing_Representative__c}</font></p>
+<p><font face="Verdana,Geneva,Arial,Helvetica,Sans-Serif"></font><font face="Verdana,Geneva,Arial,Helvetica,Sans-Serif"></font><font size="2" color="#000066">Processing Notes -&nbsp;{!Opportunity.Processing_Notes__c}</font></p>
+<p><font size="2" face="Verdana,Geneva,Arial,Helvetica,Sans-Serif"></font><font color="#000066">&nbsp;</font></p>
+<p><font size="2" color="#000066" face="Verdana,Geneva,Arial,Helvetica,Sans-Serif">Person who&nbsp;sent&nbsp;update - {!Opportunity.LastModifiedBy}</font></p>
+<p><font color="#000099"></font>&nbsp;</p>]]></td>
+</tr>
+</table>

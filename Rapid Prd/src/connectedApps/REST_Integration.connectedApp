@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ConnectedApp xmlns="http://soap.sforce.com/2006/04/metadata">
+    <contactEmail>szarghami@rapidadvance.com</contactEmail>
+    <label>REST Integration</label>
+    <oauthConfig>
+        <callbackUrl>https://ra-creditreportingtest.azurewebsites.net/Api/oauth2/callback</callbackUrl>
+        <consumerKey>3MVG99OxTyEMCQ3gHWxjXW6KdCTELDBV6qQCRCt9_6FaPuPCED.N6Qs8Hiu_CZdVg2B5pY0etp7tcMSVbvDxv</consumerKey>
+        <scopes>Basic</scopes>
+        <scopes>Api</scopes>
+        <scopes>Web</scopes>
+        <scopes>Full</scopes>
+        <scopes>Chatter</scopes>
+        <scopes>CustomApplications</scopes>
+        <scopes>RefreshToken</scopes>
+    </oauthConfig>
+</ConnectedApp>

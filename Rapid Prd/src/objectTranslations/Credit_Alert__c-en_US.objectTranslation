@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Credit Alert</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Credit Alerts</value>
+    </caseValues>
+    <fields>
+        <label><!-- Advance Lookup --></label>
+        <name>Advance_Lookup__c</name>
+        <relationshipLabel><!-- Credit Alerts --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Credit Alert Text --></label>
+        <name>Credit_Alert_Text__c</name>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

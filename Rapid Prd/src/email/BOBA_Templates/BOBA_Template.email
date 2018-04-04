@@ -1,0 +1,26 @@
+<table border="0" cellpadding="5" width="550" cellspacing="5" height="400" >
+<tr valign="top" height="400" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[<font face="Arial, sans-serif" size="4">Hi&nbsp;<span style="background-color: rgb(255, 255, 255);">{Insert Client Name},</span></font><div><font face="Arial, sans-serif" size="4"><br></font></div><div>
+
+<p><font size="4"><font face="Arial, sans-serif">My name is&nbsp;</font><span style="background-color: rgb(255, 255, 255);"><font face="Arial, sans-serif">{!User.Name}</font></span><font face="Arial, sans-serif">&nbsp;and I’m reaching out to you with some great news! It doesn’t look like we
+were able to fund a loan for you the first time we spoke. However, we pride
+ourselves in exhausting all possible solutions when it comes to helping out our
+clients. <font><u1:p></u1:p><o:p></o:p></font></font></font></p><p><font face="Arial, sans-serif" size="4"><br></font></p><p><font face="Arial, sans-serif" size="4"><br></font></p>
+
+<p><font face="Arial, sans-serif" size="4">We have joined
+together with several companies which has given us the opportunity to help a
+lot more clients than we used to be able to help. We have access to several
+different loan products that a lot of our clients are taking advantage of now. <u1:p></u1:p><o:p></o:p></font></p><p><font face="Arial, sans-serif" size="4"><br></font></p><p><font face="Arial, sans-serif" size="4"><br></font></p>
+
+<p><font face="Arial, sans-serif" size="4">Please call me or
+e-mail me before the end of the day today so I can get to work on finding the
+right solution for you. <u1:p></u1:p><o:p></o:p></font></p>
+
+<p><font face="Arial, sans-serif" size="4">&nbsp; <o:p></o:p></font></p>
+
+<p><font face="Arial, sans-serif" size="4">Thank you,&nbsp;<u1:p></u1:p><o:p></o:p></font></p><p><font face="Arial, sans-serif" size="4"><br></font></p><p><font face="Arial, sans-serif" size="4"><span style="background-color: rgb(255, 255, 255);">{!User.Name}</span><br style="background-color: rgb(255, 255, 255);"><span style="background-color: rgb(255, 255, 255);">Phone:&nbsp;{!User.Phone}</span><br style="background-color: rgb(255, 255, 255);"><span style="background-color: rgb(255, 255, 255);">Email:&nbsp;{!User.Email}</span><br style="background-color: rgb(255, 255, 255);"><span style="background-color: rgb(255, 255, 255);">Website:&nbsp;www.RapidAdvance.com</span></font></p>
+
+<font face="arial" style="font-size: 12pt; font-family: arial;"><u1:p></u1:p></font></div>]]></td>
+</tr>
+</table>

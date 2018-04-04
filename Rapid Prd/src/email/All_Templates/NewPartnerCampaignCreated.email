@@ -1,0 +1,69 @@
+<table height="400" width="550" cellpadding="5" border="0" cellspacing="5" >
+<tr height="400" valign="top" >
+<td style=" color:#000000; font-size:12pt; background-color:#FFFFFF; font-family:arial; bLabel:main; bEditID:r3st1;" tEditID="c1r1" locked="0" aEditID="c1r1" >
+<![CDATA[<p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt; margin: 0in 0in 0.0001pt 30pt;"><span style="font-size: 10pt; font-family: Verdana, sans-serif;">{!Campaign.CreatedDate}<o:p></o:p></span></p><p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt; margin: 0in 0in 0.0001pt 30pt;"><span style="font-size: 10pt; font-family: Verdana, sans-serif;">&nbsp;<o:p></o:p></span></p><p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt; margin: 0in 0in 0.0001pt 30pt;"><span style="font-size: 10pt; font-family: Verdana, sans-serif;">Campaign Name:
+{!Campaign.Name}<o:p></o:p></span></p><p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt; margin: 0in 0in 0.0001pt 30pt;"><span style="font-size: 10pt; font-family: Verdana, sans-serif;">Contact:
+{!Campaign.Campaign_Contact__c}<o:p></o:p></span></p><p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt; margin: 0in 0in 0.0001pt 30pt;"><span style="font-size: 10pt; font-family: Verdana, sans-serif;">Phone:
+{!Campaign.Campaign_Contact_Number__c}<o:p></o:p></span></p><p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt; margin: 0in 0in 0.0001pt 30pt;"><span style="font-size: 10pt; font-family: Verdana, sans-serif;">Email:
+{!Campaign.Campaign_Contact_Email__c}<o:p></o:p></span></p><p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt; margin: 0in 0in 0.0001pt 30pt;"><span style="font-size: 10pt; font-family: Verdana, sans-serif;">&nbsp;<o:p></o:p></span></p><p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt; margin: 0in 0in 0.0001pt 30pt;"><span style="font-size: 10pt; font-family: Verdana, sans-serif;">Sales Assistant
+Assigned: {!Campaign.Partner_Sales_Assistant__c}<o:p></o:p></span></p><p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt; margin: 0in 0in 0.0001pt 30pt;"><span style="font-size: 10pt; font-family: Verdana, sans-serif;">&nbsp;<o:p></o:p></span></p><p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt; margin: 0in 0in 0.0001pt 30pt;"><span style="font-size: 10pt; font-family: Verdana, sans-serif;">Partner Type:
+{!Campaign.Partner_Type__c}<o:p></o:p></span></p><p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt; margin: 0in 0in 0.0001pt 30pt;"><span style="font-size: 10pt; font-family: Verdana, sans-serif;">Campaign&nbsp;Source:
+{!Campaign.Campaign_Source__c}<o:p></o:p></span></p><p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt; margin: 0in 0in 0.0001pt 30pt;"><span style="font-size: 10pt; font-family: Verdana, sans-serif;">Split Fund Set Up:
+{!Campaign.Split_Fund_Set_Up__c}<o:p></o:p></span></p><p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt; margin: 0in 0in 0.0001pt 30pt;"><span style="font-size: 10pt; font-family: Verdana, sans-serif;">&nbsp;<o:p></o:p></span></p><p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt; margin: 0in 0in 0.0001pt 30pt;"><span style="font-size: 10pt; font-family: Verdana, sans-serif;">Special Notes:
+{!Campaign.Description}</span></p><p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt; margin: 0in 0in 0.0001pt 30pt;"><span style="font-family: Verdana, sans-serif; font-size: 10pt;">&nbsp;</span></p><p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt; margin: 0in 0in 0.0001pt 0.1in;"><b><span style="font-size: 10pt; font-family: Verdana, sans-serif;">Sierra Daumit</span></b><span style="font-size: 10pt; font-family: Verdana, sans-serif;"><o:p></o:p></span></p><p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt; margin: 0in 0in 0.0001pt 0.1in;"><span style="font-size: 10pt; font-family: Verdana, sans-serif;">Business Development
+Admin<o:p></o:p></span></p><p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt; margin: 0in 0in 0.0001pt 0.1in;"><span style="font-size: 10pt; font-family: Verdana, sans-serif;">7316 Wisconsin
+Avenue, Suite 350<o:p></o:p></span></p><p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt; margin: 0in 0in 0.0001pt 0.1in;"><span style="font-size: 10pt; font-family: Verdana, sans-serif;">Bethesda,&nbsp;MD&nbsp;20814<o:p></o:p></span></p><p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt; margin: 0in 0in 0.0001pt 0.1in;"><span style="font-size: 10pt; font-family: Verdana, sans-serif;">Ph: (240) 514-1973<o:p></o:p></span></p><p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt; margin: 0in 0in 0.0001pt 0.1in;"><span style="font-size: 10pt; font-family: Verdana, sans-serif;">Fax: (240) 283-1074<o:p></o:p></span></p><p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt; margin: 0in 0in 0.0001pt 0.1in;"><span style="font-size: 10pt; font-family: Verdana, sans-serif;">sdaumit@rapidadvance.com&nbsp;<o:p></o:p></span></p><p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt; margin: 0in 0in 0.0001pt 0.1in;"><span style="font-size: 10pt; font-family: Verdana, sans-serif;"><a href="http://www.rapidadvance.com/" title="http://www.rapidadvance.com/"><span style="color:blue">www.rapidadvance.com</span></a><o:p></o:p></span></p><p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt; margin: 0in 0in 0pt 40px;">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</p><p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><span style="font-size:10.0pt;line-height:115%;font-family:
+&quot;Verdana&quot;,&quot;sans-serif&quot;">&nbsp;</span></p><p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: Verdana, Helvetica, sans-serif; font-size: 12pt; margin: 0in 0in 0pt 0.1in;"><br></p>
+<p style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"></p>]]></td>
+</tr>
+</table>

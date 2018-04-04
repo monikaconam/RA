@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>When GFS Overall Satisfaction field value is less than 4, an email is sent to Maria Mahon.</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>GFS Overall Satisfaction</name>
+    <style>none</style>
+    <subject>Overall Satisfaction is less than 4.</subject>
+    <type>text</type>
+</EmailTemplate>

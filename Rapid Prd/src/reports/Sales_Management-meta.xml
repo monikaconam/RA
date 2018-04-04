@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ReportFolder xmlns="http://soap.sforce.com/2006/04/metadata">
+    <accessType>Shared</accessType>
+    <name>Sales Management</name>
+    <publicFolderAccess>ReadWrite</publicFolderAccess>
+    <sharedTo>
+        <role>AccountingDepartment</role>
+        <role>Administrator</role>
+        <role>BusinessDevelopment</role>
+        <role>Business_Advisor_Leader</role>
+        <role>DirectorofSales</role>
+        <role>Executive</role>
+        <role>MarketingDepartment</role>
+    </sharedTo>
+</ReportFolder>

@@ -1,0 +1,9 @@
+https://na5.salesforce.com/{!Lead.Id}
+
+Company: {!Lead.Company}
+Name: {!Lead.Name}
+Status: {!Lead.Status}
+Reason: {!Lead.Unqualified_Reason__c}
+
+Lead Source: {!Lead.LeadSource}
+If Other, Please Explain: {!Lead.If_Other_please_explain__c}

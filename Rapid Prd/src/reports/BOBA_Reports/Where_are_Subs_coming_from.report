@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>CUST_NAME</field>
+    </columns>
+    <columns>
+        <field>Marble__c.Where_Did_You_Find_This_Client__c</field>
+    </columns>
+    <columns>
+        <field>CUST_CREATED_NAME</field>
+    </columns>
+    <columns>
+        <field>Marble__c.Status__c</field>
+    </columns>
+    <description>Flood</description>
+    <filter>
+        <criteriaItems>
+            <column>CUST_CREATED_NAME</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>contains</operator>
+            <value>walker,jordan,dominique,colleen,berro,neme,mouss,yonikka,smeet</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Marble__c.Where_Did_You_Find_This_Client__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>BA Transfer,Credit Karma,BOBA Dialer,Custom List,Email Blast,Renewal,UW Unqual,Referral,Sr BA Qualified</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Marble__c.Status__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Submitted,Approved for Submission,Waiting on Documents,Not Eligible,Not Interested</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>Where are Subs coming from?</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntity$Marble__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <sortColumn>Marble__c.Where_Did_You_Find_This_Client__c</sortColumn>
+    <sortOrder>Asc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>CUST_CREATED_DATE</dateColumn>
+        <endDate>2017-10-31</endDate>
+        <interval>INTERVAL_CUSTOM</interval>
+        <startDate>2017-09-27</startDate>
+    </timeFrameFilter>
+</Report>

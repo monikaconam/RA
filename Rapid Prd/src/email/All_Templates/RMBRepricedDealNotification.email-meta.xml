@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Email status</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>StandardLetterheadSample</letterhead>
+    <name>RMB Repriced Deal Notification</name>
+    <style>freeForm</style>
+    <subject>{!Opportunity.Name} - Need New FRSA - Deal Was Repriced</subject>
+    <textOnly>Date Repriced - {!Opportunity.00N70000001wnTC} 
+ 
+Opportunity Name - {!Opportunity.Name}
+Renewal? - {!Opportunity.Renewal__c}
+ 
+Current FRSA:
+ 
+Advance Price - {!Opportunity.Amount}
+Percent Payback - {!Opportunity.Percent_Payback__c}
+Payback Price - {!Opportunity.Pay_Back_Amount__c}
+
+
+New FRSA Needed:
+ 
+New Advance Price - {!Opportunity.00N70000001wnUo}
+New Percent Payback - {!Opportunity.00N70000001wnVD}
+New Payback Price - {!Opportunity.00N70000001wnVt}</textOnly>
+    <type>html</type>
+</EmailTemplate>

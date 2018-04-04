@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>This email is being used to get current information from a lead. Sheila</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Verify Lead Information Email</name>
+    <style>none</style>
+    <subject>{!Lead.FirstName}, we&apos;re updating our &quot;Stay in touch&quot; list.</subject>
+    <type>text</type>
+</EmailTemplate>

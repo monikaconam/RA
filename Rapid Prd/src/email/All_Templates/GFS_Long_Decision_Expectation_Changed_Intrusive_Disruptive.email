@@ -1,0 +1,19 @@
+Hi, 
+
+Q4. It took too long to get the decision from underwriting. 
+
+Answer: {!If(GetFeedback_Survey__c.OS_took_long_for_decision__c == True,"True","") } 
+
+Q4. I was given the expectation I would be approved, but the situation seemed to change in underwriting. 
+
+Answer: {!if(GetFeedback_Survey__c.OS_Approval_Expectation_changed_in_UW__c == True, "True","")} 
+
+Q4. The underwriting process was overly intrusive and disruptive. 
+
+Answer: {!if(GetFeedback_Survey__c.OS_UW_Process_Intrusive_Disruptive__c == true,"True","")} 
+
+For reference click the following link. 
+
+{!GetFeedback_Survey__c.Link} 
+
+Thanks

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Opportunity.OppId18Char__c</field>
+    </columns>
+    <columns>
+        <field>Opportunity.Last_Five9_List__c</field>
+    </columns>
+    <filter>
+        <booleanFilter>(((1 AND (2 OR 3) AND (4 OR 5) AND (6 OR 7)) AND 8) AND 9) AND 10</booleanFilter>
+        <criteriaItems>
+            <column>Opportunity.Owner_Role__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Business Advisor</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Opportunity.Last_Five9_List__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value></value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Opportunity.Last_Five9_List__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>notContain</operator>
+            <value>a0c3900000BLXnC,a0c3900000BLXpD,a0c3900000BLbqT</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Lead.Last_User_Activity__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value></value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Opportunity.Last_Call_Activity__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>lessThan</operator>
+            <value>6/1/2017 12:00 AM</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Lead.Last_User_Activity__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value></value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Lead.Last_User_Activity__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>lessThan</operator>
+            <value>6/1/2017 12:00 AM</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Opportunity.Submit_to_UW_Processing__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value></value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Opportunity.Renewal__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>0</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Opportunity.Campaign_name__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>notContain</operator>
+            <value>United Capital</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>Opp Pipe</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>OpportunityLead</reportType>
+    <scope>org</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>CONVERTED_DATE</dateColumn>
+        <interval>INTERVAL_PREVCURFY</interval>
+    </timeFrameFilter>
+</Report>

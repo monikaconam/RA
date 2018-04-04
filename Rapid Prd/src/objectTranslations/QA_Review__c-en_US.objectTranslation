@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>QA Review</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>QA Reviews</value>
+    </caseValues>
+    <fields>
+        <label><!-- Account --></label>
+        <name>Account__c</name>
+        <relationshipLabel><!-- QA Reviews --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Audio/PDF Link --></label>
+        <name>Audio_PDF_Link__c</name>
+    </fields>
+    <fields>
+        <label><!-- BA/AE Name --></label>
+        <name>BA_AE_Name__c</name>
+        <relationshipLabel><!-- QA Reviews --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- BIC Included? --></label>
+        <name>BIC_Included__c</name>
+    </fields>
+    <fields>
+        <label><!-- BIC --></label>
+        <name>BIC__c</name>
+    </fields>
+    <fields>
+        <label><!-- Call-Recording Disclosure? --></label>
+        <name>Call_Recording_Disclosure__c</name>
+    </fields>
+    <fields>
+        <label><!-- Competition - Congratulate --></label>
+        <name>Competition_Congratulate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Competition - Next Steps --></label>
+        <name>Competition_Next_Steps__c</name>
+    </fields>
+    <fields>
+        <label><!-- Competition - Referral --></label>
+        <name>Competition_Referral__c</name>
+    </fields>
+    <fields>
+        <label><!-- Competition - Renewals --></label>
+        <name>Competition_Renewals__c</name>
+    </fields>
+    <fields>
+        <label><!-- Competition Score --></label>
+        <name>Competition_Score__c</name>
+    </fields>
+    <fields>
+        <label><!-- Competition - Survey --></label>
+        <name>Competition_Survey__c</name>
+    </fields>
+    <fields>
+        <label><!-- Compliance Flag --></label>
+        <name>Compliance_Flag__c</name>
+    </fields>
+    <fields>
+        <label><!-- Compliance Score --></label>
+        <name>Compliance_Score__c</name>
+    </fields>
+    <fields>
+        <label><!-- Compliance --></label>
+        <name>Compliance__c</name>
+    </fields>
+    <fields>
+        <label><!-- Congratulate Client --></label>
+        <name>Congratulate_Client_Score__c</name>
+    </fields>
+    <fields>
+        <label><!-- Congratulate Client? --></label>
+        <name>Congratulate_Client__c</name>
+    </fields>
+    <fields>
+        <label><!-- Credit Authorization? --></label>
+        <name>Credit_Authorization__c</name>
+    </fields>
+    <fields>
+        <label><!-- Form Name --></label>
+        <name>Form_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Next Steps --></label>
+        <name>Next_Steps_Score__c</name>
+    </fields>
+    <fields>
+        <label><!-- Next Steps? --></label>
+        <name>Next_Steps__c</name>
+    </fields>
+    <fields>
+        <label><!-- Opportunity --></label>
+        <name>Opportunity__c</name>
+        <relationshipLabel><!-- QA Reviews --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Reason for not moving forward? --></label>
+        <name>Reason_for_not_moving_forward__c</name>
+        <picklistValues>
+            <masterLabel>BA didn&apos;t F/U at all/reason unknown</masterLabel>
+            <translation><!-- BA didn&apos;t F/U at all/reason unknown --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BA didn’t follow up (over 24 hours)</masterLabel>
+            <translation><!-- BA didn’t follow up (over 24 hours) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BA lost contact with client</masterLabel>
+            <translation><!-- BA lost contact with client --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BA was not listening/cooperative</masterLabel>
+            <translation><!-- BA was not listening/cooperative --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Commercial lender (other than bank)</masterLabel>
+            <translation><!-- Commercial lender (other than bank) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Could not get co-owner on-board</masterLabel>
+            <translation><!-- Could not get co-owner on-board --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Daily payments</masterLabel>
+            <translation><!-- Daily payments --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Did not qualify for amount requested</masterLabel>
+            <translation><!-- Did not qualify for amount requested --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Disagreed with process</masterLabel>
+            <translation><!-- Disagreed with process --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Going with bank</masterLabel>
+            <translation><!-- Going with bank --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Never spoke with actual owner</masterLabel>
+            <translation><!-- Never spoke with actual owner --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Not ready/shopping around</masterLabel>
+            <translation><!-- Not ready/shopping around --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Process too lengthy/time consuming</masterLabel>
+            <translation><!-- Process too lengthy/time consuming --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Rate too high/too expensive</masterLabel>
+            <translation><!-- Rate too high/too expensive --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Receiving investor funds</masterLabel>
+            <translation><!-- Receiving investor funds --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Receiving loan from friend/family</masterLabel>
+            <translation><!-- Receiving loan from friend/family --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Refused to provide bank statements</masterLabel>
+            <translation><!-- Refused to provide bank statements --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Refused to provide info for credit pull</masterLabel>
+            <translation><!-- Refused to provide info for credit pull --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Refused to provide processing statements</masterLabel>
+            <translation><!-- Refused to provide processing statements --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Refused to provide supporting docs</masterLabel>
+            <translation><!-- Refused to provide supporting docs --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Refused to respond to questions</masterLabel>
+            <translation><!-- Refused to respond to questions --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>State limitations conflicted with need</masterLabel>
+            <translation><!-- State limitations conflicted with need --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Term too short</masterLabel>
+            <translation><!-- Term too short --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Unknown/could not determine</masterLabel>
+            <translation><!-- Unknown/could not determine --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Referrals --></label>
+        <name>Referrals_Score__c</name>
+    </fields>
+    <fields>
+        <label><!-- Referrals? --></label>
+        <name>Referrals__c</name>
+    </fields>
+    <fields>
+        <label><!-- Renewals --></label>
+        <name>Renewals_Score__c</name>
+    </fields>
+    <fields>
+        <label><!-- Renewals? --></label>
+        <name>Renewals__c</name>
+    </fields>
+    <fields>
+        <label><!-- Response Tracker --></label>
+        <name>Response_Tracker__c</name>
+    </fields>
+    <fields>
+        <label><!-- Review Link --></label>
+        <name>Review_Link__c</name>
+    </fields>
+    <fields>
+        <label><!-- Sales Score --></label>
+        <name>Sales_Score__c</name>
+    </fields>
+    <fields>
+        <label><!-- Stack Rank --></label>
+        <name>Sales_Underwriting__c</name>
+    </fields>
+    <fields>
+        <label><!-- Score --></label>
+        <name>Score__c</name>
+    </fields>
+    <fields>
+        <label><!-- Submit Date --></label>
+        <name>Submit_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Surveys/Testimonials --></label>
+        <name>Surveys_Testimonials_Score__c</name>
+    </fields>
+    <fields>
+        <label><!-- Surveys/Testimonials? --></label>
+        <name>Surveys_Testimonials__c</name>
+    </fields>
+    <fields>
+        <label><!-- TCPA Disclosure? --></label>
+        <name>TCPA_Disclosure__c</name>
+    </fields>
+    <fields>
+        <label><!-- Underwriting Score --></label>
+        <name>Underwriting_Score__c</name>
+    </fields>
+    <recordTypes>
+        <label><!-- Funding Call --></label>
+        <name>Funding_Call</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Not Interested --></label>
+        <name>Not_Interested</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Sales/Underwriting Review --></label>
+        <name>Sales_Underwriting_Review</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

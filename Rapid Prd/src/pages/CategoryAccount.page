@@ -1,0 +1,35 @@
+<apex:page standardController="Account" extensions="CategoryAccountContoller" ShowChat="FALSE" ShowHeader="FALSE" tabStyle="Account">
+    <apex:includeScript value="/support/console/40.0/integration.js"/>
+    
+    <script>
+        var consoleVar = sforce.console.isInConsole();
+        function openWin(url) 
+        {
+            window.location.href='/apex/PartnerCategoryAccount?id={!$CurrentPage.parameters.id}&isConsole='+consoleVar; 
+        }
+        
+    </script>
+    <apex:form id="next" style="background-color: #F3F3EC;">
+        <div class="bPageBlock brandSecondaryBrd bDetailBlock secondaryPalette" style="background-color: #FFFFFF; border-top: 0px;padding-bottom: 150px;margin-bottom:0px;">
+            <div class="pbBody">
+                <div class="pbSubsection">
+                    <table class="detailList" border="0" cellpadding="0" cellspacing="0" align="center">
+                        <tbody>
+                            <tr>
+                                <td class="labelCol" style="padding-left:0px;text-align: right !important; width:4% !important;border-bottom: 0px">Partner Category</td>
+                                <td class="dataCol"  style="text-align: Left !important;width:10%;border-bottom: 0px;bgcolor=#FF0000">
+                                    <a><apex:outputLabel id="ShowText" ondblclick="openWin('/apex/PartnerCategoryAccount?id={!Account.id}&isConsole='+consoleVar);" value="{!outputMessage}" rendered="{!show}" style="border-bottom: 0px" /></a>
+                                    <apex:outputPanel rendered="{!showLink}">
+                                        <a><div id="div_man" onclick="location.href='/apex/PartnerCategoryAccount?id={!Account.id}&isConsole='+consoleVar">{!outputMessage} </div></a>
+                                    </apex:outputPanel>
+                                </td>
+
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </apex:form>
+
+</apex:page>

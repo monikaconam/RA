@@ -1,0 +1,14 @@
+<table width="550" cellpadding="5" height="400" border="0" cellspacing="5" >
+<tr height="400" valign="top" >
+<td locked="0" style=" font-family:arial; bLabel:main; color:#000000; font-size:12pt; bEditID:r3st1; background-color:#FFFFFF;" aEditID="c1r1" tEditID="c1r1" >
+<![CDATA[&nbsp;
+<P>&nbsp;</P>
+<P>{!Today}</P>
+<P>Dear {!Contact.FirstName},</P>
+<P>Thank you for the meeting today.&nbsp; I thought it went great and I am sure that {!Organization.Name} can offer the right solution for the needs of {!Account.Name}.</P>
+<P>Please let me know at your earliest convenience when we might be able to speak again.</P>
+<P>Regards,</P>
+<P>{!User.FirstName}</P>
+<P>&nbsp;</P>]]></td>
+</tr>
+</table>

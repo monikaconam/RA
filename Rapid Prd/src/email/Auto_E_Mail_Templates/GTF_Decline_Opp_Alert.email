@@ -1,0 +1,13 @@
+https://na5.salesforce.com/{!Opportunity.Id}
+
+Decision Date: {!Opportunity.Decision_Date__c}
+
+Opp Name: {!Opportunity.Name}
+Amount: {!Opportunity.Amount}
+Stage: {!Opportunity.StageName}
+Decline Reason: {!Opportunity.Decline_Reason__c}
+Unqualified Reason: {!Opportunity.Unqualified_Reason__c}
+
+Opp Owner: {!Opportunity.OwnerFullName}
+Campaign: {!Opportunity.Campaign}
+Lead Source: {!Opportunity.LeadSource}

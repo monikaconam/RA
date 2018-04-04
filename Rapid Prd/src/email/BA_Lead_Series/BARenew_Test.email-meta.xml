@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Renewal Email 1</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>BA_Renewal_1</name>
+    <style>none</style>
+    <subject>TEST1</subject>
+    <textOnly>?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+
+Rapid Advance
+
+Hi {!Contact.FirstName},
+
+I noticed you have paid off your entire loan balance. Congratulations!
+Do you know about our renewal benefits program?  The majority of our clients that have reached this point in their payback are taking advantage of this new opportunity.
+
+In short, we are usually able to renew your loan with a better rate than your first loan and in a lot of cases, we are able to fund you more capital without having your payment increase at all. How do you think this might help your business?
+
+Do you have 10 minutes to catch up tomorrow?
+Thank you! Hope to talk soon!
+
+{!User.FirstName} {!User.LastName} |{!User.Title}
+RapidAdvance®
+
+1001 Woodward Ave, Suite 1700 | Detroit, MI | 48226
+Email:{!User.Email} | Website: www.RapidAdvance.com
+
+Unsubscribe</textOnly>
+    <type>custom</type>
+</EmailTemplate>

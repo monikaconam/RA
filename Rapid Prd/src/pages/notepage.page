@@ -1,0 +1,50 @@
+<apex:page controller="OppNoteController" showHeader="false" sidebar="false" tabStyle="Opportunity">
+    <c:Opportunity_Related_CSS />
+     <apex:pageMessages id="pageMessageMain"/>
+        <apex:form id="noteForm" styleClass="noteForm">
+            <apex:sectionHeader title="Note Edit" subtitle="{!IF(oppRecord.Name != null, oppRecord.Name, 'New Note')}" />
+            <div align="center">                
+                <apex:commandButton value="Save" action="{!save}" reRender="pageMessageMain" status="ajaxStatus" />&nbsp;&nbsp;     
+                <apex:commandButton value="Cancel" action="{!cancel}" status="ajaxStatus"/>        
+            </div>
+             <table id="noteTable">
+                <tr>
+                    <td colspan="2">
+                        <c:Extjs_Panel title="Note Information"/>
+                    </td>
+                </tr>                
+                <tr>
+                    <td>
+                        <label>{!$ObjectType.Note.fields.IsPrivate.label}</label>
+                    </td>
+                    <td>
+                        <apex:inputField value="{!oppNote.IsPrivate}"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                    	<label>{!$ObjectType.Note.fields.Title.label}</label>
+                    </td>
+                    <td>
+                        <apex:outputPanel styleClass="requiredInput" layout="block">
+                            <div class="requiredBlock"></div>
+                            <apex:inputText value="{!oppNote.Title}" size="60" maxlength="80" />
+                        </apex:outputPanel>
+                    </td>
+                </tr>
+                 <tr>
+                    <td>
+                    	<label>{!$ObjectType.Note.fields.Body.label}</label>
+                    </td>
+                    <td>
+                    	<apex:inputTextarea value="{!oppNote.Body}" cols="70" rows="18"/>
+                    </td>
+                </tr>
+             </table><br/>
+            <div align="center">                
+                <apex:commandButton value="Save" action="{!save}" reRender="pageMessageMain" status="ajaxStatus" />&nbsp;&nbsp;     
+                <apex:commandButton value="Cancel" action="{!cancel}" status="ajaxStatus"/>        
+            </div> 
+    </apex:form>
+    <apex:actionstatus startStyleClass="requiredLoaderBG" id="ajaxStatus" />
+</apex:page>

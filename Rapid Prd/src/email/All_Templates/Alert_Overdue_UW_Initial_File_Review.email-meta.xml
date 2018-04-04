@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>EmailLetterhead</letterhead>
+    <name>!!Alert!! Overdue UW Initial File Review</name>
+    <style>freeForm</style>
+    <subject>ALERT  {!Opportunity.Name} - Overdue Initial File Review</subject>
+    <textOnly>****ALERT - Overdue Initial File Review *****
+
+
+Opportunity Info:
+
+Opportunity - {!Opportunity.Name}
+Opportunity Owner - {!Opportunity.OwnerFullName}
+Campaign - {!Opportunity.Campaign}
+
+Underwriter - {!Opportunity.Underwriter_Assigned__c}
+Amount - {!Opportunity.Amount}
+Renewal? - {!Opportunity.Renewal__c}
+
+Submitted to UW &amp; Processing - {!Opportunity.Submit_to_UW_Processing__c}
+UW Assigned Date - {!Opportunity.UW_Assigned_Date_Stamp__c}</textOnly>
+    <type>html</type>
+</EmailTemplate>

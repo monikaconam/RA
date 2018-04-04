@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>NPS 90 Day Survey Post Funding First</name>
+    <style>none</style>
+    <subject>RapidAdvance - Post Funding Survey</subject>
+    <textOnly>Templ
+
+Thanks for taking the time to apply for financing from RapidAdvance.
+Now that you&apos;re three months into your financing with us, we&apos;d like to know how everything&apos;s going. Please let us know by filling out this quick survey:
+How likely is it that you would recommend RapidAdvance to a friend or colleague?
+
+Not at All
+
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+
+Extremely Likely
+
+We&apos;ll keep your answers confidential and won&apos;t share them with another company without your permission.
+
+Sincerely,
+
+The RapidAdvance Team
+
+© 2016 RapidAdvance. All rights reserved.
+4500 East West Highway, 6th Floor. Bethesda, MD 20814
+unsubscribe| update subscription preferences</textOnly>
+    <type>custom</type>
+</EmailTemplate>

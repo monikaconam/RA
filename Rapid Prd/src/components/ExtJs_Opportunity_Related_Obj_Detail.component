@@ -1,0 +1,455 @@
+<apex:component controller="MainClass3" allowDML="true">
+   
+    <style type="text/css"> 
+        .buttonT{
+            float: right;
+            background: rgb(187, 186, 186) !important;
+            border: solid 1px rgb(160, 159, 159) !important;
+            width: 94% !important;
+            margin-top: 12px;
+        }
+        .readonly{
+            float: right;
+            width: 94% !important;
+            margin-top: 0px;
+        }
+        .btn1{
+            float: right !important;
+            margin-top: -48px !important;
+            margin-right: 32% !important;
+        }
+        .modified{
+            float: right !important;
+            margin-top: 16px;
+        }
+        .picture{
+            float: left !important;
+            margin-top: -2% !important;
+        }        
+    </style>
+    
+ 
+    <script>
+    
+        Ext.require([
+            '*'
+        ]);
+        
+        Ext.onReady(function() {
+           
+            Ext.QuickTips.init();
+            //var bd = Ext.getBody();
+            var required = '<span style="color:red;font-weight:bold" data-qtip="Required">*</span>';
+            var tab2 = Ext.widget({
+                //title: '{!objOppDetail.superTabName}',
+                xtype: 'panel',/* resizable: true, */
+                name:'noteForm',
+                id: '{!objOppDetail.superTabName}',
+                //collapsible: true,
+                bodyPadding: 0,
+                width: '100%',
+                height:'100%',
+                fieldDefaults: {
+                    labelWidth: 75,
+                    msgTarget: 'side'
+                },
+                defaults: {
+                    anchor: '100%'
+                },
+        
+                items: [{
+                    xtype:'tabpanel',
+                    activeTab: 0,
+                    height:700,
+                    
+                    defaults:{
+                        bodyPadding: 10,
+                        layout: 'anchor',
+                        overflowY : 'auto' 
+                    },
+                    items:[{
+                        title:'Opportunity',
+                        xtype: 'box',
+                        autoEl: {
+                            tag: 'iframe',
+                            style: 'height: 100%; width: 100%',
+                            src: '/apex/oppCustom?Id={!$CurrentPage.parameters.Id}&retURL=/apex/oppCustom?Id={!$CurrentPage.parameters.Id}&retURL=/apex/oppCustom?Id={!$CurrentPage.parameters.Id}' 
+                        }
+                    },{
+                        title:'Main Business',
+                        xtype: 'box',
+                        autoEl: {
+                            tag: 'iframe',
+                            style: 'height: 100%; width: 100%',
+                            src: '/apex/MainBusinessPage?Id={!$CurrentPage.parameters.Id}'
+                        }                  
+                    },{
+                        title:'Deal Terms',
+                        xtype: 'box',
+                        autoEl: {
+                            tag: 'iframe',
+                            style: 'height: 100%; width: 100%',
+                            src: '/apex/DealTermsPage?Id={!$CurrentPage.parameters.Id}&oppId={!$CurrentPage.parameters.Id}'
+                        }                  
+                    },{
+                        title:'Applicant & Credit',
+                        xtype: 'box',
+                        autoEl: {
+                            tag: 'iframe',
+                            style: 'height: 100%; width: 100%',
+                            src: '/apex/ApplicantCreditPage?Id={!$CurrentPage.parameters.Id}&oppId={!$CurrentPage.parameters.Id}'
+                        }                  
+                    }/*,{
+                        title:'Competitive Payoff',
+                        xtype: 'box',
+                        autoEl: {
+                            tag: 'iframe',
+                            style: 'height: 100%; width: 100%',
+                            src: '/apex/CompetitivePayoffPage?Id={!$CurrentPage.parameters.Id}'
+                        }                  
+                    },{
+                        title:'Bank Statements',
+                        xtype: 'box',
+                        autoEl: {
+                            tag: 'iframe',
+                            style: 'height: 100%; width: 100%',
+                            src: '/apex/BankStatementList?Id={!$CurrentPage.parameters.Id}'
+                        }                  
+                    }*/,{
+                        title:'Statements',
+                        xtype: 'box',
+                        autoEl: {
+                            tag: 'iframe',
+                            style: 'height: 100%; width: 100%',
+                            src: '/apex/CCProcessingStatList?Id={!$CurrentPage.parameters.Id}'
+                        }                  
+                    },{
+                        title:'Business Review',
+                        xtype: 'box',
+                        autoEl: {
+                            tag: 'iframe',
+                            style: 'height: 100%; width: 100%',
+                            src: '/apex/BusinessReviewPage?Id={!$CurrentPage.parameters.Id}&oppId={!$CurrentPage.parameters.Id}'
+                        }                  
+                    }/*,{
+                        title:'Pre-Qual',
+                        xtype: 'box',
+                        autoEl: {
+                            tag: 'iframe',
+                            style: 'height: 100%; width: 100%',
+                            src: '/apex/PreQualPage?Id={!$CurrentPage.parameters.Id}'
+                        }                  
+                    }*/,{
+                        title:'Interviews',
+                        xtype: 'box',
+                        autoEl: {
+                            tag: 'iframe',
+                            style: 'height: 100%; width: 100%',
+                            src: '/apex/LandlordInterviewPage?Id={!$CurrentPage.parameters.Id}&oppId={!$CurrentPage.parameters.Id}'
+                        }                   
+                    }/*,{
+                   
+                        title:'Merchant',
+                        xtype: 'box',
+                        autoEl: {
+                            tag: 'iframe',
+                            style: 'height: 100%; width: 100%',
+                            src: '/apex/merchantCustom?Id={!$CurrentPage.parameters.Id}&oppId={!$CurrentPage.parameters.Id}'
+                        }                       
+                  
+                    },{
+                        title:'Rapid UCC Filings',
+                        xtype: 'box',
+                        autoEl: {
+                            tag: 'iframe',
+                            style: 'height: 100%; width: 100%',
+                            src: '/apex/RapidUCCFilingsPage?Id={!$CurrentPage.parameters.Id}'
+                        }                  
+                    },{
+                        title:'Underwriting',
+                        xtype: 'box',
+                        autoEl: {
+                            tag: 'iframe',
+                            style: 'height: 100%; width: 100%',
+                            src: '/apex/UnderWritingtab?Id={!$CurrentPage.parameters.Id}&oppId={!$CurrentPage.parameters.Id}'
+                        }                   
+                    },{
+                        title:'Business Alerts',
+                        xtype: 'box',
+                        autoEl: {
+                            tag: 'iframe',
+                            style: 'height: 100%; width: 100%',
+                            src: '/apex/BusinessAlerttab?Id={!$CurrentPage.parameters.Id}&oppId={!$CurrentPage.parameters.Id}'
+                        }                   
+                    },{
+                        title:'Credit Committee',
+                        xtype: 'box',
+                        autoEl: {
+                            tag: 'iframe',
+                            style: 'height: 100%; width: 100%',
+                            src: '/apex/CreditCommitteePage?Id={!$CurrentPage.parameters.Id}'
+                        }                  
+                    },{
+                        title:'Repriced Deals',
+                        xtype: 'box',
+                        autoEl: {
+                            tag: 'iframe',
+                            style: 'height: 100%; width: 100%',
+                            src: '/apex/RepricedDealsPage?Id={!$CurrentPage.parameters.Id}'
+                        }                  
+                    },{
+                        title:'Previous Balances',
+                        xtype: 'box',
+                        autoEl: {
+                            tag: 'iframe',
+                            style: 'height: 100%; width: 100%',
+                            src: '/apex/PreviousBalancesPage?Id={!$CurrentPage.parameters.Id}'
+                        }                  
+                    }*/,{
+                        title:'Processor Information',
+                        xtype: 'box',
+                        autoEl: {
+                            tag: 'iframe',
+                            style: 'height: 100%; width: 100%',
+                            src: '/apex/ProcessorInformationPage?Id={!$CurrentPage.parameters.Id}'
+                        }                  
+                    },{
+                        title:'Site Surveys',
+                        xtype: 'box',
+                        autoEl: {
+                            tag: 'iframe',
+                            style: 'height: 100%; width: 100%',
+                            src: '/apex/siteSurveysRelatedList?Id={!$CurrentPage.parameters.Id}&oppId={!$CurrentPage.parameters.Id}'
+                        }                  
+                    },{
+                        title:'RADocs',
+                        xtype: 'box',
+                        autoEl: {
+                            tag: 'iframe',
+                            style: 'height: 100%; width: 100%',
+                            src: '/apex/RADocsRelatedList?Id={!$CurrentPage.parameters.Id}&oppId={!$CurrentPage.parameters.Id}'
+                        }                  
+                    }/*,
+                    {
+                        title: 'Funding',
+                        xtype: 'box',
+                        autoEl: {
+                            tag: 'iframe',
+                            style: 'height: 100%; width: 100%',
+                            src: '/apex/FundingPage?Id={!$CurrentPage.parameters.Id}&oppId={!$CurrentPage.parameters.Id}'
+                        }                       
+                    }*/,{
+                        title: 'Contract Validation',
+                        xtype: 'box',
+                        autoEl: {
+                            tag: 'iframe',
+                            style: 'height: 100%; width: 100%',
+                            src: '/apex/Contract_Validation?Id={!$CurrentPage.parameters.Id}&oppId={!$CurrentPage.parameters.Id}'
+                        }                       
+                    }/*,{
+                        title: 'Site Inspection',
+                        xtype: 'box',
+                        autoEl: {
+                            tag: 'iframe',
+                            style: 'height: 100%; width: 100%',
+                            src: '/apex/SiteInspectionPage?Id={!$CurrentPage.parameters.Id}&oppId={!$CurrentPage.parameters.Id}'
+                        }                       
+                    },{
+                        title: 'QC',
+                        xtype: 'box',
+                        autoEl: {
+                            tag: 'iframe',
+                            style: 'height: 100%; width: 100%',
+                            src: '/apex/QCPage?Id={!$CurrentPage.parameters.Id}&oppId={!$CurrentPage.parameters.Id}'
+                        }                       
+                    }
+                    ,{
+                        title:'Underwriting',
+                        xtype: 'box',
+                        autoEl: {
+                            tag: 'iframe',
+                            style: 'height: 100%; width: 100%',
+                            src: '/apex/underWritingCustom?oppId={!$CurrentPage.parameters.Id}'
+                        }                       
+                    },{
+                        title:'Advance Terms',
+                        xtype: 'box',
+                        autoEl: {
+                            tag: 'iframe',
+                            style: 'height: 100%; width: 100%',
+                            src: '/apex/AdvanceTermsPage?Id={!$CurrentPage.parameters.Id}'
+                        }                  
+                    },{
+                        title:'Eligibility Criteria',
+                        xtype: 'box',
+                        autoEl: {
+                            tag: 'iframe',
+                            style: 'height: 100%; width: 100%',
+                            src: '/apex/opportunityBankList?Id={!$CurrentPage.parameters.Id}&oppId={!$CurrentPage.parameters.Id}'
+                        }                   
+                    },{
+                        title:'Eligibility Criteria',
+                        xtype: 'box',
+                        autoEl: {
+                            tag: 'iframe',
+                            style: 'height: 100%; width: 100%',
+                            src: '/apex/Eligibility_Criteria?Id={!$CurrentPage.parameters.Id}&oppId={!$CurrentPage.parameters.Id}'
+                        }                   
+                    },{
+                        title:'Marketing Section',
+                        xtype: 'box',
+                        autoEl: {
+                            tag: 'iframe',
+                            style: 'height: 100%; width: 100%',
+                            src: '/apex/MarketingSectionPage?Id={!$CurrentPage.parameters.Id}&oppId={!$CurrentPage.parameters.Id}'
+                        }                   
+                    },{
+                        title:'Processor',
+                        xtype: 'box',
+                        autoEl: {
+                            tag: 'iframe',
+                            style: 'height: 100%; width: 100%',
+                            src: '/apex/ProcessorCorspPage?Id={!$CurrentPage.parameters.Id}&oppId={!$CurrentPage.parameters.Id}'
+                        }                   
+                    },{
+                        title:'CBR Testing',
+                        xtype: 'box',
+                        autoEl: {
+                            tag: 'iframe',
+                            style: 'height: 100%; width: 100%',
+                            src: '/apex/CBRPage?Id={!$CurrentPage.parameters.Id}&oppId={!$CurrentPage.parameters.Id}'
+                        }                   
+                    },{
+                        title: 'Sales Check List',
+                        xtype: 'box',
+                        autoEl: {
+                            tag: 'iframe',
+                            style: 'height: 100%; width: 100%',
+                            src: '/apex/SalesCheckRelatedList?Id={!$CurrentPage.parameters.Id}&oppId={!$CurrentPage.parameters.Id}'
+                        }                       
+                    }*/,{
+                        title:'Contact Roles',
+                        xtype: 'box',
+                        autoEl: {
+                            tag: 'iframe',
+                            style: 'height: 100%; width: 100%',
+                            src: '/apex/contactRolesRelatedList?Id={!$CurrentPage.parameters.Id}'
+                        }                  
+                    },{
+                        title:'Customer Surveys',
+                        xtype: 'box',
+                        autoEl: {
+                            tag: 'iframe',
+                            style: 'height: 100%; width: 100%',
+                            src: '/apex/customerSurveyRelatedList?Id={!$CurrentPage.parameters.Id}&oppId={!$CurrentPage.parameters.Id}'
+                        }                  
+                    },{
+                        title:'Activity History',
+                        xtype: 'box',
+                        autoEl: {
+                            tag: 'iframe',
+                            style: 'height: 100%; width: 100%',
+                            src: '/apex/activityHistoryRelatedList?Id={!$CurrentPage.parameters.Id}'
+                      }                  
+                    }/*
+                    ,{
+                        title:'Opportunity Formula Field**',
+                        xtype: 'box',
+                        autoEl: {
+                            tag: 'iframe',
+                            style: 'height: 100%; width: 100%',
+                            src: '/apex/FormulaField?oppId={!$CurrentPage.parameters.Id}'
+                        }                  
+                    },{
+                        title:'Stage History',
+                        xtype: 'box',
+                        autoEl: {
+                            tag: 'iframe',
+                            style: 'height: 100%; width: 100%',
+                            src: '/apex/stageHistoryRelatedList?Id={!$CurrentPage.parameters.Id}'
+                        }                  
+                    },{
+                        title:'Site Surveys',
+                        xtype: 'box',
+                        autoEl: {
+                            tag: 'iframe',
+                            style: 'height: 100%; width: 100%',
+                            src: '/apex/siteSurveysRelatedList?Id={!$CurrentPage.parameters.Id}&oppId={!$CurrentPage.parameters.Id}'
+                        }                  
+                    }*/,{
+                        title:'Advances',
+                        xtype: 'box',
+                        autoEl: {
+                            tag: 'iframe',
+                            style: 'height: 100%; width: 100%',
+                            src: '/apex/advancesRelatedList?Id={!$CurrentPage.parameters.Id}'
+                        }                  
+                    },{
+                        title:'Approval History',
+                        xtype: 'box',
+                        autoEl: {
+                            tag: 'iframe',
+                            style: 'height: 100%; width: 100%',
+                            src: '/apex/approvalHistoryRelatedList?Id={!$CurrentPage.parameters.Id}'
+                        }                  
+                    },{
+                        title:'Notes & Attachments',
+                        xtype: 'box',
+                        autoEl: {
+                            tag: 'iframe',
+                            style: 'height: 100%; width: 100%',
+                            src: '/apex/notesAndAttachmentsRelatedList?Id={!$CurrentPage.parameters.Id}'
+                        }                  
+                    },{
+                        title:'Opportunity Documents',
+                        xtype: 'box',
+                        autoEl: {
+                            tag: 'iframe',
+                            style: 'height: 100%; width: 100%',
+                            src: '/apex/opprtunityDocumentsRelatedList?Id={!$CurrentPage.parameters.Id}&oppId={!$CurrentPage.parameters.Id}'
+                        }                  
+                    }
+                    /*,{
+                        title:'survey Picture',
+                        xtype: 'box',
+                        autoEl: {
+                            tag: 'iframe',
+                            style: 'height: 100%; width: 100%',
+                            src: '/apex/surveyPictures?Id={!$CurrentPage.parameters.Id}&oppId={!$CurrentPage.parameters.Id}'
+                        }                  
+                    }
+                    {
+                        title:'Additional Locations',
+                        xtype: 'box',
+                        autoEl: {
+                            tag: 'iframe',
+                            style: 'height: 100%; width: 100%',
+                            src: '/apex/additionalLocationsPage?oppId={!$CurrentPage.parameters.Id}'
+                        }                  
+                    }
+                    ,{
+                        title:'Opportunity Related List',
+                        xtype: 'box',
+                        autoEl: {
+                            tag: 'iframe',
+                            style: 'height: 100%; width: 100%',
+                            src: '/apex/OppRelatedList?Id={!$CurrentPage.parameters.Id}'
+                        }                
+                    },{
+                        title:'Underwriting Related List',
+                        xtype: 'box',
+                        autoEl: {
+                            tag: 'iframe',
+                            style: 'height: 100%; width: 100%',
+                            src: '/apex/UnderWritingRelatedList?Id={!$CurrentPage.parameters.Id}'
+                        }                
+                    }*/]
+                }]
+            });
+              tab2.render('{!$Component.tabGrid2}');
+        });
+         
+         
+   </script>
+   <apex:outputPanel id="tabGrid2" layout="block" style="align:center;"/>
+</apex:component>

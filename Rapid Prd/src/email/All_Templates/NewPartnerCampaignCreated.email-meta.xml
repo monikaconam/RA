@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>StandardLetterheadSample</letterhead>
+    <name>New Partner Campaign Created</name>
+    <style>freeForm</style>
+    <subject>{!Campaign.Name} - New Campaign Created for Partner</subject>
+    <textOnly>{!Campaign.CreatedDate}
+ 
+Campaign Name: {!Campaign.Name}
+Contact: {!Campaign.Campaign_Contact__c}
+Phone: {!Campaign.Campaign_Contact_Number__c}
+Email: {!Campaign.Campaign_Contact_Email__c}
+ 
+Sales Assistant Assigned: {!Campaign.Partner_Sales_Assistant__c}
+ 
+Partner Type: {!Campaign.Partner_Type__c}
+Campaign Source: {!Campaign.Campaign_Source__c}
+Split Fund Set Up: {!Campaign.Split_Fund_Set_Up__c}
+ 
+Special Notes: {!Campaign.Description}
+
+Campaign Owner: {!Campaign.OwnerId}
+ 
+Sierra Daumit
+Business Development Admin
+7316 Wisconsin Avenue, Suite 350
+Bethesda, MD 20814
+Ph: (240) 514-1973
+Fax: (240) 283-1074
+sdaumit@rapidadvance.com 
+www.rapidadvance.com</textOnly>
+    <type>html</type>
+</EmailTemplate>

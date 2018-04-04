@@ -1,0 +1,303 @@
+<apex:page controller="BusinessReview_Ctrl" showHeader="false" sidebar="false" >
+    <c:Opportunity_Related_CSS imgName="BusinessReview.png"/>
+    <apex:pageMessages id="pageMessageMain"/>
+    <apex:form id="MBForm" styleClass="MBForm"><br/>
+     <apex:outputPanel id="panelid1">
+    <div class="bgImg"></div>
+    <div align="center">              
+        <apex:commandButton value="Save" action="{!doSave}" reRender="pageMessageMain,panelid,panelid1" status="ajaxStatus" oncomplete="setfocus('{!$Component.pageMessageMain}');"/>&nbsp;&nbsp;         
+    </div>
+    <apex:outputPanel id="panelid">
+    <table id="MBTable">
+        <tr>
+           <td colspan="4">
+                <c:Extjs_Panel title="Business Review Information" RefreshButton="Refresh"/>
+           </td>
+        </tr>
+        <tr>
+            <td>
+                <apex:outputLabel value="{!$ObjectType.Opportunity.fields.Type_of_Entity__c.label}"/> 
+            </td>
+            <td>
+                <apex:inputField value="{!oppRecord.Type_of_Entity__c}" />
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>
+                <apex:outputLabel value="{!$ObjectType.Opportunity.fields.Business_Status__c.label}"/>                 
+            </td>
+            <td>  
+                <apex:inputField value="{!oppRecord.Business_Status__c}" /> 
+            </td>
+            <td>
+                                
+            </td>
+            <td>
+               
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <apex:outputLabel value="{!$ObjectType.Opportunity.fields.Merchant_website__c.label}"/>                 
+            </td>
+            <td>  
+                <apex:inputField value="{!oppRecord.Merchant_website__c}" />
+            </td>
+            <td/>
+            <td/>
+        </tr>
+        <tr>
+            <td>
+                <apex:outputLabel value="{!$ObjectType.Opportunity.fields.Business_Open_Tax_Liens__c.label}"/>                 
+            </td>
+            <td>  
+                <apex:inputField value="{!oppRecord.Business_Open_Tax_Liens__c}" /> 
+            </td>
+            <td/>
+            <td/>
+        </tr>
+        <tr>
+            <td>
+                <apex:outputLabel value="{!$ObjectType.Opportunity.fields.Other_UCC_Filings__c.label}"/>                 
+            </td>
+            <td>  
+               <apex:inputField value="{!oppRecord.Other_UCC_Filings__c}" /> 
+            </td> 
+            <td>
+                                
+            </td>
+            <td>  
+               
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <apex:outputLabel value="{!$ObjectType.Opportunity.fields.Does_Merchant_Own_The_Business_Location__c.label}"/>                 
+            </td>
+            <td>  
+               <apex:inputField value="{!oppRecord.Does_Merchant_Own_The_Business_Location__c}" /> 
+            </td>
+            <td>
+                <apex:outputLabel value="{!$ObjectType.Opportunity.fields.Business_Tax_Lien_Date_Filed__c.label}"/> 
+            </td>
+            <td>
+                <apex:inputField value="{!oppRecord.Business_Tax_Lien_Date_Filed__c}" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <apex:outputLabel value="{!$ObjectType.Opportunity.fields.Current_Processor__c.label}"/>                 
+            </td>
+            <td>  
+                <apex:inputField value="{!oppRecord.Current_Processor__c}" /> 
+            </td>
+            <td>
+                <apex:outputLabel value="{!$ObjectType.Opportunity.fields.Business_Judgements__c.label}"/> 
+            </td>
+            <td>
+                <apex:inputField value="{!oppRecord.Business_Judgements__c}" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <apex:outputLabel value="{!$ObjectType.Opportunity.fields.Processor_Name__c.label}"/>                 
+            </td>
+            <td>  
+                <apex:inputField value="{!oppRecord.Processor_Name__c}" /> 
+            </td>
+            <td>
+                <apex:outputLabel value="{!$ObjectType.Opportunity.fields.Business_Bankruptcies__c.label}"/> 
+            </td>
+            <td>
+                <apex:inputField value="{!oppRecord.Business_Bankruptcies__c}" />
+            </td>
+        </tr>
+
+        
+           <!-- <tr>
+                
+                <td>
+                   <apex:outputLabel value="{!$ObjectType.Opportunity.fields.FRSA_legal_name_same_as_in_Salesforce__c.label}"/>                 
+               </td>
+               <td>  
+                  <apex:inputField value="{!oppRecord.FRSA_legal_name_same_as_in_Salesforce__c}" /> 
+               </td>
+              <td>
+                   <apex:outputLabel value="{!$ObjectType.Opportunity.fields.Merchant_website__c.label}"/> 
+               </td>
+               <td align="left" style="padding-left:0px;">
+                   <apex:inputField value="{!oppRecord.Merchant_website__c}" />
+               </td>
+               <td>
+                   <apex:outputLabel value="{!$ObjectType.Opportunity.fields.Confirmed_Business_Information_from_QC__c.label}"/> 
+               </td>
+               <td>
+                   <apex:inputField value="{!oppRecord.Confirmed_Business_Information_from_QC__c}" />
+               </td>
+               <td>
+                   <apex:outputLabel value=""/> 
+               </td>
+           </tr>-->
+           
+           <tr>
+               <td colspan="4">
+                   
+                    <c:Extjs_Panel title="Additional Locations Information"/>
+               </td>
+           </tr>
+           <tr>
+               <td colspan="4">
+                    <c:Extjs_Bank_Statement parentField="Account__c" height="201" title="Additional Locations" object="Additional_Locations__c" fields="DBA_Name__c,Street__c,City__c,State__c,Postal_Code__c,Phone__c,Fax__c,Landlord__c,Landlord_Phone__c,Time_Remaining_on_Lease__c" rows="3" minimized="false" parentRecordId="{!oppRecord.AccountId}"/>   
+               </td>
+           </tr>
+           <!--   business Alerts -->
+           <tr>
+               <td colspan="4">
+                   
+                    <c:Extjs_Panel title="Business Alerts Information"/>
+               </td>
+           </tr>
+           <!-- <tr>
+               <td>
+                   <apex:outputLabel value="Credit Alert"/> 
+               </td>
+               <td>
+                   <apex:outputText value="{!CreditAlert}" />
+               </td>                     
+               <td>
+                   <apex:outputLabel value="SCF Alert"/>                 
+               </td>
+               <td>  
+                  <apex:outputText value="{!SCFAlert}" /> 
+               </td>
+           </tr> -->
+            <tr>
+               <td>
+                   <apex:outputLabel value="Business Category Alert"/> 
+               </td>
+               <td>
+                   <apex:outputText value="{!BusinessCategoryAlert}" />
+               </td>                    
+               <td>
+                   <apex:outputLabel value="Business Alert Count"/>                 
+               </td>
+               <td>  
+                  <apex:outputText value="{!BusinessAlertCount}" /> 
+               </td>
+           </tr>
+           
+            <tr>
+               <!--<td>
+                   <apex:outputLabel value="Criteria Decision"/> 
+               </td>
+               <td>
+                   <apex:outputText value="{!CriteriaDecision}" />
+               </td> -->                    
+               <td>
+                   <apex:outputLabel value="{!$ObjectType.Opportunity.fields.Business_Category__c.label}"/> 
+               </td>
+               <td>
+                   <apex:inputField value="{!oppRecord.Business_Category__c}" />
+               </td>
+               <td>
+                   <apex:outputLabel value="SCF Alert"/>                 
+               </td>
+               <td>  
+                  <apex:outputText value="{!SCFAlert}" /> 
+               </td>
+           </tr>
+           
+
+            <tr>
+                              
+               <td>
+                   <apex:outputLabel value="{!$ObjectType.Opportunity.fields.SIC_CODE__c.label}"/>                 
+               </td>
+               <td>  
+                  <apex:inputField value="{!oppRecord.SIC_CODE__c}" /> 
+               </td>
+           </tr>
+      <!-- <tr> 
+               <td>
+                   <label>Is this business type considered luxury?</label>
+               </td>
+               <td>
+                   <apex:outputText value="{!isTheBusinessTypeConsideredLuxury}" />
+               </td>
+               <td>
+                   <apex:outputLabel value="{!$ObjectType.Opportunity.fields.BA_X2_years_in_business_del__c.label}"/>                 
+               </td>
+               <td>  
+                  <apex:inputField value="{!oppRecord.BA_X2_years_in_business_del__c}" /> 
+               </td>
+           </tr>
+           <tr>                              
+               <td>
+                   <apex:outputLabel value="{!$ObjectType.Opportunity.fields.BAM_Match_Selection__c.label}"/>                 
+               </td>
+               <td>  
+                  <apex:inputField value="{!oppRecord.BAM_Match_Selection__c}" /> 
+               </td>
+               <td colspan="2">
+                    &nbsp;
+               </td>
+           </tr>  -->
+           <!--   business Alerts -->
+           
+           <!--   Credit Committee -->
+           <tr>
+               <td colspan="4">
+                   
+                    <c:Extjs_Panel title="Credit Committee Information"/>
+               </td>
+           </tr>
+           
+            
+             <!--   Credit Committee -->
+          
+           <!--   Eligibility Criteria 
+           <tr>
+               <td colspan="4">
+                   
+                    <c:Extjs_Panel title="Eligibility Criteria"/>
+               </td>
+           </tr>
+
+           
+           
+           <tr> 
+               <td>
+                   <apex:outputLabel value="{!$ObjectType.Opportunity.fields.BA_X2_years_in_business_del__c.label}"/>                 
+               </td>
+               <td>  
+                  <apex:inputField value="{!oppRecord.BA_X2_years_in_business_del__c}" /> 
+               </td>                   
+               <td>
+                   <apex:outputLabel value="{!$ObjectType.Opportunity.fields.Criteria_Decision__c.label}"/>                 
+               </td>
+               <td>  
+                  <apex:inputField value="{!oppRecord.Criteria_Decision__c}" /> 
+               </td>   
+           </tr>
+           <tr> 
+               <td>
+                   <apex:outputLabel value="{!$ObjectType.Opportunity.fields.EC_Company_in_business_6_months__c.label}"/>                 
+               </td>
+               <td>  
+                  <apex:inputField value="{!oppRecord.EC_Company_in_business_6_months__c}" /> 
+               </td>                   
+           </tr>
+           Eligibility Criteria -->
+           
+       </table><br/>
+       </apex:outputPanel>
+               
+       <div align="center">              
+            <apex:commandButton value="Save" action="{!doSave}" reRender="pageMessageMain,panelid,panelid1" status="ajaxStatus" oncomplete="setfocus('{!$Component.pageMessageMain}');"/>&nbsp;&nbsp;         
+       </div>           
+   </apex:outputPanel>
+    </apex:form>
+    <apex:actionstatus startStyleClass="requiredLoaderBG" id="ajaxStatus" />
+</apex:page>

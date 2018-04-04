@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Account.Account_Contact__c</field>
+    </columns>
+    <columns>
+        <field>Account.Email_Address__c</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>RECORDTYPE</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Account.Partners</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account.Status__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Active</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>ACCOUNT.NAME</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>notContain</operator>
+            <value>5 Point Capital,Advance Funds Network,LLC-Referrals,Andres Ruiz,Alliance Funding Group dba Alliance Funds,A&amp;M Capital,Inc.,AmericaVest Lending LLC  (Eaglewood),American Financial Freedom dba Globelend Capital,Amrock Financial,LLC,Anchor America Funding,Anthony Wells,Arca Funding,ARF,Atlantis Capital,Avant-Garde Capital Business Consulting,Bank Card One dba Elite Merchant Solutions,Barrata,Barrington Partners,BCNS Partners,LP dba Rioux Capital,BFS/ Finance Marc,BFS/ East,BPS,Biz2Credit,Biz2Credit – Eaglewood,Big Foot Holdings,Brain Trust,Business Finance Store (BFS/ FinanceMarc,Business Finance Store/ East (Atlantic Business Consulting &amp; Capital),Business Advance Now,Business Credit Ally Inc. dba Bentley Capital Ventures,Buynance c/o Merchant Ally,Capital Resource Group,Capital Stack,Cash Ready,Chase-Electronic Merchant,Chase-Elite Data Citizens Business Finance,Commonwealth,Company.com,Corporate Advance Solutions – Jeffrey Levine,Creative,DB</value>
+        </criteriaItems>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>ACCOUNT.NAME</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Test Suppression Partner 42014</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>AccountList</reportType>
+    <scope>organization</scope>
+    <showDetails>false</showDetails>
+    <timeFrameFilter>
+        <dateColumn>CREATED_DATE</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

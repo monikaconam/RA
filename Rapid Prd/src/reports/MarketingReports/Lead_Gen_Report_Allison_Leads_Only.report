@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>CAMPAIGN_NAME</field>
+    </columns>
+    <columns>
+        <field>Lead.Vendor_ID__c</field>
+    </columns>
+    <columns>
+        <field>Lead.LeadId18Char__c</field>
+    </columns>
+    <columns>
+        <field>Lead.pi__score__c</field>
+    </columns>
+    <columns>
+        <field>CREATED_DATE</field>
+    </columns>
+    <columns>
+        <field>Lead.Five9_Call_Counter__c</field>
+    </columns>
+    <columns>
+        <field>STATUS</field>
+    </columns>
+    <columns>
+        <field>Opportunity.signed_flag__c</field>
+    </columns>
+    <columns>
+        <field>Opportunity.Approved_Flag__c</field>
+    </columns>
+    <columns>
+        <field>Opportunity.Funded_Amount__c</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>CAMPAIGN_NAME</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>contains</operator>
+            <value>Credit Karma,eDirex,Lendio,Business.com - Loan,LendingTree,IT Media,Raiseworks,Lower My Bills,Brokermatch,MVF Global,Portfolioleads.com,Buyerzone,OnCore,Leads2Results,Quinstreet,Shanestone,TEL | ITM</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>CREATED_DATE</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>greaterOrEqual</operator>
+            <value>1/1/2015 12:00 AM</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>Lead Gen Report- Allison- Leads Only</name>
+    <params>
+        <name>scopeid</name>
+        <value></value>
+    </params>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CampaignLeadLifetime</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <sortColumn>CAMPAIGN_NAME</sortColumn>
+    <sortOrder>Asc</sortOrder>
+</Report>

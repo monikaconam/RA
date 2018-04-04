@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>EMAIL</field>
+    </columns>
+    <columns>
+        <field>FIRST_NAME</field>
+    </columns>
+    <columns>
+        <field>LAST_NAME</field>
+    </columns>
+    <columns>
+        <field>OPPORTUNITY.NAME</field>
+    </columns>
+    <columns>
+        <field>CLOSE_DATE</field>
+    </columns>
+    <columns>
+        <field>STAGE_NAME</field>
+    </columns>
+    <columns>
+        <field>ADDRESS2_COUNTRY</field>
+    </columns>
+    <description>Customer satisfaction sent to these merchants</description>
+    <filter>
+        <criteriaItems>
+            <column>STAGE_NAME</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Closed Won</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>EMAIL</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>notEqual</operator>
+            <value></value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>EMAIL</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>notContain</operator>
+            <value>none@email.com,non@email.com</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>CS Survey 8/28 thru 9/30 Funded</name>
+    <params>
+        <name>include</name>
+        <value>all</value>
+    </params>
+    <reportType>OpportunityContact</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>CLOSE_DATE</dateColumn>
+        <endDate>2008-09-30</endDate>
+        <interval>INTERVAL_CUSTOM</interval>
+        <startDate>2008-08-28</startDate>
+    </timeFrameFilter>
+</Report>

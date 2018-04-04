@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Mass Emails Template</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>EmailLetterhead</letterhead>
+    <name>Paid Off - 4th Qtr</name>
+    <style>freeForm</style>
+    <subject>Paid Off - {!Account.Name}</subject>
+    <textOnly>As we finish up the summer season and start planning on the busiest time of the year. I wanted to make sure you I reached out to you and let you know that you are eligible for additional capital. I have been getting a lot of calls from merchants to help stock up on inventory, complete projects they are working on, advertising, etc.  To those of you who are renewing for the first time, renewals are much simpler and faster than the original deals.  Most of the time, the only paperwork required is the agreement because we already have all of your information on file.  Also, they generally reward performance and loyalty on the renewal by either getting you more money, lowering the fees or extending the estimated payback times.  If you would like to see what I can qualify you for just give me a call at (240) 514- 3184.
+
+Thanks and I look forward to hearing from you.
+
+
+
+Best wishes,
+
+Tim Iuculano</textOnly>
+    <type>html</type>
+</EmailTemplate>

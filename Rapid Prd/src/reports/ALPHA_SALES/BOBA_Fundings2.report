@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>CUST_ID</field>
+    </columns>
+    <columns>
+        <field>CUST_NAME</field>
+    </columns>
+    <columns>
+        <field>Bids__c.Funded_Date__c</field>
+    </columns>
+    <columns>
+        <field>Bids__c.Contract_Amount__c</field>
+    </columns>
+    <columns>
+        <field>FK_$BOOP__c.Renewal__c</field>
+    </columns>
+    <columns>
+        <field>CUST_OWNER_NAME</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>Bids__c.Funded_Date__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>THIS_MONTH</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>BOBA Fundings</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntityCustomEntity$Marble__c$Bids__c@Bids__c.BOOP__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <sortColumn>Bids__c.Funded_Date__c</sortColumn>
+    <sortOrder>Asc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>CHILD_CREATED_DATE</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

@@ -1,0 +1,3 @@
+<apex:page controller="DuplicateContactBlockerController" action="{!ReadyPage}">
+   <apex:detail subject="{!configRecordId}"/>
+</apex:page>

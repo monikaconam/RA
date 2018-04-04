@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>COMPANY</field>
+    </columns>
+    <columns>
+        <field>FIRST_NAME</field>
+    </columns>
+    <columns>
+        <field>LAST_NAME</field>
+    </columns>
+    <columns>
+        <field>LEAD_STATUS</field>
+    </columns>
+    <columns>
+        <field>ASSIGNED</field>
+    </columns>
+    <columns>
+        <field>Lead.Last_Call_Activity__c</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>LEAD_STATUS</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Initial Call Needed,Calling - No Contact Made</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>CALLDURATION</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>greaterOrEqual</operator>
+            <value>420</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>OWNER_ROLE</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Business Advisor</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>COMPANY</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>notEqual</operator>
+            <value>Five9 Generated Lead</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>TZ 7 Minute List</name>
+    <params>
+        <name>closed</name>
+        <value>all</value>
+    </params>
+    <params>
+        <name>type</name>
+        <value>te</value>
+    </params>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>LeadActivity</reportType>
+    <roleHierarchyFilter>Administrator</roleHierarchyFilter>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>DUE_DATE</dateColumn>
+        <interval>INTERVAL_LASTWEEK</interval>
+    </timeFrameFilter>
+</Report>

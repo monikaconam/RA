@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Opportunity.QA_Reviews__r$Name</field>
+    </columns>
+    <columns>
+        <field>Opportunity$Name</field>
+    </columns>
+    <columns>
+        <field>Opportunity$Opportunity_Owner_Name__c</field>
+    </columns>
+    <columns>
+        <field>Opportunity$Business_Phone__c</field>
+    </columns>
+    <columns>
+        <field>Opportunity.QA_Reviews__r$Reason_for_not_moving_forward__c</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>Opportunity.QA_Reviews__r$RecordType</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>QA_Review__c.Not_Interested</value>
+        </criteriaItems>
+    </filter>
+    <format>Summary</format>
+    <name>Not Interested Daily Report</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Opportunities_with_QA_Reviews__c</reportType>
+    <roleHierarchyFilter>Business_Advisor</roleHierarchyFilter>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>Opportunity.QA_Reviews__r$Submit_Date__c</dateColumn>
+        <interval>INTERVAL_TODAY</interval>
+    </timeFrameFilter>
+</Report>

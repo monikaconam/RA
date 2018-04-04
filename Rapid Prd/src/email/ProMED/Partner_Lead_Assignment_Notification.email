@@ -1,0 +1,17 @@
+*** NEW PARTNER ASSIGNMENT NOTIFICATION *** 
+
+The following lead has been assigned to you. 
+
+Campaign: {!Lead.Campaign_Name_Upload__c}
+Company: {!Lead.Company} 
+Lead Name: {!Lead.Name} 
+Lead Phone: {!Lead.Phone}
+Lead Mobile: {!Lead.MobilePhone}
+Address:
+  {!Lead.Address}
+Email: {!Lead.Email}
+Best Time to Call: {!Lead.Best_Time_to_Call__c}
+Preferred Method of Contact: {!Lead.Preferred_Method_of_Contact__c}
+How did you hear about us?: {!Lead.How_did_you_hear_about_us__c}
+Comments: {!Lead.Description}
+Click on the link to access the lead directly: {!Lead.Link}

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DashboardFolder xmlns="http://soap.sforce.com/2006/04/metadata">
+    <accessType>Shared</accessType>
+    <name>UW &amp; Processing Management</name>
+    <publicFolderAccess>ReadOnly</publicFolderAccess>
+    <sharedTo>
+        <role>Administrator</role>
+        <role>CustomerServiceManager</role>
+        <role>Customer_Service</role>
+        <role>Processors</role>
+        <role>Underwriting</role>
+    </sharedTo>
+</DashboardFolder>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>this template is being used for verifing lead information</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>StandardLetterheadSample</letterhead>
+    <name>Email Verification Template</name>
+    <style>freeForm</style>
+    <subject>{!Lead.FirstName}, stay in touch.</subject>
+    <textOnly>Hello {!Lead.FirstName}, 
+
+We&apos;re updating our &quot;Stay in touch&quot; list and just want to verify the following information with you. 
+
+Company Name: {!Lead.Company} 
+Street Address: {!Lead.Street} 
+City, State and Zip: {!Lead.City}, {!Lead.State} {!Lead.PostalCode} 
+Phone: {!Lead.Phone} 
+
+If you could let us know if the above information has changed, we would greatly appreciate it!
+
+Thank you, 
+
+RapidAdvance, LLC</textOnly>
+    <type>html</type>
+</EmailTemplate>

@@ -1,0 +1,33 @@
+<table cellpadding="5" width="550" height="400" cellspacing="5" border="0" >
+<tr height="400" valign="top" >
+<td locked="0" style=" font-family:arial; bLabel:main; color:#000000; font-size:12pt; bEditID:r3st1; background-color:#FFFFFF;" aEditID="c1r1" tEditID="c1r1" >
+<![CDATA[<P><FONT face=Verdana color=#000066 size=2></FONT>&nbsp;</P>
+<P><FONT face=Verdana color=#000066 size=2>Date Repriced - {!Opportunity.00N70000001wnTC}&nbsp;</FONT></P>
+<P><FONT face=Verdana,Geneva,Arial,Helvetica,Sans-Serif color=#000066 size=2></FONT>&nbsp;</P>
+<P>&nbsp;</P>
+<P><FONT face=Verdana,Geneva,Arial,Helvetica,Sans-Serif color=#000066 size=2>Opportunity Name - {!Opportunity.Name}</FONT></P>
+<P><FONT face=Verdana,Geneva,Arial,Helvetica,Sans-Serif color=#000066 size=2>Renewal? - {!Opportunity.Renewal__c}</FONT></P>
+<P><FONT face=Verdana,Geneva,Arial,Helvetica,Sans-Serif color=#000066 size=2><STRONG></STRONG></FONT>&nbsp;</P>
+<P><STRONG><FONT face=Verdana color=#000066 size=2></FONT></STRONG>&nbsp;</P>
+<P><FONT face=Verdana,Geneva,Arial,Helvetica,Sans-Serif color=#000066 size=2><STRONG>Current FRSA:</STRONG></FONT></P>
+<P><FONT face=Verdana color=#000066 size=2></FONT>&nbsp;</P>
+<P><FONT face=Verdana,Geneva,Arial,Helvetica,Sans-Serif color=#000066 size=2>Advance&nbsp;Price - {!Opportunity.Amount}</FONT></P>
+<P><FONT color=#000066 size=2>Percent Payback - {!Opportunity.Percent_Payback__c}</FONT></P>
+<P><FONT color=#000066 size=2>Payback&nbsp;Price - {!Opportunity.Pay_Back_Amount__c}</FONT></P>
+<P>
+<P><FONT face=Verdana color=#000066 size=2></FONT></P>
+<P><FONT face=Verdana size=2></FONT><FONT color=#000066>&nbsp;</FONT></P>
+<P>&nbsp;</P>
+<P></P>
+<P><FONT face=Verdana color=#000066 size=2><STRONG>New FRSA Needed:</STRONG></FONT></P>
+<P><FONT face=Verdana color=#000066 size=2></FONT>&nbsp;</P>
+<P><FONT color=#000066 size=2>New Advance&nbsp;Price - {!Opportunity.00N70000001wnUo}</FONT></P>
+<P><FONT color=#000066 size=2>New Percent Payback - {!Opportunity.00N70000001wnVD}</FONT></P>
+<P><FONT color=#000066 size=2>New Payback Price - {!Opportunity.00N70000001wnVt}</FONT></P>
+<P><FONT color=#000066></FONT>&nbsp;</P>
+<P><FONT face=Verdana,Geneva,Arial,Helvetica,Sans-Serif color=#000066 size=2></FONT>&nbsp;</P>
+<P><FONT face=Verdana,Geneva,Arial,Helvetica,Sans-Serif color=#000099 size=2><FONT color=#000066>&nbsp;</FONT></P>
+<P></FONT><FONT face=Verdana,Geneva,Arial,Helvetica,Sans-Serif color=#000066 size=2></FONT>&nbsp;</P>
+<P>&nbsp;</P>]]></td>
+</tr>
+</table>

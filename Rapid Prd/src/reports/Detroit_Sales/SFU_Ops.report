@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>OPPORTUNITY_NAME</field>
+    </columns>
+    <columns>
+        <field>Account.Last_Five9_Disposition__c</field>
+    </columns>
+    <columns>
+        <field>Opportunity.Last_Five9_Disposition__c</field>
+    </columns>
+    <columns>
+        <field>Opportunity.Scheduled_Follow_Up__c</field>
+    </columns>
+    <columns>
+        <field>Account.Scheduled_Follow_Up__c</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>OWNER_ROLE</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Business Advisor</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account.Last_Five9_Disposition__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>notEqual</operator>
+            <value>No Contact,Not Interested,Not Legitimate,Add to DNC,Does Not Qualify</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>CALLTYPE</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>2</value>
+        </criteriaItems>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>ASSIGNED</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>SFU Ops</name>
+    <params>
+        <name>closed</name>
+        <value>all</value>
+    </params>
+    <params>
+        <name>type</name>
+        <value>te</value>
+    </params>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>OpportunityActivity</reportType>
+    <roleHierarchyFilter>Administrator</roleHierarchyFilter>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <sortColumn>Account.Last_Five9_Disposition__c</sortColumn>
+    <sortOrder>Asc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>DUE_DATE</dateColumn>
+        <interval>INTERVAL_YESTERDAY</interval>
+    </timeFrameFilter>
+</Report>

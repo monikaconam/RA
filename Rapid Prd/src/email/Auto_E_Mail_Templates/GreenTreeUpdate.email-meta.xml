@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Template to be used for sending information to Jeff, whenever the status of a direct lead is changed to GTF – Initial Call Needed.</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>StandardLetterheadSample</letterhead>
+    <name>Green Tree Update</name>
+    <style>freeForm</style>
+    <subject>{!Lead.Name} Has Been Updated</subject>
+    <textOnly>Date - {!Opportunity.LastModifiedDate}
+Rep - {!Opportunity.OwnerFirstName}
+
+Renewal? - {!Opportunity.Renewal__c}
+Renewal Date - {!Opportunity.RENEWAL_DATE__c}
+
+Opportunity Name - {!Opportunity.Name}
+Opportunity Number - {!Opportunity.Opportunity_Number__c}
+Opportunity Advance ID - {!Opportunity.Advance_ID__c}
+
+Advance Amount - {!Opportunity.Amount}
+Split - {!Opportunity.Percent_Payback__c}
+Pay Back Amount - {!Opportunity.Pay_Back_Amount__c}
+Estimated Days to Complete - {!Opportunity.Estimated_Days_to_Repay__c}
+
+Estimated Daily Transactions - {!Opportunity.Estimated_Daily_Repay__c}
+
+Stage - {!Opportunity.StageName}
+
+Primary Contact Info:
+{!Opportunity.AE_Primary_Signer_Info__c}
+
+Underwriting Status - {!Opportunity.Underwriting_Approval__c}
+Underwriting Assigned - {!Opportunity.Underwriter_Assigned__c}
+Auto-Decision by - {!Opportunity.00N700000036tUr}
+Approval Conditions - {!Opportunity.Approved_With_Conditions__c}
+Decline Reason - {!Opportunity.Decline_Reason__c}
+
+Underwriting Notes - {!Opportunity.Third_Party_UW_Notes__c}
+
+Current Processor - {!Opportunity.Current_Processor__c}
+MID #1 - {!Opportunity.MID_1__c}
+
+Processing Representative - {!Opportunity.Processing_Representative__c}
+
+Processing Notes - {!Opportunity.Processing_Notes__c}
+
+Notes from Prefunding Call - {!Opportunity.Notes_from_Prefunding_Call__c}
+
+Sales Notes - {!Opportunity.Description}
+
+Person who sent update - {!Opportunity.LastModifiedBy}</textOnly>
+    <type>html</type>
+</EmailTemplate>

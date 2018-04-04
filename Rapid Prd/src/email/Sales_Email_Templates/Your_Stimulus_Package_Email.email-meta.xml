@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Email sent to Leads on 2/24/2009</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Your Stimulus Package Email</name>
+    <style>none</style>
+    <subject>{!Contact.FirstName}, do you need funds for your business?</subject>
+    <textOnly>Your Business&apos; Stimulus Package a Merchant Cash Advance
+	
+	HOW IT WORKS: 
+	We pay you for your future Visa™/MasterCard™ 
+	sales up front and we get paid 
+	back with a small fixed percentage of your daily Visa™/MasterCard™ 	 
+	receipts 	until your obligation is fulfilled!
+
+	Our service is aligned with the success of your 
+	business - we only get paid when you get paid. 
+	
+	EASY ... SMART ... FAST
+		
+	Approved and funded within 10 business days.
+	We offer 50% more than our competitors.
+	Simple, no cost application.
+	No personal guarantees.
+	No fixed monthly payments.
+	Get a same day quote.
+		
+	USE CASH TO: 
+	
+	Purchase New Equipment
+	Purchase Inventory
+	Support a Seasonal Trend
+	Expand or Remodel
+	Pay Off Debt
+	Emergency Funding
+	
+	&quot;Whether you&apos;re looking for convenient working capital or you&apos;ve been declined for a small business loan, our merchant cash advance is the perfect solution!&quot;
+	
+{!Lead.OwnerFullName}
+Account Executive
+
+Phone: {!Lead.OwnerPhone}
+Email: {!Lead.OwnerEmail}</textOnly>
+    <type>custom</type>
+</EmailTemplate>

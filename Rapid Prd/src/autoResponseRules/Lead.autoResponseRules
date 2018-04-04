@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AutoResponseRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <autoResponseRule>
+        <fullName>Customer Journey Web to Lead</fullName>
+        <active>false</active>
+        <ruleEntry>
+            <criteriaItems>
+                <field>Lead.LeadSource</field>
+                <operation>equals</operation>
+                <value>Customer Journey Web to Lead</value>
+            </criteriaItems>
+            <senderEmail>submissions@rapidadvance.com</senderEmail>
+            <senderName>RapidAdvance</senderName>
+            <template>All_Templates/UnqualifiedLeads</template>
+        </ruleEntry>
+    </autoResponseRule>
+    <autoResponseRule>
+        <fullName>Web-to-Lead</fullName>
+        <active>false</active>
+        <ruleEntry>
+            <criteriaItems>
+                <field>Lead.LeadSource</field>
+                <operation>equals</operation>
+                <value>Calc Lander Web to Lead</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>User.Username</field>
+                <operation>equals</operation>
+                <value>webapps@rapidadvance.com</value>
+            </criteriaItems>
+            <senderEmail>jonathan.ackaoui@rapidadvance.com</senderEmail>
+            <senderName>Jonathan Ackaoui</senderName>
+            <template>Auto_E_Mail_Templates/CALC_Lander_AutoResponder_201504</template>
+        </ruleEntry>
+        <ruleEntry>
+            <booleanFilter>1 AND 2</booleanFilter>
+            <criteriaItems>
+                <field>Lead.LeadSource</field>
+                <operation>equals</operation>
+                <value>Lead Generation,Web-To-Lead</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Lead.OwnerId</field>
+                <operation>equals</operation>
+                <value>Lead Generation Partner</value>
+            </criteriaItems>
+            <senderEmail>jonathan.ackaoui@rapidadvance.com</senderEmail>
+            <senderName>Jonathan Ackaoui</senderName>
+            <template>All_Templates/LeadGen_WebAuto_Responder_20140806</template>
+        </ruleEntry>
+        <ruleEntry>
+            <criteriaItems>
+                <field>Lead.LeadSource</field>
+                <operation>equals</operation>
+                <value>Partner-Web</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Campaign.Name</field>
+                <operation>equals</operation>
+                <value>Xpedite Merchant Capital</value>
+            </criteriaItems>
+            <senderEmail>services@rapidadvance.com</senderEmail>
+            <senderName>Sales</senderName>
+            <template>All_Templates/Xpedite_Email_Notification_20131202</template>
+        </ruleEntry>
+        <ruleEntry>
+            <booleanFilter>1 AND (2 OR 3) AND 4</booleanFilter>
+            <criteriaItems>
+                <field>Lead.LeadSource</field>
+                <operation>equals</operation>
+                <value>Lead Generation</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Campaign.Name</field>
+                <operation>startsWith</operation>
+                <value>Financing Factory</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Campaign.Name</field>
+                <operation>startsWith</operation>
+                <value>Business.com</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Lead.OwnerId</field>
+                <operation>equals</operation>
+                <value>John Swigart</value>
+            </criteriaItems>
+            <senderEmail>info@rapidadvance.com</senderEmail>
+            <senderName>RapidAdvance</senderName>
+            <template>Auto_E_Mail_Templates/LeadGen_WebAuto_Responder</template>
+        </ruleEntry>
+        <ruleEntry>
+            <criteriaItems>
+                <field>Lead.LeadSource</field>
+                <operation>equals</operation>
+                <value>Partner-Web</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Campaign.Name</field>
+                <operation>equals</operation>
+                <value>Pak Mail Centers of America</value>
+            </criteriaItems>
+            <senderEmail>phavenstein@rapidadvance.com</senderEmail>
+            <senderName>Peter Havenstein</senderName>
+            <template>Auto_E_Mail_Templates/PakMail_WebAuto_Responder</template>
+        </ruleEntry>
+        <ruleEntry>
+            <criteriaItems>
+                <field>Lead.LeadSource</field>
+                <operation>equals</operation>
+                <value>Partner-Web</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Campaign.Name</field>
+                <operation>equals</operation>
+                <value>Play N Trade - Referrals</value>
+            </criteriaItems>
+            <senderEmail>phavenstein@rapidadvance.com</senderEmail>
+            <senderName>Peter Havenstein</senderName>
+            <template>Auto_E_Mail_Templates/PlayNTrade_WebAuto_Responder</template>
+        </ruleEntry>
+        <ruleEntry>
+            <criteriaItems>
+                <field>Lead.ProMED_Lead__c</field>
+                <operation>equals</operation>
+                <value>True</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Lead.New_Partner_Contact__c</field>
+                <operation>equals</operation>
+                <value>False</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Lead.LeadSource</field>
+                <operation>equals</operation>
+                <value>Web-To-Lead</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Campaign.Name</field>
+                <operation>equals</operation>
+                <value>ProMED Website Contact Us</value>
+            </criteriaItems>
+            <senderEmail>request@promedhcf.com</senderEmail>
+            <senderName>No Reply</senderName>
+            <template>ProMED/ProMED_ContUS_Response</template>
+        </ruleEntry>
+        <ruleEntry>
+            <criteriaItems>
+                <field>Lead.LeadSource</field>
+                <operation>equals</operation>
+                <value>Web-To-Lead</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Lead.ProMED_Lead__c</field>
+                <operation>equals</operation>
+                <value>True</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Lead.New_Partner_Contact__c</field>
+                <operation>equals</operation>
+                <value>False</value>
+            </criteriaItems>
+            <senderEmail>request@promedhcf.com</senderEmail>
+            <senderName>No Reply</senderName>
+            <template>ProMED/ProMED_WTL_Response</template>
+        </ruleEntry>
+        <ruleEntry>
+            <criteriaItems>
+                <field>Lead.New_Partner_Contact__c</field>
+                <operation>equals</operation>
+                <value>True</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Lead.ProMED_Lead__c</field>
+                <operation>equals</operation>
+                <value>True</value>
+            </criteriaItems>
+            <senderEmail>request@promedhcf.com</senderEmail>
+            <senderName>No Reply</senderName>
+            <template>ProMED/ProMED_PA_Response</template>
+        </ruleEntry>
+        <ruleEntry>
+            <criteriaItems>
+                <field>Lead.New_Partner_Contact__c</field>
+                <operation>equals</operation>
+                <value>True</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Lead.OwnerId</field>
+                <operation>contains</operation>
+                <value>Maria Rivera</value>
+            </criteriaItems>
+            <senderEmail>mrivera@rapidadvance.com</senderEmail>
+            <senderName>Maria Rivera</senderName>
+            <template>Auto_E_Mail_Templates/New_Partner_Lead_Response</template>
+        </ruleEntry>
+        <ruleEntry>
+            <criteriaItems>
+                <field>Lead.New_Partner_Contact__c</field>
+                <operation>equals</operation>
+                <value>True</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Lead.OwnerId</field>
+                <operation>contains</operation>
+                <value>Sierra Daumit</value>
+            </criteriaItems>
+            <senderEmail>sdaumit@rapidadvance.com</senderEmail>
+            <senderName>Sierra Daumit</senderName>
+            <template>Auto_E_Mail_Templates/New_Partner_Lead_Response</template>
+        </ruleEntry>
+        <ruleEntry>
+            <criteriaItems>
+                <field>Campaign.Name</field>
+                <operation>equals</operation>
+                <value>Partner Web Leads</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Lead.OwnerId</field>
+                <operation>equals</operation>
+                <value>DEACTIVATED BD Web Leads</value>
+            </criteriaItems>
+            <senderEmail>bd@rapidadvance.com</senderEmail>
+            <senderName>Business Development</senderName>
+            <template>Auto_E_Mail_Templates/New_BD_Web_Lead</template>
+        </ruleEntry>
+        <ruleEntry>
+            <criteriaItems>
+                <field>Lead.LeadSource</field>
+                <operation>equals</operation>
+                <value>Customer Journey Web to Lead</value>
+            </criteriaItems>
+            <senderEmail>services@rapidadvance.com</senderEmail>
+            <senderName>Sales</senderName>
+            <template>Auto_E_Mail_Templates/CALC_Lander_AutoResponder_201504</template>
+        </ruleEntry>
+    </autoResponseRule>
+</AutoResponseRules>

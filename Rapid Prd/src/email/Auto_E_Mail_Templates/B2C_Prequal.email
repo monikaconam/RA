@@ -1,0 +1,7 @@
+Opportunity Name: {!Opportunity.Name}
+OppId: {!Opportunity.Opportunity_Number__c}
+Created Date: {!Opportunity.CreatedDate}
+
+Prequal Decision: {!Opportunity.Pre_Qual_Decision__c}
+
+Owner: {!Opportunity.OwnerFullName}

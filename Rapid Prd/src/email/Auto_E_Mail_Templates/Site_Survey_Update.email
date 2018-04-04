@@ -1,0 +1,9 @@
+Opportunity Name: {!Site_Survey__c.Opportunity__c}
+Opportunity ID: {!Opportunity.Opportunity_Number__c}
+
+Order Date: {!Site_Survey__c.CreatedDate}
+Survey Status: {!Site_Survey__c.NVMS_Status__c}
+
+Inspection Date & Time:  {!Site_Survey__c.Inspection_Date__c} {!Site_Survey__c.Inspection_Time__c}
+
+Inspection Review Decision:  {!Site_Survey__c.Review_Status__c}

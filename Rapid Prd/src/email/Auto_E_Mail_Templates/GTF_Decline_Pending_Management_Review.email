@@ -1,0 +1,10 @@
+https://na5.salesforce.com/{!Opportunity.Id}
+
+Decision Date: {!Opportunity.Decision_Date__c}
+
+Opp Name: {!Opportunity.Name}
+Amount: {!Opportunity.Amount}
+Stage: {!Opportunity.StageName}
+Reason: {!Opportunity.Decline_Reason__c}
+
+Campaign: {!Opportunity.PrimaryCampaignSource__c}

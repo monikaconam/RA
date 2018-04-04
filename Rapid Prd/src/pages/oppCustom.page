@@ -1,0 +1,1627 @@
+<apex:page standardController="Opportunity" showHeader="false" sideBar="false" tabStyle="opportunity" extensions="OppCustom_Ctrl">
+    <style type="text/css">
+       .pageTitleIcon {
+        background-image: url(/img/sprites/master.png);
+        background-position: 0 -1238px;
+        width: 32px;
+        height: 32px;
+        } 
+        
+        select {
+          width: auto !important;
+        } 
+        .panel {
+        background: none repeat scroll 0 0 #BBBABA !important;
+        border: 1px solid #A09F9F !important;
+        font-weight: bold;
+        margin-top: 12px;
+        width: 100% !important;
+    }
+    span{
+    color : #ddd;
+    }
+    body{
+         color : #ddd !important;
+    }
+    .header123 {
+        color: #434343;
+        font-weight: bold;
+        font-size: 11px;
+        font-family: arial,tahoma,verdana,sans-serif;
+        border-color: #d0d0d0;
+        background-image: url(../images/gray-extend/panel/white-top-bottom.gif);
+        width:1300px;
+        height:20px;
+        background: rgb(214, 209, 209);
+    }
+    
+    #holder {
+        left 0;
+        position: fixed;
+        width: 98%;
+        top: 2px;
+        z-index: 2;
+    }
+
+    #header {
+        text-align: left;
+        background-repeat:no-repeat;
+        background: rgb(214, 209, 209);
+        color:#FFF;
+        padding:3px;
+        width: 98%;
+        color: #04408c;
+        font-size: 11px;
+        font-weight: bold;
+        font-family: tahoma,arial,verdana,sans-serif;
+        line-height: 17px;
+    }
+    </style>
+    <!--<style type="text/css">
+    select{
+        margin-left:0;
+    }
+    .opportunityTable tr td {
+        white-space:wrap;        
+        
+    }   
+    .opportunityTable, .opportunityForm{
+        padding: 0 40px;
+    }
+     .requiredLoaderBG{
+            background-color: rgb(71,71,71);
+            opacity:0.7;
+            filter:alpha(opacity=70);
+            background-image:url({!URLFOR($Resource.ajaxLoadGif)});
+            background-position: center center;
+            background-repeat: no-repeat;
+            height: 100%;
+            left: 0;
+            position: fixed;
+            text-align: center;
+            top: 0;
+            width: 100%;
+            z-index: 1;
+        } 
+       
+    </style>-->
+    <!--<style>
+    select{
+        margin-left:0;
+    }
+    .detailList {
+        width: 100%;
+        padding: 0 40px;
+    }
+    table[Attributes Style] {
+            border-top-width: 0px;
+            border-right-width: 0px;
+            border-bottom-width: 0px;
+            border-left-width: 0px;
+            border-spacing: 0px;
+        }
+    table {
+        display: table;
+        border-collapse: separate;        
+        border-color: gray;
+    }
+    .pbBody, .pbBody a, .pbBody td, .lbBody a, .lbBodyDescription, .list .headerRow .noRowsHeader {
+        color: #000;
+    }
+    body, td {
+        font-family: Arial,Helvetica,sans-serif;
+    }
+    user agent stylesheettable {        
+        border-spacing: 2px;
+        border-color: gray;
+    }
+    .requiredLoaderBG{
+        background-color: rgb(71,71,71);
+        opacity:0.7;
+        filter:alpha(opacity=70);
+        background-image:url({!URLFOR($Resource.ajaxLoadGif)});
+        background-position: center center;
+        background-repeat: no-repeat;
+        height: 100%;
+        left: 0;
+        position: fixed;
+        text-align: center;
+        top: 0;
+        width: 100%;
+        z-index: 1;
+    }
+    </style>-->
+    <c:Opportunity_Related_CSS />
+    <apex:pageMessages id="pageMessageMain"/>
+    <apex:form id="detailList" styleClass="opportunityForm">
+        <apex:variable value="{!objOpportunity}" var="opp"/>
+        
+        
+       <apex:sectionHeader title="Opportunity Edit" subtitle="Opportunity"  />
+     
+        <div align="center">                
+            <apex:commandButton value="Save" action="{!save}" reRender="pageMessageMain" status="ajaxStatus" oncomplete="setfocus('{!$Component.pageMessageMain}');"/>&nbsp;&nbsp;        
+            <!--<apex:commandButton value="Cancel" action="{!cancel}" status="ajaxStatus"/>-->      
+        </div><br/><br/>
+        <table class="detailList" border="0" cellpadding="0" cellspacing="0">
+             <tr>
+                <td class="labelCol">
+                    <label>Opportunity Name</label>
+                </td>
+                <td style="color: #333 !important;">
+                    <label style="color: #333 !important;">{!opp.Name}</label>
+                </td>                
+                <td>
+                    <label>Account Name</label>               
+                </td>
+                <td>                    
+                    <label style="color: #333 !important;">{!opp.Account.Name}</label> 
+                </td>
+            </tr>
+            <tr>
+                
+                <td>
+                    <label>Manual Applicant 1 FICO:</label>
+                </td>
+                <td>
+                    <apex:inputField value="{!opp.Manual_Applicant_1_FICO__c}"/>
+                </td>
+                <td colspan="2">
+                    &nbsp;
+                </td>              
+                 <!-- <td>
+                    <label>Submitted For Funding Approval:</label>
+                </td>
+                <td>
+                    <apex:inputField value="{!opp.Submitted_For_Funding_Approval__c}"/>
+                </td>-->                               
+            </tr>
+            <tr>
+                <td colspan="4">
+                    <c:Extjs_Panel title="Advance Information"/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Opportunity Owner</label>
+                </td>
+                <td>
+                   <apex:outputField value="{!opp.OwnerId}"/>
+                </td>
+                <td>
+                    <apex:outputLabel value="{!$ObjectType.Opportunity.fields.Amount.label}"/>
+                </td>
+                <td>
+                    <apex:inputField value="{!opp.Amount}" />
+                </td>
+                                
+                
+            </tr>
+            <tr>
+                <td>
+                    <label>Opportunity Name</label>
+                </td>
+                <td>
+                  <apex:inputField value="{!opp.Name}"  required="true"/>
+                </td>
+                <td>
+                    <apex:outputLabel value="{!$ObjectType.Opportunity.fields.Renewal__c.label}"/>
+                </td>
+                <td>
+                  <apex:inputField value="{!opp.Renewal__c}"/>
+                </td>
+                
+            </tr>            
+            <tr>
+                <td>
+                    <apex:outputLabel value="{!$ObjectType.Opportunity.fields.Previous_Sales_Rep__c.label}"/>
+                </td>
+                <td>
+                    <apex:inputField value="{!opp.Previous_Sales_Rep__c}"/>
+                </td>
+                <td>
+                    <apex:outputLabel value="{!$ObjectType.Opportunity.fields.Renewal_Number__c.label}"/>
+                </td>
+                <td>
+                  <apex:inputField value="{!opp.Renewal_Number__c}"/>
+                </td>
+                
+            </tr>
+            <tr>
+                <td>
+                    <apex:outputLabel value="{!$ObjectType.Opportunity.fields.Previous_Opportunity__c.label}"/>
+                </td>
+                <td>
+                  <apex:inputField value="{!opp.Previous_Opportunity__c}"/>
+                </td>
+                <td>
+                    <apex:outputLabel value="{!$ObjectType.Opportunity.fields.Renewal_Eligibility__c.label}"/>
+                </td>
+                <td>
+                  <apex:inputField value="{!opp.Renewal_Eligibility__c}"/>
+                </td>
+                
+            </tr>
+            <tr>
+                <td>
+                    <label>Primary Campaign Source</label>
+                </td>
+                <td>
+                  <apex:inputField value="{!opp.CampaignId}"  required="true"/>
+                </td>
+                <td>
+                    <apex:outputLabel value="{!$ObjectType.Opportunity.fields.RENEWAL_DATE__c.label}"/>
+                </td>
+                <td>
+                  <apex:inputField value="{!opp.RENEWAL_DATE__c}"/>
+                </td>                
+                
+            </tr>
+            <tr>
+                 <td>
+                    <apex:outputLabel value="{!$ObjectType.Opportunity.fields.StageName.label}"/>
+                </td>
+                <td>
+                  <apex:inputField value="{!opp.StageName}"  required="true"/>
+                </td> 
+            
+                <td>
+                    
+                </td>
+                <td>
+                    
+                </td>
+
+            </tr>
+            <tr>
+                <td>
+                    <apex:outputLabel value="{!$ObjectType.Opportunity.fields.LeadSource.label}"/>
+                </td>
+                <td>
+                    <apex:inputField value="{!opp.LeadSource}" required="true"/>
+                </td>
+                <td>
+                    <apex:outputLabel value="{!$ObjectType.Opportunity.fields.Product__c.label}"/>
+                </td>
+                <td>
+                    <apex:inputField value="{!opp.Product__c}" />
+                </td>               
+                
+            </tr>
+            <!--<tr>
+                <td>
+                    <apex:outputLabel value="{!$ObjectType.Opportunity.fields.Closed_Reason__c.label}"/>
+                </td>
+                <td>
+                    <apex:inputField value="{!opp.Closed_Reason__c}" />
+                </td>                          
+                <td>
+                    <apex:outputLabel value="{!$ObjectType.Opportunity.fields.CloseDate.label}"/>
+                </td>
+                <td>
+                    <apex:inputField value="{!opp.CloseDate}" required="true"/>
+                </td>
+            </tr>-->
+            <tr>
+                <td>
+                    <apex:outputLabel value="{!$ObjectType.Opportunity.fields.New_Lead_Source__c.label}"/>
+                </td>
+                <td>
+                    <apex:inputField value="{!opp.New_Lead_Source__c}" />
+                </td>
+                <td>
+                    <apex:outputLabel value="{!$ObjectType.Opportunity.fields.Submit_to_UW_Processing__c.label}"/>
+                </td>
+                <td>
+                  <apex:inputField value="{!opp.Submit_to_UW_Processing__c}"/>
+                </td>                             
+                
+            </tr>
+            <tr>
+                <td>
+                    <apex:outputLabel value="{!$ObjectType.Opportunity.fields.Probability.label}"/>
+                </td>
+                <td>
+                  <apex:inputField value="{!opp.Probability}"/>
+                </td>                 
+                <td>
+                    <apex:outputLabel value="{!$ObjectType.Opportunity.fields.Not_Interested_Reason__c.label}"/>
+                </td>
+                <td>
+                  <apex:inputField value="{!opp.Not_Interested_Reason__c}"  />
+                </td>
+            </tr>
+            <!-- <tr>
+                <td>
+                    <apex:outputLabel value="{!$ObjectType.Opportunity.fields.Percent_Payback__c.label}"/>
+                </td>
+                <td>
+                    <apex:inputField value="{!opp.Percent_Payback__c}"  />
+                </td>                
+                <td>
+                    <apex:outputLabel value="{!$ObjectType.Opportunity.fields.Pay_Back_Amount__c.label}"/>
+                </td>
+                <td>
+                    <apex:inputField value="{!opp.Pay_Back_Amount__c}" />
+                </td>
+            </tr>--> 
+            <!-- <tr>
+                <td>
+                    <apex:outputLabel value="{!$ObjectType.Opportunity.fields.Estimated_Days_to_Repay__c.label}"/>
+                </td>
+                <td>
+                  <apex:inputField value="{!opp.Estimated_Days_to_Repay__c}"  />
+                </td>          
+            </tr>--> 
+            <tr>
+                <td>
+                    
+                </td>
+                <td>
+                    
+                </td>
+                <td>
+                    <apex:outputLabel value="{!$ObjectType.Opportunity.fields.Signed_Contract_Received__c.label}"/>
+                </td>
+                <td>
+                  <apex:inputField value="{!opp.Signed_Contract_Received__c}"  />
+                </td>
+                                                                
+            </tr>            
+            <tr>
+                <td colspan="4">
+                    <c:Extjs_Panel title="Information"/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Paid Off Date</label>
+                </td>
+                <td>
+                    <apex:inputField value="{!opp.Paid_Off_Date__c}" />
+                </td>                
+                <td>
+                    <label>AsOfDate for Remaining Balance</label>               
+                </td>
+                <td>
+                    <apex:inputField value="{!opp.AsOfDate_for_Remaining_Balance__c}"/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>USER ID</label>
+                </td>
+                <td>
+                    <apex:inputField value="{!opp.USER_ID__c}" />
+                </td>               
+                <td>
+                    <label>PASSWORD</label>               
+                </td>
+                <td>
+                    <apex:inputField value="{!opp.PASSWORD__c}"/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Confirmed Add'l Signer Phone Number</label>
+                </td>
+                <td>
+                    <apex:inputField value="{!opp.Confirmed_Add_l_Signer_Phone_Number__c}" rendered="{!IF($Profile.Name =='System Administrator' ,true,false)}" />
+                    <apex:outputLabel value="{!opp.Confirmed_Add_l_Signer_Phone_Number__c}" rendered="{!IF($Profile.Name !='System Administrator' ,true,false)}" />
+                </td>                
+                <td>
+                    <label>Confirmed Add'l Signer Mobile Number</label>               
+                </td>
+                <td>
+                    <apex:inputField value="{!opp.Confirmed_Add_l_Signer_Mobile_Number__c}"/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Write Off Date</label>
+                </td>
+                <td>
+                    <apex:inputField value="{!opp.Write_Off_Date__c}" />
+                </td>
+                <td></td>
+                <td></td>                   
+            </tr>
+            <tr> 
+                <td>
+                    <label>Partner Email #1</label>               
+                </td>
+                <td>
+                    <apex:inputField value="{!opp.Partner_Email_1__c}"/>
+                </td>
+                <td>
+                    <label>Partner Email #2</label>               
+                </td>
+                <td>
+                    <apex:inputField value="{!opp.Partner_Email_2__c}"/>
+                </td>
+                <!--td colspan="2">
+                    <!--c:Extjs_Bank_Statement height="210" parentField="Opportunity__c" title="Partner Emails" object="Partner_Email__c" fields="Name" rows="3" minimized="false" parentRecordId="{!$CurrentPage.parameters.Id}"/>  
+                </td-->
+            </tr>
+            <tr>
+                <td>
+                    <label>Partner Email #3</label>
+                </td>
+                <td>
+                    <apex:inputField value="{!opp.Partner_Email_3__c}" />
+                </td>               
+                <td>
+                    <label>Partner Email #4</label>               
+                </td>
+                <td colspan="3">
+                    <apex:inputField value="{!opp.Partner_Email_4__c}"/>
+                </td>
+            </tr><!-- -->
+            <tr>
+                <td>
+                    <label>Partner Email #5</label>
+                </td>
+                <td>
+                    <apex:inputField value="{!opp.Partner_Email_5__c}" />
+                </td>               
+                <td>
+                    <label>Partner Email #6</label>               
+                </td>
+                <td colspan="3">
+                    <apex:inputField value="{!opp.Partner_Email_6__c}"/>
+                </td>
+            </tr>           
+            <!--<tr>
+                <td colspan="4">
+                    <c:Extjs_Panel title="CBR Testing"/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>CRR</label>
+                </td>
+                <td>
+                    <apex:inputField value="{!opp.CRR__c}"/>
+                </td>
+                <td colspan="2">
+                    &nbsp;
+                </td>                
+            </tr>-->
+            
+            <!-- <tr>
+                <td colspan="4">
+                    <c:Extjs_Panel title="Visa Information"/>
+                </td>
+            </tr>
+            
+            <tr>
+                <td colspan="4">
+                    <c:Extjs_Panel title="Marketing Section"/>
+                </td>
+            </tr>
+            
+            <tr>
+                <td>
+                    <label>Campaign name</label>
+                </td>
+                <td>
+                    <apex:inputField value="{!opp.Campaign_name__c}" />
+                </td>                
+                <td>
+                    <label>Business Status:</label>               
+                </td>
+                <td>
+                    <apex:inputField value="{!opp.Business_Status__c}"/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Lead ID Opp</label>
+                </td>
+                <td>
+                    <apex:inputField value="{!opp.Lead_ID_Opp__c}" />
+                </td>                
+                <td>
+                    <label>Type of Entity</label>               
+                </td>
+                <td>
+                    <apex:inputField value="{!opp.Type_of_Entity__c}"/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Lead Created Dated Opp</label>
+                </td>
+                <td>
+                    <apex:inputField value="{!opp.Lead_Created_Dated_Opp__c}"/>
+                </td>                
+                <td>
+                    <label>Contact</label>               
+                </td>
+                <td>
+                    <apex:inputField value="{!opp.Contact__c}"/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Tracking Code Opp</label>
+                </td>
+                <td>
+                    <apex:inputField value="{!opp.Tracking_Code_Opp__c}" />
+                </td>                
+                <td>
+                    <label>Subscribed to Newsletter</label>               
+                </td>
+                <td>
+                    <apex:inputField value="{!opp.Subscribed_to_Newsletter__c}"/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Search Type Opp</label>
+                </td>
+                <td>
+                    <apex:inputField value="{!opp.Search_Type_Opp__c}" />
+                </td>                
+                <td>
+                    <label>Forecast Category</label>               
+                </td>
+                <td>
+                    <apex:inputField value="{!opp.ForecastCategoryName}" required="true"/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Initial underwriting approval</label>
+                </td>
+                <td>
+                    <apex:inputField value="{!opp.Initial_underwriting_approval__c}" />
+                </td>                
+                <td>
+                    <label> Reference Number (email AND postcard)</label>               
+                </td>
+                <td>
+                    <apex:inputField value="{!opp.Postcard_Code__c}"/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>PPC Creative Opp</label>
+                </td>
+                <td>
+                    <apex:inputField value="{!opp.PPC_Creative_Opp__c}"/>
+                </td>                
+                <td>
+                    <label> Opportunity Level</label>               
+                </td>
+                <td>
+                    <apex:inputField value="{!opp.Opportunity_Level__c}"/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Referring URL Opp</label>
+                </td>
+                <td>
+                    <apex:inputField value="{!opp.Referring_URL_Opp__c}" />
+                </td>               
+                <td>
+                    <label>Email Validation Codel</label>               
+                </td>
+                <td>
+                    <apex:inputField value="{!opp.Email_Validation_Code__c}"/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Management Sign Off</label>
+                </td>
+                <td>
+                    <apex:inputField value="{!opp.Management_Sign_Off__c}" />
+                </td>                
+                <td>
+                    <label>Sent Mailer</label>               
+                </td>
+                <td>
+                    <apex:inputField value="{!opp.Sent_Mailer__c}"/>
+                </td>
+            </tr>
+            
+            <tr>
+                <td>
+                    <label>Opportunity Record Type</label>
+                </td>
+                <td>
+                    <apex:outputField value="{!opp.RecordType.Name}" />
+                </td>
+                <td colspan="2">
+                    &nbsp;
+                </td>              
+              <td>
+                    <label>Underwriting</label>               
+                </td>
+                <td>
+                    <apex:inputField value="{!opp.Underwriting__c}"/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>International Sale Hidden Text</label>
+                </td>
+                <td>
+                    <apex:inputField value="{!opp.International_Sale_Hidden_Text__c}"/>
+                </td>
+                <td colspan="2">
+                    &nbsp;
+                </td>                
+            </tr>-->
+            
+            <tr>
+                <td colspan="4">
+                    <!--c:Extjs_Panel title="Partner Emails"/-->
+                    &nbsp;
+                </td>
+            </tr>
+            <tr>
+                <td colspan="4">
+                    <!--c:Extjs_Bank_Statement parentField="Opportunity__c" height="200" title="Partner Emails" object="Partner_Email__c" fields="Name" rows="10" minimized="false" parentRecordId="{!$CurrentPage.parameters.Id}"/-->  
+                </td>
+            </tr>
+            <!-- <tr>
+                <td>
+                    <label>Partner Email 1</label>
+                </td>
+                <td>
+                    &nbsp;
+                </td>                
+                <td>
+                    <label>Partner Email 4</label>               
+                </td>
+                <td>
+                    &nbsp;
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Partner Email 2</label>
+                </td>                   
+                <td>
+                    &nbsp;
+                </td>                
+                <td>
+                    <label>Partner Email 2 </label>               
+                </td>
+                <td>
+                    &nbsp;
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Partner Email 3</label>
+                </td>
+                <td>
+                    &nbsp;
+                </td>                
+                <td>
+                    <label>Partner Email 6 </label>               
+                </td>
+                <td>
+                    &nbsp;
+                </td>                 
+            </tr>-->
+            
+            
+            
+            <!-- <tr>
+                <td colspan="4">
+                    <c:Extjs_Panel title="Sales Assistant Checklist"/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>3 Minute Application</label>
+                </td>
+                <td>
+                  <apex:inputField value="{!opp.X3_Minute_Application2__c}"  />
+                </td>               
+                <td>
+                    <label>Existing Competitor Advance?</label>               
+                </td>
+                <td>
+                    <apex:inputField value="{!opp.Existing_Competitor_Advance2__c}" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>4 Months of CC Statements</label>
+                </td>
+                <td>
+                  <apex:inputField value="{!opp.X4_Months_of_CC_Statements2__c}"  />
+                </td>                
+                <td>
+                    <label>Competitor Advance Company</label>               
+                </td>
+                <td>
+                    <apex:inputField value="{!opp.Competitor_Advance_Company__c}" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Payoff Check Requested </label>
+                </td>
+                <td>
+                  <apex:inputField value="{!opp.Pay_Off_Check_Requested__c}"  />
+                </td>                
+                <td>
+                    <label>FED-X Tracking Number</label>               
+                </td>
+                <td>
+                    <apex:inputField value="{!opp.FED_X_Tracking_Number__c}" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Sales Check List Notes </label>
+                </td>
+                <td>
+                  <apex:inputField value="{!opp.Sales_Check_List_Notes__c}" />
+                </td>
+                <td colspan="2">
+                    &nbsp;
+                </td>
+            </tr>-->
+            
+            <tr>
+                <td colspan="4">
+                    <c:Extjs_Panel title="Pre-Qualification Information"/>
+                </td>
+            </tr>
+             <tr>
+                <td>
+                    <label>Type</label>
+                </td>
+                <td colspan="3">
+                  <apex:inputField value="{!opp.Type}"  />
+                </td>                
+                <!-- ><td>
+                    <label>Pre-Qual Decision</label>               
+                </td>
+                <td>
+                    <apex:inputField value="{!opp.Pre_Qual_Decision__c}" />
+                </td>-->                
+            </tr>
+            
+            <tr>
+                <td colspan="4">
+                    <c:Extjs_Panel title="Repriced Deal Status"/>
+                </td>
+            </tr>
+            
+            <tr>
+                <td colspan="4">
+                    <c:Extjs_Panel title="Reduce Slit Status"/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Date Split Changed </label>
+                </td>
+                <td>
+                  <apex:inputField value="{!opp.Date_Split_Changed__c}"  />
+                </td>                
+                <td>
+                    <label>Type of Change</label>               
+                </td>
+              <td>
+                    <apex:inputField value="{!opp.Type_of_Change__c}" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>New Split % </label>
+                </td>
+                <td>
+                  <apex:inputField value="{!opp.New_Split__c}"  />
+                </td>                
+                <td colspan="2">
+                    &nbsp;
+                </td>
+            </tr>
+            
+            <tr>
+                <td colspan="4">
+                    <c:Extjs_Panel title="Advance Performance"/>
+                </td>
+            </tr>
+            <tr>
+                <!-- <td>
+                    <label>Current % ROI </label>
+                </td>
+                <td>
+                  <apex:inputField value="{!opp.Current_ROI__c}"  />
+                </td>-->             
+                <td>
+                    <label>Remaining Balance</label>               
+                </td>
+                <td>
+                    <apex:inputField value="{!opp.Remaining_Balance__c}" />
+                </td>
+                <td colspan="2">
+                    &nbsp;
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Percent Paid Off </label>
+                </td>
+                <td>
+                  <apex:inputField value="{!opp.Percent_Paid_Off__c}"  />
+                </td>                
+                <td>
+                    <label>Advance Payoff Date</label>               
+                </td>
+                <td>
+                    <apex:inputField value="{!opp.Advance_Payoff_Date__c}" />
+                </td>                
+            </tr>
+            <tr>
+                <td colspan="4">
+                    <c:Extjs_Panel title="Description"/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Processing Representative</label>
+                </td>
+                <td>
+                  <apex:inputField value="{!opp.Processing_Representative__c}"  />
+                </td>                
+                <td>
+                    <label>Description</label>               
+                </td>
+                <td>
+                    <apex:inputField value="{!opp.Description}" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Intended use of cash?</label>
+                </td>
+                <td>
+                  <apex:inputField value="{!opp.Intended_use_of_cash__c}"  />
+                </td>                
+                <td>
+                    <label>Description</label>               
+                </td>
+                <td>
+                    &nbsp;
+                </td>
+            </tr>
+            <tr>
+                <td colspan="4">
+                    <c:Extjs_Panel title="Advance Financial Information"/>
+                </td>
+            </tr>
+
+            <!--<tr>
+                <td>                    
+                    <label>Purpose of Funds</label>                    
+                </td>
+                <td>
+                  <apex:inputField value="{!opp.Purpose_of_Funds__c}"  />                  
+                </td>              
+                <td>
+                    <label> AE Calculator Gross Monthly Sales</label>               
+                </td>
+                <td>
+                    <apex:inputField value="{!opp.Gross_monthly_sales__c}" />
+                </td>
+            </tr>-->
+            <!-- <tr>
+                <td>
+                    <label>SIC CODE</label>
+                </td>
+                <td>
+                  <apex:inputField value="{!opp.SIC_CODE__c}"  />
+                </td>                                
+                <td colspan="2">
+                    &nbsp;
+                </td>
+            </tr>-->
+            
+            <tr>
+                <td colspan="4">
+                    <c:Extjs_Panel title="Advance Operational Information"/>
+                </td>
+            </tr>
+            <!-- <tr>
+                <td>
+                    <label>Current Processor</label>
+                </td>
+                <td>
+                  <apex:inputField value="{!opp.Current_Processor__c}"  />
+                </td>                
+                <td>
+                    <label>New Processor</label>
+                </td>
+                <td>
+                  <apex:inputField value="{!opp.Processor_Name__c}"  />
+                </td>
+            </tr>-->
+            <tr>
+                <td>
+                    <label>Submit to Sales Assistant</label>               
+                </td>
+                <td>
+                    <apex:inputField value="{!opp.Submit_to_Sales_Assistant__c}" />
+                </td>                                
+                <td>
+                    <label> Submit to UW AND Processing</label>               
+                </td>
+                <td>
+                    <apex:inputField value="{!opp.Submit_to_UW_Processing__c}" />
+                </td>
+            </tr>
+            <tr>                                
+                <td>
+                    <label>Calculate Due Dates </label>             
+                </td>
+                <td>
+                    <apex:inputField value="{!opp.Calculate_Due_Dates__c}" />
+                </td>
+                <td>
+                                   
+                </td>
+                <td>
+                    
+                </td>
+            </tr>
+            <!-- <tr>
+                <td>
+                    <label>Resulting Process</label>
+                </td>
+                <td>
+                  <apex:inputField value="{!opp.Resulting_Process__c}"  />
+                </td>               
+                <td>
+                    <label>Split Fund Set Up</label>
+                </td>
+                <td>
+                  <apex:inputField value="{!opp.Split_Fund_Set_Up__c}"  />
+                </td>
+            </tr>-->
+           
+            
+            <!--<tr>
+                <td colspan="4">
+                    <c:Extjs_Panel title="Underwriting Information"/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>QC Person</label>
+                </td>
+                <td>
+                  <apex:inputField value="{!opp.QC_Person__c}"  />
+                </td>                
+                <td>
+                    <label>Decision Date</label>               
+                </td>
+                <td>
+                    <apex:inputField value="{!opp.Decision_Date__c}" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    
+                </td>
+                <td>
+                  
+                </td>                
+                <td>
+                    <label>Underwriting Decision</label>               
+                </td>
+                <td>
+                    <apex:inputField value="{!opp.Underwriting_Approval__c}" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Data Entry Date</label>
+                </td>
+                <td>
+                  <apex:inputField value="{!opp.Data_Entry_Date__c}"  />
+                </td>                
+                <td>
+                         
+                </td>
+                <td>
+                   
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Re-Decision Date</label>
+                </td>
+                <td>
+                  <apex:inputField value="{!opp.Re_Decision_Date__c}"  />
+                </td>                
+                <td>
+                    <label>AE Calculator Average</label>               
+                </td>
+                <td>
+                    <apex:inputField value="{!opp.AE_Calculator_Average__c}" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Transition Initials</label>
+                </td>
+                <td>
+                  <apex:inputField value="{!opp.Transition_Initials__c}"  />
+                </td>                
+                <td>
+                    <label>QC Calculator Average</label>               
+                </td>
+                <td>
+                    <apex:inputField value="{!opp.QC_Calculator_Average__c}" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Underwriter's Score</label>
+                </td>
+                <td>
+                  <apex:inputField value="{!opp.Underwriter_s_Score__c}"  />
+                </td>                
+                <td>
+                    <label>Average Ticket</label>               
+                </td>
+                <td>
+                    <apex:inputField value="{!opp.Average_Ticket__c}" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Unqualified Reason</label>
+                </td>
+                <td>
+                  <apex:inputField value="{!opp.Unqualified_Reason__c}"  />
+                </td>                
+                <td>
+                    <label>Underwriting Notes</label>               
+                </td>
+                <td>
+                    <apex:inputField value="{!opp.Underwriting_Notes__c}" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Rescind Reason</label>
+                </td>
+                <td>
+                  <apex:inputField value="{!opp.Rescind_Reason__c}"  />
+                </td>                
+                <td>
+                    <label>Decline Reason</label>               
+                </td>
+                <td>
+                    <apex:inputField value="{!opp.Decline_Reason__c}" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Approved With Conditions</label>
+                </td>
+                <td>
+                  <apex:inputField value="{!opp.Approved_With_Conditions__c}"  />
+                </td>                
+                <td>
+                    <label>Exceptions</label>               
+                </td>
+                <td>
+                    <apex:inputField value="{!opp.Exceptions__c}" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Internal Underwriting Notes  </label>
+                </td>
+                <td>
+                  <apex:inputField value="{!opp.Internal_Underwriting_Notes__c}"  />
+                </td>
+                <td colspan="2">
+                    &nbsp;
+                </td>          
+            </tr>-->
+            
+            <!-- <tr>
+                <td colspan="4">
+                    <c:Extjs_Panel title="UCC Information"/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>UCC Filing</label>
+                </td>
+                <td>
+                  <apex:inputField value="{!opp.UCC_Filing__c}"  />
+                </td>               
+                <td>
+                    <label>UCC Ordered</label>               
+                </td>
+                <td>
+                    <apex:inputField value="{!opp.UCC_Ordered__c}" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>UCC Filing Reason</label>
+                </td>
+                <td>
+                  <apex:inputField value="{!opp.UCC_Filing_Reason__c}"  />
+                </td>                
+                <td>
+                    <label>UCC Request Date</label>               
+                </td>
+                <td>
+                    <apex:inputField value="{!opp.UCC_Date__c}" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>UCC Debtor Legal Name</label>
+                </td>
+                <td>
+                  <apex:inputField value="{!opp.UCC_Debtor_Legal_Name__c}"  />
+                </td>                
+                <td colspan="2">
+                    &nbsp;
+                </td>          
+            </tr>-->
+            
+            <!-- <tr>
+                <td colspan="4">
+                    <c:Extjs_Panel title="Cards Used To Payback"/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Visa/MC</label>
+                </td>
+                <td>
+                  <apex:inputField value="{!opp.Visa_MC__c}"  />
+                </td>
+                <td>
+                    &nbsp;
+                </td>
+                <td>
+                    <label>Visa/MC/Debit</label>               
+                </td>
+                <td>
+                    <apex:inputField value="{!opp.Visa_MC_Debit__c}" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Visa/MC/Discover</label>
+                </td>
+                <td>
+                  <apex:inputField value="{!opp.Visa_MC_Discover__c}"  />
+                </td>
+                <td>
+                    &nbsp;
+                </td>
+                <td>
+                    <label>Visa/MC/Debit/Discover</label>               
+                </td>
+                <td>
+                    <apex:inputField value="{!opp.Visa_MC_Debit_Discover__c}" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Visa/MC/Debit/Diners</label>
+                </td>
+                <td>
+                  <apex:inputField value="{!opp.Visa_MC_Debit_Diners__c}"  />
+                </td>
+                <td>
+                    &nbsp;
+                </td>
+                <td>
+                    <label>Visa/MC/Debit/Amex/Discover</label>               
+                </td>
+                <td>
+                    <apex:inputField value="{!opp.Visa_MC_Debit_Amex_Discover__c}" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Visa/MC/Debit/Amex</label>
+                </td>
+                <td>
+                  <apex:inputField value="{!opp.Visa_MC_Debit_Amex__c}"  />
+                </td>
+                <td>
+                    &nbsp;
+                </td>
+                <td>
+                    <label>Fixed Amount</label>               
+                </td>
+                <td>
+                  
+                </td>
+                <td colspan="3">
+                    &nbsp;
+                </td> 
+            </tr>  -->
+           
+            <!--<tr>
+                <td colspan="4">
+                    <c:Extjs_Panel title="Bank Statement Information"/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Month</label>
+                </td>
+                <td>
+                  <apex:inputField value="{!opp.Month__c}"  />
+                </td>                
+                <td>
+                    <label>Year</label>               
+                </td>
+                <td>
+                    <apex:inputField value="{!opp.Year__c}" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>MEB </label>
+                </td>
+                <td>
+                  <apex:inputField value="{!opp.MEB__c}"  />
+                </td>                
+                <td>
+                    <label>Number of NSF 1</label>               
+                </td>
+                <td>
+                    <apex:inputField value="{!opp.NSF__c}" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Month 2</label>
+                </td>
+                <td>
+                  <apex:inputField value="{!opp.Month_2__c}"  />
+                </td>                
+                <td>
+                    <label>Year 2</label>               
+                </td>
+                <td>
+                    <apex:inputField value="{!opp.Year_2__c}" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>MEB 2</label>
+                </td>
+                <td>
+                  <apex:inputField value="{!opp.MEB_2__c}"  />
+                </td>                
+                <td>
+                    <label>Number of NSF 2</label>               
+                </td>
+                <td>
+                    <apex:inputField value="{!opp.NSF_2__c}" />
+                </td>                
+            </tr>-->
+            
+            <tr>
+                <td colspan="4">
+                    <c:Extjs_Panel title="Decline Reason Details"/>
+                </td>
+            </tr>
+            <!-- <tr>
+                <td>
+                    <label>Judgements Open</label>
+                </td>
+                <td>
+                  <apex:inputField value="{!opp.Judgements_Open__c}"  />
+                </td>                
+                <td>
+                    <label>Tax Liens Open</label>               
+                </td>
+                <td>
+                    <apex:inputField value="{!opp.Tax_Liens_Open__c}" />
+                </td>
+            </tr>-->           
+            <tr>
+                <td>
+                    <label>Wage Garnishment w/in the past 12 months</label>
+                </td>
+               <td>
+                  <apex:inputField value="{!opp.Wage_Garnishment_w_in_the_past_12_months__c }"  />
+                </td>
+                
+                <td>
+                    <label>Tax Liens/Judgment on Business</label>               
+                </td>
+                <td>
+                    <apex:inputField value="{!opp.Tax_Liens_Judgment_on_Business__c}" />
+                </td>
+            </tr>
+                        
+           <!-- <tr>
+                <td colspan="4">
+                    <c:Extjs_Panel title="Eligibility Criteria"/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Company in business &lt; 1 year</label>
+                </td>
+                <td>
+                  <apex:inputField value="{!opp.EC_Company_in_business_6_months__c}"  />
+                </td>                
+                <td>
+                    <label>Applicant #2 FICO</label>               
+                </td>
+                <td>
+                    <apex:inputField value="{!opp.Applicant_2_FICO__c}" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>&lt; 4 consecutive months of processing</label>
+                </td>
+                <td>
+                  <apex:inputField value="{!opp.EC_X4_consecutive_months_of_processing__c}"  />
+                </td>                
+                <td>
+                    <label>&lt; 12 separate daily deposits per month</label>               
+                </td>
+                <td>
+                    <apex:inputField value="{!opp.EC_X12_separate_daily_deposits_per_month__c}" />
+                </td>           
+            </tr>-->
+            
+            <!-- <tr>
+                <td colspan="4">
+                    <c:Extjs_Panel title="Business Alerts"/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Business Category</label>
+                    &nbsp;
+                </td>
+                <td>
+                  <apex:inputField value="{!opp.Business_Category__c}"  />
+                  &nbsp;
+                </td>                
+                <td>
+                    <label>FICO score &lt; 500</label>               
+                </td>
+                <td>
+                    <apex:inputField value="{!opp.BA_FICO_score_500__c}" />
+                </td>
+            </tr>
+            <tr>
+               <td>
+                    <label>&lt; 2 years in business</label>
+                </td>
+                <td>
+                  <apex:inputField value="{!opp.BA_X2_years_in_business__c}"  />
+                </td>
+                 <td colspan="2">
+                    &nbsp;
+                </td>
+            </tr>-->
+            
+            <tr>
+                <td colspan="4">
+                    <c:Extjs_Panel title="Character"/>
+                </td>
+            </tr>
+            <!-- <tr>
+                <td>
+                    <label>Confirmed principal owner(s) in Westlaw?</label>
+                </td>
+                <td>
+                  <apex:inputField value="{!opp.CH_Business_Ownership_Confirmed__c}"  />
+                </td>                
+                <td>
+                    <label>Confirmed legal name in Westlaw?</label>               
+                </td>
+                <td>
+                    <apex:inputField value="{!opp.Confirmed_legal_name_in_Westlaw__c}" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Eligible Photo ID</label>
+                </td>
+                <td>
+                  <apex:inputField value="{!opp.Eligible_Photo_ID__c}"  
+                  <apex:inputField value="{!oppRecord.Eligible_Photo_ID__c}" />
+                  
+                </td>                
+                <td>
+                    <label>Other UCC Filings:</label>
+                </td>
+                <td>
+                  <apex:inputField value="{!opp.Other_UCC_Filings__c}"  />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Pre-Qual FAIL Reason</label>
+                </td>
+                <td>
+                  <apex:inputField value="{!opp.Pre_Qual_FAIL_Reason__c}"  />
+                </td>                               
+            </tr>-->
+            <tr>
+               <td >
+                   
+                </td>
+                <td >
+                  
+                </td>                
+                <td>
+                    <label>Other UCC Filings:</label>
+                </td>
+                <td>
+                  <apex:inputField value="{!opp.Other_UCC_Filings__c}"  />
+                </td>
+            </tr>
+            
+            <!-- <tr>
+                <td colspan="4">
+                    <c:Extjs_Panel title="Merchant Interview"/>
+                </td>
+            </tr>
+            
+            <tr>
+               
+                <td>
+                    <label>Current Balance With Competitor/RA</label>
+                </td>
+                <td>
+                  <apex:inputField value="{!opp.MI_Cash_Advance_Balance_Owed_if_applicab__c}"  />
+                </td>
+            </tr>-->
+            
+            <!-- <tr>
+                <td colspan="4">
+                    <c:Extjs_Panel title="Processor - Correspondence"/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Site Survey Ordered Date/Time    </label>
+                </td>
+                <td>
+                  <apex:inputField value="{!opp.Site_Survey_Ordered__c}"  />
+                </td>                
+                <td>
+                    <label>Site Survey Ordered Due Date</label>               
+                </td>
+                <td>
+                    <apex:inputField value="{!opp.Site_Survey_Ordered_Due_Date__c}" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Site Survey Available</label>
+                </td>
+                <td>
+                  <apex:inputField value="{!opp.Site_Survey_Available__c}"  />
+                </td>                
+                <td>
+                    <label>Site Survey Expected Completion Date</label>               
+                </td>
+               <td>
+                    <apex:inputField value="{!opp.Site_Survey_Available_Due_Date__c}" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Welcome Kit Sent</label>
+                </td>
+                <td>
+                  <apex:inputField value="{!opp.Welcome_Kit_Sent__c}"  />
+                </td>                
+                <td>
+                    <label>Welcome Kit Sent Due Date</label>               
+                </td>
+                <td>
+                    <apex:inputField value="{!opp.Welcome_Kit_Sent_Due_Date__c}" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Decline Letter Sent</label>
+                </td>
+                <td>
+                  <apex:inputField value="{!opp.Decline_Letter_Sent__c}"  />
+                </td>                
+                <td>
+                    <label>Decline Letter Sent Due Date</label>               
+                </td>
+                <td>
+                    <apex:inputField value="{!opp.Decline_Letter_Sent_Due_Date__c}" />
+                </td>
+            </tr>
+            
+            
+            <!-- <tr>
+                <td colspan="4">
+                    <c:Extjs_Panel title="Processor - Wire Coordinator"/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Account Database Entry</label>
+                </td>
+                <td>
+                  <apex:inputField value="{!opp.Account_Database_Entry__c}"  />
+                </td>                
+                <td>
+                    <label>Account Database Entry Due Date</label>               
+                </td>
+                <td>
+                    <apex:inputField value="{!opp.Account_Database_Entry_Due_Date__c}" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Begin Activity Monitoring</label>
+                </td>
+                <td>
+                  <apex:inputField value="{!opp.Begin_Activity_Monitoring__c}"  />
+                </td>                
+                <td>
+                    <label>Begin Activity Monitoring Due Date</label>               
+                </td>
+                <td>
+                    <apex:inputField value="{!opp.Begin_Activity_Monitoring_Due_Date__c}" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Funds Wired</label>
+                </td>
+                <td>
+                  <apex:inputField value="{!opp.Funded_by_WC__c}"  />
+                </td>                
+                <td>
+                    <label>Funds Wired Due Date</label>               
+                </td>
+                <td>
+                    <apex:inputField value="{!opp.Funded_by_WC_Due_Date__c}" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Funding Status</label>
+                </td>
+                <td>
+                  <apex:inputField value="{!opp.Funding_Status__c}"  />
+                </td>
+                <td colspan="2">
+                    &nbsp;
+                </td> 
+            </tr>-->            
+            
+        </table>
+        <div align="center">                
+            <apex:commandButton value="Save" action="{!save}" reRender="pageMessageMain" status="ajaxStatus" oncomplete="setfocus('{!$Component.pageMessageMain}');"/>&nbsp;&nbsp;        
+            <!--<apex:commandButton value="Cancel" action="{!cancel}" status="ajaxStatus"/>-->
+        </div> 
+    </apex:form>
+    <apex:actionstatus startStyleClass="requiredLoaderBG" id="ajaxStatus" />
+</apex:page>

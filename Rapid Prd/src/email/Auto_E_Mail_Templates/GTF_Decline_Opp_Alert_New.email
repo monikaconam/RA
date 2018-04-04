@@ -1,0 +1,16 @@
+<messaging:emailTemplate subject="GTF - Opportunity to Review" recipientType="User" relatedToType="Opportunity" >
+<messaging:plainTextEmailBody >
+https://na5.salesforce.com/{!relatedTo.Id}
+
+Decision Date: {!relatedTo.Decision_Date__c}
+
+Opp Name: {!relatedTo.Name}
+Amount: {!relatedTo.Amount}
+Stage: {!relatedTo.StageName}
+Decline Reason: {!relatedTo.Decline_Reason__c}
+Unqualified Reason: {!relatedTo.Unqualified_Reason__c}
+
+Opp Owner: {!relatedTo.Owner.Name}
+Campaign: {!relatedTo.PrimaryCampaignSource__c}
+</messaging:plainTextEmailBody>
+</messaging:emailTemplate>

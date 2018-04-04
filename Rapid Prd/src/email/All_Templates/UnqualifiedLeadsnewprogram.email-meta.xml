@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>StandardLetterheadSample</letterhead>
+    <name>Unqualified Leads - New Program</name>
+    <style>formalLetter</style>
+    <subject>{!Lead.FirstName}, we will contact you shortly!</subject>
+    <textOnly>Date: {!Lead.CreatedDate}
+ 
+{!Lead.FirstName} {!Lead.LastName}
+{!Lead.Company}
+{!Lead.Address}
+ 
+Dear {!Lead.FirstName} {!Lead.LastName}:
+ 
+Thank you for your application to RapidAdvance.  We appreciate your interest in our merchant cash advance product.
+ We will contact you within one business day of receiving your application.  If you would like to speak to someone immediately, you can call 866.837.1777 and ask for Greg Pfeiffer. 
+Once again, thank you for choosing RapidAdvance.  We look forward to serving you.
+ 
+Sincerely,
+ 
+Greg Pfeiffergpfeiffer@rapidadvance.com
+
+ 
+ </textOnly>
+    <type>html</type>
+</EmailTemplate>

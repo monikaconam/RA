@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AssignmentRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <assignmentRule>
+        <fullName>All Assignment Rules</fullName>
+        <active>true</active>
+        <ruleEntry>
+            <assignedTo>bklenk@rapidadvance.com</assignedTo>
+            <assignedToType>User</assignedToType>
+            <booleanFilter>1 AND 2</booleanFilter>
+            <criteriaItems>
+                <field>Lead.LeadSource</field>
+                <operation>equals</operation>
+                <value>Web-To-Lead</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Lead.CreatedById</field>
+                <operation>equals</operation>
+                <value>Web Services</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>bklenk@rapidadvance.com</assignedTo>
+            <assignedToType>User</assignedToType>
+            <criteriaItems>
+                <field>Lead.LeadSource</field>
+                <operation>contains</operation>
+                <value>Calc</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>bklenk@rapidadvance.com</assignedTo>
+            <assignedToType>User</assignedToType>
+            <booleanFilter>1 AND 2</booleanFilter>
+            <criteriaItems>
+                <field>Campaign.Name</field>
+                <operation>contains</operation>
+                <value>Lendio,Business.com,LendingTree</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Lead.CreatedById</field>
+                <operation>equals</operation>
+                <value>Web Services</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>bklenk@rapidadvance.com</assignedTo>
+            <assignedToType>User</assignedToType>
+            <criteriaItems>
+                <field>Lead.LeadSource</field>
+                <operation>equals</operation>
+                <value>Customer Journey Web to Lead</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>amatini@rapidadvance.com</assignedTo>
+            <assignedToType>User</assignedToType>
+            <criteriaItems>
+                <field>Campaign.Name</field>
+                <operation>equals</operation>
+                <value>Quicken Loans Mortgage Services (QLMS) - Partners</value>
+            </criteriaItems>
+            <template>Auto_E_Mail_Templates/New_BD_Web_Lead</template>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>amatini@rapidadvance.com</assignedTo>
+            <assignedToType>User</assignedToType>
+            <booleanFilter>1 OR 2</booleanFilter>
+            <criteriaItems>
+                <field>Campaign.Name</field>
+                <operation>equals</operation>
+                <value>Partner Web Leads</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Campaign.Type</field>
+                <operation>equals</operation>
+                <value>Potential Partners</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>partnerteamuser@rapidadvance.com</assignedTo>
+            <assignedToType>User</assignedToType>
+            <booleanFilter>1 AND 2</booleanFilter>
+            <criteriaItems>
+                <field>Lead.LeadSource</field>
+                <operation>equals</operation>
+                <value>Partner</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Lead.Campaign_Name_Upload__c</field>
+                <operation>equals</operation>
+                <value>70170000000uOqEAAU</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <criteriaItems>
+                <field>Lead.LeadSource</field>
+                <operation>equals</operation>
+                <value>Referral</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Lead.Referral_Merchant_ID__c</field>
+                <operation>notEqual</operation>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>rockconnections@rapidadvance.com</assignedTo>
+            <assignedToType>User</assignedToType>
+            <criteriaItems>
+                <field>Lead.CreatedById</field>
+                <operation>equals</operation>
+                <value>Connection User</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Creditera</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <booleanFilter>1 OR 2</booleanFilter>
+            <criteriaItems>
+                <field>Campaign.Name</field>
+                <operation>equals</operation>
+                <value>Creditera</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Lead.Campaign_Name_Upload__c</field>
+                <operation>equals</operation>
+                <value>70170000000tsyXAAQ</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Pre_Qual_Pass_Email_Campaign</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Campaign.Name</field>
+                <operation>equals</operation>
+                <value>Pre Qual Pass Email Campaign</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>ddechiaro@rapidadvance.com</assignedTo>
+            <assignedToType>User</assignedToType>
+            <criteriaItems>
+                <field>Lead.LeadSource</field>
+                <operation>equals</operation>
+                <value>List Upload</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>nathanielmiller@rapidadvance.com</assignedTo>
+            <assignedToType>User</assignedToType>
+            <booleanFilter>((1 OR 2) AND (3 OR 4)) and 5</booleanFilter>
+            <criteriaItems>
+                <field>Lead.LeadSource</field>
+                <operation>equals</operation>
+                <value>Partner</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Lead.LeadSource</field>
+                <operation>equals</operation>
+                <value>Rapid API</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Lead.Campaign_Name_Upload__c</field>
+                <operation>equals</operation>
+                <value>70170000000tP2gAAE</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Lead.Campaign_Name__c</field>
+                <operation>equals</operation>
+                <value>Fundera</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Lead.Preferred_Phone_Number__c</field>
+                <operation>notEqual</operation>
+                <value></value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>nathanielmiller@rapidadvance.com</assignedTo>
+            <assignedToType>User</assignedToType>
+            <criteriaItems>
+                <field>Lead.Campaign_Name__c</field>
+                <operation>equals</operation>
+                <value>Copperline Capital</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Lead.LeadSource</field>
+                <operation>equals</operation>
+                <value>Rapid API</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>bklenk@rapidadvance.com</assignedTo>
+            <assignedToType>User</assignedToType>
+            <criteriaItems>
+                <field>Lead.Campaign_Name_Upload__c</field>
+                <operation>equals</operation>
+                <value>70170000000tvZtAAI</value>
+            </criteriaItems>
+        </ruleEntry>
+    </assignmentRule>
+    <assignmentRule>
+        <fullName>Lead Assignment Testing</fullName>
+        <active>false</active>
+        <ruleEntry>
+            <assignedTo>nathanielmiller@rapidadvance.com</assignedTo>
+            <assignedToType>User</assignedToType>
+            <criteriaItems>
+                <field>Lead.OwnerId</field>
+                <operation>equals</operation>
+                <value>Web Apps</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Lead.OwnerId</field>
+                <operation>equals</operation>
+            </criteriaItems>
+        </ruleEntry>
+    </assignmentRule>
+</AssignmentRules>

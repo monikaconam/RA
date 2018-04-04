@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <interviewLabel>Lead Update Flow - User Activity Field {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Lead Update Flow - User Activity Field</label>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <name>Last_User_Activity_Update</name>
+        <label>Last User Activity Update</label>
+        <locationX>663</locationX>
+        <locationY>237</locationY>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>LeadID</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>Last_User_Activity__c</field>
+            <value>
+                <elementReference>$Flow.CurrentDateTime</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Lead</object>
+    </recordUpdates>
+    <startElementReference>Last_User_Activity_Update</startElementReference>
+    <variables>
+        <name>LeadID</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+    </variables>
+</Flow>

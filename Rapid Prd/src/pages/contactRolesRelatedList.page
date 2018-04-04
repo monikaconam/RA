@@ -1,0 +1,46 @@
+<apex:page standardController="Opportunity" showHeader="false" sidebar="false">
+    <script type="text/javascript">
+        window.onload = function(){
+            var inputElem = document.getElementsByTagName("a");
+            for(var i=0; i<inputElem.length; i++)
+            {
+               inputElem[i].setAttribute('target', '_self');
+               var parentClass = inputElem[i].parentNode.className;
+               if(parentClass.indexOf("dataCell") != -1){
+                   var elehref = '/apex/OpportunityContactRole?oppId={!$CurrentPage.parameters.Id}&retURL=%2Fapex%2FcontactRolesRelatedList%3FId%3D{!$CurrentPage.parameters.Id}';
+                   inputElem[i].href =  elehref;   
+               } else if(parentClass.indexOf("actionColumn") != -1){
+                   var eletitle = inputElem[i].title;
+                   if(eletitle.indexOf('Edit') != -1 && eletitle.indexOf('Edit') == 0){
+                       inputElem[i].href = '/apex/OpportunityContactRole?oppId={!$CurrentPage.parameters.Id}&retURL=%2Fapex%2FcontactRolesRelatedList%3FId%3D{!$CurrentPage.parameters.Id}';
+                   }
+               }
+            }
+
+        }
+    </script>
+    <apex:relatedList list="OpportunityContactRoles">
+    <apex:facet name="header">
+        <div class="pbHeader"><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="pbTitle">
+        <img src="/s.gif" alt="" width="12" height="1" class="minWidth" title="" style="margin-right: 0.25em;" />
+        <img src="/s.gif" alt="" class="relatedListIcon" title="" /><h3 id="j_id0:j_id2_title">Contact Roles</h3></td><td class="pbButton">
+        <input value=" New " class="btn" name="newRole"  onclick="navigateToUrl('/apex/OpportunityContactRole?oppId={!$CurrentPage.parameters.Id}&retURL=%2Fapex%2FcontactRolesRelatedList%3FId%3D{!$CurrentPage.parameters.Id}',null,'newRole');" title="New Contact Roles" type="button" /></td><td class="pbHelp">&nbsp;</td></tr>
+        </tbody></table></div>
+    </apex:facet>
+    </apex:relatedList>
+    
+   <!--  <apex:stylesheet value="{!$Resource.ExtJS4}/extjs-4.1.0/resources/css/ext-all.css" />
+    <apex:includeScript value="{!$Resource.ExtJS4}/extjs-4.1.0/ext-all.js"/>    
+    <apex:stylesheet value="{!$Resource.ExtJS4}/extjs-4.1.0/resources/css/xtheme-gray-extend.css" id="theme11"/>    
+    
+    <apex:stylesheet value="{!$Resource.ExtJS4}/extjs-4.1.0/resources/ext-theme-gray/ext-theme-gray-all.css" id="theme"/>
+    <apex:stylesheet value="{!$Resource.ExtJS4}/extjs-4.1.0/resources/ext-theme-gray/ext-theme-gray-all-debug.css" id="theme1"/>
+    <apex:stylesheet value="{!$Resource.ExtJS4}/extjs-4.1.0/resources/ext-theme-gray/ext-theme-gray-all-rtl.css" id="theme2"/>
+    <apex:stylesheet value="{!$Resource.ExtJS4}/extjs-4.1.0/resources/ext-theme-gray/ext-theme-gray-all-rtl-debug.css" id="theme3"/>       
+    <script type="text/javascript">
+        Ext.BLANK_IMAGE_URL="{!$Resource.ExtJS4}/extjs-4.1.0/resources/themes/images/default/tree/s.gif"
+    </script>
+   <c:Extjs_Bank_Statement id="extPanel1" parentField="Opportunity__c" title="" height="430" object="Bank_Statement__c" fields="Bank_Name__c,Account_Number__c,Wire_Bank_Routing_Number__c,Total_Deposits__c,Average_Daily_Balance__c,NSF__c,Year__c,Month__c,Average_Balance__c,MEB__c,Monthly_Gross_Deposit__c,Monthly_Gross_Debits__c,Monthly_Cashflow__c,Number_of_NSF__c,Monthly_Average_Balance__c,Comments__c" rows="10" minimized="false" parentRecordId="{!$CurrentPage.parameters.Id}"/> 
+   <c:Extjs_Bank_Statement id="extPanel" parentField="OpportunityId" title="" height="430" object="OpportunityContactRole" fields="ContactId,Role,OpportunityId" rows="10" minimized="false" parentRecordId="{!$CurrentPage.parameters.Id}"/>
+    -->
+</apex:page>

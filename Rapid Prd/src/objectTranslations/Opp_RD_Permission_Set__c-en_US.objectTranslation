@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Opp RD Permission Set</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Opp RD Permission Set</value>
+    </caseValues>
+    <fields>
+        <label><!-- Additional Opp Access --></label>
+        <name>Additional_Opp_Access__c</name>
+    </fields>
+    <fields>
+        <label><!-- Management --></label>
+        <name>Management__c</name>
+    </fields>
+    <fields>
+        <label><!-- Pre-Qual --></label>
+        <name>Pre_Qual__c</name>
+    </fields>
+    <fields>
+        <label><!-- Processing/CS --></label>
+        <name>Processing_CS__c</name>
+    </fields>
+    <fields>
+        <label><!-- Promac - UW --></label>
+        <name>Promac_UW__c</name>
+    </fields>
+    <fields>
+        <label><!-- QC Exuser --></label>
+        <name>QC_Exuser__c</name>
+    </fields>
+    <fields>
+        <label><!-- QC --></label>
+        <name>QC__c</name>
+    </fields>
+    <fields>
+        <label><!-- Tab Order --></label>
+        <name>Tab_Order__c</name>
+    </fields>
+    <fields>
+        <label><!-- Underwriting --></label>
+        <name>Underwriting__c</name>
+    </fields>
+    <fields>
+        <label><!-- Vf Page Name --></label>
+        <name>Vf_Page_Name__c</name>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

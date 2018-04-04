@@ -1,0 +1,8 @@
+*** NEW NEWSLETTER SUBSCRIBER NOTIFICATION *** 
+
+Company: {!Lead.Company} 
+Address: {!Lead.Address}
+Lead Name: {!Lead.Name} 
+
+Lead Phone: {!Lead.Phone}
+Lead Email: {!Lead.Email}

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>CAMPAIGN_NAME</field>
+    </columns>
+    <columns>
+        <field>Campaign.Additional_Owner__c</field>
+    </columns>
+    <columns>
+        <field>Campaign.ISO_Account_Channel__c</field>
+    </columns>
+    <columns>
+        <field>NUM_OPPORTUNITIES</field>
+    </columns>
+    <filter>
+        <booleanFilter>1 AND 2</booleanFilter>
+        <criteriaItems>
+            <column>CAMPAIGN_OWNER</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>contains</operator>
+            <value>isata</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Campaign.ISO_Account_Channel__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>broker</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>isata broker</name>
+    <params>
+        <name>scopeid</name>
+        <value></value>
+    </params>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CampaignList</reportType>
+    <scope>org</scope>
+    <showDetails>true</showDetails>
+    <sortColumn>NUM_OPPORTUNITIES</sortColumn>
+    <sortOrder>Desc</sortOrder>
+</Report>

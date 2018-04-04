@@ -1,0 +1,17 @@
+<apex:page >
+    <apex:includeScript value="/support/console/31.0/integration.js"/>
+     <script type="text/javascript">
+
+           var callback = function (result) {
+               alert('sendCTIMessage API sent the following message: ' + result.message);
+           };
+
+           sforce.console.cti.onSendCTIMessage(callback);
+
+           function sendCTIMessage() {
+               sforce.console.cti.sendCTIMessage('sending a message to CTI');
+           }
+     </script>
+     <a href="#" onClick="sendCTIMessage();return false">
+                 Send a message to see your listener receiving it!</a>
+</apex:page>

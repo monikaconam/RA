@@ -1,0 +1,40 @@
+<table height="400" width="550" cellpadding="5" border="0" cellspacing="5" >
+<tr height="400" valign="top" >
+<td style=" color:#000000; font-size:12pt; background-color:#FFFFFF; font-family:arial; bLabel:main; bEditID:r3st1;" tEditID="c1r1" locked="0" aEditID="c1r1" >
+<![CDATA[<p><font size="2"><strong><u>Date:</u></strong> {!Opportunity.LastModifiedDate}</font></p>
+<p><font size="2">&nbsp;</font></p>
+
+<p><font size="2"><strong><u>Opportunity Name:</u></strong> {!Opportunity.Name}</font></p>
+<p><font size="2">&nbsp;&nbsp;</font></p>
+<p><font size="2"><strong><u>Stage:</u></strong> {!Opportunity.StageName}</font></p>
+<p><font size="2"><strong><u></u></strong></font>&nbsp;</p>
+<p><font size="2"><strong><u>Advance $:</u></strong> {!Opportunity.Amount}</font></p>
+<p><font size="2"><strong><u>Percent Payback:</u></strong> {!Opportunity.Percent_Payback__c}</font></p>
+<p><font size="2"><strong><u>Payback Amount:</u></strong> {!Opportunity.Pay_Back_Amount__c}</font></p><font size="2">
+<p>&nbsp;</p></font>
+<p><font size="2"><strong><u>Sales Check List Notes:</u></strong> {!Opportunity.Sales_Check_List_Notes__c}</font></p>
+<p><font size="2"></font>&nbsp;&nbsp;</p><font size="2">
+<p><font size="2"><u><strong>Submitted to QC &amp; Processing:</strong></u> {!Opportunity.Submit_to_UW_Processing__c}</font></p><font size="2"></font>
+<p><font size="2"><u><strong>Submitted to UW:</strong></u> {!Opportunity.Data_Entry_Date__c}</font></p></font>
+<p><font size="2"><strong><u></u></strong></font>&nbsp;</p>
+<p><font size="2"><strong><u>Underwriting Status:</u></strong> {!Opportunity.Underwriting_Approval__c}</font></p>
+<p><font size="2"><strong><u>Underwriting Decision:</u></strong> {!Opportunity.Underwriting_Approval__c}<br></font></p>
+<p><font size="2"><strong><u>Decline Reason:</u></strong> &nbsp;{!Opportunity.Decline_Reason__c}</font></p>
+<p><font size="2"><strong><u></u></strong></font>&nbsp;</p>
+<p><font size="2"><strong><u>Underwriting Notes:</u></strong> {!Opportunity.Underwriting_Notes__c}</font></p>
+<p><font size="2">&nbsp;</font></p>
+<p><font size="2"><strong><u>Processing Notes:</u></strong> {!Opportunity.Processing_Notes__c}</font><font size="2">&nbsp;</font></p>
+<p>&nbsp;</p>
+<p><font size="2"><strong><u>Paperwork Sent:</u></strong> (if applicable) {!Opportunity.00N70000001hZIY}</font></p>
+<p><font size="2"><strong><u>Paperwork Rec'd:</u></strong> (if applicable) {!Opportunity.00N70000001kEqb}&nbsp;</font></p>
+<p><font size="2"><strong></strong></font>&nbsp;</p>
+<p><font size="2"><strong><u>Split Fund Set Up:</u></strong> {!Opportunity.00N70000001hZHl}&nbsp;</font></p>
+<p><font size="2"><strong><u>Split Fund Confirmed:</u></strong> {!Opportunity.00N70000001hmHe}</font></p>
+<p><font size="2"><strong></strong></font>&nbsp;</p>
+<p><font size="2"><strong><u>Closed Reason:</u></strong> {!Opportunity.Closed_Reason__c}</font></p>
+<p><font size="2"><strong><u>Funding Status:</u></strong> {!Opportunity.Funding_Status__c}</font>&nbsp;</p>
+<p><font size="2"><strong><u>Funded Date:</u></strong> {!Opportunity.Funded_by_WC__c}</font>&nbsp;</p>
+<p><br></p><p><font size="2"><span style="text-decoration: underline; font-weight: bold;">Sent by:&nbsp; </span>{!Opportunity.LastModifiedBy}</font><br></p>
+<p>&nbsp;</p>]]></td>
+</tr>
+</table>

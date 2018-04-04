@@ -1,0 +1,28 @@
+<apex:page standardController="Opportunity" extensions="RecordAccessLogViewAllController">
+    <apex:form >       
+        <apex:pageBlock >
+            <apex:pageBlockSection columns="1"  id="pbSection" title="Total Records : {!recordCount}">
+                <apex:pageBlockTable value="{!AccessHistory}" var="p">
+                    <apex:column headerValue="User" width="34%">
+                        <apex:outputLink value="{!'/'& p.id}">{!p.name}</apex:outputLink>
+                    </apex:column>
+                    
+                    <apex:column headerValue="Date" width="50%" value="{!p.timeStamp}"/>
+                    
+                </apex:pageBlockTable>
+                <apex:panelGrid columns="9">
+                    <apex:commandLink action="{!first}" rendered="{!hasPrevious}">First</apex:commandlink>
+                    <apex:outputLabel rendered="{!hasPrevious}">&nbsp;&nbsp;|&nbsp;&nbsp;</apex:outputLabel>
+                    
+                    <apex:commandLink action="{!previous}" rendered="{!hasPrevious}">Previous</apex:commandlink>
+                    <apex:outputLabel rendered="{!AND(hasNext,hasPrevious)}">&nbsp;&nbsp;|&nbsp;&nbsp;</apex:outputLabel>
+                    
+                    <apex:commandLink action="{!next}" rendered="{!hasNext}">Next</apex:commandlink>
+                    <apex:outputLabel rendered="{!hasNext}">&nbsp;&nbsp;|&nbsp;&nbsp;</apex:outputLabel>
+                    
+                    <apex:commandLink action="{!last}" rendered="{!hasNext}">Last</apex:commandlink>
+                </apex:panelGrid>
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

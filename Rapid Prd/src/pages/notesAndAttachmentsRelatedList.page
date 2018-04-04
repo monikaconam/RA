@@ -1,0 +1,50 @@
+<apex:page standardController="Opportunity" showHeader="false" sidebar="false">
+    <script type="text/javascript">
+        window.onload = function(){
+            var inputElem = document.getElementsByTagName("a");
+            for(var i=0; i<inputElem.length; i++)
+            {
+               inputElem[i].setAttribute('target', '_self');
+               var parentClass = inputElem[i].parentNode.className;
+               if(parentClass.indexOf("dataCell") != -1){
+                   var elehref = inputElem[i].href.split('/');
+                
+                   if(elehref[3].substring(0, 3) == '002') {
+                       inputElem[i].href = '/apex/notepage?id=' + elehref[3] + '&oppid={!$CurrentPage.parameters.Id}&retURL=%2Fapex%2FnotesAndAttachmentsRelatedList%3FId%3D{!$CurrentPage.parameters.Id}';
+                   } 
+                    
+                   if(elehref[3].substring(0, 3) == '00P') {
+                       inputElem[i].href = '/apex/attachEditPage?id='+  elehref[3] + '&oppid={!$CurrentPage.parameters.Id}&retURL=%2Fapex%2FnotesAndAttachmentsRelatedList%3FId%3D{!$CurrentPage.parameters.Id}';
+                   }   
+               }
+               
+               if(parentClass.indexOf("actionColumn") != -1){
+                   var eletitle = inputElem[i].title;
+                   var atthref = inputElem[i].href.split('/');
+                   if(eletitle.indexOf('Edit') != -1 && eletitle.indexOf('Edit') == 0 && eletitle.lastIndexOf('Note') != -1 && (eletitle.lastIndexOf('Note') + 'Note'.length == eletitle.length)){
+                       inputElem[i].href = '/apex/notepage?id=' + atthref[3] + '&oppid={!$CurrentPage.parameters.Id}&retURL=%2Fapex%2FnotesAndAttachmentsRelatedList%3FId%3D{!$CurrentPage.parameters.Id}';
+                   }
+                   if(eletitle.indexOf('Edit') != -1 && eletitle.indexOf('Edit') == 0 && eletitle.lastIndexOf('Attachment') != -1 && (eletitle.lastIndexOf('Attachment') + 'Attachment'.length == eletitle.length)){
+                       inputElem[i].href = '/apex/attachEditPage?id='+  atthref[3] + '&oppid={!$CurrentPage.parameters.Id}&retURL=%2Fapex%2FnotesAndAttachmentsRelatedList%3FId%3D{!$CurrentPage.parameters.Id}';
+                   }
+                   
+                   
+               }
+            }
+            
+
+        }
+    </script>
+    <!--<apex:sectionHeader subtitle="Notes & Attachments" title="Related List"/>-->
+    <apex:relatedList list="NotesAndAttachments">
+         <apex:facet name="header">
+            <table border="0" cellpadding="0" cellspacing="0">
+            <tbody><tr><td class="pbTitle"><h3 id="j_id0:j_id2_title">Notes &amp; Attachments</h3></td>
+            <td class="pbButton">
+            <input value="New Note" class="btn" name="newNote" onclick="navigateToUrl('/apex/notepage?oppid={!$CurrentPage.parameters.Id}&retURL=%2Fapex%2FnotesAndAttachmentsRelatedList%3FId%3D{!$CurrentPage.parameters.Id}',null,'newNote');" title="New Note" type="button" />&nbsp;
+            <input value="Attach File" class="btn" name="attachFile" onclick="navigateToUrl('/apex/attachmentpage?oppid={!$CurrentPage.parameters.Id}&retURL=%2Fapex%2FnotesAndAttachmentsRelatedList%3FId%3D{!$CurrentPage.parameters.Id}',null,'attachFile');" title="Attach File" type="button" />&nbsp;</td><td class="pbHelp">&nbsp;</td></tr>
+            </tbody>
+            </table>
+         </apex:facet>
+    </apex:relatedList>
+</apex:page>

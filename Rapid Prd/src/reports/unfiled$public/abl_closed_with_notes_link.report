@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>CAMPAIGN_TYPE</field>
+    </columns>
+    <columns>
+        <field>CAMPAIGN_OWNER</field>
+    </columns>
+    <columns>
+        <field>Campaign.Additional_Owner__c</field>
+    </columns>
+    <columns>
+        <field>FULL_NAME</field>
+    </columns>
+    <columns>
+        <field>OPPORTUNITY_NAME</field>
+    </columns>
+    <columns>
+        <field>CLOSE_DATE</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>AMOUNT</field>
+    </columns>
+    <columns>
+        <field>STAGE_NAME</field>
+    </columns>
+    <columns>
+        <field>Opportunity.Notes_Link_plaintext__c</field>
+    </columns>
+    <filter>
+        <booleanFilter>((1 or 2 or 3 or 4 or 5 or 6))</booleanFilter>
+        <criteriaItems>
+            <column>CAMPAIGN_OWNER</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Nicole White</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Campaign.Additional_Owner__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Nicole White</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>CAMPAIGN_OWNER</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Gina Mackenzie</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Campaign.Additional_Owner__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Gina Mackenzie</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>CAMPAIGN_OWNER</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Donna Hinrichs</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Campaign.Additional_Owner__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Donna Hinrichs</value>
+        </criteriaItems>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Opportunity.Notes_Link__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Opportunity.Renewal__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>CAMPAIGN_NAME</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>abl closed with notes link</name>
+    <params>
+        <name>open</name>
+        <value>closedwon</value>
+    </params>
+    <params>
+        <name>probability</name>
+        <value>&gt;0</value>
+    </params>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>OpportunityCampaign</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <sortColumn>AMOUNT</sortColumn>
+    <sortOrder>Desc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>CLOSE_DATE</dateColumn>
+        <interval>INTERVAL_CURY</interval>
+    </timeFrameFilter>
+</Report>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>CAMPAIGN_NAME</field>
+    </columns>
+    <columns>
+        <field>CAMPAIGN_DESCRIPTION</field>
+    </columns>
+    <columns>
+        <field>Campaign.Campaign_Notes__c</field>
+    </columns>
+    <columns>
+        <field>ACTIVE</field>
+    </columns>
+    <filter>
+        <booleanFilter>((((1 or 2) AND 3) ) AND 4) AND 5</booleanFilter>
+        <criteriaItems>
+            <column>CAMPAIGN_OWNER</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>contains</operator>
+            <value>sitzler</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Campaign.Additional_Owner__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>contains</operator>
+            <value>sitzler</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>ACTIVE</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>1</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>CAMPAIGN_STATUS</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>notEqual</operator>
+            <value>Aborted,Terminated</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>CAMPAIGN_STATUS</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Submitting,Funding,High Signing Activity</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>TJ/s monthly Calls 2017</name>
+    <params>
+        <name>scopeid</name>
+        <value></value>
+    </params>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CampaignList</reportType>
+    <scope>orgAll</scope>
+    <showDetails>true</showDetails>
+</Report>

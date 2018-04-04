@@ -1,0 +1,8 @@
+Hi, 
+
+A new potential partner web lead has been assigned to {!Lead.OwnerFullName}. To view the lead please click the following link: 
+
+https://na33.salesforce.com/{!Lead.Id} 
+
+Regards, 
+Business Development

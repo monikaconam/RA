@@ -1,0 +1,692 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CreatePdf</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>EmailQuote</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>NewQuote</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SyncQuote</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <enableFeeds>false</enableFeeds>
+    <fields>
+        <fullName>AccountId</fullName>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>AdditionalName</fullName>
+    </fields>
+    <fields>
+        <fullName>Advance_ID__c</fullName>
+        <externalId>false</externalId>
+        <formula>Opportunity.Advance_ID__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Advance ID</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Annual_CC_sales_Avg_4_Mo_times_12__c</fullName>
+        <externalId>false</externalId>
+        <formula>Opportunity.Underwriting__r.Annual_CC_sales_Avg_4_Mo_times_12__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Annual CC sales (Avg 4 Mo. times 12)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Annual_Gross_sales_Avg_2_Mo_times_12__c</fullName>
+        <externalId>false</externalId>
+        <formula>Opportunity.Underwriting__r.Annual_Gross_sales_Avg_2_Mo_times_12__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Annual Gross sales (Avg 2 Mo. times 12)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Applicant_1_FICO__c</fullName>
+        <externalId>false</externalId>
+        <formula>BLANKVALUE(text(Opportunity.Underwriting__r.Applicant_1_FICO__c),&quot; &quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Applicant #1 FICO</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Applicant_2_FICO__c</fullName>
+        <externalId>false</externalId>
+        <formula>BLANKVALUE(text( Opportunity.Applicant_2_FICO__c ), &quot; &quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Applicant #2 FICO</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Bankruptcy_Filings_In_The_Last_Year__c</fullName>
+        <externalId>false</externalId>
+        <formula>BLANKVALUE(text( Opportunity.Individual_Bankruptcies__c ), &quot; &quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Bankruptcy Filings In The Last Year</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>BillingName</fullName>
+    </fields>
+    <fields>
+        <fullName>Billing_Street__c</fullName>
+        <externalId>false</externalId>
+        <formula>Opportunity.Account.BillingStreet</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Billing Street</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>BodyDeclReasCred__c</fullName>
+        <externalId>false</externalId>
+        <formula>&quot;Thank you for your interest in &quot;&amp;if(Opportunity.RA_Company__c=&quot;RapidAdvance&quot;,&quot;selling your future credit card receivables to &quot;,&quot;obtaining a loan from &quot;)&amp;Opportunity.RA_Company__c&amp;&quot;. After carefully evaluating information about you and your company, we have decided &quot;&amp;if(Opportunity.RA_Company__c=&quot;RapidAdvance&quot;,&quot;not to purchase your future credit card receivables at this time.&quot;,&quot;to decline your application at this time.&quot;&amp;BR()
+&amp;BR()
+&amp;&quot;You have the right to receive a statement of reasons as to why your application was denied. To exercise this right, please contact us in writing within 60 days of the date of this letter at the following address:&quot;&amp;BR()
+&amp;BR()
+&amp;&quot;    Attn:  Customer Service&quot;&amp;BR()
+&amp;&quot;    Small Business Financial Solutions, LLC&quot;&amp;BR()
+&amp;&quot;    7316 Wisconsin Ave., Suite 350&quot;&amp;BR()
+&amp;&quot;    Bethesda, MD 20814&quot;&amp;BR()
+&amp;BR()
+&amp;&quot;We will provide a statement of reasons within 30 days after receiving your request.&quot;)&amp;BR()
+&amp;BR()
+&amp;&quot;The reason for our decision was based in part on information obtained about you from the consumer reporting agency listed below.&quot;&amp;if(Opportunity.RA_Company__c=&quot;RapidAdvance&quot;,&quot; We are unable to supply specific reasons why we have decided not to purchase your future credit card receivables.&quot;,&quot;This agency did not make the decision to decline your application and is unable to provide you with the specific reasons as to why your application was declined.&quot;)&amp;&quot; You have a right under the Fair Credit Reporting Act to know the information contained in your credit file at the consumer reporting agency. It can be obtained by contacting:&quot;</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>BodyDeclReasCred</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>BodyDeclReasOther__c</fullName>
+        <externalId>false</externalId>
+        <formula>&quot;Thank you for your interest in &quot;&amp;if(Opportunity.RA_Company__c=&quot;RapidAdvance&quot;,&quot;selling your future credit card receivables to &quot;,&quot;obtaining a loan from &quot;)&amp;Opportunity.RA_Company__c&amp;&quot;. After carefully evaluating information about you and your company, we have decided &quot;&amp;if(Opportunity.RA_Company__c=&quot;RapidAdvance&quot;,&quot;not to purchase your future credit card receivables at this time. We welcome the opportunity to re-evaluate your business at a future date.&quot;,&quot;to decline your application at this time.&quot;&amp;BR() 
+&amp;BR() 
+&amp;&quot;If requested by you, we will provide you with a statement of the specific reasons as to why we decided not to purchase your receivables. To obtain such a statement, please contact us in writing within 60 days of the date of this letter at the following address:&quot;&amp;BR() 
+&amp;BR()
+&amp;&quot; Attn: Customer Service&quot;&amp;BR() 
+&amp;&quot; Rapid Financial Services, LLC&quot;&amp;BR() 
+&amp;&quot; 7316 Wisconsin Ave., Suite 350&quot;&amp;BR() 
+&amp;&quot; Bethesda, MD 20814&quot;&amp;BR() 
+&amp;BR() 
+&amp;&quot;We will provide a statement of reasons within 30 days after receiving your request.&quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>BodyDeclReasOther</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Business_Bankruptcies__c</fullName>
+        <externalId>false</externalId>
+        <formula>BLANKVALUE(text( Opportunity.Business_Bankruptcies__c ), &quot; &quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Business Bankruptcies</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Business_Information__c</fullName>
+        <externalId>false</externalId>
+        <formula>&quot;Legal Name: &quot;&amp; Opportunity.Account.Legal_Name__c &amp; BR() 
+&amp; &quot;DBA Name: &quot;&amp; Opportunity.Account.Name &amp; BR() &amp; BR() 
+&amp; &quot;Type of Entity: &quot;&amp;text( Opportunity.Type_of_Entity__c )&amp; BR() &amp; BR() 
+&amp; &quot;Address:&quot;&amp; BR() 
+&amp; Opportunity.Account.BillingStreet &amp; BR() 
+&amp; Opportunity.Account.BillingCity &amp;&quot;, &quot;&amp; Opportunity.Account.BillingState &amp;&quot; &quot;&amp; Opportunity.Account.BillingPostalCode</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Business Information</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Business_Status__c</fullName>
+        <externalId>false</externalId>
+        <formula>BLANKVALUE(text( Opportunity.Business_Status__c ), &quot; &quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Business Status</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Competitor_Advance_Company__c</fullName>
+        <externalId>false</externalId>
+        <formula>BLANKVALUE( Opportunity.Competitor_Advance_Company__c , &quot; &quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Competitor Advance Company</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ContactId</fullName>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>ContractId</fullName>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>DateNTime__c</fullName>
+        <externalId>false</externalId>
+        <formula>CASE( MONTH( DATEVALUE(Now())), 1, &quot;January&quot;, 2, &quot;February&quot;, 3, &quot;March&quot;, 4, &quot;April&quot;, 5, &quot;May&quot;, 6, &quot;June&quot;, 7, &quot;July&quot;, 8, &quot;August&quot;, 9, &quot;September&quot;, 10, &quot;October&quot;, 11, &quot;November&quot;, 12, &quot;December&quot;, &quot;None&quot; )&amp;&quot; &quot;&amp; text(DAY( DATEVALUE(Now())))&amp;&quot;, &quot;&amp; text(YEAR( DATEVALUE(Now())))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>DateNTime</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Date__c</fullName>
+        <externalId>false</externalId>
+        <formula>NOW()</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Date</label>
+        <required>false</required>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Decline_Other_Reasons__c</fullName>
+        <externalId>false</externalId>
+        <formula>&quot;Dear &quot;&amp; if( ISBLANK(Opportunity.Contact__c),&quot;Merchant&quot;, Opportunity.Contact__r.FirstName &amp;&quot; &quot;&amp;Opportunity.Contact__r.LastName) &amp;&quot;,&quot; &amp; BR()</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Decline Other Reasons</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Description</fullName>
+    </fields>
+    <fields>
+        <fullName>Discount</fullName>
+    </fields>
+    <fields>
+        <fullName>Does_the_Merchant_Own_Their_Home__c</fullName>
+        <externalId>false</externalId>
+        <formula>BLANKVALUE(text( Opportunity.Underwriting__r.Does_the_Merchant_Own_Their_Home__c ), &quot; &quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Does the Merchant Own Their Home?</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Email</fullName>
+    </fields>
+    <fields>
+        <fullName>ExpirationDate</fullName>
+    </fields>
+    <fields>
+        <fullName>Fax</fullName>
+    </fields>
+    <fields>
+        <fullName>FaxNumberofContact__c</fullName>
+        <externalId>false</externalId>
+        <formula>if(len(substitute(SUBSTITUTE( SUBSTITUTE(SUBSTITUTE(SUBSTITUTE(Opportunity.Contact__r.Fax, &quot;)&quot;,&quot;&quot;),&quot;(&quot;,&quot;&quot;), &quot;-&quot;,&quot;&quot;) ,&quot;.&quot;,&quot;&quot;),&quot; &quot;,&quot;&quot;))=10,&quot;1&quot;&amp;substitute(SUBSTITUTE( SUBSTITUTE(SUBSTITUTE(SUBSTITUTE(Opportunity.Contact__r.Fax, &quot;)&quot;,&quot;&quot;),&quot;(&quot;,&quot;&quot;), &quot;-&quot;,&quot;&quot;) ,&quot;.&quot;,&quot;&quot;),&quot; &quot;,&quot;&quot;)&amp;&quot;@fax.com&quot;,&quot;Not Provided&quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>FaxNumberofContact</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>GrandTotal</fullName>
+    </fields>
+    <fields>
+        <fullName>IsSyncing</fullName>
+    </fields>
+    <fields>
+        <fullName>LineItemCount</fullName>
+    </fields>
+    <fields>
+        <fullName>Month_2__c</fullName>
+        <externalId>false</externalId>
+        <formula>&quot;Month: &quot;&amp;  text(Opportunity.Month_2__c) &amp; BR() 
+&amp; &quot;MEB: &quot;&amp;  Opportunity.MEB_2__c  &amp; BR() 
+&amp; &quot;Monthly Gross Deposit 1: &quot;&amp;  text( Opportunity.Month_Average_Gross_Sales_2__c )  &amp; BR() 
+&amp; &quot;Number of NSF 1: &quot;&amp;    Opportunity.NSF_2__c   &amp; BR()</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Month 2</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Month__c</fullName>
+        <externalId>false</externalId>
+        <formula>&quot;Month: &quot;&amp;  text(Opportunity.Month__c)  &amp; BR() 
+&amp; &quot;MEB: &quot;&amp;  Opportunity.MEB__c  &amp; BR() 
+&amp; &quot;Monthly Gross Deposit 1: &quot;&amp;  text(Opportunity.Month_Average_Gross_Sale_1__c)  &amp; BR() 
+&amp; &quot;Number of NSF 1: &quot;&amp;    Opportunity.NSF__c   &amp; BR()</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Month</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Name</fullName>
+    </fields>
+    <fields>
+        <fullName>NewSigDeclReasCred__c</fullName>
+        <externalId>false</externalId>
+        <formula>&quot;Sincerely,&quot;&amp;BR() 
+&amp;BR()  
+&amp;&quot;The RapidAdvance Team&quot;</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>NewSigDeclReasCred</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>New_Signature__c</fullName>
+        <externalId>false</externalId>
+        <formula>&quot;Will Tumulty&quot;&amp;BR()
+&amp;&quot;CEO, &quot;&amp;Opportunity.RA_Company__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>New Signature</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Number_of_tradelines__c</fullName>
+        <externalId>false</externalId>
+        <formula>Opportunity.CRR__r.TotalOfAllTrades__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Number of tradelines</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Oldest_Tradeline__c</fullName>
+        <externalId>false</externalId>
+        <formula>Opportunity.CRR__r.OldestOpenDateOfATrade__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Oldest Tradeline</label>
+        <required>false</required>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>OpportunityId</fullName>
+        <type>MasterDetail</type>
+    </fields>
+    <fields>
+        <fullName>Opportunity_Number__c</fullName>
+        <externalId>false</externalId>
+        <formula>Opportunity.Opportunity_Number__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Opportunity Number</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>OwnerId</fullName>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>PaidOffLetter__c</fullName>
+        <externalId>false</externalId>
+        <formula>&quot;Hi &quot; &amp; Opportunity.Contact__r.FirstName &amp;&quot;, &quot;&amp; BR()&amp; BR()
+&amp;&quot;We just wanted to let you know that you’ve paid off your account in full with  &quot;&amp;Opportunity.RA_Company__c&amp;&quot; on &quot;&amp; CASE( MONTH( Opportunity.Paid_Off_Date__c), 1, &quot;January&quot;, 2, &quot;February&quot;, 3, &quot;March&quot;, 4, &quot;April&quot;, 5, &quot;May&quot;, 6, &quot;June&quot;, 7, &quot;July&quot;, 8, &quot;August&quot;, 9, &quot;September&quot;, 10, &quot;October&quot;, 11, &quot;November&quot;, 12, &quot;December&quot;, &quot;None&quot; )&amp;&quot; &quot;&amp; text(DAY( Opportunity.Paid_Off_Date__c))&amp;&quot;, &quot;&amp; text(YEAR( Opportunity.Paid_Off_Date__c))&amp;&quot;. &quot;&amp;BR()&amp;BR()
+&amp;&quot;If you have any questions or concerns, please feel free to contact customer service at 866-224-1162 or email customerservice@rapidadvance.com. Our team is available Monday through Friday from 8 a.m. to 6 p.m. ET. &quot;&amp;BR() &amp; BR()
+&amp;&quot;Thanks for working with us to help grow your business! &quot;</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>PaidOffLetter</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>PayOff_Eaglewood__c</fullName>
+        <externalId>false</externalId>
+        <formula>&quot;The balance due from &quot;&amp;Opportunity.DBA_Name__c &amp;&quot; as of &quot;&amp;CASE( MONTH( Opportunity.AsOfDate_for_Remaining_Balance__c ), 1, &quot;January&quot;, 2, &quot;February&quot;, 3, &quot;March&quot;, 4, &quot;April&quot;, 5, &quot;May&quot;, 6, &quot;June&quot;, 7, &quot;July&quot;, 8, &quot;August&quot;, 9, &quot;September&quot;, 10, &quot;October&quot;, 11, &quot;November&quot;, 12, &quot;December&quot;, &quot;None&quot; )&amp;&quot; &quot;&amp; text(DAY( Opportunity.AsOfDate_for_Remaining_Balance__c ))&amp;&quot;, &quot;&amp; text(YEAR( Opportunity.AsOfDate_for_Remaining_Balance__c ))&amp;&quot;, is reflected above, totaling &quot;&amp;text(Opportunity.Remaining_Balance__c) &amp;&quot;. Please make checks payable to Eaglewood SBF LP. If wiring, the instructions are below:&quot;</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>PayOff Eaglewood</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Pay_Off_Letter__c</fullName>
+        <externalId>false</externalId>
+        <formula>&quot;Billing Account # 	&quot;&amp; Opportunity.Account.Customer_Identification_Number__c&amp; BR() 
+&amp;&quot;Balance:		$&quot;&amp; text(Opportunity.Remaining_Balance__c) &amp; BR() &amp; BR()
+&amp;&quot;Hi &quot;&amp; Opportunity.Contact__r.FirstName&amp;&quot;,&quot; &amp; BR()&amp; BR()
+&amp;&quot;The balance due from &quot;&amp;Opportunity.DBA_Name__c&amp;&quot; as of  &quot;&amp;CASE( MONTH( Opportunity.AsOfDate_for_Remaining_Balance__c ), 1, &quot;January&quot;, 2, &quot;February&quot;, 3, &quot;March&quot;, 4, &quot;April&quot;, 5, &quot;May&quot;, 6, &quot;June&quot;, 7, &quot;July&quot;, 8, &quot;August&quot;, 9, &quot;September&quot;, 10, &quot;October&quot;, 11, &quot;November&quot;, 12, &quot;December&quot;, &quot;None&quot; )&amp;&quot; &quot;&amp; text(DAY(  Opportunity.AsOfDate_for_Remaining_Balance__c ))&amp;&quot;, &quot;&amp; text(YEAR( Opportunity.AsOfDate_for_Remaining_Balance__c ))&amp;&quot; is reflected above, totaling $&quot;&amp;text(Opportunity.Remaining_Balance__c) &amp;&quot;.  You can make checks payable to &quot;&amp;Opportunity.RA_Company__c&amp;&quot;. If you’re wiring, see the information below:&quot;&amp;BR() &amp; BR()
+&amp;&quot;Bank Name:                    &quot;&amp;&quot;Wells Fargo&quot;&amp; BR()
+&amp;&quot;Bank Address:                1753 Pinnacle Drive, McLean, VA 22102&quot;&amp; BR()
+&amp;&quot;ABA Routing Number: 121000248&quot;&amp; BR()
+&amp;&quot;Beneficiary:             	  &quot;&amp;Opportunity.RA_Company__c&amp; BR()
+&amp;&quot;Beneficiary Account:    &quot;&amp;IF(Opportunity.RA_Company__c = &quot;Small Business Financial Solutions LLC&quot;,&quot;4124114794&quot;,&quot;4123417610&quot;)&amp; BR()
+&amp;&quot;Mailing Address:           4500 East West Highway, 6th Floor ∙ Bethesda, MD 20814&quot;</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Pay Off Letter</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Payoff_Amount__c</fullName>
+        <externalId>false</externalId>
+        <formula>BLANKVALUE( Opportunity.Payoff_Amount__c , 0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Payoff Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Phone</fullName>
+    </fields>
+    <fields>
+        <fullName>QuoteToName</fullName>
+    </fields>
+    <fields>
+        <fullName>ROI__c</fullName>
+        <externalId>false</externalId>
+        <formula>Opportunity.Underwriting__r.Current_ROI__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>ROI</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Remaining_Balance__c</fullName>
+        <externalId>false</externalId>
+        <formula>BLANKVALUE(Opportunity.Underwriting__r.Remaining_Balance__c,0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Remaining Balance</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Renewal_Letter__c</fullName>
+        <externalId>false</externalId>
+        <formula>&quot;Hi &quot;&amp; Opportunity.Contact__r.FirstName&amp;&quot;,&quot; &amp; BR()&amp; BR()&amp; 
+
+&quot;Thanks for choosing &quot;&amp;Opportunity.RA_Company__c&amp;&quot; again for your business funding needs! Attached is a copy of the executed contract you signed.&quot;&amp;br()&amp; br()&amp; 
+&quot;To access your account securely online, please click “Login” on the upper right hand corner of our website, www.rapidadvance.com. Your username and password stays the same as before:&quot;</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Renewal Letter</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Renewal_Number__c</fullName>
+        <externalId>false</externalId>
+        <formula>BLANKVALUE(text(Opportunity.Renewal_Number__c), &quot;  &quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Renewal Number</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Renewal_Signature__c</fullName>
+        <externalId>false</externalId>
+        <formula>&quot;Will Tumulty&quot;&amp;BR()&amp;&quot;CEO, &quot;&amp;Opportunity.RA_Company__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Renewal Signature</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ShippingHandling</fullName>
+    </fields>
+    <fields>
+        <fullName>ShippingName</fullName>
+    </fields>
+    <fields>
+        <fullName>SignatureDeclReasCred__c</fullName>
+        <externalId>false</externalId>
+        <formula>if(Opportunity.RA_Company__c=&quot;RapidAdvance&quot;,&quot;If requested by you, we will provide you with a statement of the specific reasons as to why we decided not to purchase your receivables.  To obtain such a statement, please contact us within 60 days of the date of this letter at the following address:&quot;&amp;BR()
+&amp;BR()
+&amp;&quot;Rapid Financial Services, LLC&quot;&amp;BR()
+&amp;&quot;7316 Wisconsin Ave., Suite 350&quot;&amp;BR()
+&amp;&quot;Bethesda, MD 20814&quot;&amp;BR()
+&amp;&quot;Attn:  Director of Underwriting&quot;&amp;BR()
+&amp;&quot;877-467-2743&quot;&amp;BR()
+&amp;BR()
+&amp;&quot;We will provide a statement of reasons to you within 30 days after receiving your request.&quot;&amp;BR()&amp;BR()&amp;BR(),&quot;The federal Equal Credit Opportunity Act prohibits creditors from discriminating against credit applicants on the basis of race, color, religion, national origin, sex, marital status, age (provided the applicant has the capacity to enter into a binding contract); because all or part of the applicant&apos;s income derives from any public assistance program; or because the applicant has in good faith exercised any right under the Consumer Credit Protection Act.  The federal agency that administers compliance with this law concerning this creditor is the Federal Trade Commission, Equal Credit Opportunity, Washington, DC 20580.&quot;&amp;BR()&amp;BR()&amp;BR())
+&amp;&quot;Sincerely,&quot;&amp;BR() 
+&amp;BR() 
+&amp;BR() 
+&amp;Opportunity.RA_Company__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>SignatureDeclReasCred</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Status</fullName>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Subtotal</fullName>
+    </fields>
+    <fields>
+        <fullName>Syndication_Amount__c</fullName>
+        <externalId>false</externalId>
+        <formula>BLANKVALUE( Opportunity.Syndication_Amount__c , 0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Syndication Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Tax</fullName>
+    </fields>
+    <fields>
+        <fullName>Tax_Liens_Judgment_on_Business__c</fullName>
+        <externalId>false</externalId>
+        <formula>BLANKVALUE(text( Opportunity.Tax_Liens_Judgment_on_Business__c ), &quot; &quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Tax Liens/Judgment on Business</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Tax_Liens_Open__c</fullName>
+        <externalId>false</externalId>
+        <formula>BLANKVALUE(text( Opportunity.Tax_Liens_Open__c ),&quot; &quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Tax Liens Open</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ToWhom__c</fullName>
+        <externalId>false</externalId>
+        <formula>Opportunity.Contact__r.FirstName &amp;&quot; &quot;&amp;Opportunity.Contact__r.LastName &amp; BR() 
+&amp;Opportunity.DBA_Name__c&amp; BR() 
+&amp; Opportunity.Account.BillingStreet &amp; BR() 
+&amp;Opportunity.Account.BillingCity &amp;&quot;, &quot;&amp; Opportunity.Account.BillingState &amp;&quot; &quot;&amp; Opportunity.Account.BillingPostalCode &amp; BR() &amp; BR()</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>ToWhom</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>TotalPrice</fullName>
+    </fields>
+    <fields>
+        <fullName>Underwriter_Score__c</fullName>
+        <externalId>false</externalId>
+        <formula>BLANKVALUE( text(Opportunity.Underwriting__r.Underwriter_s_Score__c ), &quot; &quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Underwriter Score</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Underwriting__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Underwriting</label>
+        <referenceTo>Underwriting__c</referenceTo>
+        <relationshipLabel>Quotes</relationshipLabel>
+        <relationshipName>Quotes</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Welcome_Letter_2__c</fullName>
+        <externalId>false</externalId>
+        <formula>&quot;We look forward to serving your financial needs and we are pleased that you have selected &quot;&amp;Opportunity.RA_Company__c&amp;if(Opportunity.RA_Company__c=&quot;RapidAdvance&quot;,&quot;, “The Smart Choice for Immediate Working Capital”SM.&quot;,&quot;.&quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Welcome Letter 2</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Welcome_Letter_Client_Portal__c</fullName>
+        <externalId>false</externalId>
+        <formula>&quot;Hi &quot;&amp; Opportunity.Contact__r.FirstName&amp;&quot;,&quot; &amp; BR()&amp; BR()&amp; 
+&quot;Thanks for choosing &quot;&amp;Opportunity.RA_Company__c&amp;&quot;! Attached is a copy of the executed contract you signed.&quot;&amp;br()&amp; br()&amp;
+
+&quot;Look out for a separate email from us with instructions on how to create and sign into your RapidAdvance portal account for faster and easier access to.&quot; &amp;br()&amp; br()&amp;
+
+&quot;If you have ACH payments set up, withdrawals will show up as “Small Business Financial Solutions, LLC”  on your bank statements.&quot; &amp; BR()&amp; BR() &amp;
+
+
+&quot;Questions? Please call customer service at 866-224-1162 or email customerservice@rapidadvance.com. Our team is available Monday through Friday from 8 a.m. to 6 p.m. ET. So we can better help, be sure to reference your customer ID:&quot; 
+
+&amp;  Opportunity.Account.Customer_Identification_Number__c &amp; &quot;.&quot; &amp; BR()&amp; BR() &amp; 
+
+&quot;We cannot wait to help you grow your business!&quot; &amp; BR()&amp; BR() &amp;
+
+&quot;- The RapidAdvance Team&quot;</formula>
+        <label>Welcome Letter Client Portal</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Welcome_Letter__c</fullName>
+        <externalId>false</externalId>
+        <formula>&quot;Hi &quot;&amp; Opportunity.Contact__r.FirstName&amp;&quot;,&quot; &amp; BR()&amp; BR()&amp;
+&quot;Thanks for choosing &quot;&amp;Opportunity.RA_Company__c&amp;&quot;! Attached is a copy of the executed contract you signed.&quot;&amp;br()&amp; br()&amp; 
+&quot;To access your account securely online, please click “Login” on the upper right hand corner of our website, www.rapidadvance.com. Your username and password are:&quot;</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Welcome Letter</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <listViews>
+        <fullName>mine</fullName>
+        <columns>QUOTE.NAME</columns>
+        <columns>OPPORTUNITY.NAME</columns>
+        <columns>QUOTE.ISSYNCING</columns>
+        <columns>QUOTE.EXPIRATIONDATE</columns>
+        <columns>QUOTE.SUBTOTAL</columns>
+        <columns>QUOTE.TOTALPRICE</columns>
+        <filterScope>Mine</filterScope>
+        <label>My Quotes</label>
+    </listViews>
+    <searchLayouts>
+        <customTabListAdditionalFields>QUOTE.NAME</customTabListAdditionalFields>
+        <customTabListAdditionalFields>OPPORTUNITY.NAME</customTabListAdditionalFields>
+        <customTabListAdditionalFields>QUOTE.ISSYNCING</customTabListAdditionalFields>
+        <customTabListAdditionalFields>QUOTE.EXPIRATIONDATE</customTabListAdditionalFields>
+        <customTabListAdditionalFields>QUOTE.SUBTOTAL</customTabListAdditionalFields>
+        <customTabListAdditionalFields>QUOTE.TOTALPRICE</customTabListAdditionalFields>
+        <lookupDialogsAdditionalFields>QUOTE.NAME</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>OPPORTUNITY.NAME</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>QUOTE.ISSYNCING</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>QUOTE.EXPIRATIONDATE</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>QUOTE.SUBTOTAL</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>QUOTE.TOTALPRICE</lookupDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>QUOTE.NAME</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>OPPORTUNITY.NAME</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>QUOTE.ISSYNCING</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>QUOTE.EXPIRATIONDATE</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>QUOTE.SUBTOTAL</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>QUOTE.TOTALPRICE</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>QUOTE.PHONE</lookupPhoneDialogsAdditionalFields>
+        <searchResultsAdditionalFields>QUOTE.NAME</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>OPPORTUNITY.NAME</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>QUOTE.ISSYNCING</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>QUOTE.EXPIRATIONDATE</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>QUOTE.SUBTOTAL</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>QUOTE.TOTALPRICE</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ControlledByParent</sharingModel>
+</CustomObject>

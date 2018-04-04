@@ -1,0 +1,16 @@
+<table border="0" cellpadding="5" width="550" cellspacing="5" height="400" >
+<tr valign="top" height="400" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[<p><font face="Arial, sans-serif">Dear {!Transfer_Member__c.First_Name__c},</font></p><p><font face="Arial, sans-serif"><br></font></p><p><font face="Arial, sans-serif">Congratulations! Your client has now funded!</font></p><p><font face="Arial, sans-serif"><br></font></p><p><font face="Arial, sans-serif">You've been a great resource for {Insert Client Name} during the process! You will receive $350 dollars&nbsp;for the funding, however, the client did not fit our qualified buckets so you will not receive that additional $55 dollars.</font></p>
+
+<p class="MsoNormal"><font face="Arial, sans-serif">&nbsp;</font></p>
+
+<p class="MsoNormal"><font face="Arial, sans-serif">Keep
+a look out for that referral bonus and keep the referrals coming! <o:p></o:p></font></p>
+
+<p class="MsoNormal"><font face="Arial, sans-serif">&nbsp;</font></p>
+
+<p class="MsoNormal"><font face="Arial, sans-serif">Thanks
+again for the referral. It was great serving you and your client.&nbsp;<o:p></o:p></font></p><p><font face="Arial, sans-serif"><br></font></p><p><font face="Arial, sans-serif">Best,</font></p><p><font face="Arial, sans-serif">{!User.Name}<br>Phone:&nbsp;{!User.Phone}<br>Email:&nbsp;{!User.Email}<br>Website:&nbsp;www.RapidAdvance.com</font></p>]]></td>
+</tr>
+</table>

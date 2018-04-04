@@ -1,0 +1,1005 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Broker Out Op</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Broker Out Op</value>
+    </caseValues>
+    <fields>
+        <label><!-- Accountable Disqualified --></label>
+        <name>Accountable_Disqualified__c</name>
+    </fields>
+    <fields>
+        <label><!-- Accountable Quoted --></label>
+        <name>Accountable_Quoted__c</name>
+    </fields>
+    <fields>
+        <label><!-- Accountable Submitted --></label>
+        <name>Accountable_Submitted__c</name>
+    </fields>
+    <fields>
+        <label><!-- AgileCap Disqualified --></label>
+        <name>AgileCap_Disqualified__c</name>
+    </fields>
+    <fields>
+        <label><!-- AgileCap Quoted --></label>
+        <name>AgileCap_Quoted__c</name>
+    </fields>
+    <fields>
+        <label><!-- AgileCap Submitted --></label>
+        <name>AgileCap_Submitted__c</name>
+    </fields>
+    <fields>
+        <label><!-- Aquila Disqualified --></label>
+        <name>Aquila_Disqualified__c</name>
+    </fields>
+    <fields>
+        <label><!-- Aquila Quoted --></label>
+        <name>Aquila_Quoted__c</name>
+    </fields>
+    <fields>
+        <label><!-- Aquila Submitted --></label>
+        <name>Aquila_Submitted__c</name>
+    </fields>
+    <fields>
+        <label><!-- Atlantis Mortgage Disqualified --></label>
+        <name>Atlantis_Mortgage_Disqualified__c</name>
+    </fields>
+    <fields>
+        <label><!-- Atlantis Mortgage Quoted --></label>
+        <name>Atlantis_Mortgage_Quoted__c</name>
+    </fields>
+    <fields>
+        <label><!-- Atlantis Mortgage Submitted --></label>
+        <name>Atlantis_Mortgage_Submitted__c</name>
+    </fields>
+    <fields>
+        <label><!-- Ave Number of Deposits --></label>
+        <name>Ave_Number_of_Deposits__c</name>
+    </fields>
+    <fields>
+        <label><!-- Average Balance --></label>
+        <name>Average_Balance__c</name>
+    </fields>
+    <fields>
+        <label><!-- Average Monthly Negative Days --></label>
+        <name>Average_Monthly_Negative_Days__c</name>
+    </fields>
+    <fields>
+        <label><!-- BFS Disqualified --></label>
+        <name>BFS_Disqualified__c</name>
+    </fields>
+    <fields>
+        <label><!-- BFS Quote Date --></label>
+        <name>BFS_Quote_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- BFS Quoted --></label>
+        <name>BFS_Quoted__c</name>
+    </fields>
+    <fields>
+        <label><!-- BFS Submitted Date --></label>
+        <name>BFS_Submitted_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- BFS Submitted --></label>
+        <name>BFS_Submitted__c</name>
+    </fields>
+    <fields>
+        <label><!-- BOBA NOTES --></label>
+        <name>BOBA_NOTES__c</name>
+    </fields>
+    <fields>
+        <label><!-- Owner Id --></label>
+        <name>BOOP_Owner_del__c</name>
+        <relationshipLabel><!-- Broker Out Op (Owner Id) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Bankruptcy Discharge Date --></label>
+        <name>Bankruptcy_Discharge_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Bankruptcy --></label>
+        <name>Bankruptcy__c</name>
+    </fields>
+    <fields>
+        <label><!-- Bid Change Text --></label>
+        <name>Bid_Change_Text__c</name>
+    </fields>
+    <fields>
+        <label><!-- Broker Out Addendum --></label>
+        <name>Broker_Out_Addendum__c</name>
+    </fields>
+    <fields>
+        <label><!-- Broker Out New Split --></label>
+        <name>Broker_Out_New_Split__c</name>
+    </fields>
+    <fields>
+        <label><!-- Broker Out Renewal Split --></label>
+        <name>Broker_Out_Renewal_Split__c</name>
+    </fields>
+    <fields>
+        <label><!-- Business Open Date --></label>
+        <name>Business_Open_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- CNH Disqualified --></label>
+        <name>CNH_Disqualified__c</name>
+    </fields>
+    <fields>
+        <label><!-- CNH Quote Date --></label>
+        <name>CNH_Quote_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- CNH Submitted Date --></label>
+        <name>CNH_Submitted_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- CNH Submitted --></label>
+        <name>CNH_Submitted__c</name>
+    </fields>
+    <fields>
+        <label><!-- CNH quoted --></label>
+        <name>CNH_quoted__c</name>
+    </fields>
+    <fields>
+        <label><!-- Commission --></label>
+        <name>Commission__c</name>
+    </fields>
+    <fields>
+        <label><!-- Construction Finance Disqualified --></label>
+        <name>Construction_Finance_Disqualified__c</name>
+    </fields>
+    <fields>
+        <label><!-- Construction Finance Quote Date --></label>
+        <name>Construction_Finance_Quote_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Construction Finance Quoted --></label>
+        <name>Construction_Finance_Quoted__c</name>
+    </fields>
+    <fields>
+        <label><!-- Construction Finance Submitted Date --></label>
+        <name>Construction_Finance_Submitted_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Construction Finance Submitted --></label>
+        <name>Construction_Finance_Submitted__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contract Notes --></label>
+        <name>Contract_Notes__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contract Received --></label>
+        <name>Contract_Received_CB__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contract Received --></label>
+        <name>Contract_Received__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contract Request --></label>
+        <name>Contract_Request__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contract Requested --></label>
+        <name>Contract_Requested__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contracted Commission --></label>
+        <name>Contracted_Commission__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contracted Fees --></label>
+        <name>Contracted_Fees__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contracted Interval --></label>
+        <name>Contracted_Interval__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contracted Loan Amount --></label>
+        <name>Contracted_Loan_Amount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contracted Number of Payments --></label>
+        <name>Contracted_Number_of_Payments__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contracted Payback Amount --></label>
+        <name>Contracted_Payback_Amount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contracted Payment Amount --></label>
+        <name>Contracted_Payment_Amount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contracted Term --></label>
+        <name>Contracted_Term__c</name>
+    </fields>
+    <fields>
+        <label><!-- Credibly Disqualified --></label>
+        <name>Credibly_Disqualified__c</name>
+    </fields>
+    <fields>
+        <label><!-- Credibly Quoted --></label>
+        <name>Credibly_Quoted__c</name>
+    </fields>
+    <fields>
+        <label><!-- Credibly Submitted --></label>
+        <name>Credibly_Submitted__c</name>
+    </fields>
+    <fields>
+        <label><!-- Credit Inquiries --></label>
+        <name>Credit_Inquiries__c</name>
+    </fields>
+    <fields>
+        <label><!-- ECG Disqualified --></label>
+        <name>ECG_Disqualified__c</name>
+    </fields>
+    <fields>
+        <label><!-- ECG Quote Date --></label>
+        <name>ECG_Quote_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- ECG Quoted --></label>
+        <name>ECG_Quoted__c</name>
+    </fields>
+    <fields>
+        <label><!-- ECG Submitted Date --></label>
+        <name>ECG_Submitted_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- ECG Submitted --></label>
+        <name>ECG_Submitted__c</name>
+    </fields>
+    <fields>
+        <label><!-- FICO Score --></label>
+        <name>FICO_Score__c</name>
+    </fields>
+    <fields>
+        <label><!-- Factor Finders Disqualified --></label>
+        <name>Factor_Finders_Disqualified__c</name>
+    </fields>
+    <fields>
+        <label><!-- Factor Finders Quoted --></label>
+        <name>Factor_Finders_Quoted__c</name>
+    </fields>
+    <fields>
+        <label><!-- Factor Finders Submitted --></label>
+        <name>Factor_Finders_Submitted__c</name>
+    </fields>
+    <fields>
+        <label><!-- Factor Rate --></label>
+        <name>Factor_Rate_1__c</name>
+    </fields>
+    <fields>
+        <label><!-- Factor Rate --></label>
+        <name>Factor_Rate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Fora Disqualified --></label>
+        <name>Fora_Disqualified__c</name>
+    </fields>
+    <fields>
+        <label><!-- Fora Quote Date --></label>
+        <name>Fora_Quote_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Fora Quoted --></label>
+        <name>Fora_Quoted__c</name>
+    </fields>
+    <fields>
+        <label><!-- Fora Submitted Date --></label>
+        <name>Fora_Submitted_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Fora Submitted --></label>
+        <name>Fora_Submitted__c</name>
+    </fields>
+    <fields>
+        <label><!-- FundKite Disqualified --></label>
+        <name>FundKite_Disqualified__c</name>
+    </fields>
+    <fields>
+        <label><!-- FundKite Quoted --></label>
+        <name>FundKite_Quoted__c</name>
+    </fields>
+    <fields>
+        <label><!-- FundKite Submitted --></label>
+        <name>FundKite_Submitted__c</name>
+    </fields>
+    <fields>
+        <label><!-- Fund-Amental Disqualified --></label>
+        <name>Fund_Amental_Disqualified__c</name>
+    </fields>
+    <fields>
+        <label><!-- Fund-Amental Quote Date --></label>
+        <name>Fund_Amental_Quote_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Fund-Amental Quoted --></label>
+        <name>Fund_Amental_Quoted__c</name>
+    </fields>
+    <fields>
+        <label><!-- Fund-Amental Submitted Date --></label>
+        <name>Fund_Amental_Submitted_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Fund-Amental Submitted --></label>
+        <name>Fund_Amental_Submitted__c</name>
+    </fields>
+    <fields>
+        <label><!-- Fundation Disqualified --></label>
+        <name>Fundation_Disqualified__c</name>
+    </fields>
+    <fields>
+        <label><!-- Fundation Quoted --></label>
+        <name>Fundation_Quoted__c</name>
+    </fields>
+    <fields>
+        <label><!-- Fundation Submitted --></label>
+        <name>Fundation_Submitted__c</name>
+    </fields>
+    <fields>
+        <label><!-- Fundbox Disqualified --></label>
+        <name>Fundbox_Disqualified__c</name>
+    </fields>
+    <fields>
+        <label><!-- Fundbox Quoted --></label>
+        <name>Fundbox_Quoted__c</name>
+    </fields>
+    <fields>
+        <label><!-- Fundbox Submitted --></label>
+        <name>Fundbox_Submitted__c</name>
+    </fields>
+    <fields>
+        <label><!-- Funding Circle Disqualified --></label>
+        <name>Funding_Circle_Disqualified__c</name>
+    </fields>
+    <fields>
+        <label><!-- Funding Circle Quoted --></label>
+        <name>Funding_Circle_Quoted__c</name>
+    </fields>
+    <fields>
+        <label><!-- Funding Circle Submitted Date --></label>
+        <name>Funding_Circle_Submitted_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Funding Circle Submitted --></label>
+        <name>Funding_Circle_Submitted__c</name>
+    </fields>
+    <fields>
+        <label><!-- Fundworks Quote Date --></label>
+        <name>Fundworks_Quote_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Greenwich Capital Disqualified --></label>
+        <name>Greenwich_Capital_Disqualified__c</name>
+    </fields>
+    <fields>
+        <label><!-- Greenwich Capital Quoted --></label>
+        <name>Greenwich_Capital_Quoted__c</name>
+    </fields>
+    <fields>
+        <label><!-- Greenwich Capital Submitted --></label>
+        <name>Greenwich_Capital_Submitted__c</name>
+    </fields>
+    <fields>
+        <label><!-- Headway Capital Disqualified --></label>
+        <name>Headway_Capital_Disqualified__c</name>
+    </fields>
+    <fields>
+        <label><!-- Headway Capital Quoted --></label>
+        <name>Headway_Capital_Quoted__c</name>
+    </fields>
+    <fields>
+        <label><!-- Headway Capital Submitted --></label>
+        <name>Headway_Capital_Submitted__c</name>
+    </fields>
+    <fields>
+        <label><!-- Headway Quote Date --></label>
+        <name>Headway_Quote_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Headway Submitted Date --></label>
+        <name>Headway_Submitted_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- How much in Competitor Balances --></label>
+        <name>How_much_in_Competitor_Balances__c</name>
+    </fields>
+    <fields>
+        <label><!-- Industry --></label>
+        <name>Industry__c</name>
+    </fields>
+    <fields>
+        <label><!-- Interface Financial Disqualified --></label>
+        <name>Interface_Financial_Disqualified__c</name>
+    </fields>
+    <fields>
+        <label><!-- Interface Financial Quoted --></label>
+        <name>Interface_Financial_Quoted__c</name>
+    </fields>
+    <fields>
+        <label><!-- Interface Financial Submitted --></label>
+        <name>Interface_Financial__c</name>
+    </fields>
+    <fields>
+        <label><!-- Iron Horse Credit Disqualified --></label>
+        <name>Iron_Horse_Credit_Disqualified__c</name>
+    </fields>
+    <fields>
+        <label><!-- Iron Horse Credit Quoted --></label>
+        <name>Iron_Horse_Credit_Quoted__c</name>
+    </fields>
+    <fields>
+        <label><!-- Iron Horse Credit Submitted --></label>
+        <name>Iron_Horse_Credit_Submitted__c</name>
+    </fields>
+    <fields>
+        <label><!-- KatalystFP Disqualified --></label>
+        <name>KatalystFP_Disqualified__c</name>
+    </fields>
+    <fields>
+        <label><!-- KatalystFP Quote Date --></label>
+        <name>KatalystFP_Quote_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- KatalystFP Quoted --></label>
+        <name>KatalystFP_Quoted__c</name>
+    </fields>
+    <fields>
+        <label><!-- KatalystFP Submitted Date --></label>
+        <name>KatalystFP_Submitted_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- KatalystFP Submitted --></label>
+        <name>KatalystFP_Submitted__c</name>
+    </fields>
+    <fields>
+        <label><!-- Knight Disqualified --></label>
+        <name>Knight_Disqualified__c</name>
+    </fields>
+    <fields>
+        <label><!-- Knight Quote Date --></label>
+        <name>Knight_Quote_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Knight Quoted --></label>
+        <name>Knight_Quoted__c</name>
+    </fields>
+    <fields>
+        <label><!-- Knight Submitted Date --></label>
+        <name>Knight_Submitted_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Knight Submitted --></label>
+        <name>Knight_Submitted__c</name>
+    </fields>
+    <fields>
+        <label><!-- LenCred Disqualified --></label>
+        <name>LenCred_Disqualified__c</name>
+    </fields>
+    <fields>
+        <label><!-- LenCred Quoted --></label>
+        <name>LenCred_Quoted__c</name>
+    </fields>
+    <fields>
+        <label><!-- LenCred Submitted --></label>
+        <name>LenCred_Submitted__c</name>
+    </fields>
+    <fields>
+        <label><!-- Lendio Disqualified --></label>
+        <name>Lendio_Disqualified__c</name>
+    </fields>
+    <fields>
+        <label><!-- Lendio Quote Date --></label>
+        <name>Lendio_Quote_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Lendio Quoted --></label>
+        <name>Lendio_Quoted__c</name>
+    </fields>
+    <fields>
+        <label><!-- Lendio Submitted Date --></label>
+        <name>Lendio_Submitted_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Lendio Submitted --></label>
+        <name>Lendio_Submitted__c</name>
+    </fields>
+    <fields>
+        <label><!-- Lendistry Disqualified --></label>
+        <name>Lendistry_Disqualified__c</name>
+    </fields>
+    <fields>
+        <label><!-- Lendistry Quoted --></label>
+        <name>Lendistry_Quoted__c</name>
+    </fields>
+    <fields>
+        <label><!-- Lendistry Submitted --></label>
+        <name>Lendistry_Submitted__c</name>
+    </fields>
+    <fields>
+        <label><!-- Lendr Disqualified --></label>
+        <name>Lendr_Disqualified__c</name>
+    </fields>
+    <fields>
+        <label><!-- Lendr Quote Date --></label>
+        <name>Lendr_Quote_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Lendr Quoted --></label>
+        <name>Lendr_Quoted__c</name>
+    </fields>
+    <fields>
+        <label><!-- Lendr Qutoed --></label>
+        <name>Lendr_Qutoed__c</name>
+    </fields>
+    <fields>
+        <label><!-- Lendr Submitted Date --></label>
+        <name>Lendr_Submitted_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Lendr Submitted --></label>
+        <name>Lendr_Submitted__c</name>
+    </fields>
+    <fields>
+        <label><!-- Levy &amp; Associates Disqualified --></label>
+        <name>Levy_Associates_Disqualified__c</name>
+    </fields>
+    <fields>
+        <label><!-- Levy &amp; Associates Quoted --></label>
+        <name>Levy_Associates_Quoted__c</name>
+    </fields>
+    <fields>
+        <label><!-- Levy &amp; Associates Submitted --></label>
+        <name>Levy_Associates_Submitted__c</name>
+    </fields>
+    <fields>
+        <label><!-- Libertas Disqualified --></label>
+        <name>Libertas_Disqualified__c</name>
+    </fields>
+    <fields>
+        <label><!-- Libertas Quote Date --></label>
+        <name>Libertas_Quote_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Libertas Quoted --></label>
+        <name>Libertas_Quoted__c</name>
+    </fields>
+    <fields>
+        <label><!-- Libertas Submitted Date --></label>
+        <name>Libertas_Submitted_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Libertas Submitted --></label>
+        <name>Libertas_Submitted__c</name>
+    </fields>
+    <fields>
+        <label><!-- MAC Disqualified --></label>
+        <name>MAC_Disqualified__c</name>
+    </fields>
+    <fields>
+        <label><!-- MAC Quote Date --></label>
+        <name>MAC_Quote_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- MAC Quoted --></label>
+        <name>MAC_Quoted__c</name>
+    </fields>
+    <fields>
+        <label><!-- MAC Submitted Date --></label>
+        <name>MAC_Submitted_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- MAC Submitted --></label>
+        <name>MAC_Submitted__c</name>
+    </fields>
+    <fields>
+        <label><!-- Marble Industry --></label>
+        <name>Marble_Industry__c</name>
+    </fields>
+    <fields>
+        <label><!-- Marble Owner Id --></label>
+        <name>Marble_Owner_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Marble --></label>
+        <name>Marble__c</name>
+        <relationshipLabel><!-- Broker Out Op --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Max Upsell --></label>
+        <name>Max_Upsell__c</name>
+    </fields>
+    <fields>
+        <label><!-- Monthly Sales --></label>
+        <name>Monthly_Sales__c</name>
+    </fields>
+    <fields>
+        <label><!-- National Disqualified --></label>
+        <name>National_Disqualified__c</name>
+    </fields>
+    <fields>
+        <label><!-- National Quote Date --></label>
+        <name>National_Quote_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- National Quoted --></label>
+        <name>National_Quoted__c</name>
+    </fields>
+    <fields>
+        <label><!-- National Submitted Date --></label>
+        <name>National_Submitted_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- National Submitted --></label>
+        <name>National_Submitted__c</name>
+    </fields>
+    <fields>
+        <label><!-- Number of Competitor Balances --></label>
+        <name>Number_of_Competitor_Balances__c</name>
+    </fields>
+    <fields>
+        <label><!-- Owner Id --></label>
+        <name>OwnerId__c</name>
+        <relationshipLabel><!-- Broker Out Op (Owner Id) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Partner Email Address --></label>
+        <name>Partner_Email_Address__c</name>
+    </fields>
+    <fields>
+        <label><!-- Partner Phone Number --></label>
+        <name>Partner_Phone_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Partner Company --></label>
+        <name>Partner__c</name>
+        <relationshipLabel><!-- Broker Out Op --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Product Type --></label>
+        <name>Picklist__c</name>
+    </fields>
+    <fields>
+        <label><!-- Platinum Disqualified --></label>
+        <name>Platinum_Disqualified__c</name>
+    </fields>
+    <fields>
+        <label><!-- Platinum Quote Date --></label>
+        <name>Platinum_Quote_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Platinum Quoted --></label>
+        <name>Platinum_Quoted__c</name>
+    </fields>
+    <fields>
+        <label><!-- Platinum Submitted Date --></label>
+        <name>Platinum_Submitted_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Platinum Submitted --></label>
+        <name>Platinum_Submitted__c</name>
+    </fields>
+    <fields>
+        <label><!-- Position --></label>
+        <name>Position__c</name>
+    </fields>
+    <fields>
+        <label><!-- Principis Capital Disqualified --></label>
+        <name>Principis_Capital_Disqualified__c</name>
+    </fields>
+    <fields>
+        <label><!-- Principis Capital Quoted --></label>
+        <name>Principis_Capital_Quoted__c</name>
+    </fields>
+    <fields>
+        <label><!-- Principis Capital Submitted Date --></label>
+        <name>Principis_Capital_Submitted_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Principis Capital Submitted --></label>
+        <name>Principis_Capital_Submitted__c</name>
+    </fields>
+    <fields>
+        <label><!-- Principis Quote Date --></label>
+        <name>Principis_Quote_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Quote Amount --></label>
+        <name>Quote_Amount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Quote Fees --></label>
+        <name>Quote_Fees__c</name>
+    </fields>
+    <fields>
+        <label><!-- Quote Number of Payments --></label>
+        <name>Quote_Number_of_Payments__c</name>
+    </fields>
+    <fields>
+        <label><!-- Quote Payback Amount --></label>
+        <name>Quote_Payback_Amount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Quote Payment Amount --></label>
+        <name>Quote_Payment_Amount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Quote Payment Interval --></label>
+        <name>Quote_Payment_Interval__c</name>
+    </fields>
+    <fields>
+        <label><!-- Renewal Number --></label>
+        <name>Renewal_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Renewal --></label>
+        <name>Renewal__c</name>
+    </fields>
+    <fields>
+        <label><!-- Review Status --></label>
+        <name>Review_Status__c</name>
+    </fields>
+    <fields>
+        <label><!-- Rocket Loans Disqualified --></label>
+        <name>Rocket_Loans_Disqualified__c</name>
+    </fields>
+    <fields>
+        <label><!-- Rocket Loans Quoted --></label>
+        <name>Rocket_Loans_Quoted__c</name>
+    </fields>
+    <fields>
+        <label><!-- Rocket Loans Submitted --></label>
+        <name>Rocket_Loans_Submitted__c</name>
+    </fields>
+    <fields>
+        <label><!-- Seek Disqualified --></label>
+        <name>Seek_Disqualified__c</name>
+    </fields>
+    <fields>
+        <label><!-- Seek Quoted --></label>
+        <name>Seek_Quoted__c</name>
+    </fields>
+    <fields>
+        <label><!-- Seek Submitted Date --></label>
+        <name>Seek_Submitted_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Seek Submitted --></label>
+        <name>Seek_Submitted__c</name>
+    </fields>
+    <fields>
+        <label><!-- Smartbiz Disqualified --></label>
+        <name>Smartbiz_Disqualified__c</name>
+    </fields>
+    <fields>
+        <label><!-- Smartbiz Quoted --></label>
+        <name>Smartbiz_Quoted__c</name>
+    </fields>
+    <fields>
+        <label><!-- Smartbiz Submitted Date --></label>
+        <name>Smartbiz_Submitted_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Smartbiz Submitted --></label>
+        <name>Smartbiz_Submitted__c</name>
+    </fields>
+    <fields>
+        <label><!-- Snap Disqualified --></label>
+        <name>Snap_Disqualified__c</name>
+    </fields>
+    <fields>
+        <label><!-- Snap Quote Date --></label>
+        <name>Snap_Quote_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Snap Quoted --></label>
+        <name>Snap_Quoted__c</name>
+    </fields>
+    <fields>
+        <label><!-- Snap Submitted Date --></label>
+        <name>Snap_Submitted_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Snap Submitted --></label>
+        <name>Snap_Submitted__c</name>
+    </fields>
+    <fields>
+        <label><!-- Sold Short --></label>
+        <name>Sold_Short__c</name>
+    </fields>
+    <fields>
+        <label><!-- State of Operations --></label>
+        <name>State_of_Operations__c</name>
+    </fields>
+    <fields>
+        <label><!-- Status --></label>
+        <name>Status__c</name>
+        <picklistValues>
+            <masterLabel>Disqualified</masterLabel>
+            <translation><!-- Disqualified --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Funded</masterLabel>
+            <translation><!-- Funded --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Funded - Rapid</masterLabel>
+            <translation><!-- Funded - Rapid --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>New</masterLabel>
+            <translation><!-- New --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Not Interested</masterLabel>
+            <translation><!-- Not Interested --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Quotes Received</masterLabel>
+            <translation><!-- Quotes Received --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Quotes Sold</masterLabel>
+            <translation><!-- Quotes Sold --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Signed</masterLabel>
+            <translation><!-- Signed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Submitted</masterLabel>
+            <translation><!-- Submitted --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Stips --></label>
+        <name>Stips__c</name>
+    </fields>
+    <fields>
+        <label><!-- Strategic Disqualfied --></label>
+        <name>Strategic_Disqualfied__c</name>
+    </fields>
+    <fields>
+        <label><!-- Strategic Quote Date --></label>
+        <name>Strategic_Quote_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Strategic Quoted --></label>
+        <name>Strategic_Quoted__c</name>
+    </fields>
+    <fields>
+        <label><!-- Strategic Submitted Date --></label>
+        <name>Strategic_Submitted_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Strategic Submitted --></label>
+        <name>Strategic_Submitted__c</name>
+    </fields>
+    <fields>
+        <label><!-- Street Shares Disqualified --></label>
+        <name>Street_Shares_Disqualified__c</name>
+    </fields>
+    <fields>
+        <label><!-- Street Shares Quoted --></label>
+        <name>Street_Shares_Quoted__c</name>
+    </fields>
+    <fields>
+        <label><!-- Street Shares Submitted Date --></label>
+        <name>Street_Shares_Submitted_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Street Shares Submitted --></label>
+        <name>Street_Shares_Submitted__c</name>
+    </fields>
+    <fields>
+        <label><!-- Super G Disqualified --></label>
+        <name>Super_G_Disqualified__c</name>
+    </fields>
+    <fields>
+        <label><!-- Super G Quote Date --></label>
+        <name>Super_G_Quote_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Super G Quoted --></label>
+        <name>Super_G_Quoted__c</name>
+    </fields>
+    <fields>
+        <label><!-- Super G Submitted Date --></label>
+        <name>Super_G_Submitted_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Super G Submitted --></label>
+        <name>Super_G_Submitted__c</name>
+    </fields>
+    <fields>
+        <label><!-- Tax Lien Balance --></label>
+        <name>Tax_Lien_Balance__c</name>
+    </fields>
+    <fields>
+        <label><!-- Tax Liens Payment Plan --></label>
+        <name>Tax_Liens_Payment_Plan__c</name>
+    </fields>
+    <fields>
+        <help><!-- TERM IN MONTHS --></help>
+        <label><!-- Quote Term --></label>
+        <name>Term__c</name>
+    </fields>
+    <fields>
+        <label><!-- The Fundworks Disqualified --></label>
+        <name>The_Fundworks_Disqualified__c</name>
+    </fields>
+    <fields>
+        <label><!-- The Fundworks Quoted --></label>
+        <name>The_Fundworks_Quoted__c</name>
+    </fields>
+    <fields>
+        <label><!-- The Fundworks Submitted Date --></label>
+        <name>The_Fundworks_Submitted_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- The Fundworks Submitted --></label>
+        <name>The_Fundworks_Submitted__c</name>
+    </fields>
+    <fields>
+        <label><!-- Total Submission Count --></label>
+        <name>Total_Submission_Count__c</name>
+    </fields>
+    <fields>
+        <label><!-- Uplyft Disqualified --></label>
+        <name>Uplyft_Disqualified__c</name>
+    </fields>
+    <fields>
+        <label><!-- Uplyft Quoted --></label>
+        <name>Uplyft_Quoted__c</name>
+    </fields>
+    <fields>
+        <label><!-- Uplyft Submitted --></label>
+        <name>Uplyft_Submitted__c</name>
+    </fields>
+    <fields>
+        <label><!-- Upsell --></label>
+        <name>Upsell__c</name>
+    </fields>
+    <fields>
+        <label><!-- World Business Lenders Disqualified --></label>
+        <name>World_Business_Lenders_Disqualified__c</name>
+    </fields>
+    <fields>
+        <label><!-- World Business Lenders Quoted --></label>
+        <name>World_Business_Lenders_Quoted__c</name>
+    </fields>
+    <fields>
+        <label><!-- World Business Lenders Submitted --></label>
+        <name>World_Business_Lenders_Submitted__c</name>
+    </fields>
+    <fields>
+        <label><!-- 24Cap Disqualified --></label>
+        <name>X24Cap_Disqualified__c</name>
+    </fields>
+    <fields>
+        <label><!-- 24Cap Quoted --></label>
+        <name>X24Cap_Quoted__c</name>
+    </fields>
+    <fields>
+        <label><!-- 24Cap Submitted --></label>
+        <name>X24Cap_Submitted__c</name>
+    </fields>
+    <fields>
+        <label><!-- 24 Cap Quote Date --></label>
+        <name>X24_Cap_Quote_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- 24 Cap Submitted Date --></label>
+        <name>X24_Cap_Submitted_Date__c</name>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Green Tree Oppy Extension</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Green Tree Oppy Extensions</value>
+    </caseValues>
+    <fields>
+        <label><!-- Advance Payoff Date --></label>
+        <name>Advance_Payoff_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Advance Payoff Date_old --></label>
+        <name>Advance_Payoff_Date_old__c</name>
+    </fields>
+    <fields>
+        <label><!-- Amount Sold --></label>
+        <name>Amount_Sold__c</name>
+    </fields>
+    <fields>
+        <label><!-- Amount --></label>
+        <name>Amount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Average CC Sales --></label>
+        <name>Average_CC_Sales__c</name>
+    </fields>
+    <fields>
+        <label><!-- Average Gross Sales --></label>
+        <name>Average_Gross_Sales__c</name>
+    </fields>
+    <fields>
+        <label><!-- Calculate Due Dates --></label>
+        <name>Calculate_Due_Dates__c</name>
+    </fields>
+    <fields>
+        <label><!-- Daily Payment Amount --></label>
+        <name>Daily_Payment_Amount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Estimated Balance --></label>
+        <name>Estimated_Balance__c</name>
+    </fields>
+    <fields>
+        <label><!-- Estimated Days to Repay --></label>
+        <name>Estimated_Days_to_Repay__c</name>
+    </fields>
+    <fields>
+        <label><!-- GTF Approved Date --></label>
+        <name>GTF_Approved_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- GTF Contract/Stips Date --></label>
+        <name>GTF_Contract_Stips_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- GTF Declined Date --></label>
+        <name>GTF_Declined_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- GTF Defaulted Date --></label>
+        <name>GTF_Defaulted_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- GTF Follow Up Date --></label>
+        <name>GTF_Follow_Up_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- GTF Funded Date --></label>
+        <name>GTF_Funded_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- GTF Not Interested Date --></label>
+        <name>GTF_Not_Intrested_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- GTF Submitted Date --></label>
+        <name>GTF_Submitted_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Green Tree Converted Date --></label>
+        <name>Green_Tree_Converted_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- # of Payments --></label>
+        <name>No_of_Payments__c</name>
+    </fields>
+    <fields>
+        <label><!-- # of Payments_old --></label>
+        <name>No_of_Payments_old__c</name>
+    </fields>
+    <fields>
+        <label><!-- Opportunity --></label>
+        <name>Opportunity__c</name>
+        <relationshipLabel><!-- Green Tree Oppy Extensions --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Term --></label>
+        <name>ProductTerm__c</name>
+    </fields>
+    <fields>
+        <label><!-- Product --></label>
+        <name>Product__c</name>
+        <picklistValues>
+            <masterLabel>Loan</masterLabel>
+            <translation><!-- Loan --></translation>
+        </picklistValues>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

@@ -1,0 +1,32 @@
+<table height="400" width="600" cellpadding="5" border="0" cellspacing="5" >
+<tr height="50" valign="top" >
+<td style=" color:#000000; font-size:12pt; background-color:#FFFFFF; font-family:arial; bLabel:main; bEditID:r3st1;" tEditID="c1r1" locked="0" aEditID="c1r1" >
+<![CDATA[<P>Date: {!Lead.CreatedDate}</P>
+<P>&nbsp;</P>
+<P>{!Lead.FirstName} {!Lead.LastName}</P>
+<P>{!Lead.Company}</P>
+<P>{!Lead.Address}</P>
+<P>&nbsp;</P>]]></td>
+</tr>
+<tr height="300" valign="top" >
+<td style=" color:#000000; font-size:12pt; background-color:#FFFFFF; font-family:arial; bLabel:main; bEditID:r3st1;" tEditID="c1r2" locked="0" aEditID="c1r2" >
+<![CDATA[<p>Dear {!Lead.FirstName} {!Lead.LastName}:</p>
+<p>&nbsp;</p>
+<p>Thank you for your application to RapidAdvance.&nbsp; We appreciate your interest in our merchant cash advance product.</p>
+<p>&nbsp;</p>
+<p>To qualify for consideration for a merchant cash advance, you must be in business for at least&nbsp;1 year&nbsp;<strong><u>or</u></strong> have a minimum of $10,000 per month in credit card sales.&nbsp; Your application indicates that you do&nbsp;not currently&nbsp;meet these requirements.</p>
+<p>&nbsp;</p>
+<p>If you believe the information we have received is in error or you have multiple locations that could enable your business to qualify, please call us at 877-467-2743 or email us at <a href="mailto:sales@rapidadvance.com">sales@rapidadvance.com</a> and provide us with the additional information.</p>
+<p>&nbsp;</p>
+<p>Once again, thank you for choosing RapidAdvance.&nbsp; We look forward to serving you in the future.</p>
+<p>&nbsp;</p>
+<p>Sincerely,</p>
+<p>&nbsp;</p>
+<p>RapidAdvance Sales Team</p>
+<p>&nbsp;</p>]]></td>
+</tr>
+<tr height="50" valign="top" >
+<td style=" color:#000000; font-size:12pt; background-color:#FFFFFF; font-family:arial; bLabel:main; bEditID:r3st1;" tEditID="c1r3" locked="0" aEditID="c1r3" >
+<![CDATA[<P align=center><FONT size=2></FONT>&nbsp;</P>]]></td>
+</tr>
+</table>

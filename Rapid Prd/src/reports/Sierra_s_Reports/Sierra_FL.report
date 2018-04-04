@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Campaign$Name</field>
+    </columns>
+    <columns>
+        <field>Campaign$NumberOfOpportunities</field>
+    </columns>
+    <columns>
+        <field>Campaign$NumberOfWonOpportunities</field>
+    </columns>
+    <columns>
+        <field>Campaign$AmountWonOpportunities</field>
+    </columns>
+    <columns>
+        <field>Campaign.Accounts__r$BillingState</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>Campaign$Owner</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Sierra Daumit</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Campaign.Accounts__r$RecordType</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Account.Partners</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Campaign.Accounts__r$BillingState</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>FL</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>Sierra- FL</name>
+    <params>
+        <name>scopeid</name>
+        <value></value>
+    </params>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Campaigns_with_Partner_Accounts__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>Campaign$CreatedDate</dateColumn>
+        <endDate>2017-01-31</endDate>
+        <interval>INTERVAL_CUSTOM</interval>
+        <startDate>2013-06-01</startDate>
+    </timeFrameFilter>
+</Report>

@@ -1,0 +1,900 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>true</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>This object stores compliance review data</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>Account__c</fullName>
+        <deleteConstraint>Restrict</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Account</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>QA Reviews</relationshipLabel>
+        <relationshipName>QA_Reviews</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Audio_PDF_Link__c</fullName>
+        <externalId>false</externalId>
+        <label>Audio/PDF Link</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Url</type>
+    </fields>
+    <fields>
+        <fullName>BA_AE_Name__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>BA/AE Name</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>QA_Reviews</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>BIC_Included__c</fullName>
+        <externalId>false</externalId>
+        <label>BIC Included?</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>BIC__c</fullName>
+        <externalId>false</externalId>
+        <label>BIC</label>
+        <precision>5</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Call_Recording_Disclosure__c</fullName>
+        <externalId>false</externalId>
+        <label>Call-Recording Disclosure?</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Competition_Congratulate__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( Congratulate_Client__c = &quot;Yes&quot;,1, 
+IF( Congratulate_Client__c = &quot;No&quot;,0, 
+IF( Congratulate_Client__c = &quot;Client disclosed&quot;,1,NULL)))</formula>
+        <label>Competition - Congratulate</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Competition_Next_Steps__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( Next_Steps__c = &quot;Yes&quot;,1,
+IF( Next_Steps__c = &quot;No&quot;,0,
+IF( Next_Steps__c = &quot;Client disclosed&quot;,1,NULL)))</formula>
+        <label>Competition - Next Steps</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Competition_Referral__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( Referrals__c   = &quot;Yes&quot;,5, 
+IF( Referrals__c   = &quot;No&quot;,0, 
+IF( Referrals__c   = &quot;Client disclosed&quot;,5,NULL)))</formula>
+        <label>Competition - Referral</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Competition_Renewals__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( Renewals__c = &quot;Yes&quot;,3, 
+IF( Renewals__c = &quot;No&quot;,0, 
+IF( Renewals__c = &quot;Client disclosed&quot;,3,NULL)))</formula>
+        <label>Competition - Renewals</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Competition_Score__c</fullName>
+        <externalId>false</externalId>
+        <formula>Competition_Congratulate__c +  Competition_Next_Steps__c +  Competition_Referral__c +  Competition_Renewals__c +  Competition_Survey__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Competition Score</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Competition_Survey__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( Surveys_Testimonials__c  = &quot;Yes&quot;,2, 
+IF( Surveys_Testimonials__c  = &quot;No&quot;,0, 
+IF( Surveys_Testimonials__c  = &quot;Client disclosed&quot;,2,NULL)))</formula>
+        <label>Competition - Survey</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Compliance_Flag__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Compliance Flag</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Compliance_Score__c</fullName>
+        <externalId>false</externalId>
+        <label>Compliance Score</label>
+        <precision>5</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Compliance__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(ISBLANK(Compliance_Score__c), null, 
+IF(Compliance_Score__c = 100,&quot;PASS&quot;,&quot;FAIL&quot;))</formula>
+        <label>Compliance</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Congratulate_Client_Score__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(OR(Congratulate_Client__c = &quot;Yes&quot;,Congratulate_Client__c = &quot;Client disclosed&quot;),1,0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Congratulate Client</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Congratulate_Client__c</fullName>
+        <externalId>false</externalId>
+        <label>Congratulate Client?</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Credit_Authorization__c</fullName>
+        <externalId>false</externalId>
+        <label>Credit Authorization?</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Form_Name__c</fullName>
+        <externalId>false</externalId>
+        <label>Form Name</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Next_Steps_Score__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(OR(Next_Steps__c = &quot;Yes&quot;,Next_Steps__c = &quot;Client disclosed&quot;),1,0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Next Steps</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Next_Steps__c</fullName>
+        <externalId>false</externalId>
+        <label>Next Steps?</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Opportunity__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>Links QA Review to an Opportunity</description>
+        <externalId>false</externalId>
+        <label>Opportunity</label>
+        <referenceTo>Opportunity</referenceTo>
+        <relationshipLabel>QA Reviews</relationshipLabel>
+        <relationshipName>QA_Reviews</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Reason_for_not_moving_forward__c</fullName>
+        <externalId>false</externalId>
+        <label>Reason for not moving forward?</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>BA was not listening/cooperative</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Rate too high/too expensive</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Term too short</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Going with bank</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Commercial lender (other than bank)</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Receiving loan from friend/family</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Refused to respond to questions</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Not ready/shopping around</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Disagreed with process</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Did not qualify for amount requested</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Refused to provide info for credit pull</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Refused to provide bank statements</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Refused to provide supporting docs</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>BA didn’t follow up (over 24 hours)</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Process too lengthy/time consuming</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>BA lost contact with client</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Unknown/could not determine</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Daily payments</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Never spoke with actual owner</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Receiving investor funds</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Refused to provide processing statements</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>State limitations conflicted with need</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Could not get co-owner on-board</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>BA didn&apos;t F/U at all/reason unknown</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+        <visibleLines>4</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Referrals_Score__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(OR(Referrals__c= &quot;Yes&quot;,Referrals__c= &quot;Client disclosed&quot;),1,0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Referrals</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Referrals__c</fullName>
+        <externalId>false</externalId>
+        <label>Referrals?</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Renewals_Score__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(OR(Renewals__c = &quot;Yes&quot;,Renewals__c = &quot;Client disclosed&quot;),1,0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Renewals</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Renewals__c</fullName>
+        <externalId>false</externalId>
+        <label>Renewals?</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Response_Tracker__c</fullName>
+        <externalId>false</externalId>
+        <label>Response Tracker</label>
+        <length>100</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Review_Link__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(  RecordType.Id = &quot;01239000000Hqrc&quot;,HYPERLINK(&quot;https://www.tfaforms.com/420346?tfa_3=&quot;&amp;Opportunity__r.Account.Name&amp;&quot;&amp;tfa_2=&quot;&amp;  Opportunity__r.Opportunity_Owner_Name__c  &amp;&quot;&amp;tfa_494=&quot;&amp;  Opportunity__r.AccountId  &amp;&quot;&amp;tfa_5=&quot;&amp;  Opportunity__r.Id  &amp;&quot;&amp;tfa_495=01239000000Hqrc&amp;tfa_496=&quot;&amp;  Opportunity__r.OwnerId ,&quot;Start Review&quot;),
+IF(  RecordType.Id = &quot;01239000000EAVb&quot;,HYPERLINK(&quot;https://www.tfaforms.com/419320?tfa_23=&quot;&amp; Opportunity__r.Name &amp;&quot;&amp;tfa_24=&quot;&amp; Opportunity__r.Opportunity_Owner_Name__c &amp;&quot;&amp;tfa_20=&quot;&amp; Opportunity__r.AccountId &amp;&quot;&amp;tfa_21=&quot;&amp; Opportunity__r.Id  &amp;&quot;&amp;tfa_22=01239000000EAVb&amp;tfa_26=&quot;&amp; Opportunity__r.OwnerId,&quot;Start Review&quot;),
+IF(  RecordType.Id = &quot;01239000000EAVl&quot;,HYPERLINK(&quot;https://www.tfaforms.com/408641?tfa_5=&quot;&amp;Opportunity__r.Id&amp;&quot;&amp;tfa_3=&quot;&amp; Opportunity__r.Account.Name &amp;&quot;&amp;tfa_494=&quot;&amp; Opportunity__r.AccountId&amp;&quot;&amp;tfa_2=&quot;&amp; Opportunity__r.Opportunity_Owner_Name__c&amp;&quot;&amp;tfa_495=01239000000EAVl&amp;tfa_496=&quot;&amp;Opportunity__r.OwnerId,&quot;Start Review&quot;),&quot;&quot;
+)
+)
+)</formula>
+        <label>Review Link</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Sales_Score__c</fullName>
+        <description>QA Sales Score</description>
+        <externalId>false</externalId>
+        <label>Sales Score</label>
+        <precision>5</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Sales_Underwriting__c</fullName>
+        <externalId>false</externalId>
+        <formula>Sales_Score__c  +  Underwriting_Score__c</formula>
+        <label>Stack Rank</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Score__c</fullName>
+        <externalId>false</externalId>
+        <label>Score</label>
+        <precision>5</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Submit_Date__c</fullName>
+        <description>Date when response was initially submitted</description>
+        <externalId>false</externalId>
+        <label>Submit Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Surveys_Testimonials_Score__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(OR(Surveys_Testimonials__c= &quot;Yes&quot;,Surveys_Testimonials__c= &quot;Client disclosed&quot;),1,0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Surveys/Testimonials</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Surveys_Testimonials__c</fullName>
+        <externalId>false</externalId>
+        <label>Surveys/Testimonials?</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>TCPA_Disclosure__c</fullName>
+        <externalId>false</externalId>
+        <label>TCPA Disclosure?</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Underwriting_Score__c</fullName>
+        <description>QA Underwriting Score</description>
+        <externalId>false</externalId>
+        <label>Underwriting Score</label>
+        <precision>5</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <label>QA Review</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>Account__c</columns>
+        <columns>CREATED_DATE</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <listViews>
+        <fullName>MTD_Not_Interested</fullName>
+        <columns>NAME</columns>
+        <columns>Opportunity__c</columns>
+        <columns>Account__c</columns>
+        <columns>Reason_for_not_moving_forward__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>RECORDTYPE</field>
+            <operation>equals</operation>
+            <value>QA_Review__c.Not_Interested</value>
+        </filters>
+        <filters>
+            <field>Submit_Date__c</field>
+            <operation>equals</operation>
+            <value>THIS_MONTH</value>
+        </filters>
+        <label>MTD Not Interested</label>
+    </listViews>
+    <nameField>
+        <displayFormat>QA-{000000}</displayFormat>
+        <label>QA Review ID</label>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>QA Reviews</pluralLabel>
+    <recordTypeTrackHistory>false</recordTypeTrackHistory>
+    <recordTypes>
+        <fullName>Funding_Call</fullName>
+        <active>true</active>
+        <description>Funding Call Review</description>
+        <label>Funding Call</label>
+        <picklistValues>
+            <picklist>Reason_for_not_moving_forward__c</picklist>
+            <values>
+                <fullName>BA didn%E2%80%99t follow up %28over 24 hours%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>BA lost contact with client</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>BA was not listening%2Fcooperative</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Commercial lender %28other than bank%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Did not qualify for amount requested</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Disagreed with process</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Going with bank</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not ready%2Fshopping around</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Process too lengthy%2Ftime consuming</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rate too high%2Ftoo expensive</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Receiving loan from friend%2Ffamily</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Refused to provide bank statements</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Refused to provide info for credit pull</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Refused to provide supporting docs</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Refused to respond to questions</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Term too short</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unknown%2Fcould not determine</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Not_Interested</fullName>
+        <active>true</active>
+        <label>Not Interested</label>
+        <picklistValues>
+            <picklist>Reason_for_not_moving_forward__c</picklist>
+            <values>
+                <fullName>BA didn%27t F%2FU at all%2Freason unknown</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>BA didn%E2%80%99t follow up %28over 24 hours%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>BA lost contact with client</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>BA was not listening%2Fcooperative</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Commercial lender %28other than bank%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Could not get co-owner on-board</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Daily payments</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Did not qualify for amount requested</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Disagreed with process</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Going with bank</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Never spoke with actual owner</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not ready%2Fshopping around</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Process too lengthy%2Ftime consuming</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rate too high%2Ftoo expensive</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Receiving investor funds</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Receiving loan from friend%2Ffamily</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Refused to provide bank statements</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Refused to provide info for credit pull</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Refused to provide processing statements</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Refused to provide supporting docs</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Refused to respond to questions</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>State limitations conflicted with need</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Term too short</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unknown%2Fcould not determine</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Sales_Underwriting_Review</fullName>
+        <active>true</active>
+        <label>Sales/Underwriting Review</label>
+        <picklistValues>
+            <picklist>Reason_for_not_moving_forward__c</picklist>
+            <values>
+                <fullName>BA didn%E2%80%99t follow up %28over 24 hours%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>BA lost contact with client</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>BA was not listening%2Fcooperative</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Commercial lender %28other than bank%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Did not qualify for amount requested</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Disagreed with process</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Going with bank</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not ready%2Fshopping around</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Process too lengthy%2Ftime consuming</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rate too high%2Ftoo expensive</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Receiving loan from friend%2Ffamily</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Refused to provide bank statements</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Refused to provide info for credit pull</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Refused to provide supporting docs</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Refused to respond to questions</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Term too short</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unknown%2Fcould not determine</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <searchLayouts/>
+    <sharingModel>ReadWrite</sharingModel>
+</CustomObject>

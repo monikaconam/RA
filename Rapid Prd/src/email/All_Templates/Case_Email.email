@@ -1,0 +1,8 @@
+A new case has been created by {!Case.CreatedBy}
+
+Merchant: {!Case.Contact}
+Case Subject: {!Case.Subject}
+Case Number: {!Case.CaseNumber}
+
+Business: {!Case.Account}
+Opportunity: {!Case.Opportunity__c}

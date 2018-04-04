@@ -1,0 +1,19 @@
+<table height="400" width="550" cellpadding="5" border="0" cellspacing="5" >
+<tr height="400" valign="top" >
+<td style=" color:#000000; font-size:12pt; background-color:#FFFFFF; font-family:arial; bLabel:main; bEditID:r3st1;" tEditID="c1r1" locked="0" aEditID="c1r1" >
+<![CDATA[<font size="2" color="#000099" face="Verdana,Geneva,Arial,Helvetica,Sans-Serif"><br></font><div style="text-align: center; color: rgb(0, 0, 102);"><font size="2" face="Verdana,Geneva,Arial,Helvetica,Sans-Serif">**FUNDING NOTIFICATION**</font><br></div>
+
+<p style="color: rgb(0, 0, 102);"><font size="2" face="Verdana,Geneva,Arial,Helvetica,Sans-Serif"><br></font></p><p style="color: rgb(0, 0, 102);"><font size="2" face="Verdana,Geneva,Arial,Helvetica,Sans-Serif"><span style="font-weight: bold;">Date</span> - {!Opportunity.LastModifiedDate} </font></p><p style="color: rgb(0, 0, 102);"><font size="2" face="Verdana,Geneva,Arial,Helvetica,Sans-Serif">&nbsp;</font></p>
+<p style="color: rgb(0, 0, 102);"><font size="2" face="Verdana,Geneva,Arial,Helvetica,Sans-Serif">The deal below is tentatively scheduled to fund on <span style="font-weight: bold;">{!Opportunity.Tentative_Funding_Date__c}</span>:<br></font></p><p style="color: rgb(0, 0, 102);"><font size="2" face="Verdana,Geneva,Arial,Helvetica,Sans-Serif"><br></font></p><font style="color: rgb(0, 0, 102);" size="2" color="#000099" face="Verdana,Geneva,Arial,Helvetica,Sans-Serif"><span style="font-weight: bold;">Opportunity Name</span> - {!Opportunity.Name}</font>
+<p style="color: rgb(0, 0, 102);"><font size="2" face="Verdana,Geneva,Arial,Helvetica,Sans-Serif"><span style="font-weight: bold;">Advance Amount</span> - {!Opportunity.Amount}</font></p><p style="color: rgb(0, 0, 102);"><br></p>
+
+
+
+<p style="color: rgb(0, 0, 102);"><font size="2" face="Verdana,Geneva,Arial,Helvetica,Sans-Serif">If you have any questions or need additional information, please contact our Customer Service Department at 866.224.1162</font></p><p style="color: rgb(0, 0, 102);"><br></p><p style="color: rgb(0, 0, 102);"><font size="2" face="Verdana,Geneva,Arial,Helvetica,Sans-Serif">Thank you,</font></p><p style="color: rgb(0, 0, 102);"><br></p><p style="color: rgb(0, 0, 102);"><font size="2" face="Verdana,Geneva,Arial,Helvetica,Sans-Serif">RapidAdvance<br></font></p>
+
+<p style="color: rgb(0, 0, 102);"><font size="2" face="Verdana,Geneva,Arial,Helvetica,Sans-Serif">&nbsp;<br></font></p><font style="color: rgb(0, 0, 102);" color="#000099">&nbsp;</font>
+<p><font color="#000099">&nbsp;</font></p>
+<p><font color="#000099">&nbsp;</font></p>
+<p><font color="#000099">&nbsp;</font></p>]]></td>
+</tr>
+</table>

@@ -1,0 +1,638 @@
+<apex:page sidebar="false" showHeader="false" controller="OpportunityDetail">
+     <apex:stylesheet value="{!$Resource.ExtJS4}/extjs-4.1.0/resources/css/ext-all.css" />
+    <apex:includeScript value="{!$Resource.ExtJS4}/extjs-4.1.0/ext-all.js"/> 
+    <!-- <apex:stylesheet value="{!$Resource.ExtJS4}/extjs-4.1.0/resources/css/ytheme-gray.css" id="theme"/>xtheme-yourtheme.css-->
+    <apex:stylesheet value="{!$Resource.ExtJS4}/extjs-4.1.0/resources/css/xtheme-gray-extend.css" id="theme11"/>
+    <apex:stylesheet value="{!$Resource.ExtJS4}/extjs-4.1.0/resources/ext-theme-gray/ext-theme-gray-all.css" id="theme"/>
+    <apex:stylesheet value="{!$Resource.ExtJS4}/extjs-4.1.0/resources/ext-theme-gray/ext-theme-gray-all-debug.css" id="theme1"/>
+    <apex:stylesheet value="{!$Resource.ExtJS4}/extjs-4.1.0/resources/ext-theme-gray/ext-theme-gray-all-rtl.css" id="theme2"/>
+    <apex:stylesheet value="{!$Resource.ExtJS4}/extjs-4.1.0/resources/ext-theme-gray/ext-theme-gray-all-rtl-debug.css" id="theme3"/>
+    <style>
+        table tr td{
+            white-space:nowrap !important;
+            width:8%;
+            padding:2px;            
+        }
+        .label{
+            font-weight: bold !important;
+        }
+        .imagebtn{
+            cursor:pointer;
+            margin-top:2px;
+        }
+        
+        .imagebtn:hover{
+            height: 20px;
+            width: 20px;
+            
+        }
+        
+        .sizebtn:hover{
+            margin-left:2px;
+        }
+       
+   </style>
+    <style type="text/css">
+    .accDetails div table tr td input{
+        border: none;
+        background: none;
+    }
+    
+    .accDetailsActiveBorder div table tr td input{
+        border: 1px solid #B5B8C8;              
+    }
+    #content-anchor-tip1111 ul {
+        float: left;
+        width: 850px;
+        list-style-type: disc;
+        margin-left: 15px;
+    } 
+    
+    .ext-ie #content-anchor-tip1111 ul {
+        margin: 0;
+        padding-left: 15px;
+    } 
+    
+    #content-anchor-tip1111 .thumb {
+        float: right;
+    } 
+    
+    #content-anchor-tip1111 .status-icon {
+        position: absolute;
+        top: 4px;
+        right: 50px;
+        padding: 0;
+        line-height: 0;
+    } 
+   #content-anchor-tip1111 a:link, #content-anchor-tip1111 a:visited {
+        color: #339;
+    }
+    #content-anchor-tip1111-body{
+        width: 850px !important;
+    }.x-tip {
+        width: auto !important;
+    }
+    .x-tip-body {
+        width: auto !important;
+    }
+    .x-tip-body span {
+        width: auto !important;
+    }
+    #content-anchor-tip1111{
+            /*height: 182px !important;
+            left: 520px !important;
+            top: 59px !important;
+            z-index: 19001 !important;*/
+    }
+    #content-anchor-tip1111_header_hd, 
+    #content-anchor-tip1111_header-body,
+    #content-anchor-tip1111_header-innerCt,
+    #content-anchor-tip1111_header-targetEl{
+        width:850px !important;
+    }
+    #content-anchor-tip1111 .x-tool{
+        width:auto !important;
+        left:830px !important;
+    } 
+    /*#tool-1111,,#tool-1121{
+        width:auto !important;
+        left:784px !important;
+    }*/
+    #content-anchor-tip{
+        width:305px !important;
+    }
+    .x-tab-default-top button, .x-tab-default-top .x-tab-inner {
+        height: 13px !important;
+        line-height: 13px;
+    }
+    #table td {
+        white-space:wrap;
+        padding-top:3px;       
+    }   
+    #table{
+        padding: 0 40px; 
+        width: 100%;
+    } 
+    body{
+           background-color : #F6F6F6 !important; 
+           color:#232323 !important;
+           font-family: tahoma !important;
+           font-size:12px;letter-spacing:1px !important;
+           white-space:wrap !important;
+       }
+    .refreshBtn{                        
+            background-size:100%;
+            margin-left: 94%;
+            height: 18px;
+            width: 18px;           
+            cursor: pointer; 
+            float:left;
+            background-repeat: no-repeat;
+            margin-top: 5px;
+            background-image:url({!URLFOR($Resource.Icons,'refresh2.png')});
+        }
+        .refreshBtn:hover{
+            height: 16px;
+            width: 16px;
+        }
+    </style>
+    <script>
+    Ext.onReady(function() {
+        Ext.require([
+            '*'
+        ]);
+    
+        Ext.QuickTips.init(); 
+        
+        Ext.create('Ext.tip.ToolTip', {
+            target: 'AccNameNewId',   
+            height:250,     
+            items:[{
+                xtype: 'form',
+                name: 'accDetails',             
+                overflowY : 'auto',
+                 overflowX : 'auto',
+                cls:'accDetails',
+                layout:'fit',
+                id:'accDetails',
+                defaults:{
+                    readOnly: true 
+                },
+                items:[{
+                   xtype: 'box',
+                   autoEl : {
+                        tag: 'iframe', 
+                        style:'width:95%;height:220px;',
+                        src: '/apex/AccountMainBusiness?Id={!$CurrentPage.parameters.Id}&core.apexpages.devmode.url=1'
+                   
+                    },
+                   autoload:true
+                
+                
+                }
+               ]
+                          
+            }],
+            title: 'Account Detail',
+            id: 'content-anchor-tip1111',
+            anchor: 'left',   
+            width: 415,            
+            autoHide: false,
+            closable: true
+            
+        });
+               
+    });
+    
+    function reloadUrl(){
+        top.location.href = '/apex/MainPageResizable?retURL={!$CurrentPage.parameters.Id}&id={!$CurrentPage.parameters.Id}&core.apexpages.devmode.url=1';
+    }
+    
+    </script>   
+    <apex:form >
+    <apex:pageMessages ></apex:pageMessages>    
+         <apex:commandLink rendered="{!IF(!isVisible,true,false)}" action="{!onCancel}" reRender="oppDetailTopSectionId" immediate="true">
+             <div title="Refresh!" onClick="window.location.href=window.location.href" class="refreshBtn"></div>
+         </apex:commandLink>
+         <div style="float:right;margin-right: 20px;">
+         <apex:image styleClass="imagebtn" url="{!URLFOR($Resource.OppDetail,'button-edit_green.png')}" width="22" height="22" onclick="editopp11();" rendered="{!IF(!isVisible,true,false)}" alt="Edit Opportunity" title="Edit Opportunity"/> 
+         <apex:image styleClass="imagebtn" url="{!URLFOR($Resource.OppDetail,'button_save_green.png')}" width="22" height="22" onclick="editopp();" rendered="{!IF(!isVisible,false,true)}" alt="Save" title="Save"/>
+         &nbsp;
+         <apex:image styleClass="imagebtn sizebtn" url="{!URLFOR($Resource.OppDetail,'button-cancel_green.png')}" width="22" height="22" onclick="cancelopp();" rendered="{!IF(!isVisible,false,true)}" alt="Cancel" title="Cancel"/>
+         </div>
+      
+     <br/><br/>
+    <center>
+        <!--apex:commandButton value="{!btnText}" action="{!onEdit}"/>&nbsp;
+        <apex:commandButton value="Cancel" action="{!onCancel}"/ -->
+       
+           
+    <apex:outputPanel id="oppDetailTopSectionId">
+        <table width="88%">
+            <tr>  
+                <td class="label">
+                    StageName
+                </td>
+                <td>
+                    <table>
+                        <tr>
+                            <td style="display:{!IF(!isVisible,'block','none')}">
+                                <apex:outputField value="{!opp.StageName}" rendered="{!!isVisible}"/>
+                            </td>
+                            <td style="display:{!IF(!isVisible,'none','block')}">
+                                 <apex:inputField value="{!opp.StageName}" rendered="{!isVisible}"/>
+                            </td>
+                        </tr>
+                    </table>          
+                </td>      
+         
+                <td>
+                    &nbsp;
+                </td>
+                <td class="label">
+                    Product 
+                </td>
+                <td style="white-space:nowarp;" >                
+                    <table>
+                        <tr>
+                            <td style="display:{!IF(!isVisible,'block','none')}">
+                                <apex:outputField value="{!opp.Product__c}"/>
+                            </td>
+                            <td style="display:{!IF(!isVisible,'none','block')}">
+                                 <apex:inputField value="{!opp.Product__c}"  />
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+                <td>
+                    &nbsp;
+                </td>
+                <td class="label">
+                    Owner
+                </td>
+                <td >
+                 <table>
+                        <tr>
+                            <td style="display:{!IF(!isVisible,'block','none')}">
+                               <apex:outputField value="{!opp.OwnerId}" />
+                            </td>
+                            <td style="display:{!IF(!isVisible,'none','block')}">
+                                 <apex:inputField value="{!opp.OwnerId}"/>
+                            </td>
+                        </tr>
+                    </table> 
+                 </td>
+            </tr>
+            <tr>
+                <td class="label">
+                    Advance ID
+                </td>
+                <td>
+                 <table>
+                        <tr>
+                            <td style="display:{!IF(!isVisible,'block','none')}">
+                              <apex:outputField value="{!opp.Advance_ID__c}"/>
+                            </td>
+                            <td style="display:{!IF(!isVisible,'none','block')}">
+                                 <apex:inputField value="{!opp.Advance_ID__c}" />
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+                 <td>
+                    &nbsp;
+                </td>
+                <td class="label">
+                    Amount
+                </td>
+                <td>
+                    <table>
+                        <tr>                        
+                            <td style="display:{!IF(!isVisible,'block','none')}">
+                                <apex:outputField value="{!opp.Amount}" rendered="{!!isVisible}"/>
+                            </td>
+                            <td style="display:{!IF(!isVisible,'none','block')}">
+                                <apex:inputField value="{!opp.Amount}" rendered="{!isVisible}"/>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+                <td>
+                    &nbsp;
+                </td>
+                <td class="label">
+                    Submit to UW And Processing 
+                </td>
+                <td style="white-space:nowarp;">
+                 <table>
+                        <tr>                            
+                            <td style="display:{!IF(!isVisible,'block','none')}">
+                              <apex:outputField value="{!opp.Submit_to_UW_Processing__c}" />
+                            </td>
+                            <td style="display:{!IF(!isVisible,'none','block')}">
+                                 <apex:inputField value="{!opp.Submit_to_UW_Processing__c}" />
+                            </td>
+                        </tr>
+                    </table> 
+                </td>
+            </tr>
+            <tr>
+                <td class="label">
+                    Opportunity Name
+                </td>
+                <td>
+                 <table>
+                        <tr>                          
+                            <td style="display:{!IF(!isVisible,'block','none')}">
+                              <apex:outputField value="{!opp.Name}"/>
+                            </td>
+                            <td style="display:{!IF(!isVisible,'none','block')}">
+                                 <apex:inputField value="{!opp.Name}" />
+                            </td>
+                        </tr>
+                    </table> 
+                </td>
+                <td>
+                    &nbsp;
+                </td>
+                <td class="label">
+                    Amount Sold  
+                </td>
+                <td>
+                    <table>
+                        <tr>                           
+                            <td style="display:{!IF(!isVisible,'block','none')}">
+                                <apex:outputField value="{!opp.Pay_Back_Amount__c}" rendered="{!!isVisible}"/>
+                            </td>
+                            <td style="display:{!IF(!isVisible,'none','block')}">
+                                <apex:inputField value="{!opp.Pay_Back_Amount__c}" rendered="{!isVisible}"/>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+                <td>
+                    &nbsp;
+                </td>
+                <td class="label">
+                    Processing Rep Assigned 
+                </td>
+                <td style="white-space:nowarp;">
+                 <table>
+                        <tr>                            
+                            <td style="display:{!IF(!isVisible,'block','none')}">
+                              <apex:outputField value="{!opp.Processing_Rep_Assigned__c}" />
+                            </td>
+                            <td style="display:{!IF(!isVisible,'none','block')}">
+                                 <apex:inputField value="{!opp.Processing_Rep_Assigned__c}" />
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+             <td class="label">
+                 Primary Campaign Source  
+             </td>
+             <td>
+                 <table>
+                        <tr>                      
+                            <td style="display:{!IF(!isVisible,'block','none')}">
+                              <apex:outputField value="{!opp.Campaign.Name}"/>
+                            </td>
+                            <td style="display:{!IF(!isVisible,'none','block')}">
+                                 <apex:inputField value="{!opp.Campaign.Name}" />
+                            </td>
+                        </tr>
+                    </table>
+              </td>
+              <td>
+                    &nbsp;
+              </td>
+                <td class="label">
+                    Daily Percentage  
+                </td>
+                <td>
+                    <table>
+                        <tr>                            
+                            <td style="display:{!IF(!isVisible,'block','none')}">
+                                <apex:outputField value="{!opp.Percent_Payback__c}" rendered="{!!isVisible}"/>
+                            </td>
+                            <td style="display:{!IF(!isVisible,'none','block')}">
+                                <apex:inputField value="{!opp.Percent_Payback__c}" rendered="{!isVisible}"/>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+                 <td>
+                    &nbsp;
+                </td>
+                <td class="label">
+                    DBA Name(Account Name) 
+                </td>
+                <td style="white-space:nowarp;">
+                 <table>
+                        <tr>
+                           <td style="display:{!IF(!isVisible,'block','none')}">
+                              <a href="/{!opp.Account.Name}" id="AccNameNewId">{!opp.Account.Name}</a>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            
+            <tr>
+                <td class="label">
+                    Billing Street 
+                </td>
+                <td>
+                <table>
+                        <tr>                          
+                            <td style="display:{!IF(!isVisible,'block','none')}">
+                              <apex:outputField value="{!opp.Account.BillingStreet}" />
+                            </td>
+                            <td style="display:{!IF(!isVisible,'none','block')}">
+                                <apex:inputField value="{!opp.Account.BillingStreet}"/>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+                 <td>
+                    &nbsp;
+                </td>
+                <td class="label">
+                    Estimated Daily Transactions
+                </td>                      
+                <td>
+                    <table>
+                        <tr>                            
+                            <td style="display:{!IF(!isVisible,'block','none')}">
+                                <apex:outputtext value="{!EstimatedDailyTransactions}" ></apex:outputtext>
+                            </td>
+                            <td style="display:{!IF(!isVisible,'none','block')}">
+                                <apex:outputtext value="{!EstimatedDailyTransactions}" ></apex:outputtext>
+                            </td>
+                        </tr>
+                   </table>  
+                </td>
+                <!--<td class="label">
+                    Business Days to Collect 
+                </td>                      
+                <td>
+                    <table>
+                        <tr>                            
+                            <td style="display:{!IF(!isVisible,'block','none')}">
+                              <apex:outputField value="{!opp.Loan_Term_Days__c}" />
+                            </td>
+                            <td style="display:{!IF(!isVisible,'none','block')}">
+                                <apex:inputField value="{!opp.Loan_Term_Days__c}" />
+                            </td>
+                        </tr>
+                   </table>  
+                </td>  -->
+                <td>
+                    &nbsp;
+                </td>
+                <td class="label">
+                    Auto Decisioned By  
+                </td>
+               
+            </tr>
+            
+            <tr>
+                <td class="label">
+                    {!$ObjectType.Opportunity.fields.Renewal_Number__c.label}
+                </td>
+                <td>
+                <table>
+                    <tr>                          
+                        <td style="display:{!IF(!isVisible,'block','none')}">
+                          <apex:outputField value="{!opp.Renewal_Number__c}" />
+                        </td>
+                        <td style="display:{!IF(!isVisible,'none','block')}">
+                            <apex:inputField value="{!opp.Renewal_Number__c}"/>
+                        </td>
+                    </tr>
+                 </table>
+                </td>
+                 <td>
+                    &nbsp;
+                </td>
+                <td class="label">
+                    Processing Representative 
+                </td>                      
+                <td>
+                    <table>
+                        <tr>                            
+                            <td style="display:{!IF(!isVisible,'block','none')}">
+                              <apex:outputField value="{!opp.Processing_Representative__c}" />
+                            </td>
+                            <td style="display:{!IF(!isVisible,'none','block')}">
+                                <apex:inputField value="{!opp.Processing_Representative__c}" />
+                            </td>
+                        </tr>
+                   </table>  
+                </td>
+                <!-- <td class="label">
+                    Estimated Daily Transactions
+                </td>                      
+                <td>
+                    <table>
+                        <tr>                            
+                            <td style="display:{!IF(!isVisible,'block','none')}">
+                                <apex:outputtext value="{!EstimatedDailyTransactions}" ></apex:outputtext>
+                            </td>
+                            <td style="display:{!IF(!isVisible,'none','block')}">
+                                <apex:outputtext value="{!EstimatedDailyTransactions}" ></apex:outputtext>
+                            </td>
+                        </tr>
+                   </table>  
+                </td> -->
+                <td>
+                    &nbsp;
+                </td>
+                <td class="label">
+                    Created By  
+                </td>
+                <td>
+                    <apex:outputField value="{!opp.CreatedById}"/>                           
+                </td>
+            </tr>
+            <tr>
+                <td class="label">
+                    Account in Risk  
+                </td>
+                <td>
+                <table>
+                        <tr>                          
+                            <td style="display:{!IF(!isVisible,'block','none')}">
+                              <apex:outputField value="{!opp.Account_In_Risk__c}" />
+                            </td>
+                            <td style="display:{!IF(!isVisible,'none','block')}">
+                                <apex:inputField value="{!opp.Account_In_Risk__c}"/>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+                <td>
+                    &nbsp;
+                </td>
+                <td class="label">
+                    Underwriter Assigned  
+                </td>
+                <td>
+                    <table>
+                        <tr>                            
+                            <td style="display:{!IF(!isVisible,'block','none')}">
+                              <apex:outputField value="{!opp.Underwriter_Assigned__c}" />
+                            </td>
+                            <td style="display:{!IF(!isVisible,'none','block')}">
+                                <apex:inputField value="{!opp.Underwriter_Assigned__c}" />
+                            </td>
+                        </tr>
+                   </table>  
+                </td>
+                <!-- <td class="label">
+                    Processing Representative 
+                </td>                      
+                <td>
+                    <table>
+                        <tr>                            
+                            <td style="display:{!IF(!isVisible,'block','none')}">
+                              <apex:outputField value="{!opp.Processing_Representative__c}" />
+                            </td>
+                            <td style="display:{!IF(!isVisible,'none','block')}">
+                                <apex:inputField value="{!opp.Processing_Representative__c}" />
+                            </td>
+                        </tr>
+                   </table>  
+                </td> -->
+                <td>
+                    &nbsp;
+                </td>
+                <td class="label">
+                    LastModifiied By 
+                </td>
+                <td>
+                    <apex:outputField value="{!opp.LastModifiedById}"/>
+                 </td>
+            </tr>
+            <tr>
+                <td><apex:outputField value="{!opp.CALC_Link__c}"/></td>                
+                <td><apex:outputField value="{!opp.Notes_Link__c}"/></td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+            <!-- <tr>
+                <td class="label">
+                    Underwriter Assigned  
+                </td>
+                <td>
+                    <table>
+                        <tr>                            
+                            <td style="display:{!IF(!isVisible,'block','none')}">
+                              <apex:outputField value="{!opp.Underwriter_Assigned__c}" />
+                            </td>
+                            <td style="display:{!IF(!isVisible,'none','block')}">
+                                <apex:inputField value="{!opp.Underwriter_Assigned__c}" />
+                            </td>
+                        </tr>
+                   </table>  
+                </td>
+                <td>
+                    &nbsp;
+                </td>
+            </tr> -->
+                    
+        </table>
+    </apex:outputPanel>   
+     </center>
+     <apex:actionFunction name="editopp11" action="{!onEdit11}"/>
+     <apex:actionFunction name="editopp" action="{!onEdit}" oncomplete="reloadUrl();"/>
+     <apex:actionFunction name="cancelopp" action="{!onCancel}"/>
+    </apex:form>
+</apex:page>

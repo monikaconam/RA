@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>false</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Direct Mail Template</name>
+    <style>none</style>
+    <subject>We are looking to be your next small business loan lender</subject>
+    <textOnly>Hi {!Lead.FirstName},
+
+I hope you are having a great day so far. I was reaching out to you about the letter you received from us regarding your business. To help fill in the blanks, we are a direct lender specializing in business loans and also part of the Quicken Loans family of companies. Based on the public information for your business, it looks like some of our newest programs may be eligible for you. Our new Select and Preferred programs offering some of our lowest costs in our 10 year history are not only some of the most competitive costs in the market, but funding as quickly as 24 hours.
+
+My team and I will be in the office until 8:00 PM Eastern time tonight, trying to be as available as we can for your business owners. I need about 5 or 10 minutes of your time to customize a program that will accomplish everything you’re looking for, and start your business relationship with not only myself, but RapidAdvance as well. Have a great day, and I&apos;m looking forward to speaking with you.
+
+Thanks,
+{!User.Name}
+RapidAdvance® | A+ BBB Rated
+
+1001 Woodward Ave, Suite 950 | Detroit, MI | 48226
+Phone: {!User.Phone} | Cell: {!User.MobilePhone} | Fax: {!User.Fax}
+Email: {!User.Email} | Website: www.RapidAdvance.com</textOnly>
+    <type>custom</type>
+</EmailTemplate>

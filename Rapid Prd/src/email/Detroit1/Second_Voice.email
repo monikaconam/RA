@@ -1,0 +1,33 @@
+<table height="400" width="550" cellpadding="5" border="0" cellspacing="5" >
+<tr height="400" valign="top" >
+<td style=" color:#000000; font-size:12pt; background-color:#FFFFFF; font-family:arial; bLabel:main; bEditID:r3st1;" tEditID="c1r1" locked="0" aEditID="c1r1" >
+<![CDATA[<table height="400" width="550" cellpadding="5" border="0" cellspacing="5"><tbody><tr height="400" valign="top"><td teditid="c1r1" aeditid="c1r1" locked="0" id="c1r1" style="font-size: 12pt; border: 1px dashed rgb(0, 0, 255); background-color: rgb(255, 255, 255);"><p class="MsoNormal" style="font-size: 12pt;">Hey {!Contact.FirstName},</p><p class="MsoNormal"><o:p>&nbsp;</o:p></p><p class="MsoNormal"><span style="font-size: 12pt;">I look forward to speaking with you</span></p><p class="MsoNormal"><o:p></o:p></p><p class="MsoNormal">Hope all is well with you today! My name is {!User.Name} and I’m a Follow-up Specialist at Rapid Advance. I was reaching out because we had previously begun working with you and we now have a special opportunity for small
+business financing.&nbsp;<o:p></o:p></p><p class="MsoNormal"><o:p>&nbsp;</o:p></p><p class="MsoNormal">Just to give you an idea of what it is we are offering, it's
+a loan that is as competitive as a bank loan or SBA loan in terms and rates,
+with the only difference being we don’t require the crazy documentation that
+banks and government loans will require from you.&nbsp; We also don’t have the
+high cost fees because we will be servicing your loan through the life of the
+loan.<o:p></o:p></p><p class="MsoNormal"><o:p>&nbsp;</o:p></p><p class="MsoNormal">I am just looking for about 5-10 minutes of your time to see
+if this make sense for you. When would be the best time for you to talk?<o:p></o:p></p><p class="MsoNormal"><o:p>&nbsp;</o:p></p><p class="MsoNormal">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</p><p class="MsoNormal">Thanks,<o:p></o:p></p><p class="MsoNormal">&nbsp;<o:p></o:p></p><p class="MsoNormal"><span style="font-size:12.0pt;
+font-family:&quot;Times New Roman&quot;,serif">&nbsp;</span></p><p class="MsoNormal"><span style="font-size:12.0pt;
+font-family:&quot;Times New Roman&quot;,serif"><a href="http://www.rapidadvance.com/why-choose-rapid"><span style="color:windowtext;
+text-decoration:none;text-underline:none">http://www.rapidadvance.com/</span></a></span></p><p class="MsoNormal"><span style="font-size:12.0pt;
+font-family:&quot;Times New Roman&quot;,serif"><br></span></p><p class="MsoNormal" style="font-size: 12pt;">All the best,<o:p></o:p></p><p class="MsoNormal" style="font-size: 12pt;"><br></p><p class="MsoNormal" style="font-size: 12pt;"><font face="arial">{!User.Name} | Business Advisor</font></p><p class="MsoNormal"><font face="arial" style="font-size: 12pt;">Phone: &nbsp;</font><font face="arial">{!User.Phone}</font></p><p class="MsoNormal"><font face="arial">Cell: &nbsp;{!User.MobilePhone}</font></p><p class="MsoNormal"><font face="arial">Email: &nbsp;{!User.Email}</font></p></td></tr></tbody></table>]]></td>
+</tr>
+</table>

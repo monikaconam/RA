@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Campaign$Name</field>
+    </columns>
+    <columns>
+        <field>Campaign.Accounts__r$X4_Month_Amendment_Received__c</field>
+    </columns>
+    <columns>
+        <field>Campaign.Accounts__r$Name</field>
+    </columns>
+    <columns>
+        <field>Campaign.Accounts__r.PartnersFrom.Opportunities$Estimated_Days_to_Repay__c</field>
+    </columns>
+    <columns>
+        <field>Campaign.Accounts__r.PartnersFrom.Opportunities$Name</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>Campaign.Accounts__r.PartnersFrom.Opportunities$Estimated_Days_to_Repay__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>lessThan</operator>
+            <value>151</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>Four Month Deals-Current Week</name>
+    <params>
+        <name>scopeid</name>
+        <value></value>
+    </params>
+    <reportType>Campaigns_with_Partner_Accounts__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>Campaign.Accounts__r.PartnersFrom.Opportunities$Signed_Contract_Received__c</dateColumn>
+        <interval>INTERVAL_THISWEEK</interval>
+    </timeFrameFilter>
+</Report>

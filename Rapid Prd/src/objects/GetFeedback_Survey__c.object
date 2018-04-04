@@ -1,0 +1,1035 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>This is a custom object created to capture the survey responses received through GetFeedback Survey App.</description>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>Able_to_accomplish_goals_with_fi__c</fullName>
+        <description>Client Evaluation: I&apos;ve been able to accomplish my goals with this financing.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Client Evaluation: I&apos;ve been able to accomplish my goals with this financing.</inlineHelpText>
+        <label>Accomplish goals with financing</label>
+        <precision>4</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Access_To_Information_about_Account__c</fullName>
+        <description>Overall satisfaction with aspect to: Access to information about client&apos;s account</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Aspect: Access to information about my account</inlineHelpText>
+        <label>Access To Information about Account</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Not at All Satisfied</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Slightly Satisfied</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Somewhat Satisfied</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Very Satisfied</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Completely Satisfied</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>No Experience</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Additional_Comments__c</fullName>
+        <externalId>false</externalId>
+        <label>Additional Comments</label>
+        <length>5000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Attempt__c</fullName>
+        <externalId>false</externalId>
+        <label>Attempt</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>First</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Second</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>BA_Did_not_get_called_back__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>I didn&apos;t get called back when promised.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Choice: I didn&apos;t get called back when promised.</inlineHelpText>
+        <label>Didn&apos;t get called back when promised</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>BA_Service_Rating_Comments__c</fullName>
+        <description>Received less than excellent service from your business advisor - Reason</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Received less than excellent service from your business advisor - Reason</inlineHelpText>
+        <label>BA Service Rating Comments</label>
+        <length>1000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>BA_Service_Rating__c</fullName>
+        <description>Rating - overall service provided by business advisor.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Rating - overall service provided by business advisor.</inlineHelpText>
+        <label>BA Service Rating</label>
+        <precision>4</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>BA_did_not_set_expectation__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>My business adviser didn&apos;t set accurate expectations about the funding process.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Choice: My business adviser didn&apos;t set accurate expectations about the funding process.</inlineHelpText>
+        <label>BA didn&apos;t set accurate expectations</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>BA_was_not_available__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>My business advisor wasn&apos;t available to me when I tried to reach him/her.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Choice: My business advisor wasn&apos;t available to me when I tried to reach him/her.</inlineHelpText>
+        <label>BA wasn&apos;t available when tried to reach</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>BA_was_not_knowledgeable__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>I didn&apos;t feel that the business advisor was knowledgeable enough about the details of my financing / funding</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Choice: I didn&apos;t feel that the business advisor was knowledgeable enough about the details of my financing / funding.</inlineHelpText>
+        <label>BA was not knowledgeable enough</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Comfortable_funding_repayment__c</fullName>
+        <description>Client Evaluation: I&apos;m able to repay the funding comfortably.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Client Evaluation: I&apos;m able to repay the funding comfortably.</inlineHelpText>
+        <label>Comfortable funding repayment</label>
+        <precision>4</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Completed_At__c</fullName>
+        <description>Survey Completion Time</description>
+        <externalId>false</externalId>
+        <label>Completed At</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Consider_RapidAdvance_for_next_funding__c</fullName>
+        <description>I will consider RapidAdvance the next time I&apos;m looking for outside funding</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Client Evaluation: I will consider RapidAdvance the next time I&apos;m looking for outside funding</inlineHelpText>
+        <label>Consider RapidAdvance for next funding</label>
+        <precision>4</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Funding_Status__c</fullName>
+        <externalId>false</externalId>
+        <formula>Text(Opportunity__r.Funding_Status__c)</formula>
+        <label>Funding Status</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Future_funding_choice_is_Rapid__c</fullName>
+        <description>Client Evaluation: When I need funding in the future, RapidAdvance will be my first choice.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Client Evaluation: When I need funding in the future, RapidAdvance will be my first choice.</inlineHelpText>
+        <label>Future funding choice is Rapid</label>
+        <precision>4</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>GetFeedback_Survey_Name__c</fullName>
+        <externalId>false</externalId>
+        <label>GetFeedback Survey Name</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>GetFeedback_Survey_Response__c</fullName>
+        <externalId>false</externalId>
+        <label>GetFeedback Survey Response</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Url</type>
+    </fields>
+    <fields>
+        <fullName>GetFeedback_Survey_Summary_Report__c</fullName>
+        <externalId>false</externalId>
+        <label>GetFeedback Survey Summary Report</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Url</type>
+    </fields>
+    <fields>
+        <fullName>OS_Approval_Expectation_changed_in_UW__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>I was given the expectation I would be approved, but the situation seemed to change in underwriting.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Choice: I was given the expectation I would be approved, but the situation seemed to change in underwriting.</inlineHelpText>
+        <label>Expectation of Approval changed in UW</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>OS_UW_Process_Intrusive_Disruptive__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>The underwriting process was overly intrusive and disruptive.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Choice: The underwriting process was overly intrusive and disruptive.</inlineHelpText>
+        <label>UW Process Intrusive and Disruptive</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>OS_app_process_harder__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>The application process was harder or more time consuming than I expected.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Choice: The application process was harder or more time consuming than I expected.</inlineHelpText>
+        <label>App process harder / time consuming</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>OS_many_conditions_prior_funding__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Once I was approved, there were too many conditions prior to actually funding my account.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Choice: Once I was approved, there were too many conditions prior to actually funding my account.</inlineHelpText>
+        <label>Many conditions prior to funding</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>OS_problems_with_cust_serv__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>After funding my account, I experienced problems with customer service.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Choice: After funding my account, I experienced problems with customer service.</inlineHelpText>
+        <label>Experienced problems with cust servic</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>OS_took_long_for_approval__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>It took too long to get the approval decision from underwriting.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Choice: It took too long to get the approval decision from underwriting.</inlineHelpText>
+        <label>Took long to get approval from UW</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>OS_took_long_for_decision__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>It took too long to get the decision from underwriting.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Choice: It took too long to get the decision from underwriting.</inlineHelpText>
+        <label>Took long to get decision from UW</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Opportunity__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Opportunity</label>
+        <referenceTo>Opportunity</referenceTo>
+        <relationshipLabel>GetFeedback Survey</relationshipLabel>
+        <relationshipName>GetFeedback_Survey</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Overall_Satisfaction_Comments__c</fullName>
+        <description>Received less than completely satisfied rating for overall funding experience - Reason</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Received less than completely satisfied rating for overall funding experience - Reason</inlineHelpText>
+        <label>Overall Satisfaction Comments</label>
+        <length>1000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Overall_Satisfaction__c</fullName>
+        <description>Overall Funding Process Satisfaction - Rating</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Overall Funding Process Satisfaction - Rating</inlineHelpText>
+        <label>Overall Satisfaction</label>
+        <precision>4</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>RapidAdvance_evaluated_thoroughly__c</fullName>
+        <description>RapidAdvance took the time to thoroughly evaluate my business</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Client Evaluation: RapidAdvance took the time to thoroughly evaluate my business</inlineHelpText>
+        <label>RapidAdvance evaluated thoroughly</label>
+        <precision>4</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Reference_Company_Name__c</fullName>
+        <externalId>false</externalId>
+        <label>Reference Company Name</label>
+        <length>100</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Reference_Email_Address__c</fullName>
+        <externalId>false</externalId>
+        <label>Reference Email Address</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Email</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Reference_Name__c</fullName>
+        <externalId>false</externalId>
+        <label>Reference Name</label>
+        <length>100</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Reference_Phone_Number__c</fullName>
+        <externalId>false</externalId>
+        <label>Reference Phone Number</label>
+        <length>20</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Secured_funding_from_another_lender__c</fullName>
+        <description>Were you able to secure the funding you were looking for from another lender?</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Were you able to secure the funding you were looking for from another lender?</inlineHelpText>
+        <label>Secured funding from another lender</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Yes, at comparable or better terms than RapidAdvance initially offered.</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Yes, but at less advantageous terms than RapidAdvance initially offered.</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>No, I applied elsewhere but wasn&apos;t approved.</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>No, I didn&apos;t seek funding from another lender.</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Started_At__c</fullName>
+        <description>Sarvey Start Time</description>
+        <externalId>false</externalId>
+        <label>Started At</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>The_RapidAdvance_client_portal__c</fullName>
+        <description>Overall satisfaction with aspect to: The RapidAdvance client portal</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Aspect: The RapidAdvance client portal</inlineHelpText>
+        <label>The RapidAdvance client portal</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Not at All Satisfied</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Slightly Satisfied</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Somewhat Satisfied</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Very Satisfied</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Completely Satisfied</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>No Experience</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>The_process_of_repaying_funding__c</fullName>
+        <description>Overall satisfaction with aspect to: The process of repaying funding</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Aspect: The process of repaying my funding</inlineHelpText>
+        <label>The process of repaying funding</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Not at All Satisfied</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Slightly Satisfied</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Somewhat Satisfied</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Very Satisfied</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Completely Satisfied</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>No Experience</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Understanding_of_approval_requirements__c</fullName>
+        <description>I have a solid understanding of the approval requirements if I apply in the future</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Client Evaluation: I have a solid understanding of the approval requirements if I apply in the future</inlineHelpText>
+        <label>Understanding of approval requirements</label>
+        <precision>4</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Underwriting_decision_clearly_explained__c</fullName>
+        <description>The underwriting decision was clearly explained to me.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Client Evaluation: The underwriting decision was clearly explained to me.</inlineHelpText>
+        <label>Underwriting decision clearly explained</label>
+        <precision>4</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Would_Recommend_Rating__c</fullName>
+        <description>Would recommend RapidAdvance to a friend or colleague?</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Would recommend RapidAdvance to a friend or colleague?</inlineHelpText>
+        <label>Would Recommend (NPS)</label>
+        <precision>4</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <label>GetFeedback Survey</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>GetFeedback_Survey_Name__c</columns>
+        <columns>Opportunity__c</columns>
+        <columns>Would_Recommend_Rating__c</columns>
+        <columns>BA_Service_Rating__c</columns>
+        <columns>Overall_Satisfaction__c</columns>
+        <columns>CREATED_DATE</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <listViews>
+        <fullName>All1</fullName>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <listViews>
+        <fullName>Created_Today</fullName>
+        <columns>NAME</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CREATED_DATE</field>
+            <operation>equals</operation>
+            <value>TODAY</value>
+        </filters>
+        <label>Created Today</label>
+    </listViews>
+    <nameField>
+        <displayFormat>GF-R-{00000000}</displayFormat>
+        <label>GF Response Name</label>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>GetFeedback Survey</pluralLabel>
+    <recordTypeTrackHistory>false</recordTypeTrackHistory>
+    <recordTypes>
+        <fullName>Client_Service_Survey</fullName>
+        <active>true</active>
+        <description>RapidAdvance - Client Service Survey - after 3 months into funding.</description>
+        <label>Client Service Survey</label>
+        <picklistValues>
+            <picklist>Access_To_Information_about_Account__c</picklist>
+            <values>
+                <fullName>Completely Satisfied</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No Experience</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not at All Satisfied</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Slightly Satisfied</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Somewhat Satisfied</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Very Satisfied</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Attempt__c</picklist>
+            <values>
+                <fullName>First</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Second</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Secured_funding_from_another_lender__c</picklist>
+            <values>
+                <fullName>No%2C I applied elsewhere but wasn%27t approved%2E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No%2C I didn%27t seek funding from another lender%2E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes%2C at comparable or better terms than RapidAdvance initially offered%2E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes%2C but at less advantageous terms than RapidAdvance initially offered%2E</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>The_RapidAdvance_client_portal__c</picklist>
+            <values>
+                <fullName>Completely Satisfied</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No Experience</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not at All Satisfied</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Slightly Satisfied</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Somewhat Satisfied</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Very Satisfied</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>The_process_of_repaying_funding__c</picklist>
+            <values>
+                <fullName>Completely Satisfied</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No Experience</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not at All Satisfied</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Slightly Satisfied</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Somewhat Satisfied</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Very Satisfied</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Funding_Survey</fullName>
+        <active>true</active>
+        <description>RapidAdvance - Funding Survey</description>
+        <label>Funding Survey</label>
+        <picklistValues>
+            <picklist>Access_To_Information_about_Account__c</picklist>
+            <values>
+                <fullName>Completely Satisfied</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No Experience</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not at All Satisfied</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Slightly Satisfied</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Somewhat Satisfied</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Very Satisfied</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Attempt__c</picklist>
+            <values>
+                <fullName>First</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Second</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Secured_funding_from_another_lender__c</picklist>
+            <values>
+                <fullName>No%2C I applied elsewhere but wasn%27t approved%2E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No%2C I didn%27t seek funding from another lender%2E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes%2C at comparable or better terms than RapidAdvance initially offered%2E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes%2C but at less advantageous terms than RapidAdvance initially offered%2E</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>The_RapidAdvance_client_portal__c</picklist>
+            <values>
+                <fullName>Completely Satisfied</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No Experience</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not at All Satisfied</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Slightly Satisfied</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Somewhat Satisfied</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Very Satisfied</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>The_process_of_repaying_funding__c</picklist>
+            <values>
+                <fullName>Completely Satisfied</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No Experience</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not at All Satisfied</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Slightly Satisfied</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Somewhat Satisfied</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Very Satisfied</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Satisfaction_Survey</fullName>
+        <active>true</active>
+        <description>RapidAdvance - Satisfaction Survey - if the funding is declined by Rapid Advance.</description>
+        <label>Satisfaction Survey</label>
+        <picklistValues>
+            <picklist>Access_To_Information_about_Account__c</picklist>
+            <values>
+                <fullName>Completely Satisfied</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No Experience</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not at All Satisfied</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Slightly Satisfied</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Somewhat Satisfied</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Very Satisfied</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Attempt__c</picklist>
+            <values>
+                <fullName>First</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Second</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Secured_funding_from_another_lender__c</picklist>
+            <values>
+                <fullName>No%2C I applied elsewhere but wasn%27t approved%2E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No%2C I didn%27t seek funding from another lender%2E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes%2C at comparable or better terms than RapidAdvance initially offered%2E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes%2C but at less advantageous terms than RapidAdvance initially offered%2E</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>The_RapidAdvance_client_portal__c</picklist>
+            <values>
+                <fullName>Completely Satisfied</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No Experience</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not at All Satisfied</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Slightly Satisfied</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Somewhat Satisfied</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Very Satisfied</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>The_process_of_repaying_funding__c</picklist>
+            <values>
+                <fullName>Completely Satisfied</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No Experience</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not at All Satisfied</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Slightly Satisfied</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Somewhat Satisfied</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Very Satisfied</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <searchLayouts/>
+    <sharingModel>ReadWrite</sharingModel>
+</CustomObject>

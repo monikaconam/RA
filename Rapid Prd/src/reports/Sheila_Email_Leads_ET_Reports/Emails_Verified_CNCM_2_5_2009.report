@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>CREATED_DATE</field>
+    </columns>
+    <columns>
+        <field>LEAD_OWNER</field>
+    </columns>
+    <columns>
+        <field>FIRST_NAME</field>
+    </columns>
+    <columns>
+        <field>LAST_NAME</field>
+    </columns>
+    <columns>
+        <field>EMAIL</field>
+    </columns>
+    <columns>
+        <field>LEAD_CREATED_DATE</field>
+    </columns>
+    <columns>
+        <field>LEAD_LAST_UPDATE</field>
+    </columns>
+    <columns>
+        <field>LEAD_LAST_ACTIVITY</field>
+    </columns>
+    <description>these are the leads we send a contact info verification email to as of 2/5/2009</description>
+    <filter>
+        <criteriaItems>
+            <column>SUBJECT</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>contains</operator>
+            <value>current information</value>
+        </criteriaItems>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>SUBJECT</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Emails Verified - CNCM 2-5-2009</name>
+    <params>
+        <name>closed</name>
+        <value>closed</value>
+    </params>
+    <params>
+        <name>type</name>
+        <value>te</value>
+    </params>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>LeadActivity</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>CREATED_DATE</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+        <startDate>2009-02-04</startDate>
+    </timeFrameFilter>
+</Report>

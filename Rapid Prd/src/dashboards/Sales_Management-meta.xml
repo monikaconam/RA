@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DashboardFolder xmlns="http://soap.sforce.com/2006/04/metadata">
+    <accessType>Shared</accessType>
+    <name>Sales Management</name>
+    <publicFolderAccess>ReadWrite</publicFolderAccess>
+    <sharedTo>
+        <group>CMO</group>
+        <group>Temp_Access</group>
+        <role>Administrator</role>
+        <role>BusinessDevelopment</role>
+        <role>DirectorofSales</role>
+        <role>GTF_Manager</role>
+        <role>MarketingDepartment</role>
+    </sharedTo>
+</DashboardFolder>

@@ -1,0 +1,340 @@
+<apex:page standardController="Opportunity" extensions="AllNote_Ctrl" sidebar="false" showHeader="false">     
+    <apex:stylesheet value="{!$Resource.ExtJS4}/extjs-4.1.0/resources/css/ext-all.css" />
+    <apex:includeScript value="{!$Resource.ExtJS4}/extjs-4.1.0/ext-all.js"/>   
+    <apex:stylesheet value="{!$Resource.ExtJS4}/extjs-4.1.0/resources/css/ytheme-gray.css" id="theme"/>    
+    <script type="text/javascript">
+        Ext.BLANK_IMAGE_URL="{!$Resource.ExtJS4}/extjs-4.1.0/resources/themes/images/default/tree/s.gif"
+    </script>
+    <style>
+        
+        table tr{
+            height: 24px;
+        }
+        input[type=text],textarea{
+            padding: 1px 3px;
+            background: repeat-x 0 0;
+            border: 1px solid;
+            background-color: white;
+            background-image: url('{!$Resource.ExtJS4}/extjs-4.1.0/resources/themes/images/default/form/text-bg.gif');
+            border-color: #b5b8c8;
+            width:200px;
+         }   
+         select{
+           
+            padding: 1px 1px;
+            background: repeat-x 0 0;
+            border: 1px solid;
+            background-color: white;
+            background-image: url('{!$Resource.ExtJS4}/extjs-4.1.0/resources/themes/images/default/form/text-bg.gif');
+            border-color: #b5b8c8;
+            width:200px;
+         }
+        .requiredInput {
+            position: relative;
+            height: 100%;
+        }
+        
+        .bPageBlock .requiredInput .requiredBlock {
+            background-color: #c00;
+            position: absolute;
+            left: -4px;
+            width: 3px;
+            top: 1px;
+            bottom: 1px;
+        }
+        .panel{
+            background: #222 !important;//rgb(187, 186, 186) !important;rgb(160, 159, 159)
+            border: solid 1px #000 !important;
+            width: 100% !important;
+            margin-top: 13px;
+            font-weight:bold;
+            height:17px;
+            color:#fff;
+            /*background: rgb(187, 186, 186) !important;
+            border: solid 1px rgb(160, 159, 159) !important;
+            width: 100% !important;
+            margin-top: 12px;
+            font-weight:bold;*/
+        }
+        .socialSearchResult {
+            background-color: 
+            #fff;
+            border: 1px solid 
+            #D4DADC;
+            border-radius: 5px 5px 5px 5px !important;
+            font-size: 12px;            
+            height: 50px;
+            -webkit-border-radius: 7px !important;
+            -moz-border-radius: 5px !important;
+            box-shadow: 0px 0px 10px #888;
+            margin: 5px;
+        }
+        .socialSearchResult:hover {
+            background-color: 
+            #F7F7F7;
+            border: 1px solid 
+            #ddd;
+            box-shadow: 0px 0px 12px #fff;
+            
+        } 
+        .requiredLoaderBG{
+            background-color: rgb(71,71,71);
+            opacity:0.7;
+            filter:alpha(opacity=70);            
+            background-position: center center;
+            background-repeat: no-repeat;
+            height: 100%;
+            left: 0;
+            position: fixed;
+            text-align: center;
+            top: 0;
+            width: 100%;
+            z-index: 1;
+            background-image:url({!URLFOR($Resource.ajaxLoadGif)});
+        } 
+        input[type=button]{      
+            font-size: 12px !important;      
+            font-weight: normal !important;
+            color:#232323;font-family: tahoma;font-size:12px;letter-spacing:1px; 
+            background-repeat: no-repeat !important;
+            margin: 5px 4px 0px 0px !important;
+            width: 80px !important;            
+            background-image: -moz-linear-gradient(top, #ffffff, #e7e7e7) !important;
+            background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(48%, #f9f9f9), color-stop(100%, #e7e7e7)) !important;
+            /*background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffffff), color-stop(48%, #f9f9f9), color-stop(52%, #e2e2e2), color-stop(100%, #e7e7e7));*/
+        }
+        .requiredBlock{
+            color:red;
+            float:left;
+            height:20px;
+            font-size:20px;
+        }
+        /*#tblId tr:nth-child(even) {background: #f6f6f6; border-bottom:solid 1px #888;border-top:solid 1px #888}
+        #tblId tr:nth-child(odd) {background: #FFF} 
+        table tr td{
+            padding: 2px 0px;
+        }*/
+        body{
+            background-color:#F6F6F6;
+            color:#232323 !important;
+            font-family: tahoma !important;
+            font-size:12px;letter-spacing:1px !important;            
+        }
+        span{
+            color:#232323 !important;
+            font-family: tahoma !important;
+            font-size:12px;letter-spacing:1px !important;
+        }
+        .bgImg{
+            opacity:0.4;
+            filter: alpha(opacity=0.4);            
+            float:right;            
+            background-position:0 0;
+            background-repeat:no-repeat;  
+            background-size: 62%;
+            width: 200px;
+            float: right;
+            margin-top: -120px;
+            height: 120px;
+            background-image:url({!URLFOR($Resource.Icons,'notes.png')});
+        }
+        label{
+            font-weight: bold !important;
+        }
+    </style>
+    <script>
+        Ext.util.CSS.swapStyleSheet('theme', '{!$Resource.ExtJS4}/extjs-4.1.0/resources/css/ytheme-gray.css');
+    </script>
+    <apex:form >      
+        <!--c:ExtJs_Data_Grid object="Note__c" fields="Note_Content__c,RecordTypeId,LastModifiedById,LastModifiedDate" rows="18" minimized="true"/-->     
+        <apex:pageMessages ID="errorId"/>     
+        <center style="margin-top:2px;">         
+        <apex:outputPanel id="recordPanelId"> 
+        <apex:actionRegion >
+        <table width="90%">
+            <tr>                
+                <td>
+                    <c:Extjs_Panel title="Create Notes"/> 
+                </td>
+            </tr>
+        </table>
+        
+        <table width="90%"  id="createNoteId">
+            <tr>
+                <td align="left" width="8%">
+                     <label>Notes Type</label> 
+                </td>
+                <td width="1%">
+                    <!-- <div class="requiredBlock">*</div>  -->
+                </td>
+                <td align="left" width="80%">
+                    <apex:selectList value="{!selectedRecordType}" size="1">
+                         <apex:selectOptions value="{!selectOptionRecordType}"/>
+                    </apex:selectList>
+                </td>
+                <td width="1%">
+                    &nbsp;
+                </td>
+                <td align="right" width="6%">
+                    &nbsp;
+                </td>
+            </tr>
+            <tr>
+                <td align="left" width="8%">
+                     <label>Add Your Notes</label> 
+                </td>
+                <td width="1%">
+                    <!--  <div class="requiredBlock">*</div>   -->
+                </td>
+                <td align="left" width="80%">
+                    <apex:inputField value="{!objNote.Note_Content__c}" required="true"  style="width:95%;height:60px;"/>
+                </td>
+                <td width="1%">
+                    &nbsp;
+                </td>
+                <td align="right" width="6%">
+                    &nbsp;
+                </td>
+            </tr> 
+            <tr>
+                <td colspan="2" align="left" width="8%">
+                   &nbsp;
+                </td>                
+                <td align="left" width="80%" style="withe-space:nowrap;">
+                    <apex:commandButton style="width:80px;margin-top:5px;" value="Save" action="{!createNote}" reRender="recordPanelId,errorId" Status="ajaxStatus1"/>
+                    &nbsp;<apex:actionstatus id="ajaxStatus1">
+                        <apex:facet name="start">
+                            <apex:image value="{!$Resource.ajaxSmallLoad}" width="17" height="17"/>
+                        </apex:facet>                        
+                    </apex:actionstatus>
+                </td>
+                <td width="1%">
+                    &nbsp;
+                </td>
+                <td align="right" width="6%">
+                    &nbsp;
+                </td>
+            </tr>
+        </table>
+        <div class="bgImg"></div> 
+        <table width="90%">
+            <tr>                
+                <td> <BR/>
+                    <c:Extjs_Panel title="Search Notes (To view all notes, click Search.)"/>                    
+                </td>
+            </tr>
+        </table>
+        </apex:actionRegion>
+        <apex:actionRegion >
+        <table width="90%">
+            <tr>
+                <td align="left" width="8%">
+                     <label>Search Notes</label>
+                </td>
+                <td width="1%">
+                    &nbsp;
+                </td>
+                <td align="left" width="10%">
+                    <apex:inputText value="{!searchText}" />
+                </td>
+                <td width="1%">
+                    &nbsp;
+                </td>
+                <td align="left" width="80%">
+                    &nbsp;
+                </td>
+            </tr> 
+            <tr>
+                <td align="left" width="8%">
+                    <label>Note Type</label>
+                </td>
+                <td width="1%">
+                    &nbsp;
+                </td>
+                <td align="left" width="80%">
+                    <apex:selectList value="{!selectedRecordTypeForSearch}" size="1" >
+                        <apex:selectOption itemvalue="" itemLabel="All"></apex:selectOption>
+                        <apex:selectOptions value="{!selectOptionRecordType}"/>
+                    </apex:selectList>
+                </td>
+                <td width="1%">
+                    &nbsp;
+                </td>
+                <td align="right" width="6%">
+                    &nbsp;
+                </td>
+            </tr>
+            <tr>
+                <td align="left" width="8%">
+                    &nbsp;
+                </td>
+                <td width="1%">
+                    &nbsp;
+                </td>
+                <td align="left" width="80%" style="white-space:nowrap;">
+                    <apex:commandButton action="{!onSearch}" value="Search" reRender="searchPanelId" status="ajaxStatus"/>&nbsp;
+                    <apex:actionstatus id="ajaxStatus">
+                        <apex:facet name="start">
+                            <apex:image value="{!$Resource.ajaxSmallLoad}" width="17" height="17"/>
+                        </apex:facet>                        
+                    </apex:actionstatus>
+                </td>
+                <td align="left" width="1%">
+                    &nbsp;
+                </td>
+                <td align="right" width="6%">
+                    &nbsp;
+                </td>
+            </tr>           
+        </table>         
+        <apex:outputPanel id="searchPanelId" layout="block"><br/>
+            <apex:outputPanel rendered="{!IF(OR(objNotesDetail.size == 0,objNotesDetail == null),false,true)}">
+                <center style="width:90%">
+                    <c:Extjs_Panel isNoteDetlailExist="{!IF(ISBlank(selectedRecordTypeForSearch),"true","false")}"  headerHtml="NoteDetail" title=""/>
+                    <!--table width="100%"><tr><td width="58%" align="left">Note Content</td><td width="20%" align="left"><div style="display:{!IF(ISBlank(selectedRecordTypeForSearch),"block","none")}">Note Type</div></td><td width="22%" align="left">Modified By</td></tr></table-->
+                </center>
+            </apex:outputPanel> 
+            <apex:repeat value="{!objNotesDetail}" var="nd"> 
+                <table width="90%" class="socialSearchResult" > 
+                        <tr>                           
+                            <td width="60%">
+                                <!--a href="/{!nd.noteId}" style="text-decoration:none;"--> 
+                                    <div style="padding:5px !important;">
+                                        <apex:outputField value="{!nd.noteValues.Note_Content__c}"/>
+                                    </div>
+                                <!--/a-->
+                            </td>
+                            <td width="20%">
+                                <apex:outputPanel rendered="{!IF(selectedRecordTypeForSearch =='',true,false)}">
+                                    {!nd.recordTypeName}<br/><br/>
+                                </apex:outputPanel>
+                            </td>
+                            <td align="right" width="4%">
+                               <!--  <img src="{!urlfor(nd.profileImageUrl)}" style="width:50px;height:40px;margin-top: 10px;"/>&nbsp;  -->
+                            </td>
+                            <td>&nbsp;&nbsp;</td>
+                            <td align="left" width="18%">
+                                <div style="margin-top: -8px;">{!nd.lastModifiedBy}<br/> On&nbsp;<apex:outputText value="{!nd.lastModifiedDateTime}"><!-- apex:outputText value="{0,date,dd/MM/yyyy 'at' HH:mm:ss z}">  <apex:param value="{!nd.lastModifiedDateTime}"/ -->
+                                    </apex:outputText>
+                                </div>                        
+                            </td>
+                        </tr> 
+                    </table>          
+            </apex:repeat>
+             
+            <apex:outputPanel rendered="{!IF(objNotesDetail.size == 0 ,true,false)}">
+                <table width="90%" class="socialSearchResult">
+                        <tr>                           
+                            <td align="center" colspan="3" width="100%" style="color:#000 !important;">
+                                &nbsp;<b>No Record Found!</b>
+                            </td>                            
+                        </tr> 
+                    </table>
+            </apex:outputPanel> 
+            </apex:outputPanel>
+        </apex:actionRegion>  
+        </apex:outputPanel>
+        </center>      
+    </apex:form>
+    
+</apex:page>

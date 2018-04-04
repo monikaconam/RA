@@ -1,0 +1,21 @@
+<table width="550" cellpadding="5" height="400" border="0" cellspacing="5" >
+<tr height="400" valign="top" >
+<td locked="0" style=" font-family:arial; bLabel:main; color:#000000; font-size:12pt; bEditID:r3st1; background-color:#FFFFFF;" aEditID="c1r1" tEditID="c1r1" >
+<![CDATA[<P>Date: {!Opportunity.LastModifiedDate}</P>
+<P>&nbsp;</P>
+<P>Stage: {!Opportunity.StageName}</P>
+<P>&nbsp;</P>
+<P>Opportunity Name: {!Opportunity.Name}</P>
+<P>&nbsp;</P>
+<P>Sales Rep: {!Opportunity.OwnerFullName}</P>
+<P>&nbsp;</P>
+<P>&nbsp;</P>
+<P>&nbsp;</P>
+<P>Information Missing: {!Opportunity.Sales_Check_List_Notes__c}</P>
+<P>&nbsp;</P>
+<P>Underwriting Notes:&nbsp; {!Opportunity.Underwriting_Notes__c}</P>
+<P>&nbsp;</P>
+<P>&nbsp;</P>
+<P>Submitted By: {!Opportunity.LastModifiedBy}</P>]]></td>
+</tr>
+</table>

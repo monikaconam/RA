@@ -1,0 +1,12 @@
+Hello {!Contact.FirstName},
+
+I just wanted to check and see if everything is alright. I’ve been trying to get a hold of you for a few days, but we haven’t been able to connect yet.
+
+Is there anything I can answer for you?
+
+Give me a call at 877-252-9728 and let’s talk about how we can help your business!
+
+Thank you.
+
+{!User.Name} | 
+RapidAdvance®

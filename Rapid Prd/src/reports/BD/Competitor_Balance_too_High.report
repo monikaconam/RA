@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>CREATED_DATE</field>
+    </columns>
+    <columns>
+        <field>LEAD_OWNER</field>
+    </columns>
+    <columns>
+        <field>OPP_OWNER</field>
+    </columns>
+    <columns>
+        <field>COMPANY_ACCT</field>
+    </columns>
+    <columns>
+        <field>OPP_NAME</field>
+    </columns>
+    <columns>
+        <field>LEAD_ID</field>
+    </columns>
+    <columns>
+        <field>Opportunity.Opportunity_Number__c</field>
+    </columns>
+    <columns>
+        <field>Lead.Campaign_Name_Upload__c</field>
+    </columns>
+    <filter>
+        <booleanFilter>1 or 2</booleanFilter>
+        <criteriaItems>
+            <column>Lead.Unqualified_Reason__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Competitor Balance Too High</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Opportunity.Unqualified_Reason__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Competitor balance is too high</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>Competitor Balance too High</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>OpportunityLead</reportType>
+    <scope>org</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>CREATED_DATE</dateColumn>
+        <endDate>2013-08-16</endDate>
+        <interval>INTERVAL_CUSTOM</interval>
+        <startDate>2012-08-01</startDate>
+    </timeFrameFilter>
+</Report>

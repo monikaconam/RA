@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>false</available>
+    <description>Submitted For Funding Approval Exception</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Funding Approval Exception</name>
+    <style>none</style>
+    <subject>{!Opportunity.Name} - {!Opportunity.Opportunity_Number__c} Submitted For Funding Approval Exception</subject>
+    <type>text</type>
+</EmailTemplate>

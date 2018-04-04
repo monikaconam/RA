@@ -1,0 +1,65 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+<head>
+<meta http-equiv="Content-Language" content="en-us" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Birthday Card for Partners</title>
+<style type="text/css">
+.style1 {
+	font-family:"Palatino Linotype", "Book Antiqua", Palatino, serif;
+	font-size: 30pt;
+	font-style:italic;
+	color: #06F;
+	text-align: left;
+	border-width: 0;
+}
+.style3 {
+	font-family:"Palatino Linotype", "Book Antiqua", Palatino, serif;
+	font-size: 13pt;
+	font-style:italic;
+	color: #06F;
+	text-align: left;
+	border-width: 0;
+}
+.style4 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11pt;
+	color:#333;
+	text-align: left;
+	border-width: 0;
+}
+</style>
+</head>
+<center>
+<body style="margin: 1px">
+<div style="text-align: center">
+	<table width="600" border="0" cellspacing="10" style="width: 600px; height: 600px">
+		<!-- MSTableType="layout" -->
+		<tr>
+			<td width="600" valign="top" class="style11" style="height: 167px">
+			<!-- MSCellType="ContentHead" -->
+			<span class="style8"><span style="height: 276px"><img src="https://c.na5.content.force.com/servlet/servlet.ImageServer?id=01570000000kMdA&oid=00D300000001PMh&lastMod=1337019910000" width="600" height="470" /></span></td>
+		</tr>
+		<tr>
+			<td valign="top" style="height: 276px">
+		  <!-- MSCellType="ContentHead" -->
+		 <table width="600" height="332" border="0" cellpadding="0" cellspacing="0">
+             <tr>
+             <td height="50"><div class="style3">Dear {!Contact.OwnerFullName}</div>
+</td>
+            <tr>
+              <td height="99"><div class="style1">We want to wish you a happy birthday and let you know we appreciate your business!!</div></td>
+            </tr>
+            <tr>
+              <td height="183" background="images/spacer.gif">
+<div class="style4">{!Opportunity.OwnerFullName}</div>
+<div class="style4">{!Opportunity.Business_Phone__c}</div>
+<div class="style4">{!Opportunity.Fax__c}</div>
+</td>
+            </tr>
+          </table></td>
+        
+    </table>
+</div>
+
+</body>

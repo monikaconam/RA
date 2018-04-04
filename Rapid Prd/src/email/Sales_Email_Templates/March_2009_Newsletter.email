@@ -1,0 +1,915 @@
+<custom name="opencounter" type="tracking">To view this email as a web page, click <a href="%%view_email_url%%">here.</a>&nbsp; <a href="%%unsub_center_url%%" alias="Unsubscribe">Unsubscribe</a>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+
+
+   
+    <meta name="googlebot" content="noindex, noarchive, nofollow">
+    <title>RapidResource</title>
+    
+	  <style type="text/css">
+		  body,td,.bodytext {
+		  	font-family: verdana, tahoma, geneva, arial;
+		  	font-size: 8pt;
+		  	line-height: 1.2;
+		  	color: #333333;
+		  	}
+		  	
+		  .sidebar {
+		  	font-family: verdana, tahoma, geneva, arial;
+		  	font-size: 7.5pt;
+		  	line-height: 1.2;
+		  	color: #000000;}
+		  .sidebar A {
+		  	font-size: 7.5pt;
+			text-decoration: none;
+		  	color: #009933;}			
+		  .sidebar A:link {
+		  	text-decoration: none;
+		  	color: #009933;}			
+		  .sidebar A:visited {
+		  	text-decoration: none; color: #009933;}
+		  .sidebar A:active {
+		  	text-decoration: none; color: #009933;}
+	  	  .sidebar A:hover {
+	  	  	text-decoration: underline; color: #009933;}
+		  	
+		  /*.artTitleLink {
+		  	text-decoration: ; color:#333333;}
+		  A:link.artTitleLink {
+		  	text-decoration: ; color:#333333;}
+		  A:visited.artTitleLink {
+		  	text-decoration: ; color:#333333;}
+		  A:active.artTitleLink {
+		  	text-decoration: none; color:#333333;}
+	  	  A:hover.artTitleLink {
+	  	  	text-decoration: none; color:#333333;}*/
+
+		  .headertext {
+		  	font-family: times new roman,georgia, serif;
+		  	font-size: 12pt;
+		  	line-height: 1.2;}
+		  .bodytext2 {
+			font-family: verdana, tahoma, geneva, arial;
+			font-size: 10pt;
+			line-height: 1.2;
+			color: #ffffff;}
+		  .bodytext3 {
+			font-family: verdana, tahoma, geneva, arial;
+			font-size: 10pt;
+			line-height: 1.2;
+			color: #333366;}
+		  .sponsortext {
+		  	font-family: verdana, tahoma, geneva, arial;
+		  	font-size: 7pt;
+			line-height: 1.0;
+			color: #000000;}
+		  .datetext {
+		  	font-family: verdana, tahoma, geneva, arial;
+		  	font-size: 10pt;
+			line-height: 1.0;
+			color: #000000;}
+
+		  A {font-family: verdana, tahoma, geneva, arial;
+		  	font-size: 8.5pt;
+			line-height: 1.2;
+			color: #1C3A60;}
+		  A:link {
+		  	text-decoration: none;
+		  	color: #1C3A60;}
+		  A:visited {
+		  	text-decoration: none;
+		  	color: #1C3A60;}
+		  A:active {
+		  	text-decoration: none;
+		  	color: #1C3A60;}
+		  A:hover {
+		  	text-decoration: underline;
+		  	color: #1C3A60;}
+
+		  .link1 {
+		  	font-family: verdana, tahoma, geneva, arial;
+		  	font-size: 8.5pt;
+			line-height: 1.2;
+			color: #ffffff;}
+		  .link1 A{
+		  	font-family: verdana, tahoma, geneva, arial;
+		  	font-size: 8.5pt;
+			text-decoration: none;
+			color: #ffffff;}
+
+		  .link1 A:link {
+		  	text-decoration: none;
+		  	color: #ffffff;}
+		  .link1 A:visited {
+		  	text-decoration: none; color: #ffffff;}
+		  .link1 A:active {
+		  	text-decoration: none; color: #ffffff;}
+	  	  .link1 A:hover {
+	  	  	text-decoration: underline; color: #ffffff;}
+
+		  .grouphead {
+			width:98%;
+			background-color: #20619d;
+			color: #ffffff;
+			padding:5px;
+			}
+		.noteBox
+		{
+			border: 1px gray solid;
+			padding: 7.5px;
+		}
+			
+   	  .style1 {
+	text-align: center;
+}
+.style2 {
+	text-align: left;
+}
+			
+   	  .style3 {
+	border-style: solid;
+	border-width: 1px;
+}
+.style4 {
+	border-style: solid;
+	border-color: #008000;
+}
+			
+   	  </style>
+  </head><body text="#000000">
+
+    <br>
+
+    <br>
+
+    <center>
+	<table width="660" align="left" border="0" cellpadding="2" cellspacing="0">
+		<tbody><tr valign="middle" align="center">
+			
+			<td id="TDBorderColor" bgcolor="#000000">
+            <table width="660" align="left" border="0" cellpadding="0" cellspacing="0">
+				<tbody><tr valign="top" align="left">
+                <td colspan="2">
+                  <img src="http://image.exct.net/lib/feee1c79716d07/m/1/bannernewsletter.jpg" alt="Banner" width="660" height="150"><br>
+                </td>
+				</tr>
+				<tr valign="top" align="center">
+                <td colspan="2" class="link1" style="padding: 5px; color: rgb(255, 255, 255);" id="TDLinkBar" bgcolor="#479235">
+                    | <a href="http://www.rapidadvance.com/" style="color: rgb(255, 255, 255);">Home</a> 
+                    | <a href="http://www.rapidadvance.com/funding-program.htm" style="color: rgb(255, 255, 255);">About Us</a> 
+                    | <a href="http://www.rapidadvance.com/" style="color: rgb(255, 255, 255);">Business Finance</a> 
+                    | <a href="%%ftaf_url%%" style="color: rgb(255, 255, 255);">Send to a Friend</a> 
+                    | <a href="http://www.rapidadvance.com/contact-us.htm" style="color: rgb(255, 255, 255);">Contact Us</a> 
+                    |                
+                </td>
+                </tr>
+				<tr valign="top" align="left">
+					<td id="TRcontent" class="bodytext" style="padding: 10px; width: 468px;" bgcolor="#ffffff">
+
+
+
+
+
+
+
+
+
+<a name="top"></a>
+<div class="grouphead">
+<b>Headlines</b>
+</div>
+
+
+<br> 
+
+		  
+      
+			  
+		  
+		  
+		  
+
+	 <b>Money Matters</b><hr>
+
+
+
+<a href="#401053">How to Create a Smart Credit Policy</a><br>
+
+
+
+<a href="#401229">Tax Season Tips for Your Business</a><br>
+
+
+
+<a href="#401044">Deals Abound for Secondhand Equipment</a><br>
+<br> 
+
+		  
+      
+			  
+		  
+		  
+		  
+
+	 <b>Bright Ideas</b><hr>
+
+
+
+<a href="#397367">Recession Solutions for the Small Business</a><br>
+
+
+
+<a href="#401058">Strategies for Lowering Health Care Costs</a><br>
+
+
+
+<a href="#401038">11 Ways to Turnaround a Struggling Business</a><br>
+
+
+
+<a href="#401236">Real-World Cost-Cutting Practices</a><br>
+<br> 
+
+		  
+      
+			  
+		  
+		  
+		  
+
+	 <b>Grow</b><hr>
+
+
+
+<a href="#401177">How to Keep Customers Coming Back</a><br>
+
+
+
+<a href="#401186">Freebies and Special Deals Generate New Business</a><br>
+
+
+
+<a href="#401231">Some Businesses Are Thriving</a><br>
+<br> 
+
+		  
+      
+			  
+		  
+		  
+		  
+
+	 <b>Off Hours</b><hr>
+
+
+
+<a href="#401188">10 Great Places to See Skylines of the World</a><br>
+
+
+
+<a href="#401201">Theme Parks Offering Great Deals</a><br>
+<br> <br> 
+
+		  
+      
+			  
+		  
+		  
+			  
+			
+		  
+
+	 <div class="grouphead"><b>Money Matters</b></div> <br>
+ 
+
+<a name="401053"></a>
+<strong>How to Create a Smart Credit Policy</strong><br><br> For most
+small companies, operating without business credit or without offering
+trade credit is not an option. However, granting credit does have
+costs, including the expense of <a href="http://www.rapidadvance.com/">working capital</a>, the actual cost of
+borrowing or the opportunity cost of lending, the administrative costs
+of creating statements and collection, and the possibility that some
+customer debt will go bad. A business can mitigate much of these costs
+by creating a strong credit policy and carefully managing accounts
+receivable. Creating a good credit policy starts with creating a
+relationship with your sales strategy. More aggressive goals require a
+looser credit policy. Whatever your goals, the particulars should match
+the standards in your market and your industry. Business-to-business
+lending generally uses two kinds of credit. Open credit does not
+require a down payment, and levies no interest or carrying charges,
+with the payment being due in full on the specified date, generally 30
+days after goods are delivered. Revolving credit sets a limit on how
+much a customer can borrow, and the customer pays interest only on the
+principal borrowed, so that as debt is repaid the credit available
+increases. Create guidelines for granting credit, as the amount of
+credit you grant, and who receives that credit, must reflect you
+tolerance for risk. While it may seem best to avoid taking any risk,
+doing so may increase your market share or win customers that will
+bring additional business. Furthermore, a large profit margin can allow
+a lender to come out ahead even if the customer later defaults. Be
+vigilant in managing your books. Be concerned if your average
+collection period is a third longer than the period established in your
+credit terms. Zero in on individual customers and regularly monitor
+purchase patterns, average days to payment, and changes in the payment
+pattern. Update and review credit files for all accounts at least
+semiannually, and get new financial statements every two years.<br>
+<br>
+
+    From "How to: Create a Smart Credit Policy"
+<br>
+
+<i> Inc. Guidebook (03/09) Vol. 31, No. 2, P. 1</i><br> 
+
+<a href="#top">Return to Headlines</a>
+
+
+<br><br> <br>
+ 
+
+<a name="401229"></a>
+<strong>Tax Season Tips for Your Business</strong><br><br> Every year
+tax laws are slightly different, and small business owners need to be
+sure they know how to deal with a variety of tax issues, such as small
+business loans, and, this year, the tax implications in the economic
+stimulus plan. The Internal Revenue Service Web site is an excellent
+resource that provides forms and answers to frequently asked questions.
+The site even features a Small Business and Self-Employed Tax Center
+for specific questions, such as what expenses can be deducted. The
+stimulus bill increased the small business capital-gains exclusion from
+50 percent to 75 percent. The IRS defines capital gains as "almost
+everything you own and use for personal purposes, pleasure, or
+investment," and stresses that you must report all capital gains. The
+stimulus bill also extends carrybacks of net operating losses (NOLs)
+for small businesses to five years for NOLs starting in the 2008 and
+2009 taxable years for businesses that average $15 million or less in
+annual gross receipts. Depreciation of capital expenditures also has
+changed. Last year, Congress temporarily allowed the recovery of costs
+of capital expenditures made in 2008 at an accelerated rate by allowing
+businesses to immediately write off 50 percent of the cost of
+depreciable property acquired in 2008 for use in the United States.
+Businesses that create jobs for unemployed veterans or youth that have
+been out of work or school for the past six months also can receive a
+tax credit. Keep all business receipts throughout the entire year, even
+if they are all filed in the same place and only sorted out for tax
+purposes. Get your paperwork, including W2s, 1099s, and possibly
+Schedule K-1s, if there are multiple owners in an LLC, together as soon
+as possible so you can find or replace anything that is missing.<br>
+<br>
+
+    From "Tax Season Tips for Your Business"
+<br>
+
+<i> bMighty.com (02/23/09) Moline, Jennifer</i><br> 
+
+<a href="#top">Return to Headlines</a>
+
+
+<br><br> <br>
+ 
+
+<a name="401044"></a>
+<strong>Deals Abound for Secondhand Equipment</strong><br><br> Many
+small businesses are taking advantage of the struggling economy by
+using their working capital or obtaining business loans or credit to
+purchase a wide variety of high-quality secondhand technology. "Lots of
+companies are shutting down operations, so lots of fairly new products
+are ending up on the secondary market," says consultant Rob Enderle.
+Some equipment may even be in perfect condition, having been recovered
+from customer returns or orders that were canceled before being
+delivered. IBM, Dell, and Hewlett-Packard all sell refurbished laptops,
+desktop PCs, and other equipment, all of which is tested and sold with
+a guarantee. Buying used technology gear is a little like buying a used
+car, and a few precautions can greatly help avoid buying a bad piece of
+equipment. Some equipment may be sold needing additional repairs,
+though the repairs may be as simple and inexpensive as replacing a
+wireless card. Almost any device can be purchased secondhand, including
+desktops, laptops, telephone systems, and even servers, and some of the
+best bargains can be found on higher-end equipment such as routers and
+switches, which can potentially save thousands of dollars when bought
+used. Some experts suggest buying new desktops because the prices on
+PCs have dropped drastically in recent years, and caution against
+buying refurbished laptops because they can easily be beat up while
+being carried around. Additionally, a used computer could contain old
+data if the hard drive is not properly erased. Be sure to buy used
+equipment from reputable firms with a physical address to avoid illegal
+or operations. Pay close attention to warranties, and fully test all
+equipment when it arrives so any malfunctioning equipment can be
+returned.<br>
+<br>
+
+    From "Everything Old Is New Again"
+<br>
+
+<i> BusinessWeek SmallBiz (02/09) P. 42; King, Rachael</i><br> 
+
+<a href="#top">Return to Headlines</a>
+
+
+<br><br> <br> 
+
+		  
+      
+			  
+		  
+		  
+			  
+			
+		  
+
+	 <div class="grouphead"><b>Bright Ideas</b></div> <br>
+ 
+
+<a name="397367"></a>
+<strong>Recession Solutions for the Small Business</strong><br><br> To
+survive difficult times, small businesses need to think strategically
+and re-examine how they do business. A significant majority of small
+businesses, 70 percent to 80 percent, all have the same problems,
+including a lack of sales, marketing, and financial and strategic
+planning, or limited access to business capital or business credit,
+says consultant Blair Koch. Koch says that making just a few
+adjustments can help small businesses survive the recession. First,
+implement well-defined job descriptions to create better productivity
+and time management. Strong job descriptions give employees a sense of
+duty and will make them less likely to waste time on frivolous tasks.
+Create structured business goals to refocus the direction of your
+company and provide step-by-step guidelines. Encourage communication
+and dialog within the company to generate ideas and bring in more
+business. Capitalize on the diverse perspectives of all employees.
+Instead of spending money on a professional focus group, host an event
+for clients and local business managers to assess marketing techniques.
+Provide free products in the form of white papers and other
+complementary educational material to generate interest in your
+company. But make sure to only offer free white papers for download
+after the reader has submitted contact information, giving your company
+a free list of prospective clients. Keep advertisements simple and
+unobtrusive. Short messages from 
+<a href="http://www.rapidadvance.com/testimonials.htm">small businesses owners</a>, not
+professional announcers, can be used to update existing clients on
+industry and investment news. Reduce unnecessary spending wherever
+possible, and encourage employees to take time off during the slow
+season instead of during peak times.<br>
+<br>
+
+    From "Recession Solutions for the Small Biz"
+<br>
+
+<i> Pink Magazine (02/09) Yates, Kara</i><br> 
+
+<a href="#top">Return to Headlines</a>
+
+
+<br><br> <br>
+ 
+
+<a name="401058"></a>
+<strong>Strategies for Lowering Health Care Costs</strong><br><br>
+Premiums on group healthcare policies have risen by as much as 30
+percent, in addition to double-digit increases in each of the past five
+years, and coverage is shrinking. Insurer consolidation means that
+policy choices are more limited than ever, and the seller's market
+gives small business owners little room to negotiate prices or terms.
+Rising healthcare costs come at a time when sales and profit margins
+are down, preventing small businesses from passing healthcare costs on
+to their customers. Small businesses generally pay 18 percent more for
+health insurance than large companies, and the number of small
+businesses that provide health insurance is shrinking. However, many
+entrepreneurs are finding innovative ways of covering themselves and
+their employees, providing them with a competitive advantage. In some
+states, small businesses have joined together to qualify for lower
+group rates on insurance. For example, in Cleveland, companies with
+fewer than 500 employees can buy health insurance through the Council
+of Smaller Enterprises (COSE), a partner of the regional chamber of
+commerce. COSE rates are about 8 percent lower than on the open market,
+and about 14,000 companies participate in the pool. Other small
+businesses are bypassing the health-insurance market and covering
+employee medical costs directly, though this is risky and could expose
+them to paying for lengthy illnesses and treatments. Health insurance
+costs also can be pared in several ways, including encouraging
+employees to switch to generic medications, taking preventative
+measures during flu season, and limiting doctor visits for colds and
+mild maladies. Some companies also penalize employees with unhealthy
+habits such as smoking. Sixteen percent of the nation's largest
+employers make workers who smoke contribute more to health-insurance
+premiums.<br>
+<br>
+
+    From "Health Cure"
+<br>
+
+<i> Fortune Small Business (02/09) Vol. 19, No. 1, P. 57; Gray, Patricia B.</i><br> 
+
+<a href="#top">Return to Headlines</a>
+
+
+<br><br> <br>
+ 
+
+<a name="401038"></a>
+<strong>11 Ways to Turnaround a Struggling Business</strong><br><br>
+Although the economy is struggling, it is still possible to right a
+struggling small business, and even position it for future growth, says
+consultant Paul Rauseo. Rauseo has several suggestions to help
+businesses stay afloat. First, keep selling. Purchasing agents have
+been reporting significantly fewer weekly sales calls in several
+industries, which means there is less competition. Rauseo says now is
+an excellent time to hire sales professionals to work only on
+commission. Instead of cutting advertising and marketing budgets,
+establish controls that will allow the business to gauge the response
+and adjust costs on a weekly basis. If a certain strategy is not
+working, cut it quickly. Look for opportunities everywhere, such as new
+small business loans. The economic stimulus plan is going to pump
+massive amounts of money into the economy, so create a strategy to take
+advantage of the opportunity. Create a 
+<a href="http://www.rapidadvance.com/contact-us.htm">rapid response team</a> that can
+anticipate the effects of the recession and react quickly. If a certain
+item is not selling, get rid of it, and have delivery trucks pick up
+orders instead of returning empty. Think of ways to sell products to
+new industries. For example, Rauseo had a client who sold hinges to the
+auto industry and was going under, but is now making hinges for caskets
+and is recovering. Cutting staff may be inevitable, but avoid large
+layoffs that will hurt morale and productivity. Significant layoffs may
+make customers nervous that the business will not be able to handle a
+large order. Look for alternative ways to cut costs and avoid layoffs,
+such as shorter workweeks, pay cuts, or assigning extra
+responsibilities. Be sure to tell employees that such measures will be
+lifted once the company recovers. Stay in touch with customers, and
+provide reports detailing the work that's been done for them and the
+value that's been added to their operations, and be sure to ask how you
+can serve them better.<br>
+<br>
+
+    From "Turning Around a Struggling Business"
+<br>
+
+<i> BusinessWeek (01/27/09) Klein, Karen E.</i><br> 
+
+<a href="#top">Return to Headlines</a>
+
+
+<br><br> <br>
+ 
+
+<a name="401236"></a>
+<strong>Real-World Cost-Cutting Practices</strong><br><br> The
+recession has forced almost all small businesses to find ways of
+cutting costs, including laying off employees, postponing future
+projects, and canceling large purchases. The smartest companies have
+found ways of adapting their business practices and are saving energy,
+finding free advertising, entertaining clients inexpensively, and
+saving money in innovative and productive ways. Switching to green
+products, such as napkins, paper towels, and toilet paper, for example,
+can save companies 10 percent to 15 percent. Sending employees home
+during slow periods is an excellent way to save without cutting staff.
+If an employee makes $10 an hour, sending one employee home for one
+hour a day saves $3,650 a year. Electronic marketing also can lower
+costs, as can shopping for wholesale supplies. For businesses with
+vehicles, educating drivers on fuel conservation can go a long way and
+help companies avoid the need to get small business loans to cover
+operating expenses. Instruct drivers to shut of engines whenever
+possible, eliminate jack-rabbit stops, and drive more conservatively to
+maintain a steady speed. Installing speed governors is a one-time cost
+that can save significant amounts of fuel on longer drives by ensuring
+drivers do not exceed the most efficient speeds. Re-working delivery
+routes also can save money by avoiding route overlaps and or sections
+without stops. Voice-over Internet protocol communications can save on
+Internet and phone costs, and many firms offer free Website-hosting
+plans. Instead of holding business meetings over lunch, hold meetings
+over coffee at a coffee shop, which is far less expensive than a full
+meal.<br>
+<br>
+
+    From "Real-World Cost-Cutting Practices"
+<br>
+
+<i> Entrepreneur (02/13/09) Feder, Mandy</i><br> 
+
+<a href="#top">Return to Headlines</a>
+
+
+<br><br> <br> 
+
+		  
+      
+			  
+		  
+		  
+			  
+			
+		  
+
+	 <div class="grouphead"><b>Grow</b></div> <br>
+ 
+
+<a name="401177"></a>
+<strong>How to Keep Customers Coming Back</strong><br><br> Serving
+customers is the top priority for small businesses, and creating strong
+customer relations will ensure that customers come back. Leo Tilman,
+author of "Financial Darwinism" says that small businesses should help
+clients separate themselves from their competitors, achieve their most
+pressing objectives, and turn risk into opportunity. This assistance
+can come in many forms, including small business loans, extending
+business credit, or custom products. Serving customers well will keep
+them coming back for decades. Best Western's Ron Pohl says small
+businesses should create a strong relationship with customers from the
+start, which can include over delivering. "When you first acquire a
+client, it's important to over deliver, especially on the first
+project," says Mixercast CEO Jennifer Cooper. "Ideally you'll
+over deliver on all projects, but it's critical that you build rapport,
+exceed expectations, and establish the relationship out of the gate."
+Be sure not to violate a customer's trust, and maintain a high level of
+service to retain customers. Offer incentives so customers feel like
+they are always getting a deal, as it is easier to retain customers
+than find new ones. Be innovative and adjust to meet customer demands.
+Be accessible to clients, respond to all inquiries by the end of
+business, and solicit feedback from clients to understand their needs
+and create effective solutions.<br>
+<br>
+
+    From "Engineer Repeat Business"
+<br>
+
+<i> Investor's Business Daily (02/17/09) P. A3; Mink, Michael</i><br> 
+
+<a href="#top">Return to Headlines</a>
+
+
+<br><br> <br>
+ 
+
+<a name="401186"></a>
+<strong>Freebies and Special Deals Generate New Business</strong><br><br>
+More and more small businesses are attempting to draw new customers
+through giveaways and other special offers and incentives, often with
+the help of small business loans. Consultant Barbara Apple Sullivan
+says this strategy could yield dividends, not only winning customers
+but also facilitating greater long-term success if the customers are
+willing to pay full price for the products or services in the future.
+Vaillant Solar Systems in San Diego rolled out a program in which it
+installs residential solar hot-water heating systems for no upfront
+cost, while homeowners cover part of the installation through tax
+credits. Vaillant says homeowners can have the company cover that cost
+initially and pay back the firm at tax time, or they can embed the
+amount of the credits into monthly payments. The remaining balance is
+reimbursed from the savings customers realize on their energy bills.
+Specialty gift store Zazu of Virginia decided to drop mass advertising
+and establish a blog where giveaways are periodically posted, and store
+co-owner Steven Haddad says this strategy is fueling interest that
+leads to more online sales. Meanwhile, software maker Infusionsoft
+launched a promotion that allows customers to request a refund for
+upfront costs if the software fails to help them double sales in a
+12-month period. The majority of Infusionsoft's customers are small
+companies with less than 10 employees, and CEO Clate Mask says a small
+company has a better chance of doubling sales partly because the firm
+tries to target expanding businesses with working capital. Infusionsoft
+signed up 223 new customers in the first month of the promotion. The
+fledgling Ficion Audio in Washington state introduced a promotion
+allowing customers to return their speakers for 90 percent of the sales
+price if they become unemployed within one year.<br>
+<br>
+
+    From "Small Firms Resort to Freebies and Special Deals"
+<br>
+
+<i> Wall Street Journal (02/05/09) P. B5; Covel, Simona</i><br> 
+
+<a href="#top">Return to Headlines</a>
+
+
+<br><br> <br>
+ 
+
+<a name="401231"></a>
+<strong>Some Businesses Are Thriving</strong><br><br> Businesses in the
+United States are currently experiencing the worst economic conditions
+in 70 years, but some industries are still prospering. Comfort food
+companies and money-saving product manufacturers are experiencing
+strong sales. For example, Skinner Baking in Omaha saw its 2008 sales
+revenue rise 18 percent over 2007, and in December sales increased a
+record 25 percent. Skinners makes coffeecakes, fruit-filled Danish,
+cinnamon buns, and other baked sweets that are sold at supermarkets
+nationwide. Small businesses in these industries may want to find some
+form of small business financing and use this time as an opportunity to
+expand. While the nation's automakers, big banks, and retailers are in
+a downward spiral, other companies are setting sales records because
+they offer products and services that help consumers save money. "The
+role of entrepreneurs might be even more important during a recession,"
+says University of Michigan-Flint economics professor Mark Perry.
+"Their ability to be nimble and innovative and adapt to change become
+key advantages." During the previous recession in 2001 and 2002, the
+U.S. economy lost nearly 2.7 million jobs, but new and existing
+businesses with fewer than 20 employees gained 853,074 jobs during that
+period, according to the Small Business Administration.<br>
+<br>
+
+    From "The Economy Is Brutal, But Their Business Booms"
+<br>
+
+<i> USA Today (02/02/09) P. 1A; Adams, Marilyn</i><br> 
+
+<a href="#top">Return to Headlines</a>
+
+
+<br><br> <br> 
+
+		  
+      
+			  
+		  
+		  
+			  
+			
+		  
+
+	 <div class="grouphead"><b>Off Hours</b></div> <br>
+ 
+
+<a name="401188"></a>
+<strong>10 Great Places to See Skylines of the World</strong><br><br>
+Photographer James Blakeway, author of "Skylines of the World," shares
+some of his favorite cityscape views. A ride up the Duquesne Incline in
+Pittsburgh provides a sweeping view of the city's unique, older bridges
+that span the Allegheny and Monongahela rivers, which meet to form the
+Ohio River. In Australia, the Sydney ferries provide a tour of some of
+the most recognizable architecture in the world, including the Sydney
+Opera House, and can provide an excellent view of the entire city from
+the harbor. Queen Anne Hill in Kerry Park in Seattle offers a sweeping
+view of the landscape, as far as Mount Rainier on a clear day. Point
+Bonita in Marin County, Calif., is an excellent spot for viewing San
+Francisco's skyline, and the city's two most distinct features&#8212;the
+Golden Gate Bridge and the Oakland Bay Bridge. In London, the London
+Eye, a 443-foot Ferris Wheel on the Thames, gives riders bird's-eye
+views of Tower Bridge, the Houses of Parliament, and Big Ben. Hamilton
+Park in Weehawken, N.J., is on a cliff overlooking the Hudson, and in
+the evening the sun sets behind anyone looking across the Hudson to New
+York City, so the light bounces off of all the buildings. For a great
+view of Chicago, go to the Adler Planetarium and walk along the water.
+The best view of Paris, which contains such historic architecture as
+the Eiffel Tower, the Louvre, and the Basilica of Sacre-Coeur, can be
+found at the Montparnasse Tower on the Left Bank, which is one of the
+city's only skyscrapers. In Las Vegas, the observation deck on top of
+the 1,149-foot-high Stratosphere tower and casino provides a
+breathtaking view of the city's lights. Finally, in Bergen, Norway, an
+old fishing and shipping village that has managed to preserve some
+centuries-old commercial buildings, the Floibanen provides rides to the
+top of Mount Floyen for an amazing panoramic view.<br>
+<br>
+
+    From "10 Great Places to Study Skylines of the World"
+<br>
+
+<i> USA Today (02/27/09) P. 3D; DiNardo, Kelly</i><br> 
+
+<a href="#top">Return to Headlines</a>
+
+
+<br><br> <br>
+ 
+
+<a name="401201"></a>
+<strong>Theme Parks Offering Great Deals</strong><br><br> If you have
+been postponing a Disney vacation because of an aversion to long lines
+and high prices, now may be the time to take that trip. Attendance at
+Disney's parks started falling at the end of 2008, dropping about 5
+percent from the previous year, and the company is now offering
+unprecedented deals to keep attendance up. Walt Disney World Resort in
+Florida is offering a seven-night vacation package at one of its 23
+on-site hotels for the price of four nights, including admission to the
+park. With the exception of a few blackout dates, the deal has been
+extended through August 15th, and guests who book a deal for early or
+late March will receive a $200 gift card for Disney merchandise or
+dining. In California, Disneyland is offering several packages,
+including two-night stays that feature gift cards and adult tickets at
+the children's price and a children-fly-free deal through Alaska
+Airlines. Both parks also are offering free admission to active or
+retired military personnel who visit on their birthdays. Some of
+Disney's competitors also have introduced value packages, including a
+five-nights-for-the-price-of-three deal at Universal Orlando Resort,
+Worlds of Discovery, which includes SeaWorld and Busch Gardens. These
+bargains give families more options to travel on a limited budget.
+Regional parks such as Cedar Point in Sandusky, Ohio, and Six Flags,
+which has 20 parks across the United States, Mexico, and Canada, also
+are offering reduced prices to attract visitors. "We recognize families
+are watching their budget more than ever before," says Six Flags
+spokesperson Sandra Daniels. "We want to be an economical value."<br>
+<br>
+
+    From "With Attendance Off, Disney Is Dealing"
+<br>
+
+<i> New York Times (02/22/09) P. 3; Higgins, Michelle</i><br> 
+
+<a href="#top">Return to Headlines</a>
+
+
+<br><br> <br> Abstract News ©	Copyright 2009 <a href="http://www.infoinc.com/copyright.html">INFORMATION, INC.</a><br>
+
+<a href="http://www.infoinc.com/assn_news/requestinfo.cfm?mode=poweredby&amp;sid=2BC6CDC3"><img src="http://image.exct.net/lib/feee1c79716d07/m/1/poweredBy_small115-newsletter.jpg" alt="Powered by Information, Inc." vspace="5" border="0"></a><br>
+
+
+
+
+
+<p></p><hr><p>
+</p><center>
+<a href="http://www.rapidadvance.com/subscribe.htm" target="_blank">Subscribe</a> :: <a href="http://www.infoinc.com/RapidAdvance/mailinglist.cfm?FORMID=2&amp;SERVICEID=1238" target="_blank">Change E-mail</a> :: <a href="mailto:unsubscribe@5pq0wmtho61cphe929b37zo7z.in.salesforce.com?subject=Unsubscribe" target="_blank">Unsubscribe</a> 
+:: <a href="%%profile_center_url%%" alias="Update Profile">Update Profile</a>
+<br>
+<br>
+
+<table cellpadding="2" cellspacing="0" width="450" ID="Table5" Border=0><tr>
+	<td><font face="verdana" size="1" color="#444444">This email was sent by: <b>%%Member_Busname%%</b><br>%%Member_Addr%% 
+	<br>
+	%%Member_City%%, %%Member_State%%, %%Member_PostalCode%%, %%Member_Country%%</font></td></tr></table></center>
+
+
+
+
+
+						
+                       
+
+						</td>
+						
+						<td style="padding: 10px;" id="TDsidebar" width="155" bgcolor="#d1deef" class="style1">
+						<center><br>
+
+						  <div class="datetext"><b><i>March 2009</i></b>
+					      <br>
+                          </div>
+                          </center>
+                          <hr>                      
+						<div class="sidebar"><br>
+                        
+<center>
+<a href="http://www.rapidadvance.com/subscribe.htm" target="_blank"><strong><u>Subscribe For Free</u></strong></a><br><br>
+</center>
+                        
+                        
+
+<hr>
+
+
+
+
+
+
+
+
+<center>
+<a href="http://www.rapidadvance.com/" target="_blank"><img src="http://image.exct.net/lib/feee1c79716d07/m/1/RPA-Logo-Color-newsletter.gif" alt="Banner" width="150" border="0" height="59"></a><br>
+</center>
+							<div class="style2">
+<br>
+
+<strong>About RapidAdvance</strong> &#8211; RapidAdvance serves the unique
+financial needs of small to mid-sized businesses by providing a great
+alternative to a small business loan. As a leading provider of business
+cash advance funding services, we provide a key source of business
+capital to the business community.
+<br><br></div>
+							<hr>
+							<div class="style2">
+								<br>
+<strong>About <em>RapidResource</em></strong> &#8211; Our editorial staff
+monitors nearly 11,000 newspapers, business publications, national and
+international wire services, and other periodicals and summarizes
+significant articles into and easy-to-read summary.
+<br><br></div>
+							<hr>
+							<div class="style2">
+								<br>
+
+For more information on RapidAdvance and <i>Rapid Resource</i>, contact:
+<br><br>
+RapidAdvance<br>
+7316 Wisconsin Avenue<br>
+Suite 450<br>
+Bethesda, MD 20814<br>
+877-467-2743<br>
+<a href="mailto:services@rapidadvance.com">services@rapidadvance.com</a>
+						
+						
+
+
+    <img src="March%202009%20Newsletter_files/viewcounter.gif" width="1"><br> 
+
+							</div>
+
+						</div>
+						<!-- ========================= END SIDEBAR =========================== -->
+						<br>
+						<a href="%%ftaf_url%%">
+						<span class="style3">
+<img src="http://www.exacttarget.com/members/newsletters/gfx/forwardafriendicon.gif" style="float: center" class="style4"></span><div class="style1">
+						</div>
+						</a>
+					</td>
+				</tr>
+            </tbody></table>
+			</td>
+		</tr>
+	</tbody></table>
+    </center>
+	</body></html>

@@ -1,0 +1,13 @@
+Owner: {!Lead.OwnerLastName}, {!Lead.OwnerFirstName}
+Lead Source: {!Lead.LeadSource}
+Campaign: {!Lead.Campaign_Name_Upload__c}
+
+Company: {!Lead.Company}
+Merchant Name: {!Lead.Name} 
+Email: {!Lead.Email}
+Phone: {!Lead.Phone}
+
+Lead Comment(s): 
+{!Lead.Description}
+
+Click on the link to access the lead directly: {!Lead.Link}

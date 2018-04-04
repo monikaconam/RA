@@ -1,0 +1,47 @@
+<apex:page showHeader="false" sidebar="false" applyBodyTag="false" applyHtmlTag="false" standardStylesheets="false" tabStyle="Scorecard__tab">
+
+<html lang="en">
+  <head>
+    <script type="text/javascript">
+      (function(){
+        if(!window.L11) window.L11 = {};
+        window.L11.resourceUrl = '{!URLFOR($Resource.manager)}';
+        window.L11.isSalesforce = true;
+        window.L11.scorecardUrl = '{!URLFOR($Page.ScorecardHome)}';
+        window.L11.printableUrl = '{!URLFOR($Page.Printable)}';
+        window.L11.scorecardManagerUrl = '{!URLFOR($Page.ScorecardManager)}';
+        window.L11.viewAllRecordsURL = '{!URLFOR($Page.ViewAllRecords)}';
+        window.L11.isSalesforce1 = !!(window.sforce && window.sforce.one);
+        window.L11.userId = '{!$User.Id}';
+        window.L11.UIThemeDisplayed = '{!$User.UIThemeDisplayed}' || null;
+
+        window.L11.user = {
+          Id: '{!$User.Id}',
+          FirstName: '{!JSENCODE($User.FirstName)}',
+          LastName: '{!JSENCODE($User.LastName)}',
+        };
+
+        var root = document.getElementsByTagName('html')[0];
+        root.setAttribute('class', root.getAttribute('class') + ' ' + (window.L11.isSalesforce1 ? 'is-sf1' : 'not-sf1'));
+      }());
+    </script>
+    <c:JSExternals />
+    <c:DemoMode />
+    <c:PageSettings />
+    <apex:outputPanel layout="none" rendered="{!!$Setup.ScorecardSettings__c.Local_Mode__c}">
+      <link rel="stylesheet" type="text/css" href="{!URLFOR($Resource.manager, '/manager/styles/main.css')}" />
+    </apex:outputPanel>
+    <apex:outputPanel layout="none" rendered="{!$Setup.ScorecardSettings__c.Local_Mode__c}">
+      <script type="text/javascript" src="https://localhost:1337/manager/scripts/app.js"></script>
+    </apex:outputPanel>
+    <apex:outputPanel layout="none" rendered="{!!$Setup.ScorecardSettings__c.Local_Mode__c}">
+      <script type="text/javascript" src="{!URLFOR($Resource.manager, '/manager/scripts/app.js')}"></script>
+    </apex:outputPanel>
+  </head>
+  <body>
+
+
+  </body>
+</html>
+
+</apex:page>

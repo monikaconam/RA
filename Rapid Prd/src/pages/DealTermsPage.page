@@ -1,0 +1,717 @@
+<apex:page controller="DealTerms_Ctrl" showHeader="false" sidebar="false" >
+    <c:Opportunity_Related_CSS imgName="ReprisedDeal.png"/>
+    <apex:pageMessages id="pageMessageMain"/>
+    <apex:form id="MBForm" styleClass="MBForm"><br/>
+      <apex:outputPanel >
+       <div class="bgImg"></div>
+       <div align="center">              
+           <apex:commandButton value="Save" action="{!doSave}" reRender="pageMessageMain,pgId,pgId1" status="ajaxStatus" oncomplete="setfocus('{!$Component.pageMessageMain}');"/>&nbsp;&nbsp;         
+       </div><br/><br/>
+       <apex:outputPanel id="pgId"> 
+       <table id="MBTable">
+           
+         <!--
+            <tr>
+               <td>
+                   <apex:outputLabel value="{!$ObjectType.Opportunity.fields.Amount.label}"/> 
+               </td>
+               <td>
+                   $<apex:inputField value="{!oppRecord.Amount}" />
+               </td>
+              <td>
+                   <apex:outputLabel value="{!$ObjectType.Opportunity.fields.Pay_Back_Amount__c.label}"/> 
+               </td>
+               <td>
+                   $<apex:inputField value="{!oppRecord.Pay_Back_Amount__c}" />
+               </td>
+           </tr>
+            <tr>
+               
+               <td>
+                   <label>Daily Percentage (Split)</label>
+               </td>
+               <td> &nbsp;&nbsp;<apex:inputField value="{!oppRecord.Percent_Payback__c}" />%
+               </td>
+               <td>
+                <apex:outputLabel value="Estimated Daily Transactions"/>                 
+               </td>
+               <td>  
+                  $ &nbsp;<apex:outputtext value="{!EstimatedDailyTransactions}" ></apex:outputtext>
+               </td>
+           </tr>
+           <tr>
+                <td>
+                    <apex:outputLabel value="{!$ObjectType.Opportunity.fields.Current_ROI__c.label}"/>
+                </td>
+                <td>  
+                    &nbsp;&nbsp;<apex:outputtext value="
+                    <apex:inputField value="{!oppRecord.Current_ROI__c}" />% 
+                </td>
+                <td>
+                   <apex:outputLabel value="{!$ObjectType.Opportunity.fields.Total_Repay_Amount__c.label}"/> 
+               </td>
+               <td>
+                   $<apex:inputField value="{!oppRecord.Total_Repay_Amount__c}" />
+               </td>
+            </tr>
+            <tr>
+                 <td>
+                    <apex:outputLabel value="{!$ObjectType.Opportunity.fields.Remaining_Balance__c.label}"/>
+                </td>
+                <td>  
+                    $<apex:inputField value="{!oppRecord.Remaining_Balance__c}" /> 
+                </td> 
+                <td>
+                  <apex:outputLabel value="{!$ObjectType.Opportunity.fields.Average_Daily_Repay__c.label}"/> 
+                </td>
+                <td>  
+                    $<apex:inputField value="{!oppRecord.Average_Daily_Repay__c}" /> 
+                </td>                 
+              
+           </tr>
+            <tr>                
+                <td>
+                    <label>20 Day Average Daily</label>
+                </td>
+                <td>  
+                    $<apex:inputField value="{!oppRecord.X20_Day_Average_Daily_Repay__c}" /> 
+                </td>
+                <td>
+                    <label>Percentage Complete</label>
+                </td>
+                <td>  
+                    <apex:outputText value="{!Percentage_comp}"></apex:outputText>
+                </td>
+            </tr> -->
+         <tr>
+              <td colspan="4">
+                   <!-- <c:Extjs_Panel title="Deal Terms Information"/>-->
+                   <c:Extjs_Panel title="Submitted Deal Terms"  RefreshButton="Refresh"/>
+              </td>
+           </tr>
+    
+                    
+            <tr>
+               <td>
+                   <apex:outputLabel value="{!$ObjectType.Opportunity.fields.Product__c.label}"/> 
+               </td>
+               <td>
+                   <apex:inputField value="{!oppRecord.Product__c}" />
+               </td>
+              <td>
+                   <apex:outputLabel value="{!$ObjectType.Opportunity.fields.Amount.label}"/> 
+               </td>
+               <td>
+                   $<apex:inputField value="{!oppRecord.Amount}" />
+               </td>
+           </tr>
+          <tr>
+               <td>
+                   <label>Daily Percentage (Split)</label>
+               </td>
+               <td> 
+                   <apex:inputField value="{!oppRecord.Percent_Payback__c}" />%
+               </td>
+               <td>
+                   <apex:outputLabel value="{!$ObjectType.Opportunity.fields.Pay_Back_Amount__c.label}"/> 
+               </td>
+               <td>
+                   $<apex:inputField value="{!oppRecord.Pay_Back_Amount__c}" />
+               </td>
+           </tr>
+            <tr>
+               <td>
+                   <apex:outputLabel value="{!$ObjectType.Opportunity.fields.Estimated_Days_to_Repay__c.label}"/> 
+               </td>
+               <td>
+                   <apex:inputField value="{!oppRecord.Estimated_Days_to_Repay__c}" />
+               </td>               
+           </tr>     
+              <tr>
+               <td>
+                   <apex:outputLabel value="{!$ObjectType.Opportunity.fields.Loan_Term_Days__c.label}"/> 
+               </td>
+               <td>
+                   <apex:inputField value="{!oppRecord.Loan_Term_Days__c}" />
+               </td>
+               <td>
+                <apex:outputLabel value="Estimated Daily Transactions"/>                 
+               </td>
+               <td>  
+                  $ &nbsp;<apex:outputtext value="{!EstimatedDailyTransactions}" ></apex:outputtext>
+               </td>
+           </tr>
+            <tr>
+                <td colspan="4">     
+                    <c:Extjs_Panel title="Cards Used To Payback"/>
+                </td>
+            </tr>
+       
+            
+            <tr>
+                <td colspan="4">     
+                    <c:Extjs_Panel title="  Renewal Information "/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <apex:outputLabel value="{!$ObjectType.Opportunity.fields.Current_ROI__c.label} (PO)"/> 
+                </td>
+                <td>  
+                    &nbsp;&nbsp;<apex:outputtext value="{!oppRecord.If_Renewal_Preceding_Opportunity__r.Current_ROI__c}" ></apex:outputtext>% 
+                </td>
+        <td>
+                  <apex:outputLabel value="{!$ObjectType.Opportunity.fields.Average_Daily_Repay__c.label} (PO)"/> 
+                </td>
+                <td>  
+                    $<apex:outputtext value="{!oppRecord.If_Renewal_Preceding_Opportunity__r.Average_Daily_Repay__c}" > </apex:outputtext>
+                </td> 
+            </tr>
+            <tr>
+                <td>
+                   <apex:outputLabel value="{!$ObjectType.Opportunity.fields.Total_Repay_Amount__c.label} (PO)"/> 
+                </td>
+                <td>
+                   $<apex:outputtext value="{!oppRecord.If_Renewal_Preceding_Opportunity__r.Total_Repay_Amount__c}" > </apex:outputtext>
+                </td><td>
+                  <apex:outputLabel value="{!$ObjectType.Opportunity.fields.Expected_Daily_Repay__c.label} (PO)"/> 
+                </td>
+                <td>  
+                    $<apex:outputtext value="{!oppRecord.If_Renewal_Preceding_Opportunity__r.Expected_Daily_Repay__c}" > </apex:outputtext>
+                </td>
+                
+           </tr>
+           <tr>
+                <td>
+                   <apex:outputLabel value="{!$ObjectType.Opportunity.fields.Pay_Back_Amount__c.label} (PO)"/> 
+               </td>
+               <td>
+                    $<apex:outputtext value="{!oppRecord.If_Renewal_Preceding_Opportunity__r.Pay_Back_Amount__c}"></apex:outputtext>
+               </td>
+               <td></td>
+                <td></td> 
+            </tr>
+            
+            <tr> 
+                <td>
+                   <apex:outputLabel value="{!$ObjectType.Opportunity.fields.Previous_FICO__c.label}"/> 
+                </td>
+                <td>  
+                   &nbsp;&nbsp;<apex:inputField value="{!oppRecord.Previous_FICO__c}" />
+                </td>
+                <td>
+                   <apex:outputLabel value="{!$ObjectType.Opportunity.fields.X20_Day_Average_Daily_Repay__c.label} (PO)"/>
+                </td>
+                <td>  
+                    $<apex:outputtext value="{!oppRecord.If_Renewal_Preceding_Opportunity__r.X20_Day_Average_Daily_Repay__c}" > </apex:outputtext>
+                </td>
+            </tr>
+            
+           <!-- <tr> 
+                <td>
+                   <apex:outputLabel value="{!$ObjectType.Opportunity.fields.CALC_FICO__c.label}"/> 
+                </td>
+                <td>  
+                   &nbsp;&nbsp;<apex:inputField value="{!oppRecord.CALC_FICO__c}" />
+                </td>
+                <td>
+                   <apex:outputLabel value="{!$ObjectType.Opportunity.fields.cc_Applicant_1_FICO__c.label} "/>
+                </td>
+                <td>  
+                    $<apex:outputtext value="{!oppRecord.If_Renewal_Preceding_Opportunity__r.cc_Applicant_1_FICO__c}" > </apex:outputtext>
+                </td>
+            </tr>
+            
+            <tr> 
+                <td>
+                   <apex:outputLabel value="{!$ObjectType.Opportunity.fields.Applicant_2_FICO__c.label}"/> 
+                </td>
+                <td>  
+                   &nbsp;&nbsp;<apex:inputField value="{!oppRecord.Applicant_2_FICO__c}" />
+                </td>
+                <!--<td>
+                   <apex:outputLabel value="{!$ObjectType.Opportunity.fields.Manual_Applicant_1_FICO__c.label} "/>
+                </td>
+                <td>  
+                    $<apex:outputtext value="{!oppRecord.If_Renewal_Preceding_Opportunity__r.Manual_Applicant_1_FICO__c}" > </apex:outputtext>
+                </td>
+            </tr>
+            
+            <tr> 
+                <td>
+                   <apex:outputLabel value="{!$ObjectType.Opportunity.fields.Manual_Applicant_1_FICO_Score__c.label}"/> 
+                </td>
+                <td>  
+                   &nbsp;&nbsp;<apex:inputField value="{!oppRecord.Manual_Applicant_1_FICO_Score__c}" />
+                </td>
+                <td>
+                   <apex:outputLabel value="{!$ObjectType.Opportunity.fields.Manual_Applicant_2_FICO_Score__c.label} "/>
+                </td>
+                <td>  
+                    $<apex:outputtext value="{!oppRecord.If_Renewal_Preceding_Opportunity__r.Manual_Applicant_2_FICO_Score__c}" > </apex:outputtext>
+                </td>
+            </tr>
+-->
+            
+            <tr>                
+               <td>
+                    
+                </td>
+                <td>  
+                   
+                </td>
+                <td>
+                    <apex:outputLabel value="{!$ObjectType.Opportunity.fields.Percent_Paid_Off__c.label} (PO)"/>
+                </td>
+                <td>   
+                    &nbsp;&nbsp;&nbsp;<apex:outputText value="{!ROUND(oppRecord.If_Renewal_Preceding_Opportunity__r.Percent_Paid_Off__c, 2)}"></apex:outputText>
+                </td>
+            </tr>
+            <tr>    
+                <td>
+                   <apex:outputLabel value="{!$ObjectType.Opportunity.fields.Remaining_Balance__c.label} (PO)"/>                
+                </td>
+                <td>  
+                  $<apex:outputText value="{!oppRecord.If_Renewal_Preceding_Opportunity__r.Remaining_Balance__c}" > </apex:outputText>
+                </td> 
+                <td>
+                   <apex:outputLabel value="{!$ObjectType.Opportunity.fields.Renewal_Number__c.label} (PO)"/>                  
+               </td>
+               <td>  
+                  <apex:outputtext value="{!oppRecord.If_Renewal_Preceding_Opportunity__r.Renewal_Number__c}" > </apex:outputtext>
+               </td>                
+           </tr>
+                    
+                
+           <tr>
+               <td>
+                  <apex:outputLabel value="{!$ObjectType.Opportunity.fields.Advance_ID__c.label} (PO)"/> 
+               </td>
+               <td>
+                  <apex:outputtext value="{!oppRecord.If_Renewal_Preceding_Opportunity__r.Advance_ID__c}" > </apex:outputtext>
+               </td>
+          
+               <td>
+                   <apex:outputLabel value="{!$ObjectType.Opportunity.fields.If_Renewal_Preceding_Opportunity__c.label}"/> 
+               </td>
+               <td >
+                   &nbsp;&nbsp;<apex:inputField value="{!oppRecord.If_Renewal_Preceding_Opportunity__c}" />
+               </td>
+            </tr>
+               
+            
+       <!--        ------------- Added Code -----------------------     -->
+         
+           <tr>
+              <td colspan="4">
+                     <c:Extjs_Panel title="Prequalification Information"/>
+              </td>
+           </tr>
+        
+           <tr>
+               <td>
+                   <apex:outputLabel value="{!$ObjectType.Opportunity.fields.Pre_Qual_Person__c.label}"/> 
+               </td>
+               <td>
+                   <apex:inputField value="{!oppRecord.Pre_Qual_Person__c}" />
+               </td>
+           </tr>
+           <tr>  
+               <td>
+                    <apex:outputLabel value="Pre Qual Pending_Date"/> 
+               </td>
+               <td>
+                   <apex:inputField value="{!oppRecord.Pre_Qual_Pending_Date__c}" />
+               </td>
+           </tr>
+           <tr>
+               <td>
+                   <apex:outputLabel value="{!$ObjectType.Opportunity.fields.Pre_Qual_Decision_Date__c.label}"/> 
+               </td>
+               <td>
+                   <apex:inputField value="{!oppRecord.Pre_Qual_Decision_Date__c}" />
+               </td>
+           </tr>
+           <tr>
+               <td>
+                   <apex:outputLabel value="{!$ObjectType.Opportunity.fields.Pre_Qual_Decision__c.label}"/> 
+               </td>
+               <td>
+                   <apex:inputField value="{!oppRecord.Pre_Qual_Decision__c}" />
+               </td>
+           </tr>
+            <tr>
+               <td>
+                   <apex:outputLabel value="{!$ObjectType.Opportunity.fields.Pre_Qual_FAIL_Reason__c.label}"/> 
+               </td>
+               <td>
+                   <apex:inputField value="{!oppRecord.Pre_Qual_FAIL_Reason__c}" />
+               </td>
+           </tr>
+           <tr>
+               <td>
+                   <apex:outputLabel value="{!$ObjectType.Opportunity.fields.Pre_Qual_Unqualified_Reasons__c.label}"/> 
+               </td>
+               <td>
+                   <apex:inputField value="{!oppRecord.Pre_Qual_Unqualified_Reasons__c}" />
+               </td>
+           </tr>
+      
+
+       <!--     ------------------------Added Code Ends Here-----------------------------       -->
+           <tr>
+                <td colspan="4">
+                     <c:Extjs_Panel title="QC Information"/>
+                </td>
+            </tr>
+      
+            <tr>
+                <td>
+                    <apex:outputLabel value="{!$ObjectType.Opportunity.fields.QC_Person__c.label}"/> 
+                </td>
+                <td>
+                    <apex:inputField value="{!oppRecord.QC_Person__c}" />
+                </td>
+                <td>
+                    <apex:outputLabel value="{!$ObjectType.Opportunity.fields.Underwriter_Assigned__c.label}"/> 
+                </td>
+                <td>
+                    <apex:inputField value="{!oppRecord.Underwriter_Assigned__c}" />
+                </td>                    
+                  
+            </tr>
+            <tr>
+                <td>
+                    <apex:outputLabel value="{!$ObjectType.Opportunity.fields.QC_Decision_Date__c.label}"/> 
+                </td>
+                <td>
+                    <apex:inputField value="{!oppRecord.QC_Decision_Date__c}" />
+                </td>
+                <td></td>
+                <td></td>               
+                   
+            </tr>
+            <tr>
+                <td>
+                    <apex:outputLabel value="{!$ObjectType.Opportunity.fields.QC_Decision__c.label}"/> 
+                </td>
+                <td>
+                    <apex:inputField value="{!oppRecord.QC_Decision__c}" />
+                </td> 
+                <td>
+                    <apex:outputLabel value="{!$ObjectType.Opportunity.fields.DS_Person__c.label}"/> 
+                </td>
+                <td>
+                    <apex:inputField value="{!oppRecord.DS_Person__c}" />
+                </td>                    
+                 
+            </tr>
+            <tr>
+                <td>
+                    <apex:outputLabel value="{!$ObjectType.Opportunity.fields.DS_Start_Date_Time__c.label}"/>
+                </td>
+                <td>
+                    <apex:inputField value="{!oppRecord.DS_Start_Date_Time__c}" />
+                </td>
+                <td>
+                     
+                </td>
+                <td>
+                    
+                </td>                    
+            </tr>
+            <tr>
+                <td>
+                    
+                </td>
+                <td>
+                    
+                </td>  
+               <td>
+                    <apex:outputLabel value="{!$ObjectType.Opportunity.fields.DS_Retrieved_All_Conditions__c.label}"/> 
+                </td>
+                <td>
+                    <apex:inputField value="{!oppRecord.DS_Retrieved_All_Conditions__c}" />
+                </td>   
+            </tr>
+            
+   
+            <!-- ------------------------------------------ -->
+            <tr>
+                <td colspan="4">
+                     <c:Extjs_Panel title="UnderWriter Information"/>
+                </td>
+            </tr>
+     
+            <tr>
+            
+            <td>
+                <apex:outputLabel value="{!$ObjectType.Opportunity.fields.Initial_File_Review2__c.label}"/> 
+                </td>
+                <td>
+                    <apex:inputField value="{!oppRecord.Initial_File_Review2__c}" />
+                </td>
+                
+                <td>
+                    <apex:outputLabel value="{!$ObjectType.Opportunity.fields.Rescind_Reason__c.label}"/> 
+                </td>
+                <td>
+                    <apex:inputField value="{!oppRecord.Rescind_Reason__c}" />
+                </td>
+                
+            </tr>
+            <tr>
+            <td>
+                    <apex:outputLabel value="{!$ObjectType.Opportunity.fields.Initial_File_Review_Complete__c.label}"/> 
+                </td>
+                <td>
+                    <apex:inputField value="{!oppRecord.Initial_File_Review_Complete__c}" />
+                </td>
+                
+                
+                <td>
+                    <apex:outputLabel value="{!$ObjectType.Opportunity.fields.Unqualified_Reason__c.label}"/> 
+                </td>
+                <td>
+                    <apex:inputField value="{!oppRecord.Unqualified_Reason__c}" />
+                </td>
+                       
+            </tr>
+            <tr>
+            <td>
+                <apex:outputLabel value="{!$ObjectType.Opportunity.fields.Underwriter_s_Score__c.label}"/> 
+                </td>
+                <td>
+                    <apex:inputField value="{!oppRecord.Underwriter_s_Score__c}" />
+                </td>
+               
+              <td>
+                   <apex:outputLabel value="{!$ObjectType.Opportunity.fields.Decline_Reason__c.label}"/> 
+               </td>
+               <td>
+                   <apex:inputField value="{!oppRecord.Decline_Reason__c}" />
+               </td>
+           </tr>
+            <tr>
+            <td>
+                   <apex:outputLabel value="{!$ObjectType.Opportunity.fields.Decision_Date__c.label}"/> 
+               </td>
+               <td>
+                   <apex:inputField value="{!oppRecord.Decision_Date__c}" />
+               </td>
+                 
+            </tr>
+            <tr>
+                <td><apex:outputLabel value="{!$ObjectType.Opportunity.fields.Underwriting_Approval__c.label}"/></td>
+                <td><apex:inputField value="{!oppRecord.Underwriting_Approval__c}" /></td> 
+                <td></td>
+                <td></td>                
+            </tr>
+            <tr>
+            <td>
+                    <apex:outputLabel value="{!$ObjectType.Opportunity.fields.Re_Decision_Date__c.label}"/> 
+                </td>
+                <td>
+                    <apex:inputField value="{!oppRecord.Re_Decision_Date__c}" />
+                </td>
+                </tr>
+            <tr>
+                
+                 <td>
+                    <apex:outputLabel value="{!$ObjectType.Opportunity.fields.Exceptions__c.label}"/> 
+                </td>
+                <td>
+                    <apex:inputField value="{!oppRecord.Exceptions__c}" />
+                </td>   
+                <td>
+                    
+                </td>
+                <td>
+                    
+                </td>         
+                  
+            </tr>
+            
+            <tr>
+                <td>
+                    <apex:outputLabel value="{!$ObjectType.Opportunity.fields.Approved_With_Conditions__c.label}"/> 
+                </td>
+                <td>
+                    <apex:inputField value="{!oppRecord.Approved_With_Conditions__c}" />
+                </td>  
+                              
+                   
+            </tr>
+       
+            <!-- =================================== -->
+            
+            
+           
+           <tr>
+                <td colspan="4">     
+                    <c:Extjs_Panel title="UW Re-price Information"/>
+                </td>
+            </tr>
+      
+            <tr>
+               <td>
+                    
+               </td>
+               <td>
+                   
+               </td>
+            </tr>
+            <tr>
+               <td>
+                   <apex:outputLabel value="{!$ObjectType.Opportunity.fields.New_Advance_Price__c.label}"/> 
+               </td>
+               <td>
+                   $<apex:inputField value="{!oppRecord.New_Advance_Price__c}" />
+               </td>
+            </tr>
+            <tr>
+                <td>
+                    <apex:outputLabel value="{!$ObjectType.Opportunity.fields.New_Percent_Payback__c.label}"/>                 
+                </td>
+                <td>  
+                   &nbsp;&nbsp;<apex:inputField value="{!oppRecord.New_Percent_Payback__c}" />% 
+                </td>
+            </tr>
+            <tr>
+                <td>
+                   <apex:outputLabel value="{!$ObjectType.Opportunity.fields.New_Payback_Price__c.label}"/>                 
+               </td>
+               <td>  
+                  $<apex:inputField value="{!oppRecord.New_Payback_Price__c}" /> 
+               </td>
+            </tr>
+            
+     
+            <!--  added section for reprice deals -->
+            <tr>
+                <td colspan="4">
+                    <c:Extjs_Panel title="Competitor Payoff Information"/>
+                </td>
+            </tr>
+      
+            <tr>
+                <td>
+                    <apex:outputLabel value="{!$ObjectType.Opportunity.fields.Existing_Competitor_Advance2__c.label}"/> 
+                </td>
+                <td>
+                    <apex:inputField value="{!oppRecord.Existing_Competitor_Advance2__c}" />
+                </td>                    
+                <td>
+                    <apex:outputLabel value="{!$ObjectType.Opportunity.fields.Third_Party_Payoff__c.label}"/>                 
+                </td>
+                <td>  
+                   <apex:inputField value="{!oppRecord.Third_Party_Payoff__c}" /> 
+                </td>
+            </tr>
+            <tr>
+                <td>
+                   <apex:outputLabel value="{!$ObjectType.Opportunity.fields.Competitor_Advance_Company__c.label}"/>  
+                </td>
+                <td>
+                  
+                   <apex:inputField value="{!oppRecord.Competitor_Advance_Company__c}" />
+                   
+                </td> 
+                <td>
+                    <apex:outputLabel value="{!$ObjectType.Opportunity.fields.Third_Party_Company_Name__c.label}"/> 
+                </td>
+                <td>
+                    <apex:inputField value="{!oppRecord.Third_Party_Company_Name__c}" />
+                </td>                    
+                
+            </tr>
+            <tr>
+                <td>
+                    <apex:outputLabel value="{!$ObjectType.Opportunity.fields.Payoff_Amount__c.label}"/>                 
+                </td>
+                <td>  
+                   <apex:inputField value="{!oppRecord.Payoff_Amount__c}" /> 
+                </td>
+                <td>
+                    <apex:outputLabel value="{!$ObjectType.Opportunity.fields.Third_Party_Payoff_Amount__c.label}"/>                 
+                </td>
+                <td>  
+                    <apex:inputField value="{!oppRecord.Third_Party_Payoff_Amount__c}" /> 
+                </td>                   
+            </tr>           
+
+            <tr>
+                <td>
+                    <apex:outputLabel value="{!$ObjectType.Opportunity.fields.Paid_Off_Letter_Rec_d__c.label}"/> 
+                </td>
+                <td>
+                    <apex:inputField value="{!oppRecord.Paid_Off_Letter_Rec_d__c}" />
+                </td>                    
+        
+            </tr>
+       
+        
+             <tr>
+                <td colspan="4">
+                    <c:Extjs_Panel title="Rapid UCC Filings Information"/>
+                </td>
+            </tr>
+       
+            <tr>
+                <td>
+                    <apex:outputLabel value="{!$ObjectType.Opportunity.fields.UCC_Filing__c.label}"/> 
+                </td>
+                <td>
+                    <apex:inputField value="{!oppRecord.UCC_Filing__c}" />
+                </td>                    
+                <td>
+                    <apex:outputLabel value="{!$ObjectType.Opportunity.fields.UCC_Date__c.label}"/>                 
+                </td>
+                <td>  
+                    <apex:inputField value="{!oppRecord.UCC_Date__c}" /> 
+                </td>
+            </tr>           
+            <tr>
+                <td>
+                    <apex:outputLabel value="{!$ObjectType.Opportunity.fields.UCC_Filing_Reason__c.label}"/> 
+                </td>
+                <td>
+                    <apex:inputField value="{!oppRecord.UCC_Filing_Reason__c }" />
+                </td>                    
+                <td>
+                    <apex:outputLabel value="{!$ObjectType.Opportunity.fields.UCC_Ordered__c.label}"/>                 
+                </td>
+                <td>  
+                    <apex:inputField value="{!oppRecord.UCC_Ordered__c}" /> 
+                </td>
+            </tr>           
+            <tr>
+                <td>
+                    <apex:outputLabel value="{!$ObjectType.Opportunity.fields.UCC_File_Number__c.label}"/> 
+                </td>
+                <td>
+                    <apex:inputField value="{!oppRecord.UCC_File_Number__c}" />
+                </td>                    
+                <td>
+                    <apex:outputLabel value="{!$ObjectType.Opportunity.fields.UCC_Acknowledgement_Date__c.label}"/>                 
+                </td>
+                <td>  
+                    <apex:inputField value="{!oppRecord.UCC_Acknowledgement_Date__c}" /> 
+                </td>
+            </tr>
+         
+            
+       </table><br/>
+           </apex:outputPanel>    
+       <div align="center">              
+            <apex:commandButton value="Save" action="{!doSave}" reRender="pageMessageMain,pgId,pgId1" status="ajaxStatus" oncomplete="setfocus('{!$Component.pageMessageMain}');"/>&nbsp;&nbsp;         
+       </div> 
+       </apex:outputPanel>          
+    </apex:form>
+    <apex:actionstatus startStyleClass="requiredLoaderBG" id="ajaxStatus" />
+    <script>
+        function refresh(){
+            window.location.href=window.location.href;
+        }
+    </script>
+</apex:page>

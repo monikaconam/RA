@@ -1,0 +1,10 @@
+Processing trial is complete. Please review for funding approval
+
+Current Balance with Competitor/RA:
+{!Opportunity.MI_Cash_Advance_Balance_Owed_if_applicab__c}
+
+Processing and/or Origination Fees:
+{!Opportunity.Processing_and_or_Origination_Fee_s__c}
+
+Wire Amount:
+{!Opportunity.Wire_Amount__c}

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Second Voice</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>EmailLetterhead</letterhead>
+    <name>Second Voice</name>
+    <style>freeForm</style>
+    <subject>Rapid Advance Follow-up</subject>
+    <textOnly>Hey {!Contact.FirstName},
+ 
+I look forward to speaking with you
+Hope all is well with you today! My name is {!User.Name} and I’m a Follow-up Specialist at Rapid Advance. I was reaching out because we had previously begun working with you and we now have a special opportunity for small business financing. 
+ 
+Just to give you an idea of what it is we are offering, it&apos;s a loan that is as competitive as a bank loan or SBA loan in terms and rates, with the only difference being we don’t require the crazy documentation that banks and government loans will require from you.  We also don’t have the high cost fees because we will be servicing your loan through the life of the loan.
+ 
+I am just looking for about 5-10 minutes of your time to see if this make sense for you. When would be the best time for you to talk?
+ 
+Thanks,
+ 
+ 
+http://www.rapidadvance.com/
+
+All the best,
+
+{!User.Name} | Business Advisor
+Phone:  {!User.Phone}
+Cell:  {!User.MobilePhone}
+Email:  {!User.Email}</textOnly>
+    <type>html</type>
+</EmailTemplate>

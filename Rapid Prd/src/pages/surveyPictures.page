@@ -1,0 +1,173 @@
+<apex:page showHeader="false" sidebar="false" controller="SurveyPicturesController" tabStyle="Site_Survey__c">
+    <style>
+       
+       <apex:stylesheet value="{!$Resource.smoothDivScroll}/smoothDivScroll.css" />
+               
+        #makeMeScrollable{
+            width:100%;
+            height: auto;
+            position: relative;
+            overflow: hidden;
+            padding-top:20px;
+            margin: 10px 0 0 0;
+        }                
+        #makeMeScrollable div.scrollableArea img {
+            position: relative;
+            float: left;           
+            padding-top:40px;
+            padding-right: 10px;
+            -webkit-user-select: none;
+            -khtml-user-select: none;
+            -moz-user-select: none;
+            -o-user-select: none;
+            user-select: none;
+           
+        }      
+        
+        .ptBreadcrumb {
+            height: auto;
+            margin-top: 20px;
+            margin-bottom: 0;
+            margin-left:30px;
+            font-family: 'Verdana','Geneva',sans-serif;
+            font-size: 92.3%;
+            margin-bottom: -15px;
+            height: 15px;
+            vertical-align: middle;
+            cursor: pointer;
+            
+        }
+        .ptBreadcrumb a {
+            color: rgb(1, 91, 167);
+            text-decoration: none;
+            cursor: pointer;
+        }
+        
+        .pageTitleIcon {
+            background-image: url(/img/icon/camera32.png);
+            background-position: 0 0;
+            width: 32px;
+            height: 32px;
+        }
+
+    </style>
+    
+    <apex:includeScript value="{!$Resource.smoothDivScroll}/jquery.min.js" />
+    <apex:includeScript value="{!$Resource.smoothDivScroll}/jquery-ui-1.8.23.custom.min.js"/>
+    <apex:includeScript value="{!$Resource.smoothDivScroll}/jquery.mousewheel.min.js"/>
+    <apex:includeScript value="{!$Resource.smoothDivScroll}/jquery.kinetic.js"/>    
+    <apex:includeScript value="{!$Resource.smoothDivScroll}/jquery.smoothdivscroll-1.3-min.js"/>
+     <script src="/soap/ajax/26.0/connection.js" type="text/javascript" /> 
+     <script src="/soap/ajax/26.0/apex.js" type="text/javascript" /> 
+    <script> 
+     
+    sforce.connection.sessionId = '{!$Api.Session_ID}';
+    var userProfile = '{!$Profile.Name}';
+    var totalImages = {!noOfImages};
+    var result;
+    var surveryIds;
+   
+    $(document).ready(function(){
+          $("div#makeMeScrollable").smoothDivScroll({
+               
+                mousewheelScrolling: "allDirections"
+                //manualContinuousScrolling: true
+                //autoScrollingMode: "onStart"
+          }); 
+          
+         
+          
+         if(userProfile == 'Operations - Underwriting') {
+              result = sforce.connection.query("select Id,Name,Viewing_Status__c,Viewed_all_images__c from Site_Survey__c Where Id= '{!$CurrentPage.parameters.Id}'");
+              surveryIds = result.records.Viewing_Status__c; 
+              if(surveryIds == null){
+                  surveryIds = '';
+              }
+         }
+    });
+    
+  
+    
+    
+       
+        
+       function ScrollDivHover(){
+            if(userProfile == 'Operations - Underwriting') {    
+                var xPosition = 0;
+                var yPosition = 0;
+                var parentId='{!$CurrentPage.parameters.Id}';
+                var attachArray = surveryIds;
+                
+               
+               
+                var inputElem = document.getElementsByTagName("img");
+                for(var i=0; i<inputElem.length; i++)
+                {
+                    if(inputElem[i].className != 'pageTitleIcon') {
+                        xPosition = 0;
+                        yPosition = 0;
+                        element = inputElem[i]; 
+                         while(element) {
+                            xPosition += (element.offsetLeft - element.scrollLeft + element.clientLeft);
+                            yPosition += (element.offsetTop - element.scrollTop + element.clientTop);
+                            element = element.offsetParent;
+                         }
+                         
+                         if((xPosition <= 0 && (inputElem[i].width + xPosition) < screen.width) || ((inputElem[i].width + xPosition) < screen.width)) {
+                             if(surveryIds == '' || ((surveryIds.indexOf(','+inputElem[i].id) == -1) && (surveryIds.indexOf(inputElem[i].id + ',') == -1))) {
+                                 attachArray = attachArray + ',' + inputElem[i].id; 
+                                 surveryIds = attachArray;  
+                             }   
+                         }  
+                     } 
+                }
+               
+               
+                if(attachArray.length > 0) {
+                
+                    var updateRecordArray = new Array(); 
+                    var viewedCount = 0;  
+                   
+                  
+                    if(attachArray.indexOf(',') == 0) {
+                              
+                        attachArray = attachArray.substring(1, attachArray.length);
+                        
+                    }
+                    var imageIdArray = attachArray.split(','); 
+                    viewedCount = imageIdArray.length;
+                    
+                    var updateRecord = new sforce.SObject("Site_Survey__c");
+                    updateRecord.Id = result.records.Id;
+                    updateRecord.Viewing_Status__c = attachArray;
+                    
+                    if(viewedCount >= totalImages) {
+                        updateRecord.Viewed_all_images__c = true;
+                    } else {
+                        updateRecord.Viewed_all_images__c = false;     
+                    }
+                    
+                    updateRecordArray.push(updateRecord);
+                    uresult = sforce.connection.update(updateRecordArray);
+                  
+                }
+            }
+       }
+      
+    </script>
+     <apex:sectionHeader title="View All Attachments" />
+     <div class="ptBreadcrumb">&nbsp;«&nbsp;<a href="/{!$CurrentPage.parameters.Id}">Back to Site Survey:&nbsp;{!siteSurvey}</a></div>
+    <!-- apex:outputPanel rendered="{!IF(OR(ISNULL(attachmentUrlList),attachmentUrlList.values.size=0),false,true)}" -->
+        <div id="makeMeScrollable" onmouseover="ScrollDivHover();">
+            <apex:repeat value="{!attachmentUrlList}" var="attachmentUrl">
+                <img id="{!attachmentUrl}" src="{!attachmentUrlList[attachmentUrl]}" />
+            </apex:repeat>
+        </div>
+    <!-- /apex:outputPanel -->
+    
+    <apex:pageBlock rendered="{!IF(noOfImages==0, true, false)}">
+        <i>No records to display.</i>
+    </apex:pageBlock>
+   
+
+</apex:page>

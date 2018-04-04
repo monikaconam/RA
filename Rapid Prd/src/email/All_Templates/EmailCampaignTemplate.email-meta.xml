@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>New email template 5-27-2008</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Email Campaign Template</name>
+    <style>none</style>
+    <subject>{!Contact.FirstName}, do you still need cash for your business?</subject>
+    <textOnly>The Smart Choice For 
+Immediate Working Capital℠
+	
+RapidAdvance can supply your business with money by turning your 
+future credit card sales into cash today!  You can take advantage of new opportunities, manage unexpected expenses, and build your business with funding from RapidAdvance!
+	
+Easy Access To Financing
+	
+- Over 80% approval rates
+- Up to 3 times your monthly Visa®/MasterCard® receipts
+	
+Smart For Your Business*
+	
+- No fees, no points, no catches
+- Over 85% merchant renewal rate
+	
+Fast Access To Funds
+	
+- Cash within 10 days
+- Pre-qualified in 24 hours
+- Apply within 3 minutes
+	
+Call or email me today to see how much your business qualifies for!
+	
+Sincerely,
+	
+{!Lead.OwnerFullName}
+{!Lead.OwnerPhone}
+	
+*Individuals only liable in cases of fraud, misrepresentation, and 
+as further detailed in contract.</textOnly>
+    <type>custom</type>
+</EmailTemplate>

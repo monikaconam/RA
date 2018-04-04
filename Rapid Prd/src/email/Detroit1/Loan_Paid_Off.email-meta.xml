@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Preferred Loan Paid Off Email Template</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>EmailLetterhead</letterhead>
+    <name>Loan Paid Off</name>
+    <style>freeForm</style>
+    <subject>Invitation for Preferred Loan</subject>
+    <textOnly>Hey {!Contact.FirstName},
+
+Hope all is well with business right now. I tried giving you a call a little bit ago and it looks like I caught you at a bad time. I was reaching out to you today with an amazing opportunity for your business.
+
+
+
+Earlier this month we rolled out a brand new product called our “Preferred Loan” and this product is by far the most economical loan that we’ve ever built. The interest rates on our “Preferred Loan” are 1.25% per month for the duration of the loan, the best in our entire industry. With you being a former closed client of ours we felt that it was only right to let you get first crack at this opportunity.  I was looking for about 5 minutes of your time to take a look at your business with you and see if it’s a fit. Please let me know when you are available for a short conversation. You may also reach out to me at any time on either phone number below.
+
+
+
+Looking forward to hearing back from you soon!
+
+
+
+{!User.Name} | Business Advisor
+
+Phone: {!User.Phone}
+
+Cell:  {!User.MobilePhone}
+
+Email:  {!User.Email}</textOnly>
+    <type>html</type>
+</EmailTemplate>

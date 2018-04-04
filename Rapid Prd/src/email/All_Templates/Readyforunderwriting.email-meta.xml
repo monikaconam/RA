@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>All paperwork is complete.</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Ready for underwriting</name>
+    <style>none</style>
+    <subject>This opportunity is ready for underwriting.</subject>
+    <type>text</type>
+</EmailTemplate>

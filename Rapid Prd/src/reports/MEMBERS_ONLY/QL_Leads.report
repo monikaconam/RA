@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>LEAD_OWNER_ALIAS</field>
+    </columns>
+    <columns>
+        <field>FIRST_NAME</field>
+    </columns>
+    <columns>
+        <field>LAST_NAME</field>
+    </columns>
+    <columns>
+        <field>COMPANY_ACCT</field>
+    </columns>
+    <columns>
+        <field>STATUS</field>
+    </columns>
+    <columns>
+        <field>CREATED_DATE</field>
+    </columns>
+    <columns>
+        <field>Lead.Campaign_Name__c</field>
+    </columns>
+    <description>MO ROCKERBOX/RC TODAY</description>
+    <filter>
+        <booleanFilter>(((1 AND 2) OR (2 AND 3 AND 4)) AND 5)</booleanFilter>
+        <criteriaItems>
+            <column>LEAD_SOURCE</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>contains</operator>
+            <value>Quicken Loans</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Lead.Team__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Members Only</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>LEAD_SOURCE</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Manually Created</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Lead.Campaign_Name__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>contains</operator>
+            <value>Quicken Loans</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>LEAD_SOURCE</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Quicken Loans</value>
+        </criteriaItems>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <aggregateType>RowCount</aggregateType>
+        <dateGranularity>Day</dateGranularity>
+        <field>CONVERTED</field>
+        <sortByName>RowCount</sortByName>
+        <sortOrder>Asc</sortOrder>
+        <sortType>Aggregate</sortType>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>LEAD_OWNER</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>MEMBERS ONLY ROCKERBOX/RC LEADS TODAY</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>OpportunityLead</reportType>
+    <scope>org</scope>
+    <showDetails>true</showDetails>
+    <sortColumn>STATUS</sortColumn>
+    <sortOrder>Asc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>CREATED_DATE</dateColumn>
+        <interval>INTERVAL_YESTERDAY</interval>
+    </timeFrameFilter>
+</Report>

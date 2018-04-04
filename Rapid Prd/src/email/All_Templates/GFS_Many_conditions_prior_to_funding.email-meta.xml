@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>If after approval there are many conditions prior to funding, an email is sent to Faith / Ericka.</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>GFS Many conditions prior to funding</name>
+    <style>none</style>
+    <subject>GFS - Too many conditions prior to actually funding account.</subject>
+    <type>text</type>
+</EmailTemplate>

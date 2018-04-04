@@ -1,0 +1,403 @@
+<apex:page controller="MainBusiness_Ctrl" showHeader="false" sidebar="false" >
+     <style>
+     .accountLabel {color:#207FB9;font-weight: bold !important;} 
+     </style>
+    <c:Opportunity_Related_CSS imgName="MainBusiness.png"/>
+    <apex:pageMessages id="pageMessageMain"/>
+    <apex:form id="MBForm" styleClass="MBForm"><br/>
+    <apex:outputPanel id="panelid1">
+       <div class="bgImg"></div>
+       <div align="center">              
+           <apex:commandButton value="Save" action="{!doSave}" reRender="pageMessageMain,panelid,panelid1" status="ajaxStatus" oncomplete="setfocus('{!$Component.pageMessageMain}');"/>&nbsp;&nbsp;         
+       </div>
+       <apex:outputPanel id="panelid">
+       <table id="MBTable">
+            <tr>
+               <td colspan="4">
+                    <c:Extjs_Panel title="Main Business Information" RefreshButton="Refresh"/>
+               </td>
+           </tr>
+           <tr>
+               <td>
+                   <apex:outputLabel value="{!$ObjectType.Opportunity.fields.Type_of_Entity__c.label}"/> 
+               </td>
+               <td align="left" style="padding-left:0px;">
+                   <apex:inputField value="{!oppRecord.Type_of_Entity__c}" />
+               </td>                    
+               <td>
+                   <apex:outputLabel value="{!$ObjectType.Opportunity.fields.Purpose_of_Funds__c.label}"/>                 
+               </td>
+               <td>  
+                  <apex:inputField value="{!oppRecord.Purpose_of_Funds__c}" /> 
+               </td>
+           </tr>
+            <tr>
+               <td>
+                   <apex:outputLabel value="{!$ObjectType.Opportunity.fields.Business_Category__c.label}"/> 
+               </td>
+               <td align="left" style="padding-left:0px;">
+                   <apex:inputField value="{!oppRecord.Business_Category__c}" />
+               </td>                    
+               <td></td>
+               <td></td>
+           </tr>
+           <tr>
+               <td>
+                   <apex:outputLabel value="{!$ObjectType.Opportunity.fields.Best_Number_To_Call__c.label}"/>                 
+               </td>
+               <td>  
+                  <apex:inputField value="{!oppRecord.Best_Number_To_Call__c}" /> 
+               </td>                   
+               <td>
+                   <apex:outputLabel value="{!$ObjectType.Opportunity.fields.Current_Processor__c.label}"/>                 
+               </td>
+               <td>  
+                  <apex:inputField value="{!oppRecord.Current_Processor__c}" /> 
+               </td> 
+           </tr>
+            <tr>
+               <td>
+                   <apex:outputLabel value="{!$ObjectType.Opportunity.fields.Processor_Name__c.label}"/>                 
+               </td>
+               <td>  
+                  <apex:inputField value="{!oppRecord.Processor_Name__c}" /> 
+               </td> 
+              
+           </tr>
+          
+           <tr>
+                <td>
+                    <apex:outputLabel value="{!$ObjectType.Opportunity.fields.Renewal_Number__c.label}"/>
+                </td>
+                <td>  
+                   <apex:inputField value="{!oppRecord.Renewal_Number__c}" /> 
+                </td>
+                  <td>
+                  <apex:outputLabel value="{!$ObjectType.Account.fields.Number_of_Terminals_at_Location__c.label}" styleClass="accountLabel"/>
+               </td>
+               <td>
+                   <apex:inputField value="{!accRecord.Number_of_Terminals_at_Location__c}" />
+               </td>
+           </tr>
+            
+            <tr> 
+               <td>
+                   <apex:outputLabel value="Account (DBA) Name" styleClass="accountLabel"/>
+               </td>
+               <td>
+                   <apex:inputField value="{!accRecord.Name}" style="width:80%;"/>
+               </td>                    
+               <td>
+                   <apex:outputLabel value="Business Phone" styleClass="accountLabel"/>
+                   <!--<apex:outputLabel value="{!$ObjectType.Account.fields.Phone.label}" styleClass="accountLabel"/> -->
+               </td>
+               <td>  
+                  <apex:inputField value="{!accRecord.Phone}" /> 
+               </td>
+           </tr>
+           
+           <tr>
+               <td>
+                  <apex:outputLabel value="{!$ObjectType.Account.fields.Legal_Name__c.label}" styleClass="accountLabel"/>
+               </td>
+               <td>
+                   <apex:inputField value="{!accRecord.Legal_Name__c}" />
+               </td>                    
+               <td>
+                   <apex:outputLabel value="Business Fax" styleClass="accountLabel"/>                 
+                   <!--<apex:outputLabel value="{!$ObjectType.Account.fields.Fax.label}" styleClass="accountLabel"/>                 -->
+               </td>
+               <td>  
+                  <apex:inputField value="{!accRecord.Fax}" /> 
+               </td>
+           </tr>
+           
+           <tr>
+               <td>
+                  <apex:outputLabel value="Business Billing Street" styleClass="accountLabel"/>
+                  <!-- <apex:outputLabel value="{!$ObjectType.Account.fields.BillingStreet.label}" styleClass="accountLabel"/>-->
+               </td>
+               <td>
+                   <apex:inputField value="{!accRecord.BillingStreet}" />
+               </td>                    
+               <td>
+                   <apex:outputLabel value="{!$ObjectType.Account.fields.Email_Address__c.label}" styleClass="accountLabel"/>                 
+               </td>
+               <td>  
+                  <apex:inputField value="{!accRecord.Email_Address__c}" /> 
+               </td>
+           </tr>           
+           <tr>
+               <td>
+                   <apex:outputLabel value="Business Billing City" styleClass="accountLabel"/>
+                  <!--<apex:outputLabel value="{!$ObjectType.Account.fields.BillingCity.label}" styleClass="accountLabel"/>-->
+               </td>
+               <td>
+                   <apex:inputField value="{!accRecord.BillingCity}" />
+               </td>                    
+               <td>
+                   <apex:outputLabel value="{!$ObjectType.Account.fields.FederalTaxID__c.label}" styleClass="accountLabel"/>                 
+               </td>
+               <td>  
+                  <apex:inputField value="{!accRecord.FederalTaxID__c}" /> 
+               </td>
+           </tr>
+            <tr>
+                <td>
+                  <apex:outputLabel value="Business Billing State" styleClass="accountLabel"/>
+               </td>
+               <td align="left" style="padding-left:0px;">
+                    <apex:inputField value="{!accRecord.BillingState}" />
+               </td> 
+                                 
+               <td>
+                   <apex:outputLabel value="{!$ObjectType.Account.fields.Does_the_Merchant_Own_the_Building__c.label}" styleClass="accountLabel"/>                 
+               </td>
+               <td>  
+                  <apex:inputField value="{!accRecord.Does_the_Merchant_Own_the_Building__c}" /> 
+               </td>
+           </tr>
+            <tr>
+                <td>
+                  <apex:outputLabel value="Business Zip Code" styleClass="accountLabel"/>
+               </td>
+               <td align="left" style="padding-left:0px;">
+                    <apex:inputField value="{!accRecord.BillingPostalCode}" />
+               </td>
+                                    
+               <td>
+                   <apex:outputLabel value="{!$ObjectType.Account.fields.Landlord_Agent_Name__c.label}" styleClass="accountLabel"/>                 
+               </td>
+               <td>  
+                  <apex:inputField value="{!accRecord.Landlord_Agent_Name__c}" /> 
+               </td>
+           </tr>
+            <tr>
+                <td>
+                  <apex:outputLabel value="{!$ObjectType.Account.fields.DateBusinessStarted__c.label}" styleClass="accountLabel"/>
+               </td>
+               <td align="left" style="padding-left:0px;">
+                   <apex:inputField value="{!accRecord.DateBusinessStarted__c}" />
+               </td> 
+                                  
+               <td>
+                   <apex:outputLabel value="{!$ObjectType.Account.fields.Landlord_Agent_Phone__c.label}" styleClass="accountLabel"/>                 
+               </td>
+               <td>  
+                  <apex:inputField value="{!accRecord.Landlord_Agent_Phone__c}" /> 
+               </td>
+           </tr>
+           
+            <tr>
+                <td>
+                  <apex:outputLabel value="{!$ObjectType.Account.fields.Owned_Business_Since__c.label}" styleClass="accountLabel"/>
+               </td>
+               <td align="left" style="padding-left:0px;">
+                   <apex:inputField value="{!accRecord.Owned_Business_Since__c}" />
+               </td>
+                                  
+               <td>
+                   <apex:outputLabel value="{!$ObjectType.Account.fields.Time_Remaining_On_Lease__c.label}" styleClass="accountLabel"/>                 
+               </td>
+               <td>  
+                  <apex:inputField value="{!accRecord.Time_Remaining_On_Lease__c}" /> 
+               </td>
+           </tr>
+           
+            <tr>
+               <td>
+                  <apex:outputLabel value="{!$ObjectType.Account.fields.Number_of_Locations__c.label}" styleClass="accountLabel"/>
+               </td>
+               <td align="left" style="padding-left:0px;">
+                   <apex:inputField value="{!accRecord.Number_of_Locations__c}" />
+               </td>                    
+               <td>
+                   <apex:outputLabel value="{!$ObjectType.Account.fields.Federal_or_State_Tax_Liens__c.label}" styleClass="accountLabel"/>                 
+               </td>
+               <td>  
+                  <apex:inputField value="{!accRecord.Federal_or_State_Tax_Liens__c}" /> 
+               </td>
+           </tr>
+           <tr>
+               
+           </tr>
+           
+            
+            <tr>
+              <td colspan="4">
+                   <c:Extjs_Panel title="Partner Email"/>
+              </td>
+           </tr>
+    
+
+            <tr>
+                <td>
+                    <apex:outputLabel value="{!$ObjectType.Opportunity.fields.Partner_Email_1__c.label}"/>
+                </td>
+                <td>  
+                    <apex:inputField value="{!oppRecord.Partner_Email_1__c}" />
+                </td>
+                <td>
+                   <apex:outputLabel value="{!$ObjectType.Opportunity.fields.Partner_Email_2__c.label}"/> 
+               </td>
+               <td>
+                   <apex:inputField value="{!oppRecord.Partner_Email_2__c}" />
+               </td>
+            </tr>
+            <tr>
+                 <td>
+                    <apex:outputLabel value="{!$ObjectType.Opportunity.fields.Partner_Email_3__c.label}"/>
+                </td>
+                <td>  
+                    <apex:inputField value="{!oppRecord.Partner_Email_3__c}" /> 
+                </td> 
+                <td>
+                  <apex:outputLabel value="{!$ObjectType.Opportunity.fields.Partner_Email_4__c.label}"/> 
+                </td>
+                <td>  
+                    <apex:inputField value="{!oppRecord.Partner_Email_4__c}" /> 
+                </td>                 
+              
+           </tr>
+           <tr>
+                <td>
+                  <apex:outputLabel value="{!$ObjectType.Opportunity.fields.Partner_Email_5__c.label}"/> 
+                </td>
+                <td>  
+                    <apex:inputField value="{!oppRecord.Partner_Email_5__c}" /> 
+                </td>
+               <td>
+                   <apex:outputLabel value="{!$ObjectType.Opportunity.fields.Partner_Email_6__c.label}"/> 
+                </td>
+                <td>  
+                   <apex:inputField value="{!oppRecord.Partner_Email_6__c}" />
+                </td> 
+            </tr>
+           
+       <!--  ======================================Added Code===================================================================== -->
+       
+        <!--   Eligibility Criteria -->
+           <tr>
+               <td colspan="4">
+                   
+                    <c:Extjs_Panel title="Eligibility Criteria"/>
+               </td>
+           </tr>
+
+           <tr>
+               <td>
+                   <apex:outputLabel value="{!$ObjectType.Opportunity.fields.EC_X4_consecutive_months_of_processing__c.label}"/> 
+               </td>
+               <td align="left" style="padding-left:0px;">
+                   <apex:inputField value="{!oppRecord.EC_X4_consecutive_months_of_processing__c}" />
+               </td>                    
+           </tr>
+
+            
+          <!--  =====Commented this field as per the doc ======= -->
+                             
+           <tr> 
+               <td>
+                   <apex:outputLabel value="{!$ObjectType.Opportunity.fields.EC_X12_separate_daily_deposits_per_month__c.label}"/>                 
+               </td>
+               <td>  
+                  <apex:inputField value="{!oppRecord.EC_X12_separate_daily_deposits_per_month__c}" /> 
+               </td>
+           </tr>
+           
+      <!-- <tr> 
+               <td>
+                   <apex:outputLabel value="{!$ObjectType.Opportunity.fields.EC_Company_in_business_6_months__c.label}"/>                 
+               </td>
+               <td>  
+                  <apex:inputField value="{!oppRecord.EC_Company_in_business_6_months__c}" /> 
+               </td>                   
+           </tr> -->
+          <!--   Eligibility Criteria -->
+       
+       <!--  ======================================Added Code Ends Here===================================================================== -->
+          
+           <tr>
+               <td colspan="4">
+                    <c:Extjs_Panel title="Additional Business Information"/>
+               </td>
+           </tr>
+           
+           <tr>
+               <td colspan="4">
+               
+       <c:Extjs_Bank_Statement height="201" title="Additional Locations" object="Additional_Locations__c" fields="DBA_Name__c,Street__c,City__c,State__c,Postal_Code__c,Phone__c,Fax__c,Landlord__c,Landlord_Phone__c,Time_Remaining_on_Lease__c" rows="3" minimized="false" parentField="Account__c" parentRecordId="{!accRecord.Id}"/>        
+                       
+               </td>
+           </tr>
+           
+            <!-- tr>
+               <td>
+                  <apex:outputLabel value="{!$ObjectType.Account.fields.Location_1_DBA_NAME__c.label}"/>
+               </td>
+               <td align="left" style="padding-left:0px;">
+                   <apex:inputField value="{!accRecord.Location_1_DBA_NAME__c}" />
+               </td>                    
+               <td>
+                   <apex:outputLabel value="{!$ObjectType.Account.fields.Location_3_DBA_NAME__c.label}"/>                 
+               </td>
+               <td>  
+                  <apex:inputField value="{!accRecord.Location_3_DBA_NAME__c}" /> 
+               </td>
+           </tr>
+           
+            <tr>
+               <td>
+                  <apex:outputLabel value="{!$ObjectType.Account.fields.Location_1_Address__c.label}"/>
+               </td>
+               <td align="left" style="padding-left:0px;">
+                   <apex:inputField value="{!accRecord.Location_1_Address__c}" />
+               </td>                    
+               <td>
+                   <apex:outputLabel value="{!$ObjectType.Account.fields.Location_3_Address__c.label}"/>                 
+               </td>
+               <td>  
+                  <apex:inputField value="{!accRecord.Location_3_Address__c}" /> 
+               </td>
+           </tr>
+           
+           <tr>
+               <td>
+                  <apex:outputLabel value="{!$ObjectType.Account.fields.Location_2_DBA_NAME__c.label}"/>
+               </td>
+               <td align="left" style="padding-left:0px;">
+                   <apex:inputField value="{!accRecord.Location_2_DBA_NAME__c}" />
+               </td>                    
+               <td>
+                   <apex:outputLabel value="{!$ObjectType.Account.fields.Location_4_DBA_NAME__c.label}"/>                 
+               </td>
+               <td>  
+                  <apex:inputField value="{!accRecord.Location_4_DBA_NAME__c}" /> 
+               </td>
+           </tr>
+           
+            <tr>
+               <td>
+                  <apex:outputLabel value="{!$ObjectType.Account.fields.Location_2_Address__c.label}"/>
+               </td>
+               <td align="left" style="padding-left:0px;">
+                   <apex:inputField value="{!accRecord.Location_2_Address__c}" />
+               </td>                    
+               <td>
+                   <apex:outputLabel value="{!$ObjectType.Account.fields.Location_4_Address__c.label}"/>                 
+               </td>
+               <td>  
+                  <apex:inputField value="{!accRecord.Location_4_Address__c}" /> 
+               </td>
+           </tr -->
+           
+                     
+       </table><br/>
+       </apex:outputPanel>            
+       <div align="center">              
+            <apex:commandButton value="Save" action="{!doSave}" reRender="pageMessageMain,panelid,panelid1" status="ajaxStatus" oncomplete="setfocus('{!$Component.pageMessageMain}');"/>&nbsp;&nbsp;         
+       </div>     
+       </apex:outputPanel>      
+    </apex:form>
+    <apex:actionstatus startStyleClass="requiredLoaderBG" id="ajaxStatus" />
+</apex:page>

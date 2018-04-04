@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Lost Boy</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Lost Boys</value>
+    </caseValues>
+    <fields>
+        <label><!-- BOBA Commission --></label>
+        <name>BOBA_Commission__c</name>
+    </fields>
+    <fields>
+        <label><!-- Client Submission Link --></label>
+        <name>Client_Submission_Link__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contact Email --></label>
+        <name>Contact_Email__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contact Phone --></label>
+        <name>Contact_Phone__c</name>
+    </fields>
+    <fields>
+        <label><!-- Key Contact --></label>
+        <name>Key_Contact__c</name>
+    </fields>
+    <fields>
+        <label><!-- New Deal Terms --></label>
+        <name>New_Deal_Terms__c</name>
+    </fields>
+    <fields>
+        <label><!-- Onboarded Date --></label>
+        <name>Onboarded_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Parallel Partner --></label>
+        <name>Parallel_Partner__c</name>
+    </fields>
+    <fields>
+        <label><!-- Portal Link --></label>
+        <name>Portal_Link__c</name>
+    </fields>
+    <fields>
+        <label><!-- Renewal Eligibility --></label>
+        <name>Renewal_Eligibility__c</name>
+    </fields>
+    <fields>
+        <label><!-- Renewal Terms --></label>
+        <name>Renewal_Terms__c</name>
+    </fields>
+    <fields>
+        <label><!-- Submission Email --></label>
+        <name>Submission_Email__c</name>
+    </fields>
+    <fields>
+        <label><!-- Submission Method --></label>
+        <name>Submission_Method__c</name>
+        <picklistValues>
+            <masterLabel>Client Link</masterLabel>
+            <translation><!-- Client Link --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Email</masterLabel>
+            <translation><!-- Email --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Live Transfer</masterLabel>
+            <translation><!-- Live Transfer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Portal</masterLabel>
+            <translation><!-- Portal --></translation>
+        </picklistValues>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>CAMPAIGN_NAME</field>
+    </columns>
+    <columns>
+        <field>Lead.LeadId18Char__c</field>
+    </columns>
+    <columns>
+        <field>CREATED_DATE</field>
+    </columns>
+    <columns>
+        <field>LEAD_SOURCE</field>
+    </columns>
+    <columns>
+        <field>STATUS</field>
+    </columns>
+    <columns>
+        <field>Lead.LeadCount__c</field>
+    </columns>
+    <columns>
+        <field>CONVERTED</field>
+    </columns>
+    <columns>
+        <field>Opportunity.signed_flag__c</field>
+    </columns>
+    <columns>
+        <field>Opportunity.Submitted_to_UW_Flag__c</field>
+    </columns>
+    <columns>
+        <field>Opportunity.Funded_Flag__c</field>
+    </columns>
+    <columns>
+        <field>Opportunity.Funded_Amount__c</field>
+    </columns>
+    <columns>
+        <field>Opportunity.Funded_Fee__c</field>
+    </columns>
+    <description>Campaigns under parent 30 Second Art Card Spot, 30 Second Broadway Spot, 60 Second Broadway Spot, and the following individual campaigns - Sales Marketing Inbound | 877-GO-RAPID, TV Commercial 201305, 201402, TV Commercial Emails 2013 (LEADS) &amp; (OPPS)</description>
+    <filter>
+        <criteriaItems>
+            <column>CAMPAIGN_NAME</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>contains</operator>
+            <value>30 Second,60 Second,Sales Marketing Inbound | 877-GO-RAPID,TV Commercial 201305,TV Commercial 201402,TV Commercial Emails 2013 (LEADS),TV Commercial Emails 2013 (OPPS)</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>CREATED_DATE</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>greaterOrEqual</operator>
+            <value>1/1/2015 12:00 AM</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>New TV</name>
+    <params>
+        <name>scopeid</name>
+        <value></value>
+    </params>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CampaignLeadLifetime</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <sortColumn>CAMPAIGN_NAME</sortColumn>
+    <sortOrder>Asc</sortOrder>
+</Report>

@@ -1,0 +1,502 @@
+<apex:page showHeader="false" sideBar="false" tabStyle="opportunity" standardController="Site_Survey__c" extensions="SiteSurveys_Ctrl" >
+    <style type="text/css">
+    #surveyTable tr td {
+        white-space:wrap;        
+        font-weight:bold;
+        padding-top:5px;
+    }
+    #surveyTable{
+        padding: 0 40px;
+         width: 100%;    
+    }
+    .SurveyForm{
+        padding: 0 40px;
+    }
+    .requiredLoaderBG{
+            background-color: rgb(71,71,71);
+            opacity:0.7;
+            filter:alpha(opacity=70);
+            background-image:url({!URLFOR($Resource.ajaxLoadGif)});
+            background-position: center center;
+            background-repeat: no-repeat;
+            height: 100%;
+            left: 0;
+            position: fixed;
+            text-align: center;
+            top: 0;
+            width: 100%;
+            z-index: 1;
+    }
+    .bPageBlock .requiredInput .requiredBlock {
+            background-color: #c00;
+            position: absolute;
+            left: -4px;
+            width: 3px;
+            top: 1px;
+            bottom: 1px;
+     }
+    </style>
+    <apex:pageMessages id="pageMessageMain"/>
+    <apex:form id="SurveyForm" styleClass="SurveyForm">
+        <apex:sectionHeader title="Site Survey Edit" subtitle="{!IF(objSiteSurvey.Name != NULL,objSiteSurvey.Name,'New Site Survey')}" /><br/>
+        <div align="center">                
+            <apex:commandButton value="Save" action="{!save}" reRender="pageMessageMain" status="ajaxStatus"/>&nbsp;&nbsp;        
+            <apex:commandButton value="Cancel" action="{!cancel}" status="ajaxStatus"/>        
+        </div>
+        <center style="margin-top:2px;">       
+        <table id="surveyTable" width="90%">
+            <tr>
+                <td colspan="5">
+                    <c:Extjs_Panel title="Information"/> 
+                </td>
+            </tr>            
+            
+            <tr>
+                <td>
+                    <apex:outputLabel value="{!$ObjectType.Site_Survey__c.fields.Name.label}"/> 
+                </td>
+                <td>
+                    <apex:inputField value="{!objSiteSurvey.Name}" required="true"/>
+                </td>
+                <td>
+                    &nbsp;
+                </td>
+                <td>
+                    <apex:outputLabel value="{!$ObjectType.Site_Survey__c.fields.Site_Survey_Type__c.label}"/> 
+                </td>
+                <td>    
+                    <apex:inputField value="{!objSiteSurvey.Site_Survey_Type__c}" required="true"/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <apex:outputLabel value="{!$ObjectType.Site_Survey__c.fields.Review_Status__c.label}"/> 
+                </td>
+                <td>
+                    <apex:inputField value="{!objSiteSurvey.Review_Status__c}"/>
+                </td>
+                <td>
+                    &nbsp;
+                </td>
+                <td>
+                    <apex:outputLabel value="{!$ObjectType.Site_Survey__c.fields.Comments_for_NVMS__c.label}"/>                   
+                </td>
+                <td>                    
+                    <apex:inputField value="{!objSiteSurvey.Comments_for_NVMS__c}" style="width:80%;"/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <apex:outputLabel value="{!$ObjectType.Site_Survey__c.fields.Review_Completed__c.label}"/> 
+                </td>
+                <td>
+                    <apex:inputField value="{!objSiteSurvey.Review_Completed__c}"/>
+                </td>
+                <td>
+                    &nbsp;
+                </td>
+                <td>
+                    <apex:outputLabel value="{!$ObjectType.Site_Survey__c.fields.Order_Category__c.label}"/>                   
+                </td>
+                <td>                    
+                    <apex:inputField value="{!objSiteSurvey.Order_Category__c}"/>
+                </td>
+                
+            </tr>
+ 
+                 <tr>
+                <td style="padding-top:5px;">
+                    <apex:outputLabel value="{!$ObjectType.Site_Survey__c.fields.Declined_Survey_Reason__c.label}"/> 
+                </td>
+                <td style="padding-top:5px;">
+                    <apex:inputField value="{!objSiteSurvey.Declined_Survey_Reason__c}" style="width:80%;"/>
+                </td>
+                <td>
+                    &nbsp;
+                </td>
+                <td>
+                    <apex:outputLabel value=""/>                   
+                </td>
+                <td>                    
+                    <apex:outputLabel value=""/>  
+                </td>
+            </tr>
+          
+            <tr>
+                <td style="padding-top:5px;">
+                    <apex:outputLabel value="{!$ObjectType.Site_Survey__c.fields.NVMS_Message__c.label}"/> 
+                </td>
+                <td style="padding-top:5px;">
+                    <apex:inputField value="{!objSiteSurvey.NVMS_Message__c}"/>
+                </td>
+                <td>
+                    &nbsp;
+                </td>
+                <td>
+                    <apex:outputLabel value=""/>                   
+                </td>
+                <td>                    
+                    <apex:outputLabel value=""/>  
+                </td>
+            </tr>
+             <tr>
+                <td colspan="5">
+                    <c:Extjs_Panel title="Manual Override - Address Fields"/> 
+                </td>
+            </tr>
+           
+            <tr>
+                <td>
+                    <apex:outputLabel value="{!$ObjectType.Site_Survey__c.fields.Property_Contact_Override__c.label}"/> 
+                </td>
+                <td>
+                    <apex:inputField value="{!objSiteSurvey.Property_Contact_Override__c}"/>
+                </td>
+                <td>
+                    &nbsp;
+                </td>
+                <td>
+                    <apex:outputLabel value=""/>                   
+                </td>
+                <td>                    
+                    <apex:outputLabel value=""/>  
+                </td>
+            </tr>
+            
+             <tr>
+                <td>
+                    <apex:outputLabel value="{!$ObjectType.Site_Survey__c.fields.Street__c.label}"/> 
+                </td>
+                <td>
+                    <apex:inputField value="{!objSiteSurvey.Street__c}" style="width:80%;"/>
+                </td>
+                <td>
+                    &nbsp;
+                </td>
+                <td>
+                    <apex:outputLabel value=""/>                   
+                </td>
+                <td>                    
+                    <apex:outputLabel value=""/>  
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <apex:outputLabel value="{!$ObjectType.Site_Survey__c.fields.City__c.label}"/> 
+                </td>
+                <td>
+                    <apex:inputField value="{!objSiteSurvey.City__c}"/>
+                </td>
+                <td>
+                    &nbsp;
+                </td>
+                <td>
+                    <apex:outputLabel value=""/>                   
+                </td>
+                <td>                    
+                    <apex:outputLabel value=""/>  
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <apex:outputLabel value="{!$ObjectType.Site_Survey__c.fields.State__c.label}"/> 
+                </td>
+                <td>
+                    <apex:inputField value="{!objSiteSurvey.State__c}"/>
+                </td>
+                <td>
+                    &nbsp;
+                </td>
+                <td>
+                    <apex:outputLabel value=""/>                   
+                </td>
+                <td>                    
+                    <apex:outputLabel value=""/>  
+                </td>
+            </tr>
+             <tr>
+                <td>
+                    <apex:outputLabel value="{!$ObjectType.Site_Survey__c.fields.ZIP__c.label}"/> 
+                </td>
+                <td>
+                    <apex:inputField value="{!objSiteSurvey.ZIP__c}"/>
+                </td>
+                <td>
+                    &nbsp;
+                </td>
+                <td>
+                    <apex:outputLabel value=""/>                   
+                </td>
+                <td>                    
+                    <apex:outputLabel value=""/>  
+                </td>
+            </tr>
+             <tr>
+                <td colspan="5">
+                    <c:Extjs_Panel title="Merchant Business Details"/> 
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <apex:outputLabel value="{!$ObjectType.Site_Survey__c.fields.Is_Merchant_Currently_Open_for_Business__c.label}"/> 
+                </td>
+                <td>
+                    <apex:inputField value="{!objSiteSurvey.Is_Merchant_Currently_Open_for_Business__c}"/>
+                </td>
+                <td>
+                    &nbsp;
+                </td>
+                <td>
+                    <apex:outputLabel value=""/>                   
+                </td>
+                <td>                    
+                    <apex:outputLabel value=""/>  
+                </td>
+            </tr>
+             <tr>
+                <td>
+                    <apex:outputLabel value="{!$ObjectType.Site_Survey__c.fields.Does_the_Business_Appear_to_be_Legimate__c.label}"/> 
+                </td>
+                <td>
+                    <apex:inputField value="{!objSiteSurvey.Does_the_Business_Appear_to_be_Legimate__c}"/>
+                </td>
+                <td>
+                    &nbsp;
+                </td>
+                <td>
+                    <apex:outputLabel value=""/>                   
+                </td>
+                <td>                    
+                    <apex:outputLabel value=""/>  
+                </td>
+            </tr>
+             <tr>
+                <td>
+                    <apex:outputLabel value="{!$ObjectType.Site_Survey__c.fields.Is_the_Business_Located_at_the_Address__c.label}"/> 
+                </td>
+                <td>
+                    <apex:inputField value="{!objSiteSurvey.Is_the_Business_Located_at_the_Address__c}"/>
+                </td>
+                <td>
+                    &nbsp;
+                </td>
+                <td>
+                    <apex:outputLabel value=""/>                   
+                </td>
+                <td>                    
+                    <apex:outputLabel value=""/>  
+                </td>
+            </tr>
+             <tr>
+                <td>
+                    <apex:outputLabel value="{!$ObjectType.Site_Survey__c.fields.Perm_Signs_Match_Name_on_Order__c.label}"/> 
+                </td>
+                <td>
+                    <apex:inputField value="{!objSiteSurvey.Perm_Signs_Match_Name_on_Order__c}"/>
+                </td>
+                <td>
+                    &nbsp;
+                </td>
+                <td>
+                    <apex:outputLabel value=""/>                   
+                </td>
+                <td>                    
+                    <apex:outputLabel value=""/>  
+                </td>
+            </tr>
+             <tr>
+                <td>
+                    <apex:outputLabel value="{!$ObjectType.Site_Survey__c.fields.Indications_of_Going_Out_of_Business__c.label}"/> 
+                </td>
+                <td>
+                    <apex:inputField value="{!objSiteSurvey.Indications_of_Going_Out_of_Business__c}"/>
+                </td>
+                <td>
+                    &nbsp;
+                </td>
+                <td>
+                    <apex:outputLabel value=""/>                   
+                </td>
+                <td>                    
+                    <apex:outputLabel value=""/>  
+                </td>
+            </tr>
+             <tr>
+                <td>
+                    <apex:outputLabel value="{!$ObjectType.Site_Survey__c.fields.Indications_Business_Could_be_for_Sale__c.label}"/> 
+                </td>
+                <td>
+                    <apex:inputField value="{!objSiteSurvey.Indications_Business_Could_be_for_Sale__c}"/>
+                </td>
+                <td>
+                    &nbsp;
+                </td>
+                <td>
+                    <apex:outputLabel value=""/>                   
+                </td>
+                <td>                    
+                    <apex:outputLabel value=""/>  
+                </td>
+            </tr>
+              <tr>
+                <td>
+                    <apex:outputLabel value="{!$ObjectType.Site_Survey__c.fields.How_Long_Business_at_Current_Location__c.label}"/> 
+                </td>
+                <td>
+                    <apex:inputField value="{!objSiteSurvey.How_Long_Business_at_Current_Location__c}"/>
+                </td>
+                <td>
+                    &nbsp;
+                </td>
+                <td>
+                    <apex:outputLabel value=""/>                   
+                </td>
+                <td>                    
+                    <apex:outputLabel value=""/>  
+                </td>
+            </tr>
+             <tr>
+                <td>
+                    <apex:outputLabel value="{!$ObjectType.Site_Survey__c.fields.of_CC_Terminals_at_Locations__c.label}"/> 
+                </td>
+                <td>
+                    <apex:inputField value="{!objSiteSurvey.of_CC_Terminals_at_Locations__c}"/>
+                </td>
+                <td>
+                    &nbsp;
+                </td>
+                <td>
+                    <apex:outputLabel value=""/>                   
+                </td>
+                <td>                    
+                    <apex:outputLabel value=""/>  
+                </td>
+            </tr>
+            
+             <tr>
+                <td colspan="5">
+                    <c:Extjs_Panel title="PHOTO Confirmation"/> 
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <apex:outputLabel value="{!$ObjectType.Site_Survey__c.fields.Exterior_Photos_of_Builiding_Taken__c.label}"/> 
+                </td>
+                <td>
+                    <apex:inputField value="{!objSiteSurvey.Exterior_Photos_of_Builiding_Taken__c}"/>
+                </td>
+                <td>
+                    &nbsp;
+                </td>
+                 <td>
+                    <apex:outputLabel value="{!$ObjectType.Site_Survey__c.fields.No_Exterior_Photos_Why__c.label}"/> 
+                </td>
+                <td>
+                    <apex:inputField value="{!objSiteSurvey.No_Exterior_Photos_Why__c}"  style="width:80%;"/>
+                </td>
+            </tr>
+              <tr>
+                <td>
+                    <apex:outputLabel value="{!$ObjectType.Site_Survey__c.fields.Interior_Photos_Taken__c.label}"/> 
+                </td>
+                <td>
+                    <apex:inputField value="{!objSiteSurvey.Interior_Photos_Taken__c}"/>
+                </td>
+                <td>
+                    &nbsp;
+                </td>
+                 <td>
+                    <apex:outputLabel value="{!$ObjectType.Site_Survey__c.fields.No_Interior_Photos_Why__c.label}"/> 
+                </td>
+                <td>
+                    <apex:inputField value="{!objSiteSurvey.No_Interior_Photos_Why__c}"  style="width:80%;"/>
+                </td>
+            </tr>
+             <tr>
+                <td>
+                    <apex:outputLabel value="{!$ObjectType.Site_Survey__c.fields.Photo_of_Merchant_s_CC_Machine__c.label}"/> 
+                </td>
+                <td>
+                    <apex:inputField value="{!objSiteSurvey.Photo_of_Merchant_s_CC_Machine__c}"/>
+                </td>
+                <td>
+                    &nbsp;
+                </td>
+                 <td>
+                    <apex:outputLabel value="{!$ObjectType.Site_Survey__c.fields.No_Photos_of_CC_Machines_Why__c.label}"/> 
+                </td>
+                <td>
+                    <apex:inputField value="{!objSiteSurvey.No_Photos_of_CC_Machines_Why__c}" style="width:80%;"/>
+                </td>
+            </tr>
+             <tr>
+                <td>
+                    <apex:outputLabel value=""/> 
+                </td>
+                <td>
+                    <apex:outputLabel value=""/>
+                </td>
+                <td>
+                    &nbsp;
+                </td>
+                 <td>
+                    <apex:outputLabel value="{!$ObjectType.Site_Survey__c.fields.Opportunity__c.label}"/> 
+                </td>
+                <td>
+                    <apex:inputField value="{!objSiteSurvey.Opportunity__c}"/>
+                </td>
+            </tr>
+            
+              <tr>
+                <td colspan="5">
+                    <c:Extjs_Panel title="System Information"/> 
+                </td>
+            </tr>
+            <tr>
+               
+               
+                 <td>
+                    <apex:outputLabel value="{!$ObjectType.Site_Survey__c.fields.NVMS_Job_ID__c.label}"/> 
+                </td>
+                <td>
+                    <apex:inputField value="{!objSiteSurvey.NVMS_Job_ID__c}"/>
+                </td>
+                 <td>
+                    &nbsp;
+                </td>
+                  <td>
+                    <apex:outputLabel value=""/> 
+                </td>
+                <td>
+                    <apex:outputLabel value=""/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <apex:outputLabel value="{!$ObjectType.Site_Survey__c.fields.NVMS_Status__c.label}"/> 
+                </td>
+                <td>
+                    <apex:inputField value="{!objSiteSurvey.NVMS_Status__c}"/>
+                </td>
+                <td>
+                    &nbsp;
+                </td>
+                <td>
+                    <apex:outputLabel value=""/> 
+                </td>
+                <td>
+                    <apex:outputLabel value=""/>
+                </td> 
+            </tr>
+
+        </table>
+        </center>
+        <br/>
+        <div align="center">                
+            <apex:commandButton value="Save" action="{!save}" reRender="pageMessageMain" status="ajaxStatus"/>&nbsp;&nbsp;        
+            <apex:commandButton value="Cancel" action="{!cancel}" status="ajaxStatus"/>        
+        </div>      
+        
+    </apex:form>
+    <apex:actionstatus startStyleClass="requiredLoaderBG" id="ajaxStatus" />
+</apex:page>

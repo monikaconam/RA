@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>First Funding Partner Survey</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>First Funding Partner Survey</name>
+    <style>none</style>
+    <subject>Congratulations on your First Funding!</subject>
+    <textOnly>Tell us how it went!
+
+Thank you for choosing us!
+
+Congratulations on your first funding with RapidAdvance! We hope this is the beginning of long partnership with many more closed deals.
+
+As our valued partner, we want to know how we can make your experience better. Please fill out Partner Survey to let us know how we can improve. It takes less than 5 minutes and your feedback will help us better serve you AND your clients.
+
+Take Survey
+http://www.getfeedback.com/r/eAbGPlyM
+
+Thanks again for being a RapidAdvance Partner!
+
+
+
+© RapidAdvance. All rights reserved.
+
+4500 East West Highway, 6th Floor
+Bethesda, MD 20814</textOnly>
+    <type>custom</type>
+</EmailTemplate>

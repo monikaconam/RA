@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Email status to Partners on their deals</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>StandardLetterheadSample</letterhead>
+    <name>Status Update</name>
+    <style>freeForm</style>
+    <subject>Update for {!Opportunity.Name}.</subject>
+    <textOnly>Date: {!Opportunity.LastModifiedDate}
+ 
+
+Opportunity Name: {!Opportunity.Name}
+  
+Stage: {!Opportunity.StageName}
+ 
+Advance $: {!Opportunity.Amount}
+Percent Payback: {!Opportunity.Percent_Payback__c}
+Payback Amount: {!Opportunity.Pay_Back_Amount__c}
+ 
+Sales Check List Notes: {!Opportunity.Sales_Check_List_Notes__c}
+  
+Submitted to QC &amp; Processing: {!Opportunity.Submit_to_UW_Processing__c}
+Submitted to UW: {!Opportunity.Data_Entry_Date__c}
+ 
+Underwriting Status: {!Opportunity.Underwriting_Approval__c}
+Underwriting Decision: {!Opportunity.Underwriting_Approval__c}
+
+Decline Reason:  {!Opportunity.Decline_Reason__c}
+ 
+Underwriting Notes: {!Opportunity.Underwriting_Notes__c}
+ 
+Processing Notes: {!Opportunity.Processing_Notes__c} 
+ 
+Paperwork Sent: (if applicable) {!Opportunity.00N70000001hZIY}
+Paperwork Rec&apos;d: (if applicable) {!Opportunity.00N70000001kEqb} 
+ 
+Split Fund Set Up: {!Opportunity.00N70000001hZHl} 
+Split Fund Confirmed: {!Opportunity.00N70000001hmHe}
+ 
+Closed Reason: {!Opportunity.Closed_Reason__c}
+Funding Status: {!Opportunity.Funding_Status__c} 
+Funded Date: {!Opportunity.Funded_by_WC__c} 
+
+Sent by:  {!Opportunity.LastModifiedBy}
+
+ </textOnly>
+    <type>html</type>
+</EmailTemplate>

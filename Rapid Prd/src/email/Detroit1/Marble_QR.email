@@ -1,0 +1,4 @@
+{!Marble__c.Company__c} has received quotes! 
+
+Check them out here:
+https://na33.salesforce.com/{!Marble__c.SFID__c}

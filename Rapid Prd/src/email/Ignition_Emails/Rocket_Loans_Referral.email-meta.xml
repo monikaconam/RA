@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>We Found You a Great Financing Solution</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>Rocket Loans Referral</name>
+    <style>none</style>
+    <subject>The Rocket Loans Solution</subject>
+    <textOnly>Hi {!Contact.FirstName},
+
+It was a pleasure speaking with you today. Based on what we talked about earlier, it looks like RocketLoans is the best solution for you right now.
+
+
+With RocketLoans, you can get up to $35,000 deposited into your account within 24 hours. Click below to check your rates without affecting your credit score!
+
+Check My Rates ra.rocketloans.com
+
+​​​​​​Create your account today and you could get your funds as soon as tomorrow.
+
+I want to wish you good luck and hope we will be able to do business with you in the future!
+
+Best,
+
+
+{!User.FirstName} {!User.LastName} | {!User.Title}
+RapidAdvance®
+
+20 West Jefferson | Detroit, MI | 48226
+Email:{!User.Email} | Website: www.RapidAdvance.com</textOnly>
+    <type>custom</type>
+</EmailTemplate>

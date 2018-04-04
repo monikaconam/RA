@@ -1,0 +1,263 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+    <head>
+        <title> Rapid Advance </title>
+        <meta name="viewport" content="initial-scale=1.0, user-scalable=no, width=device-width">
+        <meta name="format-detection" content="telephone=no">
+        
+        <style type="text/css">
+            
+            /* /\\//\\//\\//\\/ RESET STYLES /\\//\\//\\//\\/ */
+            body{
+                margin:0;
+                padding:0;
+            }
+        
+            img{
+                border:0 none;
+                outline:none;
+                text-decoration:none;
+            }
+        
+            a img{
+                border:0 none;
+            }
+        
+            table, td{
+                border-collapse:collapse;
+            }
+            
+            /* /\\//\\//\\//\\/ CLIENT SPECIFIC STYLES /\\//\\//\\//\\/ */
+            .ExternalClass{
+                width:100%;
+            }
+            
+            .ExternalClass,
+            .ExternalClass p,
+            .ExternalClass span,
+            .ExternalClass font,
+            .ExternalClass td,
+            .ExternalClass div{
+                line-height: 100%;
+            }
+            
+            #outlook a{
+                padding:0;
+            }
+            
+            table{
+                mso-table-lspace:0pt;
+                mso-table-rspace:0pt;
+            }
+            
+            img{
+                -ms-interpolation-mode:bicubic;
+            }
+            
+            body{
+                -webkit-text-size-adjust:100%;
+                -ms-text-size-adjust:100%;
+            }
+            
+            /* /\\//\\//\\//\\/ GENERAL RESPONSIVE /\\//\\//\\//\\/ */
+            @media only screen and (max-width: 600px), screen and (max-device-width: 600px){
+                
+                *[class=container]{
+                    width: 414px !important;
+                    min-width: 414px !important;
+                    max-width: 414px !important;
+                }
+                
+                *[class=container],
+                *[class=center] img,
+                *[class=stack],
+                *[class=resize_two_column]{
+                    margin: 0 auto !important;
+                }
+                
+                *[class=center]{
+                    text-align: center !important;
+                    padding-bottom: 10px !important;
+                }
+                
+                *[class=resize],
+                *[class=resize_hide],
+                *[class=img_resize]{
+                    width: 100% !important;
+                    min-width: 100% !important;
+                }
+                
+                *[class=resize_two_column]{
+                    width: 290px !important;
+                    min-width: 290px !important;
+                }
+                
+                *[class=img_resize]{ height: auto !important; }                
+                *[class=stack]{ float: none !important; }                
+                *[class=hide]{ display: none !important; }
+                
+                *[class=hide] td{
+                    line-height: 0 !important;
+                    font-size: 0 !important;
+                    visibility: hidden !important;
+                }
+                
+                *[class=hide],
+                *[class=hide] td,
+                *[class=hide] td img,
+                *[class=collapse]{
+                    width: 0 !important;
+                    min-width: 0 !important;
+                    max-width: 0 !important;
+                    height: 0 !important;
+                }
+                
+                *[class=nav]{ width: 33% !important; }
+                
+                *[class=section_content]{ width: 97% !important; }
+                *[class=mobile_padding30]{ width: 6% !important; }
+                
+                *[class=show_padding]{
+                    height: 10px !important;
+                    line-height: 10px !important;
+                    font-size: 10px !important;
+                }
+                
+                *[class=collapse_column] img,
+                *[class=collapse_column] table,
+                *[class=collapse_column] table td,
+                *[class=collapse_column] table td img{
+                    min-width: 0 !important;
+                    max-width: 0 !important;
+                    height: 0 !important;
+                    display: none !important;
+                    visibility: hidden !important;
+                }
+                
+                *[class=collapse_column],
+                *[class=collapse_column] img,
+                *[class=collapse_column] table,
+                *[class=collapse_column] table td,
+                *[class=collapse_column] table td img{
+                    width: 0 !important;
+                    font-size: 0 !important;
+                    line-height: 0 !important;
+                    border: 0 !important;
+                    background-color: transparent !important;
+                }
+                
+                
+               
+            
+            /* /\\//\\//\\//\\/ MOBILE RESPONSIVE /\\//\\//\\//\\/ */
+            @media only screen and (max-width: 414px), screen and (max-device-width: 414px){
+                
+                *[class=container]{
+                    width: 97% !important;
+                    min-width: 97% !important;
+                }
+                
+            }
+            
+            /* /\\//\\//\\//\\/ WEBKIT FIX /\\//\\//\\//\\/ */
+            @media screen and (-webkit-min-device-pixel-ratio: 0){
+                
+                *[class=dyk_bottom_pad]{
+                    height: 22px !important;
+                    line-height: 22px !important;
+                    font-size: 22px !important;
+                }
+                
+            }
+            
+        </style>
+    </head>
+    <body style="margin: 0;padding: 0;-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;">
+<!-- START EMAIL WRAPPER -->
+<table align="center" border="0" cellpadding="0" cellspacing="0" class="container" style="width: 600px;min-width: 600px;max-width: 600px;margin: 0 auto;padding: 0;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;" width="600"><!-- START EMPTY SPACE -->
+	<tbody>
+		<tr>
+			<td style="height: 10px;line-height: 10px;font-size: 10px;border-collapse: collapse;" valign="top" class="">&nbsp;</td>
+		</tr>
+		<!-- END EMPTY SPACE --><!-- START HEADER -->
+		<tr>
+			<td style="border-collapse: collapse;" valign="top"><!-- START PREHEADER -->
+			<table align="right" border="0" cellpadding="0" cellspacing="0" class="hide" style="width: 320px;min-width: 320px;max-width: 320px;margin: 0;padding: 0;float: right;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;" width="320">
+				<tbody>
+					<tr>
+						<td style="font-family: Arial, Helvetica, sans-serif;font-size: 10px;color: #222222;text-align: right;border-collapse: collapse;" valign="top" class="">&nbsp;</td>
+					</tr>
+				</tbody>
+			</table>
+			<!-- END PREHEADER --><!-- START HEADER IMAGE -->
+
+			<table border="0" cellpadding="0" cellspacing="0" class="resize" style="width: 600px;min-width: 600px;max-width: 600px;margin: 0;padding: 0;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;" width="600">
+				<tbody>
+					<tr>
+						<td style="border-collapse: collapse;" valign="top">
+						<table align="left" border="0" cellpadding="0" cellspacing="0" class="resize" style="width: 600px;min-width: 288px;max-width: 288px;margin: 0;padding: 0;float: left;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;" width="600">
+							<tbody>
+							</tbody>
+						</table>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<!-- END HEADER IMAGE --></td>
+		</tr>
+		<!-- END HEADER --><!-- START BODY CONTENT -->
+		<tr>
+			<td style="border-collapse: collapse;" valign="top">
+			<table border="0" cellpadding="0" cellspacing="0" class="resize" style="width: 600px;min-width: 600px;max-width: 600px;margin: 0;padding: 0;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;" width="600">
+				<tbody>
+					<tr>
+						<td style="width: 20px;border-collapse: collapse;" valign="top" class="">&nbsp;</td>
+						<td pardot-data="" style="font-family: Arial, Helvetica, sans-serif; font-size: 14px; border-collapse: collapse;" valign="top" class="">Hi&nbsp;{!Contact.FirstName},<br>
+<br>
+This is {!User.FirstName} from RapidAdvance. I understand we ran into some challenges the last time we spoke, but I’ve got good news! We’ve rolled out some new products that are geared specifically towards your industry! I wanted to have a quick phone conversation to see how we can help your business out now. Give me a call back at 877-252-9728. I will be here in the office until 8:00 EST. I look forward to speaking with you! <br>
+
+<br>
+<strong>{!User.FirstName}&nbsp;{!User.LastName}&nbsp;| {!User.Title}</strong><br>
+RapidAdvance<sup>®<br>
+<img alt="" border="0" height="66" src="http://www2.rapidadvance.com/l/17132/2017-02-03/75t66q/17132/154165/RA.gif" width="138"></sup><br>
+20 West Jefferson <strong>|</strong> <strong>D</strong>etroit, MI <strong>|</strong> 48226<br>
+<strong>Email:</strong>{!User.Email}&nbsp;| <strong>Website:</strong> <a href="https://www.rapidadvance.com/" target="_blank">www.RapidAdvance.com</a></center>
+<!-- END CONTENT COPY --></td>
+						<td style="width: 20px;border-collapse: collapse;" valign="top" class="">&nbsp;</td>
+					</tr>
+				</tbody>
+			</table>
+			</td>
+		</tr>
+		<!-- END BODY CONTENT --><!-- START EMPTY SPACE -->
+		<tr>
+			<td style="height: 15px;line-height: 15px;font-size: 15px;border-collapse: collapse;" valign="top" class=""><span style="font-size:8px;"><style="text-decoration:none;"><span style="color:#FFFFFF;"></span></a></span></td>
+		</tr>
+		<!-- END EMPTY SPACE --><!-- START GREEN CONTACT BAR -->
+		<tr>
+			<td style="background-color: #77bd43;border-collapse: collapse;" valign="top">
+			<table border="0" cellpadding="0" cellspacing="0" class="resize" style="width: 600px;min-width: 600px;max-width: 600px;margin: 0;padding: 0;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;" width="600">
+				<tbody>
+				</tbody>
+			</table>
+			</td>
+		</tr>
+		<!-- END GREEN CONTACT BAR --><!-- START EMPTY SPACE -->
+		<tr>
+			<td style="height: 20px;line-height: 20px;font-size: 20px;border-collapse: collapse;" valign="top" class="">&nbsp;</td>
+		</tr>
+		<!-- END EMPTY SPACE --><!-- START DISCLAIMER -->
+		<tr>
+			<td style="border-collapse: collapse;" valign="top">
+			<table align="center" border="0" cellpadding="0" cellspacing="0" class="resize" id="disclaimer" style="background-color: #fff; padding: 0; margin: 0 auto; font-size: 9px;" width="600">
+				<tbody>
+				</tbody>
+			</table>
+			</td>
+		</tr>
+		<!-- END DISCLAIMER -->
+	</tbody>
+</table>
+<!-- END EMAIL WRAPPER -->
+</body>
+</html>

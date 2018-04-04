@@ -1,0 +1,13 @@
+Hi {!Lead.FirstName},<br>
+<br>
+I hope you are having a great day so far. I was reaching out to you about the letter you received from us regarding your business. To help fill in the blanks, we are a direct lender specializing in business loans and also part of the Quicken Loans family of companies. Based on the public information for your business, it looks like you may be eligible for some of our newest programs. Our new Select and Preferred programs, offering some of our lowest costs in our 10 year history are not only some of the most competitive costs in the market, but funding as quickly as 24 hours. <br>
+<br>
+My team and I will be in the office until 8:00 PM Eastern time tonight, trying to be as available as we can for your business owners. I need about 5 or 10 minutes of your time to customize a program that will accomplish everything you’re looking for, and start your business relationship with Rapid Advance. Have a great day, and I'm looking forward to speaking with you.<br>
+<br>
+Thanks,<br>
+{!User.Name}<br>
+RapidAdvance® | A+ BBB Rated<br>
+<img src="https://na5.salesforce.com/servlet/servlet.ImageServer?id=01570000002j7vj&oid=00D300000001PMh" alt="banner" height="69" width="161"/><br>
+1001 Woodward Ave, Suite 950 | Detroit, MI | 48226<br>
+Phone: {!User.Phone} | Cell: {!User.MobilePhone} | Fax: {!User.Fax}<br>
+Email: {!User.Email} | Website: www.RapidAdvance.com

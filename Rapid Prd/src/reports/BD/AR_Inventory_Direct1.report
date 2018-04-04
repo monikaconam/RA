@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>FIRST_NAME</field>
+    </columns>
+    <columns>
+        <field>LAST_NAME</field>
+    </columns>
+    <columns>
+        <field>EMAIL</field>
+    </columns>
+    <columns>
+        <field>PHONE</field>
+    </columns>
+    <columns>
+        <field>STATE</field>
+    </columns>
+    <columns>
+        <field>ANNUAL_REVENUE</field>
+    </columns>
+    <columns>
+        <field>Lead.Do_you_have_accounts_receivable__c</field>
+    </columns>
+    <columns>
+        <field>Lead.Accounts_Receivable_Amount__c</field>
+    </columns>
+    <columns>
+        <field>Lead.Accounts_Receivable__c</field>
+    </columns>
+    <columns>
+        <field>Lead.Inventory_status__c</field>
+    </columns>
+    <columns>
+        <field>Lead.Value_of_inventory__c</field>
+    </columns>
+    <filter>
+        <booleanFilter>1 OR 2</booleanFilter>
+        <criteriaItems>
+            <column>Lead.Do_you_have_accounts_receivable__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Yes</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Lead.Inventory_status__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Raw Materials,Work In Progress,Finished Goods</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>AR_Inventory Direct</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>LeadList</reportType>
+    <scope>org</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>CREATED_DATE</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+        <startDate>2016-05-13</startDate>
+    </timeFrameFilter>
+</Report>

@@ -1,0 +1,20 @@
+<table border="0" cellpadding="5" width="550" cellspacing="5" height="400" >
+<tr valign="top" height="400" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; color:#000000; bEditID:r3st1; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[<font size="2" color="#000099" face="Verdana,Geneva,Arial,Helvetica,Sans-Serif">Date - {!Opportunity.LastModifiedDate}&nbsp; </font>
+
+<p><font size="2" color="#000099" face="Verdana,Geneva,Arial,Helvetica,Sans-Serif">&nbsp;</font></p><font size="2" color="#000099" face="Verdana,Geneva,Arial,Helvetica,Sans-Serif"><br>Opportunity Name - {!Opportunity.Name}</font> <br><p><font size="2" color="#000099" face="Verdana"></font>&nbsp;</p>
+<p><font size="2" color="#000099" face="Verdana">Stage - {!Opportunity.StageName}</font></p>
+<p><font size="2" color="#000099" face="Verdana,Geneva,Arial,Helvetica,Sans-Serif"></font>&nbsp;</p>
+<p><font size="2" color="#000099" face="Verdana,Geneva,Arial,Helvetica,Sans-Serif"><br></font></p><p><font size="2" color="#000099" face="Verdana,Geneva,Arial,Helvetica,Sans-Serif"><br></font></p><p><font size="2" color="#000099" face="Verdana,Geneva,Arial,Helvetica,Sans-Serif">Underwriting Status - {!Opportunity.Underwriting_Approval__c}</font></p>
+<p><font size="2" color="#000099" face="Verdana,Geneva,Arial,Helvetica,Sans-Serif">Decline Reason - {!Opportunity.Decline_Reason__c}</font></p>
+<p><br></p><p><font size="2" color="#000099" face="Verdana,Geneva,Arial,Helvetica,Sans-Serif">Underwriting Notes - {!Opportunity.Underwriting_Notes__c}</font> <br></p>
+<p><font size="2" color="#000099" face="Verdana,Geneva,Arial,Helvetica,Sans-Serif"><br></font></p><p><font size="2" color="#000099" face="Verdana,Geneva,Arial,Helvetica,Sans-Serif">Processing Notes - {!Opportunity.Processing_Notes__c}</font></p>
+<br>
+<p><font size="2" color="#000099" face="Verdana,Geneva,Arial,Helvetica,Sans-Serif">Sales Notes - {!Opportunity.Description}</font></p>
+<p><font size="2" color="#000099" face="Verdana,Geneva,Arial,Helvetica,Sans-Serif">&nbsp;</font></p>
+<p><font size="2" color="#000099" face="Verdana,Geneva,Arial,Helvetica,Sans-Serif">&nbsp;</font></p>
+<p><font size="2" color="#000099" face="Verdana,Geneva,Arial,Helvetica,Sans-Serif">&nbsp;</font></p> <br><p><font color="#000099">&nbsp;</font></p>
+<p><font color="#000099">&nbsp;</font></p>]]></td>
+</tr>
+</table>

@@ -1,0 +1,13 @@
+Campaign: {!Opportunity.Campaign}
+Opportunity: {!Opportunity.Name}
+Opportunity Number: {!Opportunity.Opportunity_Number__c}
+Stage: {!Opportunity.StageName}
+
+Amount: {!Opportunity.Amount}
+Estimated Days to Complete: {!Opportunity.Est_Days_to_Repay__c}
+Amount Sold (Pay Back Amount): {!Opportunity.Pay_Back_Amount__c}
+Product: {!Opportunity.Product__c}
+
+CALC Link: {!Opportunity.CALC_Link_plaintext__c}
+
+Notes Link: {!Opportunity.Notes_Link_plaintext__c}

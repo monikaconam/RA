@@ -1,0 +1,6 @@
+<apex:page controller="Five9ScreenPopController" action="{!saveAndRedirect}">
+<apex:messages />
+<apex:outputPanel rendered="{!direct}">
+    <script>window.history.back();</script>
+</apex:outputPanel>
+</apex:page>

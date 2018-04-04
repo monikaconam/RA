@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>STAGE_NAME</field>
+    </columns>
+    <columns>
+        <field>FULL_NAME</field>
+    </columns>
+    <columns>
+        <field>OPPORTUNITY_NAME</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>AMOUNT</field>
+    </columns>
+    <columns>
+        <field>Opportunity.Renewal__c</field>
+    </columns>
+    <columns>
+        <field>Opportunity.Product__c</field>
+    </columns>
+    <columns>
+        <field>Opportunity.Approved_With_Conditions__c</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>Opportunity.Underwriting_Approval__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Auto Approved,Approved,Approved by Credit Committee,Approved by Credit Committee with conditions</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Opportunity.Product__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>notEqual</operator>
+            <value>Decline Program</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>CAMPAIGN_SOURCE</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>notEqual</operator>
+            <value>Promac – Non Medical New,Promac – Non Medical Renewals,Promac Medical</value>
+        </criteriaItems>
+    </filter>
+    <format>Matrix</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Opportunity.Underwriter_Assigned__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Underwriting Approved Deals-TODAY</name>
+    <params>
+        <name>open</name>
+        <value>all</value>
+    </params>
+    <params>
+        <name>probability</name>
+        <value>&gt;0</value>
+    </params>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Opportunity</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>Opportunity.Decision_Date__c</dateColumn>
+        <interval>INTERVAL_TODAY</interval>
+    </timeFrameFilter>
+</Report>

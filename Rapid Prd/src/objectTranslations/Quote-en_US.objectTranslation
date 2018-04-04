@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>RADoc</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>RADocs</value>
+    </caseValues>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>RADoc Currency</value>
+        </caseValues>
+        <name>quote_currency</name>
+        <startsWith>Consonant</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>RADoc Division</value>
+        </caseValues>
+        <name>quote_division</name>
+        <startsWith>Consonant</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>RADoc Field</value>
+        </caseValues>
+        <caseValues>
+            <plural>true</plural>
+            <value>RADoc Fields</value>
+        </caseValues>
+        <name>quote_field</name>
+        <startsWith>Consonant</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>RADoc ID</value>
+        </caseValues>
+        <name>quote_id</name>
+        <startsWith>Consonant</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>RADoc Information</value>
+        </caseValues>
+        <name>quote_information</name>
+        <startsWith>Consonant</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>RADoc Name</value>
+        </caseValues>
+        <name>quote_name</name>
+        <startsWith>Consonant</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>RADoc Number</value>
+        </caseValues>
+        <name>quote_number</name>
+        <startsWith>Consonant</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>RADoc To</value>
+        </caseValues>
+        <name>quote_quoteto_address</name>
+        <startsWith>Consonant</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>RADoc To City</value>
+        </caseValues>
+        <name>quote_quoteto_city</name>
+        <startsWith>Consonant</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>RADoc To Country</value>
+        </caseValues>
+        <name>quote_quoteto_country</name>
+        <startsWith>Consonant</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>RADoc To Name</value>
+        </caseValues>
+        <name>quote_quoteto_name</name>
+        <startsWith>Consonant</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>RADoc To State/Province</value>
+        </caseValues>
+        <name>quote_quoteto_state</name>
+        <startsWith>Consonant</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>RADoc To Street</value>
+        </caseValues>
+        <name>quote_quoteto_street</name>
+        <startsWith>Consonant</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>RADoc To Zip/Postal Code</value>
+        </caseValues>
+        <name>quote_quoteto_zip</name>
+        <startsWith>Consonant</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>RADoc Record Type</value>
+        </caseValues>
+        <caseValues>
+            <plural>true</plural>
+            <value>RADoc Record Types</value>
+        </caseValues>
+        <name>quote_record_type</name>
+        <startsWith>Consonant</startsWith>
+    </fields>
+    <fields>
+        <label><!-- Advance ID --></label>
+        <name>Advance_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Annual CC sales (Avg 4 Mo. times 12) --></label>
+        <name>Annual_CC_sales_Avg_4_Mo_times_12__c</name>
+    </fields>
+    <fields>
+        <label><!-- Annual Gross sales (Avg 2 Mo. times 12) --></label>
+        <name>Annual_Gross_sales_Avg_2_Mo_times_12__c</name>
+    </fields>
+    <fields>
+        <label><!-- Applicant #1 FICO --></label>
+        <name>Applicant_1_FICO__c</name>
+    </fields>
+    <fields>
+        <label><!-- Applicant #2 FICO --></label>
+        <name>Applicant_2_FICO__c</name>
+    </fields>
+    <fields>
+        <label><!-- Bankruptcy Filings In The Last Year --></label>
+        <name>Bankruptcy_Filings_In_The_Last_Year__c</name>
+    </fields>
+    <fields>
+        <label><!-- Billing Street --></label>
+        <name>Billing_Street__c</name>
+    </fields>
+    <fields>
+        <label><!-- BodyDeclReasCred --></label>
+        <name>BodyDeclReasCred__c</name>
+    </fields>
+    <fields>
+        <label><!-- BodyDeclReasOther --></label>
+        <name>BodyDeclReasOther__c</name>
+    </fields>
+    <fields>
+        <label><!-- Business Bankruptcies --></label>
+        <name>Business_Bankruptcies__c</name>
+    </fields>
+    <fields>
+        <label><!-- Business Information --></label>
+        <name>Business_Information__c</name>
+    </fields>
+    <fields>
+        <label><!-- Business Status --></label>
+        <name>Business_Status__c</name>
+    </fields>
+    <fields>
+        <label><!-- Competitor Advance Company --></label>
+        <name>Competitor_Advance_Company__c</name>
+    </fields>
+    <fields>
+        <label><!-- DateNTime --></label>
+        <name>DateNTime__c</name>
+    </fields>
+    <fields>
+        <label><!-- Date --></label>
+        <name>Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Decline Other Reasons --></label>
+        <name>Decline_Other_Reasons__c</name>
+    </fields>
+    <fields>
+        <label><!-- Does the Merchant Own Their Home? --></label>
+        <name>Does_the_Merchant_Own_Their_Home__c</name>
+    </fields>
+    <fields>
+        <label><!-- FaxNumberofContact --></label>
+        <name>FaxNumberofContact__c</name>
+    </fields>
+    <fields>
+        <label><!-- Month 2 --></label>
+        <name>Month_2__c</name>
+    </fields>
+    <fields>
+        <label><!-- Month --></label>
+        <name>Month__c</name>
+    </fields>
+    <fields>
+        <label><!-- NewSigDeclReasCred --></label>
+        <name>NewSigDeclReasCred__c</name>
+    </fields>
+    <fields>
+        <label><!-- New Signature --></label>
+        <name>New_Signature__c</name>
+    </fields>
+    <fields>
+        <label><!-- Number of tradelines --></label>
+        <name>Number_of_tradelines__c</name>
+    </fields>
+    <fields>
+        <label><!-- Oldest Tradeline --></label>
+        <name>Oldest_Tradeline__c</name>
+    </fields>
+    <fields>
+        <label><!-- Opportunity Number --></label>
+        <name>Opportunity_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- PaidOffLetter --></label>
+        <name>PaidOffLetter__c</name>
+    </fields>
+    <fields>
+        <label><!-- PayOff Eaglewood --></label>
+        <name>PayOff_Eaglewood__c</name>
+    </fields>
+    <fields>
+        <label><!-- Pay Off Letter --></label>
+        <name>Pay_Off_Letter__c</name>
+    </fields>
+    <fields>
+        <label><!-- Payoff Amount --></label>
+        <name>Payoff_Amount__c</name>
+    </fields>
+    <fields>
+        <label><!-- ROI --></label>
+        <name>ROI__c</name>
+    </fields>
+    <fields>
+        <label><!-- Remaining Balance --></label>
+        <name>Remaining_Balance__c</name>
+    </fields>
+    <fields>
+        <label><!-- Renewal Letter --></label>
+        <name>Renewal_Letter__c</name>
+    </fields>
+    <fields>
+        <label><!-- Renewal Number --></label>
+        <name>Renewal_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Renewal Signature --></label>
+        <name>Renewal_Signature__c</name>
+    </fields>
+    <fields>
+        <label><!-- SignatureDeclReasCred --></label>
+        <name>SignatureDeclReasCred__c</name>
+    </fields>
+    <fields>
+        <label><!-- Syndication Amount --></label>
+        <name>Syndication_Amount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Tax Liens/Judgment on Business --></label>
+        <name>Tax_Liens_Judgment_on_Business__c</name>
+    </fields>
+    <fields>
+        <label><!-- Tax Liens Open --></label>
+        <name>Tax_Liens_Open__c</name>
+    </fields>
+    <fields>
+        <label><!-- ToWhom --></label>
+        <name>ToWhom__c</name>
+    </fields>
+    <fields>
+        <label><!-- Underwriter Score --></label>
+        <name>Underwriter_Score__c</name>
+    </fields>
+    <fields>
+        <label><!-- Underwriting --></label>
+        <name>Underwriting__c</name>
+        <relationshipLabel><!-- Quotes --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Welcome Letter 2 --></label>
+        <name>Welcome_Letter_2__c</name>
+    </fields>
+    <fields>
+        <label><!-- Welcome Letter Client Portal --></label>
+        <name>Welcome_Letter_Client_Portal__c</name>
+    </fields>
+    <fields>
+        <label><!-- Welcome Letter --></label>
+        <name>Welcome_Letter__c</name>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

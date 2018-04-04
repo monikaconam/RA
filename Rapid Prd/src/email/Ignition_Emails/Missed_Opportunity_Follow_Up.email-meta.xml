@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Calling No Contact Day 1</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>Missed Opportunity Follow Up</name>
+    <style>none</style>
+    <subject>Must have just missed you</subject>
+    <textOnly>Rapid Advance
+
+Hi {!Contact.FirstName},
+
+This is {!User.FirstName} from RapidAdvance. I understand we ran into some challenges the last time we spoke, but I’ve got good news! We’ve rolled out some new products that are geared specifically towards your industry! I wanted to have a quick phone conversation to see how we can help your business out now. Give me a call back at {!User.Phone]. I will be here in the office until 8:00 EST. I look forward to speaking with you!
+
+{!User.FirstName} {!User.LastName} | {!User.Title}
+RapidAdvance®
+
+20 West Jefferson | Detroit, MI | 48226
+Email:{!User.Email} | Website: www.RapidAdvance.com</textOnly>
+    <type>custom</type>
+</EmailTemplate>

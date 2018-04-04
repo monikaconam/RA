@@ -1,0 +1,616 @@
+<apex:page sidebar="false" showHeader="false" controller="AccountMainBusiness">
+    <apex:stylesheet value="{!$Resource.ExtJS4}/extjs-4.1.0/resources/css/ext-all.css" />
+    <apex:includeScript value="{!$Resource.ExtJS4}/extjs-4.1.0/ext-all.js"/> 
+    <style>
+        table tr td{
+            white-space:nowrap !important;
+            width:8%;
+            padding:2px !important;
+        }
+        
+         .imagebtn{
+            cursor:pointer;
+            margin-top:2px;
+        }
+        
+        .imagebtn:hover{
+            height: 20px;
+            width: 20px;
+            
+        }
+        
+        .sizebtn:hover{
+            margin-left:2px;
+        }
+        
+        body{
+           background- color : #ddd !important; 
+           color:#232323 !important;
+           font-family: tahoma !important;
+           font-size:12px;letter-spacing:1px !important;
+           white-space:wrap !important;
+       }
+       
+   </style>
+    <apex:form >
+    <apex:pageMessages ></apex:pageMessages>
+     <div style="float:right;margin-right: 20px;">
+     <apex:image styleClass="imagebtn" url="{!URLFOR($Resource.OppDetail,'button-edit_green.png')}" width="22" height="22" onclick="editopp();" rendered="{!IF(!isVisible,true,false)}"/> 
+     <apex:image styleClass="imagebtn" url="{!URLFOR($Resource.OppDetail,'button_save_green.png')}" width="22" height="22" onclick="editopp();" rendered="{!IF(!isVisible,false,true)}"/>
+     &nbsp;
+     <apex:image styleClass="imagebtn sizebtn" url="{!URLFOR($Resource.OppDetail,'button-cancel_green.png')}" width="22" height="22" onclick="cancelopp();" rendered="{!IF(!isVisible,false,true)}"/>
+     </div>
+     <br/><br/>
+    <center>
+        <!--apex:commandButton value="{!btnText}" action="{!onEdit}"/>&nbsp;
+        <apex:commandButton value="Cancel" action="{!onCancel}"/ -->
+       
+           
+       
+    <table width="90%">
+        <tr>        
+            <td >
+                Legal Name :
+            </td>
+            <td>
+                <table>
+                    <tr>
+                        <td style="display:{!IF(!isVisible,'block','none')}">
+                            <apex:outputField value="{!objAccount.Legal_Name__c}" rendered="{!!isVisible}"/>
+                        </td>
+                        <td style="display:{!IF(!isVisible,'none','block')}">
+                             <apex:inputField value="{!objAccount.Legal_Name__c}" rendered="{!isVisible}"/>
+                        </td>
+                    </tr>
+                </table>          
+            </td>
+            <td>
+                &nbsp;
+            </td>
+            <td>
+                Phone :
+            </td>
+            <td style="white-space:nowarp;" >                
+                <table>
+                    <tr>
+                        <td style="display:{!IF(!isVisible,'block','none')}">
+                            <apex:outputField value="{!objAccount.Phone}"/>
+                        </td>
+                        <td style="display:{!IF(!isVisible,'none','block')}">
+                             <apex:inputField value="{!objAccount.Phone}"  />
+                        </td>
+                    </tr>
+                </table>
+            </td>
+           
+        </tr>
+        <tr>
+            <td >
+                Account Name :
+            </td>
+            <td>
+             <table>
+                    <tr>
+                        <td style="display:{!IF(!isVisible,'block','none')}">
+                            <apex:outputField value="{!objAccount.name}"/>
+                        </td>
+                        <td style="display:{!IF(!isVisible,'none','block')}">
+                             <apex:inputField value="{!objAccount.name}"  />
+                        </td>
+                        
+                    </tr>
+                </table>
+            </td>
+             <td>
+                &nbsp;
+            </td>
+            <td>
+                Fax :
+            </td>
+            <td>
+                <table>
+                    <tr>                        
+                        <td style="display:{!IF(!isVisible,'block','none')}">
+                            <apex:outputField value="{!objAccount.Fax}" rendered="{!!isVisible}"/>
+                        </td>
+                        <td style="display:{!IF(!isVisible,'none','block')}">
+                            <apex:inputField value="{!objAccount.Fax}" rendered="{!isVisible}"/>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+           
+        </tr>
+       
+       <tr>
+            <td >
+                Billing Street :
+            </td>
+            <td>
+             <table>
+                    <tr>
+                       
+                        <td style="display:{!IF(!isVisible,'block','none')}">
+                          <apex:outputField value="{!objAccount.BillingStreet}"/>
+                        </td>
+                        <td style="display:{!IF(!isVisible,'none','block')}">
+                             <apex:inputField value="{!objAccount.BillingStreet}" />
+                        </td>
+                    </tr>
+                </table> 
+            </td>
+            <td>
+                &nbsp;
+            </td>
+            <td>
+                Billing City :
+            </td>
+            <td>
+                <table>
+                    <tr>
+                       
+                        <td style="display:{!IF(!isVisible,'block','none')}">
+                            <apex:outputField value="{!objAccount.BillingCity}" rendered="{!!isVisible}"/>
+                        </td>
+                        <td style="display:{!IF(!isVisible,'none','block')}">
+                            <apex:inputField value="{!objAccount.BillingCity}" rendered="{!isVisible}"/>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+         
+         
+        </tr>
+        <tr>
+            <td >
+                Billing State :
+            </td>
+            <td>
+             <table>
+                    <tr>
+                       
+                        <td style="display:{!IF(!isVisible,'block','none')}">
+                          <apex:outputField value="{!objAccount.BillingState}"/>
+                        </td>
+                        <td style="display:{!IF(!isVisible,'none','block')}">
+                             <apex:inputField value="{!objAccount.BillingState}" />
+                        </td>
+                    </tr>
+                </table> 
+            </td>
+            <td>
+                &nbsp;
+            </td>
+            <td>
+                Billing Postal Code:
+            </td>
+            <td>
+                <table>
+                    <tr>
+                       
+                        <td style="display:{!IF(!isVisible,'block','none')}">
+                            <apex:outputField value="{!objAccount.BillingPostalCode}" rendered="{!!isVisible}"/>
+                        </td>
+                        <td style="display:{!IF(!isVisible,'none','block')}">
+                            <apex:inputField value="{!objAccount.BillingPostalCode}" rendered="{!isVisible}"/>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+         
+         
+        </tr>
+    <tr>
+            <td >
+                Billing Country :
+            </td>
+            <td>
+             <table>
+                    <tr>
+                       
+                        <td style="display:{!IF(!isVisible,'block','none')}">
+                          <apex:outputField value="{!objAccount.BillingCountry}"/>
+                        </td>
+                        <td style="display:{!IF(!isVisible,'none','block')}">
+                             <apex:inputField value="{!objAccount.BillingCountry}" />
+                        </td>
+                    </tr>
+                </table> 
+            </td>
+            <td>
+                &nbsp;
+            </td>
+            <td>
+                Email Address :
+            </td>
+            <td>
+                <table>
+                    <tr>
+                       
+                        <td style="display:{!IF(!isVisible,'block','none')}">
+                            <apex:outputField value="{!objAccount.Email_Address__c}" rendered="{!!isVisible}"/>
+                        </td>
+                        <td style="display:{!IF(!isVisible,'none','block')}">
+                            <apex:inputField value="{!objAccount.Email_Address__c}" rendered="{!isVisible}"/>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+         
+         
+        </tr>
+        <tr>
+         <td>
+             Mailing Address (For Statements etc.) :
+         </td>
+         <td>
+             <table>
+                    <tr>                      
+                        <td style="display:{!IF(!isVisible,'block','none')}">
+                          <apex:outputField value="{!objAccount.Mailing_Address_For_Statements_etc__c}"/>
+                        </td>
+                        <td style="display:{!IF(!isVisible,'none','block')}">
+                             <apex:inputField value="{!objAccount.Mailing_Address_For_Statements_etc__c}" />
+                        </td>
+                    </tr>
+                </table>
+          </td>
+          <td>
+                &nbsp;
+          </td>
+            <td>
+                Website :
+            </td>
+            <td>
+                <table>
+                    <tr>
+                        
+                        <td style="display:{!IF(!isVisible,'block','none')}">
+                            <apex:outputField value="{!objAccount.Website}" rendered="{!!isVisible}"/>
+                        </td>
+                        <td style="display:{!IF(!isVisible,'none','block')}">
+                            <apex:inputField value="{!objAccount.Website}" rendered="{!isVisible}"/>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+            
+        </tr>
+        
+        <tr>
+            <td>
+                Business Open Date :
+            </td>
+            <td>
+            <table>
+                    <tr>
+                      
+                        <td style="display:{!IF(!isVisible,'block','none')}">
+                          <apex:outputField value="{!objAccount.DateBusinessStarted__c}" />
+                        </td>
+                        <td style="display:{!IF(!isVisible,'none','block')}">
+                            <apex:inputField value="{!objAccount.DateBusinessStarted__c}"/>
+                        </td>
+                    </tr>
+                </table> 
+            
+                 
+            </td>
+             <td>
+                &nbsp;
+            </td>
+        
+
+            <td>
+                Federal Tax ID # :
+            </td>                      
+            <td>
+                <table>
+                    <tr>
+                        
+                        <td style="display:{!IF(!isVisible,'block','none')}">
+                          <apex:outputField value="{!objAccount.FederalTaxID__c}" />
+                        </td>
+                        <td style="display:{!IF(!isVisible,'none','block')}">
+                            <apex:inputField value="{!objAccount.FederalTaxID__c}" />
+                        </td>
+                    </tr>
+               </table>  
+            </td>
+ 
+            
+        </tr>
+        <tr>
+            <td>
+                Business Structure :
+            </td>
+            <td>
+            <table>
+                    <tr>
+                      
+                        <td style="display:{!IF(!isVisible,'block','none')}">
+                          <apex:outputField value="{!objAccount.BusinessStructure__c}" />
+                        </td>
+                        <td style="display:{!IF(!isVisible,'none','block')}">
+                            <apex:inputField value="{!objAccount.BusinessStructure__c}"/>
+                        </td>
+                    </tr>
+                </table> 
+            
+                 
+            </td>
+             <td>
+                &nbsp;
+            </td>
+        
+
+             <td>
+                Business Type :
+            </td>                      
+            <td>
+                <table>
+                    <tr>
+                        
+                        <td style="display:{!IF(!isVisible,'block','none')}">
+                          <apex:outputField value="{!objAccount.BusinessType__c}" />
+                        </td>
+                        <td style="display:{!IF(!isVisible,'none','block')}">
+                            <apex:inputField value="{!objAccount.BusinessType__c}" />
+                        </td>
+                    </tr>
+               </table>  
+            </td>
+ 
+            
+        </tr>
+        
+        
+        <tr>
+            <td>
+                Owned Business Since :
+            </td>
+            <td>
+            <table>
+                    <tr>
+                      
+                        <td style="display:{!IF(!isVisible,'block','none')}">
+                          <apex:outputField value="{!objAccount.Owned_Business_Since__c}" />
+                        </td>
+                        <td style="display:{!IF(!isVisible,'none','block')}">
+                            <apex:inputField value="{!objAccount.Owned_Business_Since__c}"/>
+                        </td>
+                    </tr>
+                </table> 
+            
+                 
+            </td>
+             <td>
+                &nbsp;
+            </td>
+            <td>
+                Landlord/Agent Name :
+            </td>                      
+            <td>
+                <table>
+                    <tr>
+                        
+                        <td style="display:{!IF(!isVisible,'block','none')}">
+                          <apex:outputField value="{!objAccount.Landlord_Agent_Name__c}" />
+                        </td>
+                        <td style="display:{!IF(!isVisible,'none','block')}">
+                            <apex:inputField value="{!objAccount.Landlord_Agent_Name__c}" />
+                        </td>
+                    </tr>
+               </table>  
+            </td>
+            
+        </tr>
+        <tr>
+            <td>
+                Present Management Since :
+            </td>
+            <td>
+            <table>
+                    <tr>
+                      
+                        <td style="display:{!IF(!isVisible,'block','none')}">
+                          <apex:outputField value="{!objAccount.Present_Management_Since__c}" />
+                        </td>
+                        <td style="display:{!IF(!isVisible,'none','block')}">
+                            <apex:inputField value="{!objAccount.Present_Management_Since__c}"/>
+                        </td>
+                    </tr>
+                </table> 
+            
+                 
+            </td>
+             <td>
+                &nbsp;
+            </td>
+            <td>
+                Landlord/Agent Phone :
+            </td>                      
+            <td>
+                <table>
+                    <tr>
+                        
+                        <td style="display:{!IF(!isVisible,'block','none')}">
+                          <apex:outputField value="{!objAccount.Landlord_Agent_Phone__c}" />
+                        </td>
+                        <td style="display:{!IF(!isVisible,'none','block')}">
+                            <apex:inputField value="{!objAccount.Landlord_Agent_Phone__c}" />
+                        </td>
+                    </tr>
+               </table>  
+            </td>
+            
+        </tr>
+
+    <tr>
+            <td>
+                Number of Locations :
+            </td>
+            <td>
+            <table>
+                    <tr>
+                      
+                        <td style="display:{!IF(!isVisible,'block','none')}">
+                          <apex:outputField value="{!objAccount.Number_of_Locations__c}" />
+                        </td>
+                        <td style="display:{!IF(!isVisible,'none','block')}">
+                            <apex:inputField value="{!objAccount.Number_of_Locations__c}"/>
+                        </td>
+                    </tr>
+                </table> 
+            
+                 
+            </td>
+             <td>
+                &nbsp;
+            </td>
+            <td>
+                Time Remaining On Site<br/> Lease/Mortgage :
+            </td>                      
+            <td>
+                <table>
+                    <tr>
+                        
+                        <td style="display:{!IF(!isVisible,'block','none')}">
+                          <apex:outputField value="{!objAccount.Time_Remaining_On_Lease__c}" />
+                        </td>
+                        <td style="display:{!IF(!isVisible,'none','block')}">
+                            <apex:inputField value="{!objAccount.Time_Remaining_On_Lease__c}" />
+                        </td>
+                    </tr>
+               </table>  
+            </td>
+            
+        </tr>
+    <tr>
+            <td>
+                Number of Terminals at Location? :
+            </td>
+            <td>
+            <table>
+                    <tr>
+                      
+                        <td style="display:{!IF(!isVisible,'block','none')}">
+                          <apex:outputField value="{!objAccount.Number_of_Terminals_at_Location__c}" />
+                        </td>
+                        <td style="display:{!IF(!isVisible,'none','block')}">
+                            <apex:inputField value="{!objAccount.Number_of_Terminals_at_Location__c}"/>
+                        </td>
+                    </tr>
+                </table> 
+            
+                 
+            </td>
+             <td>
+                &nbsp;
+            </td>
+            <td>
+                Federal or State Tax Liens? :
+            </td>                      
+            <td>
+                <table>
+                    <tr>
+                        
+                        <td style="display:{!IF(!isVisible,'block','none')}">
+                          <apex:outputField value="{!objAccount.Federal_or_State_Tax_Liens__c}" />
+                        </td>
+                        <td style="display:{!IF(!isVisible,'none','block')}">
+                            <apex:inputField value="{!objAccount.Federal_or_State_Tax_Liens__c}" />
+                        </td>
+                    </tr>
+               </table>  
+            </td>
+            
+        </tr>
+        
+    <tr>
+            <td>
+                Flag Account for Renewal :
+            </td>
+            <td>
+            <table>
+                    <tr>
+                      
+                        <td style="display:{!IF(!isVisible,'block','none')}">
+                          <apex:outputField value="{!objAccount.Flag_Account_for_Renewal__c}" />
+                        </td>
+                        <td style="display:{!IF(!isVisible,'none','block')}">
+                            <apex:inputField value="{!objAccount.Flag_Account_for_Renewal__c}"/>
+                        </td>
+                    </tr>
+                </table> 
+            
+                 
+            </td>
+             <td>
+                &nbsp;
+            </td>
+            <td>
+            Pricing on New Deals :
+            </td>                      
+            <td>
+                <table>
+                    <tr>
+                        
+                        <td style="display:{!IF(!isVisible,'block','none')}">
+                          <apex:outputField value="{!objAccount.Pricing_on_New_Deals__c}" />
+                        </td>
+                        <td style="display:{!IF(!isVisible,'none','block')}">
+                            <apex:inputField value="{!objAccount.Pricing_on_New_Deals__c}" />
+                        </td>
+                    </tr>
+               </table>  
+            </td>
+            
+        </tr>
+    <tr>
+            <td>
+                SIC Code :
+            </td>
+            <td>
+            <table>
+                    <tr>
+                      
+                        <td style="display:{!IF(!isVisible,'block','none')}">
+                          <apex:outputField value="{!objAccount.Sic}" />
+                        </td>
+                        <td style="display:{!IF(!isVisible,'none','block')}">
+                            <apex:inputField value="{!objAccount.Sic}"/>
+                        </td>
+                    </tr>
+                </table> 
+            
+                 
+            </td>
+             <td>
+                &nbsp;
+            </td>
+            <td>
+            Pricing on Renewals :
+            </td>                      
+            <td>
+                <table>
+                    <tr>
+                        
+                        <td style="display:{!IF(!isVisible,'block','none')}">
+                          <apex:outputField value="{!objAccount.Pricing_on_Renewals__c}" />
+                        </td>
+                        <td style="display:{!IF(!isVisible,'none','block')}">
+                            <apex:inputField value="{!objAccount.Pricing_on_Renewals__c}" />
+                        </td>
+                    </tr>
+               </table>  
+            </td>
+            
+        </tr>
+    
+    </table>
+     </center>
+     <apex:actionFunction name="editopp" action="{!onEdit}"/>
+     <apex:actionFunction name="cancelopp" action="{!onCancel}"/>
+    </apex:form>
+</apex:page>

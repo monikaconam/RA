@@ -1,0 +1,25 @@
+<table height="400" width="550" cellpadding="5" border="0" cellspacing="5" >
+<tr height="400" valign="top" >
+<td style=" color:#000000; font-size:12pt; background-color:#FFFFFF; font-family:arial; bLabel:main; bEditID:r3st1;" tEditID="c1r1" locked="0" aEditID="c1r1" >
+<![CDATA[<p class="MsoNormal"><font face="Arial, sans-serif"><span style="font-size: 12pt;">Hey&nbsp;</span>{!Contact.FirstName}<span style="font-size: 12pt;">,<o:p></o:p></span></font></p>
+
+<p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><span style="font-size: 12pt; font-family: Arial, sans-serif;">Hope all is
+well with business right now. I tried giving you a call a little bit ago and it
+looks like I caught you at a bad time. I was reaching out to you today with an
+amazing opportunity for your business.<o:p></o:p></span></p><p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><span style="font-size: 12pt; font-family: Arial, sans-serif;"><br></span></p>
+
+<p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><span style="font-size: 12pt; font-family: Arial, sans-serif;">Earlier
+this month we rolled out a brand new product called our “Preferred Loan” and
+this product is by far the most economical loan that we’ve ever built. The
+interest rates on our “Preferred Loan” are 1.25% per month for the duration of
+the loan, the best in our entire industry. With you being a former closed
+client of ours we felt that it was only right to let you get first crack at
+this opportunity. &nbsp;I was looking for about 5 minutes of your time to take
+a look at your business with you and see if it’s a fit. Please let me know when
+you are available for a short conversation. You may also reach out to me at any
+time on either phone number below.<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><span style="font-size: 12pt; font-family: Arial, sans-serif;"><br></span></p><p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><span style="font-size: 12pt; font-family: Arial, sans-serif;">Looking
+forward to hearing back from you soon!<o:p></o:p></span></p><p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><span style="font-size: 12pt; font-family: Arial, sans-serif;"><br></span></p><p class="MsoNormal" style="font-size: 12pt;"><font face="arial">{!User.Name} | Business Advisor</font></p><p class="MsoNormal"><font face="arial" style="font-size: 12pt;">Phone: &nbsp;</font><font face="arial">{!User.Phone}</font></p><p class="MsoNormal"><font face="arial">Cell: &nbsp;{!User.MobilePhone}</font></p><p class="MsoNormal"><font face="arial">Email: &nbsp;{!User.Email}</font></p><p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><span style="font-size: 12pt; font-family: Arial, sans-serif;"><br></span></p><p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><span style="font-size: 12pt; font-family: Arial, sans-serif;"><br></span></p>]]></td>
+</tr>
+</table>

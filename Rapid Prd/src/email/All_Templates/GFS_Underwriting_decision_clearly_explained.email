@@ -1,0 +1,24 @@
+Hi,
+
+Q5. This client implicate that he/she is not strongly agree that the underwriting decision was clearly explained to me.
+
+Answer: {!GetFeedback_Survey__c.Underwriting_decision_clearly_explained__c}
+
+Q5. This client implicate that he/she is not strongly agree that he/she will consider RapidAdvance the next time I'm looking for outside funding.
+
+Answer: {!GetFeedback_Survey__c.Consider_RapidAdvance_for_next_funding__c}
+
+Q5. This client implicate that he/she is not strongly agree that he/she has a solid understanding of the approval requirements if I apply in the future.
+
+Answer: {!GetFeedback_Survey__c.Understanding_of_approval_requirements__c}
+
+Q5. This client implicate that he/she is not strongly agree that RapidAdvance took the time to thoroughly evaluate my business.
+
+Answer: {!GetFeedback_Survey__c.RapidAdvance_evaluated_thoroughly__c}
+
+
+For reference click the following link. 
+
+{!GetFeedback_Survey__c.Link} 
+
+Thanks

@@ -1,0 +1,3 @@
+{!Lead.CreatedDate}
+{!Lead.Company}
+"https://na33.salesforce.com/{!Lead.LeadID__c}"

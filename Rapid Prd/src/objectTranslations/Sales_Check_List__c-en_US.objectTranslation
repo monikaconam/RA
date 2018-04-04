@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Sales Check List</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Sales Check Lists</value>
+    </caseValues>
+    <fields>
+        <label><!-- Business Bank Statements --></label>
+        <name>Business_Bank_Statements__c</name>
+        <picklistValues>
+            <masterLabel>NA</masterLabel>
+            <translation><!-- NA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NA RENEWAL</masterLabel>
+            <translation><!-- NA RENEWAL --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NO</masterLabel>
+            <translation><!-- NO --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>YES</masterLabel>
+            <translation><!-- YES --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Business Voided Check --></label>
+        <name>Business_Voided_Check__c</name>
+        <picklistValues>
+            <masterLabel>NA</masterLabel>
+            <translation><!-- NA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NA RENEWAL</masterLabel>
+            <translation><!-- NA RENEWAL --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NO</masterLabel>
+            <translation><!-- NO --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>YES</masterLabel>
+            <translation><!-- YES --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Competitor Advance Company --></label>
+        <name>Competitor_Advance_Company__c</name>
+    </fields>
+    <fields>
+        <label><!-- Existing Competitor Advance? --></label>
+        <name>Existing_Competitor_Advance__c</name>
+        <picklistValues>
+            <masterLabel>NA</masterLabel>
+            <translation><!-- NA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NA RENEWAL</masterLabel>
+            <translation><!-- NA RENEWAL --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NO</masterLabel>
+            <translation><!-- NO --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>YES</masterLabel>
+            <translation><!-- YES --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- FED-X Tracking Number --></label>
+        <name>FED_X_Tracking_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Import Id --></label>
+        <name>Import_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Import Source --></label>
+        <name>Import_Source__c</name>
+    </fields>
+    <fields>
+        <label><!-- Opportunity --></label>
+        <name>Opportunity__c</name>
+        <relationshipLabel><!-- Sales Check Lists --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Payoff Check Requested --></label>
+        <name>Payoff_Check_Requested__c</name>
+    </fields>
+    <fields>
+        <label><!-- Photo ID --></label>
+        <name>Photo_ID__c</name>
+        <picklistValues>
+            <masterLabel>NA</masterLabel>
+            <translation><!-- NA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NA RENEWAL</masterLabel>
+            <translation><!-- NA RENEWAL --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NO</masterLabel>
+            <translation><!-- NO --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>YES</masterLabel>
+            <translation><!-- YES --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Sales Calculator --></label>
+        <name>Sales_Calculator__c</name>
+        <picklistValues>
+            <masterLabel>NA</masterLabel>
+            <translation><!-- NA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NA RENEWAL</masterLabel>
+            <translation><!-- NA RENEWAL --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NO</masterLabel>
+            <translation><!-- NO --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>YES</masterLabel>
+            <translation><!-- YES --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Signed Merchant Receivable Agreement --></label>
+        <name>Signed_Merchant_Receivable_Agreement__c</name>
+        <picklistValues>
+            <masterLabel>NA</masterLabel>
+            <translation><!-- NA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NA RENEWAL</masterLabel>
+            <translation><!-- NA RENEWAL --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NO</masterLabel>
+            <translation><!-- NO --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>YES</masterLabel>
+            <translation><!-- YES --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- 3 Minute Application --></label>
+        <name>X3_Minute_Application__c</name>
+        <picklistValues>
+            <masterLabel>NA</masterLabel>
+            <translation><!-- NA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NA RENEWAL</masterLabel>
+            <translation><!-- NA RENEWAL --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NO</masterLabel>
+            <translation><!-- NO --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>YES</masterLabel>
+            <translation><!-- YES --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- 4 Months of CC Statements --></label>
+        <name>X4_Months_of_CC_Statements__c</name>
+        <picklistValues>
+            <masterLabel>NA</masterLabel>
+            <translation><!-- NA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NA RENEWAL</masterLabel>
+            <translation><!-- NA RENEWAL --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NO</masterLabel>
+            <translation><!-- NO --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>YES</masterLabel>
+            <translation><!-- YES --></translation>
+        </picklistValues>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

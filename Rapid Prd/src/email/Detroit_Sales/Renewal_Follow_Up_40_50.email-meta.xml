@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Renewal - Follow Up (40%-50%)</name>
+    <style>none</style>
+    <subject>It&apos;s approaching the date, this will be great!</subject>
+    <type>text</type>
+</EmailTemplate>

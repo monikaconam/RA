@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <interviewLabel>SFU Move {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>SFU Move</label>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <name>SFU_List_Add</name>
+        <label>SFU List Add</label>
+        <locationX>372</locationX>
+        <locationY>206</locationY>
+        <filters>
+            <field>D2__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <numberValue>0.0035</numberValue>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>Last_Five9_List__c</field>
+            <value>
+                <stringValue>a0c39000009qTZ5</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>add_to_f9list_id__c</field>
+            <value>
+                <stringValue>a0c39000009qTZ5</stringValue>
+            </value>
+        </inputAssignments>
+        <object>Lead</object>
+    </recordUpdates>
+    <startElementReference>SFU_List_Add</startElementReference>
+    <variables>
+        <name>ID</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+    </variables>
+</Flow>

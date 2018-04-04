@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>When it takes too long to get the approval decision, an email is sent to the Faith / Ericka.</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>GFS Too Long To Get Approval Decision</name>
+    <style>none</style>
+    <subject>Too long to get the approval decision</subject>
+    <type>text</type>
+</EmailTemplate>

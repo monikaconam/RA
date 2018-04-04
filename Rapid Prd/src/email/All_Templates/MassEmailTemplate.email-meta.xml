@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Warm leads</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Mass Email Template</name>
+    <style>none</style>
+    <subject>Hello {!Contact.FirstName}. Do you still need cash for your business?</subject>
+    <textOnly>Hello {!Lead.FirstName}, 
+
+Did you know your credit card machine may get you up to $600,000 in unsecured working capital in as few as 10 days!
+
+SMART
+ No Personal Guarantees* 
+ No Liens or Collateral
+ No Fixed Payment Schedule
+ No Business Use Restrictions
+ No Application Fees
+FAST
+ Apply in less than 3 minutes
+ Cash wired to you in 7-10 days
+EASY
+ No complicated paperwork
+
+*Individuals only liable in cases of fraud, misrepresentation, and as further detailed in contract.
+
+Call or email us today, and see how much {!Lead.Company} qualifies for!
+
+{!Lead.OwnerFullName}
+	
+{!Lead.OwnerPhone} or {!Lead.OwnerEmail}</textOnly>
+    <type>custom</type>
+</EmailTemplate>

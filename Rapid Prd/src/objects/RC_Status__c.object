@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customSettingsType>List</customSettingsType>
+    <description>Mapping of Rock Connections&apos; Status to our Lead Status</description>
+    <enableFeeds>false</enableFeeds>
+    <fields>
+        <fullName>Local_Status__c</fullName>
+        <description>Local value of the Status field to use</description>
+        <externalId>false</externalId>
+        <label>Local Status</label>
+        <length>40</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>Rock Connections Status</label>
+    <visibility>Public</visibility>
+</CustomObject>

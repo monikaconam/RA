@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>If the value of &quot;Accomplish goals with financing&quot; field is less than 4, an email is sent to Maria.GFS  Accomplish goals with financing</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>GFS 	Accomplish goals with financing</name>
+    <style>none</style>
+    <subject>Accomplish goals with financing less than 4</subject>
+    <type>text</type>
+</EmailTemplate>

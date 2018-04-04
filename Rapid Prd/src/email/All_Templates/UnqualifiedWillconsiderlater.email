@@ -1,0 +1,17 @@
+<table cellpadding="5" width="550" height="400" cellspacing="5" border="0" >
+<tr height="400" valign="top" >
+<td locked="0" style=" font-family:arial; bLabel:main; color:#000000; font-size:12pt; bEditID:r3st1; background-color:#FFFFFF;" aEditID="c1r1" tEditID="c1r1" >
+<![CDATA[<P><FONT face="Times New Roman,Times,Serif" size=4>Date: {!Opportunity.LastModifiedDate}</FONT></P>
+<P><FONT face="Times New Roman,Times,Serif" size=4></FONT>&nbsp;</P>
+<P><FONT face="Times New Roman,Times,Serif" size=4></FONT>&nbsp;</P>
+<P><FONT face="Times New Roman,Times,Serif" size=4>Dear {!Contact.FirstName} {!Contact.LastName},</FONT></P>
+<P><FONT face="Times New Roman,Times,Serif" size=4></FONT>&nbsp;</P>
+<P><FONT face="Times New Roman,Times,Serif" size=4>Thank you for your interest in RapidAdvance. We are pleased to inform you that you are eligible for our cash advance service pending further payoff of your existing cash advance.&nbsp; We will contact you once your&nbsp;current outstanding cash advance balance has been reduced to 50% of your requested amount from RapidAdvance (i.e. If you are requesting $20,000 from RapidAdvance, then the remaining balance on your existing cash advance needs to be less than $10,000).&nbsp; At that time, we will pay off your remaining balance and fund you the difference.</FONT></P>
+<P><FONT face="Times New Roman,Times,Serif" size=4></FONT>&nbsp;</P>
+<P><FONT face="Times New Roman,Times,Serif" size=4>We look forward to providing you with additional working capital in the near future.</FONT></P>
+<P><FONT face="Times New Roman,Times,Serif" size=4></FONT>&nbsp;</P>
+<P><FONT face="Times New Roman,Times,Serif" size=4>Sincerely,</FONT></P>
+<P><FONT face="Times New Roman,Times,Serif" size=4></FONT>&nbsp;</P>
+<P><FONT face="Times New Roman,Times,Serif" size=4>Credit Committee</FONT></P>]]></td>
+</tr>
+</table>

@@ -1,0 +1,18 @@
+<table width="550" cellpadding="5" height="400" border="0" cellspacing="5" >
+<tr height="400" valign="top" >
+<td locked="0" style=" font-family:arial; bLabel:main; color:#000000; font-size:12pt; bEditID:r3st1; background-color:#FFFFFF;" aEditID="c1r1" tEditID="c1r1" >
+<![CDATA[<SPAN style="COLOR: black; FONT-FAMILY: 'Arial','sans-serif'">
+<P><SPAN style="COLOR: black; FONT-FAMILY: 'Arial','sans-serif'"><?xml:namespace prefix = o ns = "urn:schemas-microsoft-com:office:office" /><o:p></o:p></SPAN></P>
+<P><SPAN style="COLOR: black; FONT-FAMILY: 'Arial','sans-serif'">Dear {!Contact.FirstName} {!Contact.LastName},<o:p></o:p></SPAN></P>
+<P><SPAN style="COLOR: black; FONT-FAMILY: 'Arial','sans-serif'">&nbsp;<o:p></o:p></SPAN></P>
+<P><SPAN style="COLOR: black; FONT-FAMILY: 'Arial','sans-serif'">According to our records, you&nbsp;may now be eligible to re-apply for a cash advance.&nbsp; If you would like to revisit our working capital option and receive a free quote, please contact&nbsp;us at&nbsp;877-467-2743 or email me at <A href="mailto:Sales@rapidadvance.com">Sales@rapidadvance.com</A>. </SPAN><SPAN style="COLOR: black; FONT-FAMILY: 'Arial','sans-serif'"></SPAN></P>
+<P><SPAN style="COLOR: black; FONT-FAMILY: 'Arial','sans-serif'"></SPAN>&nbsp;</P>
+<P><SPAN style="COLOR: black; FONT-FAMILY: 'Arial','sans-serif'">We look forward to helping your business grow in the near future.<o:p></o:p></SPAN></P>
+<P><SPAN style="COLOR: black; FONT-FAMILY: 'Arial','sans-serif'">&nbsp;<o:p></o:p></SPAN></P>
+<P><SPAN style="COLOR: black; FONT-FAMILY: 'Arial','sans-serif'">Sincerely,<o:p></o:p></SPAN></P>
+<P><SPAN style="COLOR: black; FONT-FAMILY: 'Arial','sans-serif'">&nbsp;<o:p></o:p></SPAN></P>
+<P><SPAN style="COLOR: black; FONT-FAMILY: 'Arial','sans-serif'">RapidAdvance</SPAN></P>
+<P></SPAN></P>
+<P>&nbsp;</P>]]></td>
+</tr>
+</table>

@@ -1,0 +1,931 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Merchant</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Merchants</value>
+    </caseValues>
+    <fields>
+        <label><!-- Additional References: --></label>
+        <name>Additional_References__c</name>
+    </fields>
+    <fields>
+        <label><!-- Are you late with any of your vendors? --></label>
+        <name>Are_you_late_with_any_of_your_vendors__c</name>
+        <picklistValues>
+            <masterLabel>NO</masterLabel>
+            <translation><!-- NO --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>YES</masterLabel>
+            <translation><!-- YES --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Comments on Business Sale Response: --></label>
+        <name>Comments_on_Business_Sale_Response__c</name>
+    </fields>
+    <fields>
+        <label><!-- Confirm length of time with processor --></label>
+        <name>Confirm_length_of_time_with_processor__c</name>
+        <picklistValues>
+            <masterLabel>0 to 3 months</masterLabel>
+            <translation><!-- 0 to 3 months --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4 to 6 months</masterLabel>
+            <translation><!-- 4 to 6 months --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>7 to 12 months</masterLabel>
+            <translation><!-- 7 to 12 months --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>&gt; 1 year</masterLabel>
+            <translation><!-- &gt; 1 year --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Contact --></label>
+        <name>Contact__c</name>
+        <relationshipLabel><!-- Merchants --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Current Balance With Competitor/RA --></label>
+        <name>Current_Balance_With_Competitor_RA__c</name>
+    </fields>
+    <fields>
+        <label><!-- Do you have contracts with customers? --></label>
+        <name>Do_you_have_contracts_with_customers__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Do you own any other businesses? --></label>
+        <name>Do_you_own_any_other_businesses__c</name>
+        <picklistValues>
+            <masterLabel>NO</masterLabel>
+            <translation><!-- NO --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>YES</masterLabel>
+            <translation><!-- YES --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Do you plan to sell the business soon? --></label>
+        <name>Do_you_plan_to_sell_the_business_soon__c</name>
+        <picklistValues>
+            <masterLabel>NO</masterLabel>
+            <translation><!-- NO --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>YES</masterLabel>
+            <translation><!-- YES --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Gross Monthly Sales of the Business --></label>
+        <name>Gross_Monthly_Sales_of_the_Business__c</name>
+        <picklistValues>
+            <masterLabel>$10,000 to $25,000</masterLabel>
+            <translation><!-- $10,000 to $25,000 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>$2,500 to $10,000</masterLabel>
+            <translation><!-- $2,500 to $10,000 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>$25,001 to $50,000</masterLabel>
+            <translation><!-- $25,001 to $50,000 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>$50,001 to $100,000</masterLabel>
+            <translation><!-- $50,001 to $100,000 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>&gt; $100,000</masterLabel>
+            <translation><!-- &gt; $100,000 --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Have you had a cash advance before? --></label>
+        <name>Have_you_had_a_cash_advance_before__c</name>
+        <picklistValues>
+            <masterLabel>NO</masterLabel>
+            <translation><!-- NO --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>YES</masterLabel>
+            <translation><!-- YES --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- How long have you used current processor --></label>
+        <name>How_long_have_you_used_current_processor__c</name>
+        <picklistValues>
+            <masterLabel>0 to 3 months</masterLabel>
+            <translation><!-- 0 to 3 months --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4 to 6 months</masterLabel>
+            <translation><!-- 4 to 6 months --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>7 to 12 months</masterLabel>
+            <translation><!-- 7 to 12 months --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>&gt; 1 year</masterLabel>
+            <translation><!-- &gt; 1 year --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- How many locations for this advance? --></label>
+        <name>How_many_locations_for_this_business__c</name>
+    </fields>
+    <fields>
+        <label><!-- How many part time employees do you have --></label>
+        <name>How_many_part_time_employees_do_you_have__c</name>
+        <picklistValues>
+            <masterLabel>1 to 5</masterLabel>
+            <translation><!-- 1 to 5 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>11 to 25</masterLabel>
+            <translation><!-- 11 to 25 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>25+</masterLabel>
+            <translation><!-- 25+ --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>6 to 10</masterLabel>
+            <translation><!-- 6 to 10 --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- How many square feet is the business? --></label>
+        <name>How_many_square_feet_is_the_business__c</name>
+    </fields>
+    <fields>
+        <label><!-- How much is the rent for the business? --></label>
+        <name>How_much_is_the_rent_for_the_business__c</name>
+    </fields>
+    <fields>
+        <label><!-- How much of the business do you own? --></label>
+        <name>How_much_of_the_business_do_you_own__c</name>
+        <picklistValues>
+            <masterLabel>100%</masterLabel>
+            <translation><!-- 100% --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>30% to 50%</masterLabel>
+            <translation><!-- 30% to 50% --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>51% to 99%</masterLabel>
+            <translation><!-- 51% to 99% --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- If closing in the next year what period? --></label>
+        <name>If_closing_in_the_next_year_what_period__c</name>
+        <picklistValues>
+            <masterLabel>Fall</masterLabel>
+            <translation><!-- Fall --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Spring</masterLabel>
+            <translation><!-- Spring --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Summer</masterLabel>
+            <translation><!-- Summer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Winter</masterLabel>
+            <translation><!-- Winter --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- If other, then what? --></label>
+        <name>If_other_then_what__c</name>
+    </fields>
+    <fields>
+        <label><!-- If so are you current on franchise dues? --></label>
+        <name>If_so_are_you_current_on_franchise_dues__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- If so then what type? --></label>
+        <name>If_so_then_what_type__c</name>
+    </fields>
+    <fields>
+        <label><!-- If so, with which Cash Advance Company? --></label>
+        <name>If_so_with_which_Cash_Advance_Company__c</name>
+    </fields>
+    <fields>
+        <label><!-- Import Id --></label>
+        <name>Import_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Import Source --></label>
+        <name>Import_Source__c</name>
+    </fields>
+    <fields>
+        <label><!-- Is this business a franchise? --></label>
+        <name>Is_this_business_a_franchise__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Late w/ Vendors Details: --></label>
+        <name>Late_w_Vendors_Details__c</name>
+    </fields>
+    <fields>
+        <help><!-- Numeric Id to enhance indexing and data chunking during backups and integration with external systems. --></help>
+        <label><!-- MC NumId --></label>
+        <name>MC_NumId__c</name>
+    </fields>
+    <fields>
+        <label><!-- Merchant Interview Completed Date: --></label>
+        <name>Merchant_Interview_Completed_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Merchant Interview Phone Number: --></label>
+        <name>Merchant_Interview_Phone_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- How many full time employees do you have --></label>
+        <name>Number_of_Full_Time_Employees__c</name>
+        <picklistValues>
+            <masterLabel>1 to 5</masterLabel>
+            <translation><!-- 1 to 5 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>11 to 25</masterLabel>
+            <translation><!-- 11 to 25 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>25+</masterLabel>
+            <translation><!-- 25+ --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>6 to 10</masterLabel>
+            <translation><!-- 6 to 10 --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Opportunity --></label>
+        <name>Opportunity__c</name>
+        <relationshipLabel><!-- Merchants --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Overall Merchant Interview Assessment --></label>
+        <name>Overall_Merchant_Interview_Assessment__c</name>
+    </fields>
+    <fields>
+        <label><!-- What businesses are nearby? --></label>
+        <name>What_businesses_are_nearby__c</name>
+    </fields>
+    <fields>
+        <label><!-- What do you plan to use the money for? --></label>
+        <name>What_do_you_plan_to_use_the_money_for__c</name>
+    </fields>
+    <fields>
+        <label><!-- What hours are you open? --></label>
+        <name>What_hours_are_you_open__c</name>
+    </fields>
+    <fields>
+        <label><!-- What is your busy season? --></label>
+        <name>What_is_your_busy_season__c</name>
+        <picklistValues>
+            <masterLabel>Consistent year round</masterLabel>
+            <translation><!-- Consistent year round --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Fall</masterLabel>
+            <translation><!-- Fall --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Spring</masterLabel>
+            <translation><!-- Spring --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Summer</masterLabel>
+            <translation><!-- Summer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Winter</masterLabel>
+            <translation><!-- Winter --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- What is your current balance? --></label>
+        <name>What_is_your_current_balance__c</name>
+    </fields>
+    <fields>
+        <label><!-- What is your email address? --></label>
+        <name>What_is_your_email_address__c</name>
+    </fields>
+    <fields>
+        <label><!-- What is your home phone number? --></label>
+        <name>What_is_your_home_phone_number__c</name>
+    </fields>
+    <fields>
+        <label><!-- What is your mobile phone number? --></label>
+        <name>What_is_your_mobile_phone_number__c</name>
+    </fields>
+    <fields>
+        <label><!-- What is your slow season? --></label>
+        <name>What_is_your_slow_season__c</name>
+        <picklistValues>
+            <masterLabel>Consistent year round</masterLabel>
+            <translation><!-- Consistent year round --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Fall</masterLabel>
+            <translation><!-- Fall --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Spring</masterLabel>
+            <translation><!-- Spring --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Summer</masterLabel>
+            <translation><!-- Summer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Winter</masterLabel>
+            <translation><!-- Winter --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- What type of Business Location? --></label>
+        <name>What_type_of_Business_Location__c</name>
+        <picklistValues>
+            <masterLabel>Mall</masterLabel>
+            <translation><!-- Mall --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Office Space</masterLabel>
+            <translation><!-- Office Space --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Shopping Center</masterLabel>
+            <translation><!-- Shopping Center --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Stand Alone</masterLabel>
+            <translation><!-- Stand Alone --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- What type of Business is it? --></label>
+        <name>What_type_of_Business_is_it__c</name>
+        <picklistValues>
+            <masterLabel>Antiques/Collectibles</masterLabel>
+            <translation><!-- Antiques/Collectibles --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Appliance Stores</masterLabel>
+            <translation><!-- Appliance Stores --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Arrangements</masterLabel>
+            <translation><!-- Arrangements --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Art Galleries</masterLabel>
+            <translation><!-- Art Galleries --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Audio Equipment</masterLabel>
+            <translation><!-- Audio Equipment --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Automobile Dealerships New/Used</masterLabel>
+            <translation><!-- Automobile Dealerships New/Used --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Automotive - Body Repair, Collision, Painting</masterLabel>
+            <translation><!-- Automotive - Body Repair, Collision, Painting --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Automotive - Brake and Muffler</masterLabel>
+            <translation><!-- Automotive - Brake and Muffler --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Automotive - General Repair, Truck, RV</masterLabel>
+            <translation><!-- Automotive - General Repair, Truck, RV --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Automotive - Parts, Accessories</masterLabel>
+            <translation><!-- Automotive - Parts, Accessories --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Automotive - Quick Sevice, Lube, Tune-Up</masterLabel>
+            <translation><!-- Automotive - Quick Sevice, Lube, Tune-Up --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Automotive - Tire, Glass</masterLabel>
+            <translation><!-- Automotive - Tire, Glass --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Automotive - Towing &amp; Emergency Road Service</masterLabel>
+            <translation><!-- Automotive - Towing &amp; Emergency Road Service --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Automotive - Transmission</masterLabel>
+            <translation><!-- Automotive - Transmission --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Bar</masterLabel>
+            <translation><!-- Bar --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Barber Shop</masterLabel>
+            <translation><!-- Barber Shop --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Billing Services</masterLabel>
+            <translation><!-- Billing Services --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Boating/Marina</masterLabel>
+            <translation><!-- Boating/Marina --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Book and Stationary</masterLabel>
+            <translation><!-- Book and Stationary --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Bowling</masterLabel>
+            <translation><!-- Bowling --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Bridal Shop</masterLabel>
+            <translation><!-- Bridal Shop --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Car Alarm Supplier</masterLabel>
+            <translation><!-- Car Alarm Supplier --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Car Wash</masterLabel>
+            <translation><!-- Car Wash --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Carpet Store</masterLabel>
+            <translation><!-- Carpet Store --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Catering</masterLabel>
+            <translation><!-- Catering --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Check Cashing Companies</masterLabel>
+            <translation><!-- Check Cashing Companies --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Clothing &amp; Apparel</masterLabel>
+            <translation><!-- Clothing &amp; Apparel --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Clothing - Shoe Store</masterLabel>
+            <translation><!-- Clothing - Shoe Store --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Coffee Shop</masterLabel>
+            <translation><!-- Coffee Shop --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Comedy Clubs</masterLabel>
+            <translation><!-- Comedy Clubs --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Computer-Related Retail</masterLabel>
+            <translation><!-- Computer-Related Retail --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Construction Contractors</masterLabel>
+            <translation><!-- Construction Contractors --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Consumer Electronics</masterLabel>
+            <translation><!-- Consumer Electronics --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Daycare</masterLabel>
+            <translation><!-- Daycare --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Dental</masterLabel>
+            <translation><!-- Dental --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Dinner Theatre</masterLabel>
+            <translation><!-- Dinner Theatre --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Dollar Store</masterLabel>
+            <translation><!-- Dollar Store --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Drycleaners</masterLabel>
+            <translation><!-- Drycleaners --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Electronics</masterLabel>
+            <translation><!-- Electronics --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Equipment Rental</masterLabel>
+            <translation><!-- Equipment Rental --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Eye Care</masterLabel>
+            <translation><!-- Eye Care --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Eyewear and Optical</masterLabel>
+            <translation><!-- Eyewear and Optical --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Flooring</masterLabel>
+            <translation><!-- Flooring --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Florists</masterLabel>
+            <translation><!-- Florists --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Food - Bakery</masterLabel>
+            <translation><!-- Food - Bakery --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Food - Convenience &amp; Variety</masterLabel>
+            <translation><!-- Food - Convenience &amp; Variety --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Food - Deli, Meat, Seafood, Other</masterLabel>
+            <translation><!-- Food - Deli, Meat, Seafood, Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Food - Grocery Store</masterLabel>
+            <translation><!-- Food - Grocery Store --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Formal Wear</masterLabel>
+            <translation><!-- Formal Wear --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Funeral Homes</masterLabel>
+            <translation><!-- Funeral Homes --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Furniture</masterLabel>
+            <translation><!-- Furniture --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Garbage Collection Service</masterLabel>
+            <translation><!-- Garbage Collection Service --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Gas Station-Convenience</masterLabel>
+            <translation><!-- Gas Station-Convenience --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Golf - Stores, Driving Ranges, Country Clubs</masterLabel>
+            <translation><!-- Golf - Stores, Driving Ranges, Country Clubs --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Hair &amp; Nail Salon</masterLabel>
+            <translation><!-- Hair &amp; Nail Salon --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Hair Replacement/Clubs</masterLabel>
+            <translation><!-- Hair Replacement/Clubs --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Hardware</masterLabel>
+            <translation><!-- Hardware --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Health Club</masterLabel>
+            <translation><!-- Health Club --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Health Club Monthly Membership</masterLabel>
+            <translation><!-- Health Club Monthly Membership --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Heating/Air Conditioning/HVAC</masterLabel>
+            <translation><!-- Heating/Air Conditioning/HVAC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Home Based Door/Door</masterLabel>
+            <translation><!-- Home Based Door/Door --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Hotel &amp; Motel</masterLabel>
+            <translation><!-- Hotel &amp; Motel --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Housing-Related</masterLabel>
+            <translation><!-- Housing-Related --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IT Sales-No Store Front</masterLabel>
+            <translation><!-- IT Sales-No Store Front --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ice Cream Shops</masterLabel>
+            <translation><!-- Ice Cream Shops --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Internet Sales (Store Front)</masterLabel>
+            <translation><!-- Internet Sales (Store Front) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Jewelry</masterLabel>
+            <translation><!-- Jewelry --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Kiosks</masterLabel>
+            <translation><!-- Kiosks --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Laboratory equipment supply</masterLabel>
+            <translation><!-- Laboratory equipment supply --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Lawn &amp; Garden</masterLabel>
+            <translation><!-- Lawn &amp; Garden --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Lawn &amp; Garden Nursery</masterLabel>
+            <translation><!-- Lawn &amp; Garden Nursery --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Limosine &amp; Transportation</masterLabel>
+            <translation><!-- Limosine &amp; Transportation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Liquor Store</masterLabel>
+            <translation><!-- Liquor Store --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Locksmiths</masterLabel>
+            <translation><!-- Locksmiths --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Maid and Cleaning Service</masterLabel>
+            <translation><!-- Maid and Cleaning Service --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mail Center</masterLabel>
+            <translation><!-- Mail Center --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Marijuana Shop</masterLabel>
+            <translation><!-- Marijuana Shop --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Marketing</masterLabel>
+            <translation><!-- Marketing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Martial Arts Equipment</masterLabel>
+            <translation><!-- Martial Arts Equipment --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mattresses</masterLabel>
+            <translation><!-- Mattresses --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Medical Services</masterLabel>
+            <translation><!-- Medical Services --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Music and Music Instrument</masterLabel>
+            <translation><!-- Music and Music Instrument --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Night Clubs</masterLabel>
+            <translation><!-- Night Clubs --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>On-Line Wholesale</masterLabel>
+            <translation><!-- On-Line Wholesale --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Online Beauty Products</masterLabel>
+            <translation><!-- Online Beauty Products --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other Product Retail</masterLabel>
+            <translation><!-- Other Product Retail --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other Service Retail</masterLabel>
+            <translation><!-- Other Service Retail --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pet Store</masterLabel>
+            <translation><!-- Pet Store --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pharmacy</masterLabel>
+            <translation><!-- Pharmacy --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Print and Sign Center</masterLabel>
+            <translation><!-- Print and Sign Center --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Printing/Graphic Design</masterLabel>
+            <translation><!-- Printing/Graphic Design --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Professional Service - All Doctors, Lawyers</masterLabel>
+            <translation><!-- Professional Service - All Doctors, Lawyers --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Promotions &amp; Advertising</masterLabel>
+            <translation><!-- Promotions &amp; Advertising --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Repair - Small Engine</masterLabel>
+            <translation><!-- Repair - Small Engine --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Restaurant - Casual Dining</masterLabel>
+            <translation><!-- Restaurant - Casual Dining --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Restaurant - Fast Food &amp; Carry Out</masterLabel>
+            <translation><!-- Restaurant - Fast Food &amp; Carry Out --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Restaurant - Fine Dining</masterLabel>
+            <translation><!-- Restaurant - Fine Dining --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Roofing/Siding</masterLabel>
+            <translation><!-- Roofing/Siding --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>School and Day Care</masterLabel>
+            <translation><!-- School and Day Care --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Schools</masterLabel>
+            <translation><!-- Schools --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Schools-Educational Training Certifications</masterLabel>
+            <translation><!-- Schools-Educational Training Certifications --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Schools-Private/Elementary/High School</masterLabel>
+            <translation><!-- Schools-Private/Elementary/High School --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Shore-Store, Repair</masterLabel>
+            <translation><!-- Shore-Store, Repair --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Spa</masterLabel>
+            <translation><!-- Spa --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sporting Goods</masterLabel>
+            <translation><!-- Sporting Goods --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Supply and Equipment-Sales, Rental &amp; Repairs</masterLabel>
+            <translation><!-- Supply and Equipment-Sales, Rental &amp; Repairs --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Swimwear Accessories Retail</masterLabel>
+            <translation><!-- Swimwear Accessories Retail --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Tanning and Tattoo</masterLabel>
+            <translation><!-- Tanning and Tattoo --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Tile/Carpet</masterLabel>
+            <translation><!-- Tile/Carpet --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Tobacco Shop</masterLabel>
+            <translation><!-- Tobacco Shop --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Toy Store</masterLabel>
+            <translation><!-- Toy Store --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Veterinary</masterLabel>
+            <translation><!-- Veterinary --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Video and DVD Rental</masterLabel>
+            <translation><!-- Video and DVD Rental --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Vision Care</masterLabel>
+            <translation><!-- Vision Care --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- When did you purchase/start the business --></label>
+        <name>When_did_you_purchase_start_the_business__c</name>
+    </fields>
+    <fields>
+        <label><!-- When does your lease expire? --></label>
+        <name>When_does_your_lease_expire__c</name>
+        <picklistValues>
+            <masterLabel>1 to 6 months</masterLabel>
+            <translation><!-- 1 to 6 months --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>1 yr</masterLabel>
+            <translation><!-- 1 yr --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2 yrs</masterLabel>
+            <translation><!-- 2 yrs --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3 yrs</masterLabel>
+            <translation><!-- 3 yrs --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4 yrs</masterLabel>
+            <translation><!-- 4 yrs --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5 yrs+</masterLabel>
+            <translation><!-- 5 yrs+ --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>7 to 11 months</masterLabel>
+            <translation><!-- 7 to 11 months --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Month to Month</masterLabel>
+            <translation><!-- Month to Month --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- When was business opened? --></label>
+        <name>When_was_business_opened__c</name>
+    </fields>
+    <fields>
+        <label><!-- Will the business close for any reason? --></label>
+        <name>Will_the_business_close_for_any_reason__c</name>
+        <picklistValues>
+            <masterLabel>NO</masterLabel>
+            <translation><!-- NO --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>YES</masterLabel>
+            <translation><!-- YES --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- if other locat. # of terminals at each: --></label>
+        <name>if_other_locat_of_terminals_at_each_c__c</name>
+    </fields>
+    <fields>
+        <label><!-- # of cc card terminal at this location? --></label>
+        <name>of_cc_card_terminal_at_this_location__c</name>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

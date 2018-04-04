@@ -1,0 +1,9 @@
+<table border="0" cellpadding="5" width="550" cellspacing="5" height="400" >
+<tr valign="top" height="400" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; color:#000000; bEditID:r3st1; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[<font face="arial"><span style="font-size: 12pt;">{!Opportunity.OwnerFirstName}</span></font><br><br><font face="arial"><span style="font-size: 12pt;">The following merchant has requested a pay-off letter:</span></font><br><font face="arial"><span style="font-size: 12pt;">&nbsp;
+</span></font><p style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;">Opportunity Number - {!Opportunity.Opportunity_Number__c}</p>
+<p style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;">Opportunity Name - {!Opportunity.Name}</p>
+<p style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;">&nbsp;</p><font face="arial"><span style="font-size: 12pt;">Please reply (by email) with Approval or Decline to&nbsp;</span>Bryan StClair at&nbsp;<u>bryanstclair@rapidadvance.com</u>&nbsp;</font><u style="font-family: arial; font-size: 12pt; font-weight: bold;">and</u><b style="font-family: arial; font-size: 12pt;">&nbsp;</b><font face="arial"><span style="font-size: 12pt;">Sheila Mensah</span></font><br><font face="arial"><span style="font-size: 12pt;">at </span></font><font color="#3366ff" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><u>smensah@rapidadvance.com</u></font><span style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;">.</span><div style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><div><br><br>Thanks<br>Customer Service <br></div></div>]]></td>
+</tr>
+</table>

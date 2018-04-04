@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>GetFeedback Survey</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>GetFeedback Survey</value>
+    </caseValues>
+    <fields>
+        <help><!-- Client Evaluation: I&apos;ve been able to accomplish my goals with this financing. --></help>
+        <label><!-- Accomplish goals with financing --></label>
+        <name>Able_to_accomplish_goals_with_fi__c</name>
+    </fields>
+    <fields>
+        <help><!-- Aspect: Access to information about my account --></help>
+        <label><!-- Access To Information about Account --></label>
+        <name>Access_To_Information_about_Account__c</name>
+        <picklistValues>
+            <masterLabel>Completely Satisfied</masterLabel>
+            <translation><!-- Completely Satisfied --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>No Experience</masterLabel>
+            <translation><!-- No Experience --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Not at All Satisfied</masterLabel>
+            <translation><!-- Not at All Satisfied --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Slightly Satisfied</masterLabel>
+            <translation><!-- Slightly Satisfied --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Somewhat Satisfied</masterLabel>
+            <translation><!-- Somewhat Satisfied --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Very Satisfied</masterLabel>
+            <translation><!-- Very Satisfied --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Additional Comments --></label>
+        <name>Additional_Comments__c</name>
+    </fields>
+    <fields>
+        <label><!-- Attempt --></label>
+        <name>Attempt__c</name>
+        <picklistValues>
+            <masterLabel>First</masterLabel>
+            <translation><!-- First --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Second</masterLabel>
+            <translation><!-- Second --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Choice: I didn&apos;t get called back when promised. --></help>
+        <label><!-- Didn&apos;t get called back when promised --></label>
+        <name>BA_Did_not_get_called_back__c</name>
+    </fields>
+    <fields>
+        <help><!-- Received less than excellent service from your business advisor - Reason --></help>
+        <label><!-- BA Service Rating Comments --></label>
+        <name>BA_Service_Rating_Comments__c</name>
+    </fields>
+    <fields>
+        <help><!-- Rating - overall service provided by business advisor. --></help>
+        <label><!-- BA Service Rating --></label>
+        <name>BA_Service_Rating__c</name>
+    </fields>
+    <fields>
+        <help><!-- Choice: My business adviser didn&apos;t set accurate expectations about the funding process. --></help>
+        <label><!-- BA didn&apos;t set accurate expectations --></label>
+        <name>BA_did_not_set_expectation__c</name>
+    </fields>
+    <fields>
+        <help><!-- Choice: My business advisor wasn&apos;t available to me when I tried to reach him/her. --></help>
+        <label><!-- BA wasn&apos;t available when tried to reach --></label>
+        <name>BA_was_not_available__c</name>
+    </fields>
+    <fields>
+        <help><!-- Choice: I didn&apos;t feel that the business advisor was knowledgeable enough about the details of my financing / funding. --></help>
+        <label><!-- BA was not knowledgeable enough --></label>
+        <name>BA_was_not_knowledgeable__c</name>
+    </fields>
+    <fields>
+        <help><!-- Client Evaluation: I&apos;m able to repay the funding comfortably. --></help>
+        <label><!-- Comfortable funding repayment --></label>
+        <name>Comfortable_funding_repayment__c</name>
+    </fields>
+    <fields>
+        <label><!-- Completed At --></label>
+        <name>Completed_At__c</name>
+    </fields>
+    <fields>
+        <help><!-- Client Evaluation: I will consider RapidAdvance the next time I&apos;m looking for outside funding --></help>
+        <label><!-- Consider RapidAdvance for next funding --></label>
+        <name>Consider_RapidAdvance_for_next_funding__c</name>
+    </fields>
+    <fields>
+        <label><!-- Funding Status --></label>
+        <name>Funding_Status__c</name>
+    </fields>
+    <fields>
+        <help><!-- Client Evaluation: When I need funding in the future, RapidAdvance will be my first choice. --></help>
+        <label><!-- Future funding choice is Rapid --></label>
+        <name>Future_funding_choice_is_Rapid__c</name>
+    </fields>
+    <fields>
+        <label><!-- GetFeedback Survey Name --></label>
+        <name>GetFeedback_Survey_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- GetFeedback Survey Response --></label>
+        <name>GetFeedback_Survey_Response__c</name>
+    </fields>
+    <fields>
+        <label><!-- GetFeedback Survey Summary Report --></label>
+        <name>GetFeedback_Survey_Summary_Report__c</name>
+    </fields>
+    <fields>
+        <help><!-- Choice: I was given the expectation I would be approved, but the situation seemed to change in underwriting. --></help>
+        <label><!-- Expectation of Approval changed in UW --></label>
+        <name>OS_Approval_Expectation_changed_in_UW__c</name>
+    </fields>
+    <fields>
+        <help><!-- Choice: The underwriting process was overly intrusive and disruptive. --></help>
+        <label><!-- UW Process Intrusive and Disruptive --></label>
+        <name>OS_UW_Process_Intrusive_Disruptive__c</name>
+    </fields>
+    <fields>
+        <help><!-- Choice: The application process was harder or more time consuming than I expected. --></help>
+        <label><!-- App process harder / time consuming --></label>
+        <name>OS_app_process_harder__c</name>
+    </fields>
+    <fields>
+        <help><!-- Choice: Once I was approved, there were too many conditions prior to actually funding my account. --></help>
+        <label><!-- Many conditions prior to funding --></label>
+        <name>OS_many_conditions_prior_funding__c</name>
+    </fields>
+    <fields>
+        <help><!-- Choice: After funding my account, I experienced problems with customer service. --></help>
+        <label><!-- Experienced problems with cust servic --></label>
+        <name>OS_problems_with_cust_serv__c</name>
+    </fields>
+    <fields>
+        <help><!-- Choice: It took too long to get the approval decision from underwriting. --></help>
+        <label><!-- Took long to get approval from UW --></label>
+        <name>OS_took_long_for_approval__c</name>
+    </fields>
+    <fields>
+        <help><!-- Choice: It took too long to get the decision from underwriting. --></help>
+        <label><!-- Took long to get decision from UW --></label>
+        <name>OS_took_long_for_decision__c</name>
+    </fields>
+    <fields>
+        <label><!-- Opportunity --></label>
+        <name>Opportunity__c</name>
+        <relationshipLabel><!-- GetFeedback Survey --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- Received less than completely satisfied rating for overall funding experience - Reason --></help>
+        <label><!-- Overall Satisfaction Comments --></label>
+        <name>Overall_Satisfaction_Comments__c</name>
+    </fields>
+    <fields>
+        <help><!-- Overall Funding Process Satisfaction - Rating --></help>
+        <label><!-- Overall Satisfaction --></label>
+        <name>Overall_Satisfaction__c</name>
+    </fields>
+    <fields>
+        <help><!-- Client Evaluation: RapidAdvance took the time to thoroughly evaluate my business --></help>
+        <label><!-- RapidAdvance evaluated thoroughly --></label>
+        <name>RapidAdvance_evaluated_thoroughly__c</name>
+    </fields>
+    <fields>
+        <label><!-- Reference Company Name --></label>
+        <name>Reference_Company_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Reference Email Address --></label>
+        <name>Reference_Email_Address__c</name>
+    </fields>
+    <fields>
+        <label><!-- Reference Name --></label>
+        <name>Reference_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Reference Phone Number --></label>
+        <name>Reference_Phone_Number__c</name>
+    </fields>
+    <fields>
+        <help><!-- Were you able to secure the funding you were looking for from another lender? --></help>
+        <label><!-- Secured funding from another lender --></label>
+        <name>Secured_funding_from_another_lender__c</name>
+        <picklistValues>
+            <masterLabel>No, I applied elsewhere but wasn&apos;t approved.</masterLabel>
+            <translation><!-- No, I applied elsewhere but wasn&apos;t approved. --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>No, I didn&apos;t seek funding from another lender.</masterLabel>
+            <translation><!-- No, I didn&apos;t seek funding from another lender. --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes, at comparable or better terms than RapidAdvance initially offered.</masterLabel>
+            <translation><!-- Yes, at comparable or better terms than RapidAdvance initially offered. --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes, but at less advantageous terms than RapidAdvance initially offered.</masterLabel>
+            <translation><!-- Yes, but at less advantageous terms than RapidAdvance initially offered. --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Started At --></label>
+        <name>Started_At__c</name>
+    </fields>
+    <fields>
+        <help><!-- Aspect: The RapidAdvance client portal --></help>
+        <label><!-- The RapidAdvance client portal --></label>
+        <name>The_RapidAdvance_client_portal__c</name>
+        <picklistValues>
+            <masterLabel>Completely Satisfied</masterLabel>
+            <translation><!-- Completely Satisfied --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>No Experience</masterLabel>
+            <translation><!-- No Experience --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Not at All Satisfied</masterLabel>
+            <translation><!-- Not at All Satisfied --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Slightly Satisfied</masterLabel>
+            <translation><!-- Slightly Satisfied --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Somewhat Satisfied</masterLabel>
+            <translation><!-- Somewhat Satisfied --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Very Satisfied</masterLabel>
+            <translation><!-- Very Satisfied --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Aspect: The process of repaying my funding --></help>
+        <label><!-- The process of repaying funding --></label>
+        <name>The_process_of_repaying_funding__c</name>
+        <picklistValues>
+            <masterLabel>Completely Satisfied</masterLabel>
+            <translation><!-- Completely Satisfied --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>No Experience</masterLabel>
+            <translation><!-- No Experience --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Not at All Satisfied</masterLabel>
+            <translation><!-- Not at All Satisfied --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Slightly Satisfied</masterLabel>
+            <translation><!-- Slightly Satisfied --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Somewhat Satisfied</masterLabel>
+            <translation><!-- Somewhat Satisfied --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Very Satisfied</masterLabel>
+            <translation><!-- Very Satisfied --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Client Evaluation: I have a solid understanding of the approval requirements if I apply in the future --></help>
+        <label><!-- Understanding of approval requirements --></label>
+        <name>Understanding_of_approval_requirements__c</name>
+    </fields>
+    <fields>
+        <help><!-- Client Evaluation: The underwriting decision was clearly explained to me. --></help>
+        <label><!-- Underwriting decision clearly explained --></label>
+        <name>Underwriting_decision_clearly_explained__c</name>
+    </fields>
+    <fields>
+        <help><!-- Would recommend RapidAdvance to a friend or colleague? --></help>
+        <label><!-- Would Recommend (NPS) --></label>
+        <name>Would_Recommend_Rating__c</name>
+    </fields>
+    <recordTypes>
+        <label><!-- Client Service Survey --></label>
+        <name>Client_Service_Survey</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Funding Survey --></label>
+        <name>Funding_Survey</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Satisfaction Survey --></label>
+        <name>Satisfaction_Survey</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

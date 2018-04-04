@@ -1,0 +1,39 @@
+<apex:page sidebar="false" showHeader="false" controller="Previous_Balance_Ctrl">
+<c:Opportunity_Related_CSS imgName="credit.png"/>
+    <apex:pageMessages id="pageMessageMain"/>
+    <apex:form id="MBForm" styleClass="MBForm"><br/>
+       <div class="bgImg"></div>
+       <div align="center">              
+           <apex:commandButton value="Save" action="{!doSave}" reRender="pageMessageMain" status="ajaxStatus" oncomplete="setfocus('{!$Component.pageMessageMain}');"/>&nbsp;&nbsp;         
+       </div>
+       <table id="MBTable">
+            <tr>
+               <td colspan="4"> 
+                    <c:Extjs_Panel title="Previous Balance"/>
+               </td>
+           </tr>
+            
+            <tr>
+               <td>
+                   <apex:outputLabel value="{!$ObjectType.Opportunity.fields.If_Renewal_Preceding_Opportunity__c.label}"/> 
+               </td>
+               <td align="left" style="padding-left:0px;">
+                   <apex:inputField value="{!oppRecord.If_Renewal_Preceding_Opportunity__c}" />
+               </td>                    
+               <td>
+                   <apex:outputLabel value="{!$ObjectType.Opportunity.fields.Previous_Balance__c.label}"/>                 
+               </td>
+               <td>  
+                  <apex:inputField value="{!oppRecord.Previous_Balance__c}" /> 
+               </td>
+           </tr>
+           
+           
+           
+       </table><br/>
+       <div align="center">              
+            <apex:commandButton value="Save" action="{!doSave}" reRender="pageMessageMain" status="ajaxStatus" oncomplete="setfocus('{!$Component.pageMessageMain}');"/>&nbsp;&nbsp;         
+       </div>           
+    </apex:form>
+    <apex:actionstatus startStyleClass="requiredLoaderBG" id="ajaxStatus" />
+</apex:page>

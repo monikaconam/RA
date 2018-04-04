@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>CAMPAIGN_NAME</field>
+    </columns>
+    <columns>
+        <field>Lead.Tracking_Code__c</field>
+    </columns>
+    <columns>
+        <field>LEAD_ID</field>
+    </columns>
+    <columns>
+        <field>FIRST_NAME</field>
+    </columns>
+    <columns>
+        <field>LAST_NAME</field>
+    </columns>
+    <columns>
+        <field>LEAD_STATUS</field>
+    </columns>
+    <columns>
+        <field>Lead.Five9_Call_Counter__c</field>
+    </columns>
+    <columns>
+        <field>Lead.Correct_Address__c</field>
+    </columns>
+    <columns>
+        <field>Lead.Correct_Company_Name__c</field>
+    </columns>
+    <columns>
+        <field>Lead.Correct_Contact_Name__c</field>
+    </columns>
+    <columns>
+        <field>Lead.Correct_Phone_Number__c</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>CAMPAIGN_NAME</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>MLXP Leads,DNB Leads</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>UCC Leads</name>
+    <params>
+        <name>scopeid</name>
+        <value></value>
+    </params>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CampaignLead</reportType>
+    <scope>orgAll</scope>
+    <showDetails>true</showDetails>
+</Report>

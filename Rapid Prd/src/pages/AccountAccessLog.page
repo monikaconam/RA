@@ -1,0 +1,52 @@
+<apex:page standardController="Account" extensions="RecordAccessController">
+    <apex:includeScript value="{!URLFOR($Resource.jquery)}"  />
+    <apex:form >
+        <apex:actionFunction name="sendIP" action="{!setIPAddress}" rerender="pbSection">
+            <apex:param value="" name="ipAddr" />
+        </apex:actionFunction>
+        
+        <apex:inputhidden id="ipHidden"/>
+        
+        <apex:pageBlock >
+            <apex:pageBlockSection columns="1"  id="pbSection" title="Total Records : {!recordCount}">
+                <apex:pageBlockTable value="{!AccessHistory}" var="p">
+                    <apex:column headerValue="User" width="34%">
+                        <apex:outputLink value="{!'/'& p.id}">{!p.name}</apex:outputLink>
+                    </apex:column>
+                    
+                    <apex:column headerValue="Date" width="50%">
+                        <apex:outputText value="{!p.timeStamp}">
+                        </apex:outputText>
+                    </apex:column>
+                    
+                </apex:pageBlockTable>
+                <apex:panelGrid columns="9">
+                    <apex:commandLink action="{!first}" rendered="{!hasPrevious}" rerender="pbSection">First</apex:commandlink>
+                    <apex:outputLabel rendered="{!hasPrevious}">&nbsp;&nbsp;|&nbsp;&nbsp;</apex:outputLabel>
+                    
+                    <apex:commandLink action="{!previous}" rendered="{!hasPrevious}" rerender="pbSection">Previous</apex:commandlink>
+                    <apex:outputLabel rendered="{!hasPrevious}">&nbsp;&nbsp;|&nbsp;&nbsp;</apex:outputLabel>
+                    
+                    <apex:commandLink action="{!next}" rendered="{!hasNext}" rerender="pbSection">Next</apex:commandlink>
+                    <apex:outputLabel rendered="{!hasNext}">&nbsp;&nbsp;|&nbsp;&nbsp;</apex:outputLabel>
+                    
+                    <apex:commandLink action="{!last}"  rendered="{!hasNext}" rerender="pbSection">Last</apex:commandlink>
+                    <apex:outputLabel rendered="{!hasNext}">&nbsp;&nbsp;|&nbsp;&nbsp;</apex:outputLabel>
+                    
+                    <apex:outputLink value="{!'/apex/AccountAccessLogViewAll?pSize=2000&id='&recId}" target="_blank" rendered="{!recordCount> pagesize}" >Show All</apex:outputLink>
+                </apex:panelGrid>
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+    <script>
+    $(document).ready(function ()
+    {
+      
+        $.getJSON("https://api.ipify.org?format=json", function (data) {
+        $("input[id$='ipHidden']").val(data.ip);
+        sendIP($("input[id$='ipHidden']").val());
+        });
+
+    });
+    </script>
+</apex:page>

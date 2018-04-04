@@ -1,0 +1,527 @@
+<apex:page title="Cash Advance Application" showHeader="false" sidebar="false">
+    <head>
+        <apex:includeScript value="{!URLFOR($Resource.B2B_App_Resource, 'script/Validation_js.js')}"/>
+        <apex:stylesheet value="{!URLFOR($Resource.B2B_App_Resource, 'css/B2B_App_Style.css')}"/>
+        
+    </head>
+ 
+    <body>
+        <form name="Form" method="post" action="Default.aspx" id="Form" class="application_form">
+            <script src="/soap/ajax/12.0/connection.js" type="text/javascript"></script>
+             <apex:includeScript value="{!URLFOR($Resource.B2B_App_Resource, 'script/prototype_js.js')}"/>
+             <apex:includeScript value="{!URLFOR($Resource.B2B_App_Resource, 'script/applink_utils_js.js')}"/>
+             <apex:includeScript value="{!URLFOR($Resource.B2B_App_Resource, 'script/B2B_App_Prefill_js.js')}"/>
+             <apex:includeScript value="{!URLFOR($Resource.B2B_App_Resource, 'script/B2B2B_classes_js.js')}"/>
+             <apex:includeScript value="{!URLFOR($Resource.B2B_App_Resource, 'script/B2B2B_main_js.js')}"/>
+             <apex:includeScript value="{!URLFOR($Resource.B2B_App_Resource,'script/B2B_App_Submit_js.js')}"/>
+             <script type="text/javascript"> 
+              window.onload=function(){
+                  populateForm();
+              }
+             
+                 
+            function addSection(id) 
+            { 
+            var elm = document.getElementById(id); 
+            
+            if (elm.getAttribute('nextId') == null) 
+            { 
+            elm.setAttribute('nextId', '2'); 
+            } 
+            if (elm.getAttribute('maxOccurs') == null) 
+            { 
+            elm.setAttribute('maxOccurs', ''); 
+            } 
+            var nextId = elm.getAttribute('nextId'); 
+            addFromTemplate(elm.id); 
+            } 
+            
+            function removeSection(id, removeId) 
+            { 
+            var elm = document.getElementById(id); 
+            var btnRemove = document.getElementById(removeId); 
+            removeTemplateObject(elm.id); 
+            
+            var count = 0; 
+            var elms = document.getElementsByTagName(elm.tagName); 
+            var prevSibling; 
+            for (var i=0;i<elms.length;i++) 
+            { 
+            if(elms[i].id && elms[i].id.match(/^fldAddUser\d{3}FirstName$/i)) 
+            { 
+            prevSibling = elms[i]; 
+            count++; 
+            } 
+            } 
+            if (btnRemove.offsetHeight >= 1 && count < 2) 
+            { 
+            var clss = "" + btnRemove.parentNode.parentNode.parentNode.className; 
+            btnRemove.parentNode.parentNode.parentNode.className = clss.replace(/screenOnly/g, ""); 
+            btnRemove.parentNode.parentNode.parentNode.style.display = "none"; 
+            } 
+            } 
+            </script> 
+            <script type="text/javascript"> 
+            window.fields = ['fldProduct001Type','fldProduct001Amount','fldProduct001Term','fldProduct001Purpose','fldProduct001NumStmts','fldProduct001PaybackAmt','fldBusInfoLegalName','fldBusInfoDBA','fldBusInfoExisting','fldBusInfoTaxID','fldBusInfoStructure','fldBusInfoDateEst','fldBusInfoManSince','fldBusInfoPhone','fldBusInfoFax','fldBusInfoWebsite','fldBusInfoBusDesc','fldBusInfoAnnualSales','fldBusInfoNumLoc','fldBusInfoMonRemaining','fldBusInfoOwnRent','fldBusInfoAgentName','fldBusInfoAgentPhone','fldBusInfoMonthsCurrentProcessor','fldBusInfoAvgMoCC','fldBusInfoCCCalc','fldBusInfoBusAddr1','fldBusInfoBusAddr2','fldBusInfoBusCity','fldBusInfoBusState','fldBusInfoBusZip','fldBusInfoMailingSame','fldBusInfoMailingAddr1','fldBusInfoMailingAddr2','fldBusInfoMailingCity','fldBusInfoMailingState','fldBusInfoMailingZip','fldOwner001Prefix','fldOwner001NameFirst','fldOwner001NameMiddle','fldOwner001NameLast','fldOwner001Suffix','fldOwner001DOB','fldOwner001Existing','fldOwner001PrincipalType','fldOwner001Title','fldOwner001PercentOwnership','fldOwner001SSN','fldOwner001Addr1','fldOwner001Addr2','fldOwner001City','fldOwner001State','fldOwner001Zip','fldOwner001HomePhone','fldOwner001MobilePhone','fldOwner001Email','fldOwner001MonthsCurrentAddr','fldOwner001MonthsPreviousAddr','fldOwner001MonthlyGrossSalary','fldOwner001Bankruptcy'];
+            </script> 
+                        
+            <div id="divAppTitle" class="application_title_div">Cash Advance Application</div>
+            <div class="application_note_div">Required fields are denoted as follows: <span class="field_title_required">Field Title</span>
+                <input type="hidden" id="fldContact001Id" name="fldContact001Id" />
+                <input type="hidden" id="fldContact002Id" name="fldContact002Id" />
+                <input type="hidden" id="fldContact003Id" name="fldContact003Id" />
+                <input type="hidden" id="fldOppName" name="fldOppName" />
+            </div>
+            <div id="sectionCreditRequest" class="application_section_div">
+                <div class="application_section_title_div">Advance Request</div>
+                <table id="sectionCreditRequest_layout_table" class="application_section_layout_table" border="0">
+                    <tr>
+                        <td class="application_section_layout_column1" valign="top">
+                            <table class="application_section_layout_left_table" border="0" style="width:100%;">
+                                <tr class="field_row">
+                                    <td class="field_vert_cell" colspan="2">
+                                        <span class="field_title_vert field_title_required"><label for="fldProduct001Type">Account Type:</label></span>
+                                        <div class="field_control">
+                                            <select name="fldProduct001Type" id="fldProduct001Type" class="field_dropdown_vert" errorText="Select a product" validateFunction="updateDropdown" presence="required" onchange=" var val = ''+document.getElementById('fldProduct001Type').value; if( val == 'BHC_NONE_SEL' ) hideField('fldProduct001Term');  if( val == 'BHC_NONE_SEL' ) hideField('fldProduct001Amount');  if( val == 'CashAdvance'  ||  val == 'CheckAdvance'  ||  val == 'CheckAdvanceRenewal'  ||  val == 'CheckCreditCardAdvance'  ||  val == 'CheckCreditCardAdvRenewal'  ||  val == 'Renewal' ) showField('fldProduct001Term');  if( val == 'CashAdvance'  ||  val == 'CheckAdvance'  ||  val == 'CheckAdvanceRenewal'  ||  val == 'CheckCreditCardAdvance'  ||  val == 'CheckCreditCardAdvRenewal'  ||  val == 'Renewal' ) showField('fldProduct001Amount'); if( val == 'CashAdvance'  ||  val == 'CheckAdvance'  ||  val == 'CheckAdvanceRenewal'  ||  val == 'CheckCreditCardAdvance'  ||  val == 'CheckCreditCardAdvRenewal'  ||  val == 'Renewal' ) SetAttributes('fldProduct001Term',{lowValue:'1',highValue:'500',hint:'1 to 500 Months',errorText:'Please enter a valid term from 1 to 500 months.'}); if( val == 'CashAdvance'  ||  val == 'CheckAdvance'  ||  val == 'CheckAdvanceRenewal'  ||  val == 'CheckCreditCardAdvance'  ||  val == 'CheckCreditCardAdvRenewal'  ||  val == 'Renewal' ) SetAttributes('fldProduct001Amount',{lowValue:'2500',highValue:'5000000',hint:'$2,500 to $5,000,000',errorText:'Please enter a valid currency amount from $2,500 to $5,000,000.'});">
+                                                <option selected="selected" value="BHC_NONE_SEL" class="field_dropdown_option" title=""></option>
+                                                <option value="CashAdvance" class="field_dropdown_option" title="Cash Advance">Cash Advance</option>
+                                                <option value="CheckAdvance" class="field_dropdown_option" title="Check Advance">Check Advance</option>
+                                                <option value="CheckAdvanceRenewal" class="field_dropdown_option" title="Check Advance Renewal">Check Advance Renewal</option>
+                                                <option value="CheckCreditCardAdvance" class="field_dropdown_option" title="Check Credit Card Advance">Check Credit Card Advance</option>
+                                                <option value="CheckCreditCardAdvRenewal" class="field_dropdown_option" title="Check Credit Card Advance Renewal">Check Credit Card Advance Renewal</option>
+                                                <option value="Renewal" class="field_dropdown_option" title="Cash Advance Renewal">Cash Advance Renewal</option>
+                                            </select>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="field_row" style="display:none;">
+                                    <td class="field_title field_title_required">
+                                        <label for="fldProduct001Amount">Amount:</label>
+                                    </td>
+                                    <td class="field_control_cell">
+                                        <div class="field_control">
+                                            <div class=" field_currency_div">$<input name="fldProduct001Amount" type="text" id="fldProduct001Amount" class="field_currency" presence="required" validateFunction="updateCurrency" onchange=" updateCurrency(id);" /></div>
+                                        </div>
+                                        <div id="fldProduct001Amount_hint" class="field_hint">hint text</div>
+                                    </td>
+                                </tr>
+                                <tr class="field_row" style="display:none;">
+                                    <td class="field_title field_title_required">
+                                        <label for="fldProduct001Term">Estimated Days to Repay:</label>
+                                    </td>
+                                    <td class="field_control_cell">
+                                        <div class="field_control"><input name="fldProduct001Term" type="text" id="fldProduct001Term" class="field_number" presence="required" validateFunction="updateNumber" /></div>
+                                        <div id="fldProduct001Term_hint" class="field_hint">hint text</div>
+                                    </td>
+                                </tr>
+                            </table>
+                            <input name="fieldGroupProduct001_L1" type="hidden" id="fieldGroupProduct001_L1" class="field_group_field_list" value="|fldProduct001Type|fldProduct001Amount|fldProduct001Term" />
+                        </td>
+                        <td class="application_section_layout_column2" valign="top">
+                            <table class="application_section_layout_right_table" border="0" style="width:100%;">
+                                <tr class="field_row">
+                                    <td class="field_vert_cell" colspan="2">
+                                        <span class="field_title_vert field_title_required"><label for="fldProduct001Purpose">Purpose of Funds:</label></span>
+                                        <div class="field_control">
+                                            <select name="fldProduct001Purpose" id="fldProduct001Purpose" class="field_dropdown_vert" errorText="Select a purpose" validateFunction="updateDropdown" presence="required">
+                                                <option selected="selected" value="BHC_NONE_SEL" class="field_dropdown_option" title=""></option>
+                                                <option value="DEBT" class="field_dropdown_option" title="Pay off debt">Pay off debt</option>
+                                                <option value="EXPAND" class="field_dropdown_option" title="Expand business">Expand business</option>
+                                                <option value="FIXASSETS" class="field_dropdown_option" title="Purchase new equipment, inventory">Purchase new equipment, inventory</option>
+                                                <option value="NEWLOCATION" class="field_dropdown_option" title="Open a new location">Open a new location</option>
+                                                <option value="RENOVATE" class="field_dropdown_option" title="Renovation">Renovation</option>
+                                                <option value="ERWC" class="field_dropdown_option" title="Emergency working capital">Emergency working capital</option>
+                                                <option value="BUYOUT" class="field_dropdown_option" title="Buyout a partner">Buyout a partner</option>
+                                                <option value="TAXLIEN" class="field_dropdown_option" title="Pay off a tax lien">Pay off a tax lien</option>
+                                                <option value="SURPLUS" class="field_dropdown_option" title="Seasonal - surplus cash for off-season">Seasonal - surplus cash for off-season</option>
+                                                <option value="CONSTRUCT" class="field_dropdown_option" title="Construction">Construction</option>
+                                                <option value="PAYROLL" class="field_dropdown_option" title="Payroll">Payroll</option>
+                                                <option value="CASHFLOW" class="field_dropdown_option" title="Cash flow problems - security">Cash flow problems - security</option>
+                                                <option value="MKTG" class="field_dropdown_option" title="Marketing expense, promotion">Marketing expense, promotion</option>
+                                                <option value="OTHER" class="field_dropdown_option" title="Other">Other</option>
+                                            </select>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="field_row">
+                <td class="field_title"><label for="fldProduct001NumStmts">How many months of processing statements have you included?</label></td><td class="field_control_cell"><div class="field_control"><input name="fldProduct001NumStmts" type="text" id="fldProduct001NumStmts" class="field_number" required="false" presence="optional" validateFunction="updateNumber" /></div></td>
+            </tr><tr class="field_row">
+                <td class="field_title"><label for="fldProduct001PaybackAmt">Payback Amount:</label></td><td class="field_control_cell"><div class="field_control"><div class=" field_currency_div">$<input name="fldProduct001PaybackAmt" type="text" id="fldProduct001PaybackAmt" class="field_currency" required="false" presence="optional" validateFunction="updateCurrency" onchange=" updateCurrency(id);" /></div></div></td>
+            </tr>
+        </table><input name="fieldGroupProduct001_R1" type="hidden" id="fieldGroupProduct001_R1" class="field_group_field_list" value="|fldProduct001Purpose|fldProduct001NumStmts|fldProduct001PaybackAmt" /></td>
+                    </tr>
+                </table>
+            </div>
+            <div id="sectionBusinessInformation" class="application_section_div">
+                <div class="application_section_title_div">Borrower Information</div>
+                <table id="sectionBusinessInformation_layout_table" class="application_section_layout_table" border="0">
+                    <tr>
+                        <td class="application_section_layout_column1" valign="top"><table class="application_section_layout_left_table" border="0" style="width:100%;">
+                            <tr class="field_row">
+                                <td class="field_title field_title_required"><label for="fldBusInfoLegalName">Legal Name:</label></td>
+                                <td class="field_control_cell"><div class="field_control"><input name="fldBusInfoLegalName" type="text" id="fldBusInfoLegalName" class="field_text" presence="required" validateFunction="updateText" /></div></td>
+                            </tr>
+                            <tr class="field_row">
+                                <td class="field_title field_title_required"><label for="fldBusInfoDBA">Doing Business As:</label></td>
+                                <td class="field_control_cell"><div class="field_control"><input name="fldBusInfoDBA" type="text" id="fldBusInfoDBA" class="field_text" presence="required" validateFunction="updateText" /></div></td>
+                            </tr>
+                            <tr class="field_row">
+                                <td class="field_title"><label for="fldBusInfoExisting">Existing Customer?:</label></td>
+                                <td class="field_control_cell"><div class="field_control"><select name="fldBusInfoExisting" id="fldBusInfoExisting" class="field_dropdown" validateFunction="updateDropdown" required="false" presence="optional">
+                                    <option selected="selected" value="BHC_NONE_SEL" class="field_dropdown_option" title=""></option>
+                                    <option value="true" class="field_dropdown_option" title="Yes">Yes</option>
+                                    <option value="false" class="field_dropdown_option" title="No">No</option>
+                                    </select></div>
+                                </td>
+                            </tr>
+                            <tr class="field_row">
+                                <td class="field_title field_title_required"><label for="fldBusInfoTaxID">Federal Tax ID:</label></td>
+                                <td class="field_control_cell"><div class="field_control"><input name="fldBusInfoTaxID" type="text" id="fldBusInfoTaxID" class="field_ein" presence="required" validateFunction="updateEIN" onchange=" updateEIN(this.id);" /></div></td>
+                            </tr>
+                            <tr class="field_row">
+                                <td class="field_title field_title_required"><label for="fldBusInfoStructure">Business Structure:</label></td>
+                                <td class="field_control_cell"><div class="field_control"><select name="fldBusInfoStructure" id="fldBusInfoStructure" class="field_dropdown" validateFunction="updateDropdown" presence="required">
+                                    <option selected="selected" value="BHC_NONE_SEL" class="field_dropdown_option" title=""></option>
+                                    <option value="PROP" class="field_dropdown_option" title="Proprietorship">Proprietorship</option>
+                                    <option value="GNPT" class="field_dropdown_option" title="General Partnership">General Partnership</option>
+                                    <option value="LMPT" class="field_dropdown_option" title="Limited Partnership">Limited Partnership</option>
+                                    <option value="SCOR" class="field_dropdown_option" title="S-Corporation">S-Corporation</option>
+                                    <option value="CCOR" class="field_dropdown_option" title="C-Corporation">C-Corporation</option>
+                                    <option value="LMLB" class="field_dropdown_option" title="Limited Liability Company">Limited Liability Company</option>
+                                    </select></div>
+                                </td>
+                            </tr>
+                            <tr class="field_row">
+                                <td class="field_title"><label for="fldBusInfoDateEst">Date Business Established:</label></td>
+                                <td class="field_control_cell"><div class="field_control"><input name="fldBusInfoDateEst" type="text" id="fldBusInfoDateEst" class="field_date" required="false" presence="optional" validateFunction="updateDate" onchange="updateDate(id);" /></div><div id="fldBusInfoDateEst_hint" class="field_hint">(mm/dd/yyyy)</div></td>
+                            </tr>
+                            <tr class="field_row">
+                                <td class="field_title field_title_required"><label for="fldBusInfoManSince">Present Management Since:</label></td>
+                                <td class="field_control_cell"><div class="field_control"><input name="fldBusInfoManSince" type="text" id="fldBusInfoManSince" class="field_date" presence="required" validateFunction="updateDate" onchange="updateDate(id);" /></div><div id="fldBusInfoManSince_hint" class="field_hint">(mm/dd/yyyy)</div></td>
+                            </tr>
+                            <tr class="field_row">
+                                <td class="field_title field_title_required"><label for="fldBusInfoPhone">Primary Business Phone:</label></td>
+                                <td class="field_control_cell"><div class="field_control"><input name="fldBusInfoPhone" type="text" id="fldBusInfoPhone" validateFunction="updatePhone" onchange="updatePhone(this.id);" class="field_phone" presence="required" required="true" /></div></td>
+                            </tr>
+                            <tr class="field_row">
+                                <td class="field_title"><label for="fldBusInfoFax">Primary Business Fax:</label></td>
+                                <td class="field_control_cell"><div class="field_control"><input name="fldBusInfoFax" type="text" id="fldBusInfoFax" validateFunction="updatePhone" onchange="updatePhone(this.id);" class="field_phone" required="false" presence="optional" /></div></td>
+                            </tr>
+                            <tr class="field_row">
+                                <td class="field_title"><label for="fldBusInfoWebsite">Website Address:</label></td>
+                                <td class="field_control_cell"><div class="field_control"><input name="fldBusInfoWebsite" type="text" id="fldBusInfoWebsite" class="field_text" required="false" presence="optional" validateFunction="updateText" /></div></td>
+                            </tr>
+                        </table>
+                        <input name="fieldGroupBusInfo_L1" type="hidden" id="fieldGroupBusInfo_L1" class="field_group_field_list" value="|fldBusInfoLegalName|fldBusInfoDBA|fldBusInfoExisting|fldBusInfoTaxID|fldBusInfoStructure|fldBusInfoDateEst|fldBusInfoManSince|fldBusInfoPhone|fldBusInfoFax|fldBusInfoWebsite" />
+                    </td>
+                    <td class="application_section_layout_column2" valign="top">
+                        <table class="application_section_layout_right_table" border="0" style="width:100%;">
+            <tr class="field_row">
+                <td class="field_title"><label for="fldBusInfoBusDesc">Brief Business Description:</label></td><td class="field_control_cell"><div class="field_control"><input name="fldBusInfoBusDesc" type="text" id="fldBusInfoBusDesc" class="field_text" required="false" presence="optional" validateFunction="updateText" /></div></td>
+            </tr><tr class="field_row">
+                <td class="field_title field_title_required"><label for="fldBusInfoAnnualSales">Annual Sales Revenue:</label></td><td class="field_control_cell"><div class="field_control"><div class=" field_currency_div">$<input name="fldBusInfoAnnualSales" type="text" id="fldBusInfoAnnualSales" class="field_currency" presence="required" validateFunction="updateCurrency" onchange=" updateCurrency(id);" /></div></div><div id="fldBusInfoAnnualSales_hint" class="field_hint">(last full year)</div></td>
+            </tr><tr class="field_row">
+                <td class="field_title field_title_required"><label for="fldBusInfoNumLoc">Number of Business Locations:</label></td><td class="field_control_cell"><div class="field_control"><input name="fldBusInfoNumLoc" type="text" id="fldBusInfoNumLoc" class="field_number" presence="required" validateFunction="updateNumber" /></div></td>
+            </tr><tr class="field_row">
+                <td class="field_title field_title_required"><label for="fldBusInfoMonRemaining">Months Remaining on site:</label></td><td class="field_control_cell"><div class="field_control"><input name="fldBusInfoMonRemaining" type="text" id="fldBusInfoMonRemaining" class="field_number" presence="required" validateFunction="updateNumber" /></div></td>
+            </tr><tr class="field_row">
+                <td class="field_title field_title_required"><label for="fldBusInfoOwnRent">Does the merchant own the building?</label></td><td class="field_control_cell"><div class="field_control"><select name="fldBusInfoOwnRent" id="fldBusInfoOwnRent" class="field_dropdown" validateFunction="updateDropdown" presence="required">
+                    <option selected="selected" value="BHC_NONE_SEL" class="field_dropdown_option" title=""></option>
+                    <option value="OWN" class="field_dropdown_option" title="Owns">Owns</option>
+                    <option value="LEASE" class="field_dropdown_option" title="Leases">Leases</option>
+                </select></div></td>
+            </tr><tr class="field_row">
+                <td class="field_title"><label for="fldBusInfoAgentName">Landlord/Agent Name:</label></td><td class="field_control_cell"><div class="field_control"><input name="fldBusInfoAgentName" type="text" id="fldBusInfoAgentName" class="field_text" required="false" presence="optional" validateFunction="updateText" /></div></td>
+            </tr><tr class="field_row">
+                <td class="field_title"><label for="fldBusInfoAgentPhone">Landlord/Agent Phone:</label></td><td class="field_control_cell"><div class="field_control"><input name="fldBusInfoAgentPhone" type="text" id="fldBusInfoAgentPhone" validateFunction="updatePhone" onchange="updatePhone(this.id);" class="field_phone" required="false" presence="optional" /></div></td>
+            </tr><tr class="field_row">
+                <td class="field_title field_title_required"><label for="fldBusInfoMonthsCurrentProcessor">Months with current processor?</label></td><td class="field_control_cell"><div class="field_control"><input name="fldBusInfoMonthsCurrentProcessor" type="text" id="fldBusInfoMonthsCurrentProcessor" class="field_number" presence="required" validateFunction="updateNumber" /></div></td>
+            </tr><tr class="field_row">
+                <td class="field_title field_title_required"><label for="fldBusInfoAvgMoCC">Average Monthly Visa/MC:</label></td><td class="field_control_cell"><div class="field_control"><div class=" field_currency_div">$<input name="fldBusInfoAvgMoCC" type="text" id="fldBusInfoAvgMoCC" class="field_currency" presence="required" validateFunction="updateCurrency" onchange=" updateCurrency(id);" /></div></div></td>
+            </tr>
+        </table><input name="fieldGroupBusInfo_R1" type="hidden" id="fieldGroupBusInfo_R1" class="field_group_field_list" value="|fldBusInfoBusDesc|fldBusInfoAnnualSales|fldBusInfoNumLoc|fldBusInfoMonRemaining|fldBusInfoOwnRent|fldBusInfoAgentName|fldBusInfoAgentPhone|fldBusInfoMonthsCurrentProcessor|fldBusInfoAvgMoCC|fldBusInfoCCCalc" /></td>
+    </tr>
+</table><div id="BusinessAddress" class="application_subsection_div"><div id="BusinessAddressContentDiv" class="application_subsection_content_div"><table id="BusinessAddress_layout_table" class="application_subsection_layout_table" border="0">
+    <tr>
+        <td class="application_subsection_layout_column1" valign="top"><table class="application_subsection_layout_left_table" border="0" style="width:100%;">
+            <tr class="field_row">
+                <td class="field_title field_title_required"><label for="fldBusInfoBusAddr1">Business Address:</label></td><td class="field_control_cell"><div class="field_control"><input name="fldBusInfoBusAddr1" type="text" id="fldBusInfoBusAddr1" class="field_text" presence="required" validateFunction="updateText" /></div></td>
+            </tr><tr class="field_row">
+                <td class="field_title"><label for="fldBusInfoBusAddr2"></label></td><td class="field_control_cell"><div class="field_control"><input name="fldBusInfoBusAddr2" type="text" id="fldBusInfoBusAddr2" class="field_text" required="false" presence="optional" validateFunction="updateText" /></div></td>
+            </tr><tr class="field_row">
+                <td class="field_title field_title_required"><label for="fldBusInfoBusCity">City:</label></td><td class="field_control_cell"><div class="field_control"><input name="fldBusInfoBusCity" type="text" id="fldBusInfoBusCity" class="field_text" presence="required" validateFunction="updateText" /></div></td>
+            </tr><tr class="field_row">
+                <td class="field_title field_title_required"><label for="fldBusInfoBusState">State:</label></td><td class="field_control_cell"><div class="field_control"><select name="fldBusInfoBusState" id="fldBusInfoBusState" class="field_dropdown" validateFunction="updateDropdown" presence="required">
+                    <option selected="selected" value="BHC_NONE_SEL" title=""></option>
+                    <option value="AK" title="AK">AK</option>
+                    <option value="AL" title="AL">AL</option>
+                    <option value="AR" title="AR">AR</option>
+                    <option value="AZ" title="AZ">AZ</option>
+                    <option value="CT" title="CT">CT</option>
+                    <option value="CA" title="CA">CA</option>
+                    <option value="CO" title="CO">CO</option>
+                    <option value="DC" title="DC">DC</option>
+                    <option value="DE" title="DE">DE</option>
+                    <option value="FL" title="FL">FL</option>
+                    <option value="GA" title="GA">GA</option>
+                    <option value="HI" title="HI">HI</option>
+                    <option value="IA" title="IA">IA</option>
+                    <option value="ID" title="ID">ID</option>
+                    <option value="IL" title="IL">IL</option>
+                    <option value="IN" title="IN">IN</option>
+                    <option value="KS" title="KS">KS</option>
+                    <option value="KY" title="KY">KY</option>
+                    <option value="LA" title="LA">LA</option>
+                    <option value="MA" title="MA">MA</option>
+                    <option value="MD" title="MD">MD</option>
+                    <option value="ME" title="ME">ME</option>
+                    <option value="MI" title="MI">MI</option>
+                    <option value="MN" title="MN">MN</option>
+                    <option value="MO" title="MO">MO</option>
+                    <option value="MS" title="MS">MS</option>
+                    <option value="MT" title="MT">MT</option>
+                    <option value="NC" title="NC">NC</option>
+                    <option value="ND" title="ND">ND</option>
+                    <option value="NE" title="NE">NE</option>
+                    <option value="NH" title="NH">NH</option>
+                    <option value="NJ" title="NJ">NJ</option>
+                    <option value="NM" title="NM">NM</option>
+                    <option value="NV" title="NV">NV</option>
+                    <option value="NY" title="NY">NY</option>
+                    <option value="OH" title="OH">OH</option>
+                    <option value="OK" title="OK">OK</option>
+                    <option value="OR" title="OR">OR</option>
+                    <option value="PA" title="PA">PA</option>
+                    <option value="RI" title="RI">RI</option>
+                    <option value="SC" title="SC">SC</option>
+                    <option value="SD" title="SD">SD</option>
+                    <option value="TN" title="TN">TN</option>
+                    <option value="TX" title="TX">TX</option>
+                    <option value="UT" title="UT">UT</option>
+                    <option value="VA" title="VA">VA</option>
+                    <option value="VT" title="VT">VT</option>
+                    <option value="WA" title="WA">WA</option>
+                    <option value="WI" title="WI">WI</option>
+                    <option value="WV" title="WV">WV</option>
+                    <option value="WY" title="WY">WY</option>
+                </select></div></td>
+            </tr><tr class="field_row">
+                <td class="field_title field_title_required"><label for="fldBusInfoBusZip">Zip:</label></td><td class="field_control_cell"><div class="field_control"><input name="fldBusInfoBusZip" type="text" id="fldBusInfoBusZip" class="field_zip" presence="required" validateFunction="updateZip" onchange=" updateZip(this.id);" /></div></td>
+            </tr><tr class="field_row">
+                <td class="field_title field_title_required"><label for="fldBusInfoMailingSame">Use Mailing Address in Corresponce?</label></td><td class="field_control_cell"><div class="field_control"><select name="fldBusInfoMailingSame" id="fldBusInfoMailingSame" class="field_dropdown" validateFunction="updateDropdown" presence="required">
+                    <option selected="selected" value="true" class="field_dropdown_option" title="Yes">Yes</option>
+                    <option value="false" class="field_dropdown_option" title="No">No</option>
+                </select></div></td>
+            </tr>
+        </table><input name="fieldGroupBusinessAddress_L1" type="hidden" id="fieldGroupBusinessAddress_L1" class="field_group_field_list" value="|fldBusInfoBusAddr1|fldBusInfoBusAddr2|fldBusInfoBusCity|fldBusInfoBusState|fldBusInfoBusZip|fldBusInfoMailingSame" /></td><td class="application_subsection_layout_column2" valign="top"><table class="application_subsection_layout_right_table" border="0" style="width:100%;">
+            <tr class="field_row">
+                <td class="field_title"><label for="fldBusInfoMailingAddr1">Mailing Address:</label></td><td class="field_control_cell"><div class="field_control"><input name="fldBusInfoMailingAddr1" type="text" id="fldBusInfoMailingAddr1" class="field_text" required="false" presence="optional" validateFunction="updateText" /></div></td>
+            </tr><tr class="field_row">
+                <td class="field_title"><label for="fldBusInfoMailingAddr2"></label></td><td class="field_control_cell"><div class="field_control"><input name="fldBusInfoMailingAddr2" type="text" id="fldBusInfoMailingAddr2" class="field_text" required="false" presence="optional" validateFunction="updateText" /></div></td>
+            </tr><tr class="field_row">
+                <td class="field_title"><label for="fldBusInfoMailingCity">City:</label></td><td class="field_control_cell"><div class="field_control"><input name="fldBusInfoMailingCity" type="text" id="fldBusInfoMailingCity" class="field_text" required="false" presence="optional" validateFunction="updateText" /></div></td>
+            </tr><tr class="field_row">
+                <td class="field_title"><label for="fldBusInfoMailingState">State:</label></td><td class="field_control_cell"><div class="field_control"><select name="fldBusInfoMailingState" id="fldBusInfoMailingState" class="field_dropdown" validateFunction="updateDropdown" required="false" presence="optional">
+                    <option selected="selected" value="BHC_NONE_SEL" title=""></option>
+                    <option value="AK" title="AK">AK</option>
+                    <option value="AL" title="AL">AL</option>
+                    <option value="AR" title="AR">AR</option>
+                    <option value="AZ" title="AZ">AZ</option>
+                    <option value="CT" title="CT">CT</option>
+                    <option value="CA" title="CA">CA</option>
+                    <option value="CO" title="CO">CO</option>
+                    <option value="DC" title="DC">DC</option>
+                    <option value="DE" title="DE">DE</option>
+                    <option value="FL" title="FL">FL</option>
+                    <option value="GA" title="GA">GA</option>
+                    <option value="HI" title="HI">HI</option>
+                    <option value="IA" title="IA">IA</option>
+                    <option value="ID" title="ID">ID</option>
+                    <option value="IL" title="IL">IL</option>
+                    <option value="IN" title="IN">IN</option>
+                    <option value="KS" title="KS">KS</option>
+                    <option value="KY" title="KY">KY</option>
+                    <option value="LA" title="LA">LA</option>
+                    <option value="MA" title="MA">MA</option>
+                    <option value="MD" title="MD">MD</option>
+                    <option value="ME" title="ME">ME</option>
+                    <option value="MI" title="MI">MI</option>
+                    <option value="MN" title="MN">MN</option>
+                    <option value="MO" title="MO">MO</option>
+                    <option value="MS" title="MS">MS</option>
+                    <option value="MT" title="MT">MT</option>
+                    <option value="NC" title="NC">NC</option>
+                    <option value="ND" title="ND">ND</option>
+                    <option value="NE" title="NE">NE</option>
+                    <option value="NH" title="NH">NH</option>
+                    <option value="NJ" title="NJ">NJ</option>
+                    <option value="NM" title="NM">NM</option>
+                    <option value="NV" title="NV">NV</option>
+                    <option value="NY" title="NY">NY</option>
+                    <option value="OH" title="OH">OH</option>
+                    <option value="OK" title="OK">OK</option>
+                    <option value="OR" title="OR">OR</option>
+                    <option value="PA" title="PA">PA</option>
+                    <option value="RI" title="RI">RI</option>
+                    <option value="SC" title="SC">SC</option>
+                    <option value="SD" title="SD">SD</option>
+                    <option value="TN" title="TN">TN</option>
+                    <option value="TX" title="TX">TX</option>
+                    <option value="UT" title="UT">UT</option>
+                    <option value="VA" title="VA">VA</option>
+                    <option value="VT" title="VT">VT</option>
+                    <option value="WA" title="WA">WA</option>
+                    <option value="WI" title="WI">WI</option>
+                    <option value="WV" title="WV">WV</option>
+                    <option value="WY" title="WY">WY</option>
+                </select></div></td>
+            </tr><tr class="field_row">
+                <td class="field_title"><label for="fldBusInfoMailingZip">Zip:</label></td><td class="field_control_cell"><div class="field_control"><input name="fldBusInfoMailingZip" type="text" id="fldBusInfoMailingZip" class="field_zip" required="false" presence="optional" validateFunction="updateZip" onchange=" updateZip(this.id);" /></div></td>
+            </tr>
+        </table><input name="fieldGroupBusinessAddress_R1" type="hidden" id="fieldGroupBusinessAddress_R1" class="field_group_field_list" value="|fldBusInfoMailingAddr1|fldBusInfoMailingAddr2|fldBusInfoMailingCity|fldBusInfoMailingState|fldBusInfoMailingZip" /></td>
+    </tr>
+</table></div></div></div><div id="sectionOwnerPrincipalInformation" class="application_section_div"><div class="application_section_title_div">Owner / Principal Information</div><div id="Owner001" class="application_subsection_div"><div class="application_subsection_title_div">Owner/Principal 001</div><div id="Owner001ContentDiv" class="application_subsection_content_div"><table id="Owner001_layout_table" class="application_subsection_layout_table" border="0">
+    <tr>
+        <td class="application_subsection_layout_column1" valign="top"><table class="application_subsection_layout_left_table" border="0" style="width:100%;">
+            <tr class="field_row">
+                <td class="field_title"><label for="fldOwner001Prefix">Prefix:</label></td><td class="field_control_cell"><div class="field_control"><select name="fldOwner001Prefix" id="fldOwner001Prefix" class="field_dropdown" validateFunction="updateDropdown" required="false" presence="optional">
+                    <option selected="selected" value="" class="field_dropdown_option" title="--None--">--None--</option>
+                    <option value="Mr." class="field_dropdown_option" title="Mr.">Mr.</option>
+                    <option value="Mrs." class="field_dropdown_option" title="Mrs.">Mrs.</option>
+                    <option value="Ms." class="field_dropdown_option" title="Ms.">Ms.</option>
+                    <option value="Dr." class="field_dropdown_option" title="Dr.">Dr.</option>
+                </select></div></td>
+            </tr><tr class="field_row">
+                <td class="field_title field_title_required"><label for="fldOwner001NameFirst">First Name:</label></td><td class="field_control_cell"><div class="field_control"><input name="fldOwner001NameFirst" type="text" id="fldOwner001NameFirst" class="field_text" errorText="First Name is Required" presence="required" validateFunction="updateText" /></div></td>
+            </tr><tr class="field_row">
+                <td class="field_title"><label for="fldOwner001NameMiddle">Middle Name:</label></td><td class="field_control_cell"><div class="field_control"><input name="fldOwner001NameMiddle" type="text" id="fldOwner001NameMiddle" class="field_text" required="false" presence="optional" validateFunction="updateText" /></div></td>
+            </tr><tr class="field_row">
+                <td class="field_title field_title_required"><label for="fldOwner001NameLast">Last Name:</label></td><td class="field_control_cell"><div class="field_control"><input name="fldOwner001NameLast" type="text" id="fldOwner001NameLast" class="field_text" errorText="Last Name is Required" presence="required" validateFunction="updateText" /></div></td>
+            </tr><tr class="field_row">
+                <td class="field_title"><label for="fldOwner001Suffix">Suffix:</label></td><td class="field_control_cell"><div class="field_control"><select name="fldOwner001Suffix" id="fldOwner001Suffix" class="field_dropdown" validateFunction="updateDropdown" required="false" presence="optional">
+                    <option selected="selected" value="" class="field_dropdown_option" title="--None--">--None--</option>
+                    <option value="Sr." class="field_dropdown_option" title="Sr.">Sr.</option>
+                    <option value="Jr." class="field_dropdown_option" title="Jr.">Jr.</option>
+                    <option value="II" class="field_dropdown_option" title="II">II</option>
+                    <option value="III" class="field_dropdown_option" title="III">III</option>
+                    <option value="IV" class="field_dropdown_option" title="IV">IV</option>
+                    <option value="V" class="field_dropdown_option" title="V">V</option>
+                    <option value="VI" class="field_dropdown_option" title="VI">VI</option>
+                </select></div></td>
+            </tr><tr class="field_row">
+                <td class="field_title"><label for="fldOwner001DOB">Date of Birth:</label></td><td class="field_control_cell"><div class="field_control"><input name="fldOwner001DOB" type="text" id="fldOwner001DOB" class="field_date" errorText="Date of Birth is Required" required="false" presence="optional" validateFunction="updateDate" onchange="updateDate(id);" /></div><div id="fldOwner001DOB_hint" class="field_hint">(mm/dd/yyyy)</div></td>
+            </tr><tr class="field_row">
+                <td class="field_title"><label for="fldOwner001Existing">Existing Customer?</label></td><td class="field_control_cell"><div class="field_control"><select name="fldOwner001Existing" id="fldOwner001Existing" class="field_dropdown" validateFunction="updateDropdown" required="false" presence="optional">
+                    <option selected="selected" value="BHC_NONE_SEL" class="field_dropdown_option" title=""></option>
+                    <option value="true" class="field_dropdown_option" title="Yes">Yes</option>
+                    <option value="false" class="field_dropdown_option" title="No">No</option>
+                </select></div></td>
+            </tr><tr class="field_row">
+                <td class="field_title field_title_required"><label for="fldOwner001PrincipalType">Principal Type:</label></td><td class="field_control_cell"><div class="field_control"><select name="fldOwner001PrincipalType" id="fldOwner001PrincipalType" class="field_dropdown" errorText="Please select Principal Type" validateFunction="updateDropdown" presence="required">
+                    <option selected="selected" value="BHC_NONE_SEL" class="field_dropdown_option" title=""></option>
+                    <option value="Guarantor" class="field_dropdown_option" title="Guarantor">Guarantor</option>
+                    <option value="Cosigner &amp; Guarantor" class="field_dropdown_option" title="Cosigner &amp; Guarantor">Cosigner &amp; Guarantor</option>
+                    <option value="Signer &amp; Guarantor" class="field_dropdown_option" title="Signer &amp; Guarantor">Signer &amp; Guarantor</option>
+                </select></div></td>
+            </tr><tr class="field_row">
+                <td class="field_title"><label for="fldOwner001Title">Title:</label></td><td class="field_control_cell"><div class="field_control"><input name="fldOwner001Title" type="text" id="fldOwner001Title" class="field_text" required="false" presence="optional" validateFunction="updateText" /></div></td>
+            </tr><tr class="field_row">
+                <td class="field_title field_title_required"><label for="fldOwner001PercentOwnership">Percent Ownership:</label></td><td class="field_control_cell"><div class="field_control"><div class=" field_percent_div"><input name="fldOwner001PercentOwnership" type="text" id="fldOwner001PercentOwnership" class="field_percent" presence="required" validateFunction="updatePercent" />%</div></div></td>
+            </tr><tr class="field_row">
+                <td class="field_title field_title_required"><label for="fldOwner001SSN">SSN:</label></td><td class="field_control_cell"><div class="field_control"><input name="fldOwner001SSN" type="text" id="fldOwner001SSN" class="field_ssn" errorText="SSN is Required" presence="required" validateFunction="updateSSN" onchange=" updateSSN(this.id);" /></div></td>
+            </tr><tr class="field_row">
+                <td class="field_title"><label for="fldOwner001HomePhone">Home Phone:</label></td><td class="field_control_cell"><div class="field_control"><input name="fldOwner001HomePhone" type="text" id="fldOwner001HomePhone" validateFunction="updatePhone" onchange="updatePhone(this.id);" class="field_phone" required="false" presence="optional" /></div></td>
+            </tr><tr class="field_row">
+                <td class="field_title"><label for="fldOwner001MobilePhone">Mobile Phone:</label></td><td class="field_control_cell"><div class="field_control"><input name="fldOwner001MobilePhone" type="text" id="fldOwner001MobilePhone" validateFunction="updatePhone" onchange="updatePhone(this.id);" class="field_phone" required="false" presence="optional" /></div></td>
+            </tr><tr class="field_row">
+                <td class="field_title"><label for="fldOwner001Email">Email:</label></td><td class="field_control_cell"><div class="field_control"><input name="fldOwner001Email" type="text" id="fldOwner001Email" class="field_email" required="false" presence="optional" validateFunction="updateEmail" onchange=" updateEmail(this.id);" /></div></td>
+            </tr>
+        </table><input name="fieldGroupOwner001_L1" type="hidden" id="fieldGroupOwner001_L1" class="field_group_field_list" value="|fldOwner001Prefix|fldOwner001NameFirst|fldOwner001NameMiddle|fldOwner001NameLast|fldOwner001Suffix|fldOwner001DOB|fldOwner001Existing|fldOwner001PrincipalType|fldOwner001Title|fldOwner001PercentOwnership|fldOwner001SSN" /><input name="fieldGroupOwner001_L2" type="hidden" id="fieldGroupOwner001_L2" class="field_group_field_list" value="|fldOwner001HomePhone|fldOwner001MobilePhone|fldOwner001Email" /></td><td class="application_subsection_layout_column2" valign="top"><table class="application_subsection_layout_right_table" border="0" style="width:100%;">
+            <tr class="field_row">
+                <td class="field_title field_title_required"><label for="fldOwner001Addr1">Address:</label></td><td class="field_control_cell"><div class="field_control"><input name="fldOwner001Addr1" type="text" id="fldOwner001Addr1" class="field_text" presence="required" validateFunction="updateText" /></div></td>
+            </tr><tr class="field_row">
+                <td class="field_title"><label for="fldOwner001Addr2"></label></td><td class="field_control_cell"><div class="field_control"><input name="fldOwner001Addr2" type="text" id="fldOwner001Addr2" class="field_text" required="false" presence="optional" validateFunction="updateText" /></div></td>
+            </tr><tr class="field_row">
+                <td class="field_title field_title_required"><label for="fldOwner001City">City:</label></td><td class="field_control_cell"><div class="field_control"><input name="fldOwner001City" type="text" id="fldOwner001City" class="field_text" presence="required" validateFunction="updateText" /></div></td>
+            </tr><tr class="field_row">
+                <td class="field_title field_title_required"><label for="fldOwner001State">State:</label></td><td class="field_control_cell"><div class="field_control"><select name="fldOwner001State" id="fldOwner001State" class="field_dropdown" validateFunction="updateDropdown" presence="required">
+                    <option selected="selected" value="BHC_NONE_SEL" title=""></option>
+                    <option value="AK" title="AK">AK</option>
+                    <option value="AL" title="AL">AL</option>
+                    <option value="AR" title="AR">AR</option>
+                    <option value="AZ" title="AZ">AZ</option>
+                    <option value="CT" title="CT">CT</option>
+                    <option value="CA" title="CA">CA</option>
+                    <option value="CO" title="CO">CO</option>
+                    <option value="DC" title="DC">DC</option>
+                    <option value="DE" title="DE">DE</option>
+                    <option value="FL" title="FL">FL</option>
+                    <option value="GA" title="GA">GA</option>
+                    <option value="HI" title="HI">HI</option>
+                    <option value="IA" title="IA">IA</option>
+                    <option value="ID" title="ID">ID</option>
+                    <option value="IL" title="IL">IL</option>
+                    <option value="IN" title="IN">IN</option>
+                    <option value="KS" title="KS">KS</option>
+                    <option value="KY" title="KY">KY</option>
+                    <option value="LA" title="LA">LA</option>
+                    <option value="MA" title="MA">MA</option>
+                    <option value="MD" title="MD">MD</option>
+                    <option value="ME" title="ME">ME</option>
+                    <option value="MI" title="MI">MI</option>
+                    <option value="MN" title="MN">MN</option>
+                    <option value="MO" title="MO">MO</option>
+                    <option value="MS" title="MS">MS</option>
+                    <option value="MT" title="MT">MT</option>
+                    <option value="NC" title="NC">NC</option>
+                    <option value="ND" title="ND">ND</option>
+                    <option value="NE" title="NE">NE</option>
+                    <option value="NH" title="NH">NH</option>
+                    <option value="NJ" title="NJ">NJ</option>
+                    <option value="NM" title="NM">NM</option>
+                    <option value="NV" title="NV">NV</option>
+                    <option value="NY" title="NY">NY</option>
+                    <option value="OH" title="OH">OH</option>
+                    <option value="OK" title="OK">OK</option>
+                    <option value="OR" title="OR">OR</option>
+                    <option value="PA" title="PA">PA</option>
+                    <option value="RI" title="RI">RI</option>
+                    <option value="SC" title="SC">SC</option>
+                    <option value="SD" title="SD">SD</option>
+                    <option value="TN" title="TN">TN</option>
+                    <option value="TX" title="TX">TX</option>
+                    <option value="UT" title="UT">UT</option>
+                    <option value="VA" title="VA">VA</option>
+                    <option value="VT" title="VT">VT</option>
+                    <option value="WA" title="WA">WA</option>
+                    <option value="WI" title="WI">WI</option>
+                    <option value="WV" title="WV">WV</option>
+                    <option value="WY" title="WY">WY</option>
+                </select></div></td>
+            </tr><tr class="field_row">
+                <td class="field_title field_title_required"><label for="fldOwner001Zip">Zip:</label></td><td class="field_control_cell"><div class="field_control"><input name="fldOwner001Zip" type="text" id="fldOwner001Zip" class="field_zip" presence="required" validateFunction="updateZip" onchange=" updateZip(this.id);" /></div></td>
+            </tr><tr class="field_row">
+                <td class="field_title field_title_required"><label for="fldOwner001MonthsCurrentAddr">Months at current address?</label></td><td class="field_control_cell"><div class="field_control"><input name="fldOwner001MonthsCurrentAddr" type="text" id="fldOwner001MonthsCurrentAddr" class="field_number" presence="required" validateFunction="updateNumber" /></div></td>
+            </tr><tr class="field_row">
+                <td class="field_title"><label for="fldOwner001MonthsPreviousAddr">Months at previous address?</label></td><td class="field_control_cell"><div class="field_control"><input name="fldOwner001MonthsPreviousAddr" type="text" id="fldOwner001MonthsPreviousAddr" class="field_number" required="false" presence="optional" validateFunction="updateNumber" /></div></td>
+            </tr><tr class="field_row">
+                <td class="field_title field_title_required"><label for="fldOwner001MonthlyGrossSalary">Monthly Salary:</label></td><td class="field_control_cell"><div class="field_control"><div class=" field_currency_div">$<input name="fldOwner001MonthlyGrossSalary" type="text" id="fldOwner001MonthlyGrossSalary" class="field_currency" presence="required" validateFunction="updateCurrency" onchange=" updateCurrency(id);" /></div></div></td>
+            </tr><tr class="field_row">
+                <td class="field_title"><label for="fldOwner001Bankruptcy">Has Principal declared bankruptcy within the last ten (10) years?</label></td><td class="field_control_cell"><div class="field_control"><select name="fldOwner001Bankruptcy" id="fldOwner001Bankruptcy" class="field_dropdown" validateFunction="updateDropdown" required="false" presence="optional">
+                    <option selected="selected" value="BHC_NONE_SEL" class="field_dropdown_option" title=""></option>
+                    <option value="true" class="field_dropdown_option" title="Yes">Yes</option>
+                    <option value="false" class="field_dropdown_option" title="No">No</option>
+                </select></div></td>
+            </tr>
+        </table><input name="fieldGroupOwner001_R1" type="hidden" id="fieldGroupOwner001_R1" class="field_group_field_list" value="|fldOwner001Addr1|fldOwner001Addr2|fldOwner001City|fldOwner001State|fldOwner001Zip" /><input name="fieldGroupOwner001_R3" type="hidden" id="fieldGroupOwner001_R3" class="field_group_field_list" value="|fldOwner001MonthsCurrentAddr|fldOwner001MonthsPreviousAddr|fldOwner001MonthlyGrossSalary|fldOwner001Bankruptcy" /></td>
+    </tr>
+</table></div></div>
+            </div>
+            <div id="submitSection" class="submit_button_div">
+                <div class="application_title_div">
+                    <input type="button" name="btnVal" value="Submit Application" onclick="return submitApp();" id="btnVal" class="submit_button screenOnly" />
+                </div>
+            </div>
+        </form>
+    </body>
+</apex:page>

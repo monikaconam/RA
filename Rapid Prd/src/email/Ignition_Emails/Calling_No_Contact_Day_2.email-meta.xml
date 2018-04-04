@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Calling No Contact Day 2</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>Calling No Contact Day 2</name>
+    <style>none</style>
+    <subject>Trying to Get in Contact</subject>
+    <textOnly>Hi {!Contact.FirstName},
+
+Looks like we missed each other again. When is a better time that we can set up a call?
+
+You can reach me right now or until 8pm EST at 877-252-9728.
+
+
+Thanks again. I look forward to speaking with you!
+
+{!User.FirstName} {!User.LastName} | {!User.Title}
+RapidAdvance®
+
+1001 Woodward Ave, Suite 1700 | Detroit, MI | 48226
+Email:{!User.Email} | Website: www.RapidAdvance.com</textOnly>
+    <type>custom</type>
+</EmailTemplate>

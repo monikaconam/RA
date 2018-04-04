@@ -1,0 +1,11 @@
+Hi,
+
+Q1. This client implicated that he/she doesn't think his/her business advisor has done an excellent job.
+
+Answer: {!GetFeedback_Survey__c.BA_Service_Rating__c}
+
+For reference click the following link. 
+
+{!GetFeedback_Survey__c.Link} 
+
+Thanks

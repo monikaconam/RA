@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CaseSettings xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseAssignNotificationTemplate>All_Templates/SUPPORTNewassignmentnotificationSAMPLE</caseAssignNotificationTemplate>
+    <caseCloseNotificationTemplate>All_Templates/SUPPORTWebtoCaseemailresponseSAMPLE</caseCloseNotificationTemplate>
+    <caseCreateNotificationTemplate>All_Templates/SUPPORTNewassignmentnotificationSAMPLE</caseCreateNotificationTemplate>
+    <caseFeedItemSettings>
+        <characterLimit>400</characterLimit>
+        <collapseThread>false</collapseThread>
+        <displayFormat>Default</displayFormat>
+        <feedItemType>EmailMessageEvent</feedItemType>
+    </caseFeedItemSettings>
+    <closeCaseThroughStatusChange>true</closeCaseThroughStatusChange>
+    <defaultCaseOwner>CaseQueue</defaultCaseOwner>
+    <defaultCaseOwnerType>Queue</defaultCaseOwnerType>
+    <defaultCaseUser>rapid@conamtechnologies.com</defaultCaseUser>
+    <emailToCase>
+        <enableEmailToCase>true</enableEmailToCase>
+        <enableHtmlEmail>true</enableHtmlEmail>
+        <enableOnDemandEmailToCase>true</enableOnDemandEmailToCase>
+        <enableThreadIDInBody>true</enableThreadIDInBody>
+        <enableThreadIDInSubject>true</enableThreadIDInSubject>
+        <notifyOwnerOnNewCaseEmail>true</notifyOwnerOnNewCaseEmail>
+        <overEmailLimitAction>Requeue</overEmailLimitAction>
+        <preQuoteSignature>false</preQuoteSignature>
+        <routingAddresses>
+            <addressType>EmailToCase</addressType>
+            <caseOrigin>Email from Rapid Employee</caseOrigin>
+            <casePriority>Medium</casePriority>
+            <createTask>true</createTask>
+            <emailAddress>mabiola@rapidadvance.com</emailAddress>
+            <emailServicesAddress>customerservice@6mwk09xj2f67mem8ed71ylp4n.in.salesforce.com</emailServicesAddress>
+            <isVerified>true</isVerified>
+            <routingName>Analytics</routingName>
+            <saveEmailHeaders>false</saveEmailHeaders>
+            <taskStatus>Not Started</taskStatus>
+        </routingAddresses>
+        <unauthorizedSenderAction>Discard</unauthorizedSenderAction>
+    </emailToCase>
+    <enableCaseFeed>false</enableCaseFeed>
+    <enableEarlyEscalationRuleTriggers>false</enableEarlyEscalationRuleTriggers>
+    <enableSuggestedSolutions>true</enableSuggestedSolutions>
+    <keepRecordTypeOnAssignmentRule>true</keepRecordTypeOnAssignmentRule>
+    <notifyContactOnCaseComment>false</notifyContactOnCaseComment>
+    <notifyDefaultCaseOwner>true</notifyDefaultCaseOwner>
+    <notifyOwnerOnCaseComment>true</notifyOwnerOnCaseComment>
+    <notifyOwnerOnCaseOwnerChange>true</notifyOwnerOnCaseOwnerChange>
+    <showFewerCloseActions>false</showFewerCloseActions>
+    <useSystemEmailAddress>false</useSystemEmailAddress>
+    <webToCase>
+        <caseOrigin>Web</caseOrigin>
+        <defaultResponseTemplate>All_Templates/SUPPORTWebtoCaseemailresponseSAMPLE</defaultResponseTemplate>
+        <enableWebToCase>true</enableWebToCase>
+    </webToCase>
+</CaseSettings>

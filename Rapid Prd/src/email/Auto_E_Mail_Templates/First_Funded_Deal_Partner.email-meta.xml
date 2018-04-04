@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>This is an email alert to notify the BD department of a partner&apos;s first funded deal.</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>First Funded Deal: Partner</name>
+    <style>none</style>
+    <subject>First Funded Deal: {!Campaign.Name}</subject>
+    <type>text</type>
+</EmailTemplate>

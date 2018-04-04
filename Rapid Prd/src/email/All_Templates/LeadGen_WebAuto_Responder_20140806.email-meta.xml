@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>StandardLetterheadSample</letterhead>
+    <name>LeadGen WebAuto Responder 20140806</name>
+    <style>freeForm</style>
+    <subject>We received your application…</subject>
+    <textOnly>{!Lead.CreatedDate}
+
+
+Dear {!Lead.Name},
+
+Thank you for checking us out online!  We received your application from {!Lead.Campaign_Name_Upload__c} our trusted partner in supporting business owners like you meet their financial needs.
+
+An Account Executive will contact you soon to discuss the benefits of our financing programs.  Our goal is to answer any questions you might have, and to seamlessly guide you in attaining the funds you need for your business.  Please know that RapidAdvance® is a trusted direct lender, with no broker or application fees!
+
+To better assist you in attaining the best financing solution, we&apos;ve listed a few questions for your first call:
+     ·What types of services do you offer your customers?
+     ·Why are you seeking working capital for your business?
+     ·Estimate of your monthly gross sales (to determine your financing needs).
+     ·What forms of payment do you accept? Cash and check, bank wire or credit cards?
+
+Please call us at (877) GO-RAPID if you have any questions, or simply reply to this email to schedule a time for us to speak.  We look forward to becoming a reliable partner for your business funding needs.
+
+Jonathan Ackaoui | Director of Sales
+RapidAdvance® | A+ BBB Rated
+7316 Wisconsin Ave, Suite 350 | Bethesda, MD | 20814
+Toll Free: 877-GO-RAPID
+www.RapidAdvance.com</textOnly>
+    <type>html</type>
+</EmailTemplate>

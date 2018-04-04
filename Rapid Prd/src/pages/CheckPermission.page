@@ -1,0 +1,3 @@
+<apex:page standardController="Opportunity"  extensions="CheckPermission" sidebar="false" showHeader="false" action="{!DoAction}">
+
+</apex:page>

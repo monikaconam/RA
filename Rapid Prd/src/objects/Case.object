@@ -1,0 +1,1039 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>ChangeStatus</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CloneAsChild</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CloseCase</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>MassClose</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>NewCase</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <businessProcesses>
+        <fullName>Balance Request</fullName>
+        <isActive>true</isActive>
+        <values>
+            <fullName>Closed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Escalated</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Follow Up Needed</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>In Progress</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>On Hold</fullName>
+            <default>false</default>
+        </values>
+    </businessProcesses>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <enableFeeds>true</enableFeeds>
+    <fields>
+        <fullName>AccountId</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>AssetId</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>BusinessHoursId</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Case_Deadline__c</fullName>
+        <externalId>false</externalId>
+        <label>Case Deadline</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>ClosedDate</fullName>
+        <trackTrending>false</trackTrending>
+    </fields>
+    <fields>
+        <fullName>Comments</fullName>
+        <trackTrending>false</trackTrending>
+    </fields>
+    <fields>
+        <fullName>ContactEmail</fullName>
+        <trackTrending>false</trackTrending>
+    </fields>
+    <fields>
+        <fullName>ContactFax</fullName>
+        <trackTrending>false</trackTrending>
+    </fields>
+    <fields>
+        <fullName>ContactId</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>ContactMobile</fullName>
+        <trackTrending>false</trackTrending>
+    </fields>
+    <fields>
+        <fullName>ContactPhone</fullName>
+        <trackTrending>false</trackTrending>
+    </fields>
+    <fields>
+        <fullName>Contact_Number__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Contact Number</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Cases</relationshipLabel>
+        <relationshipName>Cases</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Description</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+    </fields>
+    <fields>
+        <fullName>Five9__Five9Agent__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Five9 Agent</label>
+        <length>80</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Five9__Five9EmailNotificationStatus__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Five9 Email Notification Status</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>New</fullName>
+                    <default>true</default>
+                </value>
+                <value>
+                    <fullName>Accepted</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Rejected</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Five9__Five9LastEmailMessageId__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Five9 LastEmailMessageId</label>
+        <length>30</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Five9__Five9ThreadId__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <formula>&quot;[ ref:_&quot;&amp;LEFT( $Organization.Id , 4)&amp;&quot;0&quot;&amp;RIGHT( $Organization.Id , 4)&amp;&quot;._&quot;&amp;LEFT(Id , 4)&amp;&quot;0&quot;&amp;RIGHT(Id , 5)&amp;&quot;:ref ]&quot;</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Five9 ThreadId</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>IsClosedOnCreate</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+    </fields>
+    <fields>
+        <fullName>IsEscalated</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+    </fields>
+    <fields>
+        <fullName>IsSelfServiceClosed</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+    </fields>
+    <fields>
+        <fullName>IsVisibleInSelfService</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+    </fields>
+    <fields>
+        <fullName>Lead_Name__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Lead Name</label>
+        <referenceTo>Lead</referenceTo>
+        <relationshipLabel>Cases</relationshipLabel>
+        <relationshipName>Cases</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Opportunity_Owner__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Opportunity Owner</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Cases</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Opportunity__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Opportunity</label>
+        <referenceTo>Opportunity</referenceTo>
+        <relationshipLabel>Cases</relationshipLabel>
+        <relationshipName>Cases</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Origin</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>OwnerId</fullName>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>ParentId</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Priority</fullName>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Reason</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Requested_By__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Requested By</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Cases1</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>SourceId</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Status</fullName>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Subject</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+    </fields>
+    <fields>
+        <fullName>SuppliedCompany</fullName>
+        <trackTrending>false</trackTrending>
+    </fields>
+    <fields>
+        <fullName>SuppliedEmail</fullName>
+        <trackTrending>false</trackTrending>
+    </fields>
+    <fields>
+        <fullName>SuppliedName</fullName>
+        <trackTrending>false</trackTrending>
+    </fields>
+    <fields>
+        <fullName>SuppliedPhone</fullName>
+        <trackTrending>false</trackTrending>
+    </fields>
+    <fields>
+        <fullName>Type</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <listViews>
+        <fullName>AllOpenCases</fullName>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CASES.CLOSED</field>
+            <operation>equals</operation>
+            <value>0</value>
+        </filters>
+        <label>All Open Cases</label>
+    </listViews>
+    <listViews>
+        <fullName>CustomerService</fullName>
+        <columns>CASES.CASE_NUMBER</columns>
+        <columns>ACCOUNT.NAME</columns>
+        <columns>CASES.SUBJECT</columns>
+        <columns>CASES.STATUS</columns>
+        <columns>CASES.PRIORITY</columns>
+        <columns>CASES.CREATED_DATE</columns>
+        <columns>CORE.USERS.ALIAS</columns>
+        <columns>OWNER_NAME</columns>
+        <filterScope>Everything</filterScope>
+        <label>Customer Service</label>
+        <sharedTo>
+            <group>InternalUsersOnly</group>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>ITCases</fullName>
+        <columns>CASES.CASE_NUMBER</columns>
+        <columns>NAME</columns>
+        <columns>CASES.SUBJECT</columns>
+        <columns>CASES.STATUS</columns>
+        <columns>CASES.PRIORITY</columns>
+        <columns>CASES.CREATED_DATE</columns>
+        <columns>CORE.USERS.ALIAS</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CASES.SUBJECT</field>
+            <operation>contains</operation>
+            <value>TECH</value>
+        </filters>
+        <label>IT Cases</label>
+    </listViews>
+    <listViews>
+        <fullName>MyCases</fullName>
+        <filterScope>Mine</filterScope>
+        <label>My Cases</label>
+    </listViews>
+    <listViews>
+        <fullName>MyOpenCases</fullName>
+        <filterScope>Mine</filterScope>
+        <filters>
+            <field>CASES.CLOSED</field>
+            <operation>equals</operation>
+            <value>0</value>
+        </filters>
+        <label>My Open Cases</label>
+    </listViews>
+    <listViews>
+        <fullName>Pay_off_letter_requests</fullName>
+        <columns>CASES.CREATED_DATE</columns>
+        <columns>CASES.PRIORITY</columns>
+        <columns>Opportunity__c</columns>
+        <columns>NAME</columns>
+        <columns>CASES.SUBJECT</columns>
+        <columns>CASES.REASON</columns>
+        <columns>CREATEDBY_USER.ALIAS</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CASES.SUBJECT</field>
+            <operation>contains</operation>
+            <value>pay off,payoff</value>
+        </filters>
+        <label>Pay Off Letter Requests</label>
+        <sharedTo>
+            <group>InternalUsersOnly</group>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>SFEnhancement</fullName>
+        <columns>Opportunity__c</columns>
+        <columns>CASES.CASE_NUMBER</columns>
+        <columns>NAME</columns>
+        <columns>CASES.SUBJECT</columns>
+        <columns>CASES.STATUS</columns>
+        <columns>CASES.PRIORITY</columns>
+        <columns>CASES.CREATED_DATE</columns>
+        <columns>CORE.USERS.ALIAS</columns>
+        <columns>CASES.ORIGIN</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CASES.REASON</field>
+            <operation>equals</operation>
+            <value>SalesForce Enhancement</value>
+        </filters>
+        <label>SF Enhancement</label>
+    </listViews>
+    <listViews>
+        <fullName>x8132007Calls</fullName>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CASES.CREATED_DATE_DATE_ONLY</field>
+            <operation>equals</operation>
+            <value>8/13/2007 12:00 AM</value>
+        </filters>
+        <label>8/13/2007 Calls</label>
+    </listViews>
+    <listViews>
+        <fullName>x8132007Calls_d_2</fullName>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CASES.CREATED_DATE_DATE_ONLY</field>
+            <operation>equals</operation>
+            <value>8/10/2007 12:00 AM</value>
+        </filters>
+        <label>8/13/2007 Calls</label>
+    </listViews>
+    <recordTypeTrackFeedHistory>false</recordTypeTrackFeedHistory>
+    <recordTypeTrackHistory>true</recordTypeTrackHistory>
+    <recordTypes>
+        <fullName>Internal_Inquiry</fullName>
+        <active>true</active>
+        <businessProcess>Balance Request</businessProcess>
+        <label>Internal Inquiry</label>
+        <picklistValues>
+            <picklist>Origin</picklist>
+            <values>
+                <fullName>Email from ITSupport</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Email from Merchant</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Email from Partner</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Email from Rapid Employee</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Email from Senior Management</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Phone - CS Toll Free Number</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Phone - Direct Dail</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Phone - Internal Employee Call</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Web</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Priority</picklist>
+            <values>
+                <fullName>High</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Low</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Medium</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Reason</picklist>
+            <values>
+                <fullName>Accounting%2FFinancial Reporting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Analytics Project</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>BD Reporting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Data for Decision Making Query</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IT Development Collaboration</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ITSupport - CRS Automation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ITSupport - Salesforce Admin</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Legal Reporting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Marketing Reporting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Monthly Reporting Package</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Native Salesforce Report Update%2FCreation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Operations Management Reporting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Quarterly Reporting Package</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Risk Reporting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sales Management Reporting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Scheduled Process - Daily Tasks</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Scheduled Process - Weekly Task</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Type</picklist>
+            <values>
+                <fullName>Problem</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Question</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Request</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Merchant_Inquiry</fullName>
+        <active>true</active>
+        <businessProcess>Balance Request</businessProcess>
+        <label>Merchant Inquiry</label>
+        <picklistValues>
+            <picklist>Origin</picklist>
+            <values>
+                <fullName>Email from ITSupport</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Email from Merchant</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Email from Partner</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Email from Rapid Employee</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Email from Senior Management</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Phone - CS Toll Free Number</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Phone - Direct Dail</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Phone - Internal Employee Call</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Web</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Priority</picklist>
+            <values>
+                <fullName>High</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Low</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Medium</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Reason</picklist>
+            <values>
+                <fullName>Accounting%2FFinancial Reporting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Analytics Project</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>BD Reporting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Data for Decision Making Query</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IT Development Collaboration</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ITSupport - CRS Automation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ITSupport - Salesforce Admin</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Legal Reporting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Marketing Reporting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Monthly Reporting Package</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Native Salesforce Report Update%2FCreation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Operations Management Reporting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Quarterly Reporting Package</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Risk Reporting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sales Management Reporting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Scheduled Process - Daily Tasks</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Scheduled Process - Weekly Task</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Type</picklist>
+            <values>
+                <fullName>Problem</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Question</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Request</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Partner_Inquiry</fullName>
+        <active>true</active>
+        <businessProcess>Balance Request</businessProcess>
+        <label>Partner Inquiry</label>
+        <picklistValues>
+            <picklist>Origin</picklist>
+            <values>
+                <fullName>Email from ITSupport</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Email from Merchant</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Email from Partner</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Email from Rapid Employee</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Phone - CS Toll Free Number</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Phone - Direct Dail</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Phone - Internal Employee Call</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Web</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Priority</picklist>
+            <values>
+                <fullName>High</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Low</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Medium</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Reason</picklist>
+            <values>
+                <fullName>Accounting%2FFinancial Reporting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Analytics Project</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>BD Reporting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Data for Decision Making Query</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IT Development Collaboration</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ITSupport - CRS Automation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ITSupport - Salesforce Admin</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Legal Reporting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Marketing Reporting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Monthly Reporting Package</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Native Salesforce Report Update%2FCreation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Operations Management Reporting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Quarterly Reporting Package</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Risk Reporting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sales Management Reporting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Scheduled Process - Daily Tasks</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Scheduled Process - Weekly Task</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Type</picklist>
+            <values>
+                <fullName>Problem</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Question</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Request</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <searchLayouts>
+        <customTabListAdditionalFields>CASES.CASE_NUMBER</customTabListAdditionalFields>
+        <customTabListAdditionalFields>OWNER_NAME</customTabListAdditionalFields>
+        <customTabListAdditionalFields>CASES.REASON</customTabListAdditionalFields>
+        <customTabListAdditionalFields>CASES.SUBJECT</customTabListAdditionalFields>
+        <customTabListAdditionalFields>CASES.TYPE</customTabListAdditionalFields>
+        <customTabListAdditionalFields>CASES.RECORDTYPE</customTabListAdditionalFields>
+        <customTabListAdditionalFields>CASES.PRIORITY</customTabListAdditionalFields>
+        <customTabListAdditionalFields>CASES.CREATED_DATE</customTabListAdditionalFields>
+        <customTabListAdditionalFields>CASES.CLOSED_DATE</customTabListAdditionalFields>
+        <lookupDialogsAdditionalFields>CASES.CASE_NUMBER</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>CASES.PRIORITY</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>NAME</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>CONTACT.ACCOUNT</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>ACCOUNT.NAME</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Opportunity__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>CASES.REASON</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>CASES.SUBJECT</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>CASES.STATUS</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>CASES.ORIGIN</lookupDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>CASES.CASE_NUMBER</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>CASES.SUBJECT</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>NAME</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>ACCOUNT.NAME</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>CASES.STATUS</lookupPhoneDialogsAdditionalFields>
+        <searchFilterFields>CASES.REASON</searchFilterFields>
+        <searchFilterFields>CASES.PRIORITY</searchFilterFields>
+        <searchFilterFields>OWNER_NAME</searchFilterFields>
+        <searchFilterFields>CASES.STATUS</searchFilterFields>
+        <searchFilterFields>CASES.SUBJECT</searchFilterFields>
+        <searchResultsAdditionalFields>CASES.CASE_NUMBER</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>CORE.USERS.ALIAS</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>ACCOUNT.NAME</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Opportunity__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>NAME</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>CASES.REASON</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>CASES.SUBJECT</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>CASES.STATUS</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>CASES.CREATED_DATE</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>CASES.CLOSED_DATE</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>Private</sharingModel>
+    <webLinks>
+        <fullName>APXTConga4__Conga_Mail_Merge</fullName>
+        <availability>online</availability>
+        <description>*** This is an example of a simple Conga Composer button. *** 
+
+Copy the URL from this button and paste it into your own custom button or link. Then add optional parameters to finely tune the button&apos;s behavior. See the Conga Configuration Guide for details.</description>
+        <displayType>button</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <hasMenubar>false</hasMenubar>
+        <hasScrollbars>false</hasScrollbars>
+        <hasToolbar>false</hasToolbar>
+        <height>450</height>
+        <isResizable>false</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>Conga Composer</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>false</showsLocation>
+        <showsStatus>false</showsStatus>
+        <url>https://www.appextremes.com/apps/Conga/Composer.aspx
+?sessionId={!API.Session_ID}
+&amp;serverUrl={!API.Partner_Server_URL_80}
+&amp;id={!Case.Id}</url>
+        <width>625</width>
+    </webLinks>
+    <webLinks>
+        <fullName>Mass_Edit</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <height>600</height>
+        <linkType>page</linkType>
+        <masterLabel>Mass Edit</masterLabel>
+        <openType>sidebar</openType>
+        <page>MassEditCase</page>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+    </webLinks>
+    <webLinks>
+        <fullName>Mass_Update</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <height>600</height>
+        <linkType>page</linkType>
+        <masterLabel>Mass Update</masterLabel>
+        <openType>sidebar</openType>
+        <page>MassUpdateCase</page>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+    </webLinks>
+</CustomObject>

@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Offer</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Offers</value>
+    </caseValues>
+    <fields>
+        <label><!-- Broker Out Op --></label>
+        <name>BOOP__c</name>
+        <relationshipLabel><!-- Offers --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Contract Fees --></label>
+        <name>Contract_Fees__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contract Payback Amount --></label>
+        <name>Contract_Payback_Amount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contract Payment Amount --></label>
+        <name>Contract_Payment_Amount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contract Payment Interval --></label>
+        <name>Contract_Payment_Interval__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contract Received Time --></label>
+        <name>Contract_Received_Time__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contract Received --></label>
+        <name>Contract_Received__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contract Request --></label>
+        <name>Contract_Request__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contract Requested --></label>
+        <name>Contract_Requested__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contract Term --></label>
+        <name>Contract_Term__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contract Upsell --></label>
+        <name>Contract_Upsell__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contracted Number of Payments --></label>
+        <name>Contracted_Number_of_Payments__c</name>
+    </fields>
+    <fields>
+        <label><!-- Funded Amount --></label>
+        <name>Funded_Amount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Funded --></label>
+        <name>Funded__c</name>
+    </fields>
+    <fields>
+        <label><!-- Max Upsell --></label>
+        <name>Max_Upsell__c</name>
+    </fields>
+    <fields>
+        <label><!-- Partner Company --></label>
+        <name>PartnerCompany__c</name>
+        <relationshipLabel><!-- Offers --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Quote Amount --></label>
+        <name>Quote_Amount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Quote Fees --></label>
+        <name>Quote_Fees__c</name>
+    </fields>
+    <fields>
+        <label><!-- Quote Number of Payments --></label>
+        <name>Quote_Number_of_Payments__c</name>
+    </fields>
+    <fields>
+        <label><!-- Quote Payback Amount --></label>
+        <name>Quote_Payback_Amount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Quote Payment Amount --></label>
+        <name>Quote_Payment_Amount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Quote Payment Interval --></label>
+        <name>Quote_Payment_Interval__c</name>
+    </fields>
+    <fields>
+        <label><!-- Quote Term --></label>
+        <name>Quote_Term__c</name>
+    </fields>
+    <fields>
+        <label><!-- Request Notes --></label>
+        <name>Request_Notes__c</name>
+    </fields>
+    <fields>
+        <label><!-- Sold Short --></label>
+        <name>Sold_Short__c</name>
+    </fields>
+    <fields>
+        <label><!-- Stips --></label>
+        <name>Stips__c</name>
+    </fields>
+    <startsWith>Vowel</startsWith>
+</CustomObjectTranslation>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Mass Emails Template</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>EmailLetterhead</letterhead>
+    <name>Renewal &amp; Paid Off Summer Template</name>
+    <style>freeForm</style>
+    <subject>Renewal - {!Account.Name}</subject>
+    <textOnly>School is out and summer has officially arrived which is always a busy time of the year for businesses.  I just wanted to make sure you were aware of the opportunity to refinance your account. Many of my clients have been calling in to obtain additional capital for many reasons including completing spatial improvements, inventory build-ups, and/or advertising campaigns. Obviously, your account remains in great standing and is most likely eligible for additional funding at a discount.
+
+As you know, we generally reward performance and loyalty on the renewal by either allotting more available funds, lowering the overall cost, or extending the estimated payback times. As always, renewals are much simpler and faster than the original account. Most of the time, the only paperwork required is the agreement because we have all of your previous information on file.
+
+If you would like me to put together some renewal options, simply shoot me a call or email and I will get back to you with all of the details.   I can be reached at 240-514-3184 or at 1-877-467-2743 ext. 1320.
+
+
+Thank you and have a great day.
+
+
+
+Best wishes,
+
+Tim Iuculano</textOnly>
+    <type>html</type>
+</EmailTemplate>

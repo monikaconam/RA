@@ -1,0 +1,7 @@
+<apex:page showHeader="false" sidebar="false">
+  
+        <apex:pageMessage severity="error"
+                          strength="1"
+                          summary="You don't have sufficient access to view this page. Please contact your system administrator." />
+
+</apex:page>

@@ -1,0 +1,169 @@
+<apex:page controller="ContractValidation_Ctrl" showHeader="false" sidebar="false" id="thePage">
+
+ <script src="/soap/ajax/26.0/connection.js" type="text/javascript" /> 
+ <script src="/soap/ajax/26.0/apex.js" type="text/javascript" /> 
+ <script type="text/javascript">
+     window.onload = function() {
+         checkchange();
+     }
+     
+     function generateContract() {
+        var url = parent.location.href; 
+
+        var templateId= ""; 
+        var product = document.getElementById('{!$Component.thePage.MBForm.contproduct}').value; 
+     
+        switch(product){ 
+        
+        case "Line of Credit":
+        templateId = "a1D700000012PFe";
+        break;  
+        
+        case "MCA":
+        case "Syndication MCA":
+        case "Starter Program":
+        case "Syndication Starter Program":
+        templateId = "a1D700000012PFo";
+        break;
+        
+        default:
+        templateId = "a1D700000012PFj";
+        break; 
+        
+        } 
+        
+        url = "https://www.appextremes.com/apps/Conga/PointMerge.aspx?SessionId=" + "{!$Api.Session_ID}"; 
+        url += "&ServerUrl=" + "{!$Api.Partner_Server_URL_80}"; 
+        url += "&Id=" + "{!oppRecord.Id}"; 
+        url += "&DocuSignVisible=1"; 
+        url += "&DocuSignR1Id=" + "{!oppRecord.ContactID__c}"; 
+        url += "&DocuSignR1Role=Signer+1"; 
+        url += "&DocuSignR1Type=Signer"; 
+        url += "&DocuSignRelatedAccountId=" + "{!oppRecord.AccountId}"; 
+        url += "&DS7=7 " 
+        url += "&TemplateId=" + templateId; 
+        
+        var w = 300; 
+        var h = 250; 
+        
+        var left = (screen.width/2)-(w/2); 
+        var top = (screen.height/2)-(h/2); 
+        
+        window.open (url, "composerwindow", 'toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no, resizable=no, copyhistory=no, width=300, height=250, top='+top+', left='+left);
+        return false;
+     }
+     
+     function checkchange() {
+        var disable = false;
+        var compArray = new Array('{!$Component.thePage.MBForm.contcountry}', '{!$Component.thePage.MBForm.contstate}',
+                                    '{!$Component.thePage.MBForm.contlegalname}', '{!$Component.thePage.MBForm.contentity}',
+                                    '{!$Component.thePage.MBForm.contamount}', '{!$Component.thePage.MBForm.contpayback}',
+                                    '{!$Component.thePage.MBForm.contproduct}', '{!$Component.thePage.MBForm.contpaybackamount}');
+        
+        for(var i=0; i<compArray.length; i++) {
+            if(document.getElementById(compArray[i]).value == null ||  document.getElementById(compArray[i]).value == '') {
+               disable = true;     
+            }
+        }
+        if(disable) {
+            document.getElementById('{!$Component.thePage.MBForm.btnContracttop}').disabled = true;
+            document.getElementById('{!$Component.thePage.MBForm.btnContracttop}').className = "btnDisabled";
+            document.getElementById('{!$Component.thePage.MBForm.btnContractbottom}').disabled = true;
+            document.getElementById('{!$Component.thePage.MBForm.btnContractbottom}').className = "btnDisabled";
+            
+        } else {
+            document.getElementById('{!$Component.thePage.MBForm.btnContracttop}').disabled = false; 
+            document.getElementById('{!$Component.thePage.MBForm.btnContracttop}').className = "btn"; 
+            document.getElementById('{!$Component.thePage.MBForm.btnContractbottom}').disabled = false; 
+            document.getElementById('{!$Component.thePage.MBForm.btnContractbottom}').className = "btn"; 
+             
+        }
+     }
+     
+ </script>
+ 
+ <c:Opportunity_Related_CSS imgName="credit.png"/>
+    <apex:pageMessages id="pageMessageMain"/>
+    <apex:form id="MBForm" styleClass="MBForm"><br/>
+      <apex:outputPanel id="Panelid1">
+       <div class="bgImg"></div>
+       <div align="center">               
+           <apex:commandButton value="Save" action="{!doSave}" reRender="pageMessageMain,Panelid,Panelid1" status="ajaxStatus" oncomplete="setfocus('{!$Component.pageMessageMain}');"/>&nbsp;&nbsp;         
+           <apex:commandButton value="Generate Contract" onclick="return generateContract();" id="btnContracttop" style="width: 150px !important;" />
+       </div>
+       <apex:outputPanel id="Panelid">
+       <table id="MBTable">
+            <tr>
+               <td colspan="4">
+                    <c:Extjs_Panel title="Contract Validation"  RefreshButton="Refresh"/>
+               </td>
+           </tr>
+           <tr>
+               <td>
+                   <apex:outputLabel value="Billing Country"/>                 
+               </td>
+               <td>  
+                  <apex:inputField value="{!oppRecord.Account.BillingCountry}" id="contcountry" onkeyup="checkchange();"  /> 
+               </td>                   
+               <td>
+                   <apex:outputLabel value="Billing State"/>                 
+               </td>
+               <td>  
+                  <apex:inputField value="{!oppRecord.Account.BillingState}" id="contstate" onkeyup="checkchange();" /> 
+               </td>   
+           </tr>
+           <tr>
+               <td>
+                   <apex:outputLabel value="Legal Name"/>                 
+               </td>
+               <td>  
+                  <apex:inputField value="{!oppRecord.Account.Legal_Name__c}" id="contlegalname" onkeyup="checkchange();" /> 
+               </td>                   
+               <td>
+                   <apex:outputLabel value="Type of Entity"/>                 
+               </td>
+               <td>  
+                  <apex:inputField value="{!oppRecord.Type_of_Entity__c}" id="contentity"  onchange="checkchange();"/> 
+               </td>   
+           </tr>
+           
+           <tr>
+               <td>
+                   <apex:outputLabel value="Amount"/>                 
+               </td>
+               <td>  
+                  <apex:inputField value="{!oppRecord.Amount}" id="contamount" onkeyup="checkchange();"/> 
+               </td>                   
+               <td>
+                   <apex:outputLabel value="Percent Payback"/>                 
+               </td>
+               <td>  
+                  <apex:inputField value="{!oppRecord.Percent_Payback__c}" id="contpayback" onkeyup="checkchange();"/> 
+               </td>   
+           </tr>
+           <tr>
+               <td>
+                   <apex:outputLabel value="Product"/>                 
+               </td>
+               <td>  
+                  <apex:inputField value="{!oppRecord.Product__c}" id="contproduct" onchange="checkchange();"/> 
+               </td>
+               <td>
+                   <apex:outputLabel value="{!$ObjectType.Opportunity.fields.Pay_Back_Amount__c.label}" /> 
+               </td>
+               <td>  
+                  <apex:inputField value="{!oppRecord.Pay_Back_Amount__c}"  id="contpaybackamount" onkeyup="checkchange();"/> 
+               </td>                 
+           </tr>
+           
+       </table><br/>
+       </apex:outputPanel>
+       <div align="center">              
+            <apex:commandButton value="Save" action="{!doSave}" reRender="pageMessageMain,Panelid,Panelid1" status="ajaxStatus" oncomplete="setfocus('{!$Component.pageMessageMain}');"/>&nbsp;&nbsp;         
+            <apex:commandButton value="Generate Contract" onclick="return generateContract();" id="btnContractbottom" style="width: 150px !important;" /> 
+       </div>     
+        </apex:outputPanel>      
+    </apex:form>
+    <apex:actionstatus startStyleClass="requiredLoaderBG" id="ajaxStatus" />
+
+</apex:page>

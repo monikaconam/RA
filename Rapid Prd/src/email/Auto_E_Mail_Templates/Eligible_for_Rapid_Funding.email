@@ -1,0 +1,2 @@
+{!Opportunity.Name} is Eligible for Rapid Funding
+OppId: {!Opportunity.Opportunity_Number__c}

@@ -1,0 +1,14 @@
+Hi {!Contact.FirstName},
+
+This is {!User.FirstName}, I’m a Business Advisor with RapidAdvance. It looks like I just missed you, I tried calling to help with your business financing inquiry. 
+
+Please call me back at 877-252-9728 at your earliest convenience, as your business advisor, I would like to come up with a few loan options for you that you are comfortable with and fit your business needs.
+
+I’ll be in the office until 8pm EST tonight.
+
+
+Thank you and I look forward to speaking with you soon!
+ 
+
+{!User.Name} | 
+RapidAdvance®

@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Fraud Alert</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Fraud Alerts</value>
+    </caseValues>
+    <fields>
+        <label><!-- Address --></label>
+        <name>Address__c</name>
+    </fields>
+    <fields>
+        <label><!-- Business Name --></label>
+        <name>Business_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- City --></label>
+        <name>City__c</name>
+    </fields>
+    <fields>
+        <label><!-- Email --></label>
+        <name>Email__c</name>
+    </fields>
+    <fields>
+        <label><!-- Fax --></label>
+        <name>Fax__c</name>
+    </fields>
+    <fields>
+        <label><!-- First Name --></label>
+        <name>First_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Known Fraud --></label>
+        <name>Known_Fraud__c</name>
+        <relationshipLabel><!-- Fraud Alerts --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Last Name --></label>
+        <name>Last_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Lead Address --></label>
+        <name>Lead_Address__c</name>
+    </fields>
+    <fields>
+        <label><!-- Lead Business Name --></label>
+        <name>Lead_Business_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Lead City --></label>
+        <name>Lead_City__c</name>
+    </fields>
+    <fields>
+        <label><!-- Lead Email --></label>
+        <name>Lead_Email__c</name>
+    </fields>
+    <fields>
+        <label><!-- Lead Fax --></label>
+        <name>Lead_Fax__c</name>
+    </fields>
+    <fields>
+        <label><!-- Lead First Name --></label>
+        <name>Lead_First_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Lead Last Name --></label>
+        <name>Lead_Last_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Lead Phone --></label>
+        <name>Lead_Phone__c</name>
+    </fields>
+    <fields>
+        <label><!-- Lead Social Security Number --></label>
+        <name>Lead_Social_Security_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Lead State --></label>
+        <name>Lead_State__c</name>
+    </fields>
+    <fields>
+        <label><!-- Lead ZIP --></label>
+        <name>Lead_ZIP__c</name>
+    </fields>
+    <fields>
+        <label><!-- Lead --></label>
+        <name>Lead__c</name>
+        <relationshipLabel><!-- Fraud Alerts --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Notes --></label>
+        <name>Notes__c</name>
+    </fields>
+    <fields>
+        <label><!-- Phone --></label>
+        <name>Phone__c</name>
+    </fields>
+    <fields>
+        <label><!-- Social Security Number --></label>
+        <name>Social_Security_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- State --></label>
+        <name>State__c</name>
+    </fields>
+    <fields>
+        <label><!-- Status --></label>
+        <name>Status__c</name>
+        <picklistValues>
+            <masterLabel>Approved Lead</masterLabel>
+            <translation><!-- Approved Lead --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Confirmed Fraud</masterLabel>
+            <translation><!-- Confirmed Fraud --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Potential Fraud</masterLabel>
+            <translation><!-- Potential Fraud --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- ZIP --></label>
+        <name>ZIP__c</name>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

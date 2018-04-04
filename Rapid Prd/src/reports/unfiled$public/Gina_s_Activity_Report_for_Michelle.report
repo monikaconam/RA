@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>ACCOUNT.NAME</field>
+    </columns>
+    <columns>
+        <field>DUE_DATE</field>
+    </columns>
+    <columns>
+        <field>FULL_DESCRIPTION</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>CREATED_BY</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>startsWith</operator>
+            <value>Isata</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>ACCOUNT_OWNER_NAME</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>startsWith</operator>
+            <value>Gina M</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>Gina&apos;s Activity Report for Michelle</name>
+    <params>
+        <name>closed</name>
+        <value>all</value>
+    </params>
+    <params>
+        <name>type</name>
+        <value>te</value>
+    </params>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>AccountActivity</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>DUE_DATE</dateColumn>
+        <interval>INTERVAL_CURFY</interval>
+    </timeFrameFilter>
+</Report>

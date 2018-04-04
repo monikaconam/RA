@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>CAMPAIGN_NAME</field>
+    </columns>
+    <columns>
+        <field>NUM_OPPORTUNITIES</field>
+    </columns>
+    <columns>
+        <field>NUM_WON_OPPORTUNITIES</field>
+    </columns>
+    <columns>
+        <field>AMOUNT_WON</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>CAMPAIGN_TYPE</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Partners</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>CAMPAIGN_STATUS</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>In Progress</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>CREATED_DATE</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>greaterThan</operator>
+            <value>1/1/2013 12:00 AM</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>NUM_OPPORTUNITIES</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>greaterThan</operator>
+            <value>1</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>CAMPAIGN_NAME</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>notContain</operator>
+            <value>eaglewood</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>TJ all partner since2013</name>
+    <params>
+        <name>scopeid</name>
+        <value></value>
+    </params>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CampaignList</reportType>
+    <scope>orgAll</scope>
+    <showDetails>true</showDetails>
+</Report>

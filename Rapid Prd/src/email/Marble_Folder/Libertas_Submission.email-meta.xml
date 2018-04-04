@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Libertas Submission</name>
+    <style>none</style>
+    <subject>{!Marble__c.Company__c} has been submitted to Libertas</subject>
+    <type>text</type>
+</EmailTemplate>

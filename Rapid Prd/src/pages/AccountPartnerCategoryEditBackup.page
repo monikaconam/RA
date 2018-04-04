@@ -1,0 +1,294 @@
+<apex:page standardcontroller="Account" tabstyle="Account"  extensions="AccountPartnerCategoryEditExtn"  >
+    <apex:form >
+        <apex:sectionheader title="Account Edit" subtitle="{!if(Account.Id==null,'New Account',Account.Name)}">
+        </apex:sectionheader>
+        <apex:pageblock mode="edit" id="accountPB" title="Account Edit" >
+            <apex:pageblockbuttons >
+                <apex:commandbutton action="{!onSave}" value="Save"></apex:commandbutton>
+                <apex:commandbutton action="{!onCancel}" value="Cancel" immediate="true"></apex:commandbutton>
+            </apex:pageblockbuttons>
+            
+            <apex:pagemessages ></apex:pagemessages> 
+
+            <apex:pageBlockSection id="pgBlockSectionAcctInfo" title="Account Information" collapsible="false" columns="2" >
+                <apex:outputfield value="{!account.RecordType.name}" Label="Account RecordType Name" rendered="{!if(account.id!=null, true, false)}"/>
+                
+                <apex:pageBlockSectionItem rendered="{!if(account.id==null, true, false)}">
+                    <apex:outputLabel >Account RecordType Name</apex:outputLabel>
+                    <apex:outputlabel value="{!defaultRecordType}" />
+                </apex:pageBlockSectionItem>
+                
+                 <apex:pageBlockSectionItem rendered="{!if(account.id==null, true, false)}">
+                    <apex:outputLabel >Account Owner</apex:outputLabel>
+                    <apex:outputLabel id="actOwner" >{!$USer.FirstName} {!$USer.LastName } </apex:outputLabel>
+                </apex:pageBlockSectionItem>
+                               
+               
+                <apex:pageBlockSectionItem rendered="{!if(account.id!=null, true, false)}">
+                    <apex:outputLabel >Account Owner</apex:outputLabel>
+                    <apex:outputField id="actOwner" value="{!account.ownerid}" />
+                </apex:pageBlockSectionItem>
+                
+                <apex:inputField id="AccountName" value="{!account.name}" />
+                <apex:inputField id="AccountCampaign" value="{!account.Campaign__c}" />
+
+                <apex:inputField id="AccountParent" value="{!account.ParentId}" />
+                <apex:inputField id="AccountEmail" value="{!account.Email_Address__c}" />
+                
+                <apex:inputField id="AccountPhone" value="{!account.Phone}" />
+                <apex:inputField id="AccountExt" value="{!account.Phone_Ext__c}" />
+                
+                <apex:inputField id="AccountWebsite" value="{!account.Website}" />
+                <apex:inputField id="Accountfax" value="{!account.fax}" />
+                
+                <apex:inputField id="Accountstatus" value="{!account.Status__c}" /> 
+                <apex:outputLabel value="" />
+                <apex:inputField id="actBillingStreet" value="{!account.BillingStreet}" />
+                <apex:outputLabel value="" />
+                <apex:inputField id="actBillingCity" value="{!account.BillingCity}" />
+                <apex:outputLabel value="" />
+                
+                <apex:inputField id="actBillingState" value="{!account.BillingState}" />
+                <apex:outputLabel value="" />
+                
+                <apex:inputField id="actBillingPostalCode" value="{!account.BillingPostalCode}" />
+                <apex:outputLabel value="" />
+                
+                <apex:inputField id="actBillingCountry" value="{!account.BillingCountry}" />
+                <apex:outputLabel value="" />  
+                <apex:inputField id="AccountDescription" value="{!account.Description}" />
+                
+                <!--
+                <apex:inputField id="AccountLegalName" value="{!account.Legal_Name__c}" />
+                <apex:inputField id="AccountDBA" value="{!account.DBA__c}" />
+                <apex:inputField id="AccountOtherLanguage" value="{!account.Other_Language__c}" />
+                -->
+                
+                      
+        </apex:pageBlockSection>
+                   
+        <apex:pageblocksection id="Optional" title="Channel and Category Information">
+            <apex:inputField id="actPartnerChannel" value="{!account.Partner_Channel__c}"   required="true" />
+                <apex:outputPanel id="popup">
+                    <apex:outputLabel styleClass="labelCol vfLabelColTextWrap  first  last">Partner Category</apex:outputLabel>
+                    <apex:outputPanel styleClass="popupBg" layout="block" rendered="true"/>
+                    <apex:outputPanel styleClass="popup requiredBlock" layout="block" rendered="true">
+                        <table class="layout" bgcolor="#f3f3ec" >
+                            <tbody >
+                            
+                                <tr>
+                                  <td bgcolor="#C00">
+                                   
+                                  </td>
+                                   <td class="selectCell">
+                                        <apex:outputPanel layout="block" styleClass="selectTitle">
+                                            <apex:outputLabel value="Available Categories" 
+                                    for="multiselectPanel:leftList" />
+                                        </apex:outputPanel> 
+                                        <select id="{!$Component.multiselectPanel}:leftList" 
+                                class="multilist" multiple="multiple" size="6" 
+                                style="width: 150px;">
+                                            <apex:repeat value="{!allLCats}" var="option">
+                                                <option value="{!option.value}">{!option.label}</option>
+                                            </apex:repeat>
+                                        </select>
+                                    </td>  
+                                    <td class="buttonCell">
+                                        <apex:outputPanel layout="block" styleClass="text">Add</apex:outputPanel>
+                                        <apex:outputPanel layout="block" styleClass="text">
+                                            <apex:outputLink value="javascript:moveSelectedOptions('{!$Component.multiselectPanel}:leftList', 
+                                    '{!$Component.multiselectPanel}:rightList', '{!$Component.leftHidden}', 
+                                    '{!$Component.rightHidden}');"
+                                    id="btnRight">
+                                                <apex:image value="/s.gif" alt="Add" styleClass="rightArrowIcon"
+                                        title="Add" />
+                                            </apex:outputLink>
+                                        </apex:outputPanel>
+                                        <apex:outputPanel layout="block" styleClass="text">
+                                            <apex:outputLink value="javascript:moveSelectedOptions('{!$Component.multiselectPanel}:rightList', 
+                                    '{!$Component.multiselectPanel}:leftList', '{!$Component.rightHidden}', 
+                                    '{!$Component.leftHidden}');"
+                                    id="btnLeft">
+                                                <apex:image value="/s.gif" alt="Remove"
+                                        styleClass="leftArrowIcon" title="Remove" />
+                                            </apex:outputLink>
+                                        </apex:outputPanel>
+                                        <apex:outputPanel layout="block" styleClass="duelingText">Remove</apex:outputPanel>
+                                    </td>
+                                    <td class="selectCell">
+                                         <apex:outputPanel layout="block" styleClass="selectTitle">
+                                            <apex:outputLabel value="Selected Categories" for="multiselectPanel:rightList" />
+                                        </apex:outputPanel> 
+                                        <select id="{!$Component.multiselectPanel}:rightList" 
+                                class="multilist" multiple="multiple" size="6" 
+                                style="width: 150px;" >
+                                            <apex:repeat value="{!selectedLCats}" var="option">
+                                                <option value="{!option.value}">{!option.label}</option>
+                                            </apex:repeat>
+                                        </select>
+                                    </td>
+                                    <td class="buttonCell">
+                                        <apex:outputPanel layout="block"
+                                styleClass="text">Up</apex:outputPanel>
+                                        <apex:outputPanel layout="block" styleClass="text">
+                                            <apex:outputLink value="javascript:slideSelectedOptionsUp('{!$Component.multiselectPanel}:rightList', 
+                                    '{!$Component.rightHidden}');"
+                                    id="upBtn">
+                                                <apex:image value="/s.gif" alt="Up" styleClass="upArrowIcon"
+                                        title="Up" />
+                                            </apex:outputLink>
+                                        </apex:outputPanel>
+                                        <apex:outputPanel layout="block" styleClass="text">
+                                            <apex:outputLink value="javascript:slideSelectedOptionsDown('{!$Component.multiselectPanel}:rightList', 
+                                    '{!$Component.rightHidden}');"
+                                    id="downBtn">
+                                                <apex:image value="/s.gif" alt="Down" styleClass="downArrowIcon"
+                                        title="Down" />
+                                            </apex:outputLink>
+                                        </apex:outputPanel>
+                                        <apex:outputPanel layout="block" styleClass="text">Down</apex:outputPanel>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                      <apex:inputhidden value="{!leftOptionsHidden}" id="leftHidden" />
+                      <apex:inputhidden value="{!rightOptionsHidden}" id="rightHidden" />
+                    </apex:outputPanel>
+                </apex:outputPanel>
+            </apex:pageblocksection>
+            
+            <apex:pageBlockSection id="pgBlockSectionAdditionalInfo" title="Additional Information" collapsible="false" columns="2">
+                <apex:inputField id="actBonusSuppression" value="{!account.Bonus_Suppression__c}" />
+                <apex:outputLabel id="actBlank1" value="" />
+                
+                <apex:inputField id="actBonusSuppressionDate" value="{!account.Bonus_Suppression_Date__c}" />
+                <apex:outputLabel id="actBlank2" value="" />
+            
+            </apex:pageblocksection>
+            
+            <apex:pageblocksection id="KnowyourProspectPartner" title="Know your Prospect Partner" Columns="1">
+                <apex:inputfield value="{!account.How_Did_You_Hear_About_Us__c}"></apex:inputfield>
+                <apex:inputfield value="{!account.Competitors_they_work__c}"></apex:inputfield>
+                <apex:inputfield value="{!account.Paper_they_concentrate_on__c}"></apex:inputfield>
+                <apex:inputfield value="{!account.Units_funded_per_month__c}"></apex:inputfield>
+                <apex:inputfield value="{!account.Average_dollar_amount_funded__c}"></apex:inputfield>
+                <apex:inputfield value="{!account.NumberOfEmployees}"></apex:inputfield>
+                <apex:inputfield value="{!account.Rating}"></apex:inputfield>
+                <apex:inputfield value="{!account.Other_services_offered__c}"></apex:inputfield>
+                <apex:inputfield value="{!account.Contract_Sent__c}"></apex:inputfield>
+                <apex:inputfield value="{!account.Date_Contract_Signed__c}"></apex:inputfield>
+                <apex:inputfield value="{!account.Type_of_contract_sent__c}"></apex:inputfield>
+                <apex:inputfield value="{!account.Specify_Contract_Type_for_Other__c}"></apex:inputfield>
+                <apex:inputfield value="{!account.Are_you_a_direct_lender__c}"></apex:inputfield>
+                <apex:inputfield value="{!account.Have_you_ever_been_convicted_of_a_felony__c}"></apex:inputfield>
+                <apex:inputfield value="{!account.Assign_to_Director__c}"></apex:inputfield>
+            </apex:pageblocksection>
+            
+        </apex:pageblock>
+        
+        <script type="text/javascript">
+        if (!buildOutputString) {
+          // Create a string from the content of a listbox
+          var buildOutputString = function(listBox, hiddenInput) {
+            var str = '';
+            console.log('listBox '+listBox);
+            console.log('listBox '+listBox.options);
+            console.log('listBox '+listBox.options.length);
+            console.log(hiddenInput);
+            for ( var x = 0; x < listBox.options.length; x++) {
+              str += encodeURIComponent(listBox.options[x].value) + '&'
+                  + encodeURIComponent(listBox.options[x].text) + '&';
+            }
+            str.length--;
+        console.log('str '+str);
+            hiddenInput.value = str.slice(0, -1);
+          }
+        }
+        
+        if (!moveSelectedOptions) {
+          // Move the selected options in the idFrom listbox to the idTo
+          // listbox, updating the corresponding strings in idHdnFrom and
+          // idHdnTo
+          var moveSelectedOptions = function(idFrom, idTo, idHdnFrom, idHdnTo) {
+            listFrom = document.getElementById(idFrom);
+            listTo = document.getElementById(idTo);
+        
+            for ( var x = 0; x < listTo.options.length; x++) {
+              listTo.options[x].selected = false;
+            }
+        
+            for ( var x = 0; x < listFrom.options.length; x++) {
+              if (listFrom.options[x].selected == true) {
+                listTo.appendChild(listFrom.options[x]);
+                x--;
+              }
+            }
+        
+            listTo.focus();
+        
+            buildOutputString(listFrom, document.getElementById(idHdnFrom));
+            buildOutputString(listTo, document.getElementById(idHdnTo));
+          }
+        }
+        
+        if (!slideSelectedOptionsUp) {
+          // Slide the selected options in the idList listbox up by one position,
+          // updating the corresponding string in idHidden
+          var slideSelectedOptionsUp = function(idList, idHidden) {
+            listBox = document.getElementById(idList);
+        
+            var len = listBox.options.length;
+        
+            if (len > 0 && listBox.options[0].selected == true) {
+              return;
+            }
+        
+            for ( var x = 1; x < len; x++) {
+              if (listBox.options[x].selected == true) {
+                listBox.insertBefore(listBox.options[x],
+                    listBox.options[x - 1]);
+              }
+            }
+        
+            listBox.focus();
+        
+            buildOutputString(listBox, document.getElementById(idHidden));
+          }
+        }
+        
+        if (!slideSelectedOptionsDown) {
+          // Slide the selected options in the idList listbox down by one position,
+          // updating the corresponding string in idHidden
+          var slideSelectedOptionsDown = function(idList, idHidden) {
+            listBox = document.getElementById(idList);
+        
+            var len = listBox.options.length;
+        
+            if (len > 0 && listBox.options[len - 1].selected == true) {
+              return;
+            }
+        
+            for ( var x = listBox.options.length - 2; x >= 0; x--) {
+              if (listBox.options[x].selected == true) {
+                listBox.insertBefore(listBox.options[x + 1],
+                    listBox.options[x]);
+              }
+            }
+        
+            listBox.focus();
+        
+            buildOutputString(listBox, document.getElementById(idHidden));
+          }
+        }
+        
+        // initialize the string representations);
+        console.log (' document.getElementById(leftList) '+ document.getElementById('{!$Component.multiselectPanel}:rightList'));
+        console.log(buildOutputString(document.getElementById('{!$Component.multiselectPanel}:leftList'), 
+            document.getElementById("j_id0:j_id1:leadPB:Optional:leftHidden")));
+       
+        console.log(buildOutputString(document.getElementById('{!$Component.multiselectPanel}:rightList'), 
+            document.getElementById("j_id0:j_id1:leadPB:Optional:rightHidden")));
+    
+        </script>
+    </apex:form>
+</apex:page>

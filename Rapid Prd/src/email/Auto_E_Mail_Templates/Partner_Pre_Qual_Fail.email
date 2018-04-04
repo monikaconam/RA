@@ -1,0 +1,5 @@
+At this time the applicant file for {!Opportunity.Name} fails to meet the Pre-Qualification criteria.
+
+
+Comments:
+{!ApprovalRequest.Comments}

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>If both fields &quot;Took long to get approval from UW&quot; &amp; &quot;Many conditions prior to funding&quot; are checked, an email is sent to Faith / Ericka.</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>GFS Long Approval and Many Conditions</name>
+    <style>none</style>
+    <subject>Took long to approve &amp; Many conditions prior to funding.</subject>
+    <type>text</type>
+</EmailTemplate>

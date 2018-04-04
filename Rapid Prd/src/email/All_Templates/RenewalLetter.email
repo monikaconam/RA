@@ -1,0 +1,31 @@
+<table width="600" cellpadding="5" height="400" border="0" cellspacing="5" >
+<tr height="50" valign="top" >
+<td locked="0" style=" font-family:arial; bLabel:main; color:#000000; font-size:12pt; bEditID:r3st1; background-color:#FFFFFF;" aEditID="c1r1" tEditID="c1r1" >
+<![CDATA[Date: {!Opportunity.Welcome_Kit_Sent__c}]]></td>
+</tr>
+<tr height="300" valign="top" >
+<td locked="0" style=" font-family:arial; bLabel:main; color:#000000; font-size:12pt; bEditID:r3st1; background-color:#FFFFFF;" aEditID="c1r2" tEditID="c1r2" >
+<![CDATA[<P>{!Account.Name}</P>
+<P>{!Account.BillingAddress}</P>
+<P>{!Account.BillingCity}, {!Account.BillingState} {!Account.BillingPostalCode}</P>
+<P>&nbsp;</P>
+<P>Dear {!Contact.FirstName},</P>
+<P>&nbsp;</P>
+<P>Thank you for your continued confidence in RapidAdvance.&nbsp;&nbsp;We want to let you know&nbsp;that your user name and password to access your account information via our website (<A href="http://www.rapidadvance.com">www.rapidadvance.com</A>) will remain the same.&nbsp; For your convenience, we've enclosed&nbsp;the username and password you were given with your initial advance.</P>
+<P>&nbsp;</P>
+<P>Also, RapidAdvance&nbsp;has a <STRONG>"Referral Bonus Program"</STRONG> that&nbsp;we offer to&nbsp;all of our&nbsp;customers.&nbsp; For each&nbsp;merchant you refer that qualifies for and&nbsp;receives an advance, you will receive a <STRONG>$400 cash</STRONG> bonus!&nbsp; Easy and fast cash!&nbsp; Know anyone that could use some working capital?&nbsp;&nbsp;&nbsp;</P>
+<P>&nbsp;</P>
+<P>If you have any questions about your renewal or the referral program, please feel free to contact us at 240-514-2000 or email to <A href="mailto:sales@rapidadvance.com">sales@rapidadvance.com</A>. </P>
+<P>&nbsp;</P>
+<P>Sincerely,</P>
+<P>&nbsp;</P>
+<P>RapidAdvance Staff</P>]]></td>
+</tr>
+<tr height="50" valign="top" >
+<td locked="0" style=" font-family:arial; bLabel:main; color:#000000; font-size:12pt; bEditID:r3st1; background-color:#FFFFFF;" aEditID="c1r3" tEditID="c1r3" >
+<![CDATA[<P>&nbsp;</P>
+<P>&nbsp;</P>
+<P align=center><FONT size=1>7316 Wisconsin Avenue - Suite 450 - Bethesda - MD - 20814</FONT></P>
+<P align=center><FONT size=1>phone 240-514-2000&nbsp;&nbsp; fax 240-514-2010</FONT></P>]]></td>
+</tr>
+</table>

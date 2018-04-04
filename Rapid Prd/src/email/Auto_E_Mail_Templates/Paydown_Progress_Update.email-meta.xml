@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Paydown Progress Update</name>
+    <style>none</style>
+    <subject>Update: &quot;{!Opportunity.Name}&quot; is now {!Opportunity.Percent_Paid_Off__c}% Paid Down</subject>
+    <type>text</type>
+</EmailTemplate>

@@ -1,0 +1,134 @@
+<html>
+
+<head>
+<div style="position: absolute; width: 667px; height: 88px; z-index: 4; left: 92px; top: 56px" id="layer4">
+		<font face="Arial" color="#003399">Hello {!Lead.FirstName}, </font>
+		<p><font face="Arial" color="#003399">Did you know your credit card machine may get you up to 
+		<b>$600,000 in unsecured working capital</b> in as few as
+<b>10 days</b>!</font></p>
+</div>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<!-- #BeginEditable "doctitle" -->
+<title>New Page 1</title>
+<!-- #EndEditable -->
+<meta name="Microsoft Theme" content="none">
+<style type="text/css">
+.style1 {
+}
+.style2 {
+	margin-bottom: 6px;
+}
+.style4 {
+	font-family: Arial;
+	color: #003399;
+	margin-top: 0;
+	margin-bottom: 0;
+}
+.style5 {
+	font-family: Arial;
+	color: #003399;
+	margin-top: 39;
+	margin-bottom: 0;
+}
+.style6 {
+	font-family: Arial;
+	color: #003399;
+	margin-top: 7;
+	margin-bottom: 0;
+}
+.style7 {
+	color: #008000;
+	margin-top: 0;
+	margin-bottom: 0;
+	font-weight: bold;
+}
+.style8 {
+	font-family: Arial;
+	color: #008000;
+	margin-top: 7;
+	margin-bottom: 0;
+	font-weight: bold;
+}
+</style>
+</head>
+<body style="background-attachment: fixed">
+<blockquote style="width: 719px" class="style1">
+
+<table border="0" cellpadding="0" cellspacing="0" height="547" class="style2" style="width: 732px">
+	<!-- MSTableType="nolayout" -->
+	<tr>
+		<td valign="top" width="50" align="left">
+		<!-- MSCellType="ContentBody" -->
+		
+		</td>
+	</tr>
+	<tr>
+		<td valign="top" height="434" class="style4" style="height: 765px">
+		<!-- MSCellType="ContentBody" -->
+		<blockquote style="width: 690px; height: 485px;" class="style5">
+			<p style="margin-top: 0; margin-bottom: 0; width: 333px;">
+			&nbsp;</p>
+			<p style="margin-top: 0; margin-bottom: 0; width: 333px;">
+			&nbsp;</p>
+			<p style="margin-top: 0; margin-bottom: 0; width: 333px;">
+			&nbsp;</p>
+			<p style="margin-top: 0; margin-bottom: 0; width: 333px;">
+			&nbsp;</p>
+			<p style="margin-top: 0; margin-bottom: 0; width: 628px;">
+			&nbsp;</p>
+			<p style="margin-top: 0; margin-bottom: 0; width: 628px;">
+			<font face="Arial" color="#003399">Call or email us today, and see 
+			how much {!Lead.Company} qualifies for!</font></p>
+			<p style="margin-top: 0; margin-bottom: 0; width: 333px;">
+			&nbsp;</p>
+			<p style="width: 252px; height: 19px;" class="style7">
+			SMART</p>
+			<p style="width: 253px; height: 22px;" class="style6">
+			No Personal Guarantees*</p>
+			<p style="width: 253px; height: 22px;" class="style6">
+			No Liens or Collateral</p>
+			<p style="width: 253px; height: 22px;" class="style6">
+			No Fixed Payment Schedule</p>
+			<p style="width: 253px; height: 22px;" class="style6">
+			No Business Use Restrictions</p>
+			<p style="width: 253px; height: 22px;" class="style6">
+			No Application Fees</p>
+			<p style="width: 253px; height: 22px;" class="style8">
+			FAST</p>
+			<p style="width: 253px; height: 22px;" class="style6">
+			Apply in Less Than 3 Minutes</p>
+			<p style="width: 253px; height: 22px;" class="style6">
+			Cash Wired to You in 7-10 Days</p>
+			<p style="width: 253px; height: 22px;" class="style8">
+			EASY</p>
+			<p style="width: 253px; height: 22px;" class="style6">
+			No Complicated Paperwork</p>
+			<p style="width: 253px; height: 22px;" class="style6">
+			&nbsp;</p>
+			<p style="width: 253px; height: 22px;" class="style6">
+			Sincerely,</p>
+			<p align="left" style="width: 334px"><font face="Arial" color="#003399"><b>
+			{!Lead.OwnerFullName}
+			</b></font></p>
+			<p align="left" style="width: 335px"><font face="Arial"><b><font color="#003399">
+			{!Lead.OwnerPhone} 
+			</font></b></font></p>
+			<p align="left" style="width: 334px"><font face="Arial"><b><font color="#003399">
+			{!Lead.OwnerEmail}</font></b></font><font face="Arial" color="#003399"><b>
+			</b>
+			<body style="background-attachment: fixed">
+
+			</body></font></p>
+			<p align="left" style="width: 531px; height: 33px" class="style2"><font face="Arial" color="#003399" size="1">
+			*Individuals only liable in cases of fraud, misrepresentation, and 
+			as further detailed in contract.</font></p>
+				<font color="#003399">
+				<img border="0" src="https://na33.salesforce.com/servlet/servlet.ImageServer?oid=00D300000001PMh&id=01570000000mY6v" width="256" height="108"></font></blockquote>
+		</td>
+	</tr>
+</table>
+
+	</blockquote>
+
+
+</html>

@@ -1,0 +1,3 @@
+A syndication amount has been entered for {!Opportunity.Account} ({!Opportunity.Opportunity_Number__c}). 
+
+This is a {!Campaign.Name} deal.

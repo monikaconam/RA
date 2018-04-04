@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Pre-Qual Pending status</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>StandardLetterheadSample</letterhead>
+    <name>Pre-Qual Pending</name>
+    <style>freeForm</style>
+    <subject>{!Opportunity.QC_Person__c} - Pre Qual {!Opportunity.Opportunity_Number__c} returned by Mgmt for Review</subject>
+    <textOnly>Date - {!Opportunity.LastModifiedDate}  
+QC -  {!Opportunity.QC_Person__c}
+
+ 
+ 
+ 
+{!Opportunity.Link}
+
+Opportunity Name - {!Opportunity.Name}
+Opportunity Number - {!Opportunity.Opportunity_Number__c}
+Opportunity Advance ID - {!Opportunity.Advance_ID__c}
+
+Pre-Qual Decision - {!Opportunity.Pre_Qual_Decision__c}
+
+
+
+Pre-Qual Notes - {!Opportunity.Pre_Qual_Notes__c}  
+
+
+  
+Person who sent update - {!Opportunity.LastModifiedBy}
+ 
+ 
+ 
+ 
+ 
+ </textOnly>
+    <type>html</type>
+</EmailTemplate>

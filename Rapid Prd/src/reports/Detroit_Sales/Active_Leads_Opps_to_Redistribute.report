@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>LEAD_OWNER</field>
+    </columns>
+    <columns>
+        <field>FIRST_NAME</field>
+    </columns>
+    <columns>
+        <field>LAST_NAME</field>
+    </columns>
+    <columns>
+        <field>COMPANY_ACCT</field>
+    </columns>
+    <columns>
+        <field>STATUS</field>
+    </columns>
+    <columns>
+        <field>STAGE_NAME</field>
+    </columns>
+    <columns>
+        <field>Opportunity.CALC_FICO__c</field>
+    </columns>
+    <columns>
+        <field>Lead.DateBusinessStarted__c</field>
+    </columns>
+    <columns>
+        <field>LEAD_SOURCE</field>
+    </columns>
+    <columns>
+        <field>CREATED_DATE</field>
+    </columns>
+    <columns>
+        <field>LAST_UPDATE</field>
+    </columns>
+    <columns>
+        <field>CONVERTED_DATE</field>
+    </columns>
+    <columns>
+        <field>OPP_OWNER</field>
+    </columns>
+    <columns>
+        <field>OPP_NAME</field>
+    </columns>
+    <columns>
+        <field>OPP_ACCT_NAME</field>
+    </columns>
+    <columns>
+        <field>AMOUNT</field>
+    </columns>
+    <columns>
+        <field>CLOSE_DATE</field>
+    </columns>
+    <filter>
+        <booleanFilter>(1 OR 2) AND (3 OR 4)</booleanFilter>
+        <criteriaItems>
+            <column>LEAD_OWNER</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Nathan Fink</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>OPP_OWNER</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Nathan Fink</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>STATUS</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Calling - No Contact Made,In Progress - Follow Up Call Needed,In Progress - Awaiting Statements,In Progress - Pending Approval,In Progress - Pending Quote,In Progress - Contract Sent</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>STAGE_NAME</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>NO Contact Made,Contact Made - Follow Up,Statements Rec&apos;d Follow Up,B - Quote Submitted,C - Offer Accepted - Awaiting Compl Apps,C-1 Contract Signed - More Info Needed,Submitted Deal</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>Active Leads/Opps to Redistribute</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>OpportunityLead</reportType>
+    <scope>org</scope>
+    <showDetails>true</showDetails>
+    <sortColumn>CREATED_DATE</sortColumn>
+    <sortOrder>Desc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>CREATED_DATE</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

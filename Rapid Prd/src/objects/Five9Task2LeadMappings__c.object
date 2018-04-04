@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customSettingsType>List</customSettingsType>
+    <description>Mapping of Five9 Dispositions to Lead Statuses for use in Five9Task2Lead.trigger are persisted here.</description>
+    <enableFeeds>false</enableFeeds>
+    <fields>
+        <fullName>Five9Disposition__c</fullName>
+        <caseSensitive>true</caseSensitive>
+        <description>Represents a disposition as configured in Five9 and stored in the CallDisposition field on the activity task object.</description>
+        <externalId>false</externalId>
+        <label>Five9Disposition</label>
+        <length>255</length>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>LeadStatus__c</fullName>
+        <description>Represents a Lead.status as mapped from a Five9 Call disposition</description>
+        <externalId>false</externalId>
+        <label>LeadStatus</label>
+        <length>255</length>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>NotInterestedReason__c</fullName>
+        <externalId>false</externalId>
+        <label>Not Interested Reason</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>UnqualifiedReason__c</fullName>
+        <externalId>false</externalId>
+        <label>Unqualified Reason</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>Five9 Call Activity to Lead Mappings</label>
+    <visibility>Protected</visibility>
+</CustomObject>

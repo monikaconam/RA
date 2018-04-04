@@ -1,0 +1,4 @@
+Legal Name: {!Account.Legal_Name__c}
+OppId: {!Opportunity.Opportunity_Number__c}
+Created Date: {!Opportunity.CreatedDate}
+Status: {!Opportunity.Status__c}

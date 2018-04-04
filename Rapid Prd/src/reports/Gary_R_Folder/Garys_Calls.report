@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>ACCOUNT.NAME</field>
+    </columns>
+    <columns>
+        <field>SUBJECT</field>
+    </columns>
+    <columns>
+        <field>Activity.Created_Date__c</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>ASSIGNED</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Gary RushWorth</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>ACCOUNT_OWNER_NAME</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Gary Rushworth</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>CREATED_BY</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Gary RushWorth</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>SUBJECT</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>contains</operator>
+            <value>Call</value>
+        </criteriaItems>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Month</dateGranularity>
+        <field>CREATED_DATE</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Gary&apos;s Calls</name>
+    <params>
+        <name>closed</name>
+        <value>all</value>
+    </params>
+    <params>
+        <name>type</name>
+        <value>t</value>
+    </params>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>AccountActivity</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>CREATED_DATE</dateColumn>
+        <endDate>2016-12-31</endDate>
+        <interval>INTERVAL_CUSTOM</interval>
+        <startDate>2014-11-17</startDate>
+    </timeFrameFilter>
+</Report>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>When &quot;Took long to get decision from UW&quot;,  &quot;Expectation of Approval changed in UW&quot;, &quot;UW Process Intrusive and Disruptive&quot; fields are checked an email is sent to Faith / Ericka.</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>GFS Long Decision Expectation Changed Intrusive Disruptive</name>
+    <style>none</style>
+    <subject>Took long to get decision from UW, Expectation of Approval changed and Process Intrusive &amp; Disruptive</subject>
+    <type>text</type>
+</EmailTemplate>

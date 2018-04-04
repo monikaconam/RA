@@ -1,0 +1,17 @@
+<apex:page standardController="Opportunity" showHeader="false" sidebar="false">
+      <script type="text/javascript">
+        window.onload = function(){
+            var inputElem = document.getElementsByTagName("a");
+            for(var i=0; i<inputElem.length; i++)
+            {
+               inputElem[i].setAttribute('target', '_self');
+               var parentClass = inputElem[i].parentNode.className;
+               if(parentClass.indexOf("dataCell") != -1){
+                   var elehref = inputElem[i].href + '/e?retURL=/apex/{!$CurrentPage.Name}?Id={!$CurrentPage.parameters.Id}&oppId={!$CurrentPage.parameters.oppId}';
+                   inputElem[i].href =  elehref;   
+               }
+            } 
+        }
+    </script>
+    <apex:relatedList list="R00N70000002FrsQEAS"/>
+</apex:page>

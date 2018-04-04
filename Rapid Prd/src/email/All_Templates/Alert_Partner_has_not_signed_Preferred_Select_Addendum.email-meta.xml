@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Email Alert to BD on the lines of Premium MCA Alert.</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>EmailLetterhead</letterhead>
+    <name>!!Alert!! Partner has not signed Preferred/Select Addendum</name>
+    <style>freeForm</style>
+    <subject>ALERT  {!Opportunity.Name} - Preferred/Select Addendum NOT SIGNED FOR PARTNER</subject>
+    <textOnly>****ALERT - Partner has not signed Premium MCA*****
+
+Partner has not signed Premium MCA – please follow up.
+
+
+Opportunity Info:
+
+Campaign - {!Opportunity.Campaign}
+Opportunity - {!Opportunity.Name}
+Opportunity Number - {!Opportunity.Opportunity_Number__c}
+Opportunity Owner - {!Opportunity.OwnerFullName}
+
+Amount - {!Opportunity.Amount}
+Renewal? - {!Opportunity.Renewal__c}
+
+Submitted to UW &amp; Processing - {!Opportunity.Submit_to_UW_Processing__c}</textOnly>
+    <type>html</type>
+</EmailTemplate>

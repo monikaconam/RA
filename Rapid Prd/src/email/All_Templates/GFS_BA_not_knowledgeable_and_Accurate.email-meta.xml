@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>If BA not Knowledgeable enough and Didn&apos;t set accurate expectations,an email is sent to Maria.</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>GFS BA not knowledgeable and Accurate</name>
+    <style>none</style>
+    <subject>BA not knowledgeable eand Accurate about the details of funding</subject>
+    <type>text</type>
+</EmailTemplate>

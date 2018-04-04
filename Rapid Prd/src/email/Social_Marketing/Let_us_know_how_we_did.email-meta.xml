@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>false</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>EmailLetterhead</letterhead>
+    <name>Let us know how we did!</name>
+    <style>freeForm</style>
+    <subject>Let us know how we did!</subject>
+    <textOnly>Hi {!Contact.FirstName},
+
+Congratulations on funding with RapidAdvance!
+
+First, I wanted to let you know that I’m now available on Facebook. “Like” my page and find the latest news and updates that matter most to small businesses.
+
+Second, do you have a few minutes to leave us a review? We want to share your story along with all the other success stories and positive impacts we’ve had in the business lending industry.
+
+Finally, let’s talk about our referral kickback program. For every funded referral you send, you’ll get a “finder’s fee” of $500 on a VISA card.
+
+All I need from you is:
+
+Name of business owner
+Name of business
+Business owner’s phone number
+
+It’s a great opportunity to help business owners you know and also help yourself – so who do you know that could benefit from some extra working capital?
+
+Best,
+{!User.Name}
+Phone: {!User.Phone}
+Email: {!User.Email}
+Website: www.RapidAdvance.com</textOnly>
+    <type>html</type>
+</EmailTemplate>

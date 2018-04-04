@@ -1,0 +1,229 @@
+<apex:page StandardController="Opportunity" extensions="OppGreenTreeViewController">
+    <apex:form >
+        <!--  <apex:detail subject="{!opportunity.id}" relatedlist="false"/>-->
+      <!--  <apex:pageBlock rendered="{!if(((gtNew!=null)&&(NOT(isEdit))),true,false)}" >
+            <apex:pageBlockbuttons location="top">
+                <apex:commandbutton Value="Edit" action="{!edit}" immediate="true"/>
+            </apex:pageBlockbuttons>
+            
+            <apex:pageBlockSection columns="1" title="Description" collapsible="true" >
+                <apex:outputfield value="{!opp.recordType.name}" label="Opportunity Record Type" ></apex:outputfield>
+                <apex:outputfield value="{!opp.Point_of_Contact__c}"></apex:outputfield>
+                <apex:outputfield value="{!opp.Method_of_Contact__c}"></apex:outputfield>
+                
+                <apex:outputfield value="{!opp.If_Renewal_Preceding_Rapid_Opportunity__c}"></apex:outputfield>
+                <apex:outputfield value="{!opp.Notes_Link__c}"></apex:outputfield>
+                <apex:outputfield value="{!opp.Rapid_Opportunity__c}"></apex:outputfield>
+                <apex:outputfield value="{!opp.CampaignId}"></apex:outputfield>
+            </apex:pageBlocksection>
+            
+            <apex:pageBlockSection columns="2" title="GreenTree Funding" collapsible="true" >
+                <apex:outputfield value="{!opp.Owner.name}" label="Opportunity Owner" ></apex:outputfield>
+                <apex:outputfield value="{!opp.GTF_Qualified__c}"></apex:outputfield>
+                <apex:outputfield value="{!opp.Initial_Commission_Amt__c}"></apex:outputfield>
+                
+                <apex:outputfield value="{!opp.AE_Commission__c}"></apex:outputfield>
+                <apex:outputfield value="{!opp.StageName}"></apex:outputfield>
+                
+                <apex:outputfield value="{!opp.Not_Interested_Reason__c}"></apex:outputfield>
+                
+                <apex:outputfield value="{!opp.Previous_Sales_Rep__c}"></apex:outputfield>
+               
+                <apex:outputfield value="{!opp.Description}"></apex:outputfield>
+            </apex:pageBlocksection>
+            
+            <apex:pageBlockSection columns="2" title="Advance Information" collapsible="true" >
+                <apex:outputfield value="{!opp.Account.name}" label="Account Owner" ></apex:outputfield>
+                <apex:outputfield value="{!opp.Contact__c}"></apex:outputfield>
+                <apex:outputfield value="{!opp.name}" label="Opportunity Name"></apex:outputfield>
+                <apex:outputfield value="{!opp.Business_Category__c}"></apex:outputfield>
+                <apex:outputfield value="{!opp.Opportunity_Number__c}"></apex:outputfield>
+                <apex:outputfield value="{!opp.If_Renewal_Preceding_Opportunity__c}" label="Rapid Opportunity Link"></apex:outputfield>
+                <apex:outputfield value="{!opp.Advance_ID__c}"></apex:outputfield>
+                <apex:outputfield value="{!opp.RENEWAL_DATE__c}"></apex:outputfield>
+                <apex:outputfield value="{!opp.Amount}"></apex:outputfield>
+                <apex:outputfield value="{!opp.Probability}"></apex:outputfield>
+                <apex:outputfield value="{!opp.Pay_Back_Amount__c}"></apex:outputfield>
+                <apex:outputfield value="{!opp.Percent_Payback__c}"></apex:outputfield>
+                <apex:outputfield value="{!opp.Product__c}"></apex:outputfield>
+                <apex:outputfield value="{!opp.GTF_Estimated_Days_to_Repay__c}"></apex:outputfield>
+                <apex:outputfield value="{!opp.Renewal__c}"></apex:outputfield>
+                <apex:outputfield value="{!opp.Estimated_Days_to_Repay__c}"></apex:outputfield>
+                <apex:outputfield value="{!opp.Signed_Contract_Received__c}"></apex:outputfield>
+                <apex:outputfield value="{!opp.Estimated_Daily_Repay__c}"></apex:outputfield>
+                <apex:outputfield value="{!opp.CloseDate}"></apex:outputfield>
+                <apex:outputlabel ></apex:outputlabel>
+                <apex:outputfield value="{!opp.LeadSource}"></apex:outputfield>
+                <apex:outputlabel ></apex:outputlabel>
+                <apex:outputfield value="{!opp.Campaign.name}" label="Primary Campaign Source"></apex:outputfield>
+                <apex:outputlabel ></apex:outputlabel>
+            </apex:pageBlocksection>
+            
+            <apex:pageBlockSection columns="2" title="Applicant Information" collapsible="true" >
+                <apex:outputfield value="{!opp.AE_Primary_Signer_Info__c}"></apex:outputfield>
+                <apex:outputfield value="{!opp.Additional_Contact_Info__c}"></apex:outputfield>
+            </apex:pageBlockSection>
+            
+            <apex:pageBlockSection columns="2" title="Advance Financial Information" collapsible="true" >
+                <apex:outputfield value="{!opp.Advance_amount_requested__c}"></apex:outputfield>
+                <apex:outputfield value="{!opp.Purpose_of_Funds__c}"></apex:outputfield>
+                <apex:outputfield value="{!opp.SIC_CODE__c}"></apex:outputfield>
+                <apex:outputfield value="{!opp.Gross_monthly_sales__c}"></apex:outputfield>
+                <apex:outputfield value="{!opp.Months_of_Processing_Statements_Included__c }"></apex:outputfield>
+                <apex:outputfield value="{!opp.V_MC_Monthly_Sales__c   }"></apex:outputfield>
+                <apex:outputlabel ></apex:outputlabel>
+                
+            </apex:pageBlockSection>
+            
+            <apex:pageBlockSection columns="2" title="Advance Preformance" collapsible="true" >
+                <apex:outputfield value="{!opp.Date_Split_Changed__c}"></apex:outputfield>
+                <apex:outputfield value="{!opp.Renewal_Eligibility__c}"></apex:outputfield>
+                <apex:outputfield value="{!opp.Type_of_Change__c}"></apex:outputfield>
+                <apex:outputfield value="{!opp.Current_ROI__c}"></apex:outputfield>
+                <apex:outputfield value="{!opp.New_Split__c}"></apex:outputfield>
+                <apex:outputfield value="{!opp.Percent_Paid_Off__c}"></apex:outputfield>
+                <apex:outputfield value="{!opp.Split_Change_Notes__c}"></apex:outputfield>
+                <apex:outputfield value="{!opp.Remaining_Balance__c}"></apex:outputfield>
+                <apex:outputfield value="{!opp.Pay_Off_ROI__c}"></apex:outputfield>
+                <apex:outputfield value="{!opp.Advance_Payoff_Date__c}"></apex:outputfield>
+            </apex:pageBlockSection>
+            
+            <apex:pageBlockSection columns="2" title="GreenTree Information" collapsible="false" >
+                
+                <apex:outputfield value="{!gtNew.Decision_Date__c}"></apex:outputfield>
+                <apex:outputfield value="{!gtNew.PQ_Data_Entry_Date__c}"></apex:outputfield>
+                <apex:outputfield value="{!gtNew.Pre_Qual_Decision_Date__c}"></apex:outputfield>
+                <apex:outputfield value="{!gtNew.PreQual_Entry_Time__c}"></apex:outputfield>
+                <apex:outputfield value="{!gtNew.Pre_Qual_Pending_Date__c}"></apex:outputfield>
+                <apex:outputfield value="{!gtNew.Calculate_Due_Dates__c}"></apex:outputfield>
+                <apex:outputfield value="{!gtNew.QC_StartDate_filled__c}"></apex:outputfield>
+                <apex:outputfield value="{!gtNew.Risk_Employee_Review_Date__c}"></apex:outputfield>
+                <apex:outputfield value="{!gtNew.DS_Start_Date_Time__c}"></apex:outputfield>
+            </apex:pageBlockSection>
+            
+            <apex:pageBlockSection columns="2" title="GreenTree Description" collapsible="false" >
+                <apex:outputfield value="{!gtNew.No_of_Payments__c}"></apex:outputfield>
+                <apex:outputfield value="{!gtNew.Daily_Payment_Amount__c}"></apex:outputfield>
+                <apex:outputfield value="{!gtNew.Estimated_Balance__c}"></apex:outputfield>
+                <apex:outputfield value="{!gtNew.Estimated_Days_to_Repay__c}"></apex:outputfield>
+                <apex:outputfield value="{!gtNew.Average_CC_Sales__c}"></apex:outputfield>
+                <apex:outputfield value="{!gtNew.Average_Gross_Sales__c}"></apex:outputfield>
+                <apex:outputfield value="{!gtNew.Product__c}"></apex:outputfield>
+                <apex:outputfield value="{!gtNew.ProductTerm__c}"></apex:outputfield>
+            </apex:pageBlockSection>
+            
+        </apex:pageblock>-->
+        <!-- Edit Mode 
+        <apex:pageBlock id="editPBB" rendered="{!isEdit}">
+            <apex:pageBlockButtons >
+                <apex:commandButton value="Save"/>
+                <apex:commandButton value="Cancel"/>
+            </apex:pageBlockButtons>
+            <apex:pageBlockSection columns="1" title="Description" collapsible="true" >
+                <apex:inputfield value="{!opp.recordType.name}" label="Opportunity Record Type" ></apex:inputfield>
+                <apex:inputfield value="{!opp.Point_of_Contact__c}"></apex:inputfield>
+                <apex:inputfield value="{!opp.Method_of_Contact__c}"></apex:inputfield>
+                
+                <apex:inputfield value="{!opp.CALC_Link__c}"></apex:inputfield>
+                <apex:inputfield value="{!opp.Notes_Link__c}"></apex:inputfield>
+            </apex:pageBlocksection>
+            
+            <apex:pageBlockSection columns="2" title="GreenTree Funding" collapsible="true" >
+                <apex:inputfield value="{!opp.Owner.name}" label="Opportunity Owner" ></apex:inputfield>
+                <apex:inputfield value="{!opp.GTF_Qualified__c}"></apex:inputfield>
+                <apex:inputfield value="{!opp.Initial_Commission_Amt__c}"></apex:inputfield>
+                
+                <apex:inputfield value="{!opp.AE_Commission__c}"></apex:inputfield>
+                <apex:inputfield value="{!opp.StageName}"></apex:inputfield>
+                
+                <apex:inputfield value="{!opp.Not_Interested_Reason__c}"></apex:inputfield>
+                
+                <apex:inputfield value="{!opp.Previous_Sales_Rep__c}"></apex:inputfield>
+                
+                <apex:inputfield value="{!opp.Description}"></apex:inputfield>
+            </apex:pageBlocksection>
+            
+            <apex:pageBlockSection columns="2" title="Advance Information" collapsible="true" >
+                <apex:inputfield value="{!opp.Account.name}" label="Account Owner" ></apex:inputfield>
+                <apex:inputfield value="{!opp.Contact__c}"></apex:inputfield>
+                <apex:inputfield value="{!opp.name}" label="Opportunity Name"></apex:inputfield>
+                <apex:inputfield value="{!opp.Business_Category__c}"></apex:inputfield>
+                <apex:inputfield value="{!opp.Opportunity_Number__c}"></apex:inputfield>
+                <apex:inputfield value="{!opp.If_Renewal_Preceding_Opportunity__c}" label="Rapid Opportunity Link"></apex:inputfield>
+                <apex:inputfield value="{!opp.Advance_ID__c}"></apex:inputfield>
+                <apex:inputfield value="{!opp.RENEWAL_DATE__c}"></apex:inputfield>
+                <apex:inputfield value="{!opp.Amount}"></apex:inputfield>
+                <apex:inputfield value="{!opp.Probability}"></apex:inputfield>
+                <apex:inputfield value="{!opp.Pay_Back_Amount__c}"></apex:inputfield>
+                <apex:inputfield value="{!opp.Percent_Payback__c}"></apex:inputfield>
+                <apex:inputfield value="{!opp.Product__c}"></apex:inputfield>
+                <apex:inputfield value="{!opp.GTF_Estimated_Days_to_Repay__c}"></apex:inputfield>
+                <apex:inputfield value="{!opp.Renewal__c}"></apex:inputfield>
+                <apex:inputfield value="{!opp.Estimated_Days_to_Repay__c}"></apex:inputfield>
+                <apex:inputfield value="{!opp.Signed_Contract_Received__c}"></apex:inputfield>
+                <apex:inputfield value="{!opp.Estimated_Daily_Repay__c}"></apex:inputfield>
+                <apex:inputfield value="{!opp.CloseDate}"></apex:inputfield>
+                <apex:outputlabel ></apex:outputlabel>
+                <apex:inputfield value="{!opp.LeadSource}"></apex:inputfield>
+                <apex:outputlabel ></apex:outputlabel>
+                <apex:inputfield value="{!opp.Campaign.name}" label="Primary Campaign Source"></apex:inputfield>
+                <apex:outputlabel ></apex:outputlabel>
+            </apex:pageBlocksection>
+            
+            <apex:pageBlockSection columns="2" title="Applicant Information" collapsible="true" >
+                <apex:inputfield value="{!opp.AE_Primary_Signer_Info__c}"></apex:inputfield>
+                <apex:inputfield value="{!opp.Additional_Contact_Info__c}"></apex:inputfield>
+            </apex:pageBlockSection>
+            
+            <apex:pageBlockSection columns="2" title="Advance Financial Information" collapsible="true" >
+                <apex:inputfield value="{!opp.Advance_amount_requested__c}"></apex:inputfield>
+                <apex:inputfield value="{!opp.Purpose_of_Funds__c}"></apex:inputfield>
+                <apex:inputfield value="{!opp.SIC_CODE__c}"></apex:inputfield>
+                <apex:inputfield value="{!opp.Gross_monthly_sales__c}"></apex:inputfield>
+                <apex:inputfield value="{!opp.Months_of_Processing_Statements_Included__c }"></apex:inputfield>
+                <apex:inputfield value="{!opp.V_MC_Monthly_Sales__c   }"></apex:inputfield>
+                <apex:outputlabel ></apex:outputlabel>
+                
+            </apex:pageBlockSection>
+            
+            <apex:pageBlockSection columns="2" title="Advance Preformance" collapsible="true" >
+                <apex:inputfield value="{!opp.Date_Split_Changed__c}"></apex:inputfield>
+                <apex:inputfield value="{!opp.Renewal_Eligibility__c}"></apex:inputfield>
+                <apex:inputfield value="{!opp.Type_of_Change__c}"></apex:inputfield>
+                <apex:inputfield value="{!opp.Current_ROI__c}"></apex:inputfield>
+                <apex:inputfield value="{!opp.New_Split__c}"></apex:inputfield>
+                <apex:inputfield value="{!opp.Percent_Paid_Off__c}"></apex:inputfield>
+                <apex:inputfield value="{!opp.Split_Change_Notes__c}"></apex:inputfield>
+                <apex:inputfield value="{!opp.Remaining_Balance__c}"></apex:inputfield>
+                <apex:inputfield value="{!opp.Pay_Off_ROI__c}"></apex:inputfield>
+                <apex:inputfield value="{!opp.Advance_Payoff_Date__c}"></apex:inputfield>
+            </apex:pageBlockSection>
+            
+            <apex:pageBlockSection columns="2" title="GreenTree Information" collapsible="TRUE" >
+               
+                <apex:inputfield value="{!gtNew.Decision_Date__c}"></apex:inputfield>
+                <apex:inputfield value="{!gtNew.PQ_Data_Entry_Date__c}"></apex:inputfield>
+                <apex:inputfield value="{!gtNew.Pre_Qual_Decision_Date__c}"></apex:inputfield>
+                <apex:inputfield value="{!gtNew.PreQual_Entry_Time__c}"></apex:inputfield>
+                <apex:inputfield value="{!gtNew.Pre_Qual_Pending_Date__c}"></apex:inputfield>
+                <apex:inputfield value="{!gtNew.Calculate_Due_Dates__c}"></apex:inputfield>
+                <apex:inputfield value="{!gtNew.QC_StartDate_filled__c}"></apex:inputfield>
+                <apex:inputfield value="{!gtNew.Risk_Employee_Review_Date__c}"></apex:inputfield>
+                <apex:inputfield value="{!gtNew.DS_Start_Date_Time__c}"></apex:inputfield>
+            </apex:pageBlockSection>
+            
+            <apex:pageBlockSection columns="2" title="GreenTree Description" collapsible="TRUE" >
+                <apex:inputfield value="{!gtNew.No_of_Payments__c}"></apex:inputfield>
+                <apex:inputfield value="{!gtNew.Daily_Payment_Amount__c}"></apex:inputfield>
+                <apex:inputfield value="{!gtNew.Estimated_Balance__c}"></apex:inputfield>
+                <apex:inputfield value="{!gtNew.Estimated_Days_to_Repay__c}"></apex:inputfield>
+                <apex:inputfield value="{!gtNew.Average_CC_Sales__c}"></apex:inputfield>
+                <apex:inputfield value="{!gtNew.Average_Gross_Sales__c}"></apex:inputfield>
+                <apex:inputfield value="{!gtNew.Product__c}"></apex:inputfield>
+                <apex:inputfield value="{!gtNew.ProductTerm__c}"></apex:inputfield>
+            </apex:pageBlockSection>
+            
+        </apex:pageBlock>
+        <!--Edit Mode --> 
+    </apex:form>
+</apex:page>

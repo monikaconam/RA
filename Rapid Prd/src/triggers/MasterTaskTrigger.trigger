@@ -1,0 +1,44 @@
+trigger MasterTaskTrigger on Task (after insert, after update,  after delete, after undelete,before insert,before update) 
+{
+    if(Trigger.isAfter)
+    {
+        if(Trigger.isInsert) 
+        {
+            UpdtAccOppConWithLastFive9CallDetails.updateAccountWithLastFive9CallDetails(trigger.new);
+            UpdtAccOppConWithLastFive9CallDetails.updateLeadWithLastFive9CallDetails(trigger.new);
+            UpdtAccOppConWithLastFive9CallDetails.updateOppWithLastFive9CallDetails(trigger.new);
+            UpdtAccOppConWithLastFive9CallDetails.updateContactWithLastFive9CallDetails(trigger.new);
+            TaskTriggerHandler.aiFive9Task2Lead(trigger.new);
+            TaskTriggerHandler.aiFive9Opportunity2Task(trigger.new);
+            LeadProspectContactedHandler.UpdateLeadProspectContacted(trigger.new);
+            UpdateLastActivityFields.updateLastBDCallActivity(Trigger.new);
+        }
+        if(Trigger.isUpdate)
+        {
+            //UpdtAccOppConWithLastFive9CallDetails.onAfterUpdate(trigger.newMap,trigger.oldMap);
+            TaskTriggerHandler.auFive9Task2Lead(trigger.new,trigger.oldMap);
+            TaskTriggerHandler.auFive9Opportunity2Task(trigger.new);
+            LeadProspectContactedHandler.UpdateLeadProspectContacted(trigger.new);
+        }
+        if(Trigger.isUndelete)
+        {
+            TaskTriggerHandler.aunFive9Task2Lead(trigger.new);       
+        }
+        if(Trigger.isDelete)
+        {
+            TaskTriggerHandler.adFive9Task2Lead(trigger.old);
+        }    
+    }
+    
+    if(Trigger.isBefore)
+    {
+        if(Trigger.isInsert) 
+        {
+            PopulateLeadOppNumHandler.PopulateLeadOppNumInsert(trigger.new);
+        }
+        if(Trigger.isUpdate)
+        {
+            PopulateLeadOppNumHandler.PopulateLeadOppNumUpdate(trigger.new,Trigger.oldMap);   
+        }
+    }
+}

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>CREATED_DATE</field>
+    </columns>
+    <columns>
+        <field>LEAD_OWNER</field>
+    </columns>
+    <columns>
+        <field>COMPANY_ACCT</field>
+    </columns>
+    <columns>
+        <field>STATUS</field>
+    </columns>
+    <columns>
+        <field>CONVERTED_DATE</field>
+    </columns>
+    <columns>
+        <field>Opportunity.Signed_Contract_Received__c</field>
+    </columns>
+    <columns>
+        <field>STAGE_NAME</field>
+    </columns>
+    <columns>
+        <field>Opportunity.Underwriting_Approval__c</field>
+    </columns>
+    <columns>
+        <field>Opportunity.Approved_Flag__c</field>
+    </columns>
+    <columns>
+        <field>Opportunity.signed_flag__c</field>
+    </columns>
+    <columns>
+        <field>Lead.Greg_Total_Lead_Success__c</field>
+    </columns>
+    <filter>
+        <booleanFilter>1 or 2</booleanFilter>
+        <criteriaItems>
+            <column>CAMPAIGN_NAME</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>SWIFT DM 01172011</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>CAMPAIGN_SOURCE</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>SWIFT DM 01172011</value>
+        </criteriaItems>
+    </filter>
+    <format>Matrix</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>CONVERTED</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>SWIFT DM 01172011 Greg Program Final</name>
+    <params>
+        <name>scopeid</name>
+        <value></value>
+    </params>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CampaignLeadLifetime</reportType>
+    <scope>organization</scope>
+    <showDetails>false</showDetails>
+</Report>

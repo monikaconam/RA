@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Note</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Notes</value>
+    </caseValues>
+    <fields>
+        <label><!-- Import Id --></label>
+        <name>Import_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Import Source --></label>
+        <name>Import_Source__c</name>
+    </fields>
+    <fields>
+        <label><!-- Note Content --></label>
+        <name>Note_Content__c</name>
+    </fields>
+    <fields>
+        <label><!-- Opportunity --></label>
+        <name>Opportunity__c</name>
+        <relationshipLabel><!-- Notes --></relationshipLabel>
+    </fields>
+    <recordTypes>
+        <label><!-- Approved With Conditions --></label>
+        <name>Approved_With_Conditions</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Archived Credit Bureau --></label>
+        <name>Archived_Credit_Bureau</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Business Bankruptcies --></label>
+        <name>Business_Bankruptcies</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Funding --></label>
+        <name>Funding</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Individual Bankrupties --></label>
+        <name>Individual_Bankrupties</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Internal Processing Notes --></label>
+        <name>Internal_Processing_Notes</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Internal QC --></label>
+        <name>Internal_QC</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Internal UW Notes --></label>
+        <name>Internal_UnderWriting</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Pre Qual Notes --></label>
+        <name>Pre_Qual</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Pre Qual Loss --></label>
+        <name>Pre_Qual_Loss</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Prefunding Call --></label>
+        <name>Prefunding_Call</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Processing Notes --></label>
+        <name>Processing</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Quancor --></label>
+        <name>Quancor</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Renewal --></label>
+        <name>Renewal</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Risk Alert --></label>
+        <name>Risk_Alert</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Risk Notes --></label>
+        <name>Risk_Notes</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- SA Internal Notes --></label>
+        <name>SA_Internal</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Sales Check List --></label>
+        <name>Sales_Check_List</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Sales Notes to UW &amp; Processing --></label>
+        <name>Sales_to_UW_Processing</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Site --></label>
+        <name>Site</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Split change --></label>
+        <name>Split_change</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Third Party UW Notes --></label>
+        <name>Third_Party_Underwriting_Notes</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- UW Notes to Processing/Risk Department --></label>
+        <name>UW_Notes_to_Processing_Risk_Department</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- UW Processing --></label>
+        <name>UW_Processing</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- UW Notes --></label>
+        <name>Underwriting</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

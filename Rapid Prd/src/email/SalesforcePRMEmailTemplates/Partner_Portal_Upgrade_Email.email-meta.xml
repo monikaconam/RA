@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Email sent to partners about the upgrade to PRM portal</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>EmailLetterhead</letterhead>
+    <name>Partner Portal Upgrade Email</name>
+    <style>formalLetter</style>
+    <subject>Take a look at the new Rapid Partner Portal!</subject>
+    <textOnly>Dear Valued Partner,
+
+To ensure we provide top-notch customer service to our partners, RapidAdvance has made several improvement to the Partner Portal.  Below are just a few of the upgrades that are available to you:
+
+Reporting: We now have the ability to schedule and deliver reports to you when and where you want them.  There is also a &quot;Reports&quot; tab in the portal where you have access to them anytime.  Work with your Relationship Manager to create the reports you want.
+
+Submit deals directly through Partner Portal:  You can submit your deals through the portal and attach all documentation by using the &quot;Leads&quot; tab.  You will receive an auto email confirming your deal has been received and is in your pipeline.
+
+Ideas:  On the &quot;Ideas&quot; tab, give us your feedback.  You can submit and idea on how to improve our process, the partner portal, or any other topic you want.  We welcome all suggestions!
+
+Solutions: You can now type in a key word and find the answer to commonly asked questions using the &quot;Solutions&quot; tab.  
+
+Cases: Create a case using the &quot;Cases&quot; tab.  These cases go directly to our Customer Service department who will answer your questions or address your concerns immediately.  All cases and their answers are listed under the cases tab for your convenience. (available 10/20/2008)
+
+*******To access the new portal, you must use the link below********
+(copy and paste the link into a browser)
+
+https://na5.salesforce.com/secur/login_portal.jsp?orgId=00D300000001PMh&amp;portalId=06050000000002P
+
+Your user name and password will remain the same.  If you would like to have any questions or would like additional training on the Partner Portal, please contact your Relationship Manager and they will schedule an in depth training session.
+
+Thank you,
+
+RapidAdvance, LLC</textOnly>
+    <type>html</type>
+</EmailTemplate>

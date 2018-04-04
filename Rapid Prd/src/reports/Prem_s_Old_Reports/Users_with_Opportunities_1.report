@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>User.Opportunity$OwnerId$Name</field>
+    </columns>
+    <columns>
+        <field>User.Opportunity$OwnerId$StageName</field>
+    </columns>
+    <columns>
+        <field>User.Opportunity$OwnerId$CreatedDate</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>User$IsActive</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>1</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>User$UserRole</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Business Advisor</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>User.Opportunity$OwnerId$StageName</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Credit Pulled,NO Contact Made,Contact Made - Follow Up,Statements Rec&apos;d Follow Up,B - Quote Submitted,C - Offer Accepted - Awaiting Compl Apps,C-1 Contract Signed - More Info Needed</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>User.Opportunity$OwnerId$CreatedDate</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>THIS_YEAR</value>
+        </criteriaItems>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>User$Name</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Users with Opportunities</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Users_With_Opportunities__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>User$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

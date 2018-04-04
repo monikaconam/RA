@@ -1,0 +1,74 @@
+<apex:component >
+    <apex:stylesheet value="{!$Resource.ExtJS4}/extjs-4.1.0/resources/css/ext-all.css" />
+    <apex:stylesheet value="{!$Resource.ExtJS4}/extjs-4.1.0/resources/xtheme-gray-extend/xtheme-gray-extend.css" />
+    <apex:stylesheet value="{!$Resource.ExtJS4}/extjs-4.1.0/resources/ext-theme-gray/ext-theme-gray-all.css" />
+    <!--
+    <apex:stylesheet value="{!$Resource.ExtJS4}/extjs-4.1.0/resources/ext-theme-gray/ext-theme-gray-all-debug.css" />
+      -->
+    
+    <apex:stylesheet value="{!$Resource.ExtJS4}/extjs-4.1.0/resources/ext-theme-gray/ext-theme-gray-all-rtl.css" />
+    <!--
+    <apex:stylesheet value="{!$Resource.ExtJS4}/extjs-4.1.0/resources/ext-theme-gray/ext-theme-gray-all-rtl-debug.css"/>
+      -->
+    
+    <apex:includeScript value="{!$Resource.ExtJS4}/extjs-4.1.0/ext-all.js"/>    
+    <apex:attribute name="title" type="String" description="title name"/>
+    <apex:attribute name="panelContent" type="String" description="content Html"/>
+     <apex:attribute name="headerHtml" type="String" description="header Html"/>
+     <apex:attribute name="isNoteDetlailExist" type="String" description="content Html"/>
+     <apex:attribute name="RefreshButton" type="String" description="content Html"/>
+    <style>
+        .mySection{
+            padding: 10px 0;
+        } 
+         #panelGrid{
+            background: url('{!URLFOR($Resource.BackgroundImage)}') repeat-x scroll 0 -5px transparent;
+            border-radius: 3px 3px 3px 3px;
+            color: #FFFFFF; 
+            font: bold 12px/22px tahoma;
+            height: 25px;
+            padding: 0 0 0 12px;
+            width: 100%;
+            margin-left: -5px;  
+            font-family: tahoma !important;
+            font-size:12px;letter-spacing:1px !important;
+        }
+		.refreshBtn{                        
+            background-size:100%;
+            height: 18px;
+            width: 18px;
+            padding: 2px 7px;  
+            cursor: pointer; 
+            float:right;
+            background-repeat: no-repeat;            
+            margin-top: 3px;
+			margin-right: 10px;
+            background-image:url({!URLFOR($Resource.Icons,'refresh2.png')});
+        }
+        .refreshBtn:hover{
+            height: 16px;
+            width: 16px;
+        }
+    </style> 
+    <script>
+    	function refresh(){
+    		window.location.href=window.location.href;
+    	}
+    </script>
+    <!-- script>
+        Ext.onReady(function() {
+            Ext.create('Ext.panel.Panel', {
+                title: '{!title} {!headerHtml}',
+                width: '100%',              
+                html: '{!panelContent}',
+                renderTo: '{!$Component.mySection}'
+            });
+        });
+    </script-->
+    <!-- apex:outputPanel id="mySection" layout="block" styleClass="mySection"/-->
+    <br/>
+    <div id='panelGrid'>
+    	{!title} <apex:outputpanel rendered="{!IF(RefreshButton==null,false,true)}"><div  title="Refresh Notes Details!" onClick="refresh();" class="refreshBtn"/></apex:outputpanel><apex:outputpanel rendered="{!IF(headerHtml==null,false,true)}"><table width="100%" class="tbl"><tr><td width="58%" align="left" style="color: #FFFFFF !important">Note Content</td><td width="20%" align="left" style="color: #FFFFFF !important"><div style="display:{!IF(isNoteDetlailExist =='true','block','none')};color: #FFFFFF !important">Note Type</div></td><td width="22%" align="left" style="color: #FFFFFF !important">Modified By</td></tr></table></apex:outputpanel> 
+    </div>
+    <br/>
+</apex:component>

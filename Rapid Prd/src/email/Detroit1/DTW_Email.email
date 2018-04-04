@@ -1,0 +1,54 @@
+<table border="0" cellpadding="5" width="550" cellspacing="5" height="400" >
+<tr valign="top" height="400" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; color:#000000; bEditID:r3st1; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[<div><span style="color: rgb(31, 78, 121); font-family: 'Century Schoolbook', serif; font-size: 13pt;">Hello&nbsp;</span><font color="#1f4e79" face="Century Schoolbook, serif"><span style="font-size: 17.3333px;">{!Contact.FirstName}</span><span style="color: rgb(0, 0, 0); font-family: arial; font-size: 13pt;">,</span></font></div><div><p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><span style="font-size:13.0pt;font-family:&quot;Century Schoolbook&quot;,serif;
+color:#1F4E79">&nbsp;</span></p><p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><span style="font-size:13.0pt;font-family:&quot;Century Schoolbook&quot;,serif;
+color:#1F4E79">You’ve received a few calls from some of the business advisors
+on our team and I’m sure you’ve been busy.&nbsp; I just called and wanted to
+reach out to you because of a specific product we created.<o:p></o:p></span></p><p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><span style="font-size:13.0pt;font-family:&quot;Century Schoolbook&quot;,serif;
+color:#1F4E79">&nbsp;</span></p><p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><span style="font-size:13.0pt;font-family:&quot;Century Schoolbook&quot;,serif;
+color:#1F4E79">Just to give you an idea of what it is we are offering, it's a
+loan that is as competitive as a bank loan or SBA loan in terms and rates, with
+the only difference being we don’t require the crazy documentation that banks
+and government loans will require from you.&nbsp; We also don’t have the high
+cost fees because we will be servicing your loan through the life of the loan.
+Lastly, we take no collateral on these loans either. <o:p></o:p></span></p><p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><span style="font-size:13.0pt;font-family:&quot;Century Schoolbook&quot;,serif;
+color:#1F4E79">&nbsp;</span></p><p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><span style="font-size:13.0pt;font-family:&quot;Century Schoolbook&quot;,serif;
+color:#1F4E79">You’re company has been chosen for an opportunity because of the
+length of time you’ve been in business and we see it as a low risk loan.<o:p></o:p></span></p><p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><span style="font-size:13.0pt;font-family:&quot;Century Schoolbook&quot;,serif;
+color:#1F4E79">&nbsp;</span></p><p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><span style="font-size:13.0pt;font-family:&quot;Century Schoolbook&quot;,serif;
+color:#1F4E79">One last thing that I forgot to mention is that you don’t have
+to have great credit to qualify. <o:p></o:p></span></p><p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><span style="font-size:13.0pt;font-family:&quot;Century Schoolbook&quot;,serif;
+color:#1F4E79">&nbsp;</span></p><p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><span style="font-size:13.0pt;font-family:&quot;Century Schoolbook&quot;,serif;
+color:#1F4E79">Please call me directly when you get this or just reply directly
+to this email and I'll respond immediately. We’ll just be having a quick conversation.<o:p></o:p></span></p><p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><span style="font-size:13.0pt;font-family:&quot;Century Schoolbook&quot;,serif;
+color:#1F4E79">&nbsp;</span></p><p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><span style="font-size:13.0pt;font-family:&quot;Century Schoolbook&quot;,serif;
+color:#1F4E79">&nbsp;</span></p><p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</p><p class="MsoNormal"><span style="color: rgb(31, 78, 121); font-family: 'Century Schoolbook', serif; font-size: 13pt;">Hope All is Well&nbsp;</span><font color="#1f4e79" face="Century Schoolbook, serif"><font><span style="font-size: 17.3333px;">{!Contact.FirstName}</span><font color="#000000" face="arial"><span style="font-size: 17.3333px;">,</span></font></font></font></p><p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><br></p><p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><font face="arial">{!User.Name}</font><font face="arial" style="font-family: arial; font-size: 12pt;">&nbsp;| Business Advisor</font></p><p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><font face="arial" style="font-family: arial; font-size: 12pt;">Email: &nbsp;<span class="Apple-tab-span" style="white-space:pre">		</span></font><font face="arial">{!User.Email}</font></p><p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><font face="arial" style="font-family: arial; font-size: 12pt;">Phone:<span class="Apple-tab-span" style="white-space:pre">		</span></font><font face="arial">{!User.Phone}</font></p><p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><font><font face="arial" style="font-family: arial; font-size: 12pt;">Cell Phone: &nbsp;<span class="Apple-tab-span" style="white-space:pre">	</span></font><font face="arial">{!User.MobilePhone}</font></font></p><p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><font color="#002060" face="arial"><br></font></p><p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><span style="color:#002060"><br></span></p></div>]]></td>
+</tr>
+</table>

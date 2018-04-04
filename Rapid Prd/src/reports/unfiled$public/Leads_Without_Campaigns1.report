@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Lead$LeadID__c</field>
+    </columns>
+    <columns>
+        <field>Lead$Name</field>
+    </columns>
+    <columns>
+        <field>Lead$Owner</field>
+    </columns>
+    <columns>
+        <field>Lead$Lead_Created_Date__c</field>
+    </columns>
+    <columns>
+        <field>Lead.CampaignMembers$Name</field>
+    </columns>
+    <crossFilters>
+        <operation>without</operation>
+        <primaryTableColumn>Lead$Id</primaryTableColumn>
+        <relatedTable>CampaignMember-Campaign</relatedTable>
+        <relatedTableJoinColumn>Lead</relatedTableJoinColumn>
+    </crossFilters>
+    <filter>
+        <criteriaItems>
+            <column>Lead$LeadSource</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Customer Journey Web to Lead</value>
+        </criteriaItems>
+    </filter>
+    <format>Summary</format>
+    <name>Leads Without Campaigns</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Leads_with_or_without_Campaign__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>Lead$CreatedDate</dateColumn>
+        <endDate>2015-07-24</endDate>
+        <interval>INTERVAL_CUSTOM</interval>
+        <startDate>2015-07-01</startDate>
+    </timeFrameFilter>
+</Report>

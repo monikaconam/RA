@@ -1,0 +1,3 @@
+<apex:page standardController="BOOP__c" extensions="ReviewBoopStatusAlert" action="{!onLoad}">
+<apex:pageMessages ></apex:pageMessages>
+</apex:page>

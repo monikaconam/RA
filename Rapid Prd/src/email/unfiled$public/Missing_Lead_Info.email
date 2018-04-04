@@ -1,0 +1,9 @@
+Alert!
+
+The following Lead has either a Campaign or a Phone field value missing: 
+
+Lead Name: {!Lead.Name}
+Lead Id: {!Lead.Id}
+Phone: {!Lead.Phone}
+
+- This is a system generated message -

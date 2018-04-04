@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>CREATED_DATE</field>
+    </columns>
+    <columns>
+        <field>COMPANY</field>
+    </columns>
+    <columns>
+        <field>Lead.Campaign_Name__c</field>
+    </columns>
+    <columns>
+        <field>STATUS</field>
+    </columns>
+    <columns>
+        <field>INDUSTRY</field>
+    </columns>
+    <description>Leads with Industry containing Health or Medical</description>
+    <filter>
+        <booleanFilter>1 OR 2</booleanFilter>
+        <criteriaItems>
+            <column>INDUSTRY</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>contains</operator>
+            <value>Health</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>INDUSTRY</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>contains</operator>
+            <value>Medical</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>Health or Medical Leads</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>LeadList</reportType>
+    <scope>org</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>CREATED_DATE</dateColumn>
+        <endDate>2016-12-31</endDate>
+        <interval>INTERVAL_CUSTOM</interval>
+        <startDate>2016-01-01</startDate>
+    </timeFrameFilter>
+</Report>

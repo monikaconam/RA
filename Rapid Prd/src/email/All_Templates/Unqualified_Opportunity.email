@@ -1,0 +1,111 @@
+<table width="550" cellpadding="5" height="400" border="0" cellspacing="5" >
+<tr height="400" valign="top" >
+<td locked="0" style=" font-family:arial; bLabel:main; color:#000000; font-size:12pt; bEditID:r3st1; background-color:#FFFFFF;" aEditID="c1r1" tEditID="c1r1" >
+<![CDATA[<link rel="File-List" href="file:///C:%5CDOCUME%7E1%5Csheila%5CLOCALS%7E1%5CTemp%5Cmsohtml1%5C01%5Cclip_filelist.xml"><!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:View>Normal</w:View>
+  <w:Zoom>0</w:Zoom>
+  <w:PunctuationKerning/>
+  <w:ValidateAgainstSchemas/>
+  <w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+  <w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+  <w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+  <w:Compatibility>
+   <w:BreakWrappedTables/>
+   <w:SnapToGridInCell/>
+   <w:WrapTextWithPunct/>
+   <w:UseAsianBreakRules/>
+   <w:DontGrowAutofit/>
+  </w:Compatibility>
+  <w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
+ </w:WordDocument>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:LatentStyles DefLockedState="false" LatentStyleCount="156">
+ </w:LatentStyles>
+</xml><![endif]--><style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:swiss;
+	mso-font-pitch:variable;
+	mso-font-signature:-1610611985 1073750139 0 0 159 0;}
+@font-face
+	{font-family:Cambria;
+	panose-1:2 4 5 3 5 4 6 3 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:roman;
+	mso-font-pitch:variable;
+	mso-font-signature:-1610611985 1073741899 0 0 159 0;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-parent:"";
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:10.0pt;
+	margin-left:0in;
+	line-height:115%;
+	mso-pagination:widow-orphan;
+	font-size:11.0pt;
+	font-family:Calibri;
+	mso-fareast-font-family:Calibri;
+	mso-bidi-font-family:"Times New Roman";}
+@page Section1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.25in 1.0in 1.25in;
+	mso-header-margin:.5in;
+	mso-footer-margin:.5in;
+	mso-paper-source:0;}
+div.Section1
+	{page:Section1;}
+-->
+</style><!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:"Table Normal";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-parent:"";
+	mso-padding-alt:0in 5.4pt 0in 5.4pt;
+	mso-para-margin:0in;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-ansi-language:#0400;
+	mso-fareast-language:#0400;
+	mso-bidi-language:#0400;}
+</style>
+<![endif]-->
+
+
+
+
+
+<p class="MsoNormal"><font size="3"><span style="font-size: 12pt; line-height: 115%;"><o:p></o:p>Thank you
+for your application to RapidAdvance.<span style="">&nbsp; </span>We
+appreciate your interest in our merchant cash advance product.<o:p></o:p></span></font></p>
+
+<p class="MsoNormal"><font size="3"><span style="font-size: 12pt; line-height: 115%;">We have
+carefully reviewed your application and have determined that you are not
+qualified for a RapidAdvance merchant cash advance at this time.<span style="">&nbsp; <br></span></span></font></p><p class="MsoNormal"><font size="3"><span style="font-size: 12pt; line-height: 115%;"><span style="">Your advance was unqualified for the following reason:<br></span></span></font></p><p class="MsoNormal"><font size="3"><span style="font-size: 12pt; line-height: 115%;"><span style=""></span></span><font size="2"><span style="font-size: 12pt; line-height: 115%; font-family: Arial,Sans-Serif; color: black;"> </span></font><span style="font-size: 12pt; line-height: 115%;"><span style=""></span>{!Opportunity.Unqualified_Reason__c} <o:p></o:p></span></font></p>
+
+<p class="MsoNormal"><font size="3"><span style="font-size: 12pt; line-height: 115%;">We regret
+that we are unable to serve you at this time.<span style="">&nbsp;
+</span>Should your circumstances change we would be happy to reconsider your
+application.<span style="">&nbsp; </span><o:p></o:p></span></font></p>
+
+
+
+
+
+
+
+<p class="MsoNormal"><font size="3"><span style="font-size: 12pt; line-height: 115%;">Sincerely,<o:p></o:p></span></font></p><p class="MsoNormal"><span style="font-size: 12pt; line-height: 115%;"><font size="3"><o:p></o:p>RapidAdvance
+Credit Department</font><o:p></o:p></span></p>]]></td>
+</tr>
+</table>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>CAMPAIGN_NAME</field>
+    </columns>
+    <columns>
+        <field>CAMPAIGN_OWNER</field>
+    </columns>
+    <columns>
+        <field>Campaign.Additional_Owner__c</field>
+    </columns>
+    <filter>
+        <booleanFilter>(1 or 2) AND 3</booleanFilter>
+        <criteriaItems>
+            <column>CAMPAIGN_OWNER</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>contains</operator>
+            <value>gary</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Campaign.Additional_Owner__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>contains</operator>
+            <value>gary</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Campaign.Partner_Channel__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>broker</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>Gary</name>
+    <params>
+        <name>scopeid</name>
+        <value></value>
+    </params>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CampaignList</reportType>
+    <scope>orgAll</scope>
+    <showDetails>true</showDetails>
+</Report>

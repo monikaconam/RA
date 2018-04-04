@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Opportunity.Escalation_Play__c</field>
+    </columns>
+    <columns>
+        <field>Account.Percent_Paid_Off__c</field>
+    </columns>
+    <columns>
+        <field>Opportunity.Loyalty_Owner_REF__c</field>
+    </columns>
+    <columns>
+        <field>Opportunity.Loyalty_Owner__c</field>
+    </columns>
+    <columns>
+        <field>FULL_NAME</field>
+    </columns>
+    <columns>
+        <field>OPPORTUNITY_NAME</field>
+    </columns>
+    <columns>
+        <field>Opportunity.contact_Email__c</field>
+    </columns>
+    <columns>
+        <field>Opportunity.Mobile__c</field>
+    </columns>
+    <columns>
+        <field>LEAD_SOURCE</field>
+    </columns>
+    <columns>
+        <field>CLOSE_DATE</field>
+    </columns>
+    <filter>
+        <booleanFilter>1 OR 2</booleanFilter>
+        <criteriaItems>
+            <column>Opportunity.Loyalty_Owner_REF__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>mike mouss</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Opportunity.Loyalty_Owner__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Mike Mouss</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>Mouss Loyalty</name>
+    <params>
+        <name>open</name>
+        <value>all</value>
+    </params>
+    <params>
+        <name>probability</name>
+        <value>&gt;0</value>
+    </params>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Opportunity</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <sortColumn>Opportunity.Escalation_Play__c</sortColumn>
+    <sortOrder>Asc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>CREATED_DATE</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

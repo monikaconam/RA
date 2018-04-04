@@ -1,0 +1,7 @@
+Dear Risk,
+
+Please find the details for Site Survey, {!Site_Survey__c.Link}.
+
+NVMS Job ID: {!Site_Survey__c.NVMS_Job_ID__c}
+Inspection Date: 
+{!Site_Survey__c.Inspection_Date__c}

@@ -1,0 +1,21 @@
+<table height="400" width="550" cellpadding="5" border="0" cellspacing="5" >
+<tr height="400" valign="top" >
+<td style=" color:#000000; font-size:12pt; background-color:#FFFFFF; font-family:arial; bLabel:main; bEditID:r3st1;" tEditID="c1r1" locked="0" aEditID="c1r1" >
+<![CDATA[<P>Account Name - {!Account.Name}</P>
+<P>&nbsp;</P>
+<P>Account Contact - {!Account.Account_Contact__c}</P>
+<P>&nbsp;</P>
+<P>E-Mail Address - {!Account.Email_Address__c}</P>
+<P>&nbsp;</P>
+<P>Type - {!Account.Type}</P>
+<P>&nbsp;</P>
+<P>Split Fund Set Up - {!Account.Split_Fund_Set_Up__c}</P>
+<P>&nbsp;</P>
+<P>Notes - {!Account.Description}</P>
+<P>&nbsp;</P>
+<P>&nbsp;</P>
+<P>&nbsp;</P>
+<P>&nbsp;</P>
+<P>&nbsp;</P>]]></td>
+</tr>
+</table>

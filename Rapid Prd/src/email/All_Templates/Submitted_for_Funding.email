@@ -1,0 +1,4 @@
+Opportunity Name: {!Opportunity.Name}
+Opportunity ID: {!Opportunity.Opportunity_Number__c}
+
+Submitted for Funding: {!Opportunity.Submitted_For_Funding_Approval__c}

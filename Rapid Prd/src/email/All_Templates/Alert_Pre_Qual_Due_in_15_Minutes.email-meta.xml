@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>EmailLetterhead</letterhead>
+    <name>!!Alert!! Pre-Qual Due in 15 Minutes!</name>
+    <style>freeForm</style>
+    <subject>ALERT  {!Opportunity.Name} - Pre-Qual Due in 15 Minutes!</subject>
+    <textOnly>****ALERT - PRE-QUAL IS DUE*****
+
+Advance Info:
+Merchant - {!Opportunity.Name}
+Campaign - {!Opportunity.Campaign}
+Last Modified By - {!Opportunity.LastModifiedBy}
+
+Prequal Status:
+Status: {!ApprovalRequest.Status}
+Response Date: {!ApprovalRequest.Response_Date}
+Assignee: {!ApprovalRequest.Process_Assignee}
+Approver: {!ApprovalRequest.Process_Approver}
+Comments: {!ApprovalRequest.Comments}
+
+Link to Approval Request: {!ApprovalRequest.Internal_URL}</textOnly>
+    <type>html</type>
+</EmailTemplate>

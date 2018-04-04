@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Email sent when a Direct Mail Incentive Card is Activated</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>EmailLetterhead</letterhead>
+    <name>Incentive Activation Email</name>
+    <style>freeForm</style>
+    <subject>Your card is activated!</subject>
+    <textOnly>Hi {!Contact.FirstName},
+
+Your card has been activated! You can now use it everywhere VISA® debit cards are accepted.
+
+Thank you again for choosing RapidAdvance – I am excited to help your business grow with our funding solutions.
+
+You shouldn’t have any issues using the card, but here are some frequently asked questions that may help you get started:
+
+Should I choose credit or debit when using this card?
+Even though this is a prepaid debit card, always choose &quot;credit&quot; when using it.
+
+Will I receive a Personalized Identification Number (PIN)?
+No, but you may request a PIN by visiting ReadyPerks.com.
+
+Can I use this card at an ATM?
+These cards are not accepted at ATMs, and cannot be used to access cash or obtain cash back in any purchase transaction.
+
+Can I purchase fuel with this card?
+Definitely, but it’s best to use this card inside rather than paying at the pump, since some pumps may not accept the card and others may place a hold on any remaining balance.
+
+Where can I access my account information?
+You can call (866) 295-3380 or visit ReadyPerks.com.</textOnly>
+    <type>html</type>
+</EmailTemplate>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Email notification for Pre-Qualified Customers</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>StandardLetterheadSample</letterhead>
+    <name>Qualified Merchant Email Notification</name>
+    <style>freeForm</style>
+    <subject>RapidAdvance - You&apos;re Nearly Approved.</subject>
+    <textOnly>{!Lead.CreatedDate}
+
+
+
+Dear {!Lead.Name},
+
+Thank you for your online application! I would like to introduce myself, my name is {!Lead.OwnerFullName}, and I am the Account Executive who will be assisting you in getting approved for your capital.
+
+To expedite the approval process, please fax or email the following documents to {!Lead.LeadOwnerFax__c} or {!Lead.OwnerEmail}:
+
+Your last three months of CreditCard or Merchant processing statements, if applicable.
+Your last three months of complete business bank statements.
+
+I will be contacting you shortly to finalize your application and answer any questions you have. I look forward to speaking with you and getting you approved.
+
+
+Sincerely,
+
+{!Lead.OwnerFullName}
+Phone {!Lead.OwnerPhone}
+Fax {!Lead.LeadOwnerFax__c}
+{!Lead.OwnerEmail}</textOnly>
+    <type>html</type>
+</EmailTemplate>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>StandardLetterheadSample</letterhead>
+    <name>LeadGen WebAuto Responder</name>
+    <style>freeForm</style>
+    <subject>We received your application…</subject>
+    <textOnly>{!Lead.CreatedDate}
+
+Dear {!Lead.Name},
+
+Thank you!  We have successfully received your application from {!Lead.Campaign_Name_Upload__c}, our trusted partner in supporting business owners like you meet their financial needs.  Rapid Advance is a leader in the alternative finance industry, supporting tens of thousands of small businesses nationwide by leveraging our experience to maximize their growth potential.
+
+Whether you’re looking to expand, renovate or purchase new inventory, RapidAdvance offers a variety of capital financing solutions to support your every business decision.   We understand that acquiring funds through traditional bank loans may take weeks for a decision and months to obtain funds, but fortunately for small business owners around the nation, our streamlined application process makes it possible for you to receive the funds in as little as 5 days!
+
+Explore the benefits of working with RapidAdvance:
+
+· One page application
+· Flexible re-payment plans
+· Higher approval rates than traditional bank loans
+· No broker, application or hidden fees
+· No restrictions on the usage of funds for your business
+· *Funding ranging from $5,000 to $500,000
+
+An Account Executive will contact you soon to work up a free, no obligation quote and to help you select the ideal working capital solution that best fits your business needs.
+
+More about us:
+
+We are proud to maintain an A+ rating with the Better Business Bureau and to be a member of a family of over 60 companies including Quicken Loans, the Cleveland Cavaliers as well as other products and services that you may be familiar with.
+
+*Must be in business for more than a year
+
+RapidAdvance® | A+ BBB Rated
+www.RapidAdvance.com</textOnly>
+    <type>html</type>
+</EmailTemplate>

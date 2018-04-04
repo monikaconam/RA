@@ -1,0 +1,10 @@
+<apex:page standardController="Opportunity" showHeader="false" sidebar="false">
+    <!--<apex:sectionHeader subtitle="Advances" title="Related List"/>-->
+    <apex:relatedList list="R00N70000002GX6TEAW">
+        <apex:facet name="header">
+        <div class="pbHeader"><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="pbTitle"><img src="/s.gif" alt="" width="1" height="1" class="minWidth" title=""/><img src="/s.gif" alt="Advance Lookup" class="relatedListIcon" title="Advance Lookup"/><h3 id="j_id0:j_id1_title">Advances</h3></td><td class="pbButton">
+        <input value="New Advance Lookup" class="btn" name="new00N70000002GX6T" onclick="navigateToUrl('/apex/B2BAppPage','RELATED_LIST','new00N70000002GX6T');" title="New Advance Lookup" type="button" /></td><td class="pbHelp">&nbsp;</td></tr>
+        </tbody></table></div>
+         </apex:facet>
+    </apex:relatedList>
+</apex:page>

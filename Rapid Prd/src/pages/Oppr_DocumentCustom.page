@@ -1,0 +1,45 @@
+<apex:page showHeader="false" sideBar="false" tabStyle="opportunity" standardController="Oppr_Document__c" extensions="Oppr_Document_Ctrl" >
+    <c:Opportunity_Related_CSS />
+    <apex:pageMessages id="pageMessageMain"/>
+    <apex:form id="SurveyForm">
+        <apex:sectionHeader title="Oppr Document Edit" subtitle="{!IF(objOppDoc.Name != NULL,objOppDoc.Name,'New Oppr Document')}" /><br/>
+        <div align="center">                
+            <apex:commandButton value="Save" action="{!save}" reRender="pageMessageMain" status="ajaxStatus"/>&nbsp;&nbsp;        
+            <apex:commandButton value="Cancel" action="{!cancel}" status="ajaxStatus"/>        
+        </div>        
+        <table id="surveyTable">
+            <tr>
+                <td colspan="4">
+                    <c:Extjs_Panel title="Information"/> 
+                </td>
+            </tr>            
+            <tr>
+                <td>
+                	<label>{!$ObjectType.Oppr_Document__c.fields.Document_Name__c.label}</label>
+                </td>               
+                <td>
+                    <apex:inputField value="{!objOppDoc.Document_Name__c}" required="true"/>   
+                </td>               
+                <td>
+                	<label>{!$ObjectType.Oppr_Document__c.fields.Opportunity__c.label}</label>
+                </td>
+                <td>
+                     <apex:inputField value="{!objOppDoc.Opportunity__c}" required="true"/>
+                </td>
+            </tr>         
+        </table>
+        <br/>
+        <div align="center">                
+            <apex:commandButton value="Save" action="{!save}" reRender="pageMessageMain" status="ajaxStatus"/>&nbsp;&nbsp;        
+            <apex:commandButton value="Cancel" action="{!cancel}" status="ajaxStatus"/>        
+        </div> 
+        
+        
+    </apex:form><br/><br/>
+    
+        <apex:relatedList list="OpenActivities" />
+        <apex:relatedList list="ActivityHistories"/>
+        <apex:relatedList list="NotesAndAttachments"/>
+    
+    <apex:actionstatus startStyleClass="requiredLoaderBG" id="ajaxStatus" />
+</apex:page>

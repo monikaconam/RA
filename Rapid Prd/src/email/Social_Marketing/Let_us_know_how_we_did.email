@@ -1,0 +1,43 @@
+<table border="0" cellpadding="5" width="550" cellspacing="5" height="400" >
+<tr valign="top" height="400" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; color:#000000; bEditID:r3st1; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[<p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;">Hi {!Contact.FirstName},<o:p></o:p></p>
+
+<p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;">&nbsp;<o:p></o:p></p>
+
+<p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;">Congratulations on funding with
+RapidAdvance!<o:p></o:p></p>
+
+<p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;">&nbsp;<o:p></o:p></p>
+
+<p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;">First, I wanted to let you know
+that I’m now available on <a href="{!User.Facebook__c}">Facebook</a>. “Like” my page and find the latest news and
+updates that matter most to small businesses.<o:p></o:p></p>
+
+<p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;">&nbsp;<o:p></o:p></p>
+
+<p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;">Second, do you have a few minutes to <a href="https://www.lendingtree.com/user/lender-55097155/review">leave us a review</a>? We want to share your story along with
+all the other success stories and positive impacts we’ve had in the business
+lending industry.<o:p></o:p></p>
+
+<p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;">&nbsp;<o:p></o:p></p>
+
+<p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;">Finally, let’s talk about our
+referral kickback program. For every funded referral you send, you’ll get a
+“finder’s fee” of $500 on a VISA card.<o:p></o:p></p>
+
+<p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;">&nbsp;<o:p></o:p></p>
+
+<p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;">All I need from you is:<o:p></o:p></p>
+
+<p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"></p><ul style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><li><span style="font-size: 12pt;">Name of business owner</span></li><li><span style="font-size: 12pt;">Name of business</span></li><li><span style="font-size: 12pt;">Business owner’s phone number</span></li></ul><p style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"></p><p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><span style="font-size: 12pt;">It’s a great opportunity to help
+business owners you know and also help yourself – so who do you know that could
+benefit from some extra working capital?</span></p><p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><o:p></o:p></p>
+
+<p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;">&nbsp;<o:p></o:p></p>
+
+<p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;">Best,<o:p></o:p></p>
+
+<p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;">{!User.Name}<o:p></o:p></p><p class="MsoNormal"><b style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;">Phone:&nbsp;</b><font face="arial">{!User.Phone}</font></p><p class="MsoNormal"><b style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;">Email:&nbsp;</b><font face="arial">{!User.Email}</font></p><p class="MsoNormal"><b>Website: </b><a href="http://www.rapidadvance.com">www.RapidAdvance.com</a></p>]]></td>
+</tr>
+</table>

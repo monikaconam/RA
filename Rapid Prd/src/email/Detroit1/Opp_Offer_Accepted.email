@@ -1,0 +1,21 @@
+<table border="0" cellpadding="5" width="550" cellspacing="5" height="400" >
+<tr valign="top" height="400" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; color:#000000; bEditID:r3st1; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[<p class="MsoNormal">Hi {!Contact.FirstName},<o:p></o:p></p><p class="MsoNormal"><br></p>
+
+<p class="MsoNormal">I’d like to get you your funds as soon as possible – but you
+haven’t sent me the signed agreement we discussed.<o:p></o:p></p><p class="MsoNormal"><br></p>
+
+<p class="MsoNormal">As soon as you do, I can send it to our underwriting team to finish processing
+your request. <o:p></o:p></p><p class="MsoNormal"><br></p>
+
+<p class="MsoNormal" style="margin-bottom: 0.0001pt;">Call me today at&nbsp;<font face="arial" style="font-size: 12pt; background-color: rgb(255, 255, 255);">{!User.Phone}</font><span style="font-size: 12pt;">&nbsp;if you have any questions. I’m looking
+forward to helping your business grow.</span></p><p class="MsoNormal" style="margin-bottom: 0.0001pt;"><o:p></o:p></p>
+
+<p class="MsoNormal" style="margin-bottom: 0.0001pt;"><o:p>&nbsp;</o:p></p>
+
+<p class="MsoNormal" style="margin-bottom: 0.0001pt;">Sincerely,<o:p></o:p></p>
+
+<span style="background-color: rgb(255, 255, 255);">{!User.Name}</span>]]></td>
+</tr>
+</table>

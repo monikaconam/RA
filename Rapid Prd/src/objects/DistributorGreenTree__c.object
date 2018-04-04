@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customSettingsType>List</customSettingsType>
+    <description>This custom setting will be used to store the default owner for Green Tree opportunities which will be the used as the Distributor From in Lead distribution engine currently Jeff Hageman</description>
+    <enableFeeds>false</enableFeeds>
+    <label>Distributor Green Tree</label>
+    <visibility>Public</visibility>
+</CustomObject>

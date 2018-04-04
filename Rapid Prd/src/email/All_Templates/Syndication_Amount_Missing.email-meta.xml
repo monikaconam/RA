@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>StandardLetterheadSample</letterhead>
+    <name>Check Syndication Details</name>
+    <style>formalLetter</style>
+    <subject>Alert !! Check Syndication Details on this Deal !!</subject>
+    <textOnly>Syndication Amount is Missing for this Deal. 
+
+
+Deal Name - {!Opportunity.Name}
+Deal Id        -  http://login.salesforce.com/{!Opportunity.Id}
+
+
+Please confirm the Syndication Amount at the earliest.</textOnly>
+    <type>html</type>
+</EmailTemplate>

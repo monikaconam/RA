@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>LEAD_OWNER</field>
+    </columns>
+    <columns>
+        <field>ASSIGNED</field>
+    </columns>
+    <columns>
+        <field>Lead.Owner_Role__c</field>
+    </columns>
+    <columns>
+        <field>SUBJECT</field>
+    </columns>
+    <columns>
+        <field>Activity.Five9_Start_Time__c</field>
+    </columns>
+    <columns>
+        <field>CALLTYPE</field>
+    </columns>
+    <columns>
+        <field>Lead.Juice__c</field>
+    </columns>
+    <columns>
+        <field>LEAD_ID</field>
+    </columns>
+    <columns>
+        <field>LEAD_STATUS</field>
+    </columns>
+    <filter>
+        <booleanFilter>1 AND (2 or 3)</booleanFilter>
+        <criteriaItems>
+            <column>SUBJECT</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>contains</operator>
+            <value>call</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Lead.Owner_Role__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>contains</operator>
+            <value>Business Advisor</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>LEAD_OWNER</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>contains</operator>
+            <value>Brian Klenk</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>Call Tasks w/Juice</name>
+    <params>
+        <name>closed</name>
+        <value>all</value>
+    </params>
+    <params>
+        <name>type</name>
+        <value>te</value>
+    </params>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>LeadActivity</reportType>
+    <roleHierarchyFilter>Administrator</roleHierarchyFilter>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <sortColumn>LEAD_STATUS</sortColumn>
+    <sortOrder>Asc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>DUE_DATE</dateColumn>
+        <interval>INTERVAL_TODAY</interval>
+    </timeFrameFilter>
+</Report>

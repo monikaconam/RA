@@ -1,0 +1,12 @@
+Hey Broker Out Squad,
+I heard you were looking for marbles and I think I just found a Lendr Marble with your name on it.
+
+{!Lead.Company}
+
+{!Lead.Phone}
+
+https://na33.salesforce.com/{!Lead.Id}
+
+
+Calc Link:
+{!Lead.CALC_Link__c}

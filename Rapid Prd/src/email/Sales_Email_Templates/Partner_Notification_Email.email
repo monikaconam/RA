@@ -1,0 +1,22 @@
+*** NEW LEAD ASSIGNMENT NOTIFICATION *** 
+
+{!CampaignMember.CreatedDate}
+
+The following lead has been assigned to you. 
+
+Company: {!CampaignMember.CompanyOrAccount}
+
+Lead First Name: {!CampaignMember.FirstName}
+
+Lead Last Name: {!CampaignMember.LastName}
+
+Lead Phone: {!CampaignMember.Phone}
+
+Lead Mobile: {!CampaignMember.MobilePhone}
+
+
+Lead Address:
+{!CampaignMember.Street}
+{!CampaignMember.City}
+{!CampaignMember.State}
+{!CampaignMember.PostalCode}

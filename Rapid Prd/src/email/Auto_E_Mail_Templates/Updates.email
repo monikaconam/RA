@@ -1,0 +1,34 @@
+<table border="0" cellpadding="5" width="550" cellspacing="5" height="400" >
+<tr valign="top" height="400" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; color:#000000; bEditID:r3st1; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[<p style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;">Date - {!Opportunity.LastModifiedDate}</p>
+<p style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;">&nbsp;</p>
+<p style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;">Opportunity Number - {!Opportunity.Opportunity_Number__c}</p>
+<p style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;">Opportunity Name - {!Opportunity.Name}</p><p style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;">Campaign - {!Opportunity.Campaign}</p>
+<p style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;">&nbsp;</p>
+<p style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;">Stage - {!Opportunity.StageName}</p>
+<p style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;">&nbsp;</p>
+<p style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;">Sales Notes - {!Opportunity.Description}, {!Opportunity.Sales_Check_List_Notes__c}</p>
+<p style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;">&nbsp;</p>
+<p style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;">Advance Amount - {!Opportunity.Advance_Amount__c}</p>
+<p style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;">Payback Amount - {!Opportunity.Pay_Back_Amount__c}</p>
+<p style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;">Split - {!Opportunity.Percent_Payback__c}</p>
+<p style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;">Estimated Days to Repay - {!Opportunity.Estimated_Days_to_Repay__c}</p>
+<p style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;">&nbsp;</p>
+<p style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;">Signed Contract Received - {!Opportunity.Signed_Contract_Received__c}</p>
+<p style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;">&nbsp;</p>
+<p style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;">Submitted to Underwriting - {!Opportunity.Submit_to_UW_Processing__c}</p>
+<p style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;">Underwriting Notes - {!Opportunity.Third_Party_UW_Notes__c}</p>
+<p style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;">Underwriting Decision - {!Opportunity.Underwriting_Approval__c}</p>
+<p style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;">Decline Reason - {!Opportunity.Decline_Reason__c}</p>
+<p style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;">&nbsp;</p>
+<p style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;">New FRSA Needed ? - {!Opportunity.00N70000002WOxJ}<br>New Advance Amount - {!Opportunity.New_Advance_Price__c}<br>New Payback Amount - {!Opportunity.New_Payback_Price__c}<br>New Split - {!Opportunity.New_Percent_Payback__c}<br>New Estimated Days to Repay - {!Opportunity.New_Est_Days_to_Complete__c}<br>&nbsp;<br><br></p>
+<p style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;">Approved with Conditions - {!Opportunity.Approved_With_Conditions__c}</p>
+<p style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;">&nbsp;</p>
+<p style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;">Processing Representative - {!Opportunity.Processing_Representative__c}</p>
+<p><font face="arial" size="3">Processing Rep Assigned -&nbsp;{!Opportunity.</font><font face="arial">Processing_Rep_Assigned__c</font><font face="arial" size="3">}</font></p><p style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;">Processing Notes - {!Opportunity.Processing_Notes__c}</p>
+<p style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;">&nbsp;</p>
+<p style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;">Funded Date - {!Opportunity.Funded_by_WC__c}</p>
+<p style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;">&nbsp;</p>]]></td>
+</tr>
+</table>

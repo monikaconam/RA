@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>CAMPAIGN_NAME</field>
+    </columns>
+    <columns>
+        <field>LAST_ACTIVITY</field>
+    </columns>
+    <columns>
+        <field>NUM_OPPORTUNITIES</field>
+    </columns>
+    <columns>
+        <field>NUM_WON_OPPORTUNITIES</field>
+    </columns>
+    <columns>
+        <field>AMOUNT_WON</field>
+    </columns>
+    <columns>
+        <field>AMOUNT_ALL</field>
+    </columns>
+    <columns>
+        <field>Campaign.Number_of_Leads__c</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>CAMPAIGN_STATUS</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>In Progress</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>LAST_ACTIVITY</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>greaterThan</operator>
+            <value>1/1/2010</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>NUM_OPPORTUNITIES</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>greaterThan</operator>
+            <value>1</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Campaign.Partner_Type__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Pricing Partner,Referral Partner,Pricing Partner w/ AE Assigned</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>CAMPAIGN_OWNER</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>notEqual</operator>
+            <value>Maria Rivera,Sierra Daumit,Timothy Sitzler,Isata  Jalloh,James Fink,Gina Mackenzie or Robert Fleischmann</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>Old campaigns</name>
+    <params>
+        <name>scopeid</name>
+        <value></value>
+    </params>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CampaignList</reportType>
+    <scope>orgAll</scope>
+    <showDetails>true</showDetails>
+</Report>

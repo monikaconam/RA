@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableEnhancedLookup>false</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>Import_Id__c</fullName>
+        <externalId>false</externalId>
+        <label>Import Id</label>
+        <length>18</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Import_Source__c</fullName>
+        <externalId>false</externalId>
+        <label>Import Source</label>
+        <length>64</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Note_Content__c</fullName>
+        <externalId>false</externalId>
+        <label>Note Content</label>
+        <length>32768</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Opportunity__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Opportunity</label>
+        <referenceTo>Opportunity</referenceTo>
+        <relationshipLabel>Notes</relationshipLabel>
+        <relationshipName>Notes</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <label>Note</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>Note_Content__c</columns>
+        <columns>UPDATEDBY_USER</columns>
+        <columns>LAST_UPDATE</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <listViews>
+        <fullName>All1</fullName>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <nameField>
+        <displayFormat>note-{000}</displayFormat>
+        <label>Note Name</label>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Notes</pluralLabel>
+    <recordTypeTrackHistory>false</recordTypeTrackHistory>
+    <recordTypes>
+        <fullName>Approved_With_Conditions</fullName>
+        <active>true</active>
+        <label>Approved With Conditions</label>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Archived_Credit_Bureau</fullName>
+        <active>true</active>
+        <label>Archived Credit Bureau</label>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Business_Bankruptcies</fullName>
+        <active>true</active>
+        <label>Business Bankruptcies</label>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Funding</fullName>
+        <active>true</active>
+        <label>Funding</label>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Individual_Bankrupties</fullName>
+        <active>true</active>
+        <label>Individual Bankrupties</label>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Internal_Processing_Notes</fullName>
+        <active>true</active>
+        <label>Internal Processing Notes</label>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Internal_QC</fullName>
+        <active>true</active>
+        <label>Internal QC</label>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Internal_UnderWriting</fullName>
+        <active>true</active>
+        <label>Internal UW Notes</label>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Pre_Qual</fullName>
+        <active>true</active>
+        <label>Pre Qual Notes</label>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Pre_Qual_Loss</fullName>
+        <active>true</active>
+        <label>Pre Qual Loss</label>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Prefunding_Call</fullName>
+        <active>true</active>
+        <label>Prefunding Call</label>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Processing</fullName>
+        <active>true</active>
+        <label>Processing Notes</label>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Quancor</fullName>
+        <active>true</active>
+        <label>Quancor</label>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Renewal</fullName>
+        <active>true</active>
+        <label>Renewal</label>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Risk_Alert</fullName>
+        <active>true</active>
+        <label>Risk Alert</label>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Risk_Notes</fullName>
+        <active>true</active>
+        <label>Risk Notes</label>
+    </recordTypes>
+    <recordTypes>
+        <fullName>SA_Internal</fullName>
+        <active>true</active>
+        <label>SA Internal Notes</label>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Sales_Check_List</fullName>
+        <active>false</active>
+        <label>Sales Check List</label>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Sales_to_UW_Processing</fullName>
+        <active>false</active>
+        <label>Sales Notes to UW &amp; Processing</label>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Site</fullName>
+        <active>true</active>
+        <label>Site</label>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Split_change</fullName>
+        <active>true</active>
+        <label>Split change</label>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Third_Party_Underwriting_Notes</fullName>
+        <active>true</active>
+        <label>Third Party UW Notes</label>
+    </recordTypes>
+    <recordTypes>
+        <fullName>UW_Notes_to_Processing_Risk_Department</fullName>
+        <active>true</active>
+        <label>UW Notes to Processing/Risk Department</label>
+    </recordTypes>
+    <recordTypes>
+        <fullName>UW_Processing</fullName>
+        <active>true</active>
+        <label>UW Processing</label>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Underwriting</fullName>
+        <active>true</active>
+        <label>UW Notes</label>
+    </recordTypes>
+    <searchLayouts/>
+    <sharingModel>Read</sharingModel>
+</CustomObject>

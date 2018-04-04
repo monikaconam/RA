@@ -1,0 +1,3 @@
+<apex:page standardController="Opportunity" showHeader="false" sidebar="false">
+    <apex:relatedList list="ActivityHistories"/>
+</apex:page>

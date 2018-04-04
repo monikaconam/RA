@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Email notification for Pre-Qualified Customers</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>StandardLetterheadSample</letterhead>
+    <name>Qualified Merchant Email Notification 20131202</name>
+    <style>freeForm</style>
+    <subject>RapidAdvance - You&apos;re Nearly Approved.</subject>
+    <textOnly>{!Lead.CreatedDate}
+
+
+Dear {!Lead.Name},
+
+I just received your application. Thank you for checking us out online!
+
+I wanted to email you to introduce myself.  My name is {!Lead.OwnerFullName}, and I will be your dedicated Account Executive throughout the entire financing process.  I will be able to build you customized quotes and help you select the program that best meets your needs, as well as act as your main point of contact while you receive your funding.  This keeps the process seamless, simple and efficient.
+
+RapidAdvance is part of a family of over 60 companies, which include Quicken Loans, the Cleveland Cavaliers, and many other products and services that you may be familiar with – we all share a common belief that providing amazing customer service is what differentiates us from other options you have.
+
+RapidAdvance was one of the pioneers in providing alternative finance options for small businesses, and has been in existence since 2005.  We have provided approximately $600,000,000 to businesses of all sizes, across virtually all industries, in all areas of the country.
+
+RapidAdvance is a direct provider of capital. We have no broker fees, no hidden origination fees, and no hidden closing costs. We handle our entire process in house.
+
+I will be contacting you shortly to work up a free, no obligation quote.
+
+If you have any questions, don’t hesitate to call me at {!Lead.OwnerPhone} or email me at {!Lead.OwnerEmail}.
+
+I look forward to working with you.
+
+
+Warm regards,
+
+{!Lead.OwnerFirstName}
+
+{!Lead.OwnerFullName}| Account Executive
+RapidAdvance® | A+ BBB Rated
+www.RapidAdvance.com</textOnly>
+    <type>html</type>
+</EmailTemplate>

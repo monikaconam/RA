@@ -1,0 +1,38 @@
+<apex:page standardController="Lead" extensions="LeadConvertButtonOverride" action="{!selectPartnerAccount}" id="mainpage">
+      
+    <apex:form >
+        <apex:pageMessages ></apex:pageMessages>
+        <apex:outputPanel id="scriptOP">
+            <script type="text/javascript">
+                function checkButton()
+                {    
+                    var selectedVar = "{!isSelected}";
+
+                    if (selectedVar == true || selectedVar == "true") {
+                        CallApexMethod();
+                    }
+                    else{
+                        alert('Please select one of the displayed choices.');
+                    }
+               }        
+            </script>
+        </apex:outputPanel>
+        <apex:actionFunction name="CallApexMethod" action="{!autoPartnerConvert}"/>
+        <apex:pageBlock title="Matching Accounts" id="MatchingAccounts">
+            <apex:pageBlockButtons >
+                <apex:commandButton value="Continue" onclick="checkButton();return false;"/>
+            </apex:pageBlockButtons>
+            <apex:pageBlockTable value="{!accountList}" var="item" id="AccountList">
+                <apex:column width="1">
+                    <apex:actionSupport event="onclick" rerender="scriptOP">
+                        <input type="radio" name="selectRadio" id="sr{!item.Id}"/>
+                        <apex:param name="selectedAccId" value="{!item.Id}" assignTo="{!selectedAccId}"/>
+                        <apex:param name="p2" value="true" assignTo="{!isSelected}"/>
+                    </apex:actionSupport>
+                </apex:column>
+                <apex:column value="{!item.Name}"/>
+            </apex:pageBlockTable>
+        </apex:pageBlock>
+    </apex:form>
+
+</apex:page>

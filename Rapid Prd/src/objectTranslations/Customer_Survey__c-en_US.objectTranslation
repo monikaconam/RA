@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Customer Survey</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Customer Surveys</value>
+    </caseValues>
+    <fields>
+        <label><!-- Account --></label>
+        <name>Account__c</name>
+        <relationshipLabel><!-- Customer Surveys --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Comments or Suggestions --></label>
+        <name>Comments_or_Suggestions__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contact --></label>
+        <name>Contact__c</name>
+        <relationshipLabel><!-- Customer Surveys --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Customer Service --></label>
+        <name>Customer_Service__c</name>
+        <picklistValues>
+            <masterLabel>1</masterLabel>
+            <translation><!-- 1 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2</masterLabel>
+            <translation><!-- 2 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3</masterLabel>
+            <translation><!-- 3 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4</masterLabel>
+            <translation><!-- 4 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5</masterLabel>
+            <translation><!-- 5 --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- How did you hear about us? --></label>
+        <name>How_did_you_hear_about_us__c</name>
+        <picklistValues>
+            <masterLabel>Credit Card Processor</masterLabel>
+            <translation><!-- Credit Card Processor --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Direct Mail</masterLabel>
+            <translation><!-- Direct Mail --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Internet</masterLabel>
+            <translation><!-- Internet --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Referral From Current Customer</masterLabel>
+            <translation><!-- Referral From Current Customer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sales Call</masterLabel>
+            <translation><!-- Sales Call --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Initial Contact Result --></label>
+        <name>Initial_Contact_Result__c</name>
+        <picklistValues>
+            <masterLabel>Average</masterLabel>
+            <translation><!-- Average --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Excellent</masterLabel>
+            <translation><!-- Excellent --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Fair</masterLabel>
+            <translation><!-- Fair --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Good</masterLabel>
+            <translation><!-- Good --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Poor</masterLabel>
+            <translation><!-- Poor --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Initial Contact --></label>
+        <name>Initial_Contact__c</name>
+        <picklistValues>
+            <masterLabel>1</masterLabel>
+            <translation><!-- 1 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2</masterLabel>
+            <translation><!-- 2 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3</masterLabel>
+            <translation><!-- 3 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4</masterLabel>
+            <translation><!-- 4 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5</masterLabel>
+            <translation><!-- 5 --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Opportunity --></label>
+        <name>Opportunity__c</name>
+        <relationshipLabel><!-- Customer Surveys --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Overall Rating --></label>
+        <name>Overall_Rating__c</name>
+        <picklistValues>
+            <masterLabel>1</masterLabel>
+            <translation><!-- 1 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2</masterLabel>
+            <translation><!-- 2 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3</masterLabel>
+            <translation><!-- 3 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4</masterLabel>
+            <translation><!-- 4 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5</masterLabel>
+            <translation><!-- 5 --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Overall Results --></label>
+        <name>Overall_Results__c</name>
+        <picklistValues>
+            <masterLabel>Average</masterLabel>
+            <translation><!-- Average --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Excellent</masterLabel>
+            <translation><!-- Excellent --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Fair</masterLabel>
+            <translation><!-- Fair --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Good</masterLabel>
+            <translation><!-- Good --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Poor</masterLabel>
+            <translation><!-- Poor --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Product Presentation Result --></label>
+        <name>Product_Presentation_Result__c</name>
+        <picklistValues>
+            <masterLabel>Average</masterLabel>
+            <translation><!-- Average --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Excellent</masterLabel>
+            <translation><!-- Excellent --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Fair</masterLabel>
+            <translation><!-- Fair --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Good</masterLabel>
+            <translation><!-- Good --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Poor</masterLabel>
+            <translation><!-- Poor --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Product Presentation --></label>
+        <name>Product_Presentation__c</name>
+        <picklistValues>
+            <masterLabel>1</masterLabel>
+            <translation><!-- 1 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2</masterLabel>
+            <translation><!-- 2 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3</masterLabel>
+            <translation><!-- 3 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4</masterLabel>
+            <translation><!-- 4 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5</masterLabel>
+            <translation><!-- 5 --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Date merchant submitted the survey. --></help>
+        <label><!-- Response Date --></label>
+        <name>Response_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Salesperson Name --></label>
+        <name>Salesperson_Name__c</name>
+    </fields>
+    <fields>
+        <help><!-- Date survey was sent to merchant. --></help>
+        <label><!-- Sent Date --></label>
+        <name>Sent_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Set Up Results --></label>
+        <name>Set_Up_Results__c</name>
+        <picklistValues>
+            <masterLabel>Average</masterLabel>
+            <translation><!-- Average --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Excellent</masterLabel>
+            <translation><!-- Excellent --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Fair</masterLabel>
+            <translation><!-- Fair --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Good</masterLabel>
+            <translation><!-- Good --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Poor</masterLabel>
+            <translation><!-- Poor --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Set Up --></label>
+        <name>Set_Up__c</name>
+        <picklistValues>
+            <masterLabel>1</masterLabel>
+            <translation><!-- 1 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2</masterLabel>
+            <translation><!-- 2 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3</masterLabel>
+            <translation><!-- 3 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4</masterLabel>
+            <translation><!-- 4 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5</masterLabel>
+            <translation><!-- 5 --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- SurveyID --></label>
+        <name>SurveyID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Survey URL --></label>
+        <name>Survey_URL__c</name>
+    </fields>
+    <fields>
+        <label><!-- Was a referral submitted? --></label>
+        <name>Was_a_referral_submitted__c</name>
+    </fields>
+    <fields>
+        <label><!-- Will you recommend us? --></label>
+        <name>Will_you_recommend_us__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <startsWith>Consonant</startsWith>
+    <webLinks>
+        <label><!-- Conga_Merge --></label>
+        <name>Conga_Merge</name>
+    </webLinks>
+</CustomObjectTranslation>

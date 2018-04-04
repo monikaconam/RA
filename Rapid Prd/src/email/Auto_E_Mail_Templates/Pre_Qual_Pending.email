@@ -1,0 +1,25 @@
+<table height="400" width="550" cellpadding="5" border="0" cellspacing="5" >
+<tr height="400" valign="top" >
+<td style=" color:#000000; font-size:12pt; background-color:#FFFFFF; font-family:arial; bLabel:main; bEditID:r3st1;" tEditID="c1r1" locked="0" aEditID="c1r1" >
+<![CDATA[<FONT color=#000099 size=2 face=Verdana,Geneva,Arial,Helvetica,Sans-Serif><B>Date </B>- {!Opportunity.LastModifiedDate}&nbsp; </FONT>
+<P><FONT color=#000099 size=2 face=Verdana,Geneva,Arial,Helvetica,Sans-Serif><B>QC </B>-&nbsp; {!Opportunity.QC_Person__c}<BR></FONT></P>
+<P><FONT color=#000099 size=2 face=Verdana,Geneva,Arial,Helvetica,Sans-Serif>&nbsp;</FONT></P>
+<P><FONT color=#000099 size=2 face=Verdana></FONT>&nbsp;</P>
+<P><FONT color=#000099 size=2 face=Verdana></FONT>&nbsp;</P>
+<P><FONT color=#000099 size=2 face=Verdana>{!Opportunity.Link}</FONT></P><BR>
+<P><FONT color=#000099 size=2 face=Verdana,Geneva,Arial,Helvetica,Sans-Serif><B>Opportunity Name</B> - {!Opportunity.Name}</FONT></P>
+<P><FONT color=#000099 size=2 face=Verdana,Geneva,Arial,Helvetica,Sans-Serif><B>Opportunity Number</B> -&nbsp;{!Opportunity.Opportunity_Number__c}</FONT></P>
+<P><FONT color=#000099 size=2 face=Verdana,Geneva,Arial,Helvetica,Sans-Serif><B>Opportunity Advance ID</B> -&nbsp;{!Opportunity.Advance_ID__c}</FONT></P>
+<P><FONT class=Apple-style-span color=#000099 face="Verdana, Geneva, Arial, Helvetica, sans-serif"><SPAN style="FONT-SIZE: small" class=Apple-style-span><BR></SPAN></FONT></P><FONT color=#000099 size=2 face=Verdana><B>Pre-Qual Decision</B> - {!Opportunity.Pre_Qual_Decision__c}</FONT><BR>
+<P><FONT color=#000099 size=2 face=Verdana,Geneva,Arial,Helvetica,Sans-Serif><B><BR></B></FONT></P>
+<P><FONT color=#000099 size=2 face=Verdana,Geneva,Arial,Helvetica,Sans-Serif><B>Pre-Qual Notes</B> - {!Opportunity.Pre_Qual_Notes__c}&nbsp; </FONT><BR></P>
+<P><FONT color=#000099 size=2 face=Verdana,Geneva,Arial,Helvetica,Sans-Serif><BR></FONT></P><FONT color=#000099 size=2 face=Verdana,Geneva,Arial,Helvetica,Sans-Serif><BR></FONT><FONT color=#000099 size=2 face=Verdana,Geneva,Arial,Helvetica,Sans-Serif>&nbsp;</FONT> 
+<P><FONT color=#000099 size=2 face=Verdana,Geneva,Arial,Helvetica,Sans-Serif><B>Person who&nbsp;sent&nbsp;update</B> - {!Opportunity.LastModifiedBy}</FONT></P>
+<P><FONT color=#000099 size=2 face=Verdana></FONT>&nbsp;</P>
+<P><FONT color=#000099 size=2 face=Verdana></FONT>&nbsp;</P>
+<P><FONT color=#000099>&nbsp;</FONT></P>
+<P><FONT color=#000099>&nbsp;</FONT></P>
+<P><FONT color=#000099>&nbsp;</FONT></P>
+<P><FONT color=#000099>&nbsp;</FONT></P>]]></td>
+</tr>
+</table>

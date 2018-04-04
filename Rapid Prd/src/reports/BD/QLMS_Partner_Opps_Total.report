@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>CAMPAIGN_NAME</field>
+    </columns>
+    <columns>
+        <field>CAMPAIGN_PARENT_NAME</field>
+    </columns>
+    <columns>
+        <field>CREATED_DATE</field>
+    </columns>
+    <columns>
+        <field>OPPORTUNITY_NAME</field>
+    </columns>
+    <columns>
+        <field>Opportunity.Renewal_Number__c</field>
+    </columns>
+    <columns>
+        <field>STAGE_NAME</field>
+    </columns>
+    <columns>
+        <field>Opportunity.Funded_Amount__c</field>
+    </columns>
+    <columns>
+        <field>Opportunity.Funded_by_WC__c</field>
+    </columns>
+    <description>Includes all QLMS Campaign Opps</description>
+    <filter>
+        <booleanFilter>1 or 2</booleanFilter>
+        <criteriaItems>
+            <column>CAMPAIGN_NAME</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>contains</operator>
+            <value>QLMS -,Quicken Loans Mortgage</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>CAMPAIGN_PARENT_NAME</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>contains</operator>
+            <value>QLMS</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>QLMS Partner Opps Total</name>
+    <params>
+        <name>open</name>
+        <value>all</value>
+    </params>
+    <params>
+        <name>probability</name>
+        <value>&gt;0</value>
+    </params>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>OpportunityCampaign</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>CAMPAIGN_STARTDATE</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

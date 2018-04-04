@@ -1,0 +1,759 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+  <head>
+    <meta name="googlebot" content="noindex, noarchive, nofollow">
+    <title>RapidResource</title>
+    
+	  <style type="text/css">
+		  body,td,.bodytext {
+		  	font-family: verdana, tahoma, geneva, arial;
+		  	font-size: 8pt;
+		  	line-height: 1.2;
+		  	color: #333333;
+		  	}
+		  	
+		  .sidebar {
+		  	font-family: verdana, tahoma, geneva, arial;
+		  	font-size: 7.5pt;
+		  	line-height: 1.2;
+		  	color: #000000;}
+		  .sidebar A {
+		  	font-size: 7.5pt;
+			text-decoration: none;
+		  	color: #009933;}			
+		  .sidebar A:link {
+		  	text-decoration: none;
+		  	color: #009933;}			
+		  .sidebar A:visited {
+		  	text-decoration: none; color: #009933;}
+		  .sidebar A:active {
+		  	text-decoration: none; color: #009933;}
+	  	  .sidebar A:hover {
+	  	  	text-decoration: underline; color: #009933;}
+		  	
+		  /*.artTitleLink {
+		  	text-decoration: ; color:#333333;}
+		  A:link.artTitleLink {
+		  	text-decoration: ; color:#333333;}
+		  A:visited.artTitleLink {
+		  	text-decoration: ; color:#333333;}
+		  A:active.artTitleLink {
+		  	text-decoration: none; color:#333333;}
+	  	  A:hover.artTitleLink {
+	  	  	text-decoration: none; color:#333333;}*/
+
+		  .headertext {
+		  	font-family: times new roman,georgia, serif;
+		  	font-size: 12pt;
+		  	line-height: 1.2;}
+		  .bodytext2 {
+			font-family: verdana, tahoma, geneva, arial;
+			font-size: 10pt;
+			line-height: 1.2;
+			color: #ffffff;}
+		  .bodytext3 {
+			font-family: verdana, tahoma, geneva, arial;
+			font-size: 10pt;
+			line-height: 1.2;
+			color: #333366;}
+		  .sponsortext {
+		  	font-family: verdana, tahoma, geneva, arial;
+		  	font-size: 7pt;
+			line-height: 1.0;
+			color: #000000;}
+		  .datetext {
+		  	font-family: verdana, tahoma, geneva, arial;
+		  	font-size: 10pt;
+			line-height: 1.0;
+			color: #000000;}
+
+		  A {font-family: verdana, tahoma, geneva, arial;
+		  	font-size: 8.5pt;
+			line-height: 1.2;
+			color: #1C3A60;}
+		  A:link {
+		  	text-decoration: none;
+		  	color: #1C3A60;}
+		  A:visited {
+		  	text-decoration: none;
+		  	color: #1C3A60;}
+		  A:active {
+		  	text-decoration: none;
+		  	color: #1C3A60;}
+		  A:hover {
+		  	text-decoration: underline;
+		  	color: #1C3A60;}
+
+		  .link1 {
+		  	font-family: verdana, tahoma, geneva, arial;
+		  	font-size: 8.5pt;
+			line-height: 1.2;
+			color: #ffffff;}
+		  .link1 A{
+		  	font-family: verdana, tahoma, geneva, arial;
+		  	font-size: 8.5pt;
+			text-decoration: none;
+			color: #ffffff;}
+
+		  .link1 A:link {
+		  	text-decoration: none;
+		  	color: #ffffff;}
+		  .link1 A:visited {
+		  	text-decoration: none; color: #ffffff;}
+		  .link1 A:active {
+		  	text-decoration: none; color: #ffffff;}
+	  	  .link1 A:hover {
+	  	  	text-decoration: underline; color: #ffffff;}
+
+		  .grouphead {
+			width:98%;
+			background-color: #20619d;
+			color: #ffffff;
+			padding:5px;
+			}
+		.noteBox
+		{
+			border: 1px gray solid;
+			padding: 7.5px;
+		}
+			
+   	  </style>
+  </head>
+
+  
+<body text="#000000">
+
+    <center>
+	<table align="center" border=0 cellspacing=0 cellpadding=2 width="660">
+		<tr align="center" valign="middle">
+			
+			<td id="TDBorderColor" bgcolor="#000000">
+            <table align="left" border=0 cellspacing=0 cellpadding=0 width="660">
+				<tr align="left" valign="top">
+                <td  colspan="2">
+
+                  <img src="http://www.infoinc.com/RapidAdvance/images/banner.jpg" alt="Banner" width="660" height="150" /><br>
+                </td>
+				</tr>
+				<tr align="center" valign="top">
+                <td colspan="2" class="link1" style="padding: 5px; color: #fff;" id="TDLinkBar" bgcolor="#479235" >
+                    | <a href="http://www.rapidadvance.com/" style="color: #ffffff;">Home</a> 
+                    | <a href="http://www.rapidadvance.com/funding-program.htm" style="color: #ffffff;">About Us</a> 
+                    | <a href="http://www.rapidadvance.com/" style="color: #ffffff;">Business Finance</a> 
+                    | <a href="http://www.infoinc.com/RapidAdvance/tell-a-friend.cfm" style="color: #ffffff;">Send to a Friend</a> 
+                    | <a href="http://www.rapidadvance.com/contact-us.htm" style="color: #ffffff;">Contact Us</a> 
+                    |                
+                </td>
+
+                </tr>
+				<tr align="left" valign="top">
+					<td id="TRcontent" width="480" class="bodytext" style="padding: 10px;" bgcolor="#ffffff">
+
+
+
+
+
+
+
+
+
+<a name="top"></a>
+<div class="grouphead">
+
+<b>Headlines</b>
+</div>
+
+
+<br /> 
+
+		  
+      
+			  
+		  
+		  
+		  
+
+	 <b>Money Matters</b><hr />
+
+
+
+<a href="#381529">"Brother, Can You Spare a Loan?"</a><br />
+
+
+
+<a href="#378670">"Getting Paid on Time in a Tough Economy"</a><br />
+
+
+
+<a href="#380719">"How Is Your Company Doing Compared to Plan?"</a><br />
+
+
+
+<a href="#379060">"Five Ways to Increase Profit Margins"</a><br />
+<br /> 
+
+		  
+      
+			  
+		  
+		  
+		  
+
+	 <b>Bright Ideas</b><hr />
+
+
+
+<a href="#380919">"How Small Stores Can Lure Holiday Shoppers"</a><br />
+
+
+
+<a href="#380904">"Small Business: Good Customer Service Is Key"</a><br />
+
+
+
+<a href="#378463">"How to Prepare Your Small Business for a Disaster"</a><br />
+<br /> 
+
+		  
+      
+			  
+		  
+		  
+		  
+
+	 <b>Grow</b><hr />
+
+
+
+<a href="#380901">"Expand Your Thinking, Expand Your Business"</a><br />
+
+
+
+<a href="#380914">"For Entrepreneurs, Opportunity Still Knocks"</a><br />
+
+
+
+<a href="#378870">"Tech Trends for Growing Businesses"</a><br />
+<br /> 
+
+		  
+      
+			  
+		  
+		  
+		  
+
+	 <b>Off Hours</b><hr />
+
+
+
+<a href="#381535">"Wading Into Heaven"</a><br />
+
+
+
+<a href="#381740">"See Explosions of Fall Color for Less in Six Unlikely Places"</a><br />
+<br /> <br /> 
+
+		  
+      
+			  
+		  
+		  
+			  
+			
+		  
+
+	 <div class="grouphead"><b>Money Matters</b></div> <br /> 
+    
+
+	
+  
+  
+
+<a name="381529"></a>
+	  <b>Brother, Can You Spare a Loan?</b><br /> 
+
+
+<i> New York Times (10/01/08) P. SB4; Tarquinio, J. Alex</i>
+
+
+<br /><br /> 
+
+	
+  
+		
+	
+  
+
+Although many small business owners are struggling to find the cash they need to keep their business afloat during these difficult economic times, business loans are still available to many businesses.  Nevertheless, financing for all stages of the small-business cycle are more limited today, as credit cards, home equity loans, bank credit lines, and small business loans all becoming less feasible now then they were a short while ago.  An August poll by the National Small Business Association (NSBA) found that two thirds of entrepreneurs said their companies have been hurt by the credit crunch.  "If you think you might have a cash crunch, you should act now," says NSBA President Todd McCracken.  He says that it would be better for many small business owners to have cash on hand even if it means paying a little extra interest.  Small business owners with strong enterprises and solid balance sheets can still access financing.  Businesses related to and dependent on shaky areas of the economy, such as the housing or auto markets, may have a more difficult time.  Robert C. Seiwert, head of the Center for Commercial Lending and Business Banking at the American Bankers Association, suggests small business owners avoid taking equity out of their business to support their lifestyle, and says now is an excellent time to strengthen their business plans, creating three scenarios to prepare for the good, the bad, and the worst, and prepare to execute on any of those plans.<br />
+
+
+
+
+
+<a href="#top">Return to Headlines</a>
+
+
+<br /><br /> <br /> 
+    
+
+	
+  
+  
+
+<a name="378670"></a>
+
+	  <b>Getting Paid on Time in a Tough Economy</b><br /> 
+
+
+<i> Inc. Magazine (09/08) Vol. 30, No. 9, P. 37; Tiku, Nitasha</i>
+
+
+<br /><br /> 
+
+	
+  
+		
+	
+  
+
+During slow economic times, many small businesses can experience cash flow problems, with payments from customers becoming inconsistent.  Fortunately there are solutions to help small businesses ride out difficult times.  First, choose customers more carefully.  Hiring a credit-rating agency can help avoid working for deadbeat customers that are unlikely to pay.  Many small business owners believe that they have to accept every customer that walks through the door, but it is far better to make sure that the customers you have will pay.  Second, use any excuse to call a customer with an upcoming payment.  Calling a customer's accounts payable department to check in, make sure they have the right mailing address, and to offer any assistance that may be necessary keeps your bill on their radar.  If a payment is late, call and ask for a definitive date when the check will be cut.  Continue calling to keep you in their thoughts.  Remember, the squeaky wheel gets the grease.  Consider purchasing credit insurance, which will pay if a customer fails to.  Some credit insurance can cost as little as a quarter of 1 percent of a company's revenue, and credit insurance providers often research whether prospective customers of their clients have difficulty making payments, helping their clients avoid bad customers.  Bring your accounting staff to meetings to help spot potential pitfalls and keep the finance department in the loop.  Lastly, use salespeople as collection agents.  Salespeople can be used to call their contacts after an unpaid bill is due, and sales commissions can be withheld until a client has paid in full.  Be upfront about payment expectations with clients, and do not alter those expectations if a prospective client threatens to walk away from a deal.<br />
+
+
+
+
+
+<a href="#top">Return to Headlines</a>
+
+
+<br /><br /> <br /> 
+    
+
+	
+  
+  
+
+<a name="380719"></a>
+	  <b>How Is Your Company Doing Compared to Plan?</b><br /> 
+
+
+<i> Small Business Ideas (08/08) Vol. 4, No. 8, P. 28; Rose, Ted</i>
+
+
+<br /><br /> 
+
+	
+  
+		
+	
+  
+
+Before the holiday rush arrives is the perfect time to reflect on the first part of the year and determine where your small business stands and what should be your plan going forward.  At the start of the year, a well-run small business creates a comprehensive financial plan, which considers all of the functional needs of the business based on its projected revenue and profit.  A good financial plan will also identify the key financial and non-financial measurements that will be tracked throughout the year to ensure that the company is on schedule to meet its goals.  Questions to ask yourself when reviewing your company's progress include:  Is the company on target to meet its revenue goals?  Is the company maintaining projected gross margins?  Is the company maintaining projected net profit?  Are there any unexpected changes in working capital needs?  If the company is not meeting any of these goals, search for the answers and formulate a plan to get back on track, which may involve expanding marketing and lead-generation efforts, improving the quality of products or services, updating employee compensation and benefits and reviewing recruiting practices, expanding the vendor list or looking for substitutes, or making investments to infrastructure to improve productivity and capacity.  The ability of a company to reach its financial targets will greatly enhance a company&rsquo;s credibility with its stakeholders, employees, bankers, vendors, and clients.  To increase a company's ability to reach its projected financial performance, businesses should have a clear picture of their recent financial results, and a quality accounting system to provide monthly accrual-based financial reports, including financial and non-financial metrics.  Such information will help management ensure the business achieves its financial goals and continues on the path to success.<br />
+
+
+
+
+
+<a href="#top">Return to Headlines</a>
+
+
+<br /><br /> <br /> 
+    
+
+	
+  
+  
+
+<a name="379060"></a>
+	  <b>Five Ways to Increase Profit Margins</b><br /> 
+
+
+<i> BusinessWeek SmallBiz (08/22/08) Hall, Doug</i>
+
+
+<br /><br /> 
+
+	
+  
+		
+	
+  
+
+A small business' profit margin is one of the best indicators of its health, writes Eureka!Ranch founder Doug Hall.  If your company's profit margins are not rising, there is a good chance that your company is not thriving.  As profit margins decline, companies cut sales and marketing efforts, and stop investing in the business.  In general, Hall says low and declining profit margins make owning and running a small business far less pleasurable and much more difficult.  However, he says a few changes can help boost profit margins and make your company thrive.  First, fire your customers.  Getting rid of the 20 percent of customers with the lowest profitability frees up resources and manpower to find work that is more profitable.  Second, find "mailbox money"&#151;sources of revenue that continue to provide cash even when you are not doing any work.  Mailbox money frequently comes from licensing out your intellectual property to other companies.  Those royalties can keep your company in business when sales drop off for a bit.  Third, focus your energy on products that are meaningful and unique to your company to set yourself apart from the competition.  Discounting a portion of your products to focus more on products that give your company a competitive edge can breath new life into a company and lead to increased sales and a larger profit margin.  Fourth, look for business opportunities outside the U.S.  The decline of the U.S. dollar has opened up a tremendous opportunity to make international sales.  Finally, love your product again.  Reinvent your products and your company when needed.  Unique products command higher prices and generate greater profits.<br />
+
+
+
+
+
+<a href="#top">Return to Headlines</a>
+
+
+<br /><br /> <br /> 
+
+		  
+      
+			  
+		  
+		  
+			  
+			
+		  
+
+	 <div class="grouphead"><b>Bright Ideas</b></div> <br /> 
+    
+
+	
+  
+  
+
+
+<a name="380919"></a>
+	  <b>How Small Stores Can Lure Holiday Shoppers</b><br /> 
+
+
+<i> Business Week (09/23/08) Tozzi, John</i>
+
+
+<br /><br /> 
+
+	
+  
+		
+	
+  
+
+Customer relationships and superior customer service will give small businesses an edge over larger competitors in what is expected to be a tough holiday shopping season this year.  The National Retail Federation expects year-over-year sales to increase just 2.2 percent for November and December, half the average rate of the last decade.  Analyst Frank Badillo says as shoppers become more value-oriented, they will turn toward big-box retailers.  Small stores can fight back by targeting wealthier shoppers who are less price-sensitive and will pay a premium for better service.  Small retailers in every market need to court their best customers this holiday season and establish personal relationships with customers.  One way to create these relationships is to offer affinity discounts that encourage loyal customers to spend more, instead of trying to attract new businesses by cutting prices, says University of San Francisco professor Eugene Muscat.  Send your best customers coupons and targeted discounts to get them in the store instead of posting a percentage-off poster in front of the store.  Be wary of overshipments and refuse late orders to avoid having to stock and shelve merchandise that will not sell, but display as much merchandise as possible on the floor.  Watch staffing levels to control costs, and consider opening later in the morning and extending hours at night to reach more customers without having to staff more hours.  Finally, coordinate Web and brick-and-mortar strategies, particularly in anticipation of the post-Thanksgiving "Cyber Monday" that follows Black Friday.  Many people browse in stores on the weekend and then make purchases online, so be sure to cross-promote your Web site with your store.<br />
+
+
+
+
+
+<a href="#top">Return to Headlines</a>
+
+
+<br /><br /> <br /> 
+    
+
+	
+  
+  
+
+<a name="380904"></a>
+	  <b>Small Business: Good Customer Service Is Key</b><br /> 
+
+
+<i> Newsday (09/08/08) Herzlich, Jamie</i>
+
+
+<br /><br /> 
+
+	
+  
+		
+	
+  
+
+Often the only characteristic that differentiates one company from another is the quality of customer service, making good customer service even more important to small businesses trying to level the playing field with larger competitors.  Knowing your company is delivering the best customer service possible starts with knowing what your customers want and exceeding those expectations.  "If all you do is satisfy your customers, that's not enough," says consultant Randi Busse.  "A satisfied customer is a former customer waiting to happen."  Consultant Martha Rogers says businesses should provide customers with a total experience over time that makes them want to keep coming back.  Building a long-term relationship with customers means learning and remembering their likes and dislikes to anticipate what they want, Rogers says.  Professional customer service speaker Kevin Stirtz says small businesses frequently have no process or structured plan to remember what customers tell them.  Stirtz says remembering customer preferences does not require a complicated system, noting that a paint store in the Virgin Islands uses recipe cards to catalog customer information.  Small businesses have so much personal contact with customers that they need to use that to their advantage, Stirtz says.  Take opportunities to talk to customers and ask them how they feel about your customer service.  Consultant Michael Crom says highly visible customer service telephone numbers, mail-in drop-box survey cards, and feedback forms on a company Web site are all good options.  Testing your own customer service by having a friend call in with a problem and seeing how fast it gets resolved is also a good idea.  Basic concepts, such as being polite, smiling, and giving customers your full attention are critical, but often overlooked or forgotten aspects of customer service.<br />
+
+
+
+
+
+<a href="#top">Return to Headlines</a>
+
+
+<br /><br /> <br /> 
+    
+
+	
+  
+  
+
+<a name="378463"></a>
+	  <b>How to Prepare Your Small Business for a Disaster</b><br /> 
+
+
+<i> U.S. News & World Report (10/06/08) Vol. 145, No. 7, P. 78; Bandyk, Matthew</i>
+
+
+<br /><br /> 
+
+	
+  
+		
+	
+  
+
+Major disasters such as hurricanes can cripple small businesses, but too few business owners do anything to neutralize the risks of natural disasters.  While the odds of a hurricane destroying a small business is low, a smaller and more common disaster such as a fire can just as easily destroy a small business' equipment and records.  Fortunately, steps can be taken to prepare for such disasters.  Look into business interruption insurance.  Donna Childs, a small business owner and author of "Prepare for the Worse, Plan for the Best: Disaster Preparedness and Recovery for Small Businesses," notes that insurance can cover both physical loss and lost revenue.  Business interruption insurance covers business owners for the profits they would make during a period when the business cannot operate because of some unfortunate event.  A subset of business interruption insurance is service interruption insurance, which covers a home-based service business if, for example, an online entrepreneur loses power or Internet service for a period of time and is unable to work.  When buying business interruption insurance, there a several things to consider.  Many types of coverage, like disability insurance, often have waiting periods before you can receive money.  Although waiting periods lower premiums, Childs warns that it can be difficult to plan ahead and to know what your business' needs will be during the waiting period, and you may not be able to make a claim at all because your service could be restored before the waiting period expires.  A better option is a fixed-dollar deductible so you know how much you have to pay before coverage kicks in, Childs says.  Keep track of all equipment to guarantee that you receive full payment for lost equipment, and invest in data backup equipment to protect from data loss that can be caused by power surges and outages following a disaster.<br />
+
+
+
+
+
+<a href="#top">Return to Headlines</a>
+
+
+<br /><br /> <br /> 
+
+		  
+      
+			  
+		  
+		  
+			  
+			
+		  
+
+	 <div class="grouphead"><b>Grow</b></div> <br /> 
+    
+
+	
+  
+  
+
+
+<a name="380901"></a>
+	  <b>Expand Your Thinking, Expand Your Business</b><br /> 
+
+
+<i> USA Today (09/08/08) Strauss, Steve</i>
+
+
+<br /><br /> 
+
+	
+  
+		
+	
+  
+
+There are several ways that small businesses can expand their reach and increase their business.  One is to find a great business partner.  Chester Carlson invented a copying machine at home but was unable to sell it to anyone.  Joe Wilson eventually saw that machine and partnered with Carlson.  The two eventually put more than $100 million in research and development and changed the name of their business from Haloid to Xerox.  Working alone or with a small staff provides only so much opportunity for growth.  Institutional knowledge is limited to your own personal knowledge, contacts are limited to normal channels, and resources are limited as well.  Finding a partner can elevate a business to an entirely new level.  Partners bring in new contacts and resources, and can provide new ideas and unique approaches for implementing ideas.  The key is to find strategic partners who provide some synergy, and who need what you have and have what you need.  Another opportunity for growth is to be the first to the market, as it will take a while for anyone else to enter the market, giving you the opportunity for unprecedented growth and unrivaled brand recognition.  Being innovative and creating a new product or way of doing something will help a company grow rapidly.  Innovation gives a company the "first mover's advantage," that allows them to own a new market.  Finally, instead of "thinking big," plan big.  Create a team, determine each member's strengths, find strategic partners, create a plan, and execute that plan.<br />
+
+
+
+
+
+<a href="#top">Return to Headlines</a>
+
+
+<br /><br /> <br /> 
+    
+
+	
+  
+  
+
+<a name="380914"></a>
+	  <b>For Entrepreneurs, Opportunity Still Knocks</b><br /> 
+
+
+<i> Wall Street Journal (09/25/08) Ransom, Diana</i>
+
+
+<br /><br /> 
+
+	
+  
+		
+	
+  
+
+Although access to growth capital is increasingly rare, and many small business owners are expecting additional economic hardships in the coming months, even these difficulties present opportunities for entrepreneurs.  While the struggling economy can hurt some businesses, others will actually be better off during a downturn, because when the economy stumbles, large companies tend to cut back on innovation, giving smaller companies an opportunity to gain market share.  One example is Doors for Builders, a luxury wooden door maker in Bensenville, Ill., that has seen its sales reach nearly $2 million so far this year, a 30 percent plus increase over the previous year.  Despite being in the struggling construction business, Doors for Builders has been able to steal market share from larger counterparts.  While larger companies are reducing sales staff, which increases the amount of time customers have to wait to receive products, Doors for Builders has increased its marketing budget and production.  Another example is Lenny's sandwich restaurant in New York City.  After a year-long hiatus from expansion, the restaurant chain recently opened its 11th store, near one of the city's busiest transportation hubs.  Earlier in the year rents on buildings were out of control, according to Lenny's head of real estate and development operations Curt Huegel, but now, as economic conditions worsen, landlords are more willing to negotiate and rents have become more reasonable.  Small businesses also can look to expand their reach into international markets, with foreign companies looking to buy in the United States due to the weakened American dollar.<br />
+
+
+
+
+
+<a href="#top">Return to Headlines</a>
+
+
+<br /><br /> <br /> 
+    
+
+	
+  
+  
+
+<a name="378870"></a>
+	  <b>Tech Trends for Growing Businesses</b><br /> 
+
+
+<i> Forbes (09/08/08) Grossman, Naomi</i>
+
+
+<br /><br /> 
+
+	
+  
+		
+	
+  
+
+Small businesses need technology to grow and compete, but certain technology trends are more helpful, and a better investment, than others.  Small Business Trends editor Anita Campbell says that many small businesses are gravitating toward software as a service (SaaS) and putting data online now that fears about the technology are subsiding.  Using SaaS frees up IT staff from having to do upgrades and installations because more and more applications can be set up and maintained through Web accounts.  Instead of going to the IT department for problems, employees will be able to go online for solutions, freeing up IT people for high-level, value-added projects.  Social media also is a valuable endeavor for small businesses.  While some sites are fads, the entire movement is creating a participatory, conversational Web that small businesses can use to reach out to the community and prospective customers.  Small businesses can post an official resume on Linkedln to provide a well-laid-out description, background, and recommendations.  Facebook also is becoming a hot spot for businesses looking to present a more social aspect of themselves, posting interests, blog entries, and small updates.  Social networking also makes it easier for people to find and contact a business online.  Businesses should remember to make their Web site the center of their online presence.  The Web site is used to sell, generate leads, and inform consumers.  Launching and running a Web site is far easier and less expensive than it was five years ago.  The next level establishing an online presence is pay-per-click marketing, blogging, email marketing, search engine optimization, and online press releases.  These five strategies can generate some very positive results for small businesses, Campbell says.<br />
+
+
+
+
+
+<a href="#top">Return to Headlines</a>
+
+
+<br /><br /> <br /> 
+
+		  
+      
+			  
+		  
+		  
+			  
+			
+		  
+
+	 <div class="grouphead"><b>Off Hours</b></div> <br /> 
+    
+
+	
+  
+  
+
+
+<a name="381535"></a>
+	  <b>Wading Into Heaven</b><br /> 
+
+
+<i> Wall Street Journal (09/13/08) P. R5; Ulman, Neil</i>
+
+
+<br /><br /> 
+
+	
+  
+		
+	
+  
+
+As after-hour and weekend activities go, fly fishing can be one of the most rewarding and challenging.  Fly fishing is an active and absorbing activity that requires more thinking and strategy than traditional fishing, and a more thorough understanding of the behavior of fish.  Furthermore, your involvement in fly fishing can be tailored to your needs, from a leisurely pastime to a full-blown obsession, with whatever level of social interaction you desire, be it a solitary retreat or social outing.  Fly casting is an athletic challenge that, with a little instruction, can be accomplished quickly.  While initially similar to casting in regular fishing, the two are actually quite different.  Drawing a fly rod backwards to initiate a cast bends it, filling it with energy until your wrist flicks it forward.  The more muscle behind the cast, the worse it will be.  A good fly cast is all about timing.  Fly fishing also is a good way to get involved in, or continue your support of, conservation efforts.  In addition to catch-and-release fishing, which is required in some areas, fly fishers are very adamant about preserving streams for wild fish.  While high-end equipment is expensive, with a classic handcrafted split-bamboo fly rod costing about $3,500, inexpensive startup equipment is available.  Some starter packages, including rod, reel, and fly line, sell for about $75 to $150, and hip boots can be as little as $60.  Big catalog retailers such as L.L. Bean, Cabela's, and Orvis offer a wide selection and good telephone advice, as well as fly-fishing schools and trip packages.<br />
+
+
+
+
+
+<a href="#top">Return to Headlines</a>
+
+
+<br /><br /> <br /> 
+    
+
+	
+  
+  
+
+<a name="381740"></a>
+	  <b>See Explosions of Fall Color for Less in Six Unlikely Places</b><br /> 
+
+
+<i> USA Today (10/01/08) Hamman, Kate</i>
+
+
+<br /><br /> 
+
+	
+  
+		
+	
+  
+
+While many consider New England the place for viewing fall foliage, several other states also can claim a colorful display, and because they are lesser-known destinations they may have better lodging deals and availability.  When thinking of Autumn's colorful display, most people do not think of the South, but in fact the entire state of Arkansas experiences fall color.  The Ozark Mountain region is particularly colorful with gold, brown, yellow, and orange leaves from a variety of trees.  The Ozark-St. Francis National Forest Covers 1.2 million acres and features Arkansas' highest mountain, making it an ideal place for camping, hiking, biking, or just a scenic drive.  Colorado offers a unique foliage experience due to the stark contrast of the white aspen tree against the deep reds and golds in the leaves.  The state offers countless places to see the leaves change color, but Aspen is one of the best, offering shopping and proximity to roads that follow the Colorado river.  North Carolina's Great Smoky Mountains National Park offers visitors the unique fog that hovers gracefully above the tree line, as well as an extended foliage season.  Leaves typically start to change in mid September at higher elevations, and can continue through early November.  Oregon offers a variety of trees, including maple, Oregon ash, and cottonwood, creating an intense color palette every year.  The season typically starts in September and lasts through October.  Connecticut is often overlooked in favor of its northern New England neighbors, but still provides excellent foliage, with October generally being peak season.  A popular spot is Route 7 in Litchfield Hills, which offers a driving tour along with museums, historical taverns, revolutionary war sites, and local shops.  Illinois' Fall-O-Ween celebration makes it a unique place to enjoy Autumn, with leaves turning in early September and continuing through the fall.  Illinois features six scenic driving tours for the best views, including one along historic Route 66.<br />
+
+
+
+
+
+<a href="#top">Return to Headlines</a>
+
+
+<br /><br /> <br /> Abstract News &copy;	Copyright 2008 <A HREF="http://www.infoinc.com/copyright.html">INFORMATION, INC.</A><BR>
+<a href="http://www.infoinc.com"><img src="http://www.infoinc.com/images/poweredBy_small115.jpg" border="0" vspace="5" alt="Powered by Information, Inc." /></a><br>
+
+
+
+
+
+<p /><hr /><p />
+<center>
+<a href="http://www.infoinc.com/RapidAdvance/mailinglist.cfm?FORMID=1&SERVICEID=1238" target="_blank">Subscribe</a> :: <a href="http://www.infoinc.com/RapidAdvance/mailinglist.cfm?FORMID=2&SERVICEID=1238" target="_blank">Change E-mail</a> :: <a href="mailto:unsubscribe@5pq0wmtho61cphe929b37zo7z.in.salesforce.com?subject=Unsubscribe" target="_blank">Unsubscribe</a>
+</center>
+
+
+
+
+						
+                       
+
+						</td>
+						
+						<td width="155" style="padding: 10px;" bgcolor="#D1DEEF" id="TDsidebar">
+						<center><br>
+
+						  <div class="datetext"><b><i>October 2008 </i></b>
+					      <br>
+                          </div>
+
+                          </center>
+                          <hr>                      
+						<div class="sidebar"><br>
+                        
+<center>
+<a href="http://www.infoinc.com/RapidAdvance/mailinglist.cfm?FORMID=1&SERVICEID=1238" target="_blank"><strong><u>Subscribe For Free</u></strong></a><br><br>
+</center>
+                        
+                        
+
+<hr />
+
+
+
+
+
+
+
+<center>
+<a href="http://www.rapidadvance.com/" target="_blank"><img src="http://www.infoinc.com/RapidAdvance/images/RPA-Logo-Color.gif" alt="Banner" width="150" height="59" border="0" /></a><br>
+</center>
+<br>
+
+<strong>About RapidAdvance</strong> &ndash; RapidAdvance serves the unique financial needs of small to mid-sized businesses by providing a great alternative to a small business loan.  As a leading provider of business cash advance funding services, we provide a key source of business capital to the business community.
+<br><br><hr><br>
+<strong>About <em>RapidResource</em></strong> &ndash; Our editorial staff monitors nearly 11,000 newspapers, business publications, national and international wire services, and other periodicals and summarizes significant articles into and easy-to-read summary.
+
+<br><br><hr><br>
+
+For more information on RapidAdvance and <i>Rapid Resource</i>, contact:
+<br><br>
+RapidAdvance<br>
+7316 Wisconsin Avenue<br>
+Suite 450<br>
+Bethesda, MD 20814<br>
+877-467-2743<br>
+<a href="mailto:skohlhepp@rapidadvance.com">skohlhepp@rapidadvance.com</a>
+
+						
+						
+
+
+    <img src="http://host.infoinc.com/ii/sponsors/stats/viewcounter.cfm?spid=11675" width="1" /><br /> 
+
+						</div>
+						<!-- ========================= END SIDEBAR =========================== -->
+						<br>
+					</td>
+				</tr>
+            </table>
+			</td>
+		</tr>
+
+	</table>
+    </center>
+	</body>
+</html>

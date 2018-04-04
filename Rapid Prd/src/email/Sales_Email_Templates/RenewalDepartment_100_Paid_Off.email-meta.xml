@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Use this for advances that are 100% paid off and 40% or higher ROI.</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Renewal Department - 100% Paid Off</name>
+    <style>none</style>
+    <subject>Reminder. You&apos;re Eligible to renew today!</subject>
+    <textOnly>Renew Today With RapidAdvance
+
+We appreciated your recent business and look forward to continuing to serve your future funding needs.
+
+Over 85% of our eligible customers renew their advances multiple 
+times. Now is the perfect time to renew your advance and get additional 
+money to support your business.
+
+Your advance can be used for any business purpose including supporting your seasonal needs, expansion, or paying off debt and taxes. Renewals are even easier and faster than your first advance with funding happening within 5 days. 
+
+Please contact our Renewal Department for details and be sure to ask about our new funding programs. 
+  
+Referral Bonus:
+ 
+Help out a fellow business owner and earn up to $400.  
+
+Simply refer a fellow business owner to our service and earn...
+ 
+- $400 if their funded advance is $10,000 or greater
+- $250 if their funded advance is less than $10,000
+- Simple, free application.
+ 
+There is no limit to the number of referrals you can submit. 
+
+Call your Sales Representative to submit a referral. 
+  
+Thank you for the opportunity to support your business!
+  
+ 
+Renewal Department
+phone: 240.514.2000 email: renewaldepartment@rapidadvance.com</textOnly>
+    <type>custom</type>
+</EmailTemplate>

@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Bid</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Bids</value>
+    </caseValues>
+    <fields>
+        <label><!-- BOBA Commission --></label>
+        <name>BOBA_Commission__c</name>
+    </fields>
+    <fields>
+        <label><!-- BOOP --></label>
+        <name>BOOP__c</name>
+        <relationshipLabel><!-- Bids --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Contract Amount --></label>
+        <name>Contract_Amount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contract Fees --></label>
+        <name>Contract_Fees__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contract Number of Payments --></label>
+        <name>Contract_Number_of_Payments__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contract Payback Amount --></label>
+        <name>Contract_Payback_Amount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contract Payment Amount --></label>
+        <name>Contract_Pmt_Amt__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contract Received --></label>
+        <name>Contract_Received__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contract Request --></label>
+        <name>Contract_Request__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contract Term --></label>
+        <name>Contract_Term_del__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contract Upsell Rate --></label>
+        <name>Contract_Upsell__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contracted Term --></label>
+        <name>Contracted_Term__c</name>
+    </fields>
+    <fields>
+        <label><!-- Fees --></label>
+        <name>Fees__c</name>
+    </fields>
+    <fields>
+        <label><!-- Funded Date --></label>
+        <name>Funded_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Funded --></label>
+        <name>Funded__c</name>
+    </fields>
+    <fields>
+        <label><!-- Lost Boy --></label>
+        <name>Lost_Boy__c</name>
+        <relationshipLabel><!-- Bids --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Marble --></label>
+        <name>Marble__c</name>
+        <relationshipLabel><!-- Bids --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Max Upsell --></label>
+        <name>Max_Upsell__c</name>
+    </fields>
+    <fields>
+        <label><!-- Max Quote? --></label>
+        <name>Max__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Number of Payments --></label>
+        <name>Number_of_Payments__c</name>
+    </fields>
+    <fields>
+        <label><!-- Partner BOBA Commission --></label>
+        <name>Partner_BOBA_Commission__c</name>
+    </fields>
+    <fields>
+        <label><!-- Payback Amount --></label>
+        <name>Payback_Amount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Payment Amount --></label>
+        <name>Payment_Amount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Payment Interval --></label>
+        <name>Payment_Interval__c</name>
+    </fields>
+    <fields>
+        <label><!-- Quote Amount --></label>
+        <name>Quote_Amount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Quote Term --></label>
+        <name>Quote_Term__c</name>
+    </fields>
+    <fields>
+        <label><!-- Renewal Eligible --></label>
+        <name>Renewal_Eligible__c</name>
+    </fields>
+    <fields>
+        <label><!-- Sold Short --></label>
+        <name>Sold_Short__c</name>
+    </fields>
+    <fields>
+        <label><!-- Total Commission --></label>
+        <name>Total_Commission__c</name>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

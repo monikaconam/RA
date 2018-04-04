@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>EmailLetterhead</letterhead>
+    <name>Partner Pre-Qual Fail HTML</name>
+    <style>freeForm</style>
+    <subject>Pre-Qualification: {!Opportunity.Name} Failed to Meet Criteria</subject>
+    <textOnly>At this time the applicant file for {!Opportunity.Account} (ID#: {!Opportunity.Opportunity_Number__c}) fails to meet the Pre-Qualification criteria. If you have any questions please contact the Business Development team at RapidAdvance: bd@rapidadvance.com or 1-877-889-1037.</textOnly>
+    <type>html</type>
+</EmailTemplate>

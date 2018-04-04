@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Known Fraud</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Known Frauds</value>
+    </caseValues>
+    <fields>
+        <label><!-- Address --></label>
+        <name>Address__c</name>
+    </fields>
+    <fields>
+        <label><!-- Business Name --></label>
+        <name>Business_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- City --></label>
+        <name>City__c</name>
+    </fields>
+    <fields>
+        <label><!-- Email --></label>
+        <name>Email__c</name>
+    </fields>
+    <fields>
+        <label><!-- Fax --></label>
+        <name>Fax__c</name>
+    </fields>
+    <fields>
+        <label><!-- First Name --></label>
+        <name>First_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Fraud Origination --></label>
+        <name>Fraud_Origination__c</name>
+        <picklistValues>
+            <masterLabel>External Fraud</masterLabel>
+            <translation><!-- External Fraud --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Internal Fraud</masterLabel>
+            <translation><!-- Internal Fraud --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Internal Loss</masterLabel>
+            <translation><!-- Internal Loss --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Last Name --></label>
+        <name>Last_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Phone --></label>
+        <name>Phone__c</name>
+    </fields>
+    <fields>
+        <label><!-- Social Security Number --></label>
+        <name>Social_Security_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- State --></label>
+        <name>State__c</name>
+    </fields>
+    <fields>
+        <label><!-- ZIP --></label>
+        <name>ZIP__c</name>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

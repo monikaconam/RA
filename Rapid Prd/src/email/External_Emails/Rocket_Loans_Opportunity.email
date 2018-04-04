@@ -1,0 +1,49 @@
+<!DOCTYPE HTML>
+
+<head>
+</head>
+<body text="#333333" style="margin: 0px; background-color: #ffffff;">
+<table width="100%" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td align="center" valign="top">
+<table style="font-size: 10px; font-family: verdana; color: #ffffff; width: 600px; background-color: #ffffff;" border="0" cellspacing="0" cellpadding="0" align="center">
+<tbody>
+<tr>
+<td><span style="font-size: 16px; color: #000000;"><br />
+<span style="font-size: 18px;"><span style="font-size: 18px;"><span style="font-size: 18px;"><span style="font-family: Arial;"><strong>
+Hi {!Opportunity.Contact__c},&nbsp;</strong><br />
+<br />
+<br />
+Thanks for contacting RapidAdvance! As I mentioned on the phone, <a style="text-decoration: none;" href="https://www.rocketloans.com/homepage.html?p=RA&c=PersonalLoansReferral&r={!User.Email}" target="_blank"><span style="color: #000000;"><strong>RocketLoans</strong></span></a> is the newest company in the Quicken Loans Family of Companies. RocketLoans offers an incredibly simple and fast way to consolidate your high-interest credit card debt, pay for a home improvement project, or get extra money for just about anything. You can get approved in as few as 8 minutes. Just visit <strong><a style="text-decoration: none; color: #000000;" href="https://www.rocketloans.com/homepage.html?p=RA&c=PersonalLoansReferral&r={!User.Email}" target="_blank">www.rocketloans.com</a></strong> to get started!
+<br />
+<br />
+If the majority of your income comes from a sole proprietorship, you will need to provide:<br />
+<ul>
+<li>Most recent Tax Form 1040</li>
+<li>Tax Form Schedule C</li>
+<li>2 Bank Statements</li>
+</ul>
+If the majority of your income comes from a partnership, S Corp or LLC, you will need to provide:<br />
+<ul>
+<li>Most recent Tax Form 1040</li>
+<li>Tax Form 1065</li>
+<li>Tax Form Schedule E</li>
+<li>Tax Form K1</li>
+<li>2 Bank Statements</li>
+</ul>
+<br />
+If you have any questions, you can chat online at <strong><a style="text-decoration: none; color: #000000;" href="https://www.rocketloans.com/homepage.html?p=RA&c=PersonalLoansReferral&r={!User.Email}" target="_blank">www.rocketloans.com</a></strong>, email support@rocketloans.com, or call RocketLoans at 1-800-333-ROCK.<br />
+<br />
+</span><br />
+<br />
+</span></span></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</body>
+</html>

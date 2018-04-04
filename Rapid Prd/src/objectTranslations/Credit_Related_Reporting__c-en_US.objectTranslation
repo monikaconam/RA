@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Credit Related Reporting</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Credit Related Reporting</value>
+    </caseValues>
+    <fields>
+        <label><!-- CbrType --></label>
+        <name>CbrType__c</name>
+    </fields>
+    <fields>
+        <label><!-- Created Date --></label>
+        <name>Created_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Created by Network ID --></label>
+        <name>Created_by_Network_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- FICO --></label>
+        <name>FICO__c</name>
+    </fields>
+    <fields>
+        <label><!-- First Name --></label>
+        <name>First_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- GreatestNumberOfMonthsATradeHasNotBeenRe --></label>
+        <name>GreatestNumberOfMonthsATradeHasNotBeenRe__c</name>
+    </fields>
+    <fields>
+        <label><!-- NumberOfBankruptcies --></label>
+        <name>NumberOfBankruptcies__c</name>
+    </fields>
+    <fields>
+        <label><!-- NumberOfInquiries --></label>
+        <name>NumberOfInquiries__c</name>
+    </fields>
+    <fields>
+        <label><!-- NumberOfPublicRecords --></label>
+        <name>NumberOfPublicRecords__c</name>
+    </fields>
+    <fields>
+        <label><!-- NumberOfSatisfiedTrades --></label>
+        <name>NumberOfSatisfiedTrades__c</name>
+    </fields>
+    <fields>
+        <label><!-- OldestOpenDateOfATrade --></label>
+        <name>OldestOpenDateOfATrade__c</name>
+    </fields>
+    <fields>
+        <label><!-- Opp ID --></label>
+        <name>Opp_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Opportunity --></label>
+        <name>Opportunity__c</name>
+        <relationshipLabel><!-- Credit Related Reporting --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- TotalOfAllBalances --></label>
+        <name>TotalOfAllBalances__c</name>
+    </fields>
+    <fields>
+        <label><!-- TotalOfAllLimits --></label>
+        <name>TotalOfAllLimits__c</name>
+    </fields>
+    <fields>
+        <label><!-- TotalOfAllPayments --></label>
+        <name>TotalOfAllPayments__c</name>
+    </fields>
+    <fields>
+        <label><!-- TotalOfAllTrades30DaysPastDue --></label>
+        <name>TotalOfAllTrades30DaysPastDue__c</name>
+    </fields>
+    <fields>
+        <label><!-- TotalOfAllTrades60DaysPastDue --></label>
+        <name>TotalOfAllTrades60DaysPastDue__c</name>
+    </fields>
+    <fields>
+        <label><!-- TotalOfAllTrades90DaysPastDue --></label>
+        <name>TotalOfAllTrades90DaysPastDue__c</name>
+    </fields>
+    <fields>
+        <label><!-- TotalOfAllTrades --></label>
+        <name>TotalOfAllTrades__c</name>
+    </fields>
+    <fields>
+        <label><!-- TotalOfInstallmentBalances --></label>
+        <name>TotalOfInstallmentBalances__c</name>
+    </fields>
+    <fields>
+        <label><!-- TotalOfInstallmentLimits --></label>
+        <name>TotalOfInstallmentLimits__c</name>
+    </fields>
+    <fields>
+        <label><!-- TotalOfInstallmentPayments --></label>
+        <name>TotalOfInstallmentPayments__c</name>
+    </fields>
+    <fields>
+        <label><!-- TotalOfInstallmentTrades30DaysPastDue --></label>
+        <name>TotalOfInstallmentTrades30DaysPastDue__c</name>
+    </fields>
+    <fields>
+        <label><!-- TotalOfInstallmentTrades60DaysPastDue --></label>
+        <name>TotalOfInstallmentTrades60DaysPastDue__c</name>
+    </fields>
+    <fields>
+        <label><!-- TotalOfInstallmentTrades90DaysPastDue --></label>
+        <name>TotalOfInstallmentTrades90DaysPastDue__c</name>
+    </fields>
+    <fields>
+        <label><!-- TotalOfInstallmentTrades --></label>
+        <name>TotalOfInstallmentTrades__c</name>
+    </fields>
+    <fields>
+        <label><!-- TotalOfMortgageBalances --></label>
+        <name>TotalOfMortgageBalances__c</name>
+    </fields>
+    <fields>
+        <label><!-- TotalOfMortgageLimits --></label>
+        <name>TotalOfMortgageLimits__c</name>
+    </fields>
+    <fields>
+        <label><!-- TotalOfMortgagePayments --></label>
+        <name>TotalOfMortgagePayments__c</name>
+    </fields>
+    <fields>
+        <label><!-- TotalOfMortgageTrades30DaysPastDue --></label>
+        <name>TotalOfMortgageTrades30DaysPastDue__c</name>
+    </fields>
+    <fields>
+        <label><!-- TotalOfMortgageTrades60DaysPastDue --></label>
+        <name>TotalOfMortgageTrades60DaysPastDue__c</name>
+    </fields>
+    <fields>
+        <label><!-- TotalOfMortgageTrades90DaysPastDue --></label>
+        <name>TotalOfMortgageTrades90DaysPastDue__c</name>
+    </fields>
+    <fields>
+        <label><!-- TotalOfMortgageTrades --></label>
+        <name>TotalOfMortgageTrades__c</name>
+    </fields>
+    <fields>
+        <label><!-- TotalOfOpenBalances --></label>
+        <name>TotalOfOpenBalances__c</name>
+    </fields>
+    <fields>
+        <label><!-- TotalOfOpenLimits --></label>
+        <name>TotalOfOpenLimits__c</name>
+    </fields>
+    <fields>
+        <label><!-- TotalOfOpenPayments --></label>
+        <name>TotalOfOpenPayments__c</name>
+    </fields>
+    <fields>
+        <label><!-- TotalOfOpenTrades30DaysPastDue --></label>
+        <name>TotalOfOpenTrades30DaysPastDue__c</name>
+    </fields>
+    <fields>
+        <label><!-- TotalOfOpenTrades60DaysPastDue --></label>
+        <name>TotalOfOpenTrades60DaysPastDue__c</name>
+    </fields>
+    <fields>
+        <label><!-- TotalOfOpenTrades90DaysPastDue --></label>
+        <name>TotalOfOpenTrades90DaysPastDue__c</name>
+    </fields>
+    <fields>
+        <label><!-- TotalOfOpenTrades --></label>
+        <name>TotalOfOpenTrades__c</name>
+    </fields>
+    <fields>
+        <label><!-- TotalOfRevolvingBalances --></label>
+        <name>TotalOfRevolvingBalances__c</name>
+    </fields>
+    <fields>
+        <label><!-- TotalOfRevolvingLimits --></label>
+        <name>TotalOfRevolvingLimits__c</name>
+    </fields>
+    <fields>
+        <label><!-- TotalOfRevolvingPayments --></label>
+        <name>TotalOfRevolvingPayments__c</name>
+    </fields>
+    <fields>
+        <label><!-- TotalOfRevolvingTrades30DaysPastDue --></label>
+        <name>TotalOfRevolvingTrades30DaysPastDue__c</name>
+    </fields>
+    <fields>
+        <label><!-- TotalOfRevolvingTrades60DaysPastDue --></label>
+        <name>TotalOfRevolvingTrades60DaysPastDue__c</name>
+    </fields>
+    <fields>
+        <label><!-- TotalOfRevolvingTrades90DaysPastDue --></label>
+        <name>TotalOfRevolvingTrades90DaysPastDue__c</name>
+    </fields>
+    <fields>
+        <label><!-- TotalOfRevolvingTrades --></label>
+        <name>TotalOfRevolvingTrades__c</name>
+    </fields>
+    <fields>
+        <label><!-- TotalPastDueAmount --></label>
+        <name>TotalPastDueAmount__c</name>
+    </fields>
+    <fields>
+        <label><!-- WorstTradeRating --></label>
+        <name>WorstTradeRating__c</name>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

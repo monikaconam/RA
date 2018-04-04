@@ -1,0 +1,20 @@
+Hi,
+
+Q6. The client is not strongly agree that she/he has been able to accomplish my goals with this financing.
+
+Answer: {!GetFeedback_Survey__c.Able_to_accomplish_goals_with_fi__c}
+
+Q6. The client is not strongly agree that she/he will choose RapidAdvance when she/he need funding in the future.
+
+Answer: {!GetFeedback_Survey__c.Future_funding_choice_is_Rapid__c}
+
+Q6. The client is not strongly agree that she/he is able to repay the funding comfortably.
+
+Answer: {!GetFeedback_Survey__c.Comfortable_funding_repayment__c}
+
+
+For reference click the following link.
+
+{!GetFeedback_Survey__c.Link}
+
+Thanks

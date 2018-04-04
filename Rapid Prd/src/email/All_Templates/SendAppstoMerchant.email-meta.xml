@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Processor notification</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>StandardLetterheadSample</letterhead>
+    <name>Send Apps to Merchant</name>
+    <style>freeForm</style>
+    <subject>Send CC Processor Apps if Applicable</subject>
+    <textOnly>Date:  {!Opportunity.LastModifiedDate}  
+ 
+Sales Rep: {!Opportunity.OwnerFirstName} {!Opportunity.OwnerLastName}
+ 
+Opportunity Name:  {!Opportunity.Name}
+Address: {!Account.BillingAddress}
+                 {!Account.BillingCity}, {!Account.BillingState} {!Account.BillingPostalCode}
+ 
+Phone #:  {!Account.Phone}
+Fax#:  {!Account.Fax}
+ 
+Renewal ? - {!Opportunity.Renewal__c}
+Renewal Date - {!Opportunity.RENEWAL_DATE__c}
+ 
+ 
+Advance: {!Opportunity.Amount}
+% Payback:  {!Opportunity.Percent_Payback__c}
+Payback $:  {!Opportunity.Pay_Back_Amount__c}
+ 
+ 
+Current Processor:  {!Opportunity.Current_Processor__c}
+ 
+New Processor:  {!Opportunity.Processor_Name__c}
+ 
+Partner/Campaign:  {!Campaign.Name}
+ 
+Deal Confirmed By:  {!Opportunity.LastModifiedBy}</textOnly>
+    <type>html</type>
+</EmailTemplate>

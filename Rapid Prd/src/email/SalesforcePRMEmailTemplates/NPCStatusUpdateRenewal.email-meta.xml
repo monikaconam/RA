@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Email status for Renewals to Partners on their deals</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>StandardLetterheadSample</letterhead>
+    <name>NPC - Status Update Renewal</name>
+    <style>freeForm</style>
+    <subject>{!Opportunity.Name} renewal update</subject>
+    <textOnly>Date: {!Opportunity.LastModifiedDate}
+ 
+Renewal Date: {!Opportunity.RENEWAL_DATE__c}
+ 
+Partner Name: {!Opportunity.Campaign}
+ 
+Opportunity Name: {!Opportunity.Name}
+ 
+Underwriting Status: {!Opportunity.Underwriting_Approval__c}
+Underwriting Decision: {!Opportunity.00N70000001jX4q}
+Reason for Decline: {!Opportunity.Decline_Reason__c} 
+ 
+Underwriting Notes: {!Opportunity.Underwriting_Notes__c}
+ 
+Closed Reason: {!Opportunity.Closed_Reason__c} 
+Funding Status: {!Opportunity.Funding_Status__c} 
+Funded Date: {!Opportunity.Funded_by_WC__c} 
+  
+Advance $: {!Opportunity.Amount}
+Percent Payback: {!Opportunity.Percent_Payback__c}
+Payback Amount: {!Opportunity.Pay_Back_Amount__c}
+ 
+Sales Check List Notes: {!Opportunity.Sales_Check_List_Notes__c}
+ 
+Processing Notes: {!Opportunity.Processing_Notes__c} 
+ 
+Renewal Paperwork Sent: {!Opportunity.00N70000001hZEE}
+Renewal Paperwork Rec&apos;d: {!Opportunity.00N70000001kEqJ}</textOnly>
+    <type>html</type>
+</EmailTemplate>

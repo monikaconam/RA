@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>false</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>NPS At Funding Survey Email</name>
+    <style>none</style>
+    <subject>RapidAdvance - Funding Survey</subject>
+    <textOnly>Congratulations on getting funded with RapidAdvance!
+
+We’d love to hear about your experience getting funding so that we can continue to improve the experience for customers like you. Please let us know by filling out this quick survey:
+
+
+We’ll keep your answers confidential and won’t share them with another company without your permission.
+
+Sincerely,
+
+The RapidAdvance Team
+
+
+© 2016 RapidAdvance. All rights reserved.
+
+4500 East West Highway, 6th Floor. Bethesda, MD 20814
+
+unsubscribe | update subscription preferences</textOnly>
+    <type>custom</type>
+</EmailTemplate>

@@ -1,0 +1,13 @@
+Hey Broker Out Squad,
+I just unqualified this lead that I believe takes invoices, might be a great marble for Fundbox.
+
+
+{!Lead.Company}
+
+{!Lead.Phone}
+
+https://na33.salesforce.com/{!Lead.Id}
+
+
+Calc Link:
+{!Lead.CALC_Link__c}

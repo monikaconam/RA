@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CallCenter xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <adapterUrl>http://localhost:11000</adapterUrl>
+    <displayName>InGenius Call Center Adapter AEv.4</displayName>
+    <displayNameLabel>Display Name</displayNameLabel>
+    <internalNameLabel>Internal Name</internalNameLabel>
+    <sections>
+        <items>
+            <label>Description</label>
+            <name>reqDescription</name>
+            <value xsi:nil="true"/>
+        </items>
+        <items>
+            <label>CTI Connector ProgId</label>
+            <name>reqProgId</name>
+            <value>SalesforceAdapter.SalesforceAdapter.1</value>
+        </items>
+        <items>
+            <label>Version</label>
+            <name>reqVersion</name>
+            <value>4.0</value>
+        </items>
+        <items>
+            <label>CTI Adapter URL</label>
+            <name>reqAdapterUrl</name>
+            <value>http://localhost:11000</value>
+        </items>
+        <label>General Information</label>
+        <name>reqGeneralInfo</name>
+    </sections>
+    <sections>
+        <items>
+            <label>Outside Prefix</label>
+            <name>reqOutsidePrefix</name>
+            <value>9</value>
+        </items>
+        <items>
+            <label>Long Distance Prefix</label>
+            <name>reqLongDistPrefix</name>
+            <value>1</value>
+        </items>
+        <items>
+            <label>International Prefix</label>
+            <name>reqInternationalPrefix</name>
+            <value>01</value>
+        </items>
+        <label>Dialing Options</label>
+        <name>reqDialingOptions</name>
+    </sections>
+    <sections>
+        <items>
+            <label>Enable Transfer (Y/N)</label>
+            <name>TransferEnabled</name>
+            <value>Y</value>
+        </items>
+        <items>
+            <label>Enable Conference (Y/N)</label>
+            <name>ConferenceEnabled</name>
+            <value>Y</value>
+        </items>
+        <label>Line Options</label>
+        <name>LineOptions</name>
+    </sections>
+    <sections>
+        <items>
+            <label>Wrap-up Code #1</label>
+            <name>WrapUp0</name>
+            <value>Call successful</value>
+        </items>
+        <items>
+            <label>Wrap-up Code #2</label>
+            <name>WrapUp1</name>
+            <value>Left voicemail</value>
+        </items>
+        <items>
+            <label>Wrap-up Code #3</label>
+            <name>WrapUp2</name>
+            <value>Add to do-not-call list</value>
+        </items>
+        <items>
+            <label>Wrap-up Code #4</label>
+            <name>WrapUp3</name>
+            <value>Number out of service</value>
+        </items>
+        <items>
+            <label>Wrap-up Code #5</label>
+            <name>WrapUp4</name>
+            <value>No Answer</value>
+        </items>
+        <items>
+            <label>Wrap-up Code #6</label>
+            <name>WrapUp5</name>
+            <value>Contact Unavailable</value>
+        </items>
+        <items>
+            <label>Wrap-up Code #7</label>
+            <name>WrapUp6</name>
+            <value>Customer Service</value>
+        </items>
+        <items>
+            <label>Wrap-up Code #8</label>
+            <name>WrapUp7</name>
+            <value>Wrong Number</value>
+        </items>
+        <items>
+            <label>Wrap-up Code #9</label>
+            <name>WrapUp8</name>
+            <value xsi:nil="true"/>
+        </items>
+        <items>
+            <label>Wrap-up Code #10</label>
+            <name>WrapUp9</name>
+            <value xsi:nil="true"/>
+        </items>
+        <items>
+            <label>Wrap-up Code #11</label>
+            <name>WrapUp10</name>
+            <value xsi:nil="true"/>
+        </items>
+        <items>
+            <label>Wrap-up Code #12</label>
+            <name>WrapUp11</name>
+            <value xsi:nil="true"/>
+        </items>
+        <items>
+            <label>Wrap-up Code #13</label>
+            <name>WrapUp12</name>
+            <value xsi:nil="true"/>
+        </items>
+        <items>
+            <label>Wrap-up Code #14</label>
+            <name>WrapUp13</name>
+            <value xsi:nil="true"/>
+        </items>
+        <items>
+            <label>Wrap-up Code #15</label>
+            <name>WrapUp14</name>
+            <value xsi:nil="true"/>
+        </items>
+        <items>
+            <label>Wrap-up Code #16</label>
+            <name>WrapUp15</name>
+            <value xsi:nil="true"/>
+        </items>
+        <items>
+            <label>Wrap-up Code #17</label>
+            <name>WrapUp16</name>
+            <value xsi:nil="true"/>
+        </items>
+        <items>
+            <label>Wrap-up Code #18</label>
+            <name>WrapUp17</name>
+            <value xsi:nil="true"/>
+        </items>
+        <items>
+            <label>Wrap-up Code #19</label>
+            <name>WrapUp18</name>
+            <value xsi:nil="true"/>
+        </items>
+        <items>
+            <label>Wrap-up Code #20</label>
+            <name>WrapUp19</name>
+            <value xsi:nil="true"/>
+        </items>
+        <label>Wrap-up Codes</label>
+        <name>WrapUpCodes</name>
+    </sections>
+    <sections>
+        <items>
+            <label>Rule 0</label>
+            <name>rule0</name>
+            <value>-x</value>
+        </items>
+        <items>
+            <label>Rule 1</label>
+            <name>rule1</name>
+            <value xsi:nil="true"/>
+        </items>
+        <items>
+            <label>Rule 2</label>
+            <name>rule2</name>
+            <value xsi:nil="true"/>
+        </items>
+        <items>
+            <label>Rule 3</label>
+            <name>rule3</name>
+            <value xsi:nil="true"/>
+        </items>
+        <items>
+            <label>Rule 4</label>
+            <name>rule4</name>
+            <value xsi:nil="true"/>
+        </items>
+        <items>
+            <label>Rule 5</label>
+            <name>rule5</name>
+            <value xsi:nil="true"/>
+        </items>
+        <items>
+            <label>Rule 6</label>
+            <name>rule6</name>
+            <value xsi:nil="true"/>
+        </items>
+        <items>
+            <label>Rule 7</label>
+            <name>rule7</name>
+            <value xsi:nil="true"/>
+        </items>
+        <label>Number Matching</label>
+        <name>numberMatching</name>
+    </sections>
+    <sections>
+        <items>
+            <label>Branding link text</label>
+            <name>BrandingLabel</name>
+            <value xsi:nil="true"/>
+        </items>
+        <items>
+            <label>Branding link URL</label>
+            <name>BrandingURL</name>
+            <value xsi:nil="true"/>
+        </items>
+        <items>
+            <label>Branding image URL (116 x 31 px maximum)</label>
+            <name>BrandingImageURL</name>
+            <value xsi:nil="true"/>
+        </items>
+        <label>Softphone Branding Settings</label>
+        <name>Branding</name>
+    </sections>
+    <sections>
+        <items>
+            <label>Maximum Number Length</label>
+            <name>internalNumberLength</name>
+            <value>6</value>
+        </items>
+        <label>Internal Call Definition</label>
+        <name>InternalCalls</name>
+    </sections>
+    <sections>
+        <items>
+            <label>Subject Template</label>
+            <name>callLogSubjectTemplate</name>
+            <value>Call {DATE} {TIME}</value>
+        </items>
+        <items>
+            <label>Comments Template</label>
+            <name>callLogCommentsTemplate</name>
+            <value>{ANI_NAME} {ANI_NUMBER}</value>
+        </items>
+        <items>
+            <label>Delay single record popup until call is answered (Y/N)</label>
+            <name>delaySingleMatchPop</name>
+            <value>Y</value>
+        </items>
+        <label>Call Log Settings</label>
+        <name>CallLogSettings</name>
+    </sections>
+    <version>4</version>
+</CallCenter>

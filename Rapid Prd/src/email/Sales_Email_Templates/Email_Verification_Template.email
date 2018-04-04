@@ -1,0 +1,6 @@
+<table height="400" width="550" cellpadding="5" border="0" cellspacing="5" >
+<tr height="400" valign="top" >
+<td style=" color:#000000; font-size:12pt; background-color:#FFFFFF; font-family:arial; bLabel:main; bEditID:r3st1;" tEditID="c1r1" locked="0" aEditID="c1r1" >
+<![CDATA[Hello {!Lead.FirstName}, <BR><BR>We're updating our "Stay in touch" list and just want to verify the following information with you. <BR><BR>Company Name: {!Lead.Company} <BR>Street Address: {!Lead.Street} <BR>City, State and Zip: {!Lead.City}, {!Lead.State} {!Lead.PostalCode} <BR>Phone: {!Lead.Phone} <BR><BR>If you could let us know if the above information has changed, we would greatly appreciate it!<BR><BR>Thank you, <BR><BR>RapidAdvance, LLC]]></td>
+</tr>
+</table>

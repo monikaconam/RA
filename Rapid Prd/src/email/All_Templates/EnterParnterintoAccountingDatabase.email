@@ -1,0 +1,7 @@
+Kirk,
+
+Please enter {!Account.Name} and  their commission structure which is as follows: {!Account.Commission_Basis__c},  {!Account.Commission_Schedule__c} into the accounting database.  We should have all the necessary information.
+
+Thank you,
+
+Business Development Team

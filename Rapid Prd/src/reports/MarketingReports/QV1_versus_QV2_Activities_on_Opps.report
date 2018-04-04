@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>LEAD_SOURCE</field>
+    </columns>
+    <columns>
+        <field>OPPORTUNITY_ID</field>
+    </columns>
+    <columns>
+        <field>ACTIVITY_ID</field>
+    </columns>
+    <columns>
+        <field>CALLTYPE</field>
+    </columns>
+    <columns>
+        <field>SUBJECT</field>
+    </columns>
+    <columns>
+        <field>OPPORTUNITY_NAME</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>LEAD_SOURCE</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Customer Journey Web to Lead,Customer Journey V2</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>QV1 versus QV2 Activities on Opps</name>
+    <params>
+        <name>closed</name>
+        <value>all</value>
+    </params>
+    <params>
+        <name>type</name>
+        <value>te</value>
+    </params>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>OpportunityActivity</reportType>
+    <roleHierarchyFilter>MarketingDepartment</roleHierarchyFilter>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>DUE_DATE</dateColumn>
+        <endDate>2015-12-31</endDate>
+        <interval>INTERVAL_CUSTOM</interval>
+        <startDate>2015-09-10</startDate>
+    </timeFrameFilter>
+</Report>

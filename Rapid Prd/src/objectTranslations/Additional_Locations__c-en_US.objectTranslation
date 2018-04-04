@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Additional Location</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Additional Locations</value>
+    </caseValues>
+    <fields>
+        <label><!-- Account --></label>
+        <name>Account__c</name>
+        <relationshipLabel><!-- Additional Locations --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- City --></label>
+        <name>City__c</name>
+    </fields>
+    <fields>
+        <label><!-- DBA Name --></label>
+        <name>DBA_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Fax --></label>
+        <name>Fax__c</name>
+    </fields>
+    <fields>
+        <label><!-- Import Id --></label>
+        <name>Import_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Import Source --></label>
+        <name>Import_Source__c</name>
+    </fields>
+    <fields>
+        <label><!-- Landlord Phone --></label>
+        <name>Landlord_Phone__c</name>
+    </fields>
+    <fields>
+        <label><!-- Landlord --></label>
+        <name>Landlord__c</name>
+    </fields>
+    <fields>
+        <label><!-- Phone --></label>
+        <name>Phone__c</name>
+    </fields>
+    <fields>
+        <label><!-- Postal Code --></label>
+        <name>Postal_Code__c</name>
+    </fields>
+    <fields>
+        <label><!-- State --></label>
+        <name>State__c</name>
+    </fields>
+    <fields>
+        <label><!-- Street --></label>
+        <name>Street__c</name>
+    </fields>
+    <fields>
+        <label><!-- Time Remaining on Lease --></label>
+        <name>Time_Remaining_on_Lease__c</name>
+        <picklistValues>
+            <masterLabel>1 Year</masterLabel>
+            <translation><!-- 1 Year --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>1-6 months</masterLabel>
+            <translation><!-- 1-6 months --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2 Years</masterLabel>
+            <translation><!-- 2 Years --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3 Years</masterLabel>
+            <translation><!-- 3 Years --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4 Years</masterLabel>
+            <translation><!-- 4 Years --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5 Years+</masterLabel>
+            <translation><!-- 5 Years+ --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>7-11 months</masterLabel>
+            <translation><!-- 7-11 months --></translation>
+        </picklistValues>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

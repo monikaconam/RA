@@ -1,0 +1,5 @@
+The Site Inspection Review for {!Site_Survey__c.Opportunity__c} has been completed.
+
+Inspection Review Decision: {!Site_Survey__c.Review_Status__c}
+
+Inspection Date: {!Site_Survey__c.Inspection_Date__c}

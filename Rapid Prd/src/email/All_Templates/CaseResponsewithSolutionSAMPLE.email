@@ -1,0 +1,12 @@
+{!Case.Requested_By__c},
+
+{!Case.Solution_Description}
+
+
+Thank you,
+
+{!User.Name}
+
+Your comment:
+
+{!Case.Description}

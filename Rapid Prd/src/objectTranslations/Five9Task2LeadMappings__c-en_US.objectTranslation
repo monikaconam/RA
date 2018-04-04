@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Five9 Call Activity to Lead Mappings</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Five9 Call Activity to Lead Mappings</value>
+    </caseValues>
+    <fields>
+        <label><!-- Five9Disposition --></label>
+        <name>Five9Disposition__c</name>
+    </fields>
+    <fields>
+        <label><!-- LeadStatus --></label>
+        <name>LeadStatus__c</name>
+    </fields>
+    <fields>
+        <label><!-- Not Interested Reason --></label>
+        <name>NotInterestedReason__c</name>
+    </fields>
+    <fields>
+        <label><!-- Unqualified Reason --></label>
+        <name>UnqualifiedReason__c</name>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>EmailLetterhead</letterhead>
+    <name>PartnerForce Deactivation</name>
+    <style>freeForm</style>
+    <subject>RapidAdvance PartnerForce</subject>
+    <textOnly>Dear Partner:
+ 
+We would like to update you on a change we are implementing regarding our reporting web portal, Partnerforce.  Effective immediately, Partnerforce will be available to those Partners who consistently submit 5 or more merchant cash advance deals per month.  (Note: If you are partner who submits less than 5 deals per month and want the reporting, the annual cost is $400.)  All Partners without reporting are encouraged to utilize our Customer Service team for status updates and other real time information inquiries by calling our direct toll free number at (866) 224-1162, or emailing customerservice@rapidadvance.com.  Over the past few months, we have doubled the size of our Customer Service team in an effort to answer all inquiries in a timely manner.  Here at RapidAdvance, customer service is key to maintaining our successful relationships with each and every one of you.    
+ 
+As always, for any escalated issues or training needs, feel free to contact or e-mail your Partner Relationship Manager:
+ 
+Rachel Bauchman at (240) 482-4698 rbauchman@rapidadvance.com;
+Monica Cuesta at (240) 514-2008 mcuesta@rapidadvance.com; or
+Ashley Thomas at (240) 514-3176 athomas@rapidadvance.com
+ 
+Please let us know if you have any questions.
+ 
+Ashley Thomas
+Partner Relationship Manager
+7316 Wisconsin Ave., Suite 450
+Bethesda, MD 20814
+Ph: (240) 514-3176
+Fax: (866) 406-2401
+athomas@rapidadvance.com
+www.rapidadvance.com</textOnly>
+    <type>html</type>
+</EmailTemplate>

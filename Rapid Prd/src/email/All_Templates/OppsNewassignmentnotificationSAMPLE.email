@@ -1,0 +1,17 @@
+The following Opportunity has been assigned to you: 
+
+Name: {!Opportunity.Name} 
+Campaign: {!Opportunity.Campaign}
+
+Stage: {!Opportunity.StageName}
+
+Amount: {!Opportunity.Amount} 
+Product: {!Opportunity.Product__c}
+
+_____________________Links for Access_____________________
+
+SalesForce: {!Opportunity.Link}
+
+CALC Link: {!Opportunity.CALC_Link_plaintext__c} 
+
+Notes Link: {!Opportunity.Notes_Link_plaintext__c}

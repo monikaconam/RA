@@ -1,0 +1,32 @@
+Opportunity Name: {!Opportunity.Name}
+Opportunity ID: {!Opportunity.Opportunity_Number__c}
+Advance ID: {!Opportunity.Advance_ID__c} 
+
+Date Funded: {!Opportunity.Funded_by_WC__c}
+
+Product: {!Opportunity.Product__c}
+Split: {!Opportunity.Percent_Payback__c}%
+Advance Amount: {!Opportunity.Amount}
+Pay Back Amount: {!Opportunity.Pay_Back_Amount__c} 
+
+Current Renewal Eligibility: {!Opportunity.Renewal_Eligibility__c}
+
+Progress Completed: {!Opportunity.Percent_Paid_Off__c}%
+Amount Sold Remaining: {!Opportunity.Remaining_Balance__c}
+Current ROI: {!Opportunity.Current_ROI__c}
+Specified ROI: {!Opportunity.00N70000002XC5R}
+
+
+Full Name: {!Contact.FirstName} {!Contact.LastName}
+Ownership: {!Contact.OwnershipPercentage__c}
+Address: 
+{!Account.BillingStreet}
+{!Account.BillingCity}, {!Account.BillingState}
+{!Account.BillingPostalCode}
+Phone: {!Account.Phone}
+Fax: {!Account.Fax}
+Email: {!Account.Email_Address__c}
+
+
+Renewal Notes:
+{!Opportunity.RENEWAL_NOTES__c}

@@ -1,0 +1,9 @@
+Dear Sales and Sales Assistant,
+
+The Opportunity called {!Opportunity.Name} was declined on {!Opportunity.Decision_Date__c}.
+
+Please visit {!Opportunity.Link} for details.
+
+Thank you,
+
+Underwriting Department

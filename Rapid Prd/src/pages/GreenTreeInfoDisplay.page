@@ -1,0 +1,64 @@
+<apex:page StandardController="Opportunity" extensions="OppGreenTreeViewController" showHeader="false" showChat="false"> 
+    <apex:form >
+        
+           <apex:pageBlock rendered="{!if((((gtNew!=null)&&(NOT(isEdit)))&& show),true,false)}" >
+           <apex:pageMessages />
+                <apex:pageBlockbuttons location="top">
+                    <apex:commandbutton Value="Edit" action="{!edit}" immediate="true"/>
+                </apex:pageBlockbuttons>
+
+                <apex:pageBlockSection columns="2" title="General Information" >
+                  
+                    <apex:outputfield value="{!gtNew.No_of_Payments__c}"></apex:outputfield>
+                    <apex:outputfield value="{!gtNew.Daily_Payment_Amount__c}"></apex:outputfield>
+                    <apex:outputfield value="{!gtNew.Estimated_Balance__c}"></apex:outputfield>
+                    <apex:outputfield value="{!gtNew.Estimated_Days_to_Repay__c}"></apex:outputfield>
+                    <apex:outputfield value="{!gtNew.Average_CC_Sales__c}"></apex:outputfield>
+                    <apex:outputfield value="{!gtNew.Average_Gross_Sales__c}"></apex:outputfield>
+                    <apex:outputfield value="{!gtNew.Product__c}"></apex:outputfield>
+                    <apex:outputfield value="{!gtNew.Advance_Payoff_Date__c}"></apex:outputfield>
+                    <apex:outputfield value="{!gtNew.Amount_Sold__c}"></apex:outputfield>
+                    <apex:outputfield value="{!gtNew.Amount__c}"></apex:outputfield>                    
+                    
+
+                </apex:pageBlockSection>
+            </apex:pageblock>
+            <apex:pageBlock rendered="{!if(((gtNew!=null)&&(NOT(isEdit))),true,false)}" >
+                <apex:pageBlockSection columns="2" title="Track Stage Changes" >
+                    <apex:outputfield value="{!gtNew.Green_Tree_Converted_Date__c}"></apex:outputfield>
+                    <apex:outputfield value="{!gtNew.GTF_Approved_Date__c}"></apex:outputfield>
+                    <apex:outputfield value="{!gtNew.GTF_Declined_Date__c}"></apex:outputfield>
+                    <apex:outputfield value="{!gtNew.GTF_Defaulted_Date__c}"></apex:outputfield>
+                    <apex:outputfield value="{!gtNew.GTF_Follow_Up_Date__c}"></apex:outputfield>
+                    <apex:outputfield value="{!gtNew.GTF_Funded_Date__c}"></apex:outputfield>
+                    <apex:outputfield value="{!gtNew.GTF_Not_Intrested_Date__c}"></apex:outputfield>
+                    <apex:outputfield value="{!gtNew.GTF_Submitted_Date__c}"></apex:outputfield>
+                    <apex:outputfield value="{!gtNew.GTF_Contract_Stips_Date__c}"></apex:outputfield>
+    
+                </apex:pageBlockSection>
+            
+            </apex:pageblock>
+        <!-- Edit Mode -->
+        <apex:pageBlock id="editPBB" rendered="{!isEdit}">
+            <apex:pageBlockButtons >
+                <apex:commandButton value="Save" action="{!onSave}"/>
+                <apex:commandButton value="Cancel" action="{!onCancel}"/>
+            </apex:pageBlockButtons>
+   
+            <apex:pageBlockSection columns="2">
+                <apex:inputfield value="{!gtNew.No_of_Payments__c}"></apex:inputfield>
+                <apex:inputfield value="{!gtNew.Daily_Payment_Amount__c}"></apex:inputfield>
+                <apex:inputfield value="{!gtNew.Estimated_Balance__c}"></apex:inputfield>
+                <apex:inputfield value="{!gtNew.Estimated_Days_to_Repay__c}"></apex:inputfield>
+                <apex:inputfield value="{!gtNew.Average_CC_Sales__c}"></apex:inputfield>
+                <apex:inputfield value="{!gtNew.Average_Gross_Sales__c}"></apex:inputfield>
+                <apex:inputfield value="{!gtNew.Product__c}"></apex:inputfield>
+                <apex:inputfield value="{!gtNew.Advance_Payoff_Date__c}"></apex:inputfield>
+                <apex:inputfield value="{!gtNew.Amount_Sold__c}"></apex:inputfield>
+                <apex:inputfield value="{!gtNew.Amount__c}"></apex:inputfield>
+            </apex:pageBlockSection>
+            
+        </apex:pageBlock>
+        <!--Edit Mode --> 
+    </apex:form>
+</apex:page>

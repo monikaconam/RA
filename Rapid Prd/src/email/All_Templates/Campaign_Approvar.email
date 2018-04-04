@@ -1,0 +1,1 @@
+{!$User.FirstName} has requested your approval for the following item: {!Campaign.Link}

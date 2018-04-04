@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>EmailLetterhead</letterhead>
+    <name>Partner Opp Assignment</name>
+    <style>freeForm</style>
+    <subject>Your deal has been assigned: {!Opportunity.Account}</subject>
+    <textOnly>The applicant file for your client {!Opportunity.Account} has been assigned to {!Opportunity.OwnerFullName}, one of our Account Executives.
+
+{!Opportunity.OwnerFirstName} will reach out to you shortly to discuss the offers. Please feel free to contact for all future updates and questions.
+
+
+{!Opportunity.OwnerFullName} 
+Phone: {!Opportunity.OwnerPhone}
+Email: {!Opportunity.OwnerEmail}</textOnly>
+    <type>html</type>
+</EmailTemplate>

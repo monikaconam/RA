@@ -1,0 +1,10 @@
+The renewal eligibility of your opportinity {!Opportunity.Name} has changed:
+
+Opportunity Name: {!Opportunity.Name}
+Opportunity ID: {!Opportunity.Opportunity_Number__c}
+Date Funded: {!Opportunity.Funded_by_WC__c}
+
+Current Renewal Eligibility: {!Opportunity.Renewal_Eligibility__c}
+
+Progress Completed: {!Opportunity.Percent_Paid_Off__c}%
+Amount Sold Remaining: {!Opportunity.Remaining_Balance__c}

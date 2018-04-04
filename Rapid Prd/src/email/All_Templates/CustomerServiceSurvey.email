@@ -1,0 +1,466 @@
+<!doctype html public "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="/dashboard/clicktools.css">
+<link rel="stylesheet" type="text/css" href="/dashboard/org/.sforce/skin/skin.css">
+<script src="/dashboard/survey.js"></script>
+<style type="text/css">
+.tdqtext {color:black; background:white; text-align:left; font-size:8pt; font-family:arial;}
+.tdquestion {color:black; background:white; text-align:left; font-size:8pt; font-family:arial;}
+.tdquestion_alt {color:black; background:#e1e1e1; text-align:left; font-size:8pt; font-family:arial;}
+.tdtext {color:black; background:white; text-align:left; font-size:8pt; font-family:arial;}
+.tdnum {color:black; background:white; text-align:left; font-size:8pt; font-family:arial;}
+.tdhelp {color:gray; background:white; text-align:left; font-size:8pt; font-family:arial; font-style:italic;}
+.input {border:1px solid #a5acb2; background:white; font-size:8pt; font-family:arial}
+.survey_button {color:black; background:white; font-size:8pt; font-family:arial;}
+.survey_tab {color:black; border-style:solid; border-width:1px; border-color:black; background:white; font-size:8pt; font-family:arial;}
+.surveylink {color:black; text-decoration:none; font-size:8pt; font-family:arial;}
+.surveylink:visited {color:black; text-decoration:none; font-size:8pt; font-family:arial;}
+.surveylink:hover {color:black; text-decoration:underline; font-size:8pt; font-family:arial;}
+</style>
+<title>Preview - Customer Satisfaction Survey</title>
+</head>
+<body class="td1">
+<center>
+<table align="center" cellspacing="0" cellpadding="0" valign="center" border="0" width="100%"> 
+  <tr>
+    <td class="td1" align="center">
+
+    <table class="td1" cellspacing="0" cellpadding="8" width="98%">
+      <tr>
+        <td class="td1">
+          <table cellspacing="0" cellpadding="0" border="0" width="100%">
+            <tr>
+              <td class="td1" style="font-size:12"><u><b>Customer Satisfaction Survey</u></b></td>
+              <td class="td1" style="font-size:12" align="right"><a class="staticlink" href="javascript:print();">Print</td>
+            </tr>
+
+          </table>
+        </td>  
+      </tr>
+      <tr>    
+        <td valign="top">      
+          <table border="0" cellspacing="0" cellpadding="2" width="100%">    
+<tr>
+  <td>
+  <table border="0" cellspacing="0" cellpadding="2" width="100%">
+    <tr>
+      <td class="tdtext" width="100%">HELP US IMPROVE!!<br />
+
+<br />
+We'd like to take this opportunity to thank you for your business.&nbsp; Your satisfaction with all areas of our business is very important to us and we value your opinion and suggestions.&nbsp;&nbsp;&nbsp; Please take a few minutes to help us improve our service to you and future clients by clicking on the link below and answering a few simple questions.&nbsp;&nbsp; <br />
+<br /></td>
+    </tr>
+    <tr>
+      <td class="tdtext" align="left">&nbsp;</td>
+    </tr>
+
+  </table>
+  </td>
+</tr>
+</table>
+</td>
+      </tr>  
+      <tr>    
+        <td valign="top">      
+          <table border="0" cellspacing="0" cellpadding="2" width="100%">    
+<tr>
+  <td class="tdnum" width="1" valign="top" align="right">1.</td>
+  <td class="tdqtext" colspan="2" width="100%" valign="top"><a name="b611c52000e5dd2"></a>How would you rate your experience with us in the following areas:</td>
+
+</tr>
+<input type="hidden" name="b611c52000e5dd2_alpha_answer0" value="0">
+<tr>
+<td colspan="3">
+  <table border="0" cellspacing="0" cellpadding="1">
+  <tr>
+  <td width="1">&nbsp;</td>
+  <td colspan="2">
+  <table border="0" cellpadding="2" cellspacing="0">
+    <tr>
+      <td class="tdquestion"></td>
+
+      <td class="tdquestion">&nbsp;</td>
+        <td class="tdquestion" align="center" style="text-align:center">Excellent</td>
+      <td class="tdquestion">&nbsp;</td>
+        <td class="tdquestion" align="center" style="text-align:center">Good</td>
+      <td class="tdquestion">&nbsp;</td>
+        <td class="tdquestion" align="center" style="text-align:center">Average</td>
+      <td class="tdquestion">&nbsp;</td>
+
+        <td class="tdquestion" align="center" style="text-align:center">Fair</td>
+      <td class="tdquestion">&nbsp;</td>
+        <td class="tdquestion" align="center" style="text-align:center">Poor</td>
+      </tr>
+    <tr class="tdquestion_alt">
+      <td>Inital Contact</td>
+      <script type="text/javascript">var uncheck_numeric_answer1_1=false;</script>
+
+        <td></td><td align="center"><label class="hidden" for="b611c52000e5dd2_1_1">Excellent</label><input type="radio" name="b611c52000e5dd2_numeric_answer1" id="b611c52000e5dd2_1_1"  value="1"  onmousedown="javascript:if(this.checked)uncheck_numeric_answer1_1=true;" onclick="javascript:if(uncheck_numeric_answer1_1)this.checked=false; else clearcol(this, 5); uncheck_numeric_answer1_1=false;"></td>
+        <script type="text/javascript">var uncheck_numeric_answer1_2=false;</script>
+        <td></td><td align="center"><label class="hidden" for="b611c52000e5dd2_1_2">Good</label><input type="radio" name="b611c52000e5dd2_numeric_answer1" id="b611c52000e5dd2_1_2"  value="2"  onmousedown="javascript:if(this.checked)uncheck_numeric_answer1_2=true;" onclick="javascript:if(uncheck_numeric_answer1_2)this.checked=false; else clearcol(this, 5); uncheck_numeric_answer1_2=false;"></td>
+        <script type="text/javascript">var uncheck_numeric_answer1_3=false;</script>
+        <td></td><td align="center"><label class="hidden" for="b611c52000e5dd2_1_3">Average</label><input type="radio" name="b611c52000e5dd2_numeric_answer1" id="b611c52000e5dd2_1_3"  value="3"  onmousedown="javascript:if(this.checked)uncheck_numeric_answer1_3=true;" onclick="javascript:if(uncheck_numeric_answer1_3)this.checked=false; else clearcol(this, 5); uncheck_numeric_answer1_3=false;"></td>
+        <script type="text/javascript">var uncheck_numeric_answer1_4=false;</script>
+
+        <td></td><td align="center"><label class="hidden" for="b611c52000e5dd2_1_4">Fair</label><input type="radio" name="b611c52000e5dd2_numeric_answer1" id="b611c52000e5dd2_1_4"  value="4"  onmousedown="javascript:if(this.checked)uncheck_numeric_answer1_4=true;" onclick="javascript:if(uncheck_numeric_answer1_4)this.checked=false; else clearcol(this, 5); uncheck_numeric_answer1_4=false;"></td>
+        <script type="text/javascript">var uncheck_numeric_answer1_5=false;</script>
+        <td></td><td align="center"><label class="hidden" for="b611c52000e5dd2_1_5">Poor</label><input type="radio" name="b611c52000e5dd2_numeric_answer1" id="b611c52000e5dd2_1_5"  value="5"  onmousedown="javascript:if(this.checked)uncheck_numeric_answer1_5=true;" onclick="javascript:if(uncheck_numeric_answer1_5)this.checked=false; else clearcol(this, 5); uncheck_numeric_answer1_5=false;"></td>
+        </tr>
+    <tr class="tdquestion">
+      <td>Product Presentation</td>
+      <script type="text/javascript">var uncheck_numeric_answer2_1=false;</script>
+
+        <td></td><td align="center"><label class="hidden" for="b611c52000e5dd2_2_1">Excellent</label><input type="radio" name="b611c52000e5dd2_numeric_answer2" id="b611c52000e5dd2_2_1"  value="1"  onmousedown="javascript:if(this.checked)uncheck_numeric_answer2_1=true;" onclick="javascript:if(uncheck_numeric_answer2_1)this.checked=false; else clearcol(this, 5); uncheck_numeric_answer2_1=false;"></td>
+        <script type="text/javascript">var uncheck_numeric_answer2_2=false;</script>
+        <td></td><td align="center"><label class="hidden" for="b611c52000e5dd2_2_2">Good</label><input type="radio" name="b611c52000e5dd2_numeric_answer2" id="b611c52000e5dd2_2_2"  value="2"  onmousedown="javascript:if(this.checked)uncheck_numeric_answer2_2=true;" onclick="javascript:if(uncheck_numeric_answer2_2)this.checked=false; else clearcol(this, 5); uncheck_numeric_answer2_2=false;"></td>
+        <script type="text/javascript">var uncheck_numeric_answer2_3=false;</script>
+        <td></td><td align="center"><label class="hidden" for="b611c52000e5dd2_2_3">Average</label><input type="radio" name="b611c52000e5dd2_numeric_answer2" id="b611c52000e5dd2_2_3"  value="3"  onmousedown="javascript:if(this.checked)uncheck_numeric_answer2_3=true;" onclick="javascript:if(uncheck_numeric_answer2_3)this.checked=false; else clearcol(this, 5); uncheck_numeric_answer2_3=false;"></td>
+        <script type="text/javascript">var uncheck_numeric_answer2_4=false;</script>
+
+        <td></td><td align="center"><label class="hidden" for="b611c52000e5dd2_2_4">Fair</label><input type="radio" name="b611c52000e5dd2_numeric_answer2" id="b611c52000e5dd2_2_4"  value="4"  onmousedown="javascript:if(this.checked)uncheck_numeric_answer2_4=true;" onclick="javascript:if(uncheck_numeric_answer2_4)this.checked=false; else clearcol(this, 5); uncheck_numeric_answer2_4=false;"></td>
+        <script type="text/javascript">var uncheck_numeric_answer2_5=false;</script>
+        <td></td><td align="center"><label class="hidden" for="b611c52000e5dd2_2_5">Poor</label><input type="radio" name="b611c52000e5dd2_numeric_answer2" id="b611c52000e5dd2_2_5"  value="5"  onmousedown="javascript:if(this.checked)uncheck_numeric_answer2_5=true;" onclick="javascript:if(uncheck_numeric_answer2_5)this.checked=false; else clearcol(this, 5); uncheck_numeric_answer2_5=false;"></td>
+        </tr>
+    <tr class="tdquestion_alt">
+      <td>Set Up</td>
+      <script type="text/javascript">var uncheck_numeric_answer3_1=false;</script>
+
+        <td></td><td align="center"><label class="hidden" for="b611c52000e5dd2_3_1">Excellent</label><input type="radio" name="b611c52000e5dd2_numeric_answer3" id="b611c52000e5dd2_3_1"  value="1"  onmousedown="javascript:if(this.checked)uncheck_numeric_answer3_1=true;" onclick="javascript:if(uncheck_numeric_answer3_1)this.checked=false; else clearcol(this, 5); uncheck_numeric_answer3_1=false;"></td>
+        <script type="text/javascript">var uncheck_numeric_answer3_2=false;</script>
+        <td></td><td align="center"><label class="hidden" for="b611c52000e5dd2_3_2">Good</label><input type="radio" name="b611c52000e5dd2_numeric_answer3" id="b611c52000e5dd2_3_2"  value="2"  onmousedown="javascript:if(this.checked)uncheck_numeric_answer3_2=true;" onclick="javascript:if(uncheck_numeric_answer3_2)this.checked=false; else clearcol(this, 5); uncheck_numeric_answer3_2=false;"></td>
+        <script type="text/javascript">var uncheck_numeric_answer3_3=false;</script>
+        <td></td><td align="center"><label class="hidden" for="b611c52000e5dd2_3_3">Average</label><input type="radio" name="b611c52000e5dd2_numeric_answer3" id="b611c52000e5dd2_3_3"  value="3"  onmousedown="javascript:if(this.checked)uncheck_numeric_answer3_3=true;" onclick="javascript:if(uncheck_numeric_answer3_3)this.checked=false; else clearcol(this, 5); uncheck_numeric_answer3_3=false;"></td>
+        <script type="text/javascript">var uncheck_numeric_answer3_4=false;</script>
+
+        <td></td><td align="center"><label class="hidden" for="b611c52000e5dd2_3_4">Fair</label><input type="radio" name="b611c52000e5dd2_numeric_answer3" id="b611c52000e5dd2_3_4"  value="4"  onmousedown="javascript:if(this.checked)uncheck_numeric_answer3_4=true;" onclick="javascript:if(uncheck_numeric_answer3_4)this.checked=false; else clearcol(this, 5); uncheck_numeric_answer3_4=false;"></td>
+        <script type="text/javascript">var uncheck_numeric_answer3_5=false;</script>
+        <td></td><td align="center"><label class="hidden" for="b611c52000e5dd2_3_5">Poor</label><input type="radio" name="b611c52000e5dd2_numeric_answer3" id="b611c52000e5dd2_3_5"  value="5"  onmousedown="javascript:if(this.checked)uncheck_numeric_answer3_5=true;" onclick="javascript:if(uncheck_numeric_answer3_5)this.checked=false; else clearcol(this, 5); uncheck_numeric_answer3_5=false;"></td>
+        </tr>
+    <tr class="tdquestion">
+      <td>Customer Service</td>
+      <script type="text/javascript">var uncheck_numeric_answer4_1=false;</script>
+
+        <td></td><td align="center"><label class="hidden" for="b611c52000e5dd2_4_1">Excellent</label><input type="radio" name="b611c52000e5dd2_numeric_answer4" id="b611c52000e5dd2_4_1"  value="1"  onmousedown="javascript:if(this.checked)uncheck_numeric_answer4_1=true;" onclick="javascript:if(uncheck_numeric_answer4_1)this.checked=false; else clearcol(this, 5); uncheck_numeric_answer4_1=false;"></td>
+        <script type="text/javascript">var uncheck_numeric_answer4_2=false;</script>
+        <td></td><td align="center"><label class="hidden" for="b611c52000e5dd2_4_2">Good</label><input type="radio" name="b611c52000e5dd2_numeric_answer4" id="b611c52000e5dd2_4_2"  value="2"  onmousedown="javascript:if(this.checked)uncheck_numeric_answer4_2=true;" onclick="javascript:if(uncheck_numeric_answer4_2)this.checked=false; else clearcol(this, 5); uncheck_numeric_answer4_2=false;"></td>
+        <script type="text/javascript">var uncheck_numeric_answer4_3=false;</script>
+        <td></td><td align="center"><label class="hidden" for="b611c52000e5dd2_4_3">Average</label><input type="radio" name="b611c52000e5dd2_numeric_answer4" id="b611c52000e5dd2_4_3"  value="3"  onmousedown="javascript:if(this.checked)uncheck_numeric_answer4_3=true;" onclick="javascript:if(uncheck_numeric_answer4_3)this.checked=false; else clearcol(this, 5); uncheck_numeric_answer4_3=false;"></td>
+        <script type="text/javascript">var uncheck_numeric_answer4_4=false;</script>
+
+        <td></td><td align="center"><label class="hidden" for="b611c52000e5dd2_4_4">Fair</label><input type="radio" name="b611c52000e5dd2_numeric_answer4" id="b611c52000e5dd2_4_4"  value="4"  onmousedown="javascript:if(this.checked)uncheck_numeric_answer4_4=true;" onclick="javascript:if(uncheck_numeric_answer4_4)this.checked=false; else clearcol(this, 5); uncheck_numeric_answer4_4=false;"></td>
+        <script type="text/javascript">var uncheck_numeric_answer4_5=false;</script>
+        <td></td><td align="center"><label class="hidden" for="b611c52000e5dd2_4_5">Poor</label><input type="radio" name="b611c52000e5dd2_numeric_answer4" id="b611c52000e5dd2_4_5"  value="5"  onmousedown="javascript:if(this.checked)uncheck_numeric_answer4_5=true;" onclick="javascript:if(uncheck_numeric_answer4_5)this.checked=false; else clearcol(this, 5); uncheck_numeric_answer4_5=false;"></td>
+        </tr>
+    <tr class="tdquestion_alt">
+      <td>Overall</td>
+      <script type="text/javascript">var uncheck_numeric_answer5_1=false;</script>
+
+        <td></td><td align="center"><label class="hidden" for="b611c52000e5dd2_5_1">Excellent</label><input type="radio" name="b611c52000e5dd2_numeric_answer5" id="b611c52000e5dd2_5_1"  value="1"  onmousedown="javascript:if(this.checked)uncheck_numeric_answer5_1=true;" onclick="javascript:if(uncheck_numeric_answer5_1)this.checked=false; else clearcol(this, 5); uncheck_numeric_answer5_1=false;"></td>
+        <script type="text/javascript">var uncheck_numeric_answer5_2=false;</script>
+        <td></td><td align="center"><label class="hidden" for="b611c52000e5dd2_5_2">Good</label><input type="radio" name="b611c52000e5dd2_numeric_answer5" id="b611c52000e5dd2_5_2"  value="2"  onmousedown="javascript:if(this.checked)uncheck_numeric_answer5_2=true;" onclick="javascript:if(uncheck_numeric_answer5_2)this.checked=false; else clearcol(this, 5); uncheck_numeric_answer5_2=false;"></td>
+        <script type="text/javascript">var uncheck_numeric_answer5_3=false;</script>
+        <td></td><td align="center"><label class="hidden" for="b611c52000e5dd2_5_3">Average</label><input type="radio" name="b611c52000e5dd2_numeric_answer5" id="b611c52000e5dd2_5_3"  value="3"  onmousedown="javascript:if(this.checked)uncheck_numeric_answer5_3=true;" onclick="javascript:if(uncheck_numeric_answer5_3)this.checked=false; else clearcol(this, 5); uncheck_numeric_answer5_3=false;"></td>
+        <script type="text/javascript">var uncheck_numeric_answer5_4=false;</script>
+
+        <td></td><td align="center"><label class="hidden" for="b611c52000e5dd2_5_4">Fair</label><input type="radio" name="b611c52000e5dd2_numeric_answer5" id="b611c52000e5dd2_5_4"  value="4"  onmousedown="javascript:if(this.checked)uncheck_numeric_answer5_4=true;" onclick="javascript:if(uncheck_numeric_answer5_4)this.checked=false; else clearcol(this, 5); uncheck_numeric_answer5_4=false;"></td>
+        <script type="text/javascript">var uncheck_numeric_answer5_5=false;</script>
+        <td></td><td align="center"><label class="hidden" for="b611c52000e5dd2_5_5">Poor</label><input type="radio" name="b611c52000e5dd2_numeric_answer5" id="b611c52000e5dd2_5_5"  value="5"  onmousedown="javascript:if(this.checked)uncheck_numeric_answer5_5=true;" onclick="javascript:if(uncheck_numeric_answer5_5)this.checked=false; else clearcol(this, 5); uncheck_numeric_answer5_5=false;"></td>
+        </tr>
+    </table>
+  </td>
+</tr>
+</table>
+
+</td>
+</tr>
+<tr>
+  <td class="tdhelp" colspan="3"></td>
+</tr>
+<tr>
+  <td class="tdquestion" colspan="3">&nbsp;</td>
+</tr>
+</table>
+</td>
+      </tr>  
+      <tr>    
+        <td valign="top">      
+          <table border="0" cellspacing="0" cellpadding="2" width="100%">    
+
+<tr>
+  <td class="tdnum" width="1" valign="top" align="right">2.</td>
+  <td class="tdqtext" colspan="2" width="100%" valign="top"><a name="b611c52027ec683"></a>Who was your Salesperson?</td>
+</tr>
+<tr>
+<td colspan="3">
+  <table border="0" cellspacing="0" cellpadding="1">
+  <tr>
+    <td class="tdquestion">&nbsp;</td>
+    <td class="tdquestion" colspan="2"><label class="hidden" for="b611c52027ec683_alpha_answer1">Who was your Salesperson?</label><input class="input" size="60" maxlength="80" name="b611c52027ec683_alpha_answer1" id="b611c52027ec683_alpha_answer1" value="" type="text" ></td>
+
+  </tr>
+  </table>
+</td>
+</tr>
+<tr>
+  <td class="tdhelp" colspan="3"></td>
+</tr>
+<tr>
+  <td class="tdquestion" colspan="3">&nbsp;</td>
+</tr>
+</table>
+</td>
+      </tr>  
+      <tr>    
+        <td valign="top">      
+          <table border="0" cellspacing="0" cellpadding="2" width="100%">    
+
+<tr>
+  <td class="tdnum" width="1" valign="top" align="right">3.</td>
+  <td class="tdqtext" colspan="2" width="100%" valign="top"><a name="b411c7be02eb01a"></a>How did you hear about RapidAdvance?</td>
+</tr>
+<tr>
+  <td colspan="3">
+  <table border="0" cellspacing="0" cellpadding="1">
+    <tr>
+    <td class="tdquestion" width="1">&nbsp;</td>
+
+        <script type="text/javascript">var uncheck_b411c7be02eb01a_0=false;</script>
+        <input type="hidden" name="b411c7be02eb01a_alpha_answer0" value="">
+        <td class="tdquestion" width="1"><label class="hidden" for="b411c7be02eb01a_0">Credit Card Processor</label><input type="radio" name="b411c7be02eb01a_numeric_answer1" id="b411c7be02eb01a_0"  value="4" onmousedown="javascript:if(this.checked)uncheck_b411c7be02eb01a_0=true;" onclick="javascript:if(uncheck_b411c7be02eb01a_0)this.checked=false; uncheck_b411c7be02eb01a_0=false;"></td>
+        <td class="tdquestion">Credit Card Processor</td>
+          <td class="tdquestion" width="1">&nbsp;</td>
+        <script type="text/javascript">var uncheck_b411c7be02eb01a_1=false;</script>
+        <input type="hidden" name="b411c7be02eb01a_alpha_answer0" value="">
+
+        <td class="tdquestion" width="1"><label class="hidden" for="b411c7be02eb01a_1">Referral</label><input type="radio" name="b411c7be02eb01a_numeric_answer1" id="b411c7be02eb01a_1"  value="6" onmousedown="javascript:if(this.checked)uncheck_b411c7be02eb01a_1=true;" onclick="javascript:if(uncheck_b411c7be02eb01a_1)this.checked=false; uncheck_b411c7be02eb01a_1=false;"></td>
+        <td class="tdquestion">Referral</td>
+          <td class="tdquestion" width="1">&nbsp;</td>
+        <script type="text/javascript">var uncheck_b411c7be02eb01a_2=false;</script>
+        <input type="hidden" name="b411c7be02eb01a_alpha_answer0" value="">
+        <td class="tdquestion" width="1"><label class="hidden" for="b411c7be02eb01a_2">Internet Search</label><input type="radio" name="b411c7be02eb01a_numeric_answer1" id="b411c7be02eb01a_2"  value="1" onmousedown="javascript:if(this.checked)uncheck_b411c7be02eb01a_2=true;" onclick="javascript:if(uncheck_b411c7be02eb01a_2)this.checked=false; uncheck_b411c7be02eb01a_2=false;"></td>
+        <td class="tdquestion">Internet Search</td>
+
+          </tr>
+    <tr>
+    <td class="tdquestion" width="1">&nbsp;</td>
+        <script type="text/javascript">var uncheck_b411c7be02eb01a_3=false;</script>
+        <input type="hidden" name="b411c7be02eb01a_alpha_answer0" value="">
+        <td class="tdquestion" width="1"><label class="hidden" for="b411c7be02eb01a_3">I'm a previous customer</label><input type="radio" name="b411c7be02eb01a_numeric_answer1" id="b411c7be02eb01a_3"  value="8" onmousedown="javascript:if(this.checked)uncheck_b411c7be02eb01a_3=true;" onclick="javascript:if(uncheck_b411c7be02eb01a_3)this.checked=false; uncheck_b411c7be02eb01a_3=false;"></td>
+        <td class="tdquestion">I'm a previous customer</td>
+
+          <td class="tdquestion" width="1">&nbsp;</td>
+        <script type="text/javascript">var uncheck_b411c7be02eb01a_4=false;</script>
+        <input type="hidden" name="b411c7be02eb01a_alpha_answer0" value="">
+        <td class="tdquestion" width="1"><label class="hidden" for="b411c7be02eb01a_4">Post Card</label><input type="radio" name="b411c7be02eb01a_numeric_answer1" id="b411c7be02eb01a_4"  value="2" onmousedown="javascript:if(this.checked)uncheck_b411c7be02eb01a_4=true;" onclick="javascript:if(uncheck_b411c7be02eb01a_4)this.checked=false; uncheck_b411c7be02eb01a_4=false;"></td>
+        <td class="tdquestion">Post Card</td>
+          <td class="tdquestion" width="1">&nbsp;</td>
+        <script type="text/javascript">var uncheck_b411c7be02eb01a_5=false;</script>
+
+        <input type="hidden" name="b411c7be02eb01a_alpha_answer0" value="">
+        <td class="tdquestion" width="1"><label class="hidden" for="b411c7be02eb01a_5">Sales Call</label><input type="radio" name="b411c7be02eb01a_numeric_answer1" id="b411c7be02eb01a_5"  value="5" onmousedown="javascript:if(this.checked)uncheck_b411c7be02eb01a_5=true;" onclick="javascript:if(uncheck_b411c7be02eb01a_5)this.checked=false; uncheck_b411c7be02eb01a_5=false;"></td>
+        <td class="tdquestion">Sales Call</td>
+          </tr>
+    <tr>
+    <td class="tdquestion" width="1">&nbsp;</td>
+        <script type="text/javascript">var uncheck_b411c7be02eb01a_6=false;</script>
+
+        <input type="hidden" name="b411c7be02eb01a_alpha_answer0" value="">
+        <td class="tdquestion" width="1"><label class="hidden" for="b411c7be02eb01a_6">Yellow Pages</label><input type="radio" name="b411c7be02eb01a_numeric_answer1" id="b411c7be02eb01a_6"  value="7" onmousedown="javascript:if(this.checked)uncheck_b411c7be02eb01a_6=true;" onclick="javascript:if(uncheck_b411c7be02eb01a_6)this.checked=false; uncheck_b411c7be02eb01a_6=false;"></td>
+        <td class="tdquestion">Yellow Pages</td>
+          <td class="tdquestion" width="1">&nbsp;</td>
+        <script type="text/javascript">var uncheck_b411c7be02eb01a_7=false;</script>
+        <input type="hidden" name="b411c7be02eb01a_alpha_answer0" value="">
+        <td class="tdquestion" width="1"><label class="hidden" for="b411c7be02eb01a_7">Email</label><input type="radio" name="b411c7be02eb01a_numeric_answer1" id="b411c7be02eb01a_7"  value="3" onmousedown="javascript:if(this.checked)uncheck_b411c7be02eb01a_7=true;" onclick="javascript:if(uncheck_b411c7be02eb01a_7)this.checked=false; uncheck_b411c7be02eb01a_7=false;"></td>
+
+        <td class="tdquestion">Email</td>
+          <td class="tdquestion" width="1">&nbsp;</td>
+        <script type="text/javascript">var uncheck_b411c7be02eb01a_8=false;</script>
+        <input type="hidden" name="b411c7be02eb01a_alpha_answer0" value="">
+        <td class="tdquestion" width="1"><label class="hidden" for="b411c7be02eb01a_8">Other</label><input type="radio" name="b411c7be02eb01a_numeric_answer1" id="b411c7be02eb01a_8"  value="9" onmousedown="javascript:if(this.checked)uncheck_b411c7be02eb01a_8=true;" onclick="javascript:if(uncheck_b411c7be02eb01a_8)this.checked=false; uncheck_b411c7be02eb01a_8=false;"></td>
+        <td class="tdquestion" colspan="1">Other<label class="hidden" for="b411c7be02eb01a_other">Other</label>
+
+          :&nbsp;<input type="text" size="40" class="input" name="b411c7be02eb01a_other" id="b411c7be02eb01a_other" value="" >
+          </td>
+        </tr>
+    </table>
+  </td>
+</tr>
+<tr>
+  <td class="tdhelp" colspan="3"></td>
+</tr>
+<tr>
+
+  <td class="tdquestion" colspan="3">&nbsp;</td>
+</tr>
+</table>
+</td>
+      </tr>  
+      <tr>    
+        <td valign="top">      
+          <table border="0" cellspacing="0" cellpadding="2" width="100%">    
+<tr>
+  <td class="tdnum" width="1" valign="top" align="right">4.</td>
+  <td class="tdqtext" colspan="2" width="100%" valign="top"><a name="b611c5205c4a75f"></a>Would you recommend us?</td>
+
+</tr>
+<tr>
+  <td colspan="3">
+  <table border="0" cellspacing="0" cellpadding="1">
+    <tr>
+    <td class="tdquestion" width="1">&nbsp;</td>
+        <script type="text/javascript">var uncheck_b611c5205c4a75f_0=false;</script>
+        <input type="hidden" name="b611c5205c4a75f_alpha_answer0" value="">
+        <td class="tdquestion" width="1"><label class="hidden" for="b611c5205c4a75f_0">Yes</label><input type="radio" name="b611c5205c4a75f_numeric_answer1" id="b611c5205c4a75f_0"  value="1" onmousedown="javascript:if(this.checked)uncheck_b611c5205c4a75f_0=true;" onclick="javascript:if(uncheck_b611c5205c4a75f_0)this.checked=false; uncheck_b611c5205c4a75f_0=false;"></td>
+
+        <td class="tdquestion">Yes</td>
+          </tr>
+    <tr>
+    <td class="tdquestion" width="1">&nbsp;</td>
+        <script type="text/javascript">var uncheck_b611c5205c4a75f_1=false;</script>
+        <input type="hidden" name="b611c5205c4a75f_alpha_answer0" value="">
+        <td class="tdquestion" width="1"><label class="hidden" for="b611c5205c4a75f_1">No</label><input type="radio" name="b611c5205c4a75f_numeric_answer1" id="b611c5205c4a75f_1"  value="2" onmousedown="javascript:if(this.checked)uncheck_b611c5205c4a75f_1=true;" onclick="javascript:if(uncheck_b611c5205c4a75f_1)this.checked=false; uncheck_b611c5205c4a75f_1=false;"></td>
+
+        <td class="tdquestion">No</td>
+          </tr>
+    </table>
+  </td>
+</tr>
+<tr>
+  <td class="tdhelp" colspan="3"></td>
+</tr>
+<tr>
+  <td class="tdquestion" colspan="3">&nbsp;</td>
+
+</tr>
+</table>
+</td>
+      </tr>  
+      <tr>    
+        <td valign="top">      
+          <table border="0" cellspacing="0" cellpadding="2" width="100%">    
+<tr>
+  <td class="tdnum" width="1" valign="top" align="right">5.</td>
+  <td class="tdqtext" colspan="2" width="100%" valign="top"><a name="b611c52066cf987"></a>If yes, please include the person's contact information below.</td>
+</tr>
+<tr>
+
+<td colspan="3">
+  <table border="0" cellspacing="0" cellpadding="1">
+  <tr>
+    <td class="tdquestion">&nbsp;</td>
+    <td class="tdquestion" align="left" colspan="2"><label class="hidden" for="b611c52066cf987_alpha_answer1">If yes, please include the person's contact information below.</label><textarea class="input" name="b611c52066cf987_alpha_answer1" id="b611c52066cf987_alpha_answer1" cols="60" rows="5"></textarea></td>
+    </tr>
+  </table>
+</td>
+</tr>
+
+<tr>
+  <td class="tdhelp" colspan="3"></td>
+</tr>
+<tr>
+  <td class="tdquestion" colspan="3">&nbsp;</td>
+</tr>
+</table>
+</td>
+      </tr>  
+      <tr>    
+        <td valign="top">      
+          <table border="0" cellspacing="0" cellpadding="2" width="100%">    
+<tr>
+  <td class="tdnum" width="1" valign="top" align="right">6.</td>
+
+  <td class="tdqtext" colspan="2" width="100%" valign="top"><a name="b611c5207172ab6"></a>Do you have any additional feedback you would like to share with us?</td>
+</tr>
+<tr>
+<td colspan="3">
+  <table border="0" cellspacing="0" cellpadding="1">
+  <tr>
+    <td class="tdquestion">&nbsp;</td>
+    <td class="tdquestion" align="left" colspan="2"><label class="hidden" for="b611c5207172ab6_alpha_answer1">Do you have any additional feedback you would like to share with us?</label><textarea class="input" name="b611c5207172ab6_alpha_answer1" id="b611c5207172ab6_alpha_answer1" cols="60" rows="5"></textarea></td>
+    </tr>
+
+  </table>
+</td>
+</tr>
+<tr>
+  <td class="tdhelp" colspan="3"></td>
+</tr>
+<tr>
+  <td class="tdquestion" colspan="3">&nbsp;</td>
+</tr>
+</table>
+</td>
+      </tr>  
+      <tr>    
+        <td valign="top">      
+          <table border="0" cellspacing="0" cellpadding="2" width="100%">    
+
+<tr>
+  <td class="tdnum" width="1" valign="top" align="right">7.</td>
+  <td class="tdqtext" colspan="2" width="100%" valign="top"><a name="b411c7bc84968b5"></a>May we use your comments for a testimonial?</td>
+</tr>
+<tr>
+  <td colspan="3">
+  <table border="0" cellspacing="0" cellpadding="1">
+    <tr>
+    <td class="tdquestion" width="1">&nbsp;</td>
+
+        <script type="text/javascript">var uncheck_b411c7bc84968b5_0=false;</script>
+        <input type="hidden" name="b411c7bc84968b5_alpha_answer0" value="">
+        <td class="tdquestion" width="1"><label class="hidden" for="b411c7bc84968b5_0">Yes</label><input type="radio" name="b411c7bc84968b5_numeric_answer1" id="b411c7bc84968b5_0"  value="1" onmousedown="javascript:if(this.checked)uncheck_b411c7bc84968b5_0=true;" onclick="javascript:if(uncheck_b411c7bc84968b5_0)this.checked=false; uncheck_b411c7bc84968b5_0=false;"></td>
+        <td class="tdquestion">Yes</td>
+          </tr>
+    <tr>
+    <td class="tdquestion" width="1">&nbsp;</td>
+
+        <script type="text/javascript">var uncheck_b411c7bc84968b5_1=false;</script>
+        <input type="hidden" name="b411c7bc84968b5_alpha_answer0" value="">
+        <td class="tdquestion" width="1"><label class="hidden" for="b411c7bc84968b5_1">No</label><input type="radio" name="b411c7bc84968b5_numeric_answer1" id="b411c7bc84968b5_1"  value="2" onmousedown="javascript:if(this.checked)uncheck_b411c7bc84968b5_1=true;" onclick="javascript:if(uncheck_b411c7bc84968b5_1)this.checked=false; uncheck_b411c7bc84968b5_1=false;"></td>
+        <td class="tdquestion">No</td>
+          </tr>
+    </table>
+  </td>
+
+</tr>
+<tr>
+  <td class="tdhelp" colspan="3"></td>
+</tr>
+<tr>
+  <td class="tdquestion" colspan="3">&nbsp;</td>
+</tr>
+</table>
+</td>
+      </tr>  
+      <tr>    
+        <td valign="top">      
+          <table border="0" cellspacing="0" cellpadding="2" width="100%">    
+<tr>
+
+  <td>
+  <table border="0" cellspacing="0" cellpadding="2" width="100%">
+    <tr>
+      <td class="tdtext" width="100%">Did You Know...&nbsp;&nbsp; RapidAdvance offers a cash bonus for any funded referrals sent to us. If you know of any business owner that may need our services, please feel free to include their name and phone number in the area provided in the questionnaire.&nbsp;&nbsp; We look forward to serving you again in the future!&nbsp; <br />
+<br />
+Sincerely,<br />
+
+<br />
+Client Services</td>
+    </tr>
+    <tr>
+      <td class="tdtext" align="left">&nbsp;</td>
+    </tr>
+  </table>
+  </td>
+</tr>
+</table>
+
+</td>
+      </tr>  
+      </table>
+    </td>
+  </tr>
+</table>
+</center>
+</body>
+</html>

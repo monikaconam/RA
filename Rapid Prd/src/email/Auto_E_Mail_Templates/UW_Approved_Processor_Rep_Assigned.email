@@ -1,0 +1,12 @@
+Opportunity Name: {!Opportunity.Name}
+Opportunity ID: {!Opportunity.Opportunity_Number__c}
+
+Primary Campaign Source: {!Opportunity.PrimaryCampaignSource__c}
+Product: {!Opportunity.Product__c}
+Amount: {!Opportunity.Amount}
+Amount Sold: {!Opportunity.Pay_Back_Amount__c}
+New Processor: {!Opportunity.Processor_Name__c}
+New Processing Representative: {!Opportunity.Processing_Representative__c}
+Percent Paid Off (if Renewal) : {!Opportunity.Percent_Complete_PO__c}
+Renewal Eligibility : {!Opportunity.Renewal_Eligibility__c}
+Approved With Conditions: {!Opportunity.Approved_With_Conditions__c}

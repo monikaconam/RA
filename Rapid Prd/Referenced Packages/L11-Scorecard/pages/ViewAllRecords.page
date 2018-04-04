@@ -1,0 +1,147 @@
+<apex:page showHeader="true" sidebar="false" controller="l11_sc.ViewAllRecordsController" id="allData" docType="html-5.0" tabStyle="Scorecard__tab">
+<script>
+  function navSObject(id) {
+    window.open("/" + id);
+  }
+</script>
+
+<link rel="stylesheet" type="text/css" href="{!URLFOR($Resource.builder, '/builder/styles/main.css')}" />
+
+<div class="SalesforceReportsBuilder">
+  <header class="SalesforceReportsBuilder-header u-flex">
+    <div class="SalesforceReportsBuilder-logo u-flex u-flexJustifyCenter u-flexAlignItemsCenter u-paddingAm">
+    </div>
+    <h1 class="SalesforceReportsBuilder-headline u-sizeFull u-paddingAm">
+      View Records
+    </h1>
+  </header>
+  <div class="SalesforceReportsBuilder-content u-paddingAm">
+    <apex:form id="allDataForm">
+      <div class="SalesforceReportsBuilder-section u-paddingAm u-marginBm">
+        <apex:pageBlock id="selection" title="Viewing Options">
+          <apex:pageMessages />
+
+          <apex:pageBlockSection title="Select Profile Details" columns="2">
+            <apex:pageBlockSectionItem >
+              <apex:outputLabel for="selectConfig">Select Profile:</apex:outputLabel>
+              <apex:selectList size="1" id="selectConfig" value="{!configId}">
+                <apex:actionSupport event="onchange" rerender="allDataForm"/>
+                <apex:selectOptions value="{!configOptions}"/>
+              </apex:selectList>
+            </apex:pageBlockSectionItem>
+
+            <apex:pageBlockSectionItem >
+              <apex:outputLabel for="selectMetric" >Select Metric:</apex:outputLabel>
+                <apex:selectList size="1" id="selectMetric" value="{!metricId}">
+                <apex:selectOptions value="{!metricOptions}"/>
+                <apex:actionSupport event="onchange" rerender="allDataForm"/>
+              </apex:selectList>
+            </apex:pageBlockSectionItem>
+
+            <apex:pageBlockSectionItem >
+              <apex:outputLabel for="viewAs">View As:</apex:outputLabel>
+              <apex:selectList size="1" id="viewAs" value="{!view}">
+              <apex:selectOptions value="{!viewMode}"/>
+              <apex:actionSupport event="onchange" rerender="allDataForm"/>
+              </apex:selectList>
+            </apex:pageBlockSectionItem>
+
+            <apex:pageBlockSectionItem >
+            &nbsp;
+            </apex:pageBlockSectionItem>
+
+            <apex:pageBlockSectionItem rendered="{!view = 'manager'}">
+              <apex:outputLabel for="selectUsers" >Select Users:</apex:outputLabel>
+              <apex:selectList size="5" id="selectUser" value="{!userIds}" multiselect="true" >
+              <apex:selectOptions value="{!userOptions}"/>
+              <apex:actionSupport event="onchange" rerender="allDataForm"/>
+              </apex:selectList>
+            </apex:pageBlockSectionItem>
+
+            <apex:pageBlockSectionItem rendered="{!teamOptions.size>1 && view = 'manager'}">
+              <apex:outputLabel for="selectTeam" >Filter Users by Team:</apex:outputLabel>
+              <apex:selectList size="1" id="selectTeam" value="{!teamId}" rendered="{!teamOptions.size>1}" >
+                <apex:selectOptions value="{!teamOptions}"/>
+                <apex:actionSupport event="onchange" rerender="allDataForm"/>
+              </apex:selectList>
+            </apex:pageBlockSectionItem>
+
+            <apex:pageBlockSectionItem rendered="{!teamOptions.size = 1 && view = 'manager'}">
+
+            </apex:pageBlockSectionItem>
+
+            <apex:pageBlockSectionItem rendered="{!shouldDateRender }">
+              <apex:outputLabel for="dm">Select Date:</apex:outputLabel>
+              <apex:selectList size="1" id="dm" value="{!timeframe}">
+              <apex:selectOptions value="{!dateMode}"/>
+
+              <apex:actionSupport event="onchange" rerender="allDataForm"/>
+              </apex:selectList>
+            </apex:pageBlockSectionItem>
+
+            <apex:pageBlockSectionItem rendered="{!shouldDateRender}">
+
+            </apex:pageBlockSectionItem>
+
+            <apex:pageBlockSectionItem rendered="{!timeframe = 'customDate'}">
+              <apex:outputLabel for="sd">Start Date:</apex:outputLabel>
+              <apex:input type="date" value="{!startDate}" Id="startDate" id="sd" />
+            </apex:pageBlockSectionItem>
+
+            <apex:pageBlockSectionItem rendered="{!timeframe = 'customDate'}">
+              <apex:outputLabel for="ed">End Date:</apex:outputLabel>
+              <apex:input type="date" value="{!endDate}" Id="endDate" id="ed"/>
+            </apex:pageBlockSectionItem>
+
+
+          </apex:pageBlockSection>
+          <apex:pageBlockSection title="Select Fields to See">
+            <apex:pageBlockSectionItem >
+              <apex:selectList multiselect="true" size="5" value="{!selectedFields}">
+                <apex:selectOption itemLabel="--None--" itemValue="--None--"/>
+                <apex:selectoptions value="{!fieldOptions}" />
+              </apex:selectlist>
+                <apex:commandbutton rerender="dataView"  value="Update Table">
+                </apex:commandbutton>
+            </apex:pageBlockSectionItem>
+          </apex:pageBlockSection>
+        </apex:pageBlock>
+      </div>
+
+      <div class="SalesforceReportsBuilder-section u-paddingAm u-marginBm">
+        <apex:pageBlock id="dataView" title="Filtered Records" >
+
+          <apex:pageBlockSection title="Record Results -  Page #{!pageNumber}" columns="1">
+          <apex:commandbutton value="Export Entries" action="{!scheduleExport}" rendered="{!records.size > 0}"/>
+            <apex:pageMessage summary="The list below has been truncated to 1000 records." severity="warning" strength="3" rendered="{!records.size = 1000}"/>
+            <apex:pageBlockTable value="{!records}" var="c">
+              <apex:column width="25px" >
+                <apex:facet name="header">Id</apex:facet>
+                <apex:outputLink onclick="navSObject('{!c.Id}'); return false;" value="">{!c.Id}</apex:outputLink>
+              </apex:column>
+              <apex:repeat value="{!selectedFields}" var="fieldLabel">
+                <apex:column rendered="{!IF(fieldLabel != '--None--' , true, false)}">
+                  <apex:facet name="header">
+                    <apex:commandLink value="{!fieldLabel} {!IF(fieldLabel == sortField,HTMLENCODE(sortSymbol), '')}" rerender="dataView">
+                      <apex:param name="sortField" value="{!fieldLabel}" assignTo="{!sortField}"/>
+                    </apex:commandLink>
+                  </apex:facet>
+                  {!c[fieldLabel]}
+                </apex:column>
+              </apex:repeat>
+            </apex:pageBlockTable>
+            <apex:panelGrid columns="4">
+              <apex:commandLink styleClass="u-marginRb" action="{!first}">First</apex:commandlink>
+              <apex:commandLink styleClass="u-marginRb" action="{!previous}" rendered="{!hasPrevious}">Previous</apex:commandlink>
+              <apex:commandLink styleClass="u-marginRb" action="{!next}" rendered="{!hasNext}">Next</apex:commandlink>
+              <apex:commandLink action="{!last}">Last</apex:commandlink>
+            </apex:panelGrid>
+          </apex:pageBlockSection>
+        </apex:pageblock>
+      </div>
+    </apex:form>
+  </div>
+</div>
+
+    <c:GA />
+</apex:page>

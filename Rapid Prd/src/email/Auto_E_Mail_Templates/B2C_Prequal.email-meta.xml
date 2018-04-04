@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>B2C Prequal</name>
+    <style>none</style>
+    <subject>B2C Prequal: &quot;{!Opportunity.Name}&quot; - {!Opportunity.Pre_Qual_Decision__c}</subject>
+    <type>text</type>
+</EmailTemplate>

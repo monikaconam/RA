@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>CAMPAIGN_NAME</field>
+    </columns>
+    <columns>
+        <field>Campaign.ISO_Account__c</field>
+    </columns>
+    <columns>
+        <field>Campaign.Full_Contract_Commission_Base__c</field>
+    </columns>
+    <columns>
+        <field>Campaign.Campaign_Notes__c</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>Campaign.Full_Contract_Commission_Base__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>1</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>Full Contract Commission Base List</name>
+    <params>
+        <name>scopeid</name>
+        <value></value>
+    </params>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CampaignList</reportType>
+    <scope>orgAll</scope>
+    <showDetails>true</showDetails>
+</Report>

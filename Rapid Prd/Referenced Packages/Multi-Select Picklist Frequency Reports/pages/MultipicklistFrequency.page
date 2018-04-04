@@ -1,0 +1,56 @@
+<apex:page controller="marz.MultipicklistFrequency_Controller">
+<apex:form >
+ 
+ <apex:pageBlock >
+        <apex:pageBlockSection columns="1">  
+            <apex:pageblockSectionItem >  
+            <b>To create a Multi-Select Picklist Frequency Report:</b><br />
+            	1. Select an Object.<br />
+            	2. Select a Multi-Select Picklist.<br />
+            	3. Optionally select a field to Group By. Note: If a field does not show in the picklist it is not available for Grouping<br />
+            	4. Optionally select a list view to filter your results<br />
+            	5. Click Run           	
+            	<br /><br />
+            </apex:pageblockSectionItem>                
+        </apex:pageBlockSection>   
+        <apex:pageBlockSection columns="1">  
+            <apex:pageblockSectionItem >                
+                <apex:outputLabel value="Object"/>
+                <apex:outputPanel styleClass="requiredInput" layout="block">
+                <apex:outputPanel styleClass="requiredBlock" layout="block"/>
+                <apex:selectList size="1" value="{!objectAPIName}">
+                    <apex:selectOptions value="{!Objects}"/>
+                    <apex:actionSupport event="onchange" reRender="MultiPicklist,GroupBy,ListView"/>
+                </apex:selectList>
+                </apex:outputPanel>       
+            </apex:pageblockSectionItem>            
+            <apex:pageblockSectionItem >
+                <apex:outputLabel value="Multi-Select Picklist"/>        
+                <apex:outputPanel styleClass="requiredInput" layout="block">
+                <apex:outputPanel styleClass="requiredBlock" layout="block"/>
+                <apex:selectList size="1" value="{!multiPickListAPIName}" id="MultiPicklist" >
+                    <apex:selectOptions value="{!MultiPicklists}"/>
+                </apex:selectList>  
+                </apex:outputPanel>           
+            </apex:pageblockSectionItem>       
+            <apex:pageblockSectionItem >
+                <apex:outputLabel value="Group By"/>
+                <apex:selectList size="1" value="{!groupbyAPIName}" id="GroupBy">
+                    <apex:selectOptions value="{!GroupByFields}"/>
+                </apex:selectList>       
+            </apex:pageblockSectionItem>
+            <apex:pageblockSectionItem >
+                <apex:outputLabel value="List View"/>
+                <apex:selectList size="1" value="{!listViewId}" id="ListView">
+                    <apex:selectOptions value="{!listViews}"/>
+                </apex:selectList>       
+            </apex:pageblockSectionItem>  
+                      
+        </apex:pageBlockSection>
+        <apex:pageMessages id="pm" escape="false"/>         
+    <apex:pageBlockButtons location="bottom" >
+                     <apex:commandButton value="Run" action="{!run}" />  
+            </apex:pageBlockButtons>  
+    </apex:pageBlock>    
+</apex:form>
+</apex:page>

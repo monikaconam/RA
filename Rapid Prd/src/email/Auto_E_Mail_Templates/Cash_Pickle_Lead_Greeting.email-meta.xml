@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Cash_Pickle_Lead_Greeting</letterhead>
+    <name>Cash Pickle Lead Greeting</name>
+    <style>freeForm</style>
+    <subject>Thank You For Contacting Cash Pickle!</subject>
+    <textOnly>Great News {!Lead.FirstName}!
+
+You are pre-qualified for a Cash Pickle Merchant Cash Advance!  We have already started the advance process and will contacting you shortly to discuss your total advance amount, eligibility and terms.
+
+For even faster service, call us right now at 1-877-889-1037.
+
+You made a great choice contacting Cash Pickle and we look forward to getting you the cash you need, right now.
+ 
+Sincerely,
+ 
+{!Lead.OwnerFirstName}
+ 
+The Cash Pickle Team
+&quot;Don&apos;t Get Swiped!&quot;TM</textOnly>
+    <type>html</type>
+</EmailTemplate>

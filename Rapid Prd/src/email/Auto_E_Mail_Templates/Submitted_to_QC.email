@@ -1,0 +1,8 @@
+Opportunity: {!Opportunity.Name}
+Opp Owner: {!Opportunity.OwnerFullName}
+Opp ID: {!Opportunity.Opportunity_Number__c}
+
+Submitted to UW & Processing: {!Opportunity.Submit_to_UW_Processing__c}
+Stage: {!Opportunity.StageName}
+
+Amount: {!Opportunity.Amount}

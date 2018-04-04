@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Rapid_Advance</letterhead>
+    <name>Application Submitted</name>
+    <style>freeForm</style>
+    <subject>Your Deal Has Been Submitted</subject>
+    <textOnly>{!Marble__c.OwnerFullName},
+
+Good news! The business relationship team has submitted the application for {!Marble__c.Company_DBA__c} to at least one partner. Please check the marble to see who it has been sent to.
+
+https://na33.salesforce.com/{!Marble__c.SFID__c}
+
+
+Thanks!</textOnly>
+    <type>html</type>
+</EmailTemplate>

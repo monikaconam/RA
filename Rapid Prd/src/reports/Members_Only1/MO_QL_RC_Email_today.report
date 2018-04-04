@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>FIRST_NAME</field>
+    </columns>
+    <columns>
+        <field>Lead.Five9_Call_Counter__c</field>
+    </columns>
+    <columns>
+        <field>Opportunity.Five9_Call_Counter__c</field>
+    </columns>
+    <columns>
+        <field>LAST_NAME</field>
+    </columns>
+    <columns>
+        <field>COMPANY_ACCT</field>
+    </columns>
+    <columns>
+        <field>Lead.Campaign_Name__c</field>
+    </columns>
+    <columns>
+        <field>STATUS</field>
+    </columns>
+    <columns>
+        <field>Opportunity.Unqualified_Reason__c</field>
+    </columns>
+    <columns>
+        <field>Lead.Transfer_Member_Name__c</field>
+    </columns>
+    <columns>
+        <field>Lead.Transfer_Member_Email__c</field>
+    </columns>
+    <columns>
+        <field>Lead.Unqualified_Reason__c</field>
+    </columns>
+    <columns>
+        <field>Opportunity.CALC_FICO__c</field>
+    </columns>
+    <columns>
+        <field>CREATED_DATE</field>
+    </columns>
+    <filter>
+        <booleanFilter>((1 AND 2) OR (2 AND 3 AND 4)) AND 5</booleanFilter>
+        <criteriaItems>
+            <column>LEAD_SOURCE</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>contains</operator>
+            <value>Quicken Loans</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Lead.Team__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Members Only</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>LEAD_SOURCE</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Manually Created</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Lead.Campaign_Name__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>contains</operator>
+            <value>Quicken Loans</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Lead.Team__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>members only</value>
+        </criteriaItems>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>LEAD_SOURCE</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>LEAD_OWNER</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Opportunity.Pre_Qual_FAIL_Reason__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>MO QL, RC, Email today</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>OpportunityLead</reportType>
+    <scope>org</scope>
+    <showDetails>true</showDetails>
+    <sortColumn>STATUS</sortColumn>
+    <sortOrder>Desc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>CREATED_DATE</dateColumn>
+        <interval>INTERVAL_TODAY</interval>
+    </timeFrameFilter>
+</Report>

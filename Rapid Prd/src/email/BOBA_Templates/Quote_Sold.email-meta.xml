@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Rapid_Advance</letterhead>
+    <name>Quote Sold</name>
+    <style>freeForm</style>
+    <subject>Marble Quote Selected!</subject>
+    <textOnly>Zach,
+
+The Marble #{!Marble__c.Name} has had a quote sold! Please review and send contract requests to partners as necessary.
+
+Thanks,
+
+{!Marble__c.OwnerFullName}</textOnly>
+    <type>html</type>
+</EmailTemplate>

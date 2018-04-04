@@ -1,0 +1,4939 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <content>NewMarbleOverride</content>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Visualforce</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>true</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Custom Object to house all our Broker Out Leads / Opportunities</description>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableEnhancedLookup>true</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>Account__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Account</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Marbles</relationshipLabel>
+        <relationshipName>Marbles</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Accountable__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(
+   OR(  
+        State_of_Operation__c = &apos;CA&apos;
+      , State_of_Operation__c = &apos;NY&apos;
+      , State_of_Operation__c = &apos;HI&apos;
+      , FICO_Score__c &lt; 540
+      , Credit_Inquiries_Last_90_Days__c &gt; 8
+      , QC_Monthly_Sales__c &lt; 5000
+      , Ave_Number_of_Deposits_per_Month__c &lt; 4
+      , Average_Monthly_Negative_Balance__c &gt; 3
+      , Business_Open_Date__c &gt; (Today() - (30*8))
+      , Industry__r.Accountable__c = TRUE
+      , Average_Balancce__c &lt; 1000
+      , Current_Bank_Balance__c &lt; 0
+      , ispickval(Citizenship_Status__c,&apos;Visa&apos;)
+      , ispickval(Citizenship_Status__c,&apos;Green Card&apos;)
+      , ispickval(Entity_Type__c,&apos;Non-Profit&apos;)
+      , Soft_Pull_Only__c = TRUE
+      , Last_Funded_Date__c &gt; (Today() - (30*3))
+
+      ,
+       AND( 
+            Bankruptcy__c = TRUE
+           , OR( Bankruptcy_Discharge_Date__c &gt; (today()-(1))
+                ,ISNULL(Bankruptcy_Discharge_Date__c)
+               )
+           )
+      ,
+        AND(
+              Tax_Liens__c = FALSE
+            , Tax_Lien_Balance__c &gt; 0
+        ) 
+      , 
+        AND(
+              Tax_Liens__c = TRUE
+            , Tax_Lien_Balance__c &gt; 0
+        )
+      , AND( FICO_Score__c &lt; 540
+               ,OR(QC_Monthly_Sales__c &lt; 10000
+                 , Ave_Number_of_Deposits_per_Month__c &lt; 10
+                 , Average_Monthly_Negative_Balance__c &gt; 2
+                 , Business_Open_Date__c &gt; (Today() - (30*12))
+                 , Average_Balancce__c &lt; 1500
+                 )
+              )
+      ,
+        IF( 
+            Position__c &gt; 1 /*Fixed - DON&apos;T CHANGE VALUE FOR ANY PARTNER*/
+          ,  
+            Number_of_Competitor_Balances__c &gt;= 1 /*Deepest Position*/
+          , 
+            OR(
+                 Number_of_Competitor_Balances__c &gt; 1 /*Max # of Payoffs*/
+               , Sum_of_Competitor_Balances__c &gt; 15000 /*Max Payoff Amount*/
+               , 1 -(Sum_of_Competitor_Balances__c / QC_Monthly_Sales__c) &lt; 0.4 /*Balance Net %*/
+              )
+          )
+)
+, &quot;&quot;
+, IF(  ispickval(Decline_Reason__c,&quot;Qualified at Rapid&quot;) ,&quot;||OVERQUALIFIED||&quot;
+, &quot;ACCOUNTABLE APPROVED&quot;))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Accountable</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Accounting_Software_Used__c</fullName>
+        <externalId>false</externalId>
+        <label>Accounting Software Used</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Add_to_Five9_List__c</fullName>
+        <externalId>false</externalId>
+        <label>Add to Five9 List</label>
+        <length>25</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Additional_Owner_s_Not_on_Application__c</fullName>
+        <externalId>false</externalId>
+        <label>Additional Owner(s) Not on Application?</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>No</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Yes</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>AgileCap__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(
+   OR(  
+        FICO_Score__c &lt; 520
+      , QC_Monthly_Sales__c &lt; 8000
+      , Business_Open_Date__c &gt; (Today() - (30*12))
+      , Industry__r.AgileCap__c = TRUE 
+      , ispickval(Entity_Type__c,&apos;Non-Profit&apos;)
+      ,
+       AND( 
+            Bankruptcy__c = TRUE
+           , OR( Bankruptcy_Discharge_Date__c &gt; (today()-(1))
+                ,ISNULL(Bankruptcy_Discharge_Date__c)
+               )
+           )
+      ,  Industry__r.Name &lt;&gt; &apos;Insurance&apos;
+      ,
+        IF( 
+            Position__c &gt; 1 /*Fixed - DON&apos;T CHANGE VALUE FOR ANY PARTNER*/
+          ,  
+            Number_of_Competitor_Balances__c &gt;= 1 /*Deepest Position*/
+          , 
+            OR(
+                 Number_of_Competitor_Balances__c &gt; 10 /*Max # of Payoffs*/
+               , Sum_of_Competitor_Balances__c &gt; 5000000 /*Max Payoff Amount*/
+               , 1 -(Sum_of_Competitor_Balances__c / QC_Monthly_Sales__c) &lt; 0 /*Balance Net %*/
+              )
+          )
+)
+, &quot;&quot;
+, &quot;AGILECAP APPROVED&quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>AgileCap</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Approval_Time__c</fullName>
+        <externalId>false</externalId>
+        <label>Approved Timestamp</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Aquila_Disqualified__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Aquila Disqualified</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Aquila_Quoted__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Aquila Quoted</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Aquila_Submitted__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Aquila Submitted</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Aquila__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(
+   OR(  /* uncomment if necessary
+        State_of_Operation__c = &apos;WV&apos;
+        */
+        /*
+        FICO_Score__c &lt; 500
+        */
+        /*
+      , Credit_Inquiries_Last_90_Days__c &gt; 20
+        */
+        QC_Monthly_Sales__c &lt; 6000
+      , Ave_Number_of_Deposits_per_Month__c &lt; 2
+      , Average_Monthly_Negative_Balance__c &gt; 5
+      , Business_Open_Date__c &gt; (Today() - (30*6))
+      , Industry__r.Aquila__c = TRUE 
+      , Average_Balancce__c &lt; 900
+      ,  Current_Bank_Balance__c &lt; 0
+      , ispickval(Entity_Type__c,&apos;Non-Profit&apos;)
+        /*
+      , Soft_Pull_Only__c = TRUE
+        */
+      , MCA_Only__c = TRUE
+      , No_Daily_Payment__c  = TRUE
+      ,
+        /*
+       AND( 
+            Bankruptcy__c = TRUE
+           , OR( Bankruptcy_Discharge_Date__c &gt; (today()-(1))
+                ,ISNULL(Bankruptcy_Discharge_Date__c)
+               )
+           )
+      ,
+       */
+        AND(
+              Tax_Liens__c = FALSE
+            , Tax_Lien_Balance__c &gt; 0
+        ) 
+      , 
+        AND(
+              Tax_Liens__c = TRUE
+            , Tax_Lien_Balance__c &lt; 0
+        )
+      ,
+        IF( 
+            Position__c &gt; 1 /*Fixed - DON&apos;T CHANGE VALUE FOR ANY PARTNER*/
+          ,  
+            Number_of_Competitor_Balances__c &gt;= 3 /*Deepest Position*/
+          , 
+            OR(
+                 Number_of_Competitor_Balances__c &gt; 0 /*Max # of Payoffs*/
+               , Sum_of_Competitor_Balances__c &gt; 0 /*Max Payoff Amount*/
+               , 1 -(Sum_of_Competitor_Balances__c / QC_Monthly_Sales__c) &lt; 1 /*Balance Net %*/
+              )
+          )
+)
+, &quot;&quot;
+, &quot;AQUILA APPROVED&quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Aquila</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Atlantis_Mortgage__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(
+   OR(  /* uncomment if necessary
+        State_of_Operation__c = &apos;&apos;
+        */
+        FICO_Score__c &lt; 600
+        /* uncomment if necessary
+      , Credit_Inquiries_Last_90_Days__c &gt; 20
+        */
+        /* uncomment if necessary
+      , QC_Monthly_Sales__c &lt; 15000
+        */
+        /* uncomment if necessary
+      , Ave_Number_of_Deposits_per_Month__c &lt; 3
+        */
+        /* uncomment if necessary
+      , Average_Monthly_Negative_Balance__c &gt; 5
+        */
+        /* uncomment if necessary
+      , Business_Open_Date__c &gt; (Today() - (30*24))
+        */
+        /* uncomment if necessary
+      , Bankruptcy_Discharge_Date__c &gt; (today()-(30*36))
+        */
+        /* uncomment if necessary
+      , Industry__r.Atlantis_Mortgage__c  = TRUE
+        */
+        /* uncomment if necessary
+      , Average_Balancce__c &lt; 0
+        */
+        /* uncomment if necessary
+      , ispickval(Entity_Type__c,&apos;Non-Profit&apos;)
+        */
+      , Soft_Pull_Only__c = TRUE
+      , MCA_Only__c = TRUE
+      ,
+        AND(
+              Tax_Liens__c = FALSE
+            , Tax_Lien_Balance__c &gt; 0
+        ) 
+      , 
+        AND(
+              Tax_Liens__c = TRUE
+            , Tax_Lien_Balance__c &lt; 0
+        )
+      ,
+        IF( 
+            Position__c &gt; 1 /*Fixed - DON&apos;T CHANGE VALUE FOR ANY PARTNER*/
+          ,  
+            OR(
+                 Position__c &gt;= Number_of_Competitor_Balances__c
+               , Number_of_Competitor_Balances__c &gt;= 1 /*Deepest Position*/
+              )
+          , 
+            OR(
+                 Number_of_Competitor_Balances__c &gt; 0 /*Max # of Payoffs*/
+               , Sum_of_Competitor_Balances__c &gt; 0 /*Max Payoff Amount*/
+               , 1 -(Sum_of_Competitor_Balances__c / QC_Monthly_Sales__c) &lt; 0.0 /*Balance Net %*/
+              )
+          )
+)
+, &quot;&quot;
+, &quot;ATLANTIS MORTGAGE APPROVED&quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Atlantis Mortgage</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Ave_Number_of_Deposits_per_Month__c</fullName>
+        <externalId>false</externalId>
+        <label>Ave Number of Deposits per Month</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Average_Balancce__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>What is the clients average balance on their business banking account?</inlineHelpText>
+        <label>Average Balance</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Average_Monthly_Negative_Balance__c</fullName>
+        <externalId>false</externalId>
+        <label>Average Monthly Negative Days</label>
+        <precision>2</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>BFS_Disqualified__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>BFS Disqualified</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>BFS_Quoted__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>BFS Quoted</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>BFS_Submitted__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>BFS Submitted</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>BFS__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( 
+OR(
+
+/* uncomment if necessary
+State_of_Operation__c = &apos;&apos;
+*/
+ 
+FICO_Score__c &lt; 550
+
+/* uncomment if necessary 
+, Credit_Inquiries_Last_90_Days__c &gt; 15 
+*/
+
+/* uncomment if necessary
+, QC_Monthly_Sales__c &lt; 12000
+*/
+
+/* uncomment if necessary 
+, Ave_Number_of_Deposits_per_Month__c &lt; 3 
+*/
+
+, Average_Monthly_Negative_Balance__c &gt; 3 
+, Business_Open_Date__c &gt; (Today() - (30*24))  
+, Industry__r.BFS__c = TRUE 
+, Average_Balancce__c &lt; 1500
+, Current_Bank_Balance__c &lt; 0
+, ispickval(Entity_Type__c,&apos;Non-Profit&apos;)
+, RapidAdvance_Balance__c = TRUE
+, Last_Funded_Date__c &gt; (Today() - (30*2)) 
+
+/* uncomment if necessary 
+, Soft_Pull_Only__c = TRUE 
+*/ 
+
+,
+AND( 
+Bankruptcy__c = TRUE
+,OR( Bankruptcy_Discharge_Date__c &gt; (today()-(30*0))
+,ISNULL(Bankruptcy_Discharge_Date__c)
+)
+)
+
+, 
+AND( 
+Tax_Liens__c = FALSE 
+, Tax_Lien_Balance__c &gt; 100000 
+) 
+, 
+AND( 
+Tax_Liens__c = TRUE 
+, Tax_Lien_Balance__c &lt; 0 
+) 
+,
+        AND(
+              OR(
+                  Industry__r.Name = &apos;Trucking&apos; 
+                 ,Industry__r.Name = &apos;Limousine&apos;
+                 ,Industry__r.Name = &apos;Car Service&apos;
+                 )
+             ,OR( 
+                  Business_Open_Date__c &gt; (today() - (30*36))
+                 ,FICO_Score__c &lt; 625
+                 )
+            )
+      ,
+        AND(
+              Industry__r.Name = &apos;Construction&apos; 
+             ,OR( 
+                  Business_Open_Date__c &gt; (today() - (30*60))
+                 ,FICO_Score__c &lt; 625
+                 )
+        )
+      , 
+        IF( 
+            Position__c &gt; 1 /*Fixed - DON&apos;T CHANGE VALUE FOR ANY PARTNER*/
+          ,  
+            Number_of_Competitor_Balances__c &gt;= 1 /*Deepest Position*/
+          , 
+            OR(
+                 Number_of_Competitor_Balances__c &gt; 2 /*Max # of Payoffs*/
+                 /*uncomment if necessary
+               , Sum_of_Competitor_Balances__c &gt; 75000 
+                 */
+               , if(Number_of_Competitor_Balances__c &gt; 1
+               , 1 -(Sum_of_Competitor_Balances__c / QC_Monthly_Sales__c) &lt; 0.75 /*Balance Net % with &gt; 1 competitor balances*/
+               , 1 -(Sum_of_Competitor_Balances__c / QC_Monthly_Sales__c) &lt; 0.5 /*Balance Net % with 1 competitor balance*/
+              )
+              )
+          )
+) 
+, &quot;&quot; 
+, &quot;BFS APPROVED&quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>BFS</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>BOOP_Status__c</fullName>
+        <externalId>false</externalId>
+        <label>BOOP Status</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Bankruptcy_Discharge_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Bankruptcy Discharge Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Bankruptcy__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Bankruptcy</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Business_Open_Date__c</fullName>
+        <externalId>false</externalId>
+        <formula>Opportunity_Reference__r.Business_Open_Date__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Business Open Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>CNH_Disqualified__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>CNH Disqualified</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>CNH_Finance__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(
+   OR(  /* uncomment if necessary
+        State_of_Operation__c = &apos;WV&apos;
+        */
+        /* uncomment if necessary
+        FICO_Score__c &lt; 500
+        */
+        /* uncomment if necessary
+      , Credit_Inquiries_Last_90_Days__c &gt; 20
+        */
+        QC_Monthly_Sales__c &lt; 1000000
+        /* uncomment if necessary
+      , Ave_Number_of_Deposits_per_Month__c &lt; 3
+        */
+        /* uncomment if necessary
+      , Average_Monthly_Negative_Balance__c &gt; 5
+        */
+      , Business_Open_Date__c &gt; (Today() - (30*12))
+        /* uncomment if necessary
+      , Industry__r.CNH__c = TRUE
+        */
+        /* uncomment if necessary 
+      , Average_Balancce__c &lt; 0
+        */
+        /* uncomment if necessary
+      , ispickval(Entity_Type__c,&apos;Non-Profit&apos;)
+        */
+        /* uncomment if necessary
+      , Soft_Pull_Only__c = TRUE
+      , MCA_Only__c = TRUE
+        */
+        /* uncomment if necessary
+      ,
+       AND( 
+            Bankruptcy__c = TRUE
+           , OR( Bankruptcy_Discharge_Date__c &gt; (today()-(1))
+                ,ISNULL(Bankruptcy_Discharge_Date__c)
+               )
+           )
+        */
+      ,
+        AND(
+              Tax_Liens__c = FALSE
+            , Tax_Lien_Balance__c &gt; 10000
+        ) 
+        /* uncomment if necessary
+      , 
+        AND(
+              Tax_Liens__c = TRUE
+            , Tax_Lien_Balance__c &lt; 0
+        )
+        */
+      ,
+        IF( 
+            Position__c &gt; 1 /*Fixed - DON&apos;T CHANGE VALUE FOR ANY PARTNER*/
+          ,  
+            Number_of_Competitor_Balances__c &gt;= 10 /*Deepest Position*/
+          , 
+            OR(
+                 Number_of_Competitor_Balances__c &gt; 9 /*Max # of Payoffs*/
+               , Sum_of_Competitor_Balances__c &gt; 100000000 /*Max Payoff Amount*/
+               , 1 -(Sum_of_Competitor_Balances__c / QC_Monthly_Sales__c) &lt; 0 /*Balance Net %*/
+              )
+          )
+)
+, &quot;&quot;
+, &quot;CNH FINANCE APPROVED&quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>CNH Finance</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CNH_Quoted__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>CNH Quoted</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>CNH_Submitted__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>CNH Submitted</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>CONSTRUCTION_FINANCE__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(
+   OR(  /* uncomment if necessary
+        State_of_Operation__c = &apos;&apos;
+        */
+        /* uncomment if necessary
+      , FICO_Score__c &lt; 500
+        */
+        /* uncomment if necessary
+      , Credit_Inquiries_Last_90_Days__c &gt; 20
+        */
+        /* uncomment if necessary
+      , QC_Monthly_Sales__c &lt; 10000
+        */
+        /* uncomment if necessary
+      , Ave_Number_of_Deposits_per_Month__c &lt; 3
+        */
+        /* uncomment if necessary
+      , Average_Monthly_Negative_Balance__c &gt; 5
+        */
+        /* uncomment if necessary
+      , Business_Open_Date__c &gt; (Today() - (30*6))
+        */
+        
+        Industry__r.Name != &apos;Construction&apos;
+
+      , Receivables_or_Unpaid_Invoices__c = FALSE
+       
+        /* uncomment if necessary
+      , Average_Balancce__c &lt; 0
+        */
+        /* uncomment if necessary 
+      , ispickval(Entity_Type__c,&apos;Non-Profit&apos;)
+        */
+        /* uncomment if necessary
+      , Soft_Pull_Only__c = TRUE
+        */
+      , MCA_Only__c = TRUE
+        /* uncomment if necessary
+      ,
+       AND( 
+            Bankruptcy__c = TRUE
+           , OR( Bankruptcy_Discharge_Date__c &gt; (today()-(1))
+                ,ISNULL(Bankruptcy_Discharge_Date__c)
+               )
+           )
+        */
+      ,
+        AND(
+              Tax_Liens__c = FALSE
+            , Tax_Lien_Balance__c &gt; 0
+        ) 
+      , 
+        AND(
+              Tax_Liens__c = TRUE
+            , Tax_Lien_Balance__c &lt; 0
+        )
+      ,
+        IF( 
+            Position__c &gt; 1 /*Fixed - DON&apos;T CHANGE VALUE FOR ANY PARTNER*/
+          ,  
+            AND(
+                 Position__c &gt;= Number_of_Competitor_Balances__c
+               , Number_of_Competitor_Balances__c &gt;= 1 /*Deepest Position*/
+              )
+          , 
+            OR(
+                 Number_of_Competitor_Balances__c &gt; 0 /*Max # of Payoffs*/
+               , Sum_of_Competitor_Balances__c &gt; 0 /*Max Payoff Amount*/
+               , 1 -(Sum_of_Competitor_Balances__c / QC_Monthly_Sales__c) &lt; 0 /*Balance Net %*/
+              )
+          )
+)
+, &quot;&quot;
+, &quot;CONSTRUCTION FINANCE APPROVED&quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>CONSTRUCTION FINANCE</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Calc_Link2__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( ISNULL(Opportunity_Reference__c ), Hyperlink(Lead_Reference__r.CALC_Link__c,&quot;Calc Link&quot;) , Opportunity_Reference__r.CALC_Link__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Calc Link</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Calc_Link__c</fullName>
+        <externalId>false</externalId>
+        <label>Calc Link</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Url</type>
+    </fields>
+    <fields>
+        <fullName>Campaign_Name__c</fullName>
+        <externalId>false</externalId>
+        <label>Campaign Name</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Citizenship_Status__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>If &quot;Visa&quot;, must be valid for life of financing.</inlineHelpText>
+        <label>Citizenship Status</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Full US Citizen</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Green Card</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Visa</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Company_DBA__c</fullName>
+        <externalId>false</externalId>
+        <formula>Opportunity_Reference__r.DBA_Name__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Company DBA</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Company__c</fullName>
+        <externalId>false</externalId>
+        <label>Company</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Competitors__c</fullName>
+        <description>List all competitors with a balance on each line</description>
+        <externalId>false</externalId>
+        <label>Competitors:</label>
+        <length>32768</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>25</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Construction_Finance_Disqualified__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Construction Finance Disqualified</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Construction_Finance_Quoted__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Construction Finance Quoted</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Construction_Finance_sub__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Construction Finance Submitted</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Contract_Request__c</fullName>
+        <externalId>false</externalId>
+        <label>Contract Request</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Credibly__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(
+   OR(  
+        FICO_Score__c &lt; 500
+        /* uncomment if necessary
+      , Credit_Inquiries_Last_90_Days__c &gt; 20
+        */
+      , QC_Monthly_Sales__c &lt; 15000
+      , Ave_Number_of_Deposits_per_Month__c &lt; 1
+      , Average_Monthly_Negative_Balance__c &gt; 7
+      , Business_Open_Date__c &gt; (Today() - (30*6))
+      , Industry__r.Credibly__c = TRUE 
+      , Average_Balancce__c &lt; 1000
+      , ispickval(Entity_Type__c,&apos;Non-Profit&apos;)
+
+        /* uncomment if necessary
+      , Soft_Pull_Only__c = TRUE
+        */
+      ,
+       AND( 
+            Bankruptcy__c = TRUE
+           , OR( Bankruptcy_Discharge_Date__c &gt; (today()-(30*6))
+                ,ISNULL(Bankruptcy_Discharge_Date__c)
+               )
+           )
+      ,
+        AND(
+              Tax_Liens__c = FALSE
+            , Tax_Lien_Balance__c &gt; 0
+        ) 
+      , 
+        AND(
+              Tax_Liens__c = TRUE
+            , Tax_Lien_Balance__c &lt; 0
+        )
+      ,
+        IF( 
+            Position__c &gt; 1 /*Fixed - DON&apos;T CHANGE VALUE FOR ANY PARTNER*/
+          ,  
+            Number_of_Competitor_Balances__c &gt;= 3 /*Deepest Position*/
+          , 
+            OR(
+                 Number_of_Competitor_Balances__c &gt; 2 /*Max # of Payoffs*/
+               , Sum_of_Competitor_Balances__c &gt; 125000 /*Max Payoff Amount*/
+               , 1 -(Sum_of_Competitor_Balances__c / QC_Monthly_Sales__c) &lt; 0.5 /*Balance Net %*/
+              )
+          )
+)
+, &quot;&quot;
+, &quot;CREDIBLY APPROVED&quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Credibly</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Credit_Inquiries_Last_90_Days__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>How many credit inquiries has the client had on their credit report in the last 90 days?</inlineHelpText>
+        <label>Credit Inquiries (Last 90 Days)</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Current_Bank_Balance__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>How much is currently available in the client&apos;s primary bank account?</inlineHelpText>
+        <label>Current Bank Balance</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Decline_Reason__c</fullName>
+        <externalId>false</externalId>
+        <label>Decline Reason</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Bank Statement Disqualification</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Business Type</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Competitor Balance / UCC(s)</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Credit</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Bankruptcy</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Tax Lien(s)</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Time in Business</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Fraud</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Client Withdrawal - No Response</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Client Withdrawal - Cost</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Other</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Qualified at Rapid</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Delete_from_Five9_Lists__c</fullName>
+        <externalId>false</externalId>
+        <label>Delete from Five9 Lists</label>
+        <length>25</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Document_Link__c</fullName>
+        <externalId>false</externalId>
+        <formula>HYPERLINK(&quot;file://ra-fsv/office2/BOBADOCS&quot; ,&quot;View&quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Document Link</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ECG_Disqualified__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>ECG Disqualified</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>ECG_Quoted__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>ECG Quoted</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>ECG_Submitted__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>ECG Submitted</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>ECG__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(
+   OR(  /* uncomment if necessary
+        State_of_Operation__c = &apos;WV&apos;
+        */
+        FICO_Score__c &lt; 500
+      , Credit_Inquiries_Last_90_Days__c &gt; 20
+      , QC_Monthly_Sales__c &lt; 10000
+      , Ave_Number_of_Deposits_per_Month__c &lt; 2
+      , Average_Monthly_Negative_Balance__c &gt; 5
+      , Business_Open_Date__c &gt; (Today() - (30*6))
+      , Industry__r.ECG__c = TRUE 
+      , Average_Balancce__c &lt; 0
+      , Current_Bank_Balance__c &lt; 0
+      , ispickval(Citizenship_Status__c,&apos;Visa&apos;)
+      , ispickval(Citizenship_Status__c,&apos;Green Card&apos;)
+      , ispickval(Entity_Type__c,&apos;Non-Profit&apos;)
+      , Soft_Pull_Only__c = TRUE
+      , MCA_Only__c = TRUE
+      , Last_Funded_Date__c &gt; (Today() - (20*1))
+      ,
+       AND( 
+            Bankruptcy__c = TRUE
+           , OR( Bankruptcy_Discharge_Date__c &gt; (today()-(1))
+                ,ISNULL(Bankruptcy_Discharge_Date__c)
+               )
+           )
+      ,
+        AND(
+              Tax_Liens__c = FALSE
+            , Tax_Lien_Balance__c &gt; (0.50 * QC_Monthly_Sales__c)
+        ) 
+      , 
+        AND(
+              Tax_Liens__c = TRUE
+            , Tax_Lien_Balance__c &lt; 0
+        )
+      ,
+        IF( 
+            Position__c &gt; 1 /*Fixed - DON&apos;T CHANGE VALUE FOR ANY PARTNER*/
+          ,  
+            Number_of_Competitor_Balances__c &gt;= 3 /*Deepest Position*/
+          , 
+            OR(
+                 Number_of_Competitor_Balances__c &gt; 1 /*Max # of Payoffs*/
+               , Sum_of_Competitor_Balances__c &gt; 150000 /*Max Payoff Amount*/
+               , 1 -(Sum_of_Competitor_Balances__c / QC_Monthly_Sales__c) &lt; 0.5 /*Balance Net %*/
+              )
+          )
+)
+, &quot;&quot;
+, IF(  ispickval(Decline_Reason__c,&quot;Qualified at Rapid&quot;) ,&quot;||OVERQUALIFIED||&quot;
+, &quot;ECG APPROVED&quot;))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>ECG</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Email__c</fullName>
+        <externalId>false</externalId>
+        <label>Email</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Entity_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Entity Type</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>LLC</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Sole Prop</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>C-Corp</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>S-Corp</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>GP</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>LLP</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>LP</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Non-Profit</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>FICO_Score__c</fullName>
+        <externalId>false</externalId>
+        <formula>Opportunity_Reference__r.CALC_FICO__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>FICO Score</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>FORA_Disqualified__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>FORA Disqualified</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>FORA_Quoted__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>FORA Quoted</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>FORA_Submitted__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>FORA Submitted</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>FORA__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(
+   OR(
+        State_of_Operation__c = &apos;WV&apos;
+      , FICO_Score__c &lt; 500
+      , Credit_Inquiries_Last_90_Days__c &gt; 15
+      , QC_Monthly_Sales__c &lt; 12000
+      , Ave_Number_of_Deposits_per_Month__c &lt; 3
+      , Average_Monthly_Negative_Balance__c &gt; 4
+      , Sum_of_Competitor_Balances__c &gt; 100000
+      , Business_Open_Date__c &gt; (Today() - (30*6))
+      , Industry__r.FORA__c = TRUE
+      , Average_Balancce__c &lt; 1000
+      , Current_Bank_Balance__c &lt; 0
+      , ispickval(Citizenship_Status__c,&apos;Visa&apos;)
+      , ispickval(Entity_Type__c,&apos;Non-Profit&apos;)
+      , RapidAdvance_Balance__c = TRUE
+/* uncomment if necessary
+      , Soft_Pull_Only__c = TRUE
+*/
+      ,
+       AND( 
+            Bankruptcy__c = TRUE
+           , OR( Bankruptcy_Discharge_Date__c &gt; (today()-(30*2))
+                ,ISNULL(Bankruptcy_Discharge_Date__c)
+               )
+           )
+      ,
+        AND(
+              Tax_Liens__c = FALSE
+            , Tax_Lien_Balance__c &gt; 200000
+        ) 
+      , 
+        AND(
+              Tax_Liens__c = TRUE
+            , Tax_Lien_Balance__c &lt; 0
+        )
+      ,
+        IF( 
+            Position__c &gt; 1 /*Fixed - DON&apos;T CHANGE VALUE FOR ANY PARTNER*/
+          ,  
+            Number_of_Competitor_Balances__c &gt;= 1 /*Deepest Position*/
+          , 
+            OR(
+                 Number_of_Competitor_Balances__c &gt; 1 /*Max # of Payoffs*/
+               , Sum_of_Competitor_Balances__c &gt; 100000 /*Max Payoff Amount*/
+               , 1 -(Sum_of_Competitor_Balances__c / QC_Monthly_Sales__c) &lt; 0.5 /*Balance Net %*/
+              )
+          )
+)
+, &quot;&quot;
+, &quot;FORA APPROVED&quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>FORA</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>FundBox__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(
+   OR(  /* uncomment if necessary
+        State_of_Operation__c = &apos;&apos;
+        */
+        /* uncomment if necessary
+      , FICO_Score__c &lt; 680
+        */
+        /* uncomment if necessary
+      , Credit_Inquiries_Last_90_Days__c &gt; 10
+        */
+        QC_Monthly_Sales__c &lt; 2000
+        /* uncomment if necessary
+      , Ave_Number_of_Deposits_per_Month__c &lt; 3
+        */
+      , Average_Monthly_Negative_Balance__c &gt; 10
+      , Business_Open_Date__c &gt; (Today() - (30*3))
+      , Bankruptcy_Discharge_Date__c &gt; (today()-(1))
+      ,  Industry__r.Fundbox__c = TRUE
+      , Average_Balancce__c &lt; 500
+        /* uncomment if necessary
+      , ispickval(Entity_Type__c,&apos;Non-Profit&apos;)
+      , RapidAdvance_Balance__c = TRUE 
+        */
+        /* uncomment if necessary
+      , Soft_Pull_Only__c = TRUE
+        */
+      , MCA_Only__c = TRUE
+        /* uncomment if necessary
+      ,
+        AND(
+              Tax_Liens__c = FALSE
+            , Tax_Lien_Balance__c &lt; 0
+        ) 
+      , 
+        AND(
+              Tax_Liens__c = TRUE
+            , Tax_Lien_Balance__c &lt; 0
+        )
+        */
+)
+, &quot;&quot;
+, &quot;FUNDBOX APPROVED&quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>FundBox</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>FundKite__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(
+   OR(  
+        State_of_Operation__c = &apos;MA&apos;
+      , State_of_Operation__c = &apos;HI&apos;
+      , State_of_Operation__c = &apos;CA&apos;
+      , FICO_Score__c &lt; 520
+        /* uncomment if necessary
+      , Credit_Inquiries_Last_90_Days__c &gt; 20
+        */
+      , QC_Monthly_Sales__c &lt; 20000
+      , Ave_Number_of_Deposits_per_Month__c &lt; 6
+      , Average_Monthly_Negative_Balance__c &gt; 5
+      , Business_Open_Date__c &gt; (Today() - (30*12))
+      , Industry__r.FundKite__c = TRUE
+      , ispickval(Entity_Type__c,&apos;Non-Profit&apos;) 
+      , Average_Balancce__c &lt; 400
+      
+      , AND( 
+        ispickval(Entity_Type__c,&apos;Sole Prop&apos;)
+      , ispickval(Home_Based__c,&apos;Yes&apos;)
+        )
+
+        /* uncomment if necessary
+      , Soft_Pull_Only__c = TRUE
+        */
+      ,
+       AND( 
+            Bankruptcy__c = TRUE
+           , OR( Bankruptcy_Discharge_Date__c &gt; (today()-(1))
+                ,ISNULL(Bankruptcy_Discharge_Date__c)
+               )
+           )
+      ,
+        AND(
+              Tax_Liens__c = FALSE
+            , Tax_Lien_Balance__c &gt; 250000
+        ) 
+      , 
+        AND(
+              Tax_Liens__c = TRUE
+            , Tax_Lien_Balance__c &gt; 250000
+        )
+      ,
+        AND(
+              Industry__r.Name = &apos;Trucking&apos; 
+            , QC_Monthly_Sales__c &lt; 125000
+            , Business_Open_Date__c &gt; (Today() - (30*60))
+        )
+      ,
+        AND(
+              Industry__r.Name = &apos;Auto Sales - New&apos; 
+            , QC_Monthly_Sales__c &lt; 165000
+            , Business_Open_Date__c &gt; (Today() - (30*60))
+        )
+      ,
+        AND(
+              Industry__r.Name = &apos;Auto Sales - Used&apos; 
+            , QC_Monthly_Sales__c &lt; 125000
+            , Business_Open_Date__c &gt; (Today() - (30*60))
+        )
+      ,
+        IF( 
+            Position__c &gt; 1 /*Fixed - DON&apos;T CHANGE VALUE FOR ANY PARTNER*/
+          ,  
+            Number_of_Competitor_Balances__c &gt;= 7 /*Deepest Position*/
+          , 
+            OR(
+                 Number_of_Competitor_Balances__c &gt; 3 /*Max # of Payoffs*/
+               , Sum_of_Competitor_Balances__c &gt; 250000 /*Max Payoff Amount*/
+               , 1 -(Sum_of_Competitor_Balances__c / QC_Monthly_Sales__c) &lt; 0.5 /*Balance Net %*/
+              )
+          )
+)
+, &quot;&quot;
+, IF(  ispickval(Decline_Reason__c,&quot;Qualified at Rapid&quot;) ,&quot;||OVERQUALIFIED||&quot;
+, &quot;||PAUSED|| - FUNDKITE APPROVED&quot;))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>FundKite</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Fund_Amental_Disqualified__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Fund-Amental Disqualified</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Fund_Amental_Quoted__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Fund-Amental Quoted</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Fund_Amental_Submitted__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Fund-Amental Submitted</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Fund_Amental__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(
+   OR(  
+        State_of_Operation__c = &apos;CA&apos; 
+      , FICO_Score__c &lt; 550
+        /* uncomment if necessary
+      , Credit_Inquiries_Last_90_Days__c &gt; 20
+        */
+      , QC_Monthly_Sales__c &lt; 10000
+      , Ave_Number_of_Deposits_per_Month__c &lt; 5
+      , Average_Monthly_Negative_Balance__c &gt; 3
+      , Business_Open_Date__c &gt; (Today() - (30*12))
+      , Industry__r.Fund_Amental__c = TRUE
+      , Average_Balancce__c &lt; 750
+      , ispickval(Entity_Type__c,&apos;Non-Profit&apos;)
+      , Soft_Pull_Only__c = TRUE
+      , MCA_Only__c = TRUE
+      ,
+       AND( 
+            Bankruptcy__c = TRUE
+           , OR( Bankruptcy_Discharge_Date__c &gt; (today()-(30*6))
+                ,ISNULL(Bankruptcy_Discharge_Date__c)
+               )
+           )
+      ,
+        AND(
+              Tax_Liens__c = FALSE
+            , Tax_Lien_Balance__c &gt; 0
+        ) 
+      , 
+        AND(
+              Tax_Liens__c = TRUE
+            , Tax_Lien_Balance__c &lt; 0
+        )
+      ,
+        IF( 
+            Position__c &gt; 1 /*Fixed - DON&apos;T CHANGE VALUE FOR ANY PARTNER*/
+          ,  
+            Number_of_Competitor_Balances__c &gt;= 6 /*Deepest Position*/
+          , 
+            OR(
+                 Number_of_Competitor_Balances__c &gt; 6 /*Max # of Payoffs*/
+               , Sum_of_Competitor_Balances__c &gt; 200000 /*Max Payoff Amount*/
+               , 1 -(Sum_of_Competitor_Balances__c / QC_Monthly_Sales__c) &lt; 0.0 /*Balance Net %*/
+              )
+          )
+)
+, &quot;&quot;
+, IF(  ispickval(Decline_Reason__c,&quot;Qualified at Rapid&quot;) ,&quot;||OVERQUALIFIED||&quot;
+, &quot;||PAUSED|| - FUND-AMENTAL APPROVED&quot;))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Fund-Amental</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Fundation__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(
+   OR(  
+        State_of_Operation__c = &apos;NV&apos;
+      , State_of_Operation__c = &apos;ND&apos;
+      , State_of_Operation__c = &apos;SD&apos;
+      , FICO_Score__c &lt; 660
+      , Credit_Inquiries_Last_90_Days__c &gt; 7
+      , QC_Monthly_Sales__c &lt; 16667
+      , Ave_Number_of_Deposits_per_Month__c &lt; 6
+      , Average_Monthly_Negative_Balance__c &gt; 5
+      , Business_Open_Date__c &gt; (Today() - (30*24))
+      , Industry__r.Fundation__c  = TRUE
+      , Average_Balancce__c &lt; 1000
+      , Soft_Pull_Only__c = TRUE
+      , MCA_Only__c = TRUE
+      ,
+       AND( 
+            Bankruptcy__c = TRUE
+           , OR( Bankruptcy_Discharge_Date__c &gt; (today()-(30*36))
+                ,ISNULL(Bankruptcy_Discharge_Date__c)
+               )
+           )
+      ,
+        AND(
+              Tax_Liens__c = FALSE
+            , Tax_Lien_Balance__c &gt; 10000
+        ) 
+      , 
+        AND(
+              Tax_Liens__c = TRUE
+            , Tax_Lien_Balance__c &gt; 500000
+        )
+/* uncomment if necessary
+      ,
+        AND(
+              Industry__r.Name = &apos;Trucking&apos; 
+            , QC_Monthly_Sales__c &lt; 125000
+            , Business_Open_Date__c &gt; (Today() - (30*60))
+        )
+      ,
+        AND(
+              Industry__r.Name = &apos;Auto Sales - New&apos; 
+            , QC_Monthly_Sales__c &lt; 165000
+            , Business_Open_Date__c &gt; (Today() - (30*60))
+        )
+      ,
+        AND(
+              Industry__r.Name = &apos;Auto Sales - Used&apos; 
+            , QC_Monthly_Sales__c &lt; 125000
+            , Business_Open_Date__c &gt; (Today() - (30*60))
+        )
+*/
+      ,
+        IF( 
+            Position__c &gt; 1 /*Fixed - DON&apos;T CHANGE VALUE FOR ANY PARTNER*/
+          ,  
+            Number_of_Competitor_Balances__c &gt;= 1 /*Deepest Position*/
+          , 
+            OR(
+                 Number_of_Competitor_Balances__c &gt; 2 /*Max # of Payoffs*/
+               , Sum_of_Competitor_Balances__c &gt; 100000 /*Max Payoff Amount*/
+              )
+          )
+)
+, &quot;&quot;
+, &quot;FUNDATION APPROVED&quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Fundation</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Funded_Timestamp__c</fullName>
+        <externalId>false</externalId>
+        <label>Funded Timestamp</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Funding_Circle_Submission__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Funding Circle Submission</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Funding_Circle__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(
+   OR( 
+        State_of_Operation__c = &apos;NV&apos;
+      , FICO_Score__c &lt; 660
+        /* uncomment if necessary
+      , Credit_Inquiries_Last_90_Days__c &gt; 20
+        */
+        /* uncomment if necessary
+      , QC_Monthly_Sales__c &lt; 10000
+        */
+        /* uncomment if necessary
+      , Ave_Number_of_Deposits_per_Month__c &lt; 3
+        */
+        /* uncomment if necessary
+      , Average_Monthly_Negative_Balance__c &gt; 5
+        */
+      , Business_Open_Date__c &gt; (Today() - (30*24))
+      , Bankruptcy_Discharge_Date__c &gt; (today()-(30*84))
+        /* uncomment if necessary
+      , Funding_Circle_Industry__c = TRUE
+        */
+      , Average_Balancce__c &lt; 0
+      , ispickval(Entity_Type__c,&apos;Non-Profit&apos;)
+      , ispickval(Entity_Type__c,&apos;Sole Prop&apos;)
+      , Soft_Pull_Only__c = TRUE
+      , MCA_Only__c = TRUE
+      ,
+        AND(
+              Tax_Liens__c = FALSE
+            , Tax_Lien_Balance__c &gt; 5000
+        ) 
+      , 
+        AND(
+              Tax_Liens__c = TRUE
+            , Tax_Lien_Balance__c &lt; 0
+        )
+      ,
+        IF( 
+            Position__c &gt; 1 /*Fixed - DON&apos;T CHANGE VALUE FOR ANY PARTNER*/
+          ,  
+            AND(
+                 Position__c &gt;= Number_of_Competitor_Balances__c
+               , Number_of_Competitor_Balances__c &gt;= 1 /*Deepest Position*/
+              )
+          , 
+            OR(
+                 Number_of_Competitor_Balances__c &lt; 0 /*Max # of Payoffs*/
+               , Sum_of_Competitor_Balances__c &lt; 0 /*Max Payoff Amount*/
+               , (Sum_of_Competitor_Balances__c / QC_Monthly_Sales__c) &gt; 0.0 /*Balance Net %*/
+              )
+          )
+)
+, &quot;&quot;
+, &quot;||PAUSED|| - FUNDING CIRCLE APPROVED&quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Funding Circle</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Greenwich_Capital__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(
+   OR(  
+        State_of_Operation__c = &apos;CA&apos;
+      , FICO_Score__c &lt; 450
+      , QC_Monthly_Sales__c &lt; 7500
+      , Ave_Number_of_Deposits_per_Month__c &lt; 10
+      , Average_Monthly_Negative_Balance__c &gt; 3
+      , Business_Open_Date__c &gt; (Today() - (30*9))
+      , Industry__r.Greenwich_Capital__c = TRUE 
+      , Average_Balancce__c &lt; 1000
+      , Current_Bank_Balance__c &lt; 0
+      , ispickval(Entity_Type__c,&apos;Non-Profit&apos;)
+      , Soft_Pull_Only__c = TRUE
+      ,
+       AND( 
+            Bankruptcy__c = TRUE
+           , OR( Bankruptcy_Discharge_Date__c &gt; (today()-(30*36))
+                ,ISNULL(Bankruptcy_Discharge_Date__c)
+               )
+           )
+      ,
+        AND(
+              Tax_Liens__c = FALSE
+            , Tax_Lien_Balance__c &gt; QC_Monthly_Sales__c * 1
+        ) 
+      , 
+        AND(
+              Tax_Liens__c = TRUE
+            , Tax_Lien_Balance__c &lt; 0
+        )
+
+            , Industry__r.Name = &apos;Trucking&apos;
+
+      ,
+        IF( 
+            Position__c &gt; 1 /*Fixed - DON&apos;T CHANGE VALUE FOR ANY PARTNER*/
+          ,  
+            Number_of_Competitor_Balances__c &gt;= 1 /*Deepest Position*/
+          , 
+            OR(
+                 Number_of_Competitor_Balances__c &gt; 2 /*Max # of Payoffs*/
+               , Sum_of_Competitor_Balances__c &gt; 35000 /*Max Payoff Amount*/
+               , 1 -(Sum_of_Competitor_Balances__c / QC_Monthly_Sales__c) &lt; 0.5 /*Balance Net %*/
+              )
+          )
+)
+, &quot;&quot;
+, IF(  ispickval(Decline_Reason__c,&quot;Qualified at Rapid&quot;) ,&quot;||OVERQUALIFIED||&quot;
+, &quot;GREENWICH CAPITAL APPROVED&quot;))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Greenwich Capital</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Headway_Capital_Disqualified__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Headway Capital Disqualified</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Headway_Capital_Quoted__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Headway Capital Quoted</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Headway_Capital_Submitted__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Headway Capital Submitted</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Headway_Capital__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(
+   OR(  
+        State_of_Operation__c = &apos;AK&apos;
+      , State_of_Operation__c = &apos;AS&apos;
+      , State_of_Operation__c = &apos;AR&apos;
+      , State_of_Operation__c = &apos;CT&apos;
+      , State_of_Operation__c = &apos;DE&apos;
+      , State_of_Operation__c = &apos;DC&apos;
+      , State_of_Operation__c = &apos;GU&apos;
+      , State_of_Operation__c = &apos;HI&apos;
+      , State_of_Operation__c = &apos;IA&apos;
+      , State_of_Operation__c = &apos;MI&apos;
+      , State_of_Operation__c = &apos;MT&apos;
+      , State_of_Operation__c = &apos;NE&apos;
+      , State_of_Operation__c = &apos;NV&apos;
+      , State_of_Operation__c = &apos;ND&apos;
+      , State_of_Operation__c = &apos;MP&apos;
+      , State_of_Operation__c = &apos;OH&apos;
+      , State_of_Operation__c = &apos;OR&apos;
+      , State_of_Operation__c = &apos;PR&apos;
+      , State_of_Operation__c = &apos;RI&apos;
+      , State_of_Operation__c = &apos;SD&apos;
+      , State_of_Operation__c = &apos;VT&apos;
+      , State_of_Operation__c = &apos;WV&apos;
+      /*  
+        FICO_Score__c &lt; 500
+      */
+      /*
+      , Credit_Inquiries_Last_90_Days__c &gt; 20
+      */
+      , QC_Monthly_Sales__c &lt; 4167
+      /*
+      , Ave_Number_of_Deposits_per_Month__c &lt; 3
+      */
+      , Average_Monthly_Negative_Balance__c &gt; 7
+      , Business_Open_Date__c &gt; (Today() - (30*6))
+      , Industry__r.Headway_Capital__c = TRUE 
+      , Average_Balancce__c &lt; 374
+      , ispickval(Entity_Type__c,&apos;Non-Profit&apos;)
+      /*
+      , Soft_Pull_Only__c = TRUE
+      , MCA_Only__c = TRUE
+      */
+      ,
+       /*
+       AND( 
+            Bankruptcy__c = TRUE
+           , OR( Bankruptcy_Discharge_Date__c &gt; (today()-(1))
+                ,ISNULL(Bankruptcy_Discharge_Date__c)
+               )
+           )
+      ,
+      */
+      /*
+        AND(
+              Tax_Liens__c = FALSE
+            , Tax_Lien_Balance__c &gt; 10000
+        ) 
+      , 
+        AND(
+              Tax_Liens__c = TRUE
+            , Tax_Lien_Balance__c &lt; 0
+        )
+      ,
+       */ 
+        IF( 
+            Position__c &gt; 1 /*Fixed - DON&apos;T CHANGE VALUE FOR ANY PARTNER*/
+          ,  
+            Number_of_Competitor_Balances__c &gt;= 1 /*Deepest Position*/
+          , 
+            OR(
+                 Number_of_Competitor_Balances__c &gt; 0 /*Max # of Payoffs*/
+               , Sum_of_Competitor_Balances__c &gt; 1 /*Max Payoff Amount*/
+               , 1 -(Sum_of_Competitor_Balances__c / QC_Monthly_Sales__c) &lt; 1 /*Balance Net %*/
+              )
+          )
+)
+, &quot;&quot;
+, &quot;HEADWAY APPROVED&quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Headway Capital</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Home_Based__c</fullName>
+        <externalId>false</externalId>
+        <label>Home Based?</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>No</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Yes</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Industry__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Industry</label>
+        <referenceTo>Industry__c</referenceTo>
+        <relationshipLabel>Marbles</relationshipLabel>
+        <relationshipName>Marbles</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Interface_Financial__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(
+   OR(  /* uncomment if necessary
+        State_of_Operation__c = &apos;WV&apos;
+        */
+        FICO_Score__c &lt; 550
+/*
+      , Credit_Inquiries_Last_90_Days__c &gt; 20
+*/
+/*
+      , QC_Monthly_Sales__c &lt; 20000
+*/
+/*
+      , Ave_Number_of_Deposits_per_Month__c &lt; 3
+*/
+/*
+      , Average_Monthly_Negative_Balance__c &gt; 5
+*/
+/*
+      , Business_Open_Date__c &gt; (Today() - (30*6))
+*/
+      , Bankruptcy_Discharge_Date__c &gt; (today()-(30*36))
+      , Industry__r.Interface_Financial__c = TRUE 
+      , Receivables_or_Unpaid_Invoices__c = FALSE
+/*
+      , Average_Balancce__c &lt; 0
+*/
+/*
+      , ispickval(Entity_Type__c,&apos;Non-Profit&apos;)
+*/
+/*
+      , Soft_Pull_Only__c = TRUE
+*/
+      , MCA_Only__c = TRUE
+/*
+      ,
+        AND(
+              Tax_Liens__c = FALSE
+            , Tax_Lien_Balance__c &gt; 10000
+        ) 
+      , 
+        AND(
+              Tax_Liens__c = TRUE
+            , Tax_Lien_Balance__c &lt; 0
+        )
+*/
+      ,
+        AND(
+              Industry__r.Name = &apos;Trucking&apos; 
+            , QC_Monthly_Sales__c &lt; 20000
+            , Business_Open_Date__c &gt; (today() - (30*3))
+        )
+      ,
+        IF( 
+            Position__c &gt; 1 /*Fixed - DON&apos;T CHANGE VALUE FOR ANY PARTNER*/
+          ,  
+            OR(
+                 Position__c &gt;= Number_of_Competitor_Balances__c
+               , Number_of_Competitor_Balances__c &gt;= 1 /*Deepest Position*/
+              )
+          , 
+            OR(
+                 Number_of_Competitor_Balances__c &gt; 1 /*Max # of Payoffs*/
+               , Sum_of_Competitor_Balances__c &gt; 10000000 /*Max Payoff Amount*/
+               , 1 -(Sum_of_Competitor_Balances__c / QC_Monthly_Sales__c) &lt; 0 /*Balance Net %*/
+              )
+          )
+)
+, &quot;&quot;
+, &quot;INTERFACE APPROVED&quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Interface Financial</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Invoice__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Does the business invoice their clients?</description>
+        <externalId>false</externalId>
+        <label>Invoice</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Iron_Horse_Credit__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(
+   OR(  /* uncomment if necessary
+        State_of_Operation__c = &apos;&apos;
+        */
+        /* uncomment if necessary
+      , FICO_Score__c &lt; 500
+        */
+        /* uncomment if necessary
+      , Credit_Inquiries_Last_90_Days__c &gt; 20
+        */
+        /* uncomment if necessary
+      , QC_Monthly_Sales__c &lt; 10000
+        */
+        /* uncomment if necessary
+      , Ave_Number_of_Deposits_per_Month__c &lt; 3
+        */
+        /* uncomment if necessary
+      , Average_Monthly_Negative_Balance__c &gt; 5
+        */
+        /* uncomment if necessary
+      , Business_Open_Date__c &gt; (Today() - (30*6))
+        */
+        
+        Industry__r.Iron_Horse_Credit__c = TRUE
+
+      , Receivables_or_Unpaid_Invoices__c = FALSE
+       
+        /* uncomment if necessary
+      , Average_Balancce__c &lt; 0
+        */
+        /* uncomment if necessary 
+      , ispickval(Entity_Type__c,&apos;Non-Profit&apos;)
+        */
+        /* uncomment if necessary
+      , Soft_Pull_Only__c = TRUE
+        */
+      , MCA_Only__c = TRUE
+        /* uncomment if necessary
+      ,
+       AND( 
+            Bankruptcy__c = TRUE
+           , OR( Bankruptcy_Discharge_Date__c &gt; (today()-(1))
+                ,ISNULL(Bankruptcy_Discharge_Date__c)
+               )
+           )
+        */
+      ,
+        AND(
+              Tax_Liens__c = FALSE
+            , Tax_Lien_Balance__c &gt; 0
+        ) 
+      , 
+        AND(
+              Tax_Liens__c = TRUE
+            , Tax_Lien_Balance__c &gt; 0
+        )
+      ,
+        IF( 
+            Position__c &gt; 1 /*Fixed - DON&apos;T CHANGE VALUE FOR ANY PARTNER*/
+          ,  
+            AND(
+                 Position__c &gt;= Number_of_Competitor_Balances__c
+               , Number_of_Competitor_Balances__c &gt;= 1 /*Deepest Position*/
+              )
+          , 
+            OR(
+                 Number_of_Competitor_Balances__c &gt; 10 /*Max # of Payoffs*/
+               , Sum_of_Competitor_Balances__c &gt; 10000000 /*Max Payoff Amount*/
+               , 1 -(Sum_of_Competitor_Balances__c / QC_Monthly_Sales__c) &lt; 0 /*Balance Net %*/
+              )
+          )
+)
+, &quot;&quot;
+, &quot;IRON HORSE CREDIT APPROVED&quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Iron Horse Credit</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>KatalystFP__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(
+   OR(  
+        State_of_Operation__c = &apos;CA&apos; 
+      , FICO_Score__c &lt; 550
+        /* uncomment if necessary
+      , Credit_Inquiries_Last_90_Days__c &gt; 20
+        */
+      , QC_Monthly_Sales__c &lt; 20000
+      , Ave_Number_of_Deposits_per_Month__c &lt; 6
+      , Average_Monthly_Negative_Balance__c &gt; 5
+      , Business_Open_Date__c &gt; (Today() - (30*12))
+      , Industry__r.KatalystFP__c = TRUE 
+      , Average_Balancce__c &lt; ((QC_Monthly_Sales__c / 9) / 20)
+      , ispickval(Entity_Type__c,&apos;Non-Profit&apos;)
+        /* uncomment if necessary
+      , Soft_Pull_Only__c = TRUE
+        */
+      ,
+       AND( 
+            Bankruptcy__c = TRUE
+           , OR( Bankruptcy_Discharge_Date__c &gt; (today()-(1))
+                ,ISNULL(Bankruptcy_Discharge_Date__c)
+               )
+           )
+      ,
+        AND(
+              Tax_Liens__c = FALSE
+            , Tax_Lien_Balance__c &gt; QC_Monthly_Sales__c
+        ) 
+      , 
+        AND(
+              Tax_Liens__c = TRUE
+            , Tax_Lien_Balance__c &lt; 0
+        )
+
+      ,
+        IF( 
+            Position__c &gt; 1 /*Fixed - DON&apos;T CHANGE VALUE FOR ANY PARTNER*/
+          ,  
+            Number_of_Competitor_Balances__c &gt;= 2 /*Deepest Position*/
+          , 
+            OR(
+                 Number_of_Competitor_Balances__c &gt; 3 /*Max # of Payoffs*/
+               , Sum_of_Competitor_Balances__c &gt; 250000 /*Max Payoff Amount*/
+               , 1 -(Sum_of_Competitor_Balances__c / QC_Monthly_Sales__c) &lt; 0.25 /*Balance Net %*/
+              )
+          )
+)
+, &quot;&quot;
+, IF(  ispickval(Decline_Reason__c,&quot;Qualified at Rapid&quot;) ,&quot;||OVERQUALIFIED||&quot;
+, &quot;||PAUSED|| - KATALYSTFP APPROVED&quot;))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>KatalystFP</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Knight_Disqualified__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Knight Disqualified</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Knight_Quoted__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Knight Quoted</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Knight_Submitted__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Knight Submitted</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Knight__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(
+   OR(  /* uncomment if necessary
+        State_of_Operation__c = &apos;WV&apos;
+        */
+        FICO_Score__c &lt; 0
+        /* uncomment if necessary
+      , Credit_Inquiries_Last_90_Days__c &gt; 20
+        */
+      , QC_Monthly_Sales__c &lt; 10000
+        /* uncomment if necessary
+      , Ave_Number_of_Deposits_per_Month__c &lt; 3
+        */
+      , Average_Monthly_Negative_Balance__c &gt; 5
+      , Business_Open_Date__c &gt; (Today() - (30*3))
+      , Industry__r.Knight_Capital__c = TRUE
+      , Average_Balancce__c &lt; 0
+      , Current_Bank_Balance__c &lt; 0
+      , ispickval(Entity_Type__c,&apos;Non-Profit&apos;)
+      , No_Daily_Payment__c  = TRUE
+        /* uncomment if necessary
+      , Soft_Pull_Only__c = TRUE
+      , RapidAdvance_Balance__c = TRUE 
+
+        */
+      , MCA_Only__c = TRUE
+      ,
+       AND( 
+            Bankruptcy__c = TRUE
+           , OR( Bankruptcy_Discharge_Date__c &gt; (today()-(30*12))
+                ,ISNULL(Bankruptcy_Discharge_Date__c)
+               )
+           )
+      ,
+        AND(
+              Tax_Liens__c = FALSE
+            , Tax_Lien_Balance__c &gt; 0
+        ) 
+      , 
+        AND(
+              Tax_Liens__c = TRUE
+            , Tax_Lien_Balance__c &lt; 0
+        )
+      ,
+       /*Max Rev Take for Subordinated Positions*/ 
+       IF(
+           AND(
+                 Sum_of_Competitor_Balances__c &gt; 0
+               , Position__c &gt; 1
+              )
+          ,(Sum_of_Competitor_Balances__c / 10)/ QC_Monthly_Sales__c &gt; 0.18 /*Max Rev Take*/
+          , FALSE
+         ) 
+      ,
+        IF( 
+            Position__c &gt; 1 /*Fixed - DON&apos;T CHANGE VALUE FOR ANY PARTNER*/
+          ,  
+            Number_of_Competitor_Balances__c &gt;= 3 /*Deepest Position*/
+          , 
+            OR(
+                 Number_of_Competitor_Balances__c &gt; 0 /*Max # of Payoffs*/
+               , Sum_of_Competitor_Balances__c &gt; 150000 /*Max Payoff Amount*/
+               , 1 -(Sum_of_Competitor_Balances__c / QC_Monthly_Sales__c) &lt; 0 /*Balance Net %*/
+              )
+          )
+)
+, &quot;&quot;
+, IF(  ispickval(Decline_Reason__c,&quot;Qualified at Rapid&quot;) ,&quot;||OVERQUALIFIED||&quot;
+, &quot;KNIGHT APPROVED&quot;))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Knight</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Last_Five9_Lists__c</fullName>
+        <externalId>false</externalId>
+        <label>Last Five9 Lists</label>
+        <length>25</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Last_Funded_Date__c</fullName>
+        <description>The most recent date of funding from RapidAdvance or another finance source.  Used to determine if our partners will entertain offering additional financing at this time.</description>
+        <externalId>false</externalId>
+        <label>Last Funded Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Last_Status_Change_Timestamp__c</fullName>
+        <externalId>false</externalId>
+        <label>Last Status Change Timestamp</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Lead_Calc_Liink__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( ISNULL( Leadid__c ) ,
+HYPERLINK(&quot;https://calc.rapidadvance.com/lead/salesforcelead?id=&quot;&amp; Leadid__c, &quot;LEAD LINK&quot;),HYPERLINK(&quot;https://calc.rapidadvance.com/lead/salesforcelead?id=&quot;&amp; OpID__c, &quot;LEAD LINK&quot;))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Lead Calc Liink</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Lead_ID__c</fullName>
+        <externalId>false</externalId>
+        <label>Lead ID</label>
+        <length>30</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Lead_Opp_Link__c</fullName>
+        <externalId>false</externalId>
+        <formula>HYPERLINK(&quot;https://na33.salesforce.com/&quot;&amp; Opportunity_Reference__r.Lead_ID_Opp__c , &quot;Lead/Opp Link&quot; )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Lead Opp Link</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Lead_Reference__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Lead Reference</label>
+        <referenceTo>Lead</referenceTo>
+        <relationshipLabel>Marbles</relationshipLabel>
+        <relationshipName>Marbles</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Leadid__c</fullName>
+        <externalId>false</externalId>
+        <formula>Lead_Reference__r.LeadId18Char__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Leadid</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Legal_Name__c</fullName>
+        <externalId>false</externalId>
+        <formula>Opportunity_Reference__r.Legal_Name__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Legal Name</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LenCred__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(
+   OR(  /* uncomment if necessary
+        State_of_Operation__c = &apos;&apos;
+        */
+        FICO_Score__c &lt; 650
+        /* uncomment if necessary
+      , Credit_Inquiries_Last_90_Days__c &gt; 10
+        */
+        /* uncomment if necessary
+      , QC_Monthly_Sales__c &lt; 15000
+        */
+        /* uncomment if necessary
+      , Ave_Number_of_Deposits_per_Month__c &lt; 3
+        */
+        /* uncomment if necessary
+      , Average_Monthly_Negative_Balance__c &gt; 5
+        */
+        /*uncomment if necessary
+      , Business_Open_Date__c &gt; (Today() - (30*24))
+        */
+      ,  Bankruptcy__c = TRUE
+      ,  Industry__r.LenCred__c = TRUE
+         /* uncomment if necessary
+      , Average_Balancce__c &lt; 0
+        */
+        /* uncomment if necessary
+      , ispickval(Entity_Type__c,&apos;Non-Profit&apos;)
+        */
+        /* uncomment if necessary
+      , Soft_Pull_Only__c = TRUE
+        */
+      , MCA_Only__c = TRUE
+        /* uncomment if necessary
+      ,
+        AND(
+              Tax_Liens__c = FALSE
+            , Tax_Lien_Balance__c &gt; 0
+        ) 
+      , 
+        AND(
+              Tax_Liens__c = TRUE
+            , Tax_Lien_Balance__c &lt; 0
+        )
+        */
+)
+, &quot;&quot;
+, &quot;LENCRED APPROVED&quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>LenCred</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Lendio__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(
+   OR(  /* uncomment if necessary
+        State_of_Operation__c = &apos;WV&apos;
+        */
+        FICO_Score__c &lt; 500
+        /* uncomment if necessary
+      , Credit_Inquiries_Last_90_Days__c &gt; 20
+        */
+      , QC_Monthly_Sales__c &lt; 10000
+      , Ave_Number_of_Deposits_per_Month__c &lt; 0
+      , Average_Monthly_Negative_Balance__c &gt; 10
+      , Business_Open_Date__c &gt; (Today() - (30*6))
+      , Industry__r.Lendio__c = TRUE 
+      , Average_Balancce__c &lt; 100
+        /* uncomment if necessary
+      , ispickval(Entity_Type__c,&apos;Non-Profit&apos;)
+        */
+      , Soft_Pull_Only__c = TRUE
+      ,
+       AND( 
+            Bankruptcy__c = TRUE
+           , OR( Bankruptcy_Discharge_Date__c &gt; (today()-(30 * 12))
+                ,ISNULL(Bankruptcy_Discharge_Date__c)
+               )
+           )
+      ,
+        AND(
+              Tax_Liens__c = FALSE
+            , Tax_Lien_Balance__c &gt; 500000
+        ) 
+      , 
+        AND(
+              Tax_Liens__c = TRUE
+            , Tax_Lien_Balance__c &lt; 0
+        )
+      ,
+        IF( 
+            Position__c &gt; 1 /*Fixed - DON&apos;T CHANGE VALUE FOR ANY PARTNER*/
+          ,  
+            Number_of_Competitor_Balances__c &gt;= 10 /*Deepest Position*/
+          , 
+            OR(
+                 Number_of_Competitor_Balances__c &gt; 10 /*Max # of Payoffs*/
+               , Sum_of_Competitor_Balances__c &gt; 500000 /*Max Payoff Amount*/
+               , 1 -(Sum_of_Competitor_Balances__c / QC_Monthly_Sales__c) &lt; 0 /*Balance Net %*/
+              )
+          )
+)
+, &quot;&quot;
+, &quot;LENDIO APPROVED&quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Lendio</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Lendistry_MCA__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(
+   OR(  
+        FICO_Score__c &lt; 640
+      , QC_Monthly_Sales__c &lt; 100000 /*Rapid Imposed Limit, Lendistry min is $25K */
+      , Ave_Number_of_Deposits_per_Month__c &lt; 5
+      , Average_Monthly_Negative_Balance__c &gt; 3
+      , Business_Open_Date__c &gt; (Today() - (30*24))
+      , Industry__r.Lendistry__c = TRUE 
+      , Average_Balancce__c &lt; 5000
+      , ispickval(Entity_Type__c,&apos;Non-Profit&apos;)
+
+        /* uncomment if necessary
+      , Soft_Pull_Only__c = TRUE
+        */
+      ,
+       AND( 
+            Bankruptcy__c = TRUE
+           , OR( Bankruptcy_Discharge_Date__c &gt; (today()-(30*36))
+                ,ISNULL(Bankruptcy_Discharge_Date__c)
+               )
+           )
+      ,
+        AND(
+              Tax_Liens__c = FALSE
+            , Tax_Lien_Balance__c &gt; 0
+        ) 
+      , 
+        AND(
+              Tax_Liens__c = TRUE
+            , Tax_Lien_Balance__c &lt; 0
+        )
+      ,
+        IF( 
+            Position__c &gt; 1 /*Fixed - DON&apos;T CHANGE VALUE FOR ANY PARTNER*/
+          ,  
+            Number_of_Competitor_Balances__c &gt;= 1 /*Deepest Position*/
+          , 
+            OR(
+                 Number_of_Competitor_Balances__c &gt; 3 /*Max # of Payoffs*/
+               , Sum_of_Competitor_Balances__c &gt; 250000 /*Max Payoff Amount*/
+               , 1 -(Sum_of_Competitor_Balances__c / QC_Monthly_Sales__c) &lt; 0.5 /*Balance Net %*/
+              )
+          )
+)
+, &quot;&quot;
+, &quot;LENDISTRY MCA APPROVED&quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Lendistry MCA</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Lendr_Disqualified__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Lendr Disqualified</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Lendr_Quoted__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Lendr Quoted</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Lendr_Submitted__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Lendr Submitted</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Lendr__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( 
+OR(
+
+OR(
+State_of_Operation__c = &apos;HI&apos;
+, State_of_Operation__c = &apos;AK&apos;
+)
+
+, FICO_Score__c &lt; 520
+
+/* uncomment if necessary 
+, Credit_Inquiries_Last_90_Days__c &gt; 15 
+*/
+
+, QC_Monthly_Sales__c &lt; 10000
+, Ave_Number_of_Deposits_per_Month__c &lt; 7 
+, Average_Monthly_Negative_Balance__c &gt; 2
+, Average_Balancce__c &lt; 0
+, Current_Bank_Balance__c &lt; 0
+, ispickval(Citizenship_Status__c,&apos;Visa&apos;)
+, ispickval(Citizenship_Status__c,&apos;Green Card&apos;) 
+, Business_Open_Date__c &gt; (today() - (30*12)) 
+, Industry__r.Lendr__c = TRUE
+, Last_Funded_Date__c &gt; (Today() - (30*1))
+
+/* uncomment if necessary 
+, ispickval(Entity_Type__c,&apos;Non-Profit&apos;) 
+*/
+
+/*
+, Soft_Pull_Only__c = TRUE 
+*/
+, MCA_Only__c = TRUE
+
+,
+AND(
+  ispickval(Home_Based__c,&apos;Yes&apos;)
+,Business_Open_Date__c &gt; (today() - (30*36)) 
+)
+
+,
+AND( 
+Bankruptcy__c = TRUE
+,OR( Bankruptcy_Discharge_Date__c &gt; (today()-(30*12))
+,ISNULL(Bankruptcy_Discharge_Date__c)
+)
+)
+
+, 
+AND( 
+Tax_Liens__c = FALSE
+, Tax_Lien_Balance__c &gt; 0 
+) 
+, 
+AND( 
+Tax_Liens__c = TRUE
+, Tax_Lien_Balance__c &lt; 0 
+) 
+, 
+        AND(
+              Industry__r.Name = &apos;Trucking&apos; 
+            , Business_Open_Date__c &gt; (today() - (30*36))
+        )
+      ,
+        AND(
+              Industry__r.Name = &apos;Construction&apos; 
+            , Business_Open_Date__c &gt; (today() - (30*36))
+        )
+      ,
+        IF( 
+            Position__c &gt; 1 /*Fixed - DON&apos;T CHANGE VALUE FOR ANY PARTNER*/
+          ,  
+            Number_of_Competitor_Balances__c &gt;= 1 /*Deepest Position*/
+          , 
+            OR(
+                 Number_of_Competitor_Balances__c &gt; 2 /*Max # of Payoffs*/
+               , Sum_of_Competitor_Balances__c &gt; 75000 /*Max Payoff Amount*/
+               , 1 -(Sum_of_Competitor_Balances__c / QC_Monthly_Sales__c) &lt; 0.6 /*Balance Net %*/
+              )
+          )
+
+) 
+, &quot;&quot; 
+, IF(  ispickval(Decline_Reason__c,&quot;Qualified at Rapid&quot;) ,&quot;||OVERQUALIFIED||&quot;
+, &quot;LENDR APPROVED&quot;))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Lendr</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Levy_Associates__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(
+   OR(  
+        Tax_Lien_Balance__c &lt; 20000
+      , Business_Open_Date__c &gt; (Today() - (30*6))
+      ,  Industry__r.Levy_Associates__c  = TRUE 
+      , Average_Balancce__c &lt; 5000
+      ,
+       AND( 
+            Bankruptcy__c = TRUE
+           , OR( Bankruptcy_Discharge_Date__c &gt; (today()-(1))
+                ,ISNULL(Bankruptcy_Discharge_Date__c)
+               )
+           )
+
+)
+, &quot;&quot;
+, &quot;LEVY &amp; ASSOCIATES APPROVED&quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Levy &amp; Associates</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Libertas_Contract_Request__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Libertas Contract Request</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Libertas_Disqualified__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Libertas Disqualified</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Libertas_Quoted__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Libertas Quoted</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Libertas_Submitted__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Libertas Submitted</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Libertas__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( 
+OR(
+
+/* uncomment if necessary
+State_of_Operation__c = &apos;HI&apos;
+*/
+
+FICO_Score__c &lt; 500
+
+/* uncomment if necessary 
+, Credit_Inquiries_Last_90_Days__c &gt; 15 
+*/
+
+, QC_Monthly_Sales__c &lt; 12500
+, Ave_Number_of_Deposits_per_Month__c &lt; 5 
+, Average_Monthly_Negative_Balance__c &gt; 4  
+, Business_Open_Date__c &gt; (today() - (30*6))  
+, Industry__r.Libertas__c = TRUE 
+, Average_Balancce__c &lt; 0
+
+/* uncomment if necessary 
+, ispickval(Entity_Type__c,&apos;Non-Profit&apos;) 
+*/
+
+/* uncomment if necessary
+, Soft_Pull_Only__c = TRUE 
+*/
+, MCA_Only__c = TRUE
+
+,
+AND( 
+Bankruptcy__c = TRUE
+,OR( Bankruptcy_Discharge_Date__c &gt; (today()-(30*6))
+,ISNULL(Bankruptcy_Discharge_Date__c)
+)
+)
+
+, 
+AND( 
+Tax_Liens__c = FALSE
+, Tax_Lien_Balance__c &gt; 0 
+) 
+, 
+AND( 
+Tax_Liens__c = TRUE
+, Tax_Lien_Balance__c &gt; 120000 
+) 
+,
+        AND(
+              Industry__r.Name = &apos;Trucking&apos; 
+            , QC_Monthly_Sales__c &lt; 30000
+            , Business_Open_Date__c &gt; (today() - (30*12))
+        )
+      ,
+        AND(
+              Industry__r.Name = &apos;Construction&apos; 
+             ,Ave_Number_of_Deposits_per_Month__c &lt; 13
+        )
+      ,
+        IF( 
+            Position__c &gt; 1 /*Fixed - DON&apos;T CHANGE VALUE FOR ANY PARTNER*/
+          ,  
+            Number_of_Competitor_Balances__c &gt;= 3 /*Deepest Position*/  
+          , 
+            OR(
+                 Number_of_Competitor_Balances__c &gt; 2 /*Max # of Payoffs*/
+               , Sum_of_Competitor_Balances__c &gt; 75000 /*Max Payoff Amount*/
+               , 1 -(Sum_of_Competitor_Balances__c / QC_Monthly_Sales__c) &lt; 0.5 /*Balance Net %*/
+              )
+          )
+      ,
+       /*Max Rev Take for Subordinated Positions*/ 
+       IF(
+           AND(
+                 Sum_of_Competitor_Balances__c &gt; 0
+               , Position__c &gt; 1
+              )
+          ,(Sum_of_Competitor_Balances__c / 10)/ QC_Monthly_Sales__c &gt; 0.2 /*Max Rev Take*/
+          , FALSE
+         )     
+
+) 
+, &quot;&quot;
+, IF(  ispickval(Decline_Reason__c,&quot;Qualified at Rapid&quot;) ,&quot;||OVERQUALIFIED||&quot;
+, &quot;||PAUSED|| - LIBERTAS APPROVED&quot;))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Libertas</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MAC_Disqualified__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>MAC Disqualified</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>MAC_Quoted__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>MAC Quoted</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>MAC_Submitted__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>MAC Submitted</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>MCA_Only__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>MCA Only</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Marble_Rejection_Reason__c</fullName>
+        <description>Picklist for reject reason (requested by Zach Flood 10/25/2017)</description>
+        <externalId>false</externalId>
+        <label>Marble Rejection Reason</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Industry,</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Monthly Sales,</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Average Daily Balance,</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Negative Days,</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Deposits Per Month,</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Number of Competitor Balances,</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>RapidAdvance Balance,</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Home Based,</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Decline Reason,</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Application Data,</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Oops,</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Missing Folder</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>NAICSSIC__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Need Help, go here: https://www.naics.com/search/</inlineHelpText>
+        <label>NAICS / SIC CODE</label>
+        <length>100</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>NAICS_Description__c</fullName>
+        <description>What is the industry description</description>
+        <externalId>false</externalId>
+        <label>NAICS Description</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>National_Disqualified__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>National Disqualified</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>National_Quoted__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>National Quoted</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>National_Submitted__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>National Submitted</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>National__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(
+   OR(  /* uncomment if necessary
+        State_of_Operation__c = &apos;WV&apos;
+        */
+        FICO_Score__c &lt; 525
+        /* uncomment if necessary
+      , Credit_Inquiries_Last_90_Days__c &gt; 20
+        */
+      , QC_Monthly_Sales__c &lt; 12500
+        /* uncomment if necessary
+      , Ave_Number_of_Deposits_per_Month__c &lt; 3
+        */
+      , Average_Monthly_Negative_Balance__c &gt; 3
+      , Business_Open_Date__c &gt; (today() - (30*12))
+      , Industry__r.National_Funding__c = TRUE
+      , Average_Balancce__c &lt; 1500
+        /* uncomment if necessary
+      , ispickval(Entity_Type__c,&apos;Non-Profit&apos;)
+        */
+        /* uncomment if necessary
+      , Soft_Pull_Only__c = TRUE
+        */
+      ,  MCA_Only__c = TRUE
+      ,
+       AND( 
+            Bankruptcy__c = TRUE
+           , OR( Bankruptcy_Discharge_Date__c &gt; (today()-(30*12))
+                ,ISNULL(Bankruptcy_Discharge_Date__c)
+               )
+           )
+      ,
+        AND(
+              Tax_Liens__c = FALSE
+            , Tax_Lien_Balance__c &gt; 175000
+        ) 
+      , 
+        AND(
+              Tax_Liens__c = TRUE
+            , Tax_Lien_Balance__c &lt; 0
+        )
+      ,
+        AND(
+              Industry__r.Name = &apos;Trucking&apos; 
+            , QC_Monthly_Sales__c &lt; 50000
+            , FICO_Score__c &lt; 650
+        )
+      ,
+        IF( 
+            Position__c &gt; 1 /*Fixed - DON&apos;T CHANGE VALUE FOR ANY PARTNER*/
+          ,  
+            Number_of_Competitor_Balances__c &gt;= 1 /*Deepest Position*/
+          , 
+            OR(
+                 Number_of_Competitor_Balances__c &gt; 1 /*Max # of Payoffs*/
+                 /* uncomment if necessary
+               , Sum_of_Competitor_Balances__c &gt; 150000 
+                 */
+               , 1 -(Sum_of_Competitor_Balances__c / QC_Monthly_Sales__c) &lt; 0.8 /*Balance Net %*/
+              )
+          )
+)
+, &quot;&quot;
+, &quot;NATIONAL APPROVED&quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>National</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>No_Daily_Payment__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>No Daily Payment</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Number_of_Competitor_Balances__c</fullName>
+        <externalId>false</externalId>
+        <label>Number of Competitor Balances</label>
+        <precision>2</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>OpID__c</fullName>
+        <externalId>false</externalId>
+        <formula>Opportunity_Reference__r.Lead_ID_Opp__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>OpID</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Opportunity_Reference__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Opportunity</label>
+        <referenceTo>Opportunity</referenceTo>
+        <relationshipLabel>Marbles</relationshipLabel>
+        <relationshipName>Marbles</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Partner_Submission_Complete__c</fullName>
+        <externalId>false</externalId>
+        <label>Partner Submission Complete</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Path__c</fullName>
+        <defaultValue>&quot;//fs5/office/Broker_Out_Documents/&quot;</defaultValue>
+        <externalId>false</externalId>
+        <label>Path</label>
+        <length>200</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Payment_Amount__c</fullName>
+        <externalId>false</externalId>
+        <label>Payment Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Phone__c</fullName>
+        <externalId>false</externalId>
+        <label>Phone Number</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Phone</type>
+    </fields>
+    <fields>
+        <fullName>Platinum_Disqualified__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Platinum Disqualified</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Platinum_Quoted__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Platinum Quoted</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Platinum_Rapid__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(
+   OR(  
+        State_of_Operation__c = &apos;AK&apos;
+      , State_of_Operation__c = &apos;HI&apos;
+      , FICO_Score__c &lt; 550
+/*
+      , Credit_Inquiries_Last_90_Days__c &gt; 20
+*/
+      , QC_Monthly_Sales__c &lt; 10000
+      , Ave_Number_of_Deposits_per_Month__c &lt; 5
+      , Average_Monthly_Negative_Balance__c &gt; 4
+      , Business_Open_Date__c &gt; (Today() - (30*12))
+      , Industry__r.Platinum_Rapid__c = TRUE 
+      , Average_Balancce__c &lt; 1000
+      , ispickval(Entity_Type__c,&apos;Non-Profit&apos;)
+      , Soft_Pull_Only__c = TRUE
+      ,
+       AND( 
+            Bankruptcy__c = TRUE
+           , OR( Bankruptcy_Discharge_Date__c &gt; (today()-(30*12))
+                ,ISNULL(Bankruptcy_Discharge_Date__c)
+               )
+           )
+      ,
+        AND(
+              Tax_Liens__c = FALSE
+            , Tax_Lien_Balance__c &gt; 10000
+        ) 
+      , 
+        AND(
+              Tax_Liens__c = TRUE
+            , Tax_Lien_Balance__c &lt; 0
+        )
+      ,
+        AND(
+              Industry__r.Name = &apos;Trucking&apos; 
+            , Business_Open_Date__c &gt; (today() - (30*36))
+        )
+      ,
+       /*Max Rev Take for Subordinated Positions*/ 
+       IF(
+           AND(
+                 Sum_of_Competitor_Balances__c &gt; 0
+               , Position__c &gt; 1
+              )
+          ,(Sum_of_Competitor_Balances__c / 10)/ QC_Monthly_Sales__c &gt; 0.25 /*Max Rev Take*/
+          , FALSE
+         ) 
+      ,
+        IF( 
+            Position__c &gt; 1 /*Fixed - DON&apos;T CHANGE VALUE FOR ANY PARTNER*/
+          ,  
+            Number_of_Competitor_Balances__c &gt;= 3 /*Deepest Position*/
+          , 
+            OR(
+                 Number_of_Competitor_Balances__c &gt; 1 /*Max # of Payoffs*/
+               , Sum_of_Competitor_Balances__c &gt; 150000 /*Max Payoff Amount*/
+               , 1 -(Sum_of_Competitor_Balances__c / QC_Monthly_Sales__c) &lt; 0.5 /*Balance Net %*/
+              )
+          )
+)
+, &quot;&quot;
+, IF(  ispickval(Decline_Reason__c,&quot;Qualified at Rapid&quot;) ,&quot;||OVERQUALIFIED||&quot;
+, &quot;||PAUSED|| - PLATINUM RAPID APPROVED&quot;))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Platinum Rapid</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Platinum_Submitted__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Platinum Submitted</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Position__c</fullName>
+        <externalId>false</externalId>
+        <label>Position</label>
+        <precision>1</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Principis_Capital__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( 
+OR(
+
+/* uncomment if necessary
+State_of_Operation__c = &apos;HI&apos;
+*/
+
+/* uncomment if necessary
+FICO_Score__c &lt; 500
+*/
+
+/* uncomment if necessary 
+, Credit_Inquiries_Last_90_Days__c &gt; 15 
+*/
+
+  QC_Monthly_Sales__c &lt; 10000
+, Ave_Number_of_Deposits_per_Month__c &lt; 7 
+, Average_Monthly_Negative_Balance__c &gt; 5  
+, Business_Open_Date__c &gt; (today() - (30*12))  
+, Industry__r.Principis_Capital__c = TRUE
+, RapidAdvance_Balance__c = TRUE 
+, MCA_Only__c = TRUE
+
+/* uncomment if necessary
+, Average_Balancce__c &lt; 0
+, Current_Bank_Balance__c &lt; 0
+, ispickval(Citizenship_Status__c,&apos;Visa&apos;) 
+*/
+
+, ispickval(Entity_Type__c,&apos;Non-Profit&apos;) 
+
+, Soft_Pull_Only__c = TRUE 
+
+/*uncomment
+,
+AND(
+ ispickval(Home_Based__c,&apos;Yes&apos;)
+,Industry__r.Name = &apos;Construction&apos;
+)
+*/
+
+,
+AND( 
+Bankruptcy__c = TRUE
+,OR( Bankruptcy_Discharge_Date__c &gt; (today()-(30*12))
+,ISNULL(Bankruptcy_Discharge_Date__c)
+)
+)
+
+, 
+AND( 
+Tax_Liens__c = FALSE
+, Tax_Lien_Balance__c &gt; (3 * QC_Monthly_Sales__c) 
+) 
+, 
+AND( 
+Tax_Liens__c = TRUE
+, Tax_Lien_Balance__c &lt; 0 
+)
+,
+        AND(
+              Industry__r.Name = &apos;Construction&apos; 
+             ,Business_Open_Date__c &gt; (today() - (30*120))
+            )
+      , 
+   
+        IF( 
+            Position__c &gt; 1 /*Fixed - DON&apos;T CHANGE VALUE FOR ANY PARTNER*/
+          ,  
+            Number_of_Competitor_Balances__c &gt;= 1 /*Deepest Position*/  
+          , 
+            OR(
+                 Number_of_Competitor_Balances__c &gt; 2 /*Max # of Payoffs*/
+               , Sum_of_Competitor_Balances__c &gt; 60000 /*Max Payoff Amount*/
+               , 1 -(Sum_of_Competitor_Balances__c / QC_Monthly_Sales__c) &lt; 0.3 /*Balance Net %*/
+              )
+          )
+
+) 
+, &quot;&quot; 
+, IF(  ispickval(Decline_Reason__c,&quot;Qualified at Rapid&quot;) ,&quot;||OVERQUALIFIED||&quot;
+, &quot;PRINCIPIS CAPITAL APPROVED&quot;))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Principis Capital</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>QC_Monthly_Sales__c</fullName>
+        <externalId>false</externalId>
+        <formula>Opportunity_Reference__r.QC_Gross_Monthly_Sales__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Monthly Sales</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Quote_Received__c</fullName>
+        <externalId>false</externalId>
+        <label>Quote Received</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>RapidAdvance_Balance__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>RapidAdvance Balance?</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>RapidAdvance__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( 
+OR(
+
+OR(
+State_of_Operation__c = &apos;MT&apos;
+, State_of_Operation__c = &apos;NV&apos;
+, State_of_Operation__c = &apos;NJ&apos;
+, State_of_Operation__c = &apos;RI&apos;
+, State_of_Operation__c = &apos;SD&apos;
+)
+
+, FICO_Score__c &lt; 600
+, Credit_Inquiries_Last_90_Days__c &gt; 50 
+, QC_Monthly_Sales__c &lt; 5000
+, Ave_Number_of_Deposits_per_Month__c &lt; 5 
+, Average_Monthly_Negative_Balance__c &gt; 3 
+, Business_Open_Date__c &gt; (today() - (30*24)) 
+, Industry__r.RapidAdvance__c = TRUE
+, ispickval(Entity_Type__c,&apos;Non-Profit&apos;) 
+
+/*
+, Soft_Pull_Only__c = TRUE 
+*/
+
+,
+AND( 
+Bankruptcy__c = TRUE
+, OR( Bankruptcy_Discharge_Date__c &gt; (today()-(30*12))
+     ,ISNULL(Bankruptcy_Discharge_Date__c)
+    )
+)
+, 
+AND( 
+Tax_Liens__c = FALSE
+, Tax_Lien_Balance__c &gt; 0 
+) 
+, 
+AND( 
+Tax_Liens__c = TRUE
+, Tax_Lien_Balance__c &gt; 75000 
+) 
+, 
+        AND(
+              Industry__r.Name = &apos;Trucking&apos; 
+            , Business_Open_Date__c &gt; (today() - (30*36))
+        )
+      ,
+
+        IF( 
+            Position__c &gt; 1 /*Fixed - DON&apos;T CHANGE VALUE FOR ANY PARTNER*/
+          ,  
+            Number_of_Competitor_Balances__c &gt;= 1 /*Deepest Position*/
+          , 
+            OR(
+                 Number_of_Competitor_Balances__c &gt; 6 /*Max # of Payoffs*/
+               , Sum_of_Competitor_Balances__c &gt; 75000 /*Max Payoff Amount*/
+               , 1 -(Sum_of_Competitor_Balances__c / QC_Monthly_Sales__c) &lt; 0.4 /*Balance Net %*/
+              )
+          )
+
+) 
+, &quot;&quot; 
+, &quot;RAPIDADVANCE APPROVED&quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>RapidAdvance</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Receivables_or_Unpaid_Invoices__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Receivables or Unpaid Invoices</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Recommendation__c</fullName>
+        <description>For specific partner lists</description>
+        <externalId>false</externalId>
+        <label>Recommendation</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Requested_Short__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Requested Short</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Requested_Submission__c</fullName>
+        <externalId>false</externalId>
+        <label>Requested Submission</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>RocketLoans__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(
+   OR(  
+        FICO_Score__c &lt; 680
+      , QC_Monthly_Sales__c &lt; 2000
+      , MCA_Only__c = TRUE
+)
+, &quot;&quot;
+, &quot;ROCKETLOANS APPROVED&quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>RocketLoans</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SFID__c</fullName>
+        <externalId>false</externalId>
+        <formula>Id</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>SFID</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SUPER_G__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(
+   OR(  /* uncomment if necessary
+        State_of_Operation__c = &apos;WV&apos;
+        */
+        /* uncomment if necessary
+        FICO_Score__c &lt; 500
+        */
+        /* uncomment if necessary
+        Credit_Inquiries_Last_90_Days__c &gt; 20
+        */
+        QC_Monthly_Sales__c &lt; 600000
+      , Ave_Number_of_Deposits_per_Month__c &lt; 5
+      , Average_Monthly_Negative_Balance__c &gt; 4
+      , Business_Open_Date__c &gt; (Today() - (30*12))
+      , Bankruptcy_Discharge_Date__c &gt; (today()-(30*12))
+      ,  Industry__r.Super_G__c = TRUE
+      , Average_Balancce__c &lt; 0
+        /* uncomment if necessary
+      , ispickval(Entity_Type__c,&apos;Non-Profit&apos;)
+        */
+        /* uncomment if necessary
+      , Soft_Pull_Only__c = TRUE
+      , MCA_Only__c = TRUE
+        */
+      ,
+        AND(
+              Tax_Liens__c = FALSE
+            , Tax_Lien_Balance__c &gt; 0
+        ) 
+      , 
+        AND(
+              Tax_Liens__c = TRUE
+            , Tax_Lien_Balance__c &lt; 0
+        )
+      ,
+        IF( 
+            Position__c &gt; 1 /*Fixed - DON&apos;T CHANGE VALUE FOR ANY PARTNER*/
+          ,  
+            AND(
+                 Position__c &gt;= Number_of_Competitor_Balances__c
+               , Number_of_Competitor_Balances__c &gt;= 2 /*Deepest Position*/
+              )
+          , 
+            OR(
+                 Number_of_Competitor_Balances__c &gt; 5 /*Max # of Payoffs*/
+               , Sum_of_Competitor_Balances__c &lt; 0 /*Max Payoff Amount*/
+               , (Sum_of_Competitor_Balances__c / QC_Monthly_Sales__c) &lt; 0 /*Balance Net %*/
+              )
+          )
+)
+, &quot;&quot;
+, &quot;SUPER G APPROVED&quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>SUPER G</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Seek_Capital__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(
+   OR(  /* uncomment if necessary
+        State_of_Operation__c = &apos;&apos;
+        */
+        FICO_Score__c &lt; 680
+      , Credit_Inquiries_Last_90_Days__c &gt; 10
+        /* uncomment if necessary
+      , QC_Monthly_Sales__c &lt; 15000
+        */
+        /* uncomment if necessary
+      , Ave_Number_of_Deposits_per_Month__c &lt; 3
+        */
+        /* uncomment if necessary
+      , Average_Monthly_Negative_Balance__c &gt; 5
+        */
+        /*uncomment if necessary
+      , Business_Open_Date__c &gt; (Today() - (30*24))
+        */
+      , Bankruptcy_Discharge_Date__c &gt; (today()-(1))
+      ,  Industry__r.Seek__c = TRUE
+         /* uncomment if necessary
+      , Average_Balancce__c &lt; 0
+        */
+        /* uncomment if necessary
+      , ispickval(Entity_Type__c,&apos;Non-Profit&apos;)
+        */
+        /* uncomment if necessary
+      , Soft_Pull_Only__c = TRUE
+        */
+      , MCA_Only__c = TRUE
+        /* uncomment if necessary
+      ,
+        AND(
+              Tax_Liens__c = FALSE
+            , Tax_Lien_Balance__c &lt; 0
+        ) 
+      , 
+        AND(
+              Tax_Liens__c = TRUE
+            , Tax_Lien_Balance__c &lt; 0
+        )
+        */
+)
+, &quot;&quot;
+, &quot;SEEK CAPITAL APPROVED&quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Seek Capital</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Seek_Submission__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Seek Submission</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Selection_Notes__c</fullName>
+        <externalId>false</externalId>
+        <label>Selection Notes</label>
+        <length>32768</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>25</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Signed_Contract__c</fullName>
+        <externalId>false</externalId>
+        <label>Signed Contract</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Signed__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Signed Contract</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Smartbiz_Submission__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Smartbiz Submission</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Smartbiz__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(
+   OR(  /* uncomment if necessary
+        State_of_Operation__c = &apos;&apos;
+        */
+        FICO_Score__c &lt; 600
+        /* uncomment if necessary
+      , Credit_Inquiries_Last_90_Days__c &gt; 20
+        */
+      , QC_Monthly_Sales__c &lt; 15000
+        /* uncomment if necessary
+      , Ave_Number_of_Deposits_per_Month__c &lt; 3
+        */
+        /* uncomment if necessary
+      , Average_Monthly_Negative_Balance__c &gt; 5
+        */
+      , Business_Open_Date__c &gt; (Today() - (30*24))
+      , Bankruptcy_Discharge_Date__c &gt; (today()-(30*36))
+        /* uncomment if necessary
+      , Smartbiz_Industry__c = TRUE
+        */
+        /* uncomment if necessary
+      , Average_Balancce__c &lt; 0
+        */
+        /* uncomment if necessary
+      , ispickval(Entity_Type__c,&apos;Non-Profit&apos;)
+        */
+        /* uncomment if necessary
+      , Soft_Pull_Only__c = TRUE
+      , MCA_Only__c = TRUE
+        */
+      ,
+        AND(
+              Tax_Liens__c = FALSE
+            , Tax_Lien_Balance__c &lt; 0
+        ) 
+      , 
+        AND(
+              Tax_Liens__c = TRUE
+            , Tax_Lien_Balance__c &lt; 0
+        )
+      ,
+        AND(
+              Industry__r.Name = &apos;Trucking&apos; 
+            , Business_Open_Date__c &gt; (today() - (30*24))
+        )
+      ,
+        IF( 
+            Position__c &gt; 1 /*Fixed - DON&apos;T CHANGE VALUE FOR ANY PARTNER*/
+          ,  
+            OR(
+                 Position__c &gt;= Number_of_Competitor_Balances__c
+               , Number_of_Competitor_Balances__c &gt;= 1 /*Deepest Position*/
+              )
+          , 
+            OR(
+                 Number_of_Competitor_Balances__c &gt; 0 /*Max # of Payoffs*/
+               , Sum_of_Competitor_Balances__c &gt; 0 /*Max Payoff Amount*/
+               , 1 -(Sum_of_Competitor_Balances__c / QC_Monthly_Sales__c) &lt; 0.0 /*Balance Net %*/
+              )
+          )
+)
+, &quot;&quot;
+, &quot;SMARTBIZ APPROVED&quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Smartbiz</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Snap_Advances__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(
+   OR( 
+        /* uncomment if necessary
+        State_of_Operation__c = &apos;CA&apos;
+        */
+
+        FICO_Score__c &lt; 530
+/*
+      , Credit_Inquiries_Last_90_Days__c &gt; 20
+*/
+      , QC_Monthly_Sales__c &lt; 10000
+      , Ave_Number_of_Deposits_per_Month__c &lt; 5
+      , Average_Monthly_Negative_Balance__c &gt; 2
+      , Business_Open_Date__c &gt; (Today() - (30*3))
+      , Industry__r.Snap_Advances__c = TRUE 
+      , Average_Balancce__c &lt; 1500
+      , Current_Bank_Balance__c &lt; 0
+      , ispickval(Citizenship_Status__c,&apos;Visa&apos;) 
+      , ispickval(Entity_Type__c,&apos;Non-Profit&apos;)
+      , RapidAdvance_Balance__c = TRUE
+      , Last_Funded_Date__c &gt; (Today() - (30*1))
+/*
+      , Soft_Pull_Only__c = TRUE
+*/
+      ,
+       AND( 
+            Bankruptcy__c = TRUE
+           , OR( Bankruptcy_Discharge_Date__c &gt; (today()-(30*1200))
+                ,ISNULL(Bankruptcy_Discharge_Date__c)
+               )
+           )
+      ,
+        AND(
+              Tax_Liens__c = FALSE
+            , Tax_Lien_Balance__c &gt; 0
+        ) 
+      , 
+        AND(
+              Tax_Liens__c = TRUE
+            , Tax_Lien_Balance__c &lt; 300000
+        )
+      ,
+        IF( 
+            Position__c &gt; 1 /*Fixed - DON&apos;T CHANGE VALUE FOR ANY PARTNER*/
+          ,  
+            Number_of_Competitor_Balances__c &gt;= 1 /*Deepest Position*/
+          , 
+            OR(
+                 Number_of_Competitor_Balances__c &gt; 1 /*Max # of Payoffs*/
+               , Sum_of_Competitor_Balances__c &gt; 250000 /*Max Payoff Amount*/
+               , 1 -(Sum_of_Competitor_Balances__c / QC_Monthly_Sales__c) &lt; 0.55 /*Balance Net %*/
+              )
+          )
+)
+, &quot;&quot;
+, &quot;SNAP APPROVED&quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Snap Advances</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Snap_Disqualified__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Snap Disqualified</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Snap_Quoted__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Snap Quoted</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Snap_Submitted__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Snap Submitted</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Soft_Pull_Only__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Soft Pull Only</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>State_of_Operation__c</fullName>
+        <externalId>false</externalId>
+        <formula>Opportunity_Reference__r.Billing_State__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>State of Operation</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Status__c</fullName>
+        <externalId>false</externalId>
+        <label>Status</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>NEW</fullName>
+                    <default>true</default>
+                </value>
+                <value>
+                    <fullName>No Contact</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Contacted</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Waiting on Documents</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Pre-Approved</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Approved for Submission</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Submitted</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Quotes Received</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Quote Sold</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Signed</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Funded</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Not Eligible</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Not Interested</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Disqualified</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>BOC Incomplete</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Withdrawn</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Sent to FundBox</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Accepted</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                </value>
+                <value>
+                    <fullName>Application</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                </value>
+                <value>
+                    <fullName>In-Process</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                </value>
+                <value>
+                    <fullName>Presented</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                </value>
+                <value>
+                    <fullName>Transferred</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Strategic_Disqualified__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Strategic Disqualified</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Strategic_Funding__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(OR( QC_Monthly_Sales__c &lt; 12000, FICO_Score__c &lt;550, 
+Credit_Inquiries_Last_90_Days__c &gt; 15, QC_Monthly_Sales__c &lt;= 12000, Ave_Number_of_Deposits_per_Month__c &lt;= 8, Average_Monthly_Negative_Balance__c &gt; 3, Number_of_Competitor_Balances__c &gt;2, Sum_of_Competitor_Balances__c &gt;= 500000, Tax_Lien_Balance__c &gt;= 0, 
+  Business_Open_Date__c  &gt; (Today() - (360)),
+Bankruptcy_Discharge_Date__c &gt; (today()-(360))),&quot; &quot;, &quot;Strategic Funding APPROVED&quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Strategic Funding</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Strategic_Quoted__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Strategic Quoted</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Strategic_Submitted__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Strategic Submitted</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Strategic__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(
+   OR(
+      AND(
+          OR(
+           State_of_Operation__c = &apos;NY&apos;
+          ,State_of_Operation__c = &apos;AK&apos;
+          ,State_of_Operation__c = &apos;IL&apos;
+             ) 
+          ,ispickval(Entity_Type__c,&apos;Sole Prop&apos;)
+          )
+      ,AND(
+        FICO_Score__c &lt; 550
+       ,Business_Open_Date__c &gt; (Today() - (30*36))
+          )       
+        /* uncomment if necessary
+      , Credit_Inquiries_Last_90_Days__c &gt; 20
+        */
+      , QC_Monthly_Sales__c &lt; 12500
+      , Ave_Number_of_Deposits_per_Month__c &lt; 5
+      , Average_Monthly_Negative_Balance__c &gt; 3
+      , Business_Open_Date__c &gt; (Today() - (30*12))
+      , Industry__r.Strategic__c = TRUE
+      , Average_Balancce__c &lt; 0
+      , Current_Bank_Balance__c &lt; 0 
+      , FICO_Score__c &lt; 500
+      , Last_Funded_Date__c &gt; (Today() - (30*2)) 
+      ,
+       AND( 
+            Bankruptcy__c = TRUE
+           , OR( Bankruptcy_Discharge_Date__c &gt; (today()-(30*12))
+                ,ISNULL(Bankruptcy_Discharge_Date__c)
+               )
+           )
+      ,
+        AND(
+              Tax_Liens__c = FALSE
+            , Tax_Lien_Balance__c &gt; 50000
+        ) 
+      , 
+        AND(
+              Tax_Liens__c = TRUE
+            , Tax_Lien_Balance__c &lt; 0
+        )
+      ,
+        AND(
+              Industry__r.Name = &apos;Trucking&apos; 
+            , QC_Monthly_Sales__c &lt; 150000
+        )
+      ,
+        AND(
+              Industry__r.Name = &apos;Construction&apos; 
+            , QC_Monthly_Sales__c &lt; 100000
+        )
+      ,
+        IF( 
+            Position__c &gt; 1 /*Fixed - DON&apos;T CHANGE VALUE FOR ANY PARTNER*/
+          ,  
+            Number_of_Competitor_Balances__c &gt;= 1 /*Deepest Position*/
+          , 
+            OR(
+                 Number_of_Competitor_Balances__c &gt; 2 /*Max # of Payoffs*/
+                 /* uncomment if necessary
+               , Sum_of_Competitor_Balances__c &gt; 150000
+                 */
+               , 1 -(Sum_of_Competitor_Balances__c / QC_Monthly_Sales__c) &lt; 0.5 /*Balance Net %*/
+              )
+          )
+)
+, &quot;&quot;
+, &quot;STRATEGIC APPROVED&quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Strategic</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>StreetShares__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(
+   OR( 
+        State_of_Operation__c = &apos;MT&apos;
+      , State_of_Operation__c = &apos;RI&apos;
+      , State_of_Operation__c = &apos;ND&apos;
+      , State_of_Operation__c = &apos;SD&apos;
+      , State_of_Operation__c = &apos;WY&apos;
+      , State_of_Operation__c = &apos;VT&apos;
+      , State_of_Operation__c = &apos;OR&apos;
+      , State_of_Operation__c = &apos;AK&apos;
+      , State_of_Operation__c = &apos;NV&apos;        
+      , FICO_Score__c &lt; 600
+      , Credit_Inquiries_Last_90_Days__c &gt; 10
+      , QC_Monthly_Sales__c &lt; 10000
+        /* uncomment if necessary
+      , Ave_Number_of_Deposits_per_Month__c &lt; 8
+        */
+      , Average_Monthly_Negative_Balance__c &gt; 0
+      , Business_Open_Date__c &gt; (Today() - (30*12))
+      , Bankruptcy_Discharge_Date__c &gt; (today()-(30*36))
+        /* uncomment if necessary
+      , Street_Shares_Industry__c = TRUE
+        */
+        /* uncomment if necessary
+      , Average_Balancce__c &lt; 0
+        */
+        /* uncomment if necessary
+      , ispickval(Entity_Type__c,&apos;Non-Profit&apos;)
+        */
+      , Soft_Pull_Only__c = TRUE
+      , MCA_Only__c = TRUE
+      ,
+        AND(
+              Tax_Liens__c = FALSE
+            , Tax_Lien_Balance__c &lt; 0
+        ) 
+      , 
+        AND(
+              Tax_Liens__c = TRUE
+            , Tax_Lien_Balance__c &lt; 0
+        )
+      ,
+        IF( 
+            Position__c &gt; 1 /*Fixed - DON&apos;T CHANGE VALUE FOR ANY PARTNER*/
+          ,  
+            AND(
+                 Position__c &gt;= Number_of_Competitor_Balances__c
+               , Number_of_Competitor_Balances__c &gt;= 1 /*Deepest Position*/
+              )
+          , 
+            OR(
+                 Number_of_Competitor_Balances__c &gt; 0 /*Max # of Payoffs*/
+                 /* uncomment if necessary
+               , Sum_of_Competitor_Balances__c &gt; 150000
+                 */
+               , (Sum_of_Competitor_Balances__c / QC_Monthly_Sales__c) &gt; 0.0 /*Balance Net %*/
+              )
+          )
+)
+, &quot;&quot;
+, &quot;||PAUSED|| - STREET SHARES APPROVED&quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>StreetShares</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Street_Shares_Submitted__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Street Shares Submitted</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Submission_Attempts__c</fullName>
+        <defaultValue>0</defaultValue>
+        <externalId>false</externalId>
+        <label>Submission Attempts</label>
+        <precision>2</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Submission_Complete__c</fullName>
+        <externalId>false</externalId>
+        <label>Submission Complete</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Submission_Partners__c</fullName>
+        <externalId>false</externalId>
+        <label>Submission Partners</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Seek Capital</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Funding Circle</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Fora</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>BFS</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>ECG</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Lendr</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>SmartBiz</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Street Shares</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>National Funding</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Fundbox</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Libertas</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+        <visibleLines>6</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Sum_of_Competitor_Balances__c</fullName>
+        <externalId>false</externalId>
+        <label>How much in Competitor Balances?</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Super_G_Disqualified__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Super G Disqualified</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Super_G_Quoted__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Super G Quoted</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Super_G_Submitted__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Super G Submitted</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Tax_ID__c</fullName>
+        <externalId>false</externalId>
+        <label>Tax ID</label>
+        <length>15</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Tax_Lien_Balance__c</fullName>
+        <externalId>false</externalId>
+        <label>Tax Lien Balance</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Tax_Liens__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Tax Liens Payment Plan</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>The_Fundworks_Disqualified__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>The Fundworks Disqualified</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>The_Fundworks_Quoted__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>The Fundworks Quoted</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>The_Fundworks_Submitted__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>The Fundworks Submitted</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>The_Fundworks__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(
+   OR(  /* uncomment if necessary
+        State_of_Operation__c = &apos;WV&apos;
+        */
+        FICO_Score__c &lt; 500
+        /* uncomment if necessary
+      , Credit_Inquiries_Last_90_Days__c &gt; 20
+        */
+      , QC_Monthly_Sales__c &lt; 10000
+      , Ave_Number_of_Deposits_per_Month__c &lt; 4
+      , Average_Monthly_Negative_Balance__c &gt; 5
+      , Business_Open_Date__c &gt; (Today() - (30*6))
+      , Industry__r.The_Fundworks__c = TRUE 
+      , Average_Balancce__c &lt; 1000
+      , Current_Bank_Balance__c &lt; 0
+        /* uncomment if necessary
+      , ispickval(Entity_Type__c,&apos;Non-Profit&apos;)
+        */
+        /* uncomment if necessary
+      , Soft_Pull_Only__c = TRUE
+        */
+      , No_Daily_Payment__c  = TRUE
+      , Last_Funded_Date__c &gt; (Today() - (30*1))
+      ,
+       AND( 
+            Bankruptcy__c = TRUE
+           , OR( Bankruptcy_Discharge_Date__c &gt; (today()-(30 * 6))
+                ,ISNULL(Bankruptcy_Discharge_Date__c)
+               )
+           )
+      ,
+        AND(
+              Tax_Liens__c = FALSE
+            , Tax_Lien_Balance__c &gt; 0
+        ) 
+      , 
+        AND(
+              Tax_Liens__c = TRUE
+            , Tax_Lien_Balance__c &lt; 0
+        )
+      ,
+        AND(
+              Industry__r.Name = &apos;Trucking&apos;
+            , OR( 
+                   QC_Monthly_Sales__c &lt; 50000
+                 , Business_Open_Date__c &gt; (Today() - (30*12))
+                 )
+        )
+      ,
+        AND(
+             OR(
+               Industry__r.Name = &apos;Auto Sales - New&apos;
+              ,Industry__r.Name = &apos;Auto Sales - Used&apos;
+              ,Industry__r.Name = &apos;Trucking&apos;
+             ) 
+            , FICO_Score__c &lt; 620
+        )
+      ,
+        IF( 
+            Position__c &gt; 1 /*Fixed - DON&apos;T CHANGE VALUE FOR ANY PARTNER*/
+          ,  
+            Number_of_Competitor_Balances__c &gt;= 2 /*Deepest Position*/
+          , 
+            OR(
+                 Number_of_Competitor_Balances__c &gt; 2 /*Max # of Payoffs*/
+               , Sum_of_Competitor_Balances__c &gt; 250000 /*Max Payoff Amount*/
+               , 1 -(Sum_of_Competitor_Balances__c / QC_Monthly_Sales__c) &lt; 0 /*Balance Net %*/
+              )
+          )
+)
+, &quot;&quot;
+, IF(  ispickval(Decline_Reason__c,&quot;Qualified at Rapid&quot;) ,&quot;||OVERQUALIFIED||&quot;
+, &quot;THE FUNDWORKS APPROVED&quot;))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>The Fundworks</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Uplyft__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(
+   OR(  
+        State_of_Operation__c = &apos;CA&apos;
+      , State_of_Operation__c = &apos;AK&apos;
+      , State_of_Operation__c = &apos;HI&apos;
+      , State_of_Operation__c = &apos;NE&apos;
+      , State_of_Operation__c = &apos;ON&apos;
+      , State_of_Operation__c = &apos;BC&apos;
+      , State_of_Operation__c = &apos;QC&apos;
+      , State_of_Operation__c = &apos;NB&apos;
+      , State_of_Operation__c = &apos;NS&apos;
+      , State_of_Operation__c = &apos;PE&apos;
+      , State_of_Operation__c = &apos;MB&apos;
+      , State_of_Operation__c = &apos;SK&apos;
+      , State_of_Operation__c = &apos;AB&apos;
+
+      , FICO_Score__c &lt; 500
+        /* uncomment if necessary
+      , Credit_Inquiries_Last_90_Days__c &gt; 20
+        */
+      , QC_Monthly_Sales__c &lt; 10000
+      , Ave_Number_of_Deposits_per_Month__c &lt; 3
+      , Average_Monthly_Negative_Balance__c &gt; 5
+      , Business_Open_Date__c &gt; (Today() - (30*6))
+      , Industry__r.Uplyft__c = TRUE 
+      , Average_Balancce__c &lt; 500
+      , Current_Bank_Balance__c &lt; 0
+      , ispickval(Entity_Type__c,&apos;Non-Profit&apos;)
+
+        /* uncomment if necessary
+      , Soft_Pull_Only__c = TRUE
+        */
+      ,
+       AND( 
+            Bankruptcy__c = TRUE
+           , OR( Bankruptcy_Discharge_Date__c &gt; (today()-(30*6))
+                ,ISNULL(Bankruptcy_Discharge_Date__c)
+               )
+           )
+      ,
+        AND(
+              Tax_Liens__c = FALSE
+            , Tax_Lien_Balance__c &gt; 0
+        ) 
+      , 
+        AND(
+              Tax_Liens__c = TRUE
+            , Tax_Lien_Balance__c &gt; QC_Monthly_Sales__c * 1.5
+        )
+      ,
+        AND(
+              Industry__r.Name = &apos;Trucking&apos;
+            , OR( 
+                   QC_Monthly_Sales__c &lt; 50000
+                 , Business_Open_Date__c &gt; (Today() - (30*12))
+                 )
+        )
+      ,
+        AND(
+              Industry__r.Name = &apos;Construction&apos; 
+            , OR(
+                  QC_Monthly_Sales__c &lt; 50000
+                , Business_Open_Date__c &gt; (Today() - (30*12))
+            )
+        )
+      ,
+        IF( 
+            Position__c &gt; 1 /*Fixed - DON&apos;T CHANGE VALUE FOR ANY PARTNER*/
+          ,  
+            Number_of_Competitor_Balances__c &gt;= 3 /*Deepest Position*/
+          , 
+            OR(
+                 Number_of_Competitor_Balances__c &gt; 2 /*Max # of Payoffs*/
+               , Sum_of_Competitor_Balances__c &gt; 100000 /*Max Payoff Amount*/
+               , 1 -(Sum_of_Competitor_Balances__c / QC_Monthly_Sales__c) &lt; 0.3 /*Balance Net %*/
+              )
+          )
+)
+, &quot;&quot;
+, IF(  ispickval(Decline_Reason__c,&quot;Qualified at Rapid&quot;) ,&quot;||OVERQUALIFIED||&quot;
+, &quot;UPLYFT APPROVED&quot;))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Uplyft</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Use_of_Funds__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>DO NOT ENTER &quot;WORKING CAPITAL&quot;</inlineHelpText>
+        <label>Use of Funds</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Verifiable_Deposit_Volume_MTD__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Total volume of deposits visible in client&apos;s bank account this month.</inlineHelpText>
+        <label>Verifiable Deposit Volume MTD</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Veteran_Owned__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Veteran Owned</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Where_Did_You_Find_This_Client__c</fullName>
+        <externalId>false</externalId>
+        <label>Where Did You Find This Client?</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>BA Transfer</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Credit Karma</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>BOBA Dialer</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Custom List</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Email Blast</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Renewal</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>UW Unqual</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Referral</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Sr BA Qualified</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Dialer</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>World_Business_Lenders__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(
+   OR(  
+        State_of_Operation__c = &apos;NV&apos;
+      , State_of_Operation__c = &apos;ND&apos;
+      , State_of_Operation__c = &apos;SD&apos;
+      , State_of_Operation__c = &apos;AZ&apos;
+      , State_of_Operation__c = &apos;RI&apos;
+      , QC_Monthly_Sales__c &lt; 30000
+      , Business_Open_Date__c &gt; (Today() - (30*3))
+      , Industry__r.World_Business_Lenders__c = TRUE 
+      , Average_Balancce__c &lt; 0
+      , Soft_Pull_Only__c = TRUE
+      , MCA_Only__c = TRUE
+      ,
+       AND( 
+            Bankruptcy__c = TRUE
+           , OR( Bankruptcy_Discharge_Date__c &gt; (today()-(1))
+                ,ISNULL(Bankruptcy_Discharge_Date__c)
+               )
+           )
+      ,
+        IF( 
+            Position__c &gt; 1 /*Fixed - DON&apos;T CHANGE VALUE FOR ANY PARTNER*/
+          ,  
+            Number_of_Competitor_Balances__c &gt;= 10 /*Deepest Position*/
+          , 
+            OR(
+                 Number_of_Competitor_Balances__c &gt; 10 /*Max # of Payoffs*/
+               , Sum_of_Competitor_Balances__c &gt; 3000000 /*Max Payoff Amount*/
+               , 1 -(Sum_of_Competitor_Balances__c / QC_Monthly_Sales__c) &lt; 0 /*Balance Net %*/
+              )
+          )
+)
+, &quot;&quot;
+, &quot;WBL APPROVED&quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>World Business Lenders</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>X24Cap_Disqualified__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>24Cap Disqualified</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>X24Cap_Quoted__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>24Cap Quoted</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>X24Cap_Submitted__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>24Cap Submitted</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>X24Capital__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(
+   OR(  /* uncomment if necessary
+        State_of_Operation__c = &apos;WV&apos;
+        */
+        FICO_Score__c &lt; 500
+/*
+      , Credit_Inquiries_Last_90_Days__c &gt; 20
+*/
+      , QC_Monthly_Sales__c &lt; 10000
+      , Ave_Number_of_Deposits_per_Month__c &lt; 5
+      , Average_Monthly_Negative_Balance__c &gt; 3
+      , Business_Open_Date__c &gt; (Today() - (30*6))
+      , Industry__r.X24Capital__c = TRUE 
+      , Average_Balancce__c &lt; 1000
+      , ispickval(Entity_Type__c,&apos;Non-Profit&apos;)
+      , Soft_Pull_Only__c = TRUE
+      , MCA_Only__c = TRUE
+      ,
+       AND( 
+            Bankruptcy__c = TRUE
+           , OR( Bankruptcy_Discharge_Date__c &gt; (today()-(30*36))
+                ,ISNULL(Bankruptcy_Discharge_Date__c)
+               )
+           )
+      ,
+        AND(
+              Tax_Liens__c = FALSE
+            , Tax_Lien_Balance__c &gt; 10000
+        ) 
+      , 
+        AND(
+              Tax_Liens__c = TRUE
+            , Tax_Lien_Balance__c &lt; 0
+        )
+      ,
+        AND(
+              Industry__r.Name = &apos;Trucking&apos; 
+            , QC_Monthly_Sales__c &lt; 30000
+        )
+      ,
+        IF( 
+            Position__c &gt; 1 /*Fixed - DON&apos;T CHANGE VALUE FOR ANY PARTNER*/
+          ,  
+            Number_of_Competitor_Balances__c &gt;= 6 /*Deepest Position*/
+          , 
+            OR(
+                 Number_of_Competitor_Balances__c &gt; 2 /*Max # of Payoffs*/
+               , Sum_of_Competitor_Balances__c &gt; 750000 /*Max Payoff Amount*/
+               , 1 -(Sum_of_Competitor_Balances__c / QC_Monthly_Sales__c) &lt; 0.65 /*Balance Net %*/
+              )
+          )
+)
+, &quot;&quot;
+, IF(  ispickval(Decline_Reason__c,&quot;Qualified at Rapid&quot;) ,&quot;||OVERQUALIFIED||&quot;
+, &quot;||PAUSED|| - 24CAPITAL APPROVED&quot;))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>24Capital</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>Marble</label>
+    <listViews>
+        <fullName>MTD_Marbles</fullName>
+        <columns>NAME</columns>
+        <columns>Company__c</columns>
+        <columns>Company_DBA__c</columns>
+        <columns>Calc_Link__c</columns>
+        <columns>Phone__c</columns>
+        <columns>LAST_ACTIVITY</columns>
+        <columns>Where_Did_You_Find_This_Client__c</columns>
+        <filterScope>Mine</filterScope>
+        <filters>
+            <field>CREATED_DATE</field>
+            <operation>greaterOrEqual</operation>
+            <value>THIS_MONTH</value>
+        </filters>
+        <label>MTD Marbles</label>
+    </listViews>
+    <listViews>
+        <fullName>Marbles_Awaiting_Approval</fullName>
+        <columns>NAME</columns>
+        <columns>Company__c</columns>
+        <columns>Company_DBA__c</columns>
+        <columns>Calc_Link2__c</columns>
+        <columns>Document_Link__c</columns>
+        <columns>UPDATEDBY_USER</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Status__c</field>
+            <operation>equals</operation>
+            <value>Pre-Approved</value>
+        </filters>
+        <label>Marbles Awaiting Approval</label>
+        <sharedTo>
+            <role>Administrator</role>
+            <role>Business_Advisor</role>
+            <role>Business_Advisor_Leader</role>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Marbles_Awaiting_Offers</fullName>
+        <columns>NAME</columns>
+        <columns>OWNER.ALIAS</columns>
+        <columns>Company__c</columns>
+        <columns>Company_DBA__c</columns>
+        <columns>Lead_Opp_Link__c</columns>
+        <columns>Calc_Link2__c</columns>
+        <columns>UPDATEDBY_USER</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Status__c</field>
+            <operation>equals</operation>
+            <value>Submitted</value>
+        </filters>
+        <label>Marbles Awaiting Offers</label>
+        <sharedTo>
+            <role>Administrator</role>
+            <role>Business_Advisor</role>
+            <role>Business_Advisor_Leader</role>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Marbles_Waiting_on_Contracts</fullName>
+        <columns>NAME</columns>
+        <columns>OWNER.ALIAS</columns>
+        <columns>Company__c</columns>
+        <columns>Company_DBA__c</columns>
+        <columns>Lead_Opp_Link__c</columns>
+        <columns>Calc_Link2__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Status__c</field>
+            <operation>equals</operation>
+            <value>Quote Sold</value>
+        </filters>
+        <label>Marbles Waiting on Contracts</label>
+        <sharedTo>
+            <role>Administrator</role>
+            <role>Business_Advisor</role>
+            <role>Business_Advisor_Leader</role>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Marbles_With_Offers</fullName>
+        <columns>NAME</columns>
+        <columns>Company__c</columns>
+        <columns>Company_DBA__c</columns>
+        <columns>Phone__c</columns>
+        <columns>Lead_Opp_Link__c</columns>
+        <columns>Calc_Link2__c</columns>
+        <columns>UPDATEDBY_USER</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Status__c</field>
+            <operation>equals</operation>
+            <value>Quotes Received</value>
+        </filters>
+        <label>Marbles With Offers</label>
+    </listViews>
+    <listViews>
+        <fullName>New_Marbles</fullName>
+        <columns>NAME</columns>
+        <columns>Company__c</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>OWNER.ALIAS</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Status__c</field>
+            <operation>equals</operation>
+            <value>No Contact,NEW</value>
+        </filters>
+        <label>New Marbles</label>
+    </listViews>
+    <nameField>
+        <label>Marble Name</label>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Marbles</pluralLabel>
+    <searchLayouts>
+        <searchResultsAdditionalFields>Status__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>OWNER.ALIAS</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>LAST_UPDATE</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ReadWrite</sharingModel>
+    <validationRules>
+        <fullName>Do_not_modify_the_Marble_Status</fullName>
+        <active>true</active>
+        <errorConditionFormula>ISCHANGED(Status__c) &amp;&amp;  NOT( ISBLANK( BOOP_Status__c))</errorConditionFormula>
+        <errorMessage>Can not change the value of Marble Status.</errorMessage>
+    </validationRules>
+    <webLinks>
+        <fullName>Submit_for_Approval_custom</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <height>600</height>
+        <linkType>page</linkType>
+        <masterLabel>Submit for Approval</masterLabel>
+        <openType>sidebar</openType>
+        <page>CheckRequiredFields</page>
+        <protected>false</protected>
+    </webLinks>
+</CustomObject>

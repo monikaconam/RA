@@ -1,0 +1,15 @@
+Hi,
+
+Q2. I didn't feel that the business advisor was knowledgeable enough about the details of my funding.
+
+Answer: {!If(GetFeedback_Survey__c.BA_was_not_knowledgeable__c == True,"True","") } 
+
+Q2. My business advisor didn't set accurate expectations about the funding process. 
+
+Answer: {!If(GetFeedback_Survey__c.BA_did_not_set_expectation__c == True,"True","") } 
+
+For reference click the following link. 
+
+{!GetFeedback_Survey__c.Link} 
+
+Thanks

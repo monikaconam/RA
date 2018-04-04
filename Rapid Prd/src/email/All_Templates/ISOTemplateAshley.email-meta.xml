@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>ISO Template Ashley</name>
+    <style>none</style>
+    <subject>Now More Than Ever!!</subject>
+    <textOnly>Now More Than Ever...
+Your Merchants Need Cash!!!
+	
+Talk to your merchants about their cash needs 
+before your competitor does!!
+	
+Easy Access To Financing
+    - 3 Minute Application
+    - High Approval
+
+Smart For Your Business
+    - Unsecured
+    - No Fixed Monthly Payments
+	
+Fast Access To Funds
+    - Funding Within 10 Days
+    - Free Quote
+	
+KEEP IT SIMPLE!!
+	
+Just submit a 3 Minute Application and the last 4 months of 
+processing statements and RapidAdvance can take care of the rest!
+
+For more details on our Cash Advance Program, please call Ashley Stepita at 240.514.3176 or email astepita@rapidadvance.com</textOnly>
+    <type>custom</type>
+</EmailTemplate>

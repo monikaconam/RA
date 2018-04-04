@@ -1,0 +1,6 @@
+So we couldn't fund this client, but perhaps there is a partner that could help this client get funding.
+
+{!Opportunity.CALC_Link__c}
+
+{!Opportunity.Name}
+{!Opportunity.OwnerPhone}

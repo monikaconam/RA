@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Rapid_Advance</letterhead>
+    <name>BOBA Template</name>
+    <style>freeForm</style>
+    <subject>Rapid Advance - Sorry I Missed You!</subject>
+    <textOnly>Hi {Insert Client Name},
+
+My name is {!User.Name} and I’m reaching out to you with some great news! It doesn’t look like we were able to fund a loan for you the first time we spoke. However, we pride ourselves in exhausting all possible solutions when it comes to helping out our clients.
+
+
+
+
+
+We have joined together with several companies which has given us the opportunity to help a lot more clients than we used to be able to help. We have access to several different loan products that a lot of our clients are taking advantage of now.
+
+
+
+
+
+Please call me or e-mail me before the end of the day today so I can get to work on finding the right solution for you.
+
+
+Thank you,
+
+
+
+{!User.Name}
+Phone: {!User.Phone}
+Email: {!User.Email}
+Website: www.RapidAdvance.com</textOnly>
+    <type>html</type>
+</EmailTemplate>

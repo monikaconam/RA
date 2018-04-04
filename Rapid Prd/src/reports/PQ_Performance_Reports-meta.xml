@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ReportFolder xmlns="http://soap.sforce.com/2006/04/metadata">
+    <accessType>Shared</accessType>
+    <name>PQ Performance Reports</name>
+    <publicFolderAccess>ReadOnly</publicFolderAccess>
+    <sharedTo>
+        <role>AccountExecutive</role>
+        <role>Administrator</role>
+        <role>BusinessDevelopment</role>
+        <role>Direct_Account_Executive</role>
+        <role>DirectorofSales</role>
+    </sharedTo>
+</ReportFolder>

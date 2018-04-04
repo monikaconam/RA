@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <aggregates>
+        <calculatedFormula>CONVERTED:SUM</calculatedFormula>
+        <datatype>number</datatype>
+        <description>Convert Count</description>
+        <developerName>FORMULA1</developerName>
+        <isActive>true</isActive>
+        <isCrossBlock>false</isCrossBlock>
+        <masterLabel>Count</masterLabel>
+        <scale>2</scale>
+    </aggregates>
+    <aggregates>
+        <calculatedFormula>CONVERTED:SUM / RowCount</calculatedFormula>
+        <datatype>number</datatype>
+        <description>Lead to Credit</description>
+        <developerName>FORMULA2</developerName>
+        <isActive>true</isActive>
+        <isCrossBlock>false</isCrossBlock>
+        <masterLabel>Rate</masterLabel>
+        <scale>2</scale>
+    </aggregates>
+    <buckets>
+        <bucketType>picklist</bucketType>
+        <developerName>BucketField_1218815</developerName>
+        <masterLabel>Count</masterLabel>
+        <nullTreatment>n</nullTreatment>
+        <sourceColumnName>STATUS</sourceColumnName>
+        <useOther>false</useOther>
+        <values>
+            <sourceValues>
+                <sourceValue>Converted</sourceValue>
+            </sourceValues>
+            <value>Converted</value>
+        </values>
+    </buckets>
+    <columns>
+        <field>FIRST_NAME</field>
+    </columns>
+    <columns>
+        <field>LAST_NAME</field>
+    </columns>
+    <columns>
+        <field>COMPANY_ACCT</field>
+    </columns>
+    <columns>
+        <field>LEAD_SOURCE</field>
+    </columns>
+    <columns>
+        <field>BucketField_1218815</field>
+    </columns>
+    <columns>
+        <field>STATUS</field>
+    </columns>
+    <columns>
+        <field>CREATED_DATE</field>
+    </columns>
+    <columns>
+        <field>LAST_UPDATE</field>
+    </columns>
+    <columns>
+        <field>CONVERTED_DATE</field>
+    </columns>
+    <columns>
+        <field>AMOUNT</field>
+    </columns>
+    <columns>
+        <field>CLOSE_DATE</field>
+    </columns>
+    <description>Direct Credit to Sign</description>
+    <filter>
+        <criteriaItems>
+            <column>OWNER_ROLE_DISPLAY</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>contains</operator>
+            <value>Direct Account</value>
+        </criteriaItems>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>LEAD_OWNER_ALIAS</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Direct Credit to Sign</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>OpportunityLead</reportType>
+    <scope>org</scope>
+    <showDetails>false</showDetails>
+    <timeFrameFilter>
+        <dateColumn>CREATED_DATE</dateColumn>
+        <interval>INTERVAL_LAST60</interval>
+    </timeFrameFilter>
+</Report>

@@ -1,0 +1,19 @@
+*** NEW LEAD NOTIFICATION *** 
+
+Company: {!Lead.Company} 
+Lead Name: {!Lead.Name} 
+
+Address: {!Lead.Address}
+
+Lead Phone: {!Lead.Phone}
+Lead Fax: {!Lead.Fax}
+Lead Mobile: {!Lead.MobilePhone}
+Lead Email: {!Lead.Email}
+
+Monthly V/MC Sales: {!Lead.Monthly_Visa_Mastercard_Volume__c}
+Gross Monthly Sales: {!Lead.Gross_Monthly_Sales__c}
+Type of Business: {!Lead.Type_Of_Business__c}
+Length of time in business: {!Lead.Operating_Since__c}
+
+How Did You Hear About Us?: {!Lead.How_did_you_hear_about_us__c}
+Comments: {!Lead.Description}

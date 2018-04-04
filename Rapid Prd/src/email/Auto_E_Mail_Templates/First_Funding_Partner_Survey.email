@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+    <head>
+        <title> Rapid Advance </title>
+        <meta name="viewport" content="initial-scale=1.0, user-scalable=no, width=device-width">
+        <meta name="format-detection" content="telephone=no">
+        
+        <style type="text/css">
+            
+            /* /\\//\\//\\//\\/ RESET STYLES /\\//\\//\\//\\/ */
+            body{
+                margin:0;
+                padding:0;
+            }
+        
+            img{
+                border:0 none;
+                outline:none;
+                text-decoration:none;
+            }
+        
+            a img{
+                border:0 none;
+            }
+        
+            table, td{
+                border-collapse:collapse;
+            }
+            
+            /* /\\//\\//\\//\\/ CLIENT SPECIFIC STYLES /\\//\\//\\//\\/ */
+            .ExternalClass{
+                width:100%;
+            }
+            
+            .ExternalClass,
+            .ExternalClass p,
+            .ExternalClass span,
+            .ExternalClass font,
+            .ExternalClass td,
+            .ExternalClass div{
+                line-height: 100%;
+            }
+            
+            #outlook a{
+                padding:0;
+            }
+            
+            table{
+                mso-table-lspace:0pt;
+                mso-table-rspace:0pt;
+            }
+            
+            img{
+                -ms-interpolation-mode:bicubic;
+            }
+            
+            body{
+                -webkit-text-size-adjust:100%;
+                -ms-text-size-adjust:100%;
+            }
+            
+            /* /\\//\\//\\//\\/ GENERAL RESPONSIVE /\\//\\//\\//\\/ */
+            @media only screen and (max-width: 600px), screen and (max-device-width: 600px){
+                
+                *[class=container]{
+                    width: 414px !important;
+                    min-width: 414px !important;
+                    max-width: 414px !important;
+                }
+                
+                *[class=container],
+                *[class=center] img,
+                *[class=stack],
+                *[class=resize_two_column]{
+                    margin: 0 auto !important;
+                }
+                
+                *[class=center]{
+                    text-align: center !important;
+                    padding-bottom: 10px !important;
+                }
+                
+                *[class=resize],
+                *[class=resize_hide],
+                *[class=img_resize]{
+                    width: 100% !important;
+                    min-width: 100% !important;
+                }
+                
+                *[class=resize_two_column]{
+                    width: 290px !important;
+                    min-width: 290px !important;
+                }
+                
+                *[class=img_resize]{ height: auto !important; }                
+                *[class=stack]{ float: none !important; }                
+                *[class=hide]{ display: none !important; }
+                
+                *[class=hide] td{
+                    line-height: 0 !important;
+                    font-size: 0 !important;
+                    visibility: hidden !important;
+                }
+                
+                *[class=hide],
+                *[class=hide] td,
+                *[class=hide] td img,
+                *[class=collapse]{
+                    width: 0 !important;
+                    min-width: 0 !important;
+                    max-width: 0 !important;
+                    height: 0 !important;
+                }
+                
+                *[class=nav]{ width: 33% !important; }
+                
+                *[class=section_content]{ width: 97% !important; }
+                *[class=mobile_padding30]{ width: 6% !important; }
+                
+                *[class=show_padding]{
+                    height: 10px !important;
+                    line-height: 10px !important;
+                    font-size: 10px !important;
+                }
+                
+                *[class=collapse_column] img,
+                *[class=collapse_column] table,
+                *[class=collapse_column] table td,
+                *[class=collapse_column] table td img{
+                    min-width: 0 !important;
+                    max-width: 0 !important;
+                    height: 0 !important;
+                    display: none !important;
+                    visibility: hidden !important;
+                }
+                
+                *[class=collapse_column],
+                *[class=collapse_column] img,
+                *[class=collapse_column] table,
+                *[class=collapse_column] table td,
+                *[class=collapse_column] table td img{
+                    width: 0 !important;
+                    font-size: 0 !important;
+                    line-height: 0 !important;
+                    border: 0 !important;
+                    background-color: transparent !important;
+                }
+               
+            
+            /* /\\//\\//\\//\\/ MOBILE RESPONSIVE /\\//\\//\\//\\/ */
+            @media only screen and (max-width: 414px), screen and (max-device-width: 414px){
+                
+                *[class=container]{
+                    width: 97% !important;
+                    min-width: 97% !important;
+                }
+                
+            }
+            
+            /* /\\//\\//\\//\\/ WEBKIT FIX /\\//\\//\\//\\/ */
+            @media screen and (-webkit-min-device-pixel-ratio: 0){
+                
+                *[class=dyk_bottom_pad]{
+                    height: 22px !important;
+                    line-height: 22px !important;
+                    font-size: 22px !important;
+                }
+                
+            }
+            
+        </style>
+    </head>
+    <body style="margin: 0;padding: 0;-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;">
+<!-- START EMAIL WRAPPER -->
+<table align="center" border="0" cellpadding="0" cellspacing="0" class="container" style="margin: 0px auto; padding: 0px; width: 600px; border-collapse: collapse; min-width: 600px; max-width: 600px; mso-table-lspace: 0pt; mso-table-rspace: 0pt;" width="600"><!-- START EMPTY SPACE -->
+	<tbody>
+		<tr>
+			<td style="height: 10px; line-height: 10px; font-size: 10px; border-collapse: collapse;" valign="top" class="">&nbsp;</td>
+		</tr>
+		<!-- END EMPTY SPACE --><!-- START PREHEADER -->
+		<tr>
+			<td style="border-collapse: collapse;" valign="top">
+			<table border="0" cellpadding="0" cellspacing="0" class="resize" style="margin: 0px; padding: 0px; width: 600px; border-collapse: collapse; min-width: 600px; max-width: 600px; mso-table-lspace: 0pt; mso-table-rspace: 0pt;" width="600">
+				<tbody>
+					<tr>
+						<td style="width: 5px; border-collapse: collapse;" valign="top" class="">&nbsp;</td>
+						<td style="font-family: Arial, Helvetica, sans-serif; font-size: 9px; border-collapse: collapse;" valign="top" class="">Tell us how it went!</td>
+						<td style="width: 5px; border-collapse: collapse;" valign="top" class="">&nbsp;</td>
+					</tr>
+				</tbody>
+			</table>
+			</td>
+		</tr>
+		<!-- END PREHEADER --><!-- START HEADER -->
+		<tr>
+			<td style="border-collapse: collapse;" valign="top">
+			<table border="0" cellpadding="0" cellspacing="0" class="resize" style="margin: 0px; padding: 0px; width: 600px; border-collapse: collapse; min-width: 600px; max-width: 600px; mso-table-lspace: 0pt; mso-table-rspace: 0pt;" width="600">
+				<tbody>
+					<tr>
+						<td style="border-collapse: collapse;" valign="top">
+						<table align="left" border="0" cellpadding="0" cellspacing="0" class="resize" style="margin: 0px; padding: 0px; width: 600px; float: left; border-collapse: collapse; min-width: 288px; max-width: 288px; mso-table-lspace: 0pt; mso-table-rspace: 0pt;" width="600">
+							<tbody>
+								<tr>
+									<td style="border-collapse: collapse;" valign="top" class=""><a href="https://www.rapidadvance.com"><img alt="" border="0" height="60" src="http://www2.rapidadvance.com/l/17132/2017-02-13/76g9r2/17132/154469/L_RapidAdvance_Transparent_20160106.png" style="border-width: 0px; border-style: solid; width: 152px; height: 60px;" width="152"></a><!-- if you want another image under this, just add some line breaks, <br/>, and copy and paste the image element --></td>
+								</tr>
+							</tbody>
+						</table>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			</td>
+		</tr>
+		<!-- END HEADER --><!-- START NAVIGATION. In case you'd like to include a navigation bar for leads that mirrors the tabs on the website -->
+		<tr>
+			<td style="height: 15px; line-height: 15px; font-size: 15px; border-collapse: collapse;" valign="top" class="">&nbsp;</td>
+		</tr>
+		<tr>
+			<td style="border-collapse: collapse;" valign="top">
+			<table border="0" cellpadding="0" cellspacing="0" class="resize" style="margin: 0px; padding: 0px; width: 600px; border-collapse: collapse; min-width: 600px; max-width: 600px; background-color: rgb(119, 189, 67); mso-table-lspace: 0pt; mso-table-rspace: 0pt;" width="600">
+				<tbody>
+					<tr>
+						<td class="nav" style="width: 200px; text-align: center; color: rgb(255, 255, 255); padding-top: 8px; padding-bottom: 8px; font-family: Arial, Helvetica, sans-serif; font-size: 12px; font-weight: bold; border-right-color: rgb(255, 255, 255); border-right-width: 1px; border-right-style: solid; border-collapse: collapse;" valign="top"><a href="https://www.rapidadvance.com/" style="color: rgb(255, 255, 255); text-decoration: none; display: block;" title="Product Changes"><strong style="color: rgb(255, 255, 255);">HOME</strong></a></td>
+						<td class="nav" style="width: 200px; text-align: center; color: rgb(255, 255, 255); padding-top: 8px; padding-bottom: 8px; font-family: Arial, Helvetica, sans-serif; font-size: 12px; font-weight: bold; border-right-color: rgb(255, 255, 255); border-right-width: 1px; border-right-style: solid; border-collapse: collapse;" valign="top"><a href="https://www.rapidadvance.com/blog" style="color: rgb(255, 255, 255); text-decoration: none; display: block;" title="Register a Loan"><strong style="color: rgb(255, 255, 255);">BLOG</strong></a></td>
+						<td class="nav" style="width: 200px; text-align: center; color: rgb(255, 255, 255); padding-top: 8px; padding-bottom: 8px; font-family: Arial, Helvetica, sans-serif; font-size: 12px; font-weight: bold; border-right-color: rgb(255, 255, 255); border-right-width: 1px; border-right-style: solid; border-collapse: collapse;" valign="top"><a href="https://www.rapidadvance.com/financing-solutions" style="text-decoration: none;"><span style="color: rgb(255, 255, 255);"><b>OUR SOLUTIONS</b></span></a></td>
+					</tr>
+				</tbody>
+			</table>
+			</td>
+		</tr>
+		<!-- END NAVIGATION --><!-- START EMPTY SPACE -->
+		<tr>
+			<td style="height: 40px; line-height: 20px; font-size: 20px; border-collapse: collapse;" valign="top" class="">&nbsp;</td>
+		</tr>
+		<!-- END EMPTY SPACE --><!-- START CONTENT HEADLINE. Looks like you sometimes want this to have a background color. All you have to do to give this section a background color is add the following code to the <td>element directly beneath this comment:  style="background-color:  #E76450;"bgcolor="#E76450"  -->
+		<tr>
+			<td style="border-collapse: collapse;" valign="top">
+			<table border="0" cellpadding="0" cellspacing="0" class="resize" style="margin: 0px; padding: 0px; width: 600px; border-collapse: collapse; min-width: 600px; max-width: 600px; mso-table-lspace: 0pt; mso-table-rspace: 0pt;" width="600">
+				<tbody>
+					<tr>
+						<td style="width: 20px; border-collapse: collapse;" valign="top" class="">&nbsp;</td>
+						<td style="border-collapse: collapse;" valign="top">
+						<table border="0" cellpadding="0" cellspacing="0" class="resize" style="margin: 0px; padding: 0px; width: 560px; border-collapse: collapse; min-width: 560px; max-width: 560px; mso-table-lspace: 0pt; mso-table-rspace: 0pt;" width="560">
+							<tbody>
+								<tr>
+									<td class="headline" style="color: rgb(32, 129, 191); text-transform: uppercase; font-family: Arial, Helvetica, sans-serif; font-size: 30px; border-collapse: collapse;" valign="top">
+									<center><font color="#000000" face="arial, helvetica, sans-serif"><span style="font-size: 18px;"><b>Thank you for choosing us!</b></span></font></center>
+									</td>
+								</tr>
+								<tr>
+									<td style="height: 20px; line-height: 20px; font-size: 20px; border-collapse: collapse;" valign="top" class="">&nbsp;</td>
+								</tr>
+							</tbody>
+						</table>
+						</td>
+						<td style="width: 20px; border-collapse: collapse;" valign="top" class="">&nbsp;</td>
+					</tr>
+				</tbody>
+			</table>
+			</td>
+		</tr>
+		<!-- END CONTENT HEADLINE --><!-- START CONTENT ONE -->
+		<tr>
+			<td style="border-collapse: collapse;" valign="top">
+			<table border="0" cellpadding="0" cellspacing="0" class="resize" style="margin: 0px; padding: 0px; width: 600px; border-collapse: collapse; min-width: 600px; max-width: 600px; mso-table-lspace: 0pt; mso-table-rspace: 0pt;" width="600">
+				<tbody>
+					<tr>
+						<td class="mobile_padding30" style="width: 20px; border-collapse: collapse;" valign="top">&nbsp;</td>
+						<td class="section_content" style="width: 560px; border-collapse: collapse;" valign="top">
+						<table border="0" cellpadding="0" cellspacing="0" class="resize" style="margin: 0px; padding: 0px; width: 540px; border-collapse: collapse; min-width: 540px; max-width: 540px; mso-table-lspace: 0pt; mso-table-rspace: 0pt;" width="540">
+							<tbody>
+								<tr>
+									<td style="color: rgb(64, 69, 71); padding-bottom: 10px; font-family: Arial, Helvetica, sans-serif; font-size: 14px; border-collapse: collapse;" valign="top" class="">
+									<center style="text-align: left;">
+									<center style="text-align: left;">
+									<center style="text-align: center;">Congratulations on your first funding with RapidAdvance! We hope this is the beginning of long partnership with many more closed deals.<br>
+									<br>
+									As our valued partner, we want to know how we can make your experience better. Please fill out Partner Survey to let us know how we can improve. It takes less than 5 minutes and your feedback will help us better serve you AND your clients.</center>
+									</center>
+									</center>
+
+									<center><br>
+									<br>
+									<!-- START BUTTON -->
+									<table border="0" cellpadding="0" cellspacing="0" class="resize" style="margin: 0px; padding: 0px; border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+										<tbody>
+											<tr>
+												<td class="collapse" style="border-radius: 6px 0px 0px 6px; width: 30px; font-size: 15px; background-color: rgb(48, 157, 231);" valign="top">&nbsp;</td>
+												<td class="button" pardot-data="" style="background: rgb(48, 157, 231); text-align: center; color: rgb(255, 255, 255); padding-top: 10px; padding-bottom: 10px; font-family: Arial, Helvetica, sans-serif; font-size: 15px; font-weight: bold; border-collapse: collapse;" valign="middle"><a href="http://www.getfeedback.com/r/eAbGPlyM?Email={!Contact.Email}" style="text-decoration:none;color:#ffffff;">Take My Survey</a></td>
+												<td class="collapse" style="border-radius: 0px 6px 6px 0px; width: 30px; font-size: 15px; background-color: rgb(48, 157, 231);" valign="top">&nbsp;</td>
+											</tr>
+										</tbody>
+									</table>
+									<br>
+									<font color="#000000"><b>Thanks again for being a RapidAdvance Partner!</b></font></center>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						</td>
+						<td class="mobile_padding30" style="width: 60px; border-collapse: collapse;" valign="top">&nbsp;</td>
+					</tr>
+				</tbody>
+			</table>
+			</td>
+		</tr>
+		<!-- END CONTENT ONE --><!-- START EMPTY SPACE -->
+		<tr>
+			<td style="height: 15px; line-height: 15px; font-size: 15px; border-collapse: collapse;" valign="top" class="">&nbsp;</td>
+		</tr>
+		<!-- END EMPTY SPACE --><!-- START TWO COLUMN. In case you'd like to do a two column section that's responsive. In the below, the second section will move on top of the first on a mobile device-->
+		<tr>
+			<td style="border-collapse: collapse;" valign="top"><!-- This will be the column on the right on desktop and on the top on mobile -->
+			<table cellpadding="0" cellspacing="0" class="resize" style="margin: 0px; padding: 0px; width: 600px; border-collapse: collapse; min-width: 600px; max-width: 600px; mso-table-lspace: 0pt; mso-table-rspace: 0pt;" width="600">
+				<tbody>
+				</tbody>
+			</table>
+			<!-- END TWO COLUMN --><!-- START EMPTY SPACE --></td>
+		</tr>
+		<tr>
+			<td style="height: 10px; line-height: 10px; font-size: 10px; border-collapse: collapse;" valign="top" class="">&nbsp;</td>
+		</tr>
+		<!-- END EMPTY SPACE --><!-- START THREE COLUMN IMAGES. Looked like you had some sections that had three images in a row. You may want to use the below code to make only the most important one show on mobile -->
+		<tr>
+			<td>
+			<table align="center" border="0" cellpadding="0" cellspacing="0" class="resize" style="margin: 0px auto; padding: 0px; font-size: 5px; border-top-color: rgb(221, 221, 221); border-top-width: 2px; border-top-style: dashed; min-width: 300px;" width="598">
+				<tbody>
+				</tbody>
+			</table>
+			</td>
+		</tr>
+		<!--END FOOTER --><!-- START EMPTY SPACE --><!-- END EMPTY SPACE --><!-- START DISCLAIMER -->
+		<tr>
+			<td style="border-collapse: collapse;" valign="top">
+			<table align="center" border="0" cellpadding="0" cellspacing="0" class="resize" id="disclaimer" style="margin: 0px auto; padding: 0px; font-size: 9px; background-color: rgb(255, 255, 255);" width="600">
+				<tbody>
+					<tr>
+						<td style="padding: 10px; text-align: justify; color: rgb(128, 130, 133); font-family: Arial; font-size: 9px;" class="">
+						<div style="text-align: center;"><br>
+						<br>
+						<a href="https://www.facebook.com/RapidAdvance1"><img height="35" src="http://www2.rapidadvance.com/l/17132/2016-05-18/6cgzpf/17132/141802/fb_white.gif" width="35"></a>&nbsp;&nbsp; <a href="https://www.twitter.com/Rapid_Advance"><img height="33" src="http://www2.rapidadvance.com/l/17132/2016-05-18/6cgzqf/17132/141804/twitter_white.gif" style="width: 32px; height: 33px;" width="32"></a>&nbsp; <a href="https://www.linkedin.com/company/RapidAdvance" style="text-decoration: none;"><img height="33" src="http://www2.rapidadvance.com/l/17132/2016-05-18/6cgzqp/17132/141806/linkedin_white.gif" style="width: 32px; height: 33px;" width="32"></a><br>
+						<br>
+						<br>
+						© RapidAdvance. All rights reserved.<br>
+						<br>
+						4500 East West Highway, 6th Floor<br>
+						Bethesda, MD 20814<br>
+						</div>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			</td>
+		</tr>
+		<!-- END DISCLAIMER -->
+	</tbody>
+</table>
+<!-- END EMAIL WRAPPER -->
+</body>
+</html>

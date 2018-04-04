@@ -1,0 +1,260 @@
+<apex:page showHeader="false" sideBar="false" tabStyle="Quote" standardController="Quote" extensions="RADoc_Ctrl" >
+    <c:Opportunity_Related_CSS />
+    <apex:pageMessages id="pageMessageMain"/>
+    <apex:form id="SurveyForm">
+        <apex:sectionHeader title="RADoc" subtitle="{!IF(RADoc.Name != NULL,RADoc.Name,'New RADoc')}" />
+        <table id="surveyTable">
+            <tr>
+                <td colspan="4">
+                    <c:Extjs_Panel title="RADoc Information"/> 
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <apex:outputLabel value="{!$ObjectType.Quote.fields.Name.label}"/> 
+                </td>               
+                <td>
+                    <apex:inputField value="{!RADoc.Name}" required="true"/>   
+                </td>                
+                <td>
+                    <apex:outputLabel value="{!$ObjectType.Quote.fields.ExpirationDate.label}"/> 
+                </td>
+                <td>
+                     <apex:inputField value="{!RADoc.ExpirationDate}"/>
+                </td>
+            </tr>
+             <tr>
+                <td>
+                    <apex:outputLabel value="Opportunity"/> 
+                </td>
+               
+                <td>
+                    <apex:outputField value="{!quoteOpp.Name}" />   
+                </td>                
+                <td>
+                    <apex:outputLabel value="{!$ObjectType.Quote.fields.IsSyncing.label}"/> 
+                </td>
+                <td> 
+                     <apex:inputField value="{!RADoc.IsSyncing}"/>
+                </td>
+            </tr>            
+            <tr>                 
+                <td>
+                    <apex:outputLabel value="{!$ObjectType.Quote.fields.Status.label}"/> 
+                </td>               
+                <td>
+                    <apex:outputField value="{!RADoc.Status}" />   
+                </td>
+	                <td>
+	                <apex:outputLabel value="{!$ObjectType.Quote.fields.Description.label}"/> 
+	             </td>
+	            <td>
+	                 <apex:inputField value="{!RADoc.Description}" style="width:80%"/>
+	            </td>
+            </tr>
+                                     
+            <tr>
+                <td colspan="4">
+                    <c:Extjs_Panel title="Totals"/> 
+                </td>
+            </tr>
+             <tr>
+                <td>
+                    <apex:outputLabel value="{!$ObjectType.Quote.fields.Subtotal.label}"/> 
+                </td>
+               
+                <td>
+                    <apex:outputField value="{!RADoc.Subtotal}" />   
+                </td>                
+                <td>
+                    <apex:outputLabel value="{!$ObjectType.Quote.fields.Tax.label}"/> 
+                </td>
+                <td> 
+                     <apex:inputField value="{!RADoc.Tax}"/>
+                </td>
+            </tr>
+            
+            <tr>
+                <td>
+                    <apex:outputLabel value="{!$ObjectType.Quote.fields.Discount.label}"/> 
+                </td>
+               
+                <td>
+                    <apex:outputField value="{!RADoc.Discount}" />   
+                </td>                
+                <td>
+                    <apex:outputLabel value="{!$ObjectType.Quote.fields.ShippingHandling.label}"/> 
+                </td>
+                <td>
+                     <apex:inputField value="{!RADoc.ShippingHandling}"/>
+                </td>
+            </tr>
+            
+             <tr>
+                <td>
+                    <apex:outputLabel value="{!$ObjectType.Quote.fields.TotalPrice.label}"/> 
+                </td>
+               
+                <td>
+                    <apex:outputField value="{!RADoc.TotalPrice}" />   
+                </td>                
+                <td>
+                    <apex:outputLabel value="{!$ObjectType.Quote.fields.GrandTotal.label}"/> 
+                </td>
+                <td>
+                     <apex:inputField value="{!RADoc.GrandTotal}"/>
+                </td>
+            </tr>            
+            
+             <tr>
+                <td colspan="4">
+                    <c:Extjs_Panel title="Prepared for"/> 
+                </td>
+            </tr>
+            
+            <tr>
+                <td>
+                    <apex:outputLabel value="Contact"/> 
+                </td>               
+                <td>
+                    <apex:inputField value="{!RADoc.ContactId}" />   
+                </td>                
+                <td>
+                    <apex:outputLabel value="{!$ObjectType.Quote.fields.Phone.label}"/> 
+                </td>
+                <td>
+                     <apex:inputField value="{!RADoc.Phone}"/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <apex:outputLabel value="Email"/> 
+                </td>
+               
+                <td>
+                    <apex:inputField value="{!RADoc.Email}" />   
+                </td>               
+                <td>
+                    <apex:outputLabel value="Fax"/> 
+                </td>
+                <td>
+                     <apex:inputField value="{!RADoc.Fax}"/>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="4">
+                    <c:Extjs_Panel title="Address Information"/> 
+                </td>
+            </tr>
+            
+             <tr>
+                <td>
+                    <apex:outputLabel value="{!$ObjectType.Quote.fields.BillingName.label}"/> 
+                </td>               
+                <td>
+                    <apex:inputField value="{!RADoc.BillingName}" />   
+                </td>                
+                <td>
+                    <apex:outputLabel value="{!$ObjectType.Quote.fields.ShippingName.label}"/> 
+                </td>
+                <td>
+                     <apex:inputField value="{!RADoc.ShippingName}"/>
+                </td>
+            </tr>
+            
+             <tr>
+                <td>
+                    <apex:outputLabel value="{!$ObjectType.Quote.fields.BillingStreet.label}"/> 
+                </td>
+               
+                <td>
+                    <apex:inputField value="{!RADoc.BillingStreet}" />   
+                </td>                
+                <td>
+                    <apex:outputLabel value="{!$ObjectType.Quote.fields.ShippingStreet.label}"/> 
+                </td>
+                <td>
+                     <apex:inputField value="{!RADoc.ShippingStreet}"/>
+                </td>
+            </tr>
+            
+             <tr>
+                <td>
+                    <apex:outputLabel value="{!$ObjectType.Quote.fields.BillingCity.label}"/> 
+                </td>
+               
+                <td>
+                    <apex:inputField value="{!RADoc.BillingCity}" />   
+                </td>                
+                <td>
+                    <apex:outputLabel value="{!$ObjectType.Quote.fields.ShippingCity.label}"/> 
+                </td>
+                <td>
+                     <apex:inputField value="{!RADoc.ShippingCity}"/>
+                </td>
+            </tr>
+            
+              <tr>
+                <td>
+                    <apex:outputLabel value="{!$ObjectType.Quote.fields.BillingState.label}"/> 
+                </td>
+               
+                <td>
+                    <apex:inputField value="{!RADoc.BillingState}" />   
+                </td>                
+                <td>
+                    <apex:outputLabel value="{!$ObjectType.Quote.fields.ShippingState.label}"/> 
+                </td>
+                <td>
+                     <apex:inputField value="{!RADoc.ShippingState}"/>
+                </td>
+            </tr>
+            
+            <tr>
+                <td>
+                    <apex:outputLabel value="{!$ObjectType.Quote.fields.BillingPostalCode.label}"/> 
+                </td>
+               
+                <td>
+                    <apex:inputField value="{!RADoc.BillingPostalCode}" />   
+                </td>                
+                <td>
+                    <apex:outputLabel value="{!$ObjectType.Quote.fields.ShippingPostalCode.label}"/> 
+                </td>
+                <td>
+                     <apex:inputField value="{!RADoc.ShippingPostalCode}"/>
+                </td>
+            </tr>
+            
+             <tr>
+                <td>
+                    <apex:outputLabel value="{!$ObjectType.Quote.fields.BillingCountry.label}"/> 
+                </td>
+               
+                <td>
+                    <apex:inputField value="{!RADoc.BillingCountry}" />   
+                </td>                
+                <td>
+                    <apex:outputLabel value="{!$ObjectType.Quote.fields.ShippingCountry.label}"/> 
+                </td>
+                <td>
+                     <apex:inputField value="{!RADoc.ShippingCountry}"/>
+                </td>
+            </tr>
+        </table>
+       
+        <br/>
+        <div align="center">                
+            <apex:commandButton value="Save" action="{!save}" reRender="pageMessageMain" status="ajaxStatus"/>&nbsp;&nbsp;        
+            <apex:commandButton value="Cancel" action="{!cancel}" status="ajaxStatus"/>        
+        </div> 
+        
+        
+    </apex:form><br/><br/>
+    
+        <!--apex:relatedList list="OpenActivities" />
+        <apex:relatedList list="ActivityHistories"/>
+        <apex:relatedList list="NotesAndAttachments"/-->
+    
+    <apex:actionstatus startStyleClass="requiredLoaderBG" id="ajaxStatus" />
+</apex:page>

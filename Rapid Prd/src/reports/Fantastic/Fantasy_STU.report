@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <buckets>
+        <bucketType>text</bucketType>
+        <developerName>BucketField_4936715</developerName>
+        <masterLabel>Teams</masterLabel>
+        <nullTreatment>n</nullTreatment>
+        <otherBucketLabel>Other</otherBucketLabel>
+        <sourceColumnName>User$Name</sourceColumnName>
+        <useOther>true</useOther>
+        <values>
+            <sourceValues>
+                <sourceValue>Tyler Zilli</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Mark Flis</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Mike Moussawel</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Nick Yatros</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Colleen Smith</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Seth Gray</sourceValue>
+            </sourceValues>
+            <value>Marvin</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Sargam Bhatt</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Ariana Jones</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Samantha Nazal</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Zach Flood</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Mallory Ruff</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Koby Glenn</sourceValue>
+            </sourceValues>
+            <value>Nate</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Eric Bielski</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Dan Spadafora</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Holly Jarjosa</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Alexandra Cocklin</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Anthony Birch</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>David Hanson</sourceValue>
+            </sourceValues>
+            <value>Krez</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Lonnie Hurst</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Phil Celeski</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Mike Berro</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Prachi Roy</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Eric Benman</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Dominique Da&apos;Cruz</sourceValue>
+            </sourceValues>
+            <value>Bob</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Darren Aliff</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Kisha Daniels</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Jake Moskall</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Anna Enwia</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>James Pollard</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Jasmine Lockhart</sourceValue>
+            </sourceValues>
+            <value>Brian</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Peter Fuga</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Karrar Al-Hamdani</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Denine C. Simmons</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Josh Blades</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Connor Neme</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Matthew Golden</sourceValue>
+            </sourceValues>
+            <value>Prem</value>
+        </values>
+    </buckets>
+    <chart>
+        <backgroundColor1>#FFFFFF</backgroundColor1>
+        <backgroundColor2>#FFFFFF</backgroundColor2>
+        <backgroundFadeDir>Diagonal</backgroundFadeDir>
+        <chartSummaries>
+            <aggregate>Sum</aggregate>
+            <axisBinding>y</axisBinding>
+            <column>User.Opportunity$OwnerId$Submitted_to_UW_Flag__c</column>
+        </chartSummaries>
+        <chartType>HorizontalBar</chartType>
+        <enableHoverLabels>false</enableHoverLabels>
+        <expandOthers>true</expandOthers>
+        <groupingColumn>BucketField_4936715</groupingColumn>
+        <location>CHART_TOP</location>
+        <showAxisLabels>true</showAxisLabels>
+        <showPercentage>false</showPercentage>
+        <showTotal>false</showTotal>
+        <showValues>false</showValues>
+        <size>Medium</size>
+        <summaryAxisRange>Auto</summaryAxisRange>
+        <textColor>#000000</textColor>
+        <textSize>12</textSize>
+        <titleColor>#000000</titleColor>
+        <titleSize>18</titleSize>
+    </chart>
+    <columns>
+        <field>User$Name</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>User.Opportunity$OwnerId$Submitted_to_UW_Flag__c</field>
+    </columns>
+    <columns>
+        <field>User.Opportunity$OwnerId$Submit_to_UW_Processing__c</field>
+    </columns>
+    <columns>
+        <field>User.Opportunity$OwnerId$Name</field>
+    </columns>
+    <columns>
+        <field>User.Opportunity$OwnerId$StageName</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>User$IsActive</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>1</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>User$Profile</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Sales - Inside Sales Rep. - Direct</value>
+        </criteriaItems>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>BucketField_4936715</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Fantasy - STU</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Users_with_without_Opportunities__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <sortColumn>User$Name</sortColumn>
+    <sortOrder>Asc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>User.Opportunity$OwnerId$Submit_to_UW_Processing__c</dateColumn>
+        <interval>INTERVAL_THISWEEK</interval>
+    </timeFrameFilter>
+</Report>

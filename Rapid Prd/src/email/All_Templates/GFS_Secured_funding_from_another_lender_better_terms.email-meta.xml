@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>If from picklist &quot;Secured funding from another lender&quot; the user selects &quot;Yes, at comparable or better terms than RapidAdvance initially offered&quot;, an email is sent to Maria.</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>GFS Secured funding from another lender better terms</name>
+    <style>none</style>
+    <subject>Yes, at comparable or better terms than RapidAdvance initially offered.</subject>
+    <type>text</type>
+</EmailTemplate>

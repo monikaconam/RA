@@ -1,0 +1,27 @@
+<table width="550" cellpadding="5" height="400" border="0" cellspacing="5" >
+<tr height="400" valign="top" >
+<td locked="0" style=" font-family:arial; bLabel:main; color:#000000; font-size:12pt; bEditID:r3st1; background-color:#FFFFFF;" aEditID="c1r1" tEditID="c1r1" >
+<![CDATA[<P><FONT face=Verdana,Geneva,Arial,Helvetica,Sans-Serif size=2>{!Lead.CreatedDate}</FONT></P>
+<P><SPAN style="FONT-SIZE: 11pt; COLOR: black; FONT-FAMILY: 'Calibri','sans-serif'; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; mso-bidi-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA"><FONT face=Verdana,Geneva,Arial,Helvetica,Sans-Serif size=2></FONT></SPAN>&nbsp;</P>
+<P><SPAN style="FONT-SIZE: 11pt; COLOR: black; FONT-FAMILY: 'Calibri','sans-serif'; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; mso-bidi-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA"><FONT face=Verdana,Geneva,Arial,Helvetica,Sans-Serif size=2>Cher(e) {!Lead.FirstName} {!Lead.LastName},</FONT></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0in 0in 0pt"><SPAN style="FONT-SIZE: 11pt; COLOR: black; FONT-FAMILY: Courier"><FONT face=Verdana,Geneva,Arial,Helvetica,Sans-Serif size=2></FONT></SPAN>&nbsp;</P>
+<P class=MsoNormal style="MARGIN: 0in 0in 0pt"><SPAN style="FONT-SIZE: 11pt; COLOR: black; FONT-FAMILY: Courier"><FONT size=2><FONT face=Verdana,Geneva,Arial,Helvetica,Sans-Serif>Nous vous remercions de l’intérêt que vous portez envers RapidAdvance, votre commerce est très important pour nous. Malheureusement, en ce moment nous ne pouvons pas fournir nos services au Québec. Nous vous prions de bien vouloir consulter régulièrement votre éligibilité à nos services.<?xml:namespace prefix = o ns = "urn:schemas-microsoft-com:office:office" /><o:p></o:p></FONT></FONT></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0in 0in 0pt"><SPAN style="FONT-SIZE: 11pt; COLOR: black; FONT-FAMILY: Courier"><o:p><FONT face=Verdana,Geneva,Arial,Helvetica,Sans-Serif size=2>&nbsp;</FONT></o:p></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0in 0in 0pt"><SPAN style="FONT-SIZE: 11pt; COLOR: black; FONT-FAMILY: Courier"><FONT size=2><FONT face=Verdana,Geneva,Arial,Helvetica,Sans-Serif>Cordialement,<o:p></o:p></FONT></FONT></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0in 0in 0pt"><SPAN style="FONT-SIZE: 11pt; COLOR: black; FONT-FAMILY: Courier"><o:p><FONT face=Verdana,Geneva,Arial,Helvetica,Sans-Serif size=2>&nbsp;</FONT></o:p></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0in 0in 0pt"><SPAN style="FONT-SIZE: 11pt; COLOR: black; FONT-FAMILY: Courier"><o:p><FONT face=Verdana,Geneva,Arial,Helvetica,Sans-Serif size=2></FONT></o:p></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0in 0in 0pt"><SPAN style="FONT-SIZE: 11pt; COLOR: black; FONT-FAMILY: Courier"><FONT face=Verdana,Geneva,Arial,Helvetica,Sans-Serif size=2>Toute L’équipe de RapidAdvance</FONT></SPAN></P>
+<P><FONT face=Verdana,Geneva,Arial,Helvetica,Sans-Serif size=2></FONT>&nbsp;</P>
+<P><FONT face=Verdana,Geneva,Arial,Helvetica,Sans-Serif size=2>________________________________________________________&nbsp;</FONT></P>
+<P><FONT face=Verdana,Geneva,Arial,Helvetica,Sans-Serif size=2>&nbsp;</FONT></P>
+<P><FONT face=Verdana,Geneva,Arial,Helvetica,Sans-Serif size=2>Dear {!Lead.FirstName} {!Lead.LastName},</FONT></P>
+<P class=MsoNormal style="MARGIN: 0in 0in 0pt"><SPAN style="FONT-SIZE: 11pt; COLOR: black; FONT-FAMILY: Courier"><o:p><FONT face=Verdana,Geneva,Arial,Helvetica,Sans-Serif size=2></FONT></o:p></SPAN>&nbsp;</P>
+<P><FONT face=Verdana,Geneva,Arial,Helvetica,Sans-Serif size=2></FONT>
+<P><FONT face=Verdana,Geneva,Arial,Helvetica,Sans-Serif size=2>Thank you for your interest in RapidAdvance. Your business is very important to us.&nbsp; Unfortunately, at this time, we&nbsp;are unable to service businesses in Quebec.&nbsp; Please check back with us periodically. </FONT></P>
+<P><FONT face=Verdana,Geneva,Arial,Helvetica,Sans-Serif size=2>&nbsp;</FONT></P>
+<P><FONT face=Verdana,Geneva,Arial,Helvetica,Sans-Serif size=2>Sincerely,</FONT></P>
+<P><FONT face=Verdana,Geneva,Arial,Helvetica,Sans-Serif size=2>&nbsp;</FONT></P>
+<P><FONT face=Verdana,Geneva,Arial,Helvetica,Sans-Serif size=2>RapidAdvance Team</FONT></P>
+<P></P>]]></td>
+</tr>
+</table>

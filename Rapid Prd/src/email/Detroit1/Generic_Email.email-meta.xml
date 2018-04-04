@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>General Follow-up Email</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>EmailLetterhead</letterhead>
+    <name>Generic Email</name>
+    <style>freeForm</style>
+    <subject>Hey {!Contact.FirstName}, your Business Advisor information:</subject>
+    <textOnly>Hey {!Contact.FirstName},
+
+It seems like I caught you at a bad time. I called to talk to you about a specific program we&apos;ve created for Preferred Business owners such as yourself.
+
+
+Just to give you an idea of what it is we are offering, it&apos;s a loan that is as competitive as a bank loan or SBA loan in terms and rates, with the only difference being we don’t require the crazy documentation that banks and government loans will require from you.  We also don’t have the high cost fees because we will be servicing your loan through the life of the loan. Lastly, we take no collateral on these loans either.
+
+
+As your business advisor, I would like to come up with a few loan options for you so that you are comfortable and you can choose from that not only would help you as a business owner but would help strengthen and grow your business as well.
+
+
+Please call me directly when you get this, or reply to this email with the best time to reach you. I just need 5 minutes
+
+
+Look forward to hearing from you and hope all is well
+
+
+http://www.rapidadvance.com/
+
+
+All the best,
+
+
+{!User.Name} | Business Advisor
+
+Phone: {!User.Phone}
+
+Cell:  {!User.MobilePhone}
+
+Email:  {!User.Email}</textOnly>
+    <type>html</type>
+</EmailTemplate>

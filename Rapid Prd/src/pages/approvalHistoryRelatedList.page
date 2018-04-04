@@ -1,0 +1,4 @@
+<apex:page standardController="Opportunity" showHeader="false" sidebar="false">
+    <!--<apex:sectionHeader subtitle="Approval History" title="Related List"/>-->
+    <apex:relatedList list="processSteps"/>
+</apex:page>

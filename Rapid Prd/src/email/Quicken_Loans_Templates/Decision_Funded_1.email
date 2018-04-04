@@ -1,0 +1,6 @@
+<table border="0" cellpadding="5" width="550" cellspacing="5" height="400" >
+<tr valign="top" height="400" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[<p style="color: rgb(81, 81, 81); font-size: 13px;">Hi {!Transfer_Member__c.First_Name__c},</p><p style="color: rgb(81, 81, 81); font-size: 13px;"><br></p><p style="color: rgb(81, 81, 81); font-size: 13px;">Congratulations! Your client is now funded.</p><p style="color: rgb(81, 81, 81); font-size: 13px;"><br></p><p style="color: rgb(81, 81, 81); font-size: 13px;">You’ve been a great resource for&nbsp;{Insert Client Name}&nbsp;during the process. More good news – you’ll receive&nbsp;your referral bonus within the next 30 to 60 days!</p><p style="color: rgb(81, 81, 81); font-size: 13px;"><br></p><p style="color: rgb(81, 81, 81); font-size: 13px;">Thanks for the referral. It was great serving you and your client.</p><p style="color: rgb(81, 81, 81); font-size: 13px;"><br></p><p style="color: rgb(81, 81, 81); font-size: 13px;">Best,<br>{!User.Name}<br><b>Phone:</b>&nbsp;{!User.Phone}<br><b>Email:</b>&nbsp;{!User.Email}<br><b>Website:</b>&nbsp;www.RapidAdvance.com</p>]]></td>
+</tr>
+</table>

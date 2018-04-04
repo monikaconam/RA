@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>CAMPAIGN_NAME</field>
+    </columns>
+    <columns>
+        <field>Lead.LeadId18Char__c</field>
+    </columns>
+    <columns>
+        <field>PHONE</field>
+    </columns>
+    <columns>
+        <field>MEMBER_CREATED_DATE</field>
+    </columns>
+    <columns>
+        <field>CREATED_DATE</field>
+    </columns>
+    <columns>
+        <field>STATUS</field>
+    </columns>
+    <columns>
+        <field>OPP_CREATED_DATE</field>
+    </columns>
+    <columns>
+        <field>Lead.Unqualified_Reason__c</field>
+    </columns>
+    <description>Report to send to IT Media</description>
+    <filter>
+        <criteriaItems>
+            <column>CAMPAIGN_NAME</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>contains</operator>
+            <value>IT Media,PersonalLoans.com</value>
+        </criteriaItems>
+    </filter>
+    <format>Summary</format>
+    <name>Report for PersonalLoans.com/ IT Media</name>
+    <params>
+        <name>scopeid</name>
+        <value></value>
+    </params>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CampaignLeadLifetime</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <sortColumn>MEMBER_CREATED_DATE</sortColumn>
+    <sortOrder>Asc</sortOrder>
+</Report>

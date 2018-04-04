@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Email that is sent to the AE when their Lead opens a marketing email.</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>StandardLetterheadSample</letterhead>
+    <name>Opened Marketing Email</name>
+    <style>freeForm</style>
+    <subject>{!01I7000000078eg.00N70000002HV5y} {!01I7000000078eg.00N70000002HV5r}  opened email - Follow Up</subject>
+    <textOnly>Date Sent: {!01I7000000078eg.00N70000002HV5u}
+Date Opened: {!01I7000000078eg.00N70000002HV5t}
+
+Email Name:  {!01I7000000078eg.Name}
+Subject Line: {!01I7000000078eg.00N70000002HV63}
+Link to detail: {!01I7000000078eg.Link}
+
+Lead Name: {!01I7000000078eg.00N70000002HV5y}
+
+OR
+
+Account: {!01I7000000078eg.00N70000002Vhw9}
+Contact:  {!01I7000000078eg.00N70000002HV5r}</textOnly>
+    <type>html</type>
+</EmailTemplate>

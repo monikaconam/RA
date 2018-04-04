@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>LEAD_ID</field>
+    </columns>
+    <columns>
+        <field>LEAD_OWNER</field>
+    </columns>
+    <columns>
+        <field>Lead.Campaign_Name__c</field>
+    </columns>
+    <columns>
+        <field>Opportunity.PrimaryCampaignSource__c</field>
+    </columns>
+    <columns>
+        <field>FIRST_NAME</field>
+    </columns>
+    <columns>
+        <field>LAST_NAME</field>
+    </columns>
+    <columns>
+        <field>COMPANY_ACCT</field>
+    </columns>
+    <columns>
+        <field>STATUS</field>
+    </columns>
+    <columns>
+        <field>CREATED_DATE</field>
+    </columns>
+    <columns>
+        <field>LAST_UPDATE</field>
+    </columns>
+    <columns>
+        <field>CONVERTED_DATE</field>
+    </columns>
+    <columns>
+        <field>CONVERTED_OPPORTUNITY_ID</field>
+    </columns>
+    <columns>
+        <field>OPP_OWNER</field>
+    </columns>
+    <columns>
+        <field>OPP_NAME</field>
+    </columns>
+    <columns>
+        <field>STAGE_NAME</field>
+    </columns>
+    <filter>
+        <booleanFilter>((1 OR 2 OR 3)) AND (4 OR 5)</booleanFilter>
+        <criteriaItems>
+            <column>LEAD_SOURCE</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Quicken Loans,Rock Connections,Rock Connections - Transfer,Quicken Loans - Hot Transfer</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Lead.Campaign_Name__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Quicken Loans Hot Transfer,Quicken Loans Email Transfer,Rock Connections - QL Closed,Rock Connections - QL Withdrawn,Rock Connections - QL Denied</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Opportunity.PrimaryCampaignSource__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Quicken Loans Hot Transfer,Quicken Loans Email Transfer,Rock Connections - QL Closed,Rock Connections - QL Withdrawn,Rock Connections - QL Denied</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>STATUS</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Initial Call Needed,Calling - No Contact Made,In Progress - Follow Up Call Needed</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>STAGE_NAME</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>NO Contact Made,Contact Made - Follow Up,Statements Rec&apos;d Follow Up,B - Quote Submitted,C - Offer Accepted - Awaiting Compl Apps,C-1 Contract Signed - More Info Needed</value>
+        </criteriaItems>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>LEAD_SOURCE</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>QL/Rock Connection</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>OpportunityLead</reportType>
+    <scope>org</scope>
+    <showDetails>true</showDetails>
+    <sortColumn>STATUS</sortColumn>
+    <sortOrder>Asc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>CREATED_DATE</dateColumn>
+        <interval>INTERVAL_PREVCURFY</interval>
+    </timeFrameFilter>
+</Report>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>CAMPAIGN_NAME</field>
+    </columns>
+    <columns>
+        <field>CAMPAIGN_OWNER</field>
+    </columns>
+    <columns>
+        <field>NUM_WON_OPPORTUNITIES</field>
+    </columns>
+    <columns>
+        <field>AMOUNT_WON</field>
+    </columns>
+    <columns>
+        <field>Campaign.Active_Buy_Rate_Agreement__c</field>
+    </columns>
+    <columns>
+        <field>Campaign.Buy_Rate_Max_Upsell_Commission__c</field>
+    </columns>
+    <columns>
+        <field>Campaign.Initial_MCA_Commission_Base__c</field>
+    </columns>
+    <filter>
+        <booleanFilter>1 or 2</booleanFilter>
+        <criteriaItems>
+            <column>CAMPAIGN_OWNER</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>contains</operator>
+            <value>nicole</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Campaign.Additional_Owner__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>contains</operator>
+            <value>nicole</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>Nicole&apos;s Partners</name>
+    <params>
+        <name>scopeid</name>
+        <value></value>
+    </params>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CampaignList</reportType>
+    <scope>org</scope>
+    <showDetails>true</showDetails>
+    <sortColumn>NUM_WON_OPPORTUNITIES</sortColumn>
+    <sortOrder>Desc</sortOrder>
+</Report>

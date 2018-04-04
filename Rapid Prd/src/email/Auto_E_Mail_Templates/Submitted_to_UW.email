@@ -1,0 +1,6 @@
+Opportunity Name: {!Opportunity.Name}
+Opportunity ID: {!Opportunity.Opportunity_Number__c}
+
+Submitted to Underwriting: {!Opportunity.Submit_to_UW_Processing__c}
+Underwriter Assigned: {!Opportunity.Underwriter_Assigned__c}
+Underwriter Assigned Date Stamp: {!Opportunity.UW_Assigned_Date_Stamp__c}

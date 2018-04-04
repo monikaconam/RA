@@ -1,0 +1,17 @@
+Hello {!Lead.FirstName},
+
+We're updating our "Stay in touch" list and just want to verify the following information with you.
+
+Company Name: {!Lead.Company}
+Street Address:  {!Lead.Street}
+City, State and Zip: {!Lead.City}, {!Lead.State}  {!Lead.PostalCode}
+Phone: {!Lead.Phone}
+
+If you could let us know if the above information has changed or is no longer valid, we would greatly appreciate it.
+
+Also, if you would like more information on our services, please visit www.rapidadvance.com or call 1-877-467-2743.
+
+Thank you,
+
+{!Lead.OwnerFullName}
+RapidAdvance, LLC

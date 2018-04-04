@@ -1,0 +1,1091 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Marble</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Marbles</value>
+    </caseValues>
+    <fields>
+        <label><!-- Account --></label>
+        <name>Account__c</name>
+        <relationshipLabel><!-- Marbles --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Accountable --></label>
+        <name>Accountable__c</name>
+    </fields>
+    <fields>
+        <label><!-- Accounting Software Used --></label>
+        <name>Accounting_Software_Used__c</name>
+    </fields>
+    <fields>
+        <label><!-- Add to Five9 List --></label>
+        <name>Add_to_Five9_List__c</name>
+    </fields>
+    <fields>
+        <label><!-- Additional Owner(s) Not on Application? --></label>
+        <name>Additional_Owner_s_Not_on_Application__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- AgileCap --></label>
+        <name>AgileCap__c</name>
+    </fields>
+    <fields>
+        <label><!-- Approved Timestamp --></label>
+        <name>Approval_Time__c</name>
+    </fields>
+    <fields>
+        <label><!-- Aquila Disqualified --></label>
+        <name>Aquila_Disqualified__c</name>
+    </fields>
+    <fields>
+        <label><!-- Aquila Quoted --></label>
+        <name>Aquila_Quoted__c</name>
+    </fields>
+    <fields>
+        <label><!-- Aquila Submitted --></label>
+        <name>Aquila_Submitted__c</name>
+    </fields>
+    <fields>
+        <label><!-- Aquila --></label>
+        <name>Aquila__c</name>
+    </fields>
+    <fields>
+        <label><!-- Atlantis Mortgage --></label>
+        <name>Atlantis_Mortgage__c</name>
+    </fields>
+    <fields>
+        <label><!-- Ave Number of Deposits per Month --></label>
+        <name>Ave_Number_of_Deposits_per_Month__c</name>
+    </fields>
+    <fields>
+        <help><!-- What is the clients average balance on their business banking account? --></help>
+        <label><!-- Average Balance --></label>
+        <name>Average_Balancce__c</name>
+    </fields>
+    <fields>
+        <label><!-- Average Monthly Negative Days --></label>
+        <name>Average_Monthly_Negative_Balance__c</name>
+    </fields>
+    <fields>
+        <label><!-- BFS Disqualified --></label>
+        <name>BFS_Disqualified__c</name>
+    </fields>
+    <fields>
+        <label><!-- BFS Quoted --></label>
+        <name>BFS_Quoted__c</name>
+    </fields>
+    <fields>
+        <label><!-- BFS Submitted --></label>
+        <name>BFS_Submitted__c</name>
+    </fields>
+    <fields>
+        <label><!-- BFS --></label>
+        <name>BFS__c</name>
+    </fields>
+    <fields>
+        <label><!-- BOOP Status --></label>
+        <name>BOOP_Status__c</name>
+    </fields>
+    <fields>
+        <label><!-- Bankruptcy Discharge Date --></label>
+        <name>Bankruptcy_Discharge_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Bankruptcy --></label>
+        <name>Bankruptcy__c</name>
+    </fields>
+    <fields>
+        <label><!-- Business Open Date --></label>
+        <name>Business_Open_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- CNH Disqualified --></label>
+        <name>CNH_Disqualified__c</name>
+    </fields>
+    <fields>
+        <label><!-- CNH Finance --></label>
+        <name>CNH_Finance__c</name>
+    </fields>
+    <fields>
+        <label><!-- CNH Quoted --></label>
+        <name>CNH_Quoted__c</name>
+    </fields>
+    <fields>
+        <label><!-- CNH Submitted --></label>
+        <name>CNH_Submitted__c</name>
+    </fields>
+    <fields>
+        <label><!-- CONSTRUCTION FINANCE --></label>
+        <name>CONSTRUCTION_FINANCE__c</name>
+    </fields>
+    <fields>
+        <label><!-- Calc Link --></label>
+        <name>Calc_Link2__c</name>
+    </fields>
+    <fields>
+        <label><!-- Calc Link --></label>
+        <name>Calc_Link__c</name>
+    </fields>
+    <fields>
+        <label><!-- Campaign Name --></label>
+        <name>Campaign_Name__c</name>
+    </fields>
+    <fields>
+        <help><!-- If &quot;Visa&quot;, must be valid for life of financing. --></help>
+        <label><!-- Citizenship Status --></label>
+        <name>Citizenship_Status__c</name>
+        <picklistValues>
+            <masterLabel>Full US Citizen</masterLabel>
+            <translation><!-- Full US Citizen --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Green Card</masterLabel>
+            <translation><!-- Green Card --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Visa</masterLabel>
+            <translation><!-- Visa --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Company DBA --></label>
+        <name>Company_DBA__c</name>
+    </fields>
+    <fields>
+        <label><!-- Company --></label>
+        <name>Company__c</name>
+    </fields>
+    <fields>
+        <label><!-- Competitors: --></label>
+        <name>Competitors__c</name>
+    </fields>
+    <fields>
+        <label><!-- Construction Finance Disqualified --></label>
+        <name>Construction_Finance_Disqualified__c</name>
+    </fields>
+    <fields>
+        <label><!-- Construction Finance Quoted --></label>
+        <name>Construction_Finance_Quoted__c</name>
+    </fields>
+    <fields>
+        <label><!-- Construction Finance Submitted --></label>
+        <name>Construction_Finance_sub__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contract Request --></label>
+        <name>Contract_Request__c</name>
+    </fields>
+    <fields>
+        <label><!-- Credibly --></label>
+        <name>Credibly__c</name>
+    </fields>
+    <fields>
+        <help><!-- How many credit inquiries has the client had on their credit report in the last 90 days? --></help>
+        <label><!-- Credit Inquiries (Last 90 Days) --></label>
+        <name>Credit_Inquiries_Last_90_Days__c</name>
+    </fields>
+    <fields>
+        <help><!-- How much is currently available in the client&apos;s primary bank account? --></help>
+        <label><!-- Current Bank Balance --></label>
+        <name>Current_Bank_Balance__c</name>
+    </fields>
+    <fields>
+        <label><!-- Decline Reason --></label>
+        <name>Decline_Reason__c</name>
+        <picklistValues>
+            <masterLabel>Bank Statement Disqualification</masterLabel>
+            <translation><!-- Bank Statement Disqualification --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Bankruptcy</masterLabel>
+            <translation><!-- Bankruptcy --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Business Type</masterLabel>
+            <translation><!-- Business Type --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Client Withdrawal - Cost</masterLabel>
+            <translation><!-- Client Withdrawal - Cost --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Client Withdrawal - No Response</masterLabel>
+            <translation><!-- Client Withdrawal - No Response --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Competitor Balance / UCC(s)</masterLabel>
+            <translation><!-- Competitor Balance / UCC(s) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Credit</masterLabel>
+            <translation><!-- Credit --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Fraud</masterLabel>
+            <translation><!-- Fraud --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Qualified at Rapid</masterLabel>
+            <translation><!-- Qualified at Rapid --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Tax Lien(s)</masterLabel>
+            <translation><!-- Tax Lien(s) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Time in Business</masterLabel>
+            <translation><!-- Time in Business --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Delete from Five9 Lists --></label>
+        <name>Delete_from_Five9_Lists__c</name>
+    </fields>
+    <fields>
+        <label><!-- Document Link --></label>
+        <name>Document_Link__c</name>
+    </fields>
+    <fields>
+        <label><!-- ECG Disqualified --></label>
+        <name>ECG_Disqualified__c</name>
+    </fields>
+    <fields>
+        <label><!-- ECG Quoted --></label>
+        <name>ECG_Quoted__c</name>
+    </fields>
+    <fields>
+        <label><!-- ECG Submitted --></label>
+        <name>ECG_Submitted__c</name>
+    </fields>
+    <fields>
+        <label><!-- ECG --></label>
+        <name>ECG__c</name>
+    </fields>
+    <fields>
+        <label><!-- Email --></label>
+        <name>Email__c</name>
+    </fields>
+    <fields>
+        <label><!-- Entity Type --></label>
+        <name>Entity_Type__c</name>
+        <picklistValues>
+            <masterLabel>C-Corp</masterLabel>
+            <translation><!-- C-Corp --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GP</masterLabel>
+            <translation><!-- GP --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>LLC</masterLabel>
+            <translation><!-- LLC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>LLP</masterLabel>
+            <translation><!-- LLP --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>LP</masterLabel>
+            <translation><!-- LP --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Non-Profit</masterLabel>
+            <translation><!-- Non-Profit --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>S-Corp</masterLabel>
+            <translation><!-- S-Corp --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sole Prop</masterLabel>
+            <translation><!-- Sole Prop --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- FICO Score --></label>
+        <name>FICO_Score__c</name>
+    </fields>
+    <fields>
+        <label><!-- FORA Disqualified --></label>
+        <name>FORA_Disqualified__c</name>
+    </fields>
+    <fields>
+        <label><!-- FORA Quoted --></label>
+        <name>FORA_Quoted__c</name>
+    </fields>
+    <fields>
+        <label><!-- FORA Submitted --></label>
+        <name>FORA_Submitted__c</name>
+    </fields>
+    <fields>
+        <label><!-- FORA --></label>
+        <name>FORA__c</name>
+    </fields>
+    <fields>
+        <label><!-- FundBox --></label>
+        <name>FundBox__c</name>
+    </fields>
+    <fields>
+        <label><!-- FundKite --></label>
+        <name>FundKite__c</name>
+    </fields>
+    <fields>
+        <label><!-- Fund-Amental Disqualified --></label>
+        <name>Fund_Amental_Disqualified__c</name>
+    </fields>
+    <fields>
+        <label><!-- Fund-Amental Quoted --></label>
+        <name>Fund_Amental_Quoted__c</name>
+    </fields>
+    <fields>
+        <label><!-- Fund-Amental Submitted --></label>
+        <name>Fund_Amental_Submitted__c</name>
+    </fields>
+    <fields>
+        <label><!-- Fund-Amental --></label>
+        <name>Fund_Amental__c</name>
+    </fields>
+    <fields>
+        <label><!-- Fundation --></label>
+        <name>Fundation__c</name>
+    </fields>
+    <fields>
+        <label><!-- Funded Timestamp --></label>
+        <name>Funded_Timestamp__c</name>
+    </fields>
+    <fields>
+        <label><!-- Funding Circle Submission --></label>
+        <name>Funding_Circle_Submission__c</name>
+    </fields>
+    <fields>
+        <label><!-- Funding Circle --></label>
+        <name>Funding_Circle__c</name>
+    </fields>
+    <fields>
+        <label><!-- Greenwich Capital --></label>
+        <name>Greenwich_Capital__c</name>
+    </fields>
+    <fields>
+        <label><!-- Headway Capital Disqualified --></label>
+        <name>Headway_Capital_Disqualified__c</name>
+    </fields>
+    <fields>
+        <label><!-- Headway Capital Quoted --></label>
+        <name>Headway_Capital_Quoted__c</name>
+    </fields>
+    <fields>
+        <label><!-- Headway Capital Submitted --></label>
+        <name>Headway_Capital_Submitted__c</name>
+    </fields>
+    <fields>
+        <label><!-- Headway Capital --></label>
+        <name>Headway_Capital__c</name>
+    </fields>
+    <fields>
+        <label><!-- Home Based? --></label>
+        <name>Home_Based__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Industry --></label>
+        <name>Industry__c</name>
+        <relationshipLabel><!-- Marbles --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Interface Financial --></label>
+        <name>Interface_Financial__c</name>
+    </fields>
+    <fields>
+        <label><!-- Invoice --></label>
+        <name>Invoice__c</name>
+    </fields>
+    <fields>
+        <label><!-- Iron Horse Credit --></label>
+        <name>Iron_Horse_Credit__c</name>
+    </fields>
+    <fields>
+        <label><!-- KatalystFP --></label>
+        <name>KatalystFP__c</name>
+    </fields>
+    <fields>
+        <label><!-- Knight Disqualified --></label>
+        <name>Knight_Disqualified__c</name>
+    </fields>
+    <fields>
+        <label><!-- Knight Quoted --></label>
+        <name>Knight_Quoted__c</name>
+    </fields>
+    <fields>
+        <label><!-- Knight Submitted --></label>
+        <name>Knight_Submitted__c</name>
+    </fields>
+    <fields>
+        <label><!-- Knight --></label>
+        <name>Knight__c</name>
+    </fields>
+    <fields>
+        <label><!-- Last Five9 Lists --></label>
+        <name>Last_Five9_Lists__c</name>
+    </fields>
+    <fields>
+        <label><!-- Last Funded Date --></label>
+        <name>Last_Funded_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Last Status Change Timestamp --></label>
+        <name>Last_Status_Change_Timestamp__c</name>
+    </fields>
+    <fields>
+        <label><!-- Lead Calc Liink --></label>
+        <name>Lead_Calc_Liink__c</name>
+    </fields>
+    <fields>
+        <label><!-- Lead ID --></label>
+        <name>Lead_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Lead Opp Link --></label>
+        <name>Lead_Opp_Link__c</name>
+    </fields>
+    <fields>
+        <label><!-- Lead Reference --></label>
+        <name>Lead_Reference__c</name>
+        <relationshipLabel><!-- Marbles --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Leadid --></label>
+        <name>Leadid__c</name>
+    </fields>
+    <fields>
+        <label><!-- Legal Name --></label>
+        <name>Legal_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- LenCred --></label>
+        <name>LenCred__c</name>
+    </fields>
+    <fields>
+        <label><!-- Lendio --></label>
+        <name>Lendio__c</name>
+    </fields>
+    <fields>
+        <label><!-- Lendistry MCA --></label>
+        <name>Lendistry_MCA__c</name>
+    </fields>
+    <fields>
+        <label><!-- Lendr Disqualified --></label>
+        <name>Lendr_Disqualified__c</name>
+    </fields>
+    <fields>
+        <label><!-- Lendr Quoted --></label>
+        <name>Lendr_Quoted__c</name>
+    </fields>
+    <fields>
+        <label><!-- Lendr Submitted --></label>
+        <name>Lendr_Submitted__c</name>
+    </fields>
+    <fields>
+        <label><!-- Lendr --></label>
+        <name>Lendr__c</name>
+    </fields>
+    <fields>
+        <label><!-- Levy &amp; Associates --></label>
+        <name>Levy_Associates__c</name>
+    </fields>
+    <fields>
+        <label><!-- Libertas Contract Request --></label>
+        <name>Libertas_Contract_Request__c</name>
+    </fields>
+    <fields>
+        <label><!-- Libertas Disqualified --></label>
+        <name>Libertas_Disqualified__c</name>
+    </fields>
+    <fields>
+        <label><!-- Libertas Quoted --></label>
+        <name>Libertas_Quoted__c</name>
+    </fields>
+    <fields>
+        <label><!-- Libertas Submitted --></label>
+        <name>Libertas_Submitted__c</name>
+    </fields>
+    <fields>
+        <label><!-- Libertas --></label>
+        <name>Libertas__c</name>
+    </fields>
+    <fields>
+        <label><!-- MAC Disqualified --></label>
+        <name>MAC_Disqualified__c</name>
+    </fields>
+    <fields>
+        <label><!-- MAC Quoted --></label>
+        <name>MAC_Quoted__c</name>
+    </fields>
+    <fields>
+        <label><!-- MAC Submitted --></label>
+        <name>MAC_Submitted__c</name>
+    </fields>
+    <fields>
+        <label><!-- MCA Only --></label>
+        <name>MCA_Only__c</name>
+    </fields>
+    <fields>
+        <label><!-- Marble Rejection Reason --></label>
+        <name>Marble_Rejection_Reason__c</name>
+        <picklistValues>
+            <masterLabel>Application Data,</masterLabel>
+            <translation><!-- Application Data, --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Average Daily Balance,</masterLabel>
+            <translation><!-- Average Daily Balance, --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Decline Reason,</masterLabel>
+            <translation><!-- Decline Reason, --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Deposits Per Month,</masterLabel>
+            <translation><!-- Deposits Per Month, --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Home Based,</masterLabel>
+            <translation><!-- Home Based, --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Industry,</masterLabel>
+            <translation><!-- Industry, --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Missing Folder</masterLabel>
+            <translation><!-- Missing Folder --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Monthly Sales,</masterLabel>
+            <translation><!-- Monthly Sales, --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Negative Days,</masterLabel>
+            <translation><!-- Negative Days, --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Number of Competitor Balances,</masterLabel>
+            <translation><!-- Number of Competitor Balances, --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Oops,</masterLabel>
+            <translation><!-- Oops, --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>RapidAdvance Balance,</masterLabel>
+            <translation><!-- RapidAdvance Balance, --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Need Help, go here: https://www.naics.com/search/ --></help>
+        <label><!-- NAICS / SIC CODE --></label>
+        <name>NAICSSIC__c</name>
+    </fields>
+    <fields>
+        <label><!-- NAICS Description --></label>
+        <name>NAICS_Description__c</name>
+    </fields>
+    <fields>
+        <label><!-- National Disqualified --></label>
+        <name>National_Disqualified__c</name>
+    </fields>
+    <fields>
+        <label><!-- National Quoted --></label>
+        <name>National_Quoted__c</name>
+    </fields>
+    <fields>
+        <label><!-- National Submitted --></label>
+        <name>National_Submitted__c</name>
+    </fields>
+    <fields>
+        <label><!-- National --></label>
+        <name>National__c</name>
+    </fields>
+    <fields>
+        <label><!-- No Daily Payment --></label>
+        <name>No_Daily_Payment__c</name>
+    </fields>
+    <fields>
+        <label><!-- Number of Competitor Balances --></label>
+        <name>Number_of_Competitor_Balances__c</name>
+    </fields>
+    <fields>
+        <label><!-- OpID --></label>
+        <name>OpID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Opportunity --></label>
+        <name>Opportunity_Reference__c</name>
+        <relationshipLabel><!-- Marbles --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Partner Submission Complete --></label>
+        <name>Partner_Submission_Complete__c</name>
+    </fields>
+    <fields>
+        <label><!-- Path --></label>
+        <name>Path__c</name>
+    </fields>
+    <fields>
+        <label><!-- Payment Amount --></label>
+        <name>Payment_Amount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Phone Number --></label>
+        <name>Phone__c</name>
+    </fields>
+    <fields>
+        <label><!-- Platinum Disqualified --></label>
+        <name>Platinum_Disqualified__c</name>
+    </fields>
+    <fields>
+        <label><!-- Platinum Quoted --></label>
+        <name>Platinum_Quoted__c</name>
+    </fields>
+    <fields>
+        <label><!-- Platinum Rapid --></label>
+        <name>Platinum_Rapid__c</name>
+    </fields>
+    <fields>
+        <label><!-- Platinum Submitted --></label>
+        <name>Platinum_Submitted__c</name>
+    </fields>
+    <fields>
+        <label><!-- Position --></label>
+        <name>Position__c</name>
+    </fields>
+    <fields>
+        <label><!-- Principis Capital --></label>
+        <name>Principis_Capital__c</name>
+    </fields>
+    <fields>
+        <label><!-- Monthly Sales --></label>
+        <name>QC_Monthly_Sales__c</name>
+    </fields>
+    <fields>
+        <label><!-- Quote Received --></label>
+        <name>Quote_Received__c</name>
+    </fields>
+    <fields>
+        <label><!-- RapidAdvance Balance? --></label>
+        <name>RapidAdvance_Balance__c</name>
+    </fields>
+    <fields>
+        <label><!-- RapidAdvance --></label>
+        <name>RapidAdvance__c</name>
+    </fields>
+    <fields>
+        <label><!-- Receivables or Unpaid Invoices --></label>
+        <name>Receivables_or_Unpaid_Invoices__c</name>
+    </fields>
+    <fields>
+        <label><!-- Recommendation --></label>
+        <name>Recommendation__c</name>
+    </fields>
+    <fields>
+        <label><!-- Requested Short --></label>
+        <name>Requested_Short__c</name>
+    </fields>
+    <fields>
+        <label><!-- Requested Submission --></label>
+        <name>Requested_Submission__c</name>
+    </fields>
+    <fields>
+        <label><!-- RocketLoans --></label>
+        <name>RocketLoans__c</name>
+    </fields>
+    <fields>
+        <label><!-- SFID --></label>
+        <name>SFID__c</name>
+    </fields>
+    <fields>
+        <label><!-- SUPER G --></label>
+        <name>SUPER_G__c</name>
+    </fields>
+    <fields>
+        <label><!-- Seek Capital --></label>
+        <name>Seek_Capital__c</name>
+    </fields>
+    <fields>
+        <label><!-- Seek Submission --></label>
+        <name>Seek_Submission__c</name>
+    </fields>
+    <fields>
+        <label><!-- Selection Notes --></label>
+        <name>Selection_Notes__c</name>
+    </fields>
+    <fields>
+        <label><!-- Signed Contract --></label>
+        <name>Signed_Contract__c</name>
+    </fields>
+    <fields>
+        <label><!-- Signed Contract --></label>
+        <name>Signed__c</name>
+    </fields>
+    <fields>
+        <label><!-- Smartbiz Submission --></label>
+        <name>Smartbiz_Submission__c</name>
+    </fields>
+    <fields>
+        <label><!-- Smartbiz --></label>
+        <name>Smartbiz__c</name>
+    </fields>
+    <fields>
+        <label><!-- Snap Advances --></label>
+        <name>Snap_Advances__c</name>
+    </fields>
+    <fields>
+        <label><!-- Snap Disqualified --></label>
+        <name>Snap_Disqualified__c</name>
+    </fields>
+    <fields>
+        <label><!-- Snap Quoted --></label>
+        <name>Snap_Quoted__c</name>
+    </fields>
+    <fields>
+        <label><!-- Snap Submitted --></label>
+        <name>Snap_Submitted__c</name>
+    </fields>
+    <fields>
+        <label><!-- Soft Pull Only --></label>
+        <name>Soft_Pull_Only__c</name>
+    </fields>
+    <fields>
+        <label><!-- State of Operation --></label>
+        <name>State_of_Operation__c</name>
+    </fields>
+    <fields>
+        <label><!-- Status --></label>
+        <name>Status__c</name>
+        <picklistValues>
+            <masterLabel>Approved for Submission</masterLabel>
+            <translation><!-- Approved for Submission --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BOC Incomplete</masterLabel>
+            <translation><!-- BOC Incomplete --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Contacted</masterLabel>
+            <translation><!-- Contacted --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Disqualified</masterLabel>
+            <translation><!-- Disqualified --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Funded</masterLabel>
+            <translation><!-- Funded --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NEW</masterLabel>
+            <translation><!-- NEW --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>No Contact</masterLabel>
+            <translation><!-- No Contact --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Not Eligible</masterLabel>
+            <translation><!-- Not Eligible --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Not Interested</masterLabel>
+            <translation><!-- Not Interested --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Quote Sold</masterLabel>
+            <translation><!-- Quote Sold --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Quotes Received</masterLabel>
+            <translation><!-- Quotes Received --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Route to Submsisions</masterLabel>
+            <translation><!-- Route to Submsisions --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sent to FundBox</masterLabel>
+            <translation><!-- Sent to FundBox --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Signed</masterLabel>
+            <translation><!-- Signed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Submitted</masterLabel>
+            <translation><!-- Submitted --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Waiting on Documents</masterLabel>
+            <translation><!-- Waiting on Documents --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Withdrawn</masterLabel>
+            <translation><!-- Withdrawn --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Strategic Disqualified --></label>
+        <name>Strategic_Disqualified__c</name>
+    </fields>
+    <fields>
+        <label><!-- Strategic Funding --></label>
+        <name>Strategic_Funding__c</name>
+    </fields>
+    <fields>
+        <label><!-- Strategic Quoted --></label>
+        <name>Strategic_Quoted__c</name>
+    </fields>
+    <fields>
+        <label><!-- Strategic Submitted --></label>
+        <name>Strategic_Submitted__c</name>
+    </fields>
+    <fields>
+        <label><!-- Strategic --></label>
+        <name>Strategic__c</name>
+    </fields>
+    <fields>
+        <label><!-- StreetShares --></label>
+        <name>StreetShares__c</name>
+    </fields>
+    <fields>
+        <label><!-- Street Shares Submitted --></label>
+        <name>Street_Shares_Submitted__c</name>
+    </fields>
+    <fields>
+        <label><!-- Submission Attempts --></label>
+        <name>Submission_Attempts__c</name>
+    </fields>
+    <fields>
+        <label><!-- Submission Complete --></label>
+        <name>Submission_Complete__c</name>
+    </fields>
+    <fields>
+        <label><!-- Submission Partners --></label>
+        <name>Submission_Partners__c</name>
+        <picklistValues>
+            <masterLabel>BFS</masterLabel>
+            <translation><!-- BFS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ECG</masterLabel>
+            <translation><!-- ECG --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Fora</masterLabel>
+            <translation><!-- Fora --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Fundbox</masterLabel>
+            <translation><!-- Fundbox --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Funding Circle</masterLabel>
+            <translation><!-- Funding Circle --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Lendr</masterLabel>
+            <translation><!-- Lendr --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Libertas</masterLabel>
+            <translation><!-- Libertas --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>National Funding</masterLabel>
+            <translation><!-- National Funding --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Seek Capital</masterLabel>
+            <translation><!-- Seek Capital --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SmartBiz</masterLabel>
+            <translation><!-- SmartBiz --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Street Shares</masterLabel>
+            <translation><!-- Street Shares --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- How much in Competitor Balances? --></label>
+        <name>Sum_of_Competitor_Balances__c</name>
+    </fields>
+    <fields>
+        <label><!-- Super G Disqualified --></label>
+        <name>Super_G_Disqualified__c</name>
+    </fields>
+    <fields>
+        <label><!-- Super G Quoted --></label>
+        <name>Super_G_Quoted__c</name>
+    </fields>
+    <fields>
+        <label><!-- Super G Submitted --></label>
+        <name>Super_G_Submitted__c</name>
+    </fields>
+    <fields>
+        <label><!-- Tax ID --></label>
+        <name>Tax_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Tax Lien Balance --></label>
+        <name>Tax_Lien_Balance__c</name>
+    </fields>
+    <fields>
+        <label><!-- Tax Liens Payment Plan --></label>
+        <name>Tax_Liens__c</name>
+    </fields>
+    <fields>
+        <label><!-- The Fundworks Disqualified --></label>
+        <name>The_Fundworks_Disqualified__c</name>
+    </fields>
+    <fields>
+        <label><!-- The Fundworks Quoted --></label>
+        <name>The_Fundworks_Quoted__c</name>
+    </fields>
+    <fields>
+        <label><!-- The Fundworks Submitted --></label>
+        <name>The_Fundworks_Submitted__c</name>
+    </fields>
+    <fields>
+        <label><!-- The Fundworks --></label>
+        <name>The_Fundworks__c</name>
+    </fields>
+    <fields>
+        <label><!-- Uplyft --></label>
+        <name>Uplyft__c</name>
+    </fields>
+    <fields>
+        <help><!-- DO NOT ENTER &quot;WORKING CAPITAL&quot; --></help>
+        <label><!-- Use of Funds --></label>
+        <name>Use_of_Funds__c</name>
+    </fields>
+    <fields>
+        <help><!-- Total volume of deposits visible in client&apos;s bank account this month. --></help>
+        <label><!-- Verifiable Deposit Volume MTD --></label>
+        <name>Verifiable_Deposit_Volume_MTD__c</name>
+    </fields>
+    <fields>
+        <label><!-- Veteran Owned --></label>
+        <name>Veteran_Owned__c</name>
+    </fields>
+    <fields>
+        <label><!-- Where Did You Find This Client? --></label>
+        <name>Where_Did_You_Find_This_Client__c</name>
+        <picklistValues>
+            <masterLabel>BA Transfer</masterLabel>
+            <translation><!-- BA Transfer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BOBA Dialer</masterLabel>
+            <translation><!-- BOBA Dialer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Credit Karma</masterLabel>
+            <translation><!-- Credit Karma --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Custom List</masterLabel>
+            <translation><!-- Custom List --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Dialer</masterLabel>
+            <translation><!-- Dialer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Email Blast</masterLabel>
+            <translation><!-- Email Blast --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Referral</masterLabel>
+            <translation><!-- Referral --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Renewal</masterLabel>
+            <translation><!-- Renewal --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sr BA Qualified</masterLabel>
+            <translation><!-- Sr BA Qualified --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UW Unqual</masterLabel>
+            <translation><!-- UW Unqual --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- World Business Lenders --></label>
+        <name>World_Business_Lenders__c</name>
+    </fields>
+    <fields>
+        <label><!-- 24Cap Disqualified --></label>
+        <name>X24Cap_Disqualified__c</name>
+    </fields>
+    <fields>
+        <label><!-- 24Cap Quoted --></label>
+        <name>X24Cap_Quoted__c</name>
+    </fields>
+    <fields>
+        <label><!-- 24Cap Submitted --></label>
+        <name>X24Cap_Submitted__c</name>
+    </fields>
+    <fields>
+        <label><!-- 24Capital --></label>
+        <name>X24Capital__c</name>
+    </fields>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- Can not change the value of Marble Status. --></errorMessage>
+        <name>Do_not_modify_the_Marble_Status</name>
+    </validationRules>
+    <webLinks>
+        <label><!-- Submit_for_Approval_custom --></label>
+        <name>Submit_for_Approval_custom</name>
+    </webLinks>
+    <workflowTasks>
+        <description><!-- You did not complete all the fields required to enter a submission.
+
+Make sure all the fields in the submission section are completed and Docs have been uploaded. --></description>
+        <name>UPDATE_FIELDS</name>
+        <subject><!-- UPDATE FIELDS --></subject>
+    </workflowTasks>
+    <workflowTasks>
+        <description><!-- We need all the submissions information filled out before we can submit. --></description>
+        <name>UPDATE_FIELDS_Task</name>
+        <subject><!-- UPDATE FIELDS --></subject>
+    </workflowTasks>
+    <workflowTasks>
+        <name>We_are_good_to_Submit</name>
+        <subject><!-- We are good to Submit --></subject>
+    </workflowTasks>
+</CustomObjectTranslation>

@@ -1,0 +1,28 @@
+<table height="400" width="550" cellpadding="5" border="0" cellspacing="5" >
+<tr height="400" valign="top" >
+<td style=" color:#000000; font-size:12pt; background-color:#FFFFFF; font-family:arial; bLabel:main; bEditID:r3st1;" tEditID="c1r1" locked="0" aEditID="c1r1" >
+<![CDATA[<p style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><span style="font-size: 13.5pt;"><br></span></p><p style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><span style="font-size: 13.5pt;"><br></span></p><p style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><span style="color: rgb(0, 0, 0); font-family: arial; font-size: 13.5pt;">Dear&nbsp;</span><font face="arial" size="4">{!Lead.Name}</font></p>
+
+<p style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><span style="font-family: Arial, sans-serif;">&nbsp;<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><span style="font-size: 13.5pt;">Thank you for </span><span style="font-size: 13.5pt;">your interest in becoming our partner</span><span style="font-size: 13.5pt;">!&nbsp;&nbsp;<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><span style="font-family: Arial, sans-serif;">&nbsp;</span></p>
+
+<p style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><span style="font-size: 13.5pt;">I will be contacting you within
+the next 48 hours to finalize your application and answer any questions you may
+have.&nbsp; I look forward to speaking with you.</span><span style="font-family: Arial, sans-serif;"><o:p></o:p></span></p>
+
+<p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><span style="color: rgb(0, 0, 0); font-size: 13.5pt;">&nbsp;</span><span style="font-family: Arial, sans-serif;"><o:p></o:p></span></p>
+
+<p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><span style="font-size: 13.5pt;">Sincerely,</span><span style="font-family: Arial, sans-serif;"><o:p></o:p></span></p>
+
+<p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><span style="font-size: 13.5pt;">&nbsp;</span><span style="font-family: Arial, sans-serif;"><o:p></o:p></span></p>
+
+<p class="MsoNormal"><font face="arial" size="4">{!Lead.OwnerFullName}</font></p>
+
+<p class="MsoNormal"><font face="arial" size="4">{!Lead.OwnerPhone}</font></p>
+
+<font color="#0000ee" face="arial" size="4"><u>{!Lead.OwnerEmail}</u></font>]]></td>
+</tr>
+</table>

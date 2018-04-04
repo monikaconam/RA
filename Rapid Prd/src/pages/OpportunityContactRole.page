@@ -1,0 +1,70 @@
+<apex:page controller="OpportunityContactRoleCtlr" showHeader="false" sidebar="false">
+   <c:Opportunity_Related_CSS />
+   <script type="text/javascript">
+   
+    function setvalue(ele) {
+                                    
+        var inputElem = document.getElementsByTagName("input");
+        for(var i=0; i<inputElem.length; i++)
+        {
+            if(inputElem[i].id.indexOf("hiddenradio") != -1)
+            inputElem[i].value = false;
+        }
+        var hiddentag = ele.nextSibling;
+        hiddentag.value = true;
+    } 
+   </script>
+     <apex:pageMessages id="pageMessageMain"/>
+     <apex:form id="noteForm" styleClass="noteForm">
+     <apex:sectionHeader title="Note Edit" subtitle="{!IF(secHeader != null, secHeader, 'Contact Roles')}" />
+       <div align="center">                
+                <apex:commandButton value="Save" action="{!save}" reRender="pageMessageMain" status="ajaxStatus" />&nbsp;&nbsp;     
+                <apex:commandButton value="Cancel" action="{!cancel}" status="ajaxStatus"/>        
+      </div>
+        <table id="noteTable">
+                <tr>
+                    <td colspan="5">
+                        <c:Extjs_Panel title="{!IF(secHeader != null, secHeader, 'Contact Roles')}"/>
+                    </td>
+                </tr>
+                 <tr>
+                    <td colspan="5">
+                      
+                   
+                    <apex:variable var="call" value="{!0}" /> 
+                    <apex:dataTable value="{!oppConRoleList}" var="el" columnswidth="50px,50px" cellpadding="4">
+                        <apex:column headerValue="Primary" style="font-weight:bold;">
+                            <input type="radio" name="primarycheck" id="primaryradio{!call}" onclick="setvalue(this);" />
+                             
+                              <apex:inputHidden value="{!el.contactRole.IsPrimary}" id="hiddenradio" />
+                              
+                               <script type="text/javascript">
+                                    if({!el.contactRole.IsPrimary}){
+                                        document.getElementById('primaryradio{!call}').checked = true;
+                                    }  
+                              </script>
+                        </apex:column>
+                        <apex:column headerValue="Contact" style="font-weight:bold;">
+                            <apex:inputField value="{!el.contactRole.ContactId}" rendered="{!IF(call > 0, true, false)}"  required="false"/>
+                            <apex:outputText value="No Primary Contact" rendered="{!IF(call > 0, false, true)}" />
+                        </apex:column>
+                        <apex:column headerValue="Role" style="font-weight:bold;">
+                            <apex:selectList value="{!el.contactRole.Role}"  size="1" rendered="{!IF(call > 0, true, false)}">
+                               <apex:selectOptions value="{!options}" />
+                           </apex:selectList>
+                        </apex:column>
+                        <apex:column >
+                        <apex:variable var="call" value="{!call+1}"/>
+                        </apex:column>
+                   </apex:dataTable>
+                </td>
+            </tr>
+         </table>
+         <br/>
+        <div align="center">                
+            <apex:commandButton value="Save" action="{!save}" reRender="pageMessageMain" status="ajaxStatus" />&nbsp;&nbsp;     
+            <apex:commandButton value="Cancel" action="{!cancel}" status="ajaxStatus"/>        
+        </div> 
+    </apex:form>
+  <apex:actionstatus startStyleClass="requiredLoaderBG" id="ajaxStatus" />
+</apex:page>

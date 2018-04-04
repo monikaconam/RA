@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>When the value of  &quot;Underwriting decision clearly explained&quot; field is less than 4, an email is sent to Maria.</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>GFS Underwriting decision clearly explained</name>
+    <style>none</style>
+    <subject>Underwriting decision clearly explained</subject>
+    <type>text</type>
+</EmailTemplate>

@@ -1,0 +1,110 @@
+<apex:component >
+    <apex:attribute name="imgName" type="String" description="name of the image"/>  
+    <style>
+        table tr td {
+            white-space:wrap;
+            padding-top:3px;       
+        }   
+        table{
+            padding: 0 40px;
+            width: 100%;
+        }
+        form{
+            padding: 0 40px;
+        }
+        .requiredLoaderBG{
+            background-color: rgb(71,71,71);
+            opacity:0.7;
+            filter:alpha(opacity=70);           
+            background-position: center center;
+            background-repeat: no-repeat;
+            height: 100%;
+            left: 0;
+            position: fixed;
+            text-align: center;
+            top: 0;
+            width: 100%;
+            z-index: 1;
+            background-image:url({!URLFOR($Resource.ajaxLoadGif)});
+        }
+        .requiredInput {
+            position: relative;
+            height: 100%;
+        }
+        
+        .requiredInput .requiredBlock {
+            background-color: rgb(204, 0, 0);
+            position: absolute;
+            left: -4px;
+            width: 3px;
+            top: 1px;
+            bottom: 1px;
+        }
+         
+        input {
+            margin-top: 0.25em;
+            margin-left: 0.25em;     
+        }
+        
+        textarea {
+            margin-top: 0.25em;
+            margin-left: 0.25em; 
+            width:80%;
+        }
+        select{
+            margin-top: 0.25em;
+            margin-left: 0.25em;
+            letter-spacing:1px !important;
+            padding: 1px 1px;
+            background: repeat-x 0 0;
+            border: 1px solid;
+            background-color: white;
+            background-image: url('{!$Resource.ExtJS4}/extjs-4.1.0/resources/themes/images/default/form/text-bg.gif');
+            border-color: #b5b8c8;
+            width: auto !important;
+            min-width: 131px;
+        }     
+        table tr td:nth-child(odd) label{
+            font-weight: bold !important;  
+        }
+        body{
+            background-color:#F6F6F6;
+            color:#232323 !important;
+            font-family: tahoma !important;
+            font-size:12px;letter-spacing:1px !important;            
+        }
+        input[type=button], [type=submit], [type=cancel] {
+            font-size: 12px !important;
+            font-weight: normal !important;
+            color:#232323;font-family: tahoma;font-size:12px;letter-spacing:1px; 
+            background-repeat: no-repeat !important;
+            margin: 5px 4px 0px 0px !important;
+            width: 80px !important;
+            /*background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffffff), color-stop(48%, #f9f9f9), color-stop(52%, #e2e2e2), color-stop(100%, #e7e7e7)) !important;*/
+            background-image: -moz-linear-gradient(top, #ffffff, #e7e7e7) !important;
+            background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(48%, #f9f9f9), color-stop(100%, #e7e7e7)) !important;
+        }
+        
+        .bgImg{ 
+            opacity:0.8;
+            filter: alpha(opacity=0.8);     
+            background-position:0 0;
+            background-repeat:no-repeat;  
+            background-size: 30%;
+            width: 150px;
+            float: left;
+            margin-bottom: -200px; 
+            height: 70px;
+            background-image:url({!URLFOR($Resource.Icons,imgName)}); 
+        }
+       
+    </style>
+     <script type="text/javascript">
+        function setfocus(node){
+            if(node){
+                document.location.href = '#confirmDiv';
+            }    
+        }
+    </script>  
+    <div id="confirmDiv" style="display: block;width: 100%;">&nbsp;</div>
+</apex:component>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>LEAD_SOURCE</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>CONVERTED</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>Opportunity.signed_flag__c</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>Opportunity.Approved_Flag__c</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>Opportunity.Funded_Flag__c</field>
+    </columns>
+    <columns>
+        <field>Lead.Five9_Call_Counter__c</field>
+    </columns>
+    <columns>
+        <field>Lead.pi__score__c</field>
+    </columns>
+    <description>Conversion funnel metrics for LMB landing page testing</description>
+    <filter>
+        <criteriaItems>
+            <column>Lead.Campaign_Name__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>contains</operator>
+            <value>lower my bills</value>
+        </criteriaItems>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Lead.Campaign_Name__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>LMB conversions tracking II</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>OpportunityLead</reportType>
+    <scope>org</scope>
+    <showDetails>false</showDetails>
+    <timeFrameFilter>
+        <dateColumn>Lead.Lead_Created_Date__c</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+        <startDate>2016-03-25</startDate>
+    </timeFrameFilter>
+</Report>

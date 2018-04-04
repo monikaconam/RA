@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>ACCOUNT.NAME</field>
+    </columns>
+    <columns>
+        <field>Account.Partner_Channel__c</field>
+    </columns>
+    <columns>
+        <field>USERS.NAME</field>
+    </columns>
+    <columns>
+        <field>Account.CA_Lenders_License__c</field>
+    </columns>
+    <columns>
+        <field>Account.Date_CA_License_was_received__c</field>
+    </columns>
+    <columns>
+        <field>Account.Campaign__c</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>Account.CA_Lenders_License__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Active</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>CA Licensed Partner Accounts</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>AccountList</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <sortColumn>ACCOUNT.NAME</sortColumn>
+    <sortOrder>Asc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>CREATED_DATE</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+        <startDate>2008-01-01</startDate>
+    </timeFrameFilter>
+</Report>

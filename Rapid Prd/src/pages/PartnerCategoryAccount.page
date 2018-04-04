@@ -1,0 +1,44 @@
+<apex:page standardcontroller="Account" extensions="CategoryAccountContoller" showHeader="false" sidebar="false"  >
+    <apex:includeScript value="/support/console/40.0/integration.js"/>
+  
+  <script type="text/javascript">
+        function closeWin(){   
+            if(window.parent){
+                window.parent.location.href="/{!$CurrentPage.parameters.id}";
+                window.parent.close();
+            } 
+           
+        }
+        
+        function closeWindow_NoAction(){
+            window.close();
+        }
+        
+        function RefreshPrimaryTab() {
+            var isConsole = "{!$CurrentPage.parameters.isConsole}";       
+            if(isConsole==true || isConsole=='true')
+                sforce.console.getFocusedPrimaryTabId(showTabId);
+            else
+                closeWin();
+        }
+
+        var showTabId = function showTabId(result) 
+        {
+            var tabId = result.id;
+            sforce.console.refreshPrimaryTabById(tabId , true, refreshSuccess);
+        };
+
+        var refreshSuccess = function refreshSuccess(result) 
+        {
+            
+        };
+        
+    </script>
+    <apex:pageMessages ></apex:pageMessages>
+    <apex:form style="background-color: #F3F3EC;">
+        <c:MultiSelectComponent leftLabel="Available Categories" left1Options="{!allCats}"  rightLabel="Selected Categories" 
+            right1Options="{!selectedCats}" size="6" width="150px" recordId="{!$CurrentPage.parameters.id}" ObjType="Account"/>
+        <br/>
+    </apex:form> 
+    
+</apex:page>

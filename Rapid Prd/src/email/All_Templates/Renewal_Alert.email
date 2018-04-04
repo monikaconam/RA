@@ -1,0 +1,6 @@
+Opportunity Name - {!Opportunity.Name}Opportunity Number - {!Opportunity.Opportunity_Number__c}Opportunity Advance ID - {!Opportunity.Advance_ID__c} 
+
+Advance Amount - {!Opportunity.Amount}Split - {!Opportunity.Percent_Payback__c}Pay Back Amount - {!Opportunity.Pay_Back_Amount__c} 
+
+Amount Remaining - {!Opportunity.Remaining_Balance__c}
+Percent Complete - {!Opportunity.Percent_Paid_Off__c}

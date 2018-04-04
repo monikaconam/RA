@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>LEAD_OWNER</field>
+    </columns>
+    <columns>
+        <field>Lead.Campaign_Name__c</field>
+    </columns>
+    <columns>
+        <field>COMPANY_ACCT</field>
+    </columns>
+    <columns>
+        <field>Opportunity.Signed_Contract_Received__c</field>
+    </columns>
+    <columns>
+        <field>Opportunity.Submit_to_UW_Processing__c</field>
+    </columns>
+    <columns>
+        <field>Opportunity.Funded_by_WC__c</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>Lead.Campaign_Name__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>contains</operator>
+            <value>Referral Gift</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>There was a water fight!!!</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>OpportunityLead</reportType>
+    <scope>org</scope>
+    <showDetails>true</showDetails>
+    <sortColumn>Lead.Campaign_Name__c</sortColumn>
+    <sortOrder>Asc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>CREATED_DATE</dateColumn>
+        <endDate>2016-12-31</endDate>
+        <interval>INTERVAL_CUSTOM</interval>
+        <startDate>2016-06-11</startDate>
+    </timeFrameFilter>
+</Report>

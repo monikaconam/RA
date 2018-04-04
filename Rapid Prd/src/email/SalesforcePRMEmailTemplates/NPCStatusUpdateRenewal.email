@@ -1,0 +1,37 @@
+<table width="550" cellpadding="5" height="400" border="0" cellspacing="5" >
+<tr height="400" valign="top" >
+<td locked="0" style=" font-family:arial; bLabel:main; color:#000000; font-size:12pt; bEditID:r3st1; background-color:#FFFFFF;" aEditID="c1r1" tEditID="c1r1" >
+<![CDATA[<P><FONT size=2><STRONG><U>Date:</U></STRONG> {!Opportunity.LastModifiedDate}</FONT></P>
+<P><FONT size=2></FONT>&nbsp;</P>
+<P><FONT size=2><STRONG><U>Renewal Date:</U></STRONG> {!Opportunity.RENEWAL_DATE__c}</FONT></P>
+<P>&nbsp;</P>
+<P><FONT size=2><STRONG><U>Partner Name:</U></STRONG> {!Opportunity.Campaign}</FONT></P>
+<P>&nbsp;</P>
+<P><FONT size=2><STRONG><U>Opportunity Name:</U></STRONG> {!Opportunity.Name}</FONT></P>
+<P><FONT size=2></FONT>&nbsp;</P><FONT size=2>
+<P><FONT size=2><STRONG><U>Underwriting Status:</U></STRONG> {!Opportunity.Underwriting_Approval__c}</FONT></P>
+<P><FONT size=2><STRONG><U>Underwriting Decision:</U></STRONG> {!Opportunity.00N70000001jX4q}</FONT></P>
+<P><FONT size=2><STRONG><U>Reason for Decline:</U></STRONG> {!Opportunity.Decline_Reason__c}</FONT>&nbsp;</P>
+<P><FONT size=2><STRONG><U></U></STRONG></FONT>&nbsp;</P>
+<P><FONT size=2><STRONG><U>Underwriting Notes:</U></STRONG> {!Opportunity.Underwriting_Notes__c}</FONT></P>
+<P>&nbsp;</P>
+<P><FONT size=2><STRONG><U>Closed Reason:</U></STRONG> {!Opportunity.Closed_Reason__c}&nbsp;</FONT></P>
+<P><FONT size=2><STRONG><U>Funding Status:</U></STRONG> {!Opportunity.Funding_Status__c}</FONT>&nbsp;</P>
+<P><FONT size=2><STRONG><U>Funded Date:</U></STRONG> {!Opportunity.Funded_by_WC__c}</FONT>&nbsp;</P>
+<P>&nbsp;&nbsp;</FONT></P>
+<P><FONT size=2><STRONG><U>Advance $:</U></STRONG> {!Opportunity.Amount}</FONT></P>
+<P><FONT size=2><STRONG><U>Percent Payback:</U></STRONG> {!Opportunity.Percent_Payback__c}</FONT></P>
+<P><FONT size=2><STRONG><U>Payback Amount:</U></STRONG> {!Opportunity.Pay_Back_Amount__c}</FONT></P><FONT size=2>
+<P>&nbsp;</P></FONT>
+<P><FONT size=2><STRONG><U>Sales Check List Notes:</U></STRONG> {!Opportunity.Sales_Check_List_Notes__c}</FONT></P>
+<P><FONT size=2>&nbsp;</FONT></P>
+<P><FONT size=2><STRONG><U>Processing Notes:</U></STRONG> {!Opportunity.Processing_Notes__c}</FONT><FONT size=2>&nbsp;</FONT></P>
+<P>&nbsp;</P>
+<P><FONT size=2><STRONG><U>Renewal Paperwork Sent:</U></STRONG> {!Opportunity.00N70000001hZEE}</FONT></P>
+<P><FONT size=2><STRONG><U>Renewal Paperwork Rec'd:</U></STRONG> {!Opportunity.00N70000001kEqJ}</FONT></P>
+<P><FONT size=2><STRONG></STRONG></FONT>&nbsp;</P>
+<P>&nbsp;</P>
+<P>&nbsp;</P>
+<P>&nbsp;</P>]]></td>
+</tr>
+</table>

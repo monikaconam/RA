@@ -1,0 +1,7 @@
+An underwriter has been assigned to the following opportunity:
+
+Account: {!Opportunity.Account}
+OppId: {!Opportunity.Opportunity_Number__c}
+Underwriter: {!Opportunity.Underwriter_Assigned__c} 
+
+Link: http://na33.salesforce.com/{!Opportunity.Id}
